@@ -45,7 +45,11 @@ from .pelts import (
     skin_categories,
     mono_eyes,
     purple_eyes,
-    )
+    chromatic_eyes,)
+try:
+    import ujson
+except ImportError:
+    import json as ujson
 from scripts.cat.sprites import Sprites
 from scripts.game_structure.game_essentials import game
 
@@ -89,19 +93,22 @@ def init_eyes(cat):
         hit = randint(0, num)
         if hit == 0:
             if cat.eye_colour in yellow_eyes:
-                eye_choice = choice([blue_eyes, green_eyes, purple_eyes, mono_eyes])
+                eye_choice = choice([blue_eyes, green_eyes, purple_eyes, mono_eyes, chromatic_eyes])
                 cat.eye_colour2 = choice(eye_choice)
             elif cat.eye_colour in blue_eyes:
-                eye_choice = choice([yellow_eyes, green_eyes, purple_eyes, mono_eyes])
+                eye_choice = choice([yellow_eyes, green_eyes, purple_eyes, mono_eyes, chromatic_eyes])
                 cat.eye_colour2 = choice(eye_choice)
             elif cat.eye_colour in green_eyes:
-                eye_choice = choice([yellow_eyes, blue_eyes, purple_eyes, mono_eyes])
+                eye_choice = choice([yellow_eyes, blue_eyes, purple_eyes, mono_eyes, chromatic_eyes])
                 cat.eye_colour2 = choice(eye_choice)
             elif cat.eye_colour in purple_eyes:
-                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, mono_eyes])
+                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, mono_eyes, chromatic_eyes])
                 cat.eye_colour2 = choice(eye_choice)
             elif cat.eye_colour in mono_eyes:
-                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, purple_eyes])
+                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, purple_eyes, chromatic_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in chromatic_eyes:
+                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, purple_eyes, mono_eyes])
                 cat.eye_colour2 = choice(eye_choice)
 
 def pelt_inheritance(cat, parents: tuple):

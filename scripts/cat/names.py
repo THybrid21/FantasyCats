@@ -158,8 +158,7 @@ class Name():
                     self.suffix = random.choice(suffix_category)
                 else:
                     self.suffix = random.choice(self.names_dict["normal_suffixes"])
-        
-        #Prevent triple letter names from joining prefix and suffix from occuring
+
         if self.suffix:
             possible_three_letter = (self.prefix[-2:] + self.suffix[0], self.prefix[-1] + self.suffix[:2])
 
@@ -177,6 +176,7 @@ class Name():
                     else:
                         triple_letter = False
                 MAX_ATTEMPT -= 1
+
 
     def __repr__(self):
         if self.status in self.names_dict["special_suffixes"]:

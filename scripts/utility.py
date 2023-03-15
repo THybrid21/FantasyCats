@@ -31,8 +31,10 @@ from scripts.cat.pelts import (
     plant_accessories,
     wild_accessories,
     collars,
-    wing_sprites,)
+    wing_sprites,
+)
 from scripts.game_structure.game_essentials import game, screen_x, screen_y
+
 
 # ---------------------------------------------------------------------------- #
 #                              Counting Cats                                   #
@@ -134,6 +136,7 @@ def get_living_clan_cat_count(Cat):
             continue
         count += 1
     return count
+
 
 def get_cats_same_age(cat, range=10):  # pylint: disable=redefined-builtin
     """Look for all cats in the clan and returns a list of cats, which are in the same age range as the given cat."""
@@ -1099,7 +1102,7 @@ def update_sprite(cat):
                 else:
                     new_sprite.blit(
                         sprites.sprites['lineartdead' +
-                                        str(cat.age_sprites[cat.age])], (0, 0))        
+                                        str(cat.age_sprites[cat.age])], (0, 0))   
 
         # Apply fading fog
         if cat.opacity <= 97 and not cat.prevent_fading and game.settings["fading"]:

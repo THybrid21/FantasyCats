@@ -522,14 +522,21 @@ eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBL
                'PALEBLUE', 'VOID', 'GHOST', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'BLUE2', 'SUNLITICE', 
                'GREENYELLOW', 'POPPY', 'CRIMSON', 'RUBY', 'BROWN', 'EMERALD2', 'SKY', 'LILAC', 'BROWN2', 'PEANUT', 
                'GREY2', 'YELLOWOLIVE', 'SUNSHINE', 'AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE',
-               'VIOLET', 'GRAPE', 'INDIGO']
+               'VIOLET', 'GRAPE', 'INDIGO', 'PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3',
+               'RBG', 'RBG2', 'RBG3', 'MONOCHROME', 'MONOCHROME2', 'MONOCHROME3', 'POPPY2', 'STRAWBERRY', 'MINTCHOC', 
+               'CHOCMINT', 'AMBER2', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
 yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW', 'BROWN', 'BROWN2', 
-                'PEANUT', 'YELLOWOLIVE', 'SUNSHINE']
+                'PEANUT', 'YELLOWOLIVE', 'SUNSHINE', 'AMBER2', 'BEACH']
 blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'BLUE2', 'SUNLITICE', 'AZURE', 
-                'COBOLT',]
-green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'EMERALD2', 'GRASS', 'MINT']
-mono_eyes = ['GREY', 'VOID', 'GHOST', 'GREY2', 'LILACGREY', 'WHITE']
-purple_eyes = ['POPPY', 'CRIMSON', 'RUBY', 'LILAC', 'VIOLET', 'GRAPE', 'INDIGO']
+                'COBOLT', 'OCEAN']
+green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'EMERALD2', 'GRASS', 'MINT',
+    'MINTCHOC', 'CHOCMINT']
+mono_eyes = ['GREY', 'VOID', 'GHOST', 'GREY2', 'LILACGREY', 'WHITE', 'MONOCHROME', 
+    'MONOCHROME2', 'MONOCHROME3', 'NACRE', 'NIGHT']
+purple_eyes = ['POPPY', 'CRIMSON', 'RUBY', 'LILAC', 'VIOLET', 'GRAPE', 'INDIGO', 
+    'POPPY2', 'STRAWBERRY']
+chromatic_eyes = ['PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3', 'RBG', 
+    'RBG2', 'RBG3',]
 # scars1 is scars from other cats, other animals - scars2 is missing parts - scars3 is "special" scars that could only happen in a special event
 # bite scars by @wood pank on discord
 scars1 = ["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY",

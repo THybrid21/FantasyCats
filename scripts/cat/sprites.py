@@ -306,7 +306,8 @@ for x in [
     'lineart','eyes', 'eyes2', 'eyesextra', 'eyes2extra', 'skin', 'skinextra', 'skin2', 'skin2extra', 'skin_sphynx', 'skinextra_sphynx',
     'skin3', 'skin3extra', 'skin3_sphynx', 'skin3extra_sphynx', 'skin4', 'skin4extra', 'scars', 'scarsextra', 'scarsdark', 
     'scarsdarkextra', 'Newscars', 'Newscarsextra', 'shaders', 'lineartdead', 'lineartdf', 'eyes_df', 'eyesextra_df', 'eyeshybrid',
-    'eyes2hybrid', 'eyeshybridextra', 'eyes2hybridextra', 'singleB', 'singleBextra', 'singleR', 'singleRextra', 'singleWB', 'singleWBextra', 
+    'eyes2hybrid', 'eyeshybridextra', 'eyes2hybridextra', 'eyeshybrid2', 'eyes2hybrid2', 'eyeshybrid2extra', 'eyes2hybrid2extra', 
+    'singleB', 'singleBextra', 'singleR', 'singleRextra', 'singleWB', 'singleWBextra', 
     'shadersnewwhite', 'lightingnew',  'singleBl', 'singleBlextra', 'singlePu', 'singlePuextra', 'singleY', 'singleYextra', 'singleG', 
     'singleGextra', 'shadersnewwhite', 'lightingnew', 'fademask', 'fadestarclan', 'fadedarkforest'
 
@@ -479,6 +480,26 @@ for a, i in enumerate(['VIOLET', 'GRAPE', 'INDIGO']):
     sprites.make_group('eyeshybridextra', (a, 3), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2hybrid', (a, 3), f'eyes2{i}')
     sprites.make_group('eyes2hybridextra', (a, 3), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3']):
+    sprites.make_group('eyeshybrid2', (a, 0), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 0), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 0), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 0), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['RBG', 'RBG2', 'RBG3', 'MONOCHROME', 'MONOCHROME2', 'MONOCHROME3']):
+    sprites.make_group('eyeshybrid2', (a, 1), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 1), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 1), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 1), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['POPPY2', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBER2', 'BEACH']):
+    sprites.make_group('eyeshybrid2', (a, 2), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 2), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 2), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 2), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['NACRE', 'NIGHT', 'OCEAN']):
+    sprites.make_group('eyeshybrid2', (a, 3), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 3), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 3), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 3), f'eyes2extra{i}', sprites_y=2)
 
 # white patches
 for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANY2']):

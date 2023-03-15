@@ -39,6 +39,7 @@ sys.stderr = UnbufferedStreamDuplexer(sys.stderr, stderr_file)
 
 # Setup logging
 import logging
+
 formatter = logging.Formatter(
     "%(name)s - %(levelname)s - %(filename)s / %(funcName)s / %(lineno)d - %(message)s"
     )
