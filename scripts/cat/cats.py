@@ -916,6 +916,22 @@ class Cat():
             colour = 'grey'   
         elif colour == 'yellowolive':
             colour = 'yellow-olive'            
+        elif colour == 'amber2':
+            colour = 'bright amber'   
+        elif colour == 'mintchoc':
+            colour = 'mint-choc'
+        elif colour == 'chocmint':
+            colour = 'choc-mint'               
+        elif colour == 'monochrome2' or colour == 'monochrome3':
+            colour = 'monochrome'   
+        elif colour == 'poppy2':
+            colour = 'poppy'   
+        elif colour == 'primary2' or colour == 'primary3':
+            colour = 'primary'   
+        elif colour == 'chrome2' or colour == 'chrome3':
+            colour = 'chrome'   
+        elif colour == 'rgb2' or colour == 'rgb3':
+            colour = 'rgb'   
         if self.eye_colour2 != None:
             if colour2 == 'palegreen':
                 colour2 = 'pale green'
@@ -943,6 +959,22 @@ class Cat():
                 colour2 = 'grey'   
             if colour2 == 'yellowolive':                
                 colour22 = 'yellow-olive'
+            elif colour2 == 'amber2':
+                colour2 = 'bright amber'   
+            elif colour2 == 'mintchoc':
+                colour2 = 'mint-choc'
+            elif colour2 == 'chocmint':
+                colour2 = 'choc-mint'               
+            elif colour2 == 'monochrome2' or colour2 == 'monochrome3':
+                colour2 = 'monochrome'   
+            elif colour2 == 'poppy2':
+                colour2 = 'poppy'   
+            elif colour2 == 'primary2' or colour2 == 'primary3':
+                colour2 = 'primary'   
+            elif colour2 == 'chrome2' or colour2 == 'chrome3':
+                colour2 = 'chrome'   
+            elif colour2 == 'rgb2' or colour2 == 'rgb3':
+                colour2 = 'rgb'   
             colour = colour + ' and ' + colour2
         return colour
 
