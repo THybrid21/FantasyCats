@@ -1935,7 +1935,7 @@ class Events():
             if cat.gender == 'male':
                 gender = 'tom'
             else:
-                gender = 'she-cat'
+                gender = 'molly'
             text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore."
             game.cur_events_list.append(
                 Single_Event(text, "misc", involved_cats))

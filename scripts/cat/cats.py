@@ -1810,9 +1810,6 @@ class Cat():
             return False
         if self.status == 'mediator apprentice' and potential_mentor.status != 'mediator':
             return False
-        
-        if potential_mentor.is_parent(self):
-            return False
 
         # If not an app, don't need a mentor
         if 'apprentice' not in self.status:
