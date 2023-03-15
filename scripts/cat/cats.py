@@ -880,7 +880,7 @@ class Cat():
         elif self.genderalign == 'female' or self.genderalign == "transfem" or self.genderalign == "trans female":
             sex = 'molly'
         else:
-            sex = 'eli'
+            sex = 'cat'
         description = str(self.pelt.length).lower() + '-furred'
         description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
                                             self.white_patches, self.skin) + ' ' + sex

@@ -76,8 +76,7 @@ def json_load():
         'TUXEDOCREAMY': 'TUXEDO'
     }
 
-    no_tint_patches = ['COLOURPOINT', 'COLOURPOINTCREAMY', 'RAGDOLL', 'KARPATI', 'SNOWSHOE', 'SNOWBOOT', 'BAGDOLL', 
-    'BLACKCOLOURPOINTCREAMY', 'BLACKCOLOURPOINT', 'BLACKKARPATI', 'SOOTSHOE', 'SOOTBOOT', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'BLACKPOINTMARK']
+    no_tint_patches = ['SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']
 
     # create new cat objects
     for i, cat in enumerate(cat_data):

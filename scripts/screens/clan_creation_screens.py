@@ -575,7 +575,7 @@ class MakeClanScreen(Screens):
             self.elements['cat_info'].set_text(selected.gender + "\n" +
                                                str(selected.age + "\n" +
                                                    str(selected.trait + "\n" +
-                                                   strastr(selected.moons) + " moons")))
+                                                   str(selected.moons) + "moons")))
             self.elements['cat_info'].show()
         else:
             self.elements['next_step'].disable()
