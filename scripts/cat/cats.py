@@ -5,6 +5,7 @@ import random
 import os.path
 import itertools
 
+from ..datadir import get_save_dir
 from ..events_module.generate_events import GenerateEvents
 try:
     import ujson
@@ -399,9 +400,10 @@ class Cat():
                 m = self.moons
                 self.experience = 0
                 while m > Cat.age_moons['adolescent'][0]:
-                    base_ex = 0.6 * random.choices(game.config["graduation"]["base_app_timeskip_ex"][0],
-                                          weights=game.config["graduation"]["base_app_timeskip_ex"][1], k=1)[0]
-                    self.experience += base_ex
+                    ran = game.config["graduation"]["base_app_timeskip_ex"]
+                    exp = random.choice(
+                        list(range(ran[0][0], ran[0][1] + 1)) + list(range(ran[1][0], ran[1][1] + 1)) * 2)
+                    self.experience += exp + 3
                     m -= 1
             elif self.age in ['young adult', 'adult']:
                 self.experience = randint(Cat.experience_levels_range["prepared"][0],
@@ -1721,7 +1723,7 @@ class Cat():
         elif game.clan is not None:
             clanname = game.clan.name
 
-        condition_directory = 'saves/' + clanname + '/conditions'
+        condition_directory = get_save_dir() + '/' + clanname + '/conditions'
         condition_file_path = condition_directory + '/' + self.ID + '_conditions.json'
 
         if not os.path.exists(condition_directory):
@@ -1756,7 +1758,7 @@ class Cat():
         else:
             clanname = game.switches['clan_list'][0]
 
-        condition_directory = 'saves/' + clanname + '/conditions/'
+        condition_directory = get_save_dir() + '/' + clanname + '/conditions/'
         condition_cat_directory = condition_directory + self.ID + '_conditions.json'
         if not os.path.exists(condition_cat_directory):
             return
@@ -2132,7 +2134,7 @@ class Cat():
             clanname = game.switches['clan_list'][0]
         elif game.clan is not None:
             clanname = game.clan.name
-        relationship_dir = 'saves/' + clanname + '/relationships'
+        relationship_dir = get_save_dir() + '/' + clanname + '/relationships'
         if not os.path.exists(relationship_dir):
             os.makedirs(relationship_dir)
 
@@ -2168,7 +2170,7 @@ class Cat():
         else:
             clanname = game.switches['clan_list'][0]
 
-        relation_directory = 'saves/' + clanname + '/relationships/'
+        relation_directory = get_save_dir() + '/' + clanname + '/relationships/'
         relation_cat_directory = relation_directory + self.ID + '_relations.json'
 
         self.relationships = {}
@@ -2289,23 +2291,27 @@ class Cat():
         else:
             apply_bonus = True
             # EX gain on success
-            EX_gain = randint(5, 12)
+            if mediator.status != "mediator apprentice":
+                EX_gain = randint(10, 24)
 
-            gm_modifier = 1
-            if game.clan.game_mode == 'expanded':
-                gm_modifier = 3
-            elif game.clan.game_mode == 'cruel season':
-                gm_modifier = 6
+                gm_modifier = 1
+                if game.clan.game_mode == 'expanded':
+                    gm_modifier = 3
+                elif game.clan.game_mode == 'cruel season':
+                    gm_modifier = 6
 
-            if mediator.experience_level == "average":
-                lvl_modifier = 1.25
-            elif mediator.experience_level == "high":
-                lvl_modifier = 1.75
-            elif mediator.experience_level == "master":
-                lvl_modifier = 2
-            else:
-                lvl_modifier = 1
-            mediator.experience += EX_gain / lvl_modifier / gm_modifier
+                if mediator.experience_level == "average":
+                    lvl_modifier = 1.25
+                elif mediator.experience_level == "high":
+                    lvl_modifier = 1.75
+                elif mediator.experience_level == "master":
+                    lvl_modifier = 2
+                else:
+                    lvl_modifier = 1
+                mediator.experience += EX_gain / lvl_modifier / gm_modifier
+
+        if mediator.status == "mediator apprentice":
+            mediator.experience += max(random.randint(1, 6), 1)
 
         no_romantic_mentor = False
         if not game.settings['romantic with former mentor']:
@@ -2519,10 +2525,10 @@ class Cat():
     def load_faded_cat(cat: str):
         """Loads a faded cat, returning the cat object. This object is saved nowhere else. """
         try:
-            with open('saves/' + game.clan.name + '/faded_cats/' + cat + ".json", 'r') as read_file:
+            with open(get_save_dir() + '/' + game.clan.name + '/faded_cats/' + cat + ".json", 'r') as read_file:
                 cat_info = ujson.loads(read_file.read())
         except AttributeError:  # If loading cats is attempted before the clan is loaded, we would need to use this.
-            with open('saves/' + game.switches['clan_list'][0] + '/faded_cats/' + cat + ".json", 'r') as read_file:
+            with open(get_save_dir() + '/' + game.switches['clan_list'][0] + '/faded_cats/' + cat + ".json", 'r') as read_file:
                 cat_info = ujson.loads(read_file.read())
         except:
             print("ERROR: in loading faded cat")
@@ -2630,8 +2636,12 @@ class Cat():
             if self._moons in range(self.age_moons[key_age][0], self.age_moons[key_age][1] + 1):
                 updated_age = True
                 self.age = key_age
-        if not updated_age and self.age is not None:
-            self.age = "elder"
+        try:
+            if not updated_age and self.age is not None:
+                self.age = "elder"
+        except AttributeError:
+            print("ERROR: cat has no age attribute! Cat ID: " + self.ID)
+            print("Possibly the disappearing cat bug? Ping luna on the discord if you see this message")
 
 
 # ---------------------------------------------------------------------------- #
