@@ -222,8 +222,8 @@ def pelt_inheritance(cat, parents: tuple):
     #   PELT COLOUR
     # ------------------------------------------------------------------------------------------------------------#
     # Weights for each colour group. It goes: (cream, ginger, black, grey, white, brown, 
-        #blue, yellow, purple, green, pride)
-    weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        #blue, yellow, purple, green)
+    weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for p_ in par_peltcolours:
         if p_ in cream_colours:
             add_weight = (40, 20, 0, 0, 0, 10, 0, 5, 5, 2)
