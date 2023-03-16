@@ -654,6 +654,11 @@
     "plural": "white capes",
     "singular": "white cape"
   },
+  "ORANGECAPE": {
+    "default": "orange cape",
+    "plural": "orange capes",
+    "singular": "orange cape"
+  },
   "PINKCAPE": {
     "default": "pink cape",
     "plural": "pink capes",
