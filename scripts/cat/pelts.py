@@ -614,7 +614,7 @@ green_colours = ['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OL
     'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST']
 
 colour_categories = [cream_colours, ginger_colours, black_colours, grey_colours, white_colours, brown_colours, blue_colours, 
-    yellow_colours, purple_colours, green_colours, pride_colours]
+    yellow_colours, purple_colours, green_colours]
     
 little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS', 
     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'VENUS', 

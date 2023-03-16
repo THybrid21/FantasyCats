@@ -41,6 +41,7 @@ from .pelts import (
     green_colours,
     purple_colours,
     yellow_colours,
+    pride_colours,
     skin_categories,
     mono_eyes,
     purple_eyes,
@@ -507,9 +508,9 @@ def init_pattern(cat):
                     cat.tortiepattern = choice(['speckled', 'mottled'])
                 elif cat.tortiebase in ["charcoal", "hooded"]:
                     cat.tortiepattern = choice(['charcoal', 'hooded', 'spirit'])    
-                elif cat.tortiebase in ["ponit"]:
+                elif cat.tortiebase == "ponit":
                     cat.tortiepattern = 'ponit' 
-                elif cat.tortiebase in ["spirit"]:
+                elif cat.tortiebase == "spirit":
                     cat.tortiepattern = random.choices([cat.tortiebase, 'wolf', 'single', 'skele', 'ponit'], weights=[75, 15, 10, 4, 1], k=1)[0]
                 else:
                     cat.tortiepattern = random.choices([cat.tortiebase, 'ghost', 'rat', 'skele', 'spirit'], weights=[93, 3, 3, 1, 1], k=1)[0]
@@ -577,11 +578,8 @@ def init_pattern(cat):
                                     'STRAKIT', 'WINE', 'GENDER', 'REDNEG', 'SOOT', 'DARKGREY', 'ANCHOR', 'CHARCOAL', 
                                     'COAL', 'BLACK', 'DUSKBOW', 'SONIC', 'JEANS', 'NAVY'] + (pride_colours * 2))  
 
-                elif cat.pelt.colour in pride_colours:
-                    possible_colors = pride_colours.copy()
-                    possible_colors.remove(cat.pelt.colour)
-                    possible_colors.extend(['STRAKIT', 'GENDER', 'REDNEG'])
-                    cat.tortiecolour = choice(possible_colors)
+        else:
+            cat.tortiecolour = choice(pride_colours)
 
     else:
         cat.tortiebase = None
