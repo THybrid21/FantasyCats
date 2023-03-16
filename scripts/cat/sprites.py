@@ -193,6 +193,17 @@ class Sprites():
             sprites.make_group('ratcessories', (a, 1), f'acc_wild{i}')
             sprites.make_group('ratcessoriesextra', (a, 1), f'acc_wildextra{i}', sprites_y=2) 
 
+        for a, i in enumerate(["CRIMSONSTAR", "BLUESTAR", "YELLOWSTAR", "CYANSTAR", 
+            "REDSTAR", "LIMESTAR"]):
+            sprites.make_group('christabeach', (a, 0), f'acc_wild{i}')
+            sprites.make_group('christabeachextra', (a, 0), f'acc_wildextra{i}',sprites_y=2)
+        for a, i in enumerate(["DARKSEAWEED", "LIGHTSEAWEED", "DRYSEAWEED", "MAGICSEAWEED"]):
+            sprites.make_group('christabeach', (a, 1), f'acc_wild{i}')
+            sprites.make_group('christabeachextra', (a, 1),f'acc_wildsextra{i}',sprites_y=2)
+        for a, i in enumerate(["DARKPEARLS", "LIGHTPEARL"]):
+            sprites.make_group('christabeach', (a, 2), f'acc_wild{i}')
+            sprites.make_group('christabeachextra', (a, 2), f'acc_wildextra{i}', sprites_y=2)
+
         for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
             sprites.make_group('collars', (a, 0), f'collars{i}')
             sprites.make_group('collarsextra', (a, 0),
@@ -266,32 +277,35 @@ class Sprites():
                                f'collarsextra{i}',
                                sprites_y=2)
 
-        for a, i in enumerate([
-            "CRIMSONBC", "BLUEBC", "YELLOWBC", "CYANBC", "REDBC",
-            "LIMEBC"
-        ]):
+        for a, i in enumerate(["CRIMSONBC", "BLUEBC", "YELLOWBC", "CYANBC", 
+            "REDBC", "LIMEBC"]):
             sprites.make_group('bloodcollars', (a, 0), f'collars{i}')
-            sprites.make_group('bloodcollarsextra', (a, 0),
-                               f'collarsextra{i}',
-                               sprites_y=2)
-        for a, i in enumerate(
-                ["GREENBC", "RAINBOWBC", "BLACKBC", "SPIKESBC"]):
+            sprites.make_group('bloodcollarsextra', (a, 0), f'collarsextra{i}', sprites_y=2)
+        for a, i in enumerate(["GREENBC", "RAINBOWBC", "BLACKBC", "SPIKESBC"]):
             sprites.make_group('bloodcollars', (a, 1), f'collars{i}')
-            sprites.make_group('bloodcollarsextra', (a, 1),
-                               f'collarsextra{i}',
-                               sprites_y=2)
+            sprites.make_group('bloodcollarsextra', (a, 1), f'collarsextra{i}', sprites_y=2)
         for a, i in enumerate(["PINKBC", "PURPLEBC", "MULTIBC"]):
             sprites.make_group('bloodcollars', (a, 2), f'collars{i}')
-            sprites.make_group('bloodcollarsextra', (a, 2),
-                               f'collarsextra{i}',
-                               sprites_y=2)  
+            sprites.make_group('bloodcollarsextra', (a, 2), f'collarsextra{i}', sprites_y=2)  
+
+        for a, i in enumerate(["CRIMSONCAPE", "BLUECAPE", "YELLOWCAPE", "CYANCAPE", 
+            "REDCAPE", "LIMECAPE"]):
+            sprites.make_group('christacape', (a, 0), f'collars{i}')
+            sprites.make_group('christacapeextra', (a, 0), f'collarsextra{i}',sprites_y=2)
+        for a, i in enumerate(["GREENCAPE", "RAINBOWCAPE", "BLACKCAPE", "ORANGECAPE"]):
+            sprites.make_group('christacape', (a, 1), f'collars{i}')
+            sprites.make_group('christacapeextra', (a, 1),f'collarsextra{i}',sprites_y=2)
+        for a, i in enumerate(["PINKCAPE", "PURPLECAPE", "WHITECAPE"]):
+            sprites.make_group('christacape', (a, 2), f'collars{i}')
+            sprites.make_group('christacapeextra', (a, 2), f'collarsextra{i}', sprites_y=2)
 
 sprites = Sprites(50)
 #tiles = Sprites(64)
 
 for x in [
-    'lineart','eyes', 'eyes2', 'eyesextra', 'eyes2extra', 'skin', 'skinextra', 'skin2', 'skin2extra', 'skin_sphynx', 'skinextra_sphynx',
-    'scars', 'scarsextra', 'scarsdark', 'scarsdarkextra', 'Newscars', 'Newscarsextra', 'shaders', 'lineartdead',
+    'lineart','eyes', 'eyes2', 'eyesextra', 'eyes2extra',  'eyeshybrid', 'eyes2hybrid', 'eyeshybridextra', 'eyes2hybridextra', 
+    'eyeshybrid2', 'eyes2hybrid2', 'eyeshybrid2extra', 'eyes2hybrid2extra','skin', 'skinextra', 'skin2', 'skin2extra', 
+    'skin_sphynx', 'skinextra_sphynx', 'scars', 'scarsextra', 'scarsdark', 'scarsdarkextra', 'Newscars', 'Newscarsextra', 'shaders', 'lineartdead',
     'lineartdf', 'eyes_df', 'eyesextra_df', 'singleB', 'singleBextra', 'singleR', 'singleRextra', 'singleWB', 'singleWBextra', 
     'shadersnewwhite', 'lightingnew', 'fademask', 'fadestarclan', 'fadedarkforest'
 
@@ -301,10 +315,7 @@ for x in [
 for x in [
     'whiteextra', 'whitenewextra', 'whitepatchesnew', 'whitepatches',
     'whitepatches3', 'whitepatches3extra', 'whitepatches4', 'whitepatches4extra',
-    'whitepatchesmoss', 'whitemossextra', 'blackpatches', 'blackextra', 'blackpatchesnew',
-    'blacknewextra', 'blackpatches3', 'blackpatches4', 'blackpatches3extra', 
-    'blackpatches4extra', 'blackpatchesmoss', 'blackpatchesmossextra', 'skelepatches', 
-    'skelepatchesextra', 'tortiepatchesmasks', 'tortiepatchesmasksB'
+    'whitepatchesmoss', 'whitemossextra', 'tortiepatchesmasks', 'tortiepatchesmasksB'
 
 ]:
     sprites.spritesheet(f"sprites/patches/{x}.png", x)   
@@ -313,17 +324,19 @@ for x in [
     'collars', 'collarsextra',
     'bellcollars', 'bellcollarsextra', 'bowcollars', 'bowcollarsextra',
     'medcatherbs', 'medcatherbsextra', 'bloodcollars', 'bloodcollarsextra',
-    'ratcessories', 'ratcessoriesextra', 'nyloncollars', 'nyloncollarsextra'
+    'ratcessories', 'ratcessoriesextra', 'nyloncollars', 'nyloncollarsextra',
+    'christabeach', 'christabeachextra', 'christacape', 'christacapeextra'
 
 ]:
-    sprites.spritesheet(f"sprites/accessories/{x}.png", x)    
+    sprites.spritesheet(f"sprites/accessories/{x}.png", x)     
     
 for x in [
     'dobermanB', 'dobermanBextra', 'skeleB', 'skeleBextra', 'smokeB', 'smokeBextra', 'dobermanR', 'dobermanRextra', 
     'skeleR', 'skeleRextra', 'smokeR', 'smokeRextra', 'dobermanWB', 'dobermanWBextra', 'smokeWB', 
     'smokeWBextra', 'skeleWB', 'skeleWBextra', 'stainB', 'stainBextra', 'stainR', 'stainRextra', 'stainWB', 'stainWBextra',
     'ratR', 'ratRextra', 'ratB', 'ratBextra', 'ratWB', 'ratWBextra', 'skittyB', 'skittyBextra', 'skittyR', 'skittyRextra',
-    'skittyWB', 'skittyWBextra'
+    'skittyWB', 'skittyWBextra', 'ponitB', 'ponitBextra', 'ponitR', 'ponitRextra', 'ponitWB', 'ponitWBextra', 'wolfB', 'wolfBextra',
+    'wolfR', 'wolfRextra', 'wolfWB', 'wolfWBextra'
 
 ]:
     sprites.spritesheet(f"sprites/solidbase/{x}.png", x)    
@@ -347,7 +360,7 @@ for x in [
     'sokokeWB', 'sokokeWBextra', 'agoutiB', 'agoutiBextra', 'agoutiR', 'agoutiRextra', 'agoutiWB', 'agoutiWBextra',
     'charcoalB', 'charcoalBextra', 'charcoalR', 'charcoalRextra', 'charcoalWB', 'charcoalWBextra', 'backedB', 'backedBextra',
     'backedR', 'backedRextra', 'backedWB', 'backedWBextra', 'hoodedB', 'hoodedBextra', 'hoodedR', 'hoodedRextra', 'hoodedWB',
-    'hoodedWBextra'
+    'hoodedWBextra', 'spiritB', 'spiritBextra', 'spiritR', 'spiritRextra', 'spiritWB', 'spiritWBextra'
 
 ]:
     sprites.spritesheet(f"sprites/tabby/{x}.png", x)  
@@ -391,7 +404,7 @@ for a, i in enumerate(
     sprites.make_group('eyes2', (a, 1), f'eyes2{i}')
     sprites.make_group('eyes2extra', (a, 1), f'eyes2extra{i}', sprites_y=2)
 for a, i in enumerate(
-        ['COPPER', 'SAGE', 'BLUE2', 'PALEBLUE', 'BLUEYELLOW', 'BLUEGREEN']):
+        ['COPPER', 'SAGE', 'BLUE2', 'PALEBLUE', 'VOID', 'GHOST']):
     sprites.make_group('eyes', (a, 2), f'eyes{i}')
     sprites.make_group('eyesextra', (a, 2), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 2), f'eyes2{i}')
@@ -402,39 +415,62 @@ for a, i in enumerate(
     sprites.make_group('eyesextra', (a, 3), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 3), f'eyes2{i}')
     sprites.make_group('eyes2extra', (a, 3), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['POPPY', 'CRIMSON', 'RUBY', 'BROWN', 'EMERALD2', 'SKY']):
+    sprites.make_group('eyeshybrid', (a, 0), f'eyes{i}')
+    sprites.make_group('eyeshybridextra', (a, 0), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid', (a, 0), f'eyes2{i}')
+    sprites.make_group('eyes2hybridextra', (a, 0), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['LILAC', 'BROWN2', 'PEANUT', 'GREY2', 'YELLOWOLIVE', 'SUNSHINE']):
+    sprites.make_group('eyeshybrid', (a, 1), f'eyes{i}')
+    sprites.make_group('eyeshybridextra', (a, 1), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid', (a, 1), f'eyes2{i}')
+    sprites.make_group('eyes2hybridextra', (a, 1), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE']):
+    sprites.make_group('eyeshybrid', (a, 2), f'eyes{i}')
+    sprites.make_group('eyeshybridextra', (a, 2), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid', (a, 2), f'eyes2{i}')
+    sprites.make_group('eyes2hybridextra', (a, 2), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['VIOLET', 'GRAPE', 'INDIGO']):
+    sprites.make_group('eyeshybrid', (a, 3), f'eyes{i}')
+    sprites.make_group('eyeshybridextra', (a, 3), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid', (a, 3), f'eyes2{i}')
+    sprites.make_group('eyes2hybridextra', (a, 3), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3']):
+    sprites.make_group('eyeshybrid2', (a, 0), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 0), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 0), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 0), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['RBG', 'RBG2', 'RBG3', 'MONOCHROME', 'MONOCHROME2', 'MONOCHROME3']):
+    sprites.make_group('eyeshybrid2', (a, 1), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 1), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 1), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 1), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['POPPY2', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBER2', 'BEACH']):
+    sprites.make_group('eyeshybrid2', (a, 2), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 2), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 2), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 2), f'eyes2extra{i}', sprites_y=2)
+for a, i in enumerate(['NACRE', 'NIGHT', 'OCEAN']):
+    sprites.make_group('eyeshybrid2', (a, 3), f'eyes{i}')
+    sprites.make_group('eyeshybrid2extra', (a, 3), f'eyesextra{i}', sprites_y=2)
+    sprites.make_group('eyes2hybrid2', (a, 3), f'eyes2{i}')
+    sprites.make_group('eyes2hybrid2extra', (a, 3), f'eyes2extra{i}', sprites_y=2)
 
-# white patches + black patches
+# white patches
 for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANY2']):
     sprites.make_group('whitepatches', (a, 0), f'white{i}')
     sprites.make_group('whiteextra', (a, 0), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate([
-    'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG', 'RAGDOLL',
-    'LIGHTSONG', 'VITILIGO'
-]):
+for a, i in enumerate([ 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG', 'RAGDOLL',
+    'LIGHTSONG', 'VITILIGO']):
     sprites.make_group('whitepatchesnew', (a, 0), f'white{i}')
     sprites.make_group('whitenewextra', (a, 0), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate([
-    'ANYCREAMY', 'TUXEDOCREAMY', 'LITTLECREAMY', 'COLOURPOINTCREAMY',
-    'VANCREAMY', 'ANY2CREAMY'
-]):
-    sprites.make_group('whitepatches', (a, 1), f'white{i}')
-    sprites.make_group('whiteextra', (a, 1), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate(['FULLBLACK', 'BLACKANY', 'BLACKTUXEDO', 'BLACKLITTLE', 'BLACKCOLOURPOINT', 'BLACKVAN', 'BLACKANY2']):
-    sprites.make_group('blackpatches', (a, 0), f'white{i}')
-    sprites.make_group('blackextra', (a, 0), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate(['BONEEAR', 'BLACKBROKEN', 'BLACKLIGHTTUXEDO', 'BLACKBUZZARDFANG', 'BAGDOLL',
-        'BLACKLIGHTSONG', 'BLACKVITILIGO']):
-    sprites.make_group('blackpatches', (a, 1), f'white{i}')
-    sprites.make_group('blackextra', (a, 1), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate(['BLACKANYCREAMY', 'BLACKTUXEDOCREAMY', 'BLACKLITTLECREAMY', 'BLACKCOLOURPOINTCREAMY', 'BLACKVANCREAMY', 'BLACKANY2CREAMY']):
-    sprites.make_group('blackpatchesnew', (a, 0), f'white{i}')
-    sprites.make_group('blacknewextra', (a, 0), f'whiteextra{i}', sprites_y=2)
+for a, i in enumerate(['SKELEWHITE', 'LIGHTPOINT', 'DARKVITILIGO', 'DARKVITILIGO2']):
+    sprites.make_group('whitepatchesnew', (a, 1), f'white{i}')
+    sprites.make_group('whitenewextra', (a, 1), f'whiteextra{i}', sprites_y=2)
     
 # extra
 sprites.make_group('whitepatches', (0, 2), 'whiteEXTRA')
 sprites.make_group('whiteextra', (0, 2), 'whiteextraEXTRA', sprites_y=2)
-sprites.make_group('blackpatches', (0, 2), 'whiteBLACKEXTRA')
-sprites.make_group('blackextra', (0, 2), 'whiteextraBLACKEXTRA', sprites_y=2)
 
 # ryos white patches
 for a, i in enumerate(
@@ -452,21 +488,6 @@ for a, i in enumerate(
         ['APRON', 'CAPSADDLE', 'MASKMANTLE', 'SQUEAKS', 'STAR', 'TOESTAIL', 'RAVENPAW', 'HONEY']):
     sprites.make_group('whitepatches3', (a, 3), f'white{i}')
     sprites.make_group('whitepatches3extra', (a, 3), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate(
-        ['BLACKTIP', 'BLACKFANCY', 'BLACKFRECKLES', 'BLACKRINGTAIL', 'BLACKHALFFACE', 'BLACKPANTS2', 'BLACKGOATEE', 'BLACKVITILIGO2']):
-    sprites.make_group('blackpatches3', (a, 0), f'white{i}')
-    sprites.make_group('blackpatches3extra', (a, 0), f'whiteextra{i}', sprites_y=2)    
-for a, i in enumerate(['BLACKTAIL', 'BLACKBLAZE', 'BLACKPRINCE', 'BLACKBIB', 'BLACKVEE', 'BLACKUNDERS', 'BLACKPAWS', 'BLACKMITAINE']):
-    sprites.make_group('blackpatches3', (a, 1), f'white{i}')
-    sprites.make_group('blackpatches3extra', (a, 1), f'whiteextra{i}', sprites_y=2) 
-for a, i in enumerate(
-        ['BLACKFAROFA', 'BLACKDAMIEN', 'BLACKMISTER', 'BLACKBELLY', 'BLACKTAILTIP', 'BLACKTOES', 'BLACKBROKENBLAZE', 'BLACKSCOURGE']):
-    sprites.make_group('blackpatches3', (a, 2), f'white{i}')
-    sprites.make_group('blackpatches3extra', (a, 2), f'whiteextra{i}', sprites_y=2)
-for a, i in enumerate(
-        ['BLACKAPRON', 'BLACKCAPSADDLE', 'BLACKMASKMANTLE', 'BLACKSQUEAKS', 'STARBLACK', 'BLACKTOESTAIL', 'BLACKRAVENPAW', 'BLACKHONEY']):
-    sprites.make_group('blackpatches3', (a, 3), f'white{i}')
-    sprites.make_group('blackpatches3extra', (a, 3), f'whiteextra{i}', sprites_y=2)    
 
 # beejeans white patches + perrio's point marks
 for a, i in enumerate(['PANTS', 'REVERSEPANTS', 'SKUNK', 'KARPATI', 'HALFWHITE', 'APPALOOSA', 'PIEBALD', 'CURVED']):
@@ -477,21 +498,7 @@ for a, i in enumerate(['HEART', 'LILTWO', 'GLASS', 'MOORISH', 'SEPIAPOINT', 'MIN
     sprites.make_group('whitepatches4extra', (a, 1), 'whiteextra' + i, sprites_y=2)
 for a, i in enumerate(['MAO', 'LUNA', 'CHESTSPECK', 'WINGS', 'PAINTED', 'HEART2', 'BLACKSTAR']):
     sprites.make_group('whitepatches4', (a, 2), 'white' + i)
-    sprites.make_group('whitepatches4extra', (a, 2), 'whiteextra' + i, sprites_y=2)
-for a, i in enumerate(['BLACKPANTS', 'BLACKREVERSEPANTS', 'BLACKSKUNK', 'BLACKKARPATI', 'HALFBLACK', 'BLACKAPPALOOSA', 'BLACKPIEBALD', 'BLACKCURVED']):
-    sprites.make_group('blackpatches4', (a, 0), 'white' + i)
-    sprites.make_group('blackpatches4extra', (a, 0), 'whiteextra' + i, sprites_y=2)
-for a, i in enumerate(['BLACKHEART', 'BLACKLILTWO', 'BLACKGLASS', 'BLACKMOORISH', 'BLACKPOINTMARK']):
-    sprites.make_group('blackpatches4', (a, 1), 'white' + i)
-    sprites.make_group('blackpatches4extra', (a, 1), 'whiteextra' + i, sprites_y=2)     
-for a, i in enumerate(['BLACKMAO', 'BLACKLUNA', 'BLACKCHESTSPECK', 'WINGSBLACK', 'BLACKPAINTED', 'BLACKHEART2', 'REVBLACKSTAR']):
-    sprites.make_group('blackpatches4', (a, 2), 'white' + i)
-    sprites.make_group('blackpatches4extra', (a, 2), 'whiteextra' + i, sprites_y=2)    
-    
-#skeletons
-for a, i in enumerate(['SKELEBLACK', 'SKELEWHITE']):
-    sprites.make_group('skelepatches', (a, 0), f'white{i}')
-    sprites.make_group('skelepatchesextra', (a, 0), f'whiteextra{i}', sprites_y=2) 
+    sprites.make_group('whitepatches4extra', (a, 2), 'whiteextra' + i, sprites_y=2) 
     
 # moss white patches
 for a, i in enumerate(['SNOWSHOE', 'VENUS', 'SNOWBOOT', 'CHANCE', 'MOSSCLAW', 'DAPPLED', 'NIGHTMIST', 'HAWK']):
@@ -499,13 +506,7 @@ for a, i in enumerate(['SNOWSHOE', 'VENUS', 'SNOWBOOT', 'CHANCE', 'MOSSCLAW', 'D
     sprites.make_group('whitemossextra', (a, 0), 'whiteextra' + i, sprites_y=2)
 for a, i in enumerate(['SHADOWSIGHT', 'TWIST', 'RETSUKO', 'OKAPI', 'FRECKLEMASK', 'MOTH']):
     sprites.make_group('whitepatchesmoss', (a, 1), 'white' + i)
-    sprites.make_group('whitemossextra', (a, 1), 'whiteextra' + i, sprites_y=2)
-for a, i in enumerate(['SOOTSHOE', 'BLACKVENUS', 'SOOTBOOT', 'BLACKCHANCE', 'BLACKMOSSCLAW', 'BLACKDAPPLED', 'BLACKNIGHTMIST', 'BLACKHAWK']):
-    sprites.make_group('blackpatchesmoss', (a, 0), 'white' + i)
-    sprites.make_group('blackpatchesmossextra', (a, 0), 'whiteextra' + i, sprites_y=2)
-for a, i in enumerate(['BLACKSHADOWSIGHT', 'BLACKTWIST', 'BLACKRETSUKO', 'BLACKOKAPI', 'BLACKFRECKLEMASK', 'BLACKMOTH']):
-    sprites.make_group('blackpatchesmoss', (a, 1), 'white' + i)
-    sprites.make_group('blackpatchesmossextra', (a, 1), 'whiteextra' + i, sprites_y=2)    
+    sprites.make_group('whitemossextra', (a, 1), 'whiteextra' + i, sprites_y=2)    
 
 # single (solid)
 for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
@@ -1396,6 +1397,118 @@ for a, i in enumerate(['COAL', 'BLACK']):
     sprites.make_group('skittyWB', (a, 3), f'skitty{i}')
     sprites.make_group('skittyWBextra', (a, 3), f'skittyextra{i}', sprites_y=2)
 
+# ponit
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('ponitB', (a, 0), f'ponit{i}')
+    sprites.make_group('ponitBextra', (a, 0), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('ponitB', (a, 1), f'ponit{i}')
+    sprites.make_group('ponitBextra', (a, 1), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('ponitB', (a, 2), f'ponit{i}')
+    sprites.make_group('ponitBextra', (a, 2), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('ponitB', (a, 3), f'ponit{i}')
+    sprites.make_group('ponitBextra', (a, 3), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('ponitR', (a, 0), f'ponit{i}')
+    sprites.make_group('ponitRextra', (a, 0), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('ponitR', (a, 1), f'ponit{i}')
+    sprites.make_group('ponitRextra', (a, 1), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('ponitR', (a, 2), f'ponit{i}')
+    sprites.make_group('ponitRextra', (a, 2), f'ponitextra{i}', sprites_y=2)    
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('ponitR', (a, 3), f'ponit{i}')
+    sprites.make_group('ponitRextra', (a, 3), f'ponitextra{i}', sprites_y=2)   
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('ponitWB', (a, 0), f'ponit{i}')
+    sprites.make_group('ponitWBextra', (a, 0), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('ponitWB', (a, 1), f'ponit{i}')
+    sprites.make_group('ponitWBextra', (a, 1), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL']):
+    sprites.make_group('ponitWB', (a, 2), f'ponit{i}')
+    sprites.make_group('ponitWBextra', (a, 2), f'ponitextra{i}', sprites_y=2)
+for a, i in enumerate(['COAL', 'BLACK']):
+    sprites.make_group('ponitWB', (a, 3), f'ponit{i}')
+    sprites.make_group('ponitWBextra', (a, 3), f'ponitextra{i}', sprites_y=2)
+# spirit
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('spiritB', (a, 0), f'spirit{i}')
+    sprites.make_group('spiritBextra', (a, 0), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('spiritB', (a, 1), f'spirit{i}')
+    sprites.make_group('spiritBextra', (a, 1), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('spiritB', (a, 2), f'spirit{i}')
+    sprites.make_group('spiritBextra', (a, 2), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('spiritB', (a, 3), f'spirit{i}')
+    sprites.make_group('spiritBextra', (a, 3), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('spiritR', (a, 0), f'spirit{i}')
+    sprites.make_group('spiritRextra', (a, 0), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('spiritR', (a, 1), f'spirit{i}')
+    sprites.make_group('spiritRextra', (a, 1), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('spiritR', (a, 2), f'spirit{i}')
+    sprites.make_group('spiritRextra', (a, 2), f'spiritextra{i}', sprites_y=2)    
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('spiritR', (a, 3), f'spirit{i}')
+    sprites.make_group('spiritRextra', (a, 3), f'spiritextra{i}', sprites_y=2)   
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('spiritWB', (a, 0), f'spirit{i}')
+    sprites.make_group('spiritWBextra', (a, 0), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('spiritWB', (a, 1), f'spirit{i}')
+    sprites.make_group('spiritWBextra', (a, 1), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL']):
+    sprites.make_group('spiritWB', (a, 2), f'spirit{i}')
+    sprites.make_group('spiritWBextra', (a, 2), f'spiritextra{i}', sprites_y=2)
+for a, i in enumerate(['COAL', 'BLACK']):
+    sprites.make_group('spiritWB', (a, 3), f'spirit{i}')
+    sprites.make_group('spiritWBextra', (a, 3), f'spiritextra{i}', sprites_y=2)
+# wolf
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('wolfB', (a, 0), f'wolf{i}')
+    sprites.make_group('wolfBextra', (a, 0), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('wolfB', (a, 1), f'wolf{i}')
+    sprites.make_group('wolfBextra', (a, 1), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('wolfB', (a, 2), f'wolf{i}')
+    sprites.make_group('wolfBextra', (a, 2), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('wolfB', (a, 3), f'wolf{i}')
+    sprites.make_group('wolfBextra', (a, 3), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('wolfR', (a, 0), f'wolf{i}')
+    sprites.make_group('wolfRextra', (a, 0), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('wolfR', (a, 1), f'wolf{i}')
+    sprites.make_group('wolfRextra', (a, 1), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('wolfR', (a, 2), f'wolf{i}')
+    sprites.make_group('wolfRextra', (a, 2), f'wolfextra{i}', sprites_y=2)    
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('wolfR', (a, 3), f'wolf{i}')
+    sprites.make_group('wolfRextra', (a, 3), f'wolfextra{i}', sprites_y=2)   
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('wolfWB', (a, 0), f'wolf{i}')
+    sprites.make_group('wolfWBextra', (a, 0), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('wolfWB', (a, 1), f'wolf{i}')
+    sprites.make_group('wolfWBextra', (a, 1), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL']):
+    sprites.make_group('wolfWB', (a, 2), f'wolf{i}')
+    sprites.make_group('wolfWBextra', (a, 2), f'wolfextra{i}', sprites_y=2)
+for a, i in enumerate(['COAL', 'BLACK']):
+    sprites.make_group('wolfWB', (a, 3), f'wolf{i}')
+    sprites.make_group('wolfWBextra', (a, 3), f'wolfextra{i}', sprites_y=2)	
+
 # sphynxes
 sprites.make_group('skin_sphynx', (0, 0), 'skinS_BLACK')
 sprites.make_group('skin_sphynx', (1, 0), 'skinS_RED')
@@ -1458,7 +1571,13 @@ for a, i in enumerate(['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'ST
 for a, i in enumerate(['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE']):
     sprites.make_group('tortiepatchesmasks', (a, 3), f"tortiemask{i}", sprites_y=7)
 for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT']):
-    sprites.make_group('tortiepatchesmasksB', (a, 3), f"tortiemask{i}", sprites_y=5)
+    sprites.make_group('tortiepatchesmasksB', (a, 0), f"tortiemask{i}", sprites_y=7)
+for a, i in enumerate(['BROKENONE', 'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE']):
+    sprites.make_group('tortiepatchesmasksB', (a, 1), f"tortiemask{i}", sprites_y=7)
+for a, i in enumerate(['STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL']):
+    sprites.make_group('tortiepatchesmasksB', (a, 2), f"tortiemask{i}", sprites_y=7)
+for a, i in enumerate(['PONITMASK', 'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOON']):
+    sprites.make_group('tortiepatchesmasksB', (a, 3), f"tortiemask{i}", sprites_y=7)
 
 # SKINS
 sprites.make_group('skin', (0, 0), 'skinBLACK')
