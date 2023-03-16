@@ -782,6 +782,13 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return Backed(choice(pelt_colours), white, length)
         else:
             return Backed(colour, white, length)
+    elif pelt == "Charcoal":
+        if colour is None and white is None:
+            return Charcoal(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Charcoal(choice(pelt_colours), white, length)
+        else:
+            return Charcoal(colour, white, length) 
     elif pelt == "Doberman":
         if colour is None and white is None:
             return Doberman(choice(pelt_colours), choice([False, True]), length)
@@ -817,6 +824,13 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return Skele(choice(pelt_colours), white, length)
         else:
             return Skele(colour, white, length)      
+    elif pelt == "Stain":
+        if colour is None and white is None:
+            return Stain(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Stain(choice(pelt_colours), white, length)
+        else:
+            return Stain(colour, white, length) 
     elif pelt == "Mottled":
         if colour is None and white is None:
             return Mottled(choice(pelt_colours), choice([False, True]), length)
