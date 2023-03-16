@@ -185,6 +185,11 @@ class Sprites():
             "RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]):
             sprites.make_group('medcatherbs', (a, 2), f'acc_wild{i}')
             sprites.make_group('medcatherbsextra', (a, 2), f'acc_wildextra{i}', sprites_y=2)
+        for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
+            sprites.make_group('collars', (a, 0), f'collars{i}')
+            sprites.make_group('collarsextra', (a, 0),
+                               f'collarsextra{i}',
+                               sprites_y=2)
 
         for a, i in enumerate(["RAT BLACK", "RAT BROWN", "RAT CREAM"]):
             sprites.make_group('ratcessories', (a, 0), f'acc_wild{i}')
@@ -204,11 +209,6 @@ class Sprites():
             sprites.make_group('christabeach', (a, 2), f'acc_wild{i}')
             sprites.make_group('christabeachextra', (a, 2), f'acc_wildextra{i}', sprites_y=2)
 
-        for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
-            sprites.make_group('collars', (a, 0), f'collars{i}')
-            sprites.make_group('collarsextra', (a, 0),
-                               f'collarsextra{i}',
-                               sprites_y=2)
         for a, i in enumerate(["GREEN", "RAINBOW", "BLACK", "SPIKES", "WHITE"]):
             sprites.make_group('collars', (a, 1), f'collars{i}')
             sprites.make_group('collarsextra', (a, 1),
@@ -420,6 +420,9 @@ for x in [
 ]:
     sprites.spritesheet(f"sprites/wings/{x}.png", x) 
 
+# for x in ['dithered']:
+#     tiles.spritesheet(f"sprites/{x}.png", x)
+
 # Line art
 sprites.make_group('lineart', (0, 0), 'lines', sprites_y=5)
 sprites.make_group('Paralyzed_lineart', (0, 0),
@@ -439,23 +442,26 @@ sprites.make_group('fademask', (0, 0), 'fademask', sprites_y=15)
 sprites.make_group('fadestarclan', (0, 0), 'fadestarclan', sprites_y=15)
 sprites.make_group('fadedarkforest', (0, 0), 'fadedf', sprites_y=15)
 
-#Eyes
-for a, i in enumerate(['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE']):
+for a, i in enumerate(
+        ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE']):
     sprites.make_group('eyes', (a, 0), f'eyes{i}')
     sprites.make_group('eyesextra', (a, 0), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 0), f'eyes2{i}')
     sprites.make_group('eyes2extra', (a, 0), f'eyes2extra{i}', sprites_y=2)
-for a, i in enumerate(['DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'HEATHERBLUE', 'SUNLITICE']):
+for a, i in enumerate(
+        ['DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'HEATHERBLUE', 'SUNLITICE']):
     sprites.make_group('eyes', (a, 1), f'eyes{i}')
     sprites.make_group('eyesextra', (a, 1), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 1), f'eyes2{i}')
     sprites.make_group('eyes2extra', (a, 1), f'eyes2extra{i}', sprites_y=2)
-for a, i in enumerate(['COPPER', 'SAGE', 'BLUE2', 'PALEBLUE', 'VOID', 'GHOST']):
+for a, i in enumerate(
+        ['COPPER', 'SAGE', 'BLUE2', 'PALEBLUE', 'BLUEYELLOW', 'BLUEGREEN']):
     sprites.make_group('eyes', (a, 2), f'eyes{i}')
     sprites.make_group('eyesextra', (a, 2), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 2), f'eyes2{i}')
     sprites.make_group('eyes2extra', (a, 2), f'eyes2extra{i}', sprites_y=2)
-for a, i in enumerate(['PALEYELLOW', 'GOLD', 'GREENYELLOW']):
+for a, i in enumerate(
+        ['PALEYELLOW', 'GOLD', 'GREENYELLOW']):
     sprites.make_group('eyes', (a, 3), f'eyes{i}')
     sprites.make_group('eyesextra', (a, 3), f'eyesextra{i}', sprites_y=2)
     sprites.make_group('eyes2', (a, 3), f'eyes2{i}')
@@ -3159,6 +3165,7 @@ sprites.make_group('wings', (4, 2), 'skinLIGHTBROWNWING')
 sprites.make_group('wingsextra', (4, 2), 'skinextraLIGHTBROWNWING', sprites_y=2)
 sprites.make_group('wings', (5, 2), 'skinBLACKWING')
 sprites.make_group('wingsextra', (5, 2), 'skinextraBLACKWING', sprites_y=2)
+
 
 # tiles.make_group('dithered', (0, 0), 'terrain')
 # tiles.make_group('dithered', (1, 0), 'terraintwo')

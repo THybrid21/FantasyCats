@@ -433,6 +433,7 @@ class WolfBicolour():
     def __repr__(self):
         return f"white and {self.colour}{self.length} wolf"
 
+
 class Tortie():
     name = "Tortie"
     sprites = {1: 'tortie', 2: 'white'}
@@ -513,16 +514,16 @@ tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMAL1
                   'PONITMASK', 'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOON']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
-               'mottled', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf']               
+               'mottled', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf']  
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
-               'PALEBLUE', 'VOID', 'GHOST', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'BLUE2', 'SUNLITICE', 
-               'GREENYELLOW', 'POPPY', 'CRIMSON', 'RUBY', 'BROWN', 'EMERALD2', 'SKY', 'LILAC', 'BROWN2', 'PEANUT', 
-               'GREY2', 'YELLOWOLIVE', 'SUNSHINE', 'AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE',
-               'VIOLET', 'GRAPE', 'INDIGO', 'PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3',
-               'RBG', 'RBG2', 'RBG3', 'MONOCHROME', 'MONOCHROME2', 'MONOCHROME3', 'POPPY2', 'STRAWBERRY', 'MINTCHOC', 
-               'CHOCMINT', 'AMBER2', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
+   'PALEBLUE', 'VOID', 'GHOST', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'BLUE2', 'SUNLITICE', 
+   'GREENYELLOW', 'POPPY', 'CRIMSON', 'RUBY', 'BROWN', 'EMERALD2', 'SKY', 'LILAC', 'BROWN2', 'PEANUT', 
+   'GREY2', 'YELLOWOLIVE', 'SUNSHINE', 'AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE',
+   'VIOLET', 'GRAPE', 'INDIGO', 'PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3',
+   'RBG', 'RBG2', 'RBG3', 'MONOCHROME', 'MONOCHROME2', 'MONOCHROME3', 'POPPY2', 'STRAWBERRY', 'MINTCHOC', 
+   'CHOCMINT', 'AMBER2', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
 yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW', 'BROWN', 'BROWN2', 
                 'PEANUT', 'YELLOWOLIVE', 'SUNSHINE', 'AMBER2', 'BEACH']
 blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'BLUE2', 'SUNLITICE', 'AZURE', 
@@ -659,6 +660,7 @@ wings = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING
             'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING'"ALBINOPINKWING", "ALBINOBLUEWING", 
             "ALBINOREDWING", "ALBINOVIOLETWING", "ALBINOYELLOWWING", "ALBINOGREENWING", "MELANISTICLIGHTWING", 
             "MELANISTICWING", "MELANISTICDARKWING"]
+
 
 # CHOOSING PELT
 def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, determined=False):
@@ -873,6 +875,7 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return Tortie(colour, white, length)
     else:
         return Calico(colour, length)
+
 
 def describe_color(pelt, tortiecolour, tortiepattern, white_patches, skin):
     color_name = ''

@@ -45,13 +45,11 @@ from .pelts import (
     skin_categories,
     mono_eyes,
     purple_eyes,
-    chromatic_eyes,)
-try:
-    import ujson
-except ImportError:
-    import json as ujson
+    chromatic_eyes,
+    )
 from scripts.cat.sprites import Sprites
 from scripts.game_structure.game_essentials import game
+
 
 # ---------------------------------------------------------------------------- #
 #                                init functions                                #
@@ -215,6 +213,8 @@ def pelt_inheritance(cat, parents: tuple):
         chosen_tortie_base = chosen_pelt
         if chosen_tortie_base in ["TwoColour", "SingleColour"]:
             chosen_tortie_base = "Single"
+        if chosen_tortie_base in ["Wolf", "WolfBicolour"]:
+            chosen_tortie_base = "Wolf"
         chosen_tortie_base = chosen_tortie_base.lower()
         chosen_pelt = random.choice(torties)
 
@@ -355,9 +355,7 @@ def randomize_pelt(cat):
     # ------------------------------------------------------------------------------------------------------------#
 
     chosen_pelt_color = choice(
-        random.choices(colour_categories, weights=(30, 45, 40, 30, 25, 45, 15, 15, 10, 25), k=1)[0]
-    )
-
+        random.choices(colour_categories, weights=(30, 45, 40, 30, 25, 45, 15, 15, 10, 25), k=1)[0])
     # ------------------------------------------------------------------------------------------------------------#
     #   PELT LENGTH
     # ------------------------------------------------------------------------------------------------------------#
@@ -378,7 +376,7 @@ def randomize_pelt(cat):
             chosen_pelt = "TwoColour"
         else:
             chosen_white = "SingleColour"
-    if chosen_pelt in ["Wolf", "WolfBiColour"]:
+    elif chosen_pelt in ["Wolf", "WolfBiColour"]:
         if chosen_white:
             chosen_pelt = "WolfBiColour"
         else:
@@ -417,6 +415,7 @@ def init_sprite(cat):
         'elder': randint(3, 5)
     }
     cat.reverse = choice([True, False])
+
     # skin chances
     if cat.parent1 is None:
         cat.skin = choice(random.choices(skin_categories, weights=(297, 5, 3, 2, 1, 3), k=1) [0])
@@ -430,15 +429,6 @@ def init_sprite(cat):
 
     if cat.skin in sphynx:
         cat.pelt.length = 'short'
-            
-    if cat.pelt is not None:
-        if cat.pelt.length != 'long':
-            cat.age_sprites['adult'] = randint(6, 8)
-        else:
-            cat.age_sprites['adult'] = randint(0, 2)
-        cat.age_sprites['young adult'] = cat.age_sprites['adult']
-        cat.age_sprites['senior adult'] = cat.age_sprites['adult']
-        cat.age_sprites['dead'] = None
             
     if cat.pelt is not None:
         if cat.pelt.length != 'long':
@@ -505,7 +495,7 @@ def init_pattern(cat):
                 # Allow any colors that aren't the base color.
                 possible_colors = pelt_colours.copy()
                 possible_colors.remove(cat.pelt.colour)
-                possible_colors.extend(pride_colours * 4)
+                possible_colors.extend(pride_colours * 3)
                 cat.tortiecolour = choice(possible_colors)
 
             else:
@@ -624,19 +614,20 @@ def white_patches_inheritance(cat, parents: tuple):
         if p_ in little_white:
             add_weights = (40, 20, 15, 5, 1, 0)
         elif p_ in mid_white:
-            add_weights = (10, 40, 15, 10, 2, 0)
+            add_weights = (10, 40, 15, 10, 1, 0)
         elif p_ in high_white:
             add_weights = (15, 20, 40, 10, 2, 1)
         elif p_ in mostly_white:
-            add_weights = (5, 15, 20, 40, 1, 5)
+            add_weights = (5, 15, 20, 40, 2, 5)
         elif p_ in point_markings:
             add_weights = (10, 10, 10, 10, 65, 5)
         elif p_ == "FULLWHITE":
-            add_weights = (0, 5, 15, 40, 1, 10)
+            add_weights = (0, 5, 15, 40, 2, 10)
         else:
             add_weights = (0, 0, 0, 0, 0, 0)
 
-        for x in range(0, len(weights)): weights[x] += add_weights[x]
+        for x in range(0, len(weights)):
+            weights[x] += add_weights[x]
 
 
     # If all the weights are still 0, that means none of the parents have white patches.
@@ -674,8 +665,8 @@ def randomize_white_patches(cat):
 
     # Adjust weights for torties, since they can't have anything greater than mid_white:
     if cat.pelt.name == "Tortie":
-        weights = (2, 1, 0, 0, 1, 0)
-    if cat.pelt.name == "Ponit" or cat.tortiebase == "Ponit":
+        weights = (2, 1, 0, 0, 0, 0)
+    elif cat.pelt.name == "Ponit" or cat.tortiebase == "Ponit":
         weights = (2, 1, 1, 0, 0, 0)
     elif cat.tortiebase == "Spirit":
         weights = (2, 1, 0, 0, 0, 0)
@@ -684,7 +675,9 @@ def randomize_white_patches(cat):
 
 
     white_list = [little_white, mid_white, high_white, mostly_white, point_markings, ['FULLWHITE']]
-    chosen_white_patches = choice(random.choices(white_list, weights=weights, k=1)[0])
+    chosen_white_patches = choice(
+        random.choices(white_list, weights=weights, k=1)[0]
+    )
 
     cat.white_patches = chosen_white_patches
 
@@ -710,6 +703,7 @@ def init_white_patches(cat):
         else:
             randomize_white_patches(cat)
 
+
 def init_tint(cat):
     """Sets tint for pelt and white patches"""
 
@@ -725,3 +719,4 @@ def init_tint(cat):
         cat.white_patches_tint = choice(possible_tints)
     else:
         cat.white_patches_tint = "none"
+

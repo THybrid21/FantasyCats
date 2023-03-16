@@ -880,7 +880,7 @@ class Cat():
         elif self.genderalign == 'female' or self.genderalign == "transfem" or self.genderalign == "trans female":
             sex = 'molly'
         else:
-            sex = 'cat'
+            sex = 'eli'
         description = str(self.pelt.length).lower() + '-furred'
         description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
                                             self.white_patches, self.skin) + ' ' + sex
@@ -1861,6 +1861,9 @@ class Cat():
         ]:
             return False
         if self.status == 'mediator apprentice' and potential_mentor.status != 'mediator':
+            return False
+
+        if potential_mentor.is_parent(self):
             return False
 
         # If not an app, don't need a mentor

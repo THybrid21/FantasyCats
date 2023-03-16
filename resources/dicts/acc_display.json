@@ -474,8 +474,8 @@
     "singular": "starfish"
   },
 
-  "YELLOWSTAR": {
-    "default": "yellow starfish",
+  "REDSTAR": {
+    "default": "red starfish",
     "plural": "couple of starfish",
     "singular": "starfish"
   },
@@ -668,6 +668,5 @@
     "default": "lilac cape",
     "plural": "lilac capes",
     "singular": "lilac cape"
-  } 
-  
+  }   
 }
