@@ -931,25 +931,21 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
         }
 
     pattern_des = {
-        "Tabby": "tabby",
-        "Speckled": "speckled",
-        "Bengal": "unusally spotted",
-        "Marbled": "tabby",
-        "Ticked": "ticked",
-        "Smoke": "smoke",
-        "Mackerel": "tabby",
-        "Classic": "tabby",
-        "Agouti": "tabby",
-        "Backed": "striped",
-        "Rosette": "dappled",
-        "Sokoke": "tabby",
+        "Marbled": "marbled tabby",
+        "Ticked": "ticked tabby",
+        "Mackerel": "mackerel tabby",
+        "Classic": "classic tabby",
+        "Agouti": "ticked tabby",
+        "Backed": "stripe backed",
+        "Sokoke": "sokoke tabby",
         "Charcoal": "charcoal tabby",
         "Ghost": "ghost tabby",
         "Doberman": "doberman point",
         "Skele": "skeleton",
         "Hooded": "hooded charcoal tabby",
         "Ponit": "bleach point",
-        "Spirit": "ghostly spirit"
+        "Spirit": "ghostly spirit",
+        "WolfBicolour": "painted wolf"
     }
     
     color_name = str(pelt.colour).lower()
@@ -961,7 +957,7 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
     elif skin in melanistic_sprites:
         color_name = "melanistic"  
 
-    if pelt.name not in ["SingleColour", "TwoColour", "Tortie", "Calico", "Wolf", "WolfBicolour"] and color_name == "white" or color_name == "petal" color_name == "ivory":
+    if pelt.name not in ["SingleColour", "TwoColour", "Tortie", "Calico", "Wolf", "WolfBicolour"] and color_name == "white" or color_name == "petal" or color_name == "ivory":
         color_name = "pale"
 
     if pelt.name in pattern_des:
@@ -969,8 +965,6 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
     elif pelt.name in ["Tortie", "Calico"]:
         if short:
             color_name = f"mottled"
-            else:
-                color_name = pelt.name.lower()
         else:
             base = tortiebase.lower()
             if base in tabbies:
@@ -983,7 +977,9 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
             patches = tortiecolour.lower()
             if patches in renamed_colors:
                 patches = renamed_colors[patches]
-            color_name = f"{color_name} and {patches} {pelt.name.lower()}"
+            color_name = f"{color_name} {patches} {pelt.name.lower()}"
+    elif pelt.name not in ["SingleColour", "TwoColour"]:
+        color_name = f"{color_name} {pelt.name.lower()}"
 
     if skin in sphynx:
         color_name = color_name + ' sphynx'
@@ -992,10 +988,10 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
 
     if white_patches:
         if white_patches == "FULLWHITE":
-            color_name = "white"
-        if white_patches in mostly_white:
+            color_name = "stained"
+        if white_patches in [high_white, mostly_white]:
             if pelt.name != "Calico":
-                color_name = 'white and ' + color_name
+                color_name = color_name + ' with patches'
         elif white_patches in vit and not short:
             # If short, don't include vit information. 
             color_name = color_name + " with vitilago"
@@ -1005,6 +1001,6 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, skin, short=Fa
                 color_name = "flame point"
         else:
             if pelt.name != "Calico":
-                color_name = color_name + ' and white'
+                color_name = color_name + ' with patches'
 
     return color_name

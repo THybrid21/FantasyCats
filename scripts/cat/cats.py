@@ -894,10 +894,10 @@ class Cat():
             description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
                                                 self.white_patches, self.skin, short=short) + ' ' + sex
         elif self.white_patches == "FULLWHITE":
-            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
+            description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
                                                 self.white_patches, self.skin, short=short) + ' ' + self.white_patches_tint + ' ' + sex
         else:
-            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
+            description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
                                                 self.white_patches, self.skin, short=short) + ' of ' + self.white_patches_tint + ' ' + sex
         return description
         
