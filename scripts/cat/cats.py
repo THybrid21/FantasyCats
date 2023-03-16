@@ -872,27 +872,35 @@ class Cat():
                         else:
                             self.trait = chosen_trait
 
-    def describe_cat(self):
+    def describe_cat(self, short=False):
         """ Generates a string describing the cat's appearance and gender. Mainly used for generating
-        the allegiances."""
+        the allegiances. If short is true, it will generate a very short one, with the minimal amount of information. """
+
         if self.genderalign == 'male' or self.genderalign == "transmasc" or self.genderalign == "trans male":
             sex = 'tom'
         elif self.genderalign == 'female' or self.genderalign == "transfem" or self.genderalign == "trans female":
             sex = 'molly'
         else:
             sex = 'eli'
-        description = str(self.pelt.length).lower() + '-furred'
+
+        description = ""
+        if len(self.scars) >= 4:
+            description += "scarred "
+
+        if not short and self.pelt.length == "long":
+            description += str(self.pelt.length).lower() + '-furred ' 
         if self.white_patches_tint == "none" or self.white_patches in ["COLOURPOINT", "RAGDOLL", "KARPATI", "SNOWSHOE", 
                 "SNOWBOOT", "LIGHTPOINT", 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']:
-            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
-                                                self.white_patches, self.skin) + ' ' + sex
+            description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
+                                                self.white_patches, self.skin, short=short) + ' ' + sex
         elif self.white_patches == "FULLWHITE":
             description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
-                                                self.white_patches, self.skin) + ' ' + self.white_patches_tint + ' ' + sex
+                                                self.white_patches, self.skin, short=short) + ' ' + self.white_patches_tint + ' ' + sex
         else:
             description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
-                                                self.white_patches, self.skin) + ' of ' + self.white_patches_tint + ' ' + sex
+                                                self.white_patches, self.skin, short=short) + ' of ' + self.white_patches_tint + ' ' + sex
         return description
+        
 
     def describe_eyes(self):
         colour = str(self.eye_colour).lower()
