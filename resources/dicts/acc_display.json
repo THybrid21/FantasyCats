@@ -474,8 +474,8 @@
     "singular": "starfish"
   },
 
-  "YELLOWSTAR": {
-    "default": "yellow starfish",
+  "REDSTAR": {
+    "default": "red starfish",
     "plural": "couple of starfish",
     "singular": "starfish"
   },
@@ -654,6 +654,11 @@
     "plural": "white capes",
     "singular": "white cape"
   },
+  "ORANGECAPE": {
+    "default": "orange cape",
+    "plural": "orange capes",
+    "singular": "orange cape"
+  },
   "PINKCAPE": {
     "default": "pink cape",
     "plural": "pink capes",
@@ -668,6 +673,5 @@
     "default": "lilac cape",
     "plural": "lilac capes",
     "singular": "lilac cape"
-  } 
-  
+  }   
 }
