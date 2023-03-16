@@ -2913,8 +2913,8 @@ sprites.make_group('skin2', (4, 1), 'skinS_MELANISTIC')
 sprites.make_group('skin2extra', (4, 1), 'skinextraS_MELANISTIC', sprites_y=2)
 sprites.make_group('skin2', (5, 1), 'skinS_MELANISTICDARK')
 sprites.make_group('skin2extra', (5, 1), 'skinextraS_MELANISTICDARK', sprites_y=2)
-sprites.make_group('skin3_sphynx', (2, 2), 'skinS_XANADU')
-sprites.make_group('skin3extra_sphynx', (2, 2), 'skinextraS_XANADU', sprites_y=2)
+sprites.make_group('skin3_sphynx', (3, 2), 'skinS_XANADU')
+sprites.make_group('skin3extra_sphynx', (3, 2), 'skinextraS_XANADU', sprites_y=2)
 
 # new new torties
 for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH']):
