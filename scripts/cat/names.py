@@ -12,7 +12,6 @@ from .pelts import (
     yellow_colours,
     green_colours,
     purple_colours,
-    pride_colours,
     albino_sprites,
     melanistic_sprites,
     wings,
@@ -112,8 +111,6 @@ class Name():
                     possible_prefix_categories.append(self.names_dict["blue_prefixes"])
                 elif colour in purple_colours:
                     possible_prefix_categories.append(self.names_dict["purple_prefixes"])
-                elif colour in pride_colours:
-                    possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
             if skin is not None:
                 if skin in albino_sprites:
                     possible_prefix_categories.append(self.names_dict["albino_prefixes"])
