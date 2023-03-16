@@ -631,7 +631,7 @@ point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SNOWSHOE', 'SNOWBOOT', '
 vit = ['VITILIGO', 'VITILIGO2', 'DARKVITILIGO', 'DARKVITILIGO2']
 white_sprites = [little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
-tint_colors = ['none', 'offwhite', 'gray', 'darkcream', 'cream', 'pink', 'bluewhite', 'mint', 'black',
+tint_colors = ['none', 'off white', 'gray', 'dark cream', 'cream', 'pink', 'blue-white', 'mint', 'black',
     'midnight', 'scarlet', 'starkit', 'sunshine']
 
 skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
