@@ -882,8 +882,16 @@ class Cat():
         else:
             sex = 'eli'
         description = str(self.pelt.length).lower() + '-furred'
-        description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
-                                            self.white_patches, self.skin) + ' ' + sex
+        if self.white_patches_tint == "none" or self.white_patches in ["COLOURPOINT", "RAGDOLL", "KARPATI", "SNOWSHOE", 
+                "SNOWBOOT", "LIGHTPOINT", 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']:
+            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
+                                                self.white_patches, self.skin) + ' ' + sex
+        elif self.white_patches == "FULLWHITE":
+            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
+                                                self.white_patches, self.skin) + ' ' + self.white_patches_tint + ' ' + sex
+        else:
+            description += ' ' + describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
+                                                self.white_patches, self.skin) + ' of ' + self.white_patches_tint + ' ' + sex
         return description
 
     def describe_eyes(self):

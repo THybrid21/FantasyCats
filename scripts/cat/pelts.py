@@ -631,6 +631,9 @@ point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SNOWSHOE', 'SNOWBOOT', '
 vit = ['VITILIGO', 'VITILIGO2', 'DARKVITILIGO', 'DARKVITILIGO2']
 white_sprites = [little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
+tint_colors = ['none', 'offwhite', 'gray', 'darkcream', 'cream', 'pink', 'bluewhite', 'mint', 'black',
+    'midnight', 'scarlet', 'starkit', 'sunshine']
+
 skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
                 'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'XANADU', 'BLACKGILL', 
                 'REDGILL', 'PINKGILL', 'DARKBROWNGILL', 'BROWNGILL', 'LIGHTBROWNGILL', 'DARKGILL', 'DARKGREYGILL', 
@@ -1003,20 +1006,20 @@ def describe_color(pelt, tortiecolour, tortiepattern, white_patches, skin):
     # enough to comment but not make calico
     if white_patches is not None:
         if white_patches in little_white + mid_white:
-            color_name = color_name + ' and stain'
+            color_name = color_name + ' with small patches'
         # and white
         elif white_patches in high_white:
             if pelt.name != "Calico":
-                color_name = color_name + ' and stain'   
-
+                color_name = color_name + ' with patches'
         # white and
         elif white_patches in mostly_white:
-            color_name = 'stained and ' + color_name 
+            color_name = color_name + ' with large patches'
         # colorpoint
-        elif white_patches in point_markings:
+        elif white_patches in point_markings and pelt.name not in ["Doberman", "Ponit"]:
             color_name = color_name + ' point'
             if color_name == 'dark ginger point' or color_name == 'ginger point':
                 color_name = 'flame point'
+
         # vitiligo
         elif white_patches in vit:
             color_name = color_name + ' with vitiligo'
