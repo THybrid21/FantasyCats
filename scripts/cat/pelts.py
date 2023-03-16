@@ -574,7 +574,7 @@ collars = [
 
 tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Merle"]
 spotted = ["Speckled", "Rosette", "Snowflake", "Mottled"]
-plain = ["SingleColour", "TwoColour", "Smoke", "Backed", "Doberman", "Skitty", "Rat", "Wolf", "WolfBicolour"]
+plain = ["SingleColour", "TwoColour", "Smoke", "Backed", "Ghost", "Doberman", "Skitty", "Rat", "Wolf", "WolfBicolour"]
 exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Spirit"]
 torties = ["Tortie", "Calico"]
 pelt_categories = [tabbies, spotted, plain, exotic, torties]
@@ -655,15 +655,15 @@ magic_kitty = ['FIRE', 'WATER', 'EARTH', 'WIND', 'STAR', 'STEAM', 'MAGMA', 'SMOK
 skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites, wing_sprites, magic_kitty] 
 
 sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
-            'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE',  
+            'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 'S_XANADU',  
             'S_ALBINOPINK', 'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 'S_ALBINOYELLOW', 'S_ALBINOGREEN' 'S_MELANISTICLIGHT', 
             'S_MELANISTIC', 'S_MELANISTICDARK', 'S_FIRE', 'S_WATER', 'S_EARTH', 'S_WIND', 'S_STAR', 'S_STEAM', 'S_MAGMA', 
             'S_SMOKE', 'S_HELL', 'S_MUD', 'S_STORM', 'S_BLOOD', 'S_SAND', 'S_BERRY', 'S_GHOST']
 wings = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
             'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
-            'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING'"ALBINOPINKWING", "ALBINOBLUEWING", 
-            "ALBINOREDWING", "ALBINOVIOLETWING", "ALBINOYELLOWWING", "ALBINOGREENWING", "MELANISTICLIGHTWING", 
-            "MELANISTICWING", "MELANISTICDARKWING"]
+            'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING', 'ALBINOPINKWING', 'ALBINOBLUEWING', 
+            'ALBINOREDWING', 'ALBINOVIOLETWING', 'ALBINOYELLOWWING', 'ALBINOGREENWING', 'MELANISTICLIGHTWING', 
+            'MELANISTICWING', 'MELANISTICDARKWING']
 
 
 # CHOOSING PELT
@@ -894,6 +894,8 @@ def describe_color(pelt, tortiecolour, tortiepattern, white_patches, skin):
         color_name = 'dark brown'
     elif color_name == 'palecream':
         color_name = 'pale cream'
+    elif color_name == 'bluegrey':
+        color_name = 'blue-grey'
     elif color_name == 'darkgrey':
         color_name = 'dark grey'
     elif color_name == 'shinymew':

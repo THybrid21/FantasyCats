@@ -185,11 +185,6 @@ class Sprites():
             "RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]):
             sprites.make_group('medcatherbs', (a, 2), f'acc_wild{i}')
             sprites.make_group('medcatherbsextra', (a, 2), f'acc_wildextra{i}', sprites_y=2)
-        for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
-            sprites.make_group('collars', (a, 0), f'collars{i}')
-            sprites.make_group('collarsextra', (a, 0),
-                               f'collarsextra{i}',
-                               sprites_y=2)
 
         for a, i in enumerate(["RAT BLACK", "RAT BROWN", "RAT CREAM"]):
             sprites.make_group('ratcessories', (a, 0), f'acc_wild{i}')
@@ -209,6 +204,11 @@ class Sprites():
             sprites.make_group('christabeach', (a, 2), f'acc_wild{i}')
             sprites.make_group('christabeachextra', (a, 2), f'acc_wildextra{i}', sprites_y=2)
 
+        for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
+            sprites.make_group('collars', (a, 0), f'collars{i}')
+            sprites.make_group('collarsextra', (a, 0),
+                               f'collarsextra{i}',
+                               sprites_y=2)
         for a, i in enumerate(["GREEN", "RAINBOW", "BLACK", "SPIKES", "WHITE"]):
             sprites.make_group('collars', (a, 1), f'collars{i}')
             sprites.make_group('collarsextra', (a, 1),
