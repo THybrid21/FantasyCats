@@ -143,11 +143,13 @@
 	},
 	"cat_generation": {
 		"base_permanent_condition": 90,
-		"base_male_tortie": 18,
-		"base_female_tortie": 9,
+		"base_male_tortie": 13,
+		"base_female_tortie": 4,
 		"base_heterochromia": 120,
 		"direct_inheritance": 15,
-		"wildcard_tortie": 10
+		"wildcard_tortie": 9,
+		"vit_chance": 10,
+		"random_point_chance": 6
 	},
 	"accessory_generation": {
 		"base_acc_chance": 150,
@@ -159,13 +161,13 @@
 		"ceremony_modifier": -20
 	},
 	"fading": {
-		"age_to_fade": 300,
+		"age_to_fade": 202,
 		"opacity_at_fade": 20,
 		"visual_fading_speed": 5
 	},
 	"roles": {
 		"mediator_app_chance": 50,
-		"base_medicine_app_chance": 30,
+		"base_medicine_app_chance": 41,
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
@@ -209,7 +211,7 @@
 		"cruel season_death_chance": 150
 	},
 	"clan_creation": {
-		"rerolls": 5,
+		"rerolls": 3,
 		"comment": "Set this to -1 for it to be infinite"
 	},
 	"graduation": {
@@ -218,8 +220,8 @@
 		"max_apprentice_age": {
 			"medicine cat apprentice": 30,
 			"apprentice": 25,
-			"mediator apprentice": 30
+			"mediator apprentice": 25
 		},
-		"min_graduating_age": 9
+		"min_graduating_age": 10
 	}
 }
