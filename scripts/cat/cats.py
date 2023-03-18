@@ -903,9 +903,9 @@ class Cat():
         if self.genderalign == 'male' or self.genderalign == "transmasc" or self.genderalign == "trans male":
             sex = 'tom'
         elif self.genderalign == 'female' or self.genderalign == "transfem" or self.genderalign == "trans female":
-            sex = 'she-cat'
+            sex = 'molly'
         else:
-            sex = 'cat'
+            sex = 'eli'
 
         description = ""
         if len(self.scars) >= 4:
@@ -913,9 +913,18 @@ class Cat():
 
         if not short and self.pelt.length == "long":
             description += str(self.pelt.length).lower() + '-furred ' 
-
-        description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
-                                            self.white_patches, self.points, self.vitiligo, short=short) + ' ' + sex
+        if self.white_patches_tint == "none" or self.points is not "None":
+            description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
+                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
+                                                ' ' + sex
+        elif self.white_patches == "FULLWHITE":
+            description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
+                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
+                                                ' ' + self.white_patches_tint + ' ' + sex
+        else:
+            description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
+                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
+                                                ' of ' + self.white_patches_tint + ' ' + sex
         return description
         
 
