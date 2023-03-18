@@ -167,7 +167,7 @@
 	},
 	"roles": {
 		"mediator_app_chance": 50,
-		"base_medicine_app_chance": 41,
+		"base_medicine_app_chance": 30,
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
