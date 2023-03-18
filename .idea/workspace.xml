@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/dicts/snippet_collections.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/beach/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/beach/medicine.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/forest/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/forest/medicine.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/medicine.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/mountainous/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/mountainous/medicine.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/plains/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/plains/medicine.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/screens/relation_screens.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/screens/relation_screens.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/cats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/cats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/pelts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/pelts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +23,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkdbl/Documents/GitHub/clangen&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/WC Clan Gen/OGUpdate/FantasyCats"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="clangen" />
@@ -80,7 +74,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="POTAT-REAL" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

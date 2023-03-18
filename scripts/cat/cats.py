@@ -69,12 +69,13 @@ class Cat():
         'senior'
     ]
     age_moons = {
-        'kitten': [0, 5],
+        'newborn': [0, 0],
+        'kitten': [1, 5],
         'adolescent': [6, 14],
         'young adult': [15, 53],
         'adult': [54, 107],
         'senior adult': [108, 131],
-        'elder': [132, 216]
+        'senior': [132, 216]
     }
 
     # This in is in reverse order: top of the list at the bottom
@@ -912,6 +913,7 @@ class Cat():
 
         if not short and self.pelt.length == "long":
             description += str(self.pelt.length).lower() + '-furred ' 
+
         if self.white_patches_tint == "none" or self.points != "None":
             description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
                                                 self.white_patches, self.points, self.vitiligo, 
@@ -1016,6 +1018,7 @@ class Cat():
                 colour2 = 'chrome'   
             elif colour2 == 'rgb2' or colour2 == 'rgb3':
                 colour2 = 'rgb'   
+            colour = colour + ' and ' + colour2
             colour = colour + ' and ' + colour2
         return colour
 
