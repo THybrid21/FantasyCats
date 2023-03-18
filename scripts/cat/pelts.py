@@ -331,7 +331,7 @@ tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'roset
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
-   'PALEBLUE', 'VOID', 'GHOST', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'BLUE2', 'SUNLITICE', 
+   'PALEBLUE', 'VOID', 'GHOST', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 
    'GREENYELLOW', 'POPPY', 'CRIMSON', 'RUBY', 'BROWN', 'EMERALD2', 'SKY', 'LILAC', 'BROWN2', 'PEANUT', 
    'GREY2', 'YELLOWOLIVE', 'SUNSHINE', 'AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE',
    'VIOLET', 'GRAPE', 'INDIGO', 'PRIMARY', 'PRIMARY2', 'PRIMARY3', 'CHROME', 'CHROME2', 'CHROME3',
@@ -647,8 +647,8 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, points, vitili
     elif skin in melanistic_sprites:
         color_name = "melanistic"  
 
-    if pelt.name not in ["SingleColour", "TwoColour", "Tortie", "Calico"] \
-    and color_name == "white" or color_name == "petal" or color_name == "ivory":
+    if pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour", 
+        "Tortie", "Calico"] and color_name == "white" or color_name == "petal" or color_name == "ivory":
         color_name = "pale"
 
     if pelt.name in pattern_des:
