@@ -561,9 +561,11 @@ def init_pattern(cat):
                                     'STRAKIT', 'WINE', 'GENDER', 'REDNEG', 'SOOT', 'DARKGREY', 'ANCHOR', 'CHARCOAL', 
                                     'COAL', 'BLACK', 'PITCH', 'DUSKBOW', 'SONIC', 'JEANS', 'NAVY'] + (pride_colours * 2))  
                 elif cat.pelt.colour in pride_colours:
-                    possible_colors = (['GENDER', 'REDNEG', 'STRAKIT'] + (pride_colours))
+                    possible_colors = pride_colours.copy()
                     possible_colors.remove(cat.pelt.colour)
-                    cat.tortiecolour = choice(possible_colors) 
+                    possible_colors.extend(['STRAKIT', 'GENDER', 'REDNEG', 'PITCH', 
+                                    'PALEBOW', 'DUSKBOW'])
+                    cat.tortiecolour = choice(possible_colors)
 
         else:
             cat.tortiecolour = choice(pride_colours)

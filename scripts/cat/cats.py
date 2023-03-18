@@ -69,13 +69,12 @@ class Cat():
         'senior'
     ]
     age_moons = {
-        'newborn': [0, 0],
-        'kitten': [1, 5],
-        'adolescent': [6, 11],
-        'young adult': [12, 47],
-        'adult': [48, 95],
-        'senior adult': [96, 119],
-        'senior': [120, 300]
+        'kitten': [0, 5],
+        'adolescent': [6, 14],
+        'young adult': [15, 53],
+        'adult': [54, 107],
+        'senior adult': [108, 131],
+        'elder': [132, 216]
     }
 
     # This in is in reverse order: top of the list at the bottom
@@ -913,18 +912,18 @@ class Cat():
 
         if not short and self.pelt.length == "long":
             description += str(self.pelt.length).lower() + '-furred ' 
-        if self.white_patches_tint == "none" or self.points is not "None":
+        if self.white_patches_tint == "none" or self.points != "None":
             description += describe_color(self.pelt, self.tortiepattern, self.tortiecolour,
-                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
-                                                ' ' + sex
+                                                self.white_patches, self.points, self.vitiligo, 
+                                                self.skin, short=short) + ' ' + sex
         elif self.white_patches == "FULLWHITE":
             description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern,
-                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
-                                                ' ' + self.white_patches_tint + ' ' + sex
+                                                self.white_patches, self.points, self.vitiligo, 
+                                                self.skin, short=short) + ' ' + self.white_patches_tint + ' ' + sex
         else:
             description += describe_color(self.pelt, self.tortiecolour, self.tortiepattern, 
-                                                self.white_patches, self.points, self.vitiligo, self.skin, short=short) + 
-                                                ' of ' + self.white_patches_tint + ' ' + sex
+                                                self.white_patches, self.points, self.vitiligo, 
+                                                self.skin, short=short) + ' of ' + self.white_patches_tint + ' ' + sex
         return description
         
 
