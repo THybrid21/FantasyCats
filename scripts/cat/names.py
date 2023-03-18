@@ -12,11 +12,10 @@ from .pelts import (
     yellow_colours,
     green_colours,
     purple_colours,
+    pride_colours,
     albino_sprites,
     melanistic_sprites,
-    wings,
     sphynx,
-    magic_kitty,
     tabbies,
     spotted,
     exotic,
@@ -111,6 +110,8 @@ class Name():
                     possible_prefix_categories.append(self.names_dict["blue_prefixes"])
                 elif colour in purple_colours:
                     possible_prefix_categories.append(self.names_dict["purple_prefixes"])
+                elif colour in pride_colours:
+                    possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
             if skin is not None:
                 if skin in albino_sprites:
                     possible_prefix_categories.append(self.names_dict["albino_prefixes"])
@@ -118,8 +119,6 @@ class Name():
                     possible_prefix_categories.append(self.names_dict["melanistic_prefixes"])
                 elif skin in sphynx:    
                     possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])
-                elif skin in wings:    
-                    possible_prefix_categories.append(self.names_dict["wing_prefixes"])
             # Choose appearance-based prefix if possible and named_after_appearance because True.
             if possible_prefix_categories:
                 prefix_category = random.choice(possible_prefix_categories)
@@ -148,8 +147,6 @@ class Name():
                         possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
                     elif skin in sphynx:    
                         possible_suffix_categories.append(self.names_dict["sphynx_suffixes"])     
-                    elif skin in magic_kitty:    
-                        possible_suffix_categories.append(self.names_dict["magic_suffixes"])   
                 if possible_suffix_categories:    
                     suffix_category = random.choice(possible_suffix_categories)
                     self.suffix = random.choice(suffix_category)
