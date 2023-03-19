@@ -597,6 +597,9 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
 def describe_color(pelt, tortiebase, tortiecolour, white_patches, points, vitiligo, skin, short=False):
     """ short=True makes everything just slightly shorter, mainly for kit purposes. """
     
+def describe_appearance(cat, short=False):
+    
+    # Define look-up dictionaries
     if short:
         renamed_colors = {
             "ashbrown": "brown",
@@ -629,16 +632,17 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, points, vitili
         }
 
     pattern_des = {
-        "Marbled": "marbled tabby",
-        "Ticked": "ticked tabby",
-        "Mackerel": "mackerel tabby",
-        "Classic": "classic tabby",
-        "Agouti": "ticked tabby",
-        "Backed": "stripe backed",
-        "Sokoke": "sokoke tabby"
+        "Marbled": "c_n marbled tabby",
+        "Ticked": "c_n ticked tabby",
+        "Mackerel": "c_n mackerel tabby",
+        "Classic": "c_n classic tabby",
+        "Agouti": "c_n ticked tabby",
+        "Backed": "stripe backed c_n",
+        "Sokoke": "c_n sokoke tabby"
     }
-    
-    color_name = str(pelt.colour).lower()
+
+    # Start with determining the base color name. 
+    color_name = str(cat.pelt.colour).lower()
     if color_name in renamed_colors:
         color_name = renamed_colors[color_name]
 
@@ -651,9 +655,11 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, points, vitili
         "Tortie", "Calico"] and color_name == "white" or color_name == "petal" or color_name == "ivory":
         color_name = "pale"
 
-    if pelt.name in pattern_des:
-        color_name += f" {pattern_des[pelt.name]}"
-    elif pelt.name in ["Tortie", "Calico"]:
+    # Time to descibe the pattern and any additional colors. 
+    if cat.pelt.name in pattern_des:
+        color_name = pattern_des[cat.pelt.name].replace("c_n", color_name)
+    elif cat.pelt.name in torties:
+        # Calicos and Torties need their own desciptions. 
         if short:
             color_name = pelt.name.lower()
         else:
@@ -669,28 +675,99 @@ def describe_color(pelt, tortiebase, tortiecolour, white_patches, points, vitili
             if patches in renamed_colors:
                 patches = renamed_colors[patches]
             color_name = f"{color_name} {patches} {pelt.name.lower()}"
+
     elif pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour"]:
         color_name = f"{color_name} {pelt.name.lower()}"
 
     if skin in skin_sphynx:
         color_name = color_name + ' sphynx'
 
-    if white_patches:
-        if white_patches == "FULLWHITE":
+            # If using short, don't add describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
+            # If using short, don't describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
+            if cat.pelt.colour in black_colours + grey_colours + white_colours + blue_colours and \
+                cat.tortiecolour in black_colours + brown_colours + white_colours + blue_colours:
+                color_name = "mottled"
+            elif cat.pelt.colour in brown_colours + yellow_colours and \
+                cat.tortiecolour in brown_colours + yellow_colours:
+                colour_name = "splattered"
+            else:
+                color_name = cat.pelt.name.lower()
+        else:
+            base = cat.tortiebase.lower()
+            if base in tabbies + ['bengal', 'rosette', 'speckled']:
+                base = 'tabby'
+            else:
+                base = ''
+
+            patches_color = cat.tortiecolour.lower()
+            if patches_color in renamed_colors:
+                patches_color = renamed_colors[patches_color]
+            color_name = f"{color_name}/{patches_color}"
+            
+            if cat.pelt.colour in black_colours + grey_colours + white_colours + blue_colours and \
+                cat.tortiecolour in black_colours + brown_colours + white_colours + blue_colours:
+                color_name = "mottled"
+            elif cat.pelt.colour in brown_colours + yellow_colours and \
+                cat.tortiecolour in brown_colours + yellow_colours:
+                colour_name = "splattered"
+            else:
+                color_name = f"{color_name} {cat.pelt.name.lower()}"
+
+    if cat.white_patches:
+        if cat.white_patches == "FULLWHITE":
+            # If the cat is fullwhite, discard all other information. They are just white. 
             color_name = "stained"
-        if white_patches in [high_white, mostly_white]:
-            if pelt.name != "Calico":
-                color_name = color_name + ' with patches'
+        if cat.white_patches in [high_white, mostly_white] and cat.pelt.name != "Calico":
+            color_name = f"{color_name} with patches"
+        elif cat.pelt.name != "Calico":
+            color_name = f"{color_name} with small patches"
+
+    if cat.white_patches_tint != "None":
+        colour_name = f"{color_name} + ' of ' {white_patches_tint}"
     
-    if points:
-        color_name = color_name + " point"
+    if cat.points:
+        color_name = f"{color_name} point"
         if "ginger point" in color_name:
             color_name.replace("ginger point", "flame point")
-    if vitiligo and not short:
-        # If short, don't include vit information. Since short is mainly used for kittens, and vit doesn't show, it just takes up extra space. 
-        color_name = color_name + " with vitiligo"
+
+    # Now it's time for gender
+    if cat.genderalign in ["female", "trans female"]:
+        color_name = f"{color_name} molly"
+    elif cat.genderalign in ["male", "trans male"]:
+        color_name = f"{color_name} tom"
+    else:
+        color_name = f"{color_name} eli"
+
+    # Here is the place where we can add some additional details about the cat, for the full non-short one. 
+    # These include notable missing limbs, vitiligo, long-furred-ness, and 3 or more scars. 
+    if not short:
+        
+        scar_details = {
+            "NOTAIL": "no tail", 
+            "HALFTAIL": "half a tail", 
+            "NOPAW": "three legs", 
+            "NOLEFTEAR": "a missing ear", 
+            "NORIGHTEAR": "a missing ear",
+            "NOEAR": "no ears"
+        }
+
+        additional_details = []
+        if cat.vitiligo:
+            additional_details.append("vitiligo")
+        for scar in cat.scars:
+            if scar in scar_details and scar_details[scar] not in additional_details:
+                additional_details.append(scar_details[scar])
+        
+        if len(additional_details) > 1:
+            color_name = f"{color_name} with {', '.join(additional_details[:-1])} and {additional_details[-1]}"
+        elif additional_details:
+            color_name = f"{color_name} with {additional_details[0]}"
     
-    if 'white and white' in color_name:
-        color_name.replace("white and white", "white")
+    
+        if len(cat.scars) >= 3:
+            color_name = f"scarred {color_name}"
+        if cat.pelt.length == "long":
+            color_name = f"long-furred {color_name}"
 
     return color_name
+    
