@@ -654,11 +654,13 @@ class Pregnancy_Events():
         small_litter_possibility = {"young adult": 18, "adult": 18, "senior adult": 24, "senior": 16}
         large_litter_possibility = {"young adult": 10, "adult": 24, "senior adult": 15, "senior": 10}
         huge_litter_possibility = {"young adult": 3, "adult": 4, "senior adult": 3, "senior": 2}
+        obscene_litter_possibility = {"young adult": 0, "adult": 1, "senior adult": 2, "senior": 0}
         tiny_litter = [random.randint(1, 3)] *tiny_litter_possibility[cat.age]
         small_litter = [random.randint(4, 6)] *small_litter_possibility[cat.age]
         large_litter = [random.randint(7, 9)] *large_litter_possibility[cat.age]
-        huge_litter = [random.randint(10, 14)] *huge_litter_possibility[cat.age]   
-        amount = choice(tiny_litter + small_litter + large_litter + huge_litter)
+        huge_litter = [random.randint(10, 13)] *huge_litter_possibility[cat.age]      
+        obscene_litter = [random.randint(14, 20)] *obscene_litter_possibility[cat.age] 
+        amount = choice(tiny_litter + small_litter + large_litter + huge_litter + obscene_litter)
 
         return amount
 
