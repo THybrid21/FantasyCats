@@ -189,8 +189,8 @@
 		"rejoin_chance": 20
 	},
 	"cat_ages": {
-		"newborn": [0, 2],
-		"kitten": [3, 5],
+		"newborn": [0, 1],
+		"kitten": [2, 5],
 		"adolescent": [6, 14],
 		"young adult": [15, 53],
         "adult": [54, 107],
@@ -199,6 +199,7 @@
 		"comment": [
 			"These HAVE to be in the correct order: where one ends, the next one begins on the next number.",
 			"If you DON'T DO THIS, your game WILL break."
+			"Hybrid: Made Newborn last just a little bit longer, just so people can enjoy them"
 		]
 	},
 	"patrol_generation": {
