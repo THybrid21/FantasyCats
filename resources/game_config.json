@@ -147,9 +147,9 @@
 		"base_female_tortie": 9,
 		"base_heterochromia": 120,
 		"direct_inheritance": 15,
-		"wildcard_tortie": 9,
-		"vit_chance": 10,
-		"random_point_chance": 5
+		"wildcard_tortie": 10,
+		"vit_chance": 25,
+		"random_point_chance": 15
 	},
 	"accessory_generation": {
 		"base_acc_chance": 150,
@@ -161,7 +161,7 @@
 		"ceremony_modifier": -20
 	},
 	"fading": {
-		"age_to_fade": 202,
+		"age_to_fade": 300,
 		"opacity_at_fade": 20,
 		"visual_fading_speed": 5
 	},
@@ -211,7 +211,7 @@
 		"cruel season_death_chance": 150
 	},
 	"clan_creation": {
-		"rerolls": 5,
+		"rerolls": -1,
 		"comment": "Set this to -1 for it to be infinite"
 	},
 	"graduation": {

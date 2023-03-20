@@ -1001,18 +1001,20 @@ def update_sprite(cat):
             new_sprite.blit(sprites.sprites['shaders' + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(sprites.sprites['lighting' + cat_sprite], (0, 0))
 
-        if not cat.dead:
-            new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
-        elif cat.df:
-            new_sprite.blit(sprites.sprites['lineartdf' + cat_sprite], (0, 0))
-        elif cat.dead:
-            new_sprite.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
+        new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
+
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
         new_sprite.blit(sprites.sprites['skin' + cat.skin + cat_sprite], (0, 0))
         for scar in cat.scars:
             if scar in scars2:
                 new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
+
+        #draw dead affects
+        if cat.df:
+            new_sprite.blit(sprites.sprites['lineartdf' + cat_sprite], (0, 0))
+        elif cat.dead:
+            new_sprite.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
 
         # draw accessories        
         if cat.accessory in plant_accessories:

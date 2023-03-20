@@ -856,7 +856,7 @@
     },
 
     "recovering from birth":{
-        "duration": 5,
+        "duration": 3,
         "severity": "major",
         "medicine_duration": 5,
         "mortality": {

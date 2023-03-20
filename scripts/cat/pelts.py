@@ -239,6 +239,220 @@ class Backed():
         else:
             return f"{self.colour} backed{self.length}"
 
+class Charcoal():
+    name = "Charcoal"
+    sprites = {1: 'charcoal', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} charcoal"
+        else:
+            return self.colour + self.length + " charcoal"
+
+class Ghost():
+    name = "Ghost"
+    sprites = {1: 'tabby', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} ghost"
+        else:
+            return self.colour + self.length + " ghost"
+
+class Merle():
+    name = "Merle"
+    sprites = {1: 'merle', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} merle"
+        else:
+            return self.colour + self.length + " merle"
+
+class Doberman():
+    name = "Doberman"
+    sprites = {1: 'doberman', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} doberman"
+        else:
+            return self.colour + self.length + " doberman"
+
+class Snowflake():
+    name = "Snowflake"
+    sprites = {1: 'snowflake', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} snowflake"
+        else:
+            return self.colour + self.length + " snowflake"            
+
+class Skele():
+    name = "Skele"
+    sprites = {1: 'skele', 2: 'white'}
+    
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} skele"
+        else:
+            return self.colour + self.length + " skele"
+
+class Stain():
+    name = "Stain"
+    sprites = {1: 'stain', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} stain"
+        else:
+            return self.colour + self.length + " stain"     
+
+class Banded():
+    name = "Banded"
+    sprites = {1: 'banded', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} banded"
+        else:
+            return self.colour + self.length + " banded"     
+
+class Rat():
+    name = "Rat"
+    sprites = {1: 'rat', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} rat"
+        else:
+            return self.colour + self.length + " rat"  
+
+class Skitty():
+    name = "Skitty"
+    sprites = {1: 'skitty', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} skitty"
+        else:
+            return self.colour + self.length + " skitty"  
+
+class Hooded():
+    name = "Hooded"
+    sprites = {1: 'hooded', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} hooded"
+        else:
+            return self.colour + self.length + " hooded"  
+
+class Ponit():
+    name = "Ponit"
+    sprites = {1: 'ponit', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} ponit"
+        else:
+            return self.colour + self.length + " ponit"  
+
+class Spirit():
+    name = "Spirit"
+    sprites = {1: 'spirit'}
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = self.colour == "white"
+
+    def __repr__(self):
+        return self.colour + self.length + " spirit"  
+
+class Wolf():
+    name = "Wolf"
+    sprites = {1: 'wolf'}
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = self.colour == "white"
+
+    def __repr__(self):
+        return self.colour + self.length + " wolf"  
+class WolfBicolour():
+    name = "WolfBicolour"
+    sprites = {1: 'wolf', 2: 'white'}
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = True
+
+    def __repr__(self):
+        return f"white and {self.colour}{self.length} wolf"
 
 class Tortie():
     name = "Tortie"
@@ -285,7 +499,6 @@ pelt_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD
     'SADDLE', 'CEDAR', 'ONYX', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE',
     'DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST',
     'AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
-
 pelt_falsesolid = ['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS',
     'SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 
     'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 
@@ -327,7 +540,8 @@ tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMAL1
                   'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
                   'ROBIN', 'BRINDLE', 'PAIGE']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
-               'classic', 'sokoke', 'agouti', 'singlestripe']
+               'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
+               'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf']
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -347,7 +561,7 @@ green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'JADE', 'GRASS',
 mono_eyes = ['GREY', 'SILVER', 'VOID', 'GHOST', 'GREYTWO', 'LILACGREY', 'WHITE', 'MONOCHROME', 
     'MONOCHROMETWO', 'MONOCHROMETHREE', 'NACRE', 'NIGHT']
 purple_eyes = ['POPPY', 'CRIMSON', 'RUBY', 'LILAC', 'VIOLET', 'GRAPE', 'INDIGO', 
-    'POPPY2', 'STRAWBERRY']
+    'POPPYPINK', 'STRAWBERRY']
 chromatic_eyes = ['PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RBG', 
     'RBGTWO', 'RBGTHREE',]
 # scars1 is scars from other cats, other animals - scars2 is missing parts - scars3 is "special" scars that could only happen in a special event
@@ -380,10 +594,11 @@ collars = [
 ]
 
 tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-spotted = ["Speckled", "Rosette"]
+spotted = ["Speckled", "Rosette", "Snowflake", "Banded"]
 plain = ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour", "Smoke", 
-        "Backed"]
-exotic = ["Bengal", "Marbled"]
+        "Backed", "Ghost", "Doberman", "Skitty", "Rat", "Wolf", "WolfBicolour"]
+exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", 
+        "Spirit"]
 torties = ["Tortie", "Calico"]
 pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
@@ -430,7 +645,7 @@ eye_sprites = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBL
     'LILAC', 'BROWNTWO', 'PEANUT', 'GREYTWO', 'YELLOWOLIVE', 'SUNSHINE', 'AZURE', 'COBOLT', 'GRASS', 'MINT', 
     'LILACGREY', 'WHITE', 'VIOLET', 'GRAPE', 'INDIGO', 'VOID', 'GHOST', 'PRIMARY', 'PRIMARYB', 'PRIMARYC', 
     'CHROME', 'CHROMEB', 'CHROMEC','RBG', 'RBGTWO', 'RBGTHREE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE', 
-    'POPPY2', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
+    'POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
 
 little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                 'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
@@ -455,8 +670,12 @@ skin_sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTB
                 'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE']
 albino_sprites = ['ALBINOPINK', 'ALBINOBLUE', 'ALBINORED', 'ALBINOVIOLET', 'ALBINOYELLOW', 'ALBINOGREEN', 'S_ALBINOPINK',  
                 'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 'S_ALBINOYELLOW', 'S_ALBINOGREEN']
-melanistic_sprites = ['MELANISTIC', 'MELANISTIC2', 'MELANISTIC3', 'S_MELANISTIC', 'S_MELANISTIC2', 'S_MELANISTIC3'] 
+melanistic_sprites = ['MELANISTIC', 'MELANISTICTWO', 'MELANISTICTHREE', 'S_MELANISTIC', 'S_MELANISTICTWO', 'S_MELANISTICTHREE'] 
 skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites]
+sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
+                'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 
+                'S_ALBINOPINK', 'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 'S_ALBINOYELLOW', 'S_ALBINOGREEN', 'S_MELANISTIC', 
+                'S_MELANISTICTWO', 'S_MELANISTICTHREE']
 
 # CHOOSING PELT
 def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, determined=False):
@@ -587,6 +806,109 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return Backed(choice(pelt_colours), white, length)
         else:
             return Backed(colour, white, length)
+    elif pelt == "Charcoal":
+        if colour is None and white is None:
+            return Charcoal(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Charcoal(choice(pelt_colours), white, length)
+        else:
+            return Charcoal(colour, white, length) 
+    elif pelt == "Doberman":
+        if colour is None and white is None:
+            return Doberman(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Doberman(choice(pelt_colours), white, length)
+        else:
+            return Doberman(colour, white, length)   
+    elif pelt == "Ghost":
+        if colour is None and white is None:
+            return Ghost(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Ghost(choice(pelt_colours), white, length)
+        else:
+            return Ghost(colour, white, length)            
+    elif pelt == "Merle":
+        if colour is None and white is None:
+            return Merle(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Merle(choice(pelt_colours), white, length)
+        else:
+            return Merle(colour, white, length)     
+    elif pelt == "Snowflake":
+        if colour is None and white is None:
+            return Snowflake(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Snowflake(choice(pelt_colours), white, length)
+        else:
+            return Snowflake(colour, white, length)            
+    elif pelt == "Skele":
+        if colour is None and white is None:
+            return Skele(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Skele(choice(pelt_colours), white, length)
+        else:
+            return Skele(colour, white, length)      
+    elif pelt == "Stain":
+        if colour is None and white is None:
+            return Stain(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Stain(choice(pelt_colours), white, length)
+        else:
+            return Stain(colour, white, length) 
+    elif pelt == "Banded":
+        if colour is None and white is None:
+            return Banded(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Banded(choice(pelt_colours), white, length)
+        else:
+            return Banded(colour, white, length)  
+    elif pelt == "Rat":
+        if colour is None and white is None:
+            return Rat(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Rat(choice(pelt_colours), white, length)
+        else:
+            return Rat(colour, white, length) 
+    elif pelt == "Skitty":
+        if colour is None and white is None:
+            return Skitty(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Skitty(choice(pelt_colours), white, length)
+        else:
+            return Skitty(colour, white, length) 
+    elif pelt == "Hooded":
+        if colour is None and white is None:
+            return Hooded(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Hooded(choice(pelt_colours), white, length)
+        else:
+            return Hooded(colour, white, length) 
+    elif pelt == "Ponit":
+        if colour is None and white is None:
+            return Ponit(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Ponit(choice(pelt_colours), white, length)
+        else:
+            return Ponit(colour, white, length) 
+    elif pelt == "Spirit":
+        if colour is None and not white:
+            return Spirit(choice(pelt_colours), length)
+        elif colour is None:
+            return Spirit("WHITE", length)
+        else:
+            return Spirit(colour, length) 
+    if pelt == 'Wolf':
+        if colour is None and not white:
+            return Wolf(choice(pelt_colours), length)
+        elif colour is None:
+            return Wolf("WHITE", length)
+        else:
+            return Wolf(colour, length)
+    elif pelt == 'WolfBicolour':
+        if colour is None:
+            return WolfBicolour(choice(pelt_c_no_white), length)
+        else:
+            return WolfBicolour(colour, length)
     elif pelt == 'Tortie':
         if white is None:
             return Tortie(colour, choice([False, True]), length)
@@ -636,7 +958,15 @@ def describe_appearance(cat, short=False):
         "Classic": "c_n classic tabby",
         "Agouti": "c_n ticked tabby",
         "Backed": "stripe backed c_n",
-        "Sokoke": "c_n sokoke tabby"
+        "Sokoke": "c_n sokoke tabby",
+        "Charcoal": "charcoal tabby",
+        "Ghost": "ghost tabby",
+        "Doberman": "doberman point",
+        "Skele": "skeleton",
+        "Hooded": "hooded charcoal tabby",
+        "Ponit": "bleach point",
+        "Spirit": "ghostly spirit",
+        "WolfBicolour": "painted wolf"
     }
 
     # Start with determining the base color name. 
@@ -650,7 +980,8 @@ def describe_appearance(cat, short=False):
         color_name = "melanistic"  
 
     if cat.pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour", 
-        "Tortie", "Calico"] and color_name == "white" or color_name == "petal" or color_name == "ivory":
+    "Wolf", "WolfBicolour", "Tortie", "Calico"] and color_name == "white" or color_name == "petal" \
+    or color_name == "ivory":
         color_name = "pale"
 
     # Time to descibe the pattern and any additional colors. 
@@ -670,8 +1001,10 @@ def describe_appearance(cat, short=False):
                 color_name = cat.pelt.name.lower()
         else:
             base = cat.tortiebase.lower()
-            if base in tabbies + ['bengal', 'rosette', 'speckled']:
+            if base in tabbies + ['marbled', 'charcoal', 'hooded', 'spirit']:
                 base = 'tabby'
+            elif base in spotted + ['bengal']:
+                base = 'spotted'
             else:
                 base = ''
 
@@ -692,22 +1025,10 @@ def describe_appearance(cat, short=False):
     elif cat.pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour"]:
         color_name = f"{color_name} {cat.pelt.name.lower()}"
 
-    if cat.skin in skin_sphynx:
+    if cat.skin in sphynx:
         color_name = color_name + ' sphynx'
 
-    if cat.white_patches:
-        if cat.white_patches == "FULLWHITE":
-            # If the cat is fullwhite, discard all other information. They are just white. 
-            color_name = "stained"
-        if cat.white_patches in [high_white, mostly_white] and cat.pelt.name != "Calico":
-            color_name = f"{color_name} with patches"
-        elif cat.pelt.name != "Calico":
-            color_name = f"{color_name} with small patches"
-
-    if cat.white_patches_tint != "None":
-        colour_name = f"{color_name} + ' of ' + {cat.white_patches_tint}"
-    
-    if cat.points:
+    if cat.points and cat.pelt.name not in ["Doberman", "Ponit"]:
         color_name = f"{color_name} point"
         if "ginger point" in color_name:
             color_name.replace("ginger point", "flame point")
@@ -719,6 +1040,25 @@ def describe_appearance(cat, short=False):
         color_name = f"{color_name} tom"
     else:
         color_name = f"{color_name} eli"
+
+    if cat.white_patches and cat.skin not in albino_sprites + melanistic_sprites:
+        if cat.white_patches == "FULLWHITE":
+            # If the cat is fullwhite, discard all other information. They are just white. 
+            if cat.white_patches_tint != "none":
+                color_name = f"stained {cat.white_patches_tint}"
+            else:
+                color_name = f"stained white"
+        if cat.white_patches in high_white + mostly_white and cat.pelt.name != "Calico":
+            if cat.white_patches_tint != "none":            
+                color_name = f"{color_name} with patches of {cat.white_patches_tint}"
+            else: 
+                color_name = f"{color_name} with patches of white" 
+        elif cat.white_patches in little_white + mid_white and cat.pelt.name != "Calico":
+            if cat.white_patches_tint != "none":            
+                color_name = f"{color_name} with small patches of {cat.white_patches_tint}"
+            else: 
+                color_name = f"{color_name} with small patches of white" 
+
 
     # Here is the place where we can add some additional details about the cat, for the full non-short one. 
     # These include notable missing limbs, vitiligo, long-furred-ness, and 3 or more scars. 

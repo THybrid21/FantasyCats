@@ -935,37 +935,33 @@ class Cat():
             colour = 'pale yellow'
         elif colour == 'heatherblue':
             colour = 'heather blue'
-        elif colour == 'blue2':
-            colour = 'blue'
         elif colour == 'sunlitice':
             colour = 'sunlit ice'
         elif colour == 'greenyellow':
             colour = 'green-yellow'
         elif colour == 'lilacgrey':
             colour = 'lilac grey'
-        elif colour == 'brown2':
-            colour = 'brown'
-        elif colour == 'emerald2':
-            colour = 'emerald'            
-        elif colour == 'grey2':
+        elif colour == 'browntwo':
+            colour = 'brown'        
+        elif colour == 'greytwo':
             colour = 'grey'   
         elif colour == 'yellowolive':
             colour = 'yellow-olive'            
-        elif colour == 'amber2':
+        elif colour == 'ambertwo':
             colour = 'bright amber'   
         elif colour == 'mintchoc':
             colour = 'mint-choc'
         elif colour == 'chocmint':
             colour = 'choc-mint'               
-        elif colour == 'monochrome2' or colour == 'monochrome3':
+        elif colour == 'monochrometwo' or colour == 'monochromethree':
             colour = 'monochrome'   
-        elif colour == 'poppy2':
-            colour = 'poppy'   
-        elif colour == 'primary2' or colour == 'primary3':
+        elif colour == 'poppypink':
+            colour = 'pink poppy'   
+        elif colour == 'primaryb' or colour == 'primaryc':
             colour = 'primary'   
-        elif colour == 'chrome2' or colour == 'chrome3':
+        elif colour == 'chromeb' or colour == 'chromec':
             colour = 'chrome'   
-        elif colour == 'rgb2' or colour == 'rgb3':
+        elif colour == 'rgbtwo' or colour == 'rgbthree':
             colour = 'rgb'   
         if self.eye_colour2 != None:
             if colour2 == 'palegreen':
@@ -978,39 +974,34 @@ class Cat():
                 colour2 = 'pale yellow'
             if colour2 == 'heatherblue':
                 colour2 = 'heather blue'
-            if colour2 == 'blue2':
-                colour2 = 'blue'
             if colour2 == 'sunlitice':
                 colour2 = 'sunlit ice'
             if colour2 == 'greenyellow':
                 colour2 = 'green-yellow'
             if colour2 == 'lilacgrey':
                 colour2 = 'lilac grey'
-            if colour2 == 'brown2':
-                colour2 = 'brown'
-            if colour2 == 'emerald2':
-                colour2 = 'emerald'            
-            if colour2 == 'grey2':
+            if colour2 == 'browntwo':
+                colour2 = 'brown'      
+            if colour2 == 'greytwo':
                 colour2 = 'grey'   
             if colour2 == 'yellowolive':                
                 colour22 = 'yellow-olive'
-            elif colour2 == 'amber2':
+            elif colour2 == 'ambertwo':
                 colour2 = 'bright amber'   
             elif colour2 == 'mintchoc':
                 colour2 = 'mint-choc'
             elif colour2 == 'chocmint':
                 colour2 = 'choc-mint'               
-            elif colour2 == 'monochrome2' or colour2 == 'monochrome3':
+            elif colour2 == 'monochrometwo' or colour2 == 'monochromethree':
                 colour2 = 'monochrome'   
-            elif colour2 == 'poppy2':
-                colour2 = 'poppy'   
-            elif colour2 == 'primary2' or colour2 == 'primary3':
+            elif colour2 == 'poppypink':
+                colour2 = 'pink poppy'   
+            elif colour2 == 'primaryb' or colour2 == 'primaryc':
                 colour2 = 'primary'   
-            elif colour2 == 'chrome2' or colour2 == 'chrome3':
+            elif colour2 == 'chromeb' or colour2 == 'chromec':
                 colour2 = 'chrome'   
-            elif colour2 == 'rgb2' or colour2 == 'rgb3':
+            elif colour2 == 'rgbtwo' or colour2 == 'rgbthree':
                 colour2 = 'rgb'   
-            colour = colour + ' and ' + colour2
             colour = colour + ' and ' + colour2
         return colour
 

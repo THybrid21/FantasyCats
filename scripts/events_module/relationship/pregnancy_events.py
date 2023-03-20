@@ -650,10 +650,10 @@ class Pregnancy_Events():
 
     def get_amount_of_kits(self, cat):
         """Get the amount of kits which will be born."""
-        tiny_litter_possibility = {"young adult": 18, "adult": 10, "senior adult": 15, "elder": 24}
-        small_litter_possibility = {"young adult": 18, "adult": 18, "senior adult": 24, "elder": 16}
-        large_litter_possibility = {"young adult": 10, "adult": 24, "senior adult": 15, "elder": 10}
-        huge_litter_possibility = {"young adult": 3, "adult": 4, "senior adult": 3, "elder": 2}
+        tiny_litter_possibility = {"young adult": 18, "adult": 10, "senior adult": 15, "senior": 24}
+        small_litter_possibility = {"young adult": 18, "adult": 18, "senior adult": 24, "senior": 16}
+        large_litter_possibility = {"young adult": 10, "adult": 24, "senior adult": 15, "senior": 10}
+        huge_litter_possibility = {"young adult": 3, "adult": 4, "senior adult": 3, "senior": 2}
         tiny_litter = [random.randint(1, 3)] *tiny_litter_possibility[cat.age]
         small_litter = [random.randint(4, 6)] *small_litter_possibility[cat.age]
         large_litter = [random.randint(7, 9)] *large_litter_possibility[cat.age]

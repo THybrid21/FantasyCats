@@ -34,7 +34,7 @@ from .pelts import (
     yellow_eyes,
     pelt_colours,
     tortiepatterns,
-    skin_sphynx,
+    sphynx,
     cream_colours,
     grey_colours,
     blue_colours,
@@ -214,6 +214,8 @@ def pelt_inheritance(cat, parents: tuple):
         chosen_tortie_base = chosen_pelt
         if chosen_tortie_base in ["TwoColour", "SingleColour"]:
             chosen_tortie_base = "Single"
+        if chosen_tortie_base in ["Wolf", "WolfBicolour"]:
+            chosen_tortie_base = "Wolf" 
         chosen_tortie_base = chosen_tortie_base.lower()
         chosen_pelt = random.choice(torties)
 
@@ -247,7 +249,7 @@ def pelt_inheritance(cat, parents: tuple):
         elif p_ in pride_colours:
             add_weight = (1, 5, 1, 1, 1, 1, 5, 5, 5, 5, 45)
         elif p_ is None:
-            add_weight = (40, 40, 40, 40, 40, 40, 2, 2, 2, 15)
+            add_weight = (40, 40, 40, 40, 40, 40, 2, 2, 2, 15, 5)
         else:
             add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
@@ -341,6 +343,8 @@ def randomize_pelt(cat):
         chosen_tortie_base = chosen_pelt
         if chosen_tortie_base in ["TwoColour", "SingleColour"]:
             chosen_tortie_base = "Single"
+        elif chosen_tortie_base in ["Wolf", "WolfBiColour"]:
+            chosen_tortie_base = "Wolf"
         chosen_tortie_base = chosen_tortie_base.lower()
         chosen_pelt = random.choice(torties)
 
@@ -370,6 +374,11 @@ def randomize_pelt(cat):
             chosen_pelt = "TwoColour"
         else:
             chosen_white = "SingleColour"
+    elif chosen_pelt in ["Wolf", "WolfBiColour"]:
+        if chosen_white:
+            chosen_pelt = "WolfBiColour"
+        else:
+            chosen_white = "Wolf"
     elif chosen_pelt == "Calico":
         if not chosen_white:
             chosen_pelt = "Tortie"
@@ -420,7 +429,7 @@ def init_sprite(cat):
         par2 = cat.all_cats[cat.parent2]
         cat.skin = choice([par1.skin, par2.skin, choice(random.choices(skin_categories, weights=(187, 6, 4, 3), k=1)[0])]) 
 
-    if cat.skin in skin_sphynx:
+    if cat.skin in sphynx:
         cat.pelt.length = 'short'
             
     if cat.pelt is not None:
@@ -494,10 +503,19 @@ def init_pattern(cat):
 
             else:
                 # Normal generation
-                if cat.tortiebase in ["backed", "smoke", "single", "falsesolid"]:
-                    cat.tortiepattern = choice(['backed', 'smoke', 'single', 'falsesolid'])
+                if cat.tortiebase in ["backed", "smoke", "single", "falsesolid", "ghost"]:
+                    cat.tortiepattern = choice(['backed', 'smoke', 'single', 'falsesolid', 'ghost', 'rat', 
+                                    'snowflake', 'wolf', 'spirit'])
+                elif cat.tortiebase in ["speckled", "banded"]:
+                    cat.tortiepattern = choice(['speckled', 'banded'])
+                elif cat.tortiebase in ["charcoal", "hooded"]:
+                    cat.tortiepattern = choice(['charcoal', 'hooded', 'spirit'])    
+                elif cat.tortiebase == "ponit":
+                    cat.tortiepattern = 'ponit' 
+                elif cat.tortiebase == "spirit":
+                    cat.tortiepattern = random.choices([cat.tortiebase, 'wolf', 'single', 'skele', 'ponit'], weights=[75, 15, 10, 4, 1], k=1)[0]
                 else:
-                    cat.tortiepattern = random.choices([cat.tortiebase, 'single', 'falsesolid'], weights=[93, 3, 1], k=1)[0]
+                    cat.tortiepattern = random.choices([cat.tortiebase, 'ghost', 'rat', 'skele', 'spirit'], weights=[93, 3, 3, 1, 1], k=1)[0]
 
                 # Ginger is often duplicated to increase its chances
                 if cat.pelt.colour in ["WHITE", "SILVER", "BRONZE", "GREY", "PALEBOW", "TURQUOISE", "TIFFANY", "SHINYMEW", "SKY",
@@ -562,6 +580,7 @@ def init_pattern(cat):
                     cat.tortiecolour = choice (['RED', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD', 'RASIN',
                                     'STRAKIT', 'WINE', 'GENDER', 'REDNEG', 'SOOT', 'DARKGREY', 'ANCHOR', 'CHARCOAL', 
                                     'COAL', 'BLACK', 'PITCH', 'DUSKBOW', 'SONIC', 'JEANS', 'NAVY'] + (pride_colours * 2))  
+                
                 elif cat.pelt.colour in pride_colours:
                     possible_colors = pride_colours.copy()
                     possible_colors.remove(cat.pelt.colour)
@@ -673,6 +692,14 @@ def white_patches_inheritance(cat, parents: tuple):
         # safe then sorry.
         if not any(weights):
             weights = [2, 1, 0, 0, 0]
+    elif cat.pelt.name == "Ponit" or cat.tortiebase == "Ponit":
+        weights = [2, 1, 1, 0, 0]
+        if not any(weights):
+            weights = [2, 1, 1, 0, 0]
+    elif cat.tortiebase == "Spirit":
+        weights = [2, 1, 0, 0, 0]
+        if not any(weights):
+            weights = [2, 1, 0, 0, 0]
 
     chosen_white_patches = choice(
         random.choices(white_list, weights=weights, k=1)[0]
@@ -694,6 +721,10 @@ def randomize_white_patches(cat):
 
     # Adjust weights for torties, since they can't have anything greater than mid_white:
     if cat.pelt.name == "Tortie":
+        weights = (2, 1, 0, 0, 0)
+    elif cat.pelt.name == "Ponit" or cat.tortiebase == "Ponit":
+        weights = (2, 1, 1, 0, 0)
+    elif cat.tortiebase == "Spirit":
         weights = (2, 1, 0, 0, 0)
     elif cat.pelt.name == "Calico":
         weights = (0, 0, 20, 15, 1)
