@@ -198,7 +198,7 @@
         "senior": [132, 216],
 		"comment": [
 			"These HAVE to be in the correct order: where one ends, the next one begins on the next number.",
-			"If you DON'T DO THIS, your game WILL break."
+			"If you DON'T DO THIS, your game WILL break.",
 			"Hybrid: Made Newborn last just a little bit longer, just so people can enjoy them"
 		]
 	},
