@@ -656,7 +656,7 @@ class Pregnancy_Events():
         small_litter = [random.randint(4, 6)] * game.config["pregnancy"]["small_litter_possibility"][cat.age]
         large_litter = [random.randint(7, 9)] * game.config["pregnancy"]["large_litter_possibility"][cat.age]
         huge_litter = [random.randint(10, 14)] * game.config["pregnancy"]["huge_litter_possibility"][cat.age]
-        ridiculous_litter = [random.randint(15, max_kits)] * game.config["pregnancy"]["ridculous_litter_possibility"][cat.age]
+        ridiculous_litter = [random.randint(15, max_kits)] * game.config["pregnancy"]["ridiculous_litter_possibility"][cat.age]
         amount = choice(tiny_litter + small_litter + large_litter + huge_litter + ridiculous_litter)
 
         return amount
