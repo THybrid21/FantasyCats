@@ -15,7 +15,7 @@ from .pelts import (
     pride_colours,
     albino_sprites,
     melanistic_sprites,
-    skin_sphynx,
+    sphynx,
     tabbies,
     spotted,
     exotic,
@@ -145,7 +145,7 @@ class Name():
                         possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
                     elif pelt in torties:
                         possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
-                    elif skin in skin_sphynx:    
+                    elif skin in sphynx:    
                         possible_suffix_categories.append(self.names_dict["sphynx_suffixes"])     
                 if possible_suffix_categories:    
                     suffix_category = random.choice(possible_suffix_categories)
