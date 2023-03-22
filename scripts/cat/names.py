@@ -128,10 +128,10 @@ class Name():
                 self.prefix = random.choice(prefix_category)
             elif named_after_biome and possible_prefix_categories:
                 if biome is not None and biome in self.names_dict["biome_prefixes"]:
-                possible_prefix_categories.clear
-                possible_prefix_categories.append(self.names_dict["biome_prefixes"][biome])
-                prefix_category = random.choice(possible_prefix_categories)
-                self.prefix = random.choice(prefix_category)
+                    possible_prefix_categories.clear
+                    possible_prefix_categories.append(self.names_dict["biome_prefixes"][biome])
+                    prefix_category = random.choice(possible_prefix_categories)
+                    self.prefix = random.choice(prefix_category)
             else:
                 self.prefix = random.choice(self.names_dict["normal_prefixes"])
                     
