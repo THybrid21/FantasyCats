@@ -117,7 +117,7 @@ class Name():
                     possible_prefix_categories.append(self.names_dict["albino_prefixes"])
                 elif skin in melanistic_sprites:    
                     possible_prefix_categories.append(self.names_dict["melanistic_prefixes"])
-                elif skin in skin_sphynx:    
+                elif skin in sphynx:    
                     possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])
             # Choose appearance-based prefix if possible and named_after_appearance because True.
             if possible_prefix_categories:
