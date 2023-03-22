@@ -81,13 +81,16 @@ class Name():
                  skin=None,
                  eyes=None,
                  pelt=None,
-                 tortiepattern=None):
+                 tortiepattern=None,
+                 biome=None):
         self.status = status
         self.prefix = prefix
         self.suffix = suffix
         
         # Set prefix
         if prefix is None:
+            named_after_biome = not random.getrandbits(3) # chance for True is 1/8
+            # Add possible prefix categories to list.
             possible_prefix_categories = []
             if colour is not None:
                 if colour in black_colours:
@@ -120,7 +123,13 @@ class Name():
                 elif skin in sphynx:    
                     possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])
             # Choose appearance-based prefix if possible and named_after_appearance because True.
-            if possible_prefix_categories:
+            if possible_prefix_categories and not named_after_biome:
+                prefix_category = random.choice(possible_prefix_categories)
+                self.prefix = random.choice(prefix_category)
+            elif named_after_biome and possible_prefix_categories:
+                if biome is not None and biome in self.names_dict["biome_prefixes"]:
+                possible_prefix_categories.clear
+                possible_prefix_categories.append(self.names_dict["biome_prefixes"][biome])
                 prefix_category = random.choice(possible_prefix_categories)
                 self.prefix = random.choice(prefix_category)
             else:
@@ -129,11 +138,10 @@ class Name():
         # Set suffix
         while self.suffix is None or self.suffix == self.prefix.casefold() or str(self.suffix) in \
                 self.prefix.casefold() and not str(self.suffix) == '':
-            if pelt is None or pelt == 'SingleColour':
-                self.suffix = random.choice(self.names_dict["normal_suffixes"])
+            if skin in sphynx:    
+                self.suffix = random.choice(self.names_dict["sphynx_suffixes"])  
             else:
-                named_after_pelt = not random.getrandbits(3) # Chance for True is '1/8'.
-                # Pelt name only gets used if there's an associated suffix.
+                named_after_pelt = not random.getrandbits(2) # Pelt name only gets used if there's an associated suffix.
                 possible_suffix_categories = []
                 if named_after_pelt:
                     possible_suffix_categories.append(self.names_dict["normal_suffixes"])
@@ -144,9 +152,7 @@ class Name():
                     elif pelt in exotic:
                         possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
                     elif pelt in torties:
-                        possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
-                    elif skin in sphynx:    
-                        possible_suffix_categories.append(self.names_dict["sphynx_suffixes"])     
+                        possible_suffix_categories.append(self.names_dict["tortie_suffixes"])   
                 if possible_suffix_categories:    
                     suffix_category = random.choice(possible_suffix_categories)
                     self.suffix = random.choice(suffix_category)

@@ -227,6 +227,49 @@
 			"Gale", "Nightingale", "Mallard", "Woodpecker", "Cuckoo", "Pelican", "Gull", "Bat", "Fruit", "Fisher", "Warbler",
 			"Stork", "Goldfinch", "Gold", "Swan", "Grace"],
 
+  "biome_prefixes": {
+    "Forest": [
+    "Acorn", "Magnolia", "Maple", "Doe", "Grove", "Deer", "Buck", "Stag", "Moss", "Wood", "Log", "Stump", "Branch", "Birch",
+    "Oak", "Beech", "Sap", "Wolf", "Grouse", "Moose", "Elk", "Spruce", "Pine", "Aspen", "Mushroom", "Lynx", "Squirrel", "Badger",
+    "Boar", "Marten", "Bat", "Robin", "Sparrow", "Stick", "Twig", "Bark", "Sprig", "Honey", "Frond", "Cedar", "Fir",
+     "Antler", "Almond"
+    ],
+    "Beach": [
+    "Jellyfish", "Trout", "Salt", "Shore", "Coast", "Wave", "Flounder", "Sardine", "Anchovy", "Squid", "Conch", 
+    "Anemone", "Crab", "Hermit", "Coral", "Current", "Splash", "Palm", "Pearl", "Scale", "Shark", "Algae",
+    "Dolphin", "Ocean", "Sea", "Reef", "Shell", "Cove", "Foam", "Clam", "Snail", "Slug", "Brine", "Barracuda", "Sand", 
+    "Octopus", "Ripple", "Swash", "Pool", "Pearl", "Fin", "Drop", "Drip", "Lagoon", "Lake", "Shimmer", "Scale", "Whale",
+    "Torrent", "Wave", "Delta", "Tide", "Tidal", "Nacre", "Avocet", "Barnacle", "Beluga", "Albatross",
+    "Coconut", "Sand", "Dolphin", "Gull", "Seagull", "Pelican"
+    ],
+    "Plains": [
+    "Meadow", "Flutter", "Grass", "Poppy", "Dandelion", "Field", "Pollen", "Wool", "Wooly", "Sheep", "Lamb", "Grouse",
+    "Gopher", "Horse", "Oat", "Elk", "Cow", "Heather", "Barley", "Wheat", "Tunnel", "Willow", "Sage", "Hare", 
+    "Pronghorn", "Sedge", "Field", "Prairie", "Heather", "Rustle", "Breeze", "Swish", "Bison", "Cow", "Anise", "Rye", "Plover"
+    ],
+    "Mountainous": [
+    "Glacial", "Pinnacle", "Goat", "Alpaca", "Alpine", "Rocky", "Ram", "High", "Volcano", "Yucca", "Lichen", "Crag", "Eagle",
+    "Tundra", "Cliff", "Avalanche", "Granite", "Gravel", "Salt", "Steppe", "Flint", "Mountain", "Summit", "Marten", "Mine",
+    "Cavern", "Cave", "Chamois", "Cliff", "Peak", "Spire", "Shard", "Whistle", "Whisper", "Stone", "Limestone", "Pebble",
+    "Boulder", "Blizzard", "Echo"
+    ],
+    "Wetlands": [
+    "Willow", "Marsh", "Bog", "Lotus", "Reed", "Frog", "Toad", "Stork", "Crane", "Duck", "Heron", "Ibis", "Mangrove",
+    "Swamp", "Murk", "Algae", "Mud", "Splash", "Mosquito", "Mallard", "Goose", "Peat", "Bog", "Skink", "Tamarack",
+    "Spruce", "Beaver", "Wade", "Cypress", "Magnolia", "Skunk", "Mosquito", "Lily", "Bayou", "Clay", "Grebe", "Egret",
+    "Creek", "Skip", "Reed", "Bullrush", "Beetle", "Bug", "Vine", "Creeper", "Buffalo", "Rush", "Swam", "Cygnet", "Gosling",
+    "Cormorant", "Stork", "Moorhen", "Spoonbill", "Kingfisher", "Plover", "Alligator", "Crocodile", "Newt",
+    "Axolotl", "Salamander"
+    ],
+    "Desert": [
+    "Cactus", "Dune", "Coyote", "Vulture", "Condor", "Canyon", "Prickle", "Pear", "Agave", "Jackal", "Dry", "Drought",
+    "Rattle", "Desert", "Brittle", "Mesa", "Barren", "Oasis", "Dust", "Arid", "Buzzard", "Fly", "Scrub", "Gully", "Wax",
+    "Yucca", "Salt", "Dingo", "Mirage", "Cobra", "Cheetah", "Caracal", "Scorpion", "Lion", "Antelope", "Gazelle", "Oryx",
+    "Dromedary", "Camel", "Suricate", "Meerkat", "Skull", "Rye", "Jackrabbit", "Needle", "Aloe", "Acacia", "Viper",
+    "Snake", "Poison", "Venom", "Tiapan", "Fang", "Blister", "Blaze", "Burn", "Scorch", "Smoulder"
+    ]
+  },
+
   "loner_names": [
     "Abyss", "Ace", "Adam", "Admiral", "Aether", "Agatha", "Ah", "Ah ha", "Agent Smith", "Akilah", "Alba", "Albedo", "Alcina", "Alec", "Alexa", "Alfie", 
     "Alfredo", "Alice", "Alma", "Alonzo", "Alphys", "Alphonse", "Amani", "Amari", "Amaya", "Amber", "Amelia", "Amigo", "Amir", "Amity", "Amor", 
@@ -234,7 +277,7 @@
     "Ash", "Aspen", "Asriel", "Aurora", "Ava", "Avellana", "Azula", "Baba Yaga", "Baby", "Bagel", "Bagheera", "Bailey", "Baisel", "Baliyo", 
     "Bamboo", "Bandit", "Banshee", "Banzai", "Baphomet", "Basil", "Bastet", "Bean", "Beanie Baby", "Beanie", "Beans", "Bebe", "Bede", "Beef Stroganoff", 
     "Bella", "Belle", "Bellini", "Ben", "Benito", "Benny", "Bentley", "Berlioz", "Beverly", "Bibelot", "Big Man", "Bigwig", "Bill Bailey", 
-    "Binx", "Birb", "Birdie", "Bixby", "Blair", "Blinky Stubbins", "Blitzo", "Blu", "Bluebell", "Bologna", "Bolt", "Bombalurina", "Bombon",
+    "Binx", "Birb", "Birdie", "Bixby", "Blahaj", "Blair", "Blinky Stubbins", "Blitzo", "Blu", "Bluebell", "Bologna", "Bolt", "Bombalurina", "Bombon",
     "Bonbon", "Bongo", "Boni", "Bonnie", "Bonny", "Boo", "Booker", "Boots", "Brandywine", "Bren", "Brioche", "Broccoli", "Brooklyn", "Broom", "Bub", "Buchito", 
     "Buddy", "Buffy", "Bullwinkle", "Bumblebee", "Bunga", "Bunny", "Burger", "Burm", "Bustopher Jones", "Buttercup", "Butternut", 
     "Butterscotch", "Caesar", "Cake", "Calamari", "Callie", "Calvin", "Camouflage", "Cancer", "Candy", "Canela", "Cannelloni", "Capricorn", "Captain", 
@@ -293,7 +336,6 @@
     "Rico", "Rigatoni", "Rio", "Riot", "Risa", "River", "Riya", "Rizz", "Robbie", "Rocket", "Rodeo", "Rolo", "Roman", "Roomba", "Rooster", 
     "Rory", "Rose", "Roselie", "Rosewood", "Ruby", "Rudolph", "Rue", "Ruffnut", "Rufus", "Rum Tum Tugger", "Rum", "Rumpleteazer", 
     "Runt", "Russel", "Sable", "Sadie", "Saffron", "Sagittarius", "Sagwa", "Sailor", "Saki", "Sakura", "Salem", "Salmon", "Salt", "Sam", "Samantha", 
-    "Sanai", "Sandwich", "Sandy", "Sangria", "Sans", "Sarabi", "Sarafina", "Sarge", "Sashimi", "Sassy", "Sausage", "Savannah",
     "Runt", "Russel", "Sable", "Sadie", "Saffron", "Sagittarius", "Sagwa", "Samus", "Sailor", "Saki", "Sakura", "Salem", "Salmon", "Salt", "Sam", "Samantha", 
     "Sanai", "Sandwich", "Sandy", "Sangria", "Sans", "Sarabi", "Sarafina", "Sarge", "Sashimi", "Sassy", "Sausage", "Savannah", 
     "Scarecrow", "Schmidt", "Scorpio", "Scotch", "Scrooge", "Seamus", "Sega", "Sekhmet", "Serenity", "Sergei", "Sergio", "Seri", "Seven", "Seven Of Nine",
@@ -301,7 +343,7 @@
     "Silva", "Silver", "Simba", "Simone", "Siri", "Sirius", "Skimbleshanks", "Skittles", "Skrunkly", "Skylar", "Slinky", "Sloane", "Sloth",
     "Slug", "Slushie", "Smarty Pants", "Smoothie", "Smores", "Sneakers", "Snek", "Snook", "Snook", "Snoots", "Snotlout", "Socks", "Soda Pop", "Sofa", 
     "Sofrito", "Sol", "Sonata", "Sonnet", "Sonic", "Sookie", "Sophie", "Sorbet", "Sox", "Spam", "Sparky", "Speedwell", "Spicy", "Spinach", "Spots", "Siracha", "Stan", 
-    "Star", "Starfish", "Stella", "Steve", "Steven", "Stinkbutt", "Stinky", "Stolas", "Strawberry", "Stripes", "Subaru", "Sucrose", "Sueno",
+    "Star", "Starfish", "Stella", "Steve", "Steven", "Stinkbutt", "Stinky", "Stolas", "Strawberry", "Stripes", "Stuffie", "Subaru", "Sucrose", "Sueno",
     "Sugar", "Sundae", "Sunflower", "Sunny", "Sunset", "Sushi", "Sweet Creature", "Sweet Leon", "Sweet Marmalade", "Sweet", "Sweetie", 
     "Sylvester", "Tabasco", "Tabatha", "Tabby", "Tabbytha", "Taco Bell", "Taco", "Taffy", "Talia", "Tamagotchi", "Tamale", 
     "Tantomile", "Tasha", "Taurus", "Tay", "Tazama", "Teacup", "Teddie", "Tempest", "Tesla", "Tesora", "Tetris", "Teufel", "Theo", 
