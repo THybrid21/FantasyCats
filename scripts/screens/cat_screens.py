@@ -813,6 +813,11 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        # PELT LENGTH
+        output += 'skin: ' + the_cat.skin.lower()
+        # NEWLINE ----------
+        output += "\n"
+
         # ACCESSORY
         if the_cat.accessory:
             output += 'accessory: ' + str(ACC_DISPLAY[the_cat.accessory]["default"])
