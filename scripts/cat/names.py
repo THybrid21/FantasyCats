@@ -82,10 +82,12 @@ class Name():
                  eyes=None,
                  pelt=None,
                  tortiepattern=None,
-                 biome=None):
+                 biome=None,
+                 specsuffix_hidden=False):
         self.status = status
         self.prefix = prefix
         self.suffix = suffix
+        self.specsuffix_hidden = specsuffix_hidden
         
         # Set prefix
         if prefix is None:
@@ -179,7 +181,7 @@ class Name():
 
 
     def __repr__(self):
-        if self.status in self.names_dict["special_suffixes"]:
+        if self.status in self.names_dict["special_suffixes"] and not self.specsuffix_hidden:
             return self.prefix + self.names_dict["special_suffixes"][self.status]
         else:
             return self.prefix + self.suffix

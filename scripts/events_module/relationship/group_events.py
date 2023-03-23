@@ -69,7 +69,6 @@ class Group_Events():
         # if there is no possibility return
         if len(possibilities) < 1:
             return []
-        print("GROUP EVENT!")
         # choose one interaction and 
         self.chosen_interaction = choice(possibilities)
 
@@ -126,11 +125,11 @@ class Group_Events():
         allowed_biome = [biome, "Any", "any"]
         main_cat = Cat.all_cats[self.abbreviations_cat_id["m_c"]]
         for interact in interactions:
-            in_tags = list(filter(lambda inter_biome: inter_biome in allowed_biome, interact.biome))
+            in_tags = [i for i in interact.biome if i in allowed_biome] 
             if len(in_tags) < 1:
                 continue
 
-            in_tags = list(filter(lambda inter_season: inter_season in allowed_season, interact.season))
+            in_tags = [i for i in interact.season if i in allowed_season]
             if len(in_tags) < 1:
                 continue
 
@@ -239,7 +238,6 @@ class Group_Events():
                 if abbreviation in interact.status_constraint:
                     # if the cat status is in the status constraint, add the id to the list
                     status_ids = [cat.ID for cat in interact_cats if cat.status in interact.status_constraint[abbreviation]]
-                    # print(status_ids)
                 else:
                     # if there is no constraint, add all ids to the list 
                     status_ids = [cat.ID for cat in interact_cats]
