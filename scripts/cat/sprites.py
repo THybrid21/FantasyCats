@@ -185,8 +185,8 @@ sprites = Sprites(50)
 
 for x in [
     'lineart', 'lineartdead', 'lineartdf', 'eyes', 'eyes2', 'eyeshybrid', 
-    'eyes2hybrid', 'skin', 'skin2', 'skinsphynx', 'scars', 'missingscars', 
-    'shadersnewwhite', 'lightingnew', 'fademask', 'fadestarclan', 'fadedarkforest',
+    'eyes2hybrid', 'skin', 'skin2', 'skinsphynx', 'wings', 'manes', 
+    'scars', 'missingscars', 'shadersnewwhite', 'lightingnew', 'fademask', 'fadestarclan', 'fadedarkforest',
     'solidbrowns', 'solidgingers', 'solidgreys', 'solidblues', 'solidgreens',
     'solidpurples', 'solidyellows', 'solidpride'
 ]:
@@ -1936,15 +1936,28 @@ for a, i in enumerate(['S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON', 'S_SALM
 for a, i in enumerate(['S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 
         'S_LIGHTBLUE']):
     sprites.make_group('skinsphynx', (a, 2), f"skin{i}")
-for a, i in enumerate(['ALBINOPINK', 'ALBINOBLUE', 'ALBINORED', 'ALBINOVIOLET', 
-        'ALBINOGREEN', 'ALBINOYELLOW']):
+for a, i in enumerate(['BLACKMANE', 'REDMANE', 'PINKMANE', 'DARKBROWNMANE', 
+    'BROWNMANE', 'LIGHTBROWNMANE']):
+    sprites.make_group('manes', (a, 0), f"skin{i}")
+for a, i in enumerate(['DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'DARKSALMONMANE', 
+    'SALMONMANE', 'PEACHMANE']):
+    sprites.make_group('manes', (a, 1), f"skin{i}")
+for a, i in enumerate(['DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 
+    'BLUEMANE', 'LIGHTBLUEMANE']):
+    sprites.make_group('manes', (a, 2), f"skin{i}")    
+for a, i in enumerate(['ALBINO', 'ALBINOSPHYNX', 'MELANISTIC', 'MELANISTICSPHYNX']):
     sprites.make_group('skin2', (a, 0), f"skin{i}")
-for a, i in enumerate(['MELANISTIC', 'MELANISTICTWO', 'MELANISTICTHREE', 'S_MELANISTIC', 
-        'S_MELANISTICTWO', 'S_MELANISTICTHREE']):
+for a, i in enumerate(['ALBINOWING', 'MELANISTICWING', 'ALBINOMANE', 'MELANISTICMANE']):
     sprites.make_group('skin2', (a, 1), f"skin{i}")
-for a, i in enumerate(['S_ALBINOPINK', 'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 
-        'S_ALBINOGREEN', 'S_ALBINOYELLOW']):
-    sprites.make_group('skin2', (a, 2), f"skin{i}")
+for a, i in enumerate(['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 
+    'RAINBOWWING', 'SILVERWING']):
+    sprites.make_group('wings', (a, 0), f"skin{i}")
+for a, i in enumerate(['STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 
+    'GREYWING']):
+    sprites.make_group('wings', (a, 1), f"skin{i}")
+for a, i in enumerate(['BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 
+    'BLACKWING']):
+    sprites.make_group('wings', (a, 2), f"skin{i}")
 
 
 sprites.load_scars()

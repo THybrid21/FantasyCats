@@ -657,8 +657,8 @@ high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PA
               'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED']
 mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                 'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO']
-point_markings = ['COLOURPOINT', 'RAGDOLL', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']
-vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'KARPATI', 'POWDER']
+point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']
+vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER']
 white_sprites = [little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
 tint_colors = ['none', 'off white', 'gray', 'dark cream', 'cream', 'pink', 'blue-white', 'mint', 'black',
@@ -668,14 +668,18 @@ skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DAR
                 'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
 skin_sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
                 'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE']
-albino_sprites = ['ALBINOPINK', 'ALBINOBLUE', 'ALBINORED', 'ALBINOVIOLET', 'ALBINOYELLOW', 'ALBINOGREEN', 'S_ALBINOPINK',  
-                'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 'S_ALBINOYELLOW', 'S_ALBINOGREEN']
-melanistic_sprites = ['MELANISTIC', 'MELANISTICTWO', 'MELANISTICTHREE', 'S_MELANISTIC', 'S_MELANISTICTWO', 'S_MELANISTICTHREE'] 
-skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites]
+albino_sprites = ['ALBINO', 'ALBINOSPHYNX', 'ALBINOWING']
+melanistic_sprites = ['MELANISTIC', 'MELANISTICSPHYNX', 'MELANISTICWING'] 
+wing_sprites = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
+                'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
+                'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING']
+skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites, wing_sprites]
 sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
                 'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 
-                'S_ALBINOPINK', 'S_ALBINOBLUE', 'S_ALBINORED', 'S_ALBINOVIOLET', 'S_ALBINOYELLOW', 'S_ALBINOGREEN', 'S_MELANISTIC', 
-                'S_MELANISTICTWO', 'S_MELANISTICTHREE']
+                'ALBINOSPHYNX', 'MELANISTICSPHYNX']
+wings = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
+            'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
+            'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING', 'ALBINOWING', 'MELANISTICWING']
 
 # CHOOSING PELT
 def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, determined=False):
@@ -1027,6 +1031,8 @@ def describe_appearance(cat, short=False):
 
     if cat.skin in sphynx:
         color_name = color_name + ' sphynx'
+    elif cat.skin in wings:
+        color_name = 'winged ' + color_name 
 
     if cat.points and cat.pelt.name not in ["Doberman", "Ponit"]:
         color_name = f"{color_name} point"

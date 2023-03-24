@@ -420,14 +420,14 @@ def init_sprite(cat):
     cat.reverse = choice([True, False])
     # skin chances
     if cat.parent1 is None:
-        cat.skin = choice(random.choices(skin_categories, weights=(297, 5, 3, 2), k=1) [0])
+        cat.skin = choice(random.choices(skin_categories, weights=(297, 5, 3, 2, 2), k=1) [0])
     elif cat.parent2 is None:
         par1 = cat.all_cats[cat.parent1]
-        cat.skin = choice([par1.skin, choice(random.choices(skin_categories, weights=(190, 5, 3, 2), k=1)[0])])
+        cat.skin = choice([par1.skin, choice(random.choices(skin_categories, weights=(190, 5, 3, 2, 2), k=1)[0])])
     else:
         par1 = cat.all_cats[cat.parent1]
         par2 = cat.all_cats[cat.parent2]
-        cat.skin = choice([par1.skin, par2.skin, choice(random.choices(skin_categories, weights=(187, 6, 4, 3), k=1)[0])]) 
+        cat.skin = choice([par1.skin, par2.skin, choice(random.choices(skin_categories, weights=(187, 6, 4, 3, 3), k=1)[0])]) 
 
     if cat.skin in sphynx:
         cat.pelt.length = 'short'
