@@ -367,7 +367,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('solidgreens', (a, 2), f'single{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('solidgreens', (a, 3), f'single{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('solidpurples', (a, 0), f'single{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('solidpurples', (a, 1), f'single{i}')
@@ -424,7 +424,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('tabbygreens', (a, 2), f'tabby{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('tabbygreens', (a, 3), f'tabby{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('tabbypurples', (a, 0), f'tabby{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('tabbypurples', (a, 1), f'tabby{i}')
@@ -481,7 +481,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('marbledgreens', (a, 2), f'marbled{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('marbledgreens', (a, 3), f'marbled{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('marbledpurples', (a, 0), f'marbled{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('marbledpurples', (a, 1), f'marbled{i}')
@@ -538,7 +538,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('rosettegreens', (a, 2), f'rosette{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('rosettegreens', (a, 3), f'rosette{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('rosettepurples', (a, 0), f'rosette{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('rosettepurples', (a, 1), f'rosette{i}')
@@ -595,7 +595,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('smokegreens', (a, 2), f'smoke{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('smokegreens', (a, 3), f'smoke{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('smokepurples', (a, 0), f'smoke{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('smokepurples', (a, 1), f'smoke{i}')
@@ -652,7 +652,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('tickedgreens', (a, 2), f'ticked{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('tickedgreens', (a, 3), f'ticked{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('tickedpurples', (a, 0), f'ticked{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('tickedpurples', (a, 1), f'ticked{i}')
@@ -709,7 +709,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('speckledgreens', (a, 2), f'speckled{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('speckledgreens', (a, 3), f'speckled{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('speckledpurples', (a, 0), f'speckled{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('speckledpurples', (a, 1), f'speckled{i}')
@@ -766,7 +766,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('bengalgreens', (a, 2), f'bengal{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('bengalgreens', (a, 3), f'bengal{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('bengalpurples', (a, 0), f'bengal{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('bengalpurples', (a, 1), f'bengal{i}')
@@ -823,7 +823,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('mackerelgreens', (a, 2), f'mackerel{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('mackerelgreens', (a, 3), f'mackerel{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('mackerelpurples', (a, 0), f'mackerel{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('mackerelpurples', (a, 1), f'mackerel{i}')
@@ -880,7 +880,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('classicgreens', (a, 2), f'classic{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('classicgreens', (a, 3), f'classic{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('classicpurples', (a, 0), f'classic{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('classicpurples', (a, 1), f'classic{i}')
@@ -937,7 +937,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('sokokegreens', (a, 2), f'sokoke{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('sokokegreens', (a, 3), f'sokoke{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('sokokepurples', (a, 0), f'sokoke{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('sokokepurples', (a, 1), f'sokoke{i}')
@@ -994,7 +994,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('agoutigreens', (a, 2), f'agouti{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('agoutigreens', (a, 3), f'agouti{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('agoutipurples', (a, 0), f'agouti{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('agoutipurples', (a, 1), f'agouti{i}')
@@ -1051,7 +1051,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('backedgreens', (a, 2), f'backed{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('backedgreens', (a, 3), f'backed{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('backedpurples', (a, 0), f'backed{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('backedpurples', (a, 1), f'backed{i}')
@@ -1108,7 +1108,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('solidgreens', (a, 2), f'falsesolid{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('solidgreens', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('falsesolidpurples', (a, 0), f'falsesolid{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('falsesolidpurples', (a, 1), f'falsesolid{i}')
@@ -1165,7 +1165,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('dobermangreens', (a, 2), f'doberman{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('dobermangreens', (a, 3), f'doberman{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('dobermanpurples', (a, 0), f'doberman{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('dobermanpurples', (a, 1), f'doberman{i}')
@@ -1222,7 +1222,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('ponitgreens', (a, 2), f'ponit{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('ponitgreens', (a, 3), f'ponit{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('ponitpurples', (a, 0), f'ponit{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('ponitpurples', (a, 1), f'ponit{i}')
@@ -1279,7 +1279,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('ratgreens', (a, 2), f'rat{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('ratgreens', (a, 3), f'rat{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('ratpurples', (a, 0), f'rat{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('ratpurples', (a, 1), f'rat{i}')
@@ -1336,7 +1336,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('skelegreens', (a, 2), f'skele{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('skelegreens', (a, 3), f'skele{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('skelepurples', (a, 0), f'skele{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('skelepurples', (a, 1), f'skele{i}')
@@ -1393,7 +1393,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('skittygreens', (a, 2), f'skitty{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('skittygreens', (a, 3), f'skitty{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('skittypurples', (a, 0), f'skitty{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('skittypurples', (a, 1), f'skitty{i}')
@@ -1450,7 +1450,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('staingreens', (a, 2), f'stain{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('staingreens', (a, 3), f'stain{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('stainpurples', (a, 0), f'stain{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('stainpurples', (a, 1), f'stain{i}')
@@ -1507,7 +1507,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('wolfgreens', (a, 2), f'wolf{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('wolfgreens', (a, 3), f'wolf{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('wolfpurples', (a, 0), f'wolf{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('wolfpurples', (a, 1), f'wolf{i}')
@@ -1564,7 +1564,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('bandedgreens', (a, 2), f'banded{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('bandedgreens', (a, 3), f'banded{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('bandedpurples', (a, 0), f'banded{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('bandedpurples', (a, 1), f'banded{i}')
@@ -1621,7 +1621,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('snowflakegreens', (a, 2), f'snowflake{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('snowflakegreens', (a, 3), f'snowflake{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('snowflakepurples', (a, 0), f'snowflake{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('snowflakepurples', (a, 1), f'snowflake{i}')
@@ -1678,7 +1678,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('charcoalgreens', (a, 2), f'charcoal{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('charcoalgreens', (a, 3), f'charcoal{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('charcoalpurples', (a, 0), f'charcoal{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('charcoalpurples', (a, 1), f'charcoal{i}')
@@ -1735,7 +1735,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('ghostgreens', (a, 2), f'ghost{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('ghostgreens', (a, 3), f'ghost{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('ghostpurples', (a, 0), f'ghost{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('ghostpurples', (a, 1), f'ghost{i}')
@@ -1792,7 +1792,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('hoodedgreens', (a, 2), f'hooded{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('hoodedgreens', (a, 3), f'hooded{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('hoodedpurples', (a, 0), f'hooded{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('hoodedpurples', (a, 1), f'hooded{i}')
@@ -1849,7 +1849,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('merlegreens', (a, 2), f'merle{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('merlegreens', (a, 3), f'merle{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('merlepurples', (a, 0), f'merle{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('merlepurples', (a, 1), f'merle{i}')
@@ -1906,7 +1906,7 @@ for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
     sprites.make_group('spiritgreens', (a, 2), f'spirit{i}')
 for a, i in enumerate(['XANADU', 'DEEPFOREST']):
     sprites.make_group('spiritgreens', (a, 3), f'spirit{i}')
-for a, i in enumerate(['PANTONE', 'SALMON', 'THISTLE', 'AMYTHYST', 'DARKSALMON', 'MAGENTA']):
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
     sprites.make_group('spiritpurples', (a, 0), f'spirit{i}')
 for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
     sprites.make_group('spiritpurples', (a, 1), f'spirit{i}')

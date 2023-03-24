@@ -257,7 +257,6 @@ class Cat():
         self.pattern = None
         self.tortiepattern = None
         self.tortiecolour = None
-        self.skin = None
         self.white_patches = None
         self.vitiligo = None
         self.points = None
@@ -472,13 +471,13 @@ class Cat():
             self.name = Name(status,
                              prefix,
                              suffix,
-                             self.skin,
                              self.pelt.colour,
                              self.pelt.name,
+                             self.tortiebase,
                              biome=biome,
                              specsuffix_hidden=self.specsuffix_hidden)
         else:
-            self.name = Name(status, prefix, suffix, eyes=self.eye_colour, specsuffix_hidden=self.specsuffix_hidden)
+            self.name = Name(status, prefix, suffix, specsuffix_hidden=self.specsuffix_hidden)
 
         # Sprite sizes
         self.sprite = None
