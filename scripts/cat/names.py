@@ -20,6 +20,7 @@ from .pelts import (
     spotted,
     exotic,
     torties,
+    wings,
     )
 
 from scripts.datadir import get_save_dir
@@ -79,9 +80,7 @@ class Name():
                  suffix=None,
                  colour=None,
                  skin=None,
-                 eyes=None,
                  pelt=None,
-                 tortiepattern=None,
                  biome=None,
                  specsuffix_hidden=False):
         self.status = status
@@ -124,16 +123,19 @@ class Name():
                     possible_prefix_categories.append(self.names_dict["melanistic_prefixes"])
                 elif skin in sphynx:    
                     possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])
-            # Choose appearance-based prefix if possible and named_after_appearance because True.
+                elif skin in wings:    
+                    possible_prefix_categories.append(self.names_dict["wing_prefixes"])
             if possible_prefix_categories and not named_after_biome:
                 prefix_category = random.choice(possible_prefix_categories)
                 self.prefix = random.choice(prefix_category)
             elif named_after_biome and possible_prefix_categories:
                 if biome is not None and biome in self.names_dict["biome_prefixes"]:
-                    possible_prefix_categories.clear
+                    possible_prefix_categories.clear()
                     possible_prefix_categories.append(self.names_dict["biome_prefixes"][biome])
                     prefix_category = random.choice(possible_prefix_categories)
                     self.prefix = random.choice(prefix_category)
+                else:
+                    self.prefix = random.choice(self.names_dict["normal_prefixes"])
             else:
                 self.prefix = random.choice(self.names_dict["normal_prefixes"])
                     
@@ -160,7 +162,8 @@ class Name():
                     self.suffix = random.choice(suffix_category)
                 else:
                     self.suffix = random.choice(self.names_dict["normal_suffixes"])
-
+        
+        #Prevent triple letter names from joining prefix and suffix from occuring
         if self.suffix:
             possible_three_letter = (self.prefix[-2:] + self.suffix[0], self.prefix[-1] + self.suffix[:2])
 
@@ -178,7 +181,6 @@ class Name():
                     else:
                         triple_letter = False
                 MAX_ATTEMPT -= 1
-
 
     def __repr__(self):
         if self.status in self.names_dict["special_suffixes"] and not self.specsuffix_hidden:

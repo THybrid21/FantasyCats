@@ -649,37 +649,44 @@ eye_sprites = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBL
 
 little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                 'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
-                'EXTRA']
+                'EXTRA', 'TWIST', 'OKAPI']
 mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR',
-             'WINGS']
+             'WINGS', 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
 high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
               'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
-              'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED']
+              'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'VENUS', 'CHANCE', 'RETSUKO']
 mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
-                'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO']
-point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']
-vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER']
+                'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'DAPPLED', 'HAWK', 'FRECKLEMASK', 'MOTH']
+point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
+    'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
+vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
+    'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKSIGHT']
 white_sprites = [little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
 tint_colors = ['none', 'off white', 'gray', 'dark cream', 'cream', 'pink', 'blue-white', 'mint', 'black',
     'midnight', 'scarlet', 'starkit', 'sunshine']
 
 skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
-                'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
+                'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'BLACKMANE', 'REDMANE', 
+                'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE', 'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'DARKSALMONMANE', 
+                'SALMONMANE', 'PEACHMANE', 'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 'BLUEMANE', 'LIGHTBLUEMANE']
 skin_sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
                 'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE']
-albino_sprites = ['ALBINO', 'ALBINOSPHYNX', 'ALBINOWING']
-melanistic_sprites = ['MELANISTIC', 'MELANISTICSPHYNX', 'MELANISTICWING'] 
+albino_sprites = ['ALBINO', 'ALBINOSPHYNX', 'ALBINOWING', 'ALBINOMANE']
+melanistic_sprites = ['MELANISTIC', 'MELANISTICSPHYNX', 'MELANISTICWING', 'MELANISTICMANE'] 
 wing_sprites = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
                 'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
                 'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING']
 skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites, wing_sprites]
 sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
-                'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 
-                'ALBINOSPHYNX', 'MELANISTICSPHYNX']
+            'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 
+            'ALBINOSPHYNX', 'MELANISTICSPHYNX']
 wings = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
             'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
             'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING', 'ALBINOWING', 'MELANISTICWING']
+manes = ['BLACKMANE', 'REDMANE', 'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE', 'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 
+        'DARKSALMONMANE', 'SALMONMANE', 'PEACHMANE', 'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 
+        'BLUEMANE', 'LIGHTBLUEMANE']
 
 # CHOOSING PELT
 def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, determined=False):
@@ -1018,7 +1025,7 @@ def describe_appearance(cat, short=False):
             color_name = f"{color_name}/{patches_color}"
             
             if cat.pelt.colour in black_colours + grey_colours + white_colours + blue_colours and \
-                cat.tortiecolour in black_colours + brown_colours + white_colours + blue_colours:
+                cat.tortiecolour in black_colours + grey_colours + white_colours + blue_colours:
                 color_name = "mottled"
             elif cat.pelt.colour in brown_colours + yellow_colours and \
                 cat.tortiecolour in brown_colours + yellow_colours:
