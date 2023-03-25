@@ -970,14 +970,14 @@ def describe_appearance(cat, short=False):
         "Agouti": "c_n ticked tabby",
         "Backed": "stripe backed c_n",
         "Sokoke": "c_n sokoke tabby",
-        "Charcoal": "charcoal tabby",
-        "Ghost": "ghost tabby",
-        "Doberman": "doberman point",
-        "Skele": "skeleton",
-        "Hooded": "hooded charcoal tabby",
-        "Ponit": "bleach point",
-        "Spirit": "ghostly spirit",
-        "WolfBicolour": "painted wolf"
+        "Charcoal": "charcoal c_n tabby",
+        "Ghost": "c_n ghost tabby",
+        "Doberman": "c_n doberman point",
+        "Skele": "c_n skeleton",
+        "Hooded": "hooded charcoal c_n tabby",
+        "Ponit": "bleach point c_n",
+        "Spirit": "c_ng hostly spirit",
+        "WolfBicolour": "c_n painted wolf"
     }
 
     # Start with determining the base color name. 
@@ -1049,6 +1049,13 @@ def describe_appearance(cat, short=False):
     if "white and white" in color_name:
         color_name = color_name.replace("white and white", "white")
 
+    if cat.white_patches and cat.skin not in albino_sprites + melanistic_sprites:
+        if cat.white_patches == "FULLWHITE":
+            # If the cat is fullwhite, discard all other information. They are just white. 
+            if cat.white_patches_tint != "none":
+                color_name = f"stained {cat.white_patches_tint}"
+            else:
+                color_name = f"stained white"
     # Now it's time for gender
     if cat.genderalign in ["female", "trans female"]:
         color_name = f"{color_name} molly"
@@ -1058,12 +1065,6 @@ def describe_appearance(cat, short=False):
         color_name = f"{color_name} eli"
 
     if cat.white_patches and cat.skin not in albino_sprites + melanistic_sprites:
-        if cat.white_patches == "FULLWHITE":
-            # If the cat is fullwhite, discard all other information. They are just white. 
-            if cat.white_patches_tint != "none":
-                color_name = f"stained {cat.white_patches_tint}"
-            else:
-                color_name = f"stained white"
         if cat.white_patches in high_white + mostly_white and cat.pelt.name != "Calico":
             if cat.white_patches_tint != "none":            
                 color_name = f"{color_name} with patches of {cat.white_patches_tint}"

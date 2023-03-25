@@ -95,6 +95,11 @@
         "redcough": [
             "r_c has quietly begun making m_c comfortable, or as comfortable as they can be hacking up so much blood.",
             "m_c has been hacking up blood, their body growing weaker and weaker.  They may not last much longer."
+        ],
+		"paralyzed": [
+            "r_c has noticed that m_c has been having more trouble than usual getting around, sadly they have to inform them their wasting has caused paralysis.",
+            "m_c wakes distressed, they can't feel their hindlegs. They struggle to even make it to the medicine den for help.",
+			"m_c finds themselves falling over more than usual, it would seem their hindlegs refuse to support them anymore."
         ]
     },
     "one bad eye": {

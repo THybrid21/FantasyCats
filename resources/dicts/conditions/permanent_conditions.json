@@ -308,7 +308,11 @@
             {
                 "name": "redcough",
                 "chance": 60
-            }
+            },
+			{
+				"name": "paralyzed",
+				"chance": 50
+			}
         ],
         "herbs": [
             "juniper",

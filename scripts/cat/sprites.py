@@ -198,7 +198,7 @@ for x in [
     sprites.spritesheet(f"sprites/accessories/{x}.png", x)    
 
 for x in [
-    'whitepatches', 'tortiepatchesmasks', 'tortiepatchesmasksB', 'vitilligopatches', 
+    'whitepatches', 'tortiepatchesmasks', 'vitilligopatches', 
     'colourpointpatches'
 ]:
     sprites.spritesheet(f"sprites/patches/{x}.png", x)    
@@ -1935,7 +1935,7 @@ for a, i in enumerate(['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'ST
 for a, i in enumerate(['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE']):
     sprites.make_group('tortiepatchesmasks', (a, 3), f"tortiemask{i}")
 for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT']):
-    sprites.make_group('tortiepatchesmasksB', (a, 0), f"tortiemask{i}")
+    sprites.make_group('tortiepatchesmasks', (a, 4), f"tortiemask{i}")
 
 # SKINS
 for a, i in enumerate(['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN']):
