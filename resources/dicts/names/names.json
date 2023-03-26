@@ -17,8 +17,8 @@
 		"flight", "flight", "flight", "flight", "flight", "pool", "pool", "pool", "bunny", "bunny", "bunny", "bunny", 
 		"bunny", "storm", "storm", "storm", "storm", "storm", "kudzu", "kudzu", "kudzu", "roar", "roar", "roar", "roar", "bark", 
 		"bark", "bark", "path", "path", "path", "claw", "claw", "claw", "claw", "claw", "claw", "claw", "claw", "foot", "foot", 
-		"foot", "foot", "foot", "foot", "foot", "foot", "tail", "tail", "tail", "tail", "tail", "tail", "tail", "tail", "nose", "nose", 
-        "nose", "nose", "nose", "nose", "nose", "nose", "whisker", "whisker", "whisker", "whisker", "whisker", "whisker", "whisker", 
+		"foot", "foot", "foot", "foot", "foot", "foot", "nose", "nose", "nose", "nose", "nose", "nose", "nose", "nose",  "tail", 
+		"tail", "tail", "tail", "tail", "tail", "tail", "tail", "whisker", "whisker", "whisker", "whisker", "whisker", "whisker", "whisker", 
 		"whisker", "leaf", "leaf", "leaf", "leaf", "leaf", "leaf", "feather", "feather", "feather", "feather", "feather", "feather", 
 		"throat", "throat", "throat", "throat", "throat", "throat", "root", "root", "root", "root", "root", "dig", "dig", 
 		"dig", "dig", "dig", "stream", "stream", "stream", "stream", "stream", "flame", "flame", "flame", "leg", "leg", "leg", 
@@ -184,7 +184,7 @@
 			"Five", "Six", "Seven", "Eight", "Nine", "Ten", "Long", "Short", "Fluff", "Fluffy", "Gleam", "Star", "Banded",
 			"Striped", "Stripes", "Dazzle", "Light", "Vibrant", "Sky", "Aurora", "Wet", "Nacre", "Shell", "Plume",
 			"Insect", "Ant", "Bird", "Axolotl", "Chrome", "Poly", "Rain", "Cloudy", "Dream", "Misc", "Stew", "Stone",
-			"River", "Ripple", "Robin", "Ribbon", "Multi", "Flower", "Petal", "Lily", "Brocoli"]
+			"River", "Ripple", "Robin", "Ribbon", "Multi", "Flower", "Petal", "Lily", "Brocoli", "Sparkle", "Twilight"]
 	},
 
   "biome_prefixes": {

@@ -95,11 +95,6 @@
         "redcough": [
             "r_c has quietly begun making m_c comfortable, or as comfortable as they can be hacking up so much blood.",
             "m_c has been hacking up blood, their body growing weaker and weaker.  They may not last much longer."
-        ],
-		"paralyzed": [
-            "r_c has noticed that m_c has been having more trouble than usual getting around, sadly they have to inform them their wasting has caused paralysis.",
-            "m_c wakes distressed, they can't feel their hindlegs. They struggle to even make it to the medicine den for help.",
-			"m_c finds themselves falling over more than usual, it would seem their hindlegs refuse to support them anymore."
         ]
     },
     "one bad eye": {
@@ -155,13 +150,52 @@
         ]
     },
     "persistent headaches": {
-        "headaches": [
+        "headache": [
             "m_c's headaches have plagued them particularly badly this moon, and r_c is running low on their pain-relieving mixture, having used so much up in keeping m_c feeling able.",
             "m_c growls as another wave of head pain hits them. It's on-and-off, and herbs have been helping, but StarClan help them, having so many headaches gets annoying."
         ],
-        "severe headaches": [
+        "severe headache": [
             "r_c sees m_c headed towards the medicine cat den, wincing with every step, and ducks inside to prepare a nest for them in the darkest, quietest corner possible.",
             "m_c wakes up with pounding head pain and horrible light sensitivity. They curl up as tightly in their nest as they can, screwing their eyes shut and flattening their ears. There's no way they'll get work done today."
         ]
-    }
+    },
+	"fibro": {
+        "joint pain": [
+            "r_c can only set aside a nest and some herbs as m_c comes in complaining of joint pain.",
+			"m_c's been complaing for days, their joints seem to be giving them particular trouble this moon.",
+			"After the work that m_c has put into helping the apprentices care for the elders they're left with aches all over."
+        ],
+        "running nose": [
+			"r_c worriedly ferries m_c to the medicine den when they notice them sniffing more than usual.",
+			"m_c's nose has begun to run on and off this moon.",
+			"After all the work m_c has done this moon they've begun to sneeze."
+        ],
+		"stomachache": [
+			"r_c sighs when m_c comes in with the complaint of a stomachache, hopefully it's just something they ate.",
+			"m_c rolls onto their back in their nest, too uncomfortable to doze on their stomache."
+		],
+		"sore": [
+			"r_c gently scolds m_c when they come into the medicine den, it looks like working too hard without taking breaks has made them particularly sore.",
+			"After all the effort that they put into helping out the elders this moon, m_c has made themselves sore. Not that it stops them from taking pride in the effort.",
+			"m_c doesn't regret the extra work they put into helping this moon, even as they wince simply walking back over to their nest.",
+			"Simply brushing up against someone makes m_c let out winces and little yowls of pain.",
+			"m_c lazes about in a sunbeam, watching content as their clanmates gather together for training that they're going to spot for."
+		],
+		"headache": [
+			"r_c fusses with the herbs as m_c comes into the den wincing with each blink. They gently ease them to a quiet and dark corner of the den to rest.",
+			"m_c refuses to uncurl from their den as the morning sunlight comes in, wincing as a dull throb echoing in their skull."
+		],
+		"severe headache": [
+			"r_c worriedly comes over to the den when told that nobody's seen m_c out yet. Turns out they're curled up tightly in their nest whimpering from the pain in their head.",
+			"m_c's barely able to make their way to the medicine den, the pain throbbing from their head throughout their whole body making the world spin.",
+			"To the distress of their denmates m_c has spent the day silently shaking, barely able to get out the information that their head hurts.",
+			"Barely coherent m_c swallows the herbs delivered to them by their clanmates, hopefully this pain will pass soon."
+		],
+		"paralyzed": [
+			"When r_c comes over to check m_c after complaints of tingling in their legs, it's to inform them it's because their legs aren't working properly anymore.",
+			"m_c has been complaining of tingling in their legs for days, one day it stops. They're relieved, until they try to move again.",
+			"When m_c attempts to get up from their bed they let out a yowl of distress, it would appear that only half of them has gotten up.",
+			"After a few moons of on and off falling over m_c finds one morning that they no longer have to worry about falling."
+		]
+    }	
 }

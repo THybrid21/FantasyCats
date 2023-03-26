@@ -200,7 +200,7 @@
         "herbs": []
     },
     "paralyzed": {
-        "severity": "severe",
+        "severity": "major",
         "congenital": "sometimes",
         "moons_until": 0,
         "mortality": {
@@ -609,5 +609,57 @@
             "poppy",
             "juniper"
         ]
-    }
+    },
+	"fibro": {
+		"severity": "major",
+		"congenital": "always",
+		"moons_until": 4,
+		"mortality": {
+			"newborn": 0,
+			"kitten": 0,
+			"adolescent": 0,
+			"young adult": 0,
+			"adult": 0,
+			"senior adult": 0,
+			"senior": 0
+		},
+		"illness_infectiousness": [],
+		"risks": [
+			{
+				"name": "joint pain",
+				"chance": 30
+			},
+			{
+				"name": "running nose",
+				"chance": 50
+			},
+			{
+				"name": "stomachache",
+				"chance": 50
+			},
+			{
+                "name": "sore",
+                "chance": 10
+            },
+			{
+				"name": "headache",
+				"chance": 10
+			},
+			{
+				"name": "severe headache",
+				"chance": 20
+			},			
+			{
+				"name": "paralyzed",
+				"chance": 90
+			}
+	],
+	"herbs": [
+		"poppy",
+		"raspberry",
+		"juniper",
+		"ragwort",
+		"thyme"
+	]
+	}
 }
