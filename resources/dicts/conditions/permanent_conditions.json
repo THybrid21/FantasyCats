@@ -473,6 +473,14 @@
             {
                 "name": "seizure",
                 "chance": 10
+            },
+            {
+                "name": "abscence",
+                "chance": 10
+            },			
+            {
+                "name": "spasms",
+                "chance": 10
             }
         ],
         "herbs": [

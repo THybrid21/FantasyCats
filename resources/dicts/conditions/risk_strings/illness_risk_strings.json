@@ -1,5 +1,5 @@
 {
-    "greencough": {
+	"greencough": {
         "yellowcough": [
              "There has to be a solution - if r_c tries hard enough, surely they can still save m_c from the yellowcough their greencough has progressed to.",
              "m_c sits in the medicine cat den, miserable, coughing so hard it feels like they can barely get a breath in. Their greencough has progressed to yellowcough, and the outlook looks grim."
@@ -78,5 +78,49 @@
             "m_c wakes and wails, their dreams haunted by visions of their dead loved one.",
             "m_c jolts awake and immediately leaves the den to clear their head, hoping some fresh night air will help them cope with the sadness and memories."
         ]
-    }
+    },
+    "seizure": {
+		"bruises": [
+			"r_c gently tends to m_c once the shaking has stopped. Asking them where it hurts and fluffing up the nest to try and soothe the new bruises.",
+			"m_c pants, gingerly wincing as they shift in their nest.",
+			"Even with the softest nest they could find, m_c still finds that they hurt beneath their fur."
+		],
+		"sore": [
+			"After ensuring that m_c is alright and secure, r_c gently massages the aches out of their body.",
+			"m_c whines, it's not enough just that they're still slightly shaking from residules, now all their muscles ache too.",
+			"If m_c close their eyes the pain isn't quite so bad, just a dull throb really. But it doesn't easily let them rest after their seizure."
+		]
+	},
+	"spasms": {
+		"bruises": [
+			"Once m_c's limb stops spasming r_c carefully comes and checks them over. It would seem they have a few new bruises.",
+			"m_c sighs once their limb returns to their control, stretching it out and wincing when it feels tender."
+		],
+		"sore": [
+			"m_c complains to r_c that after all the spasming their limb feels tender and sore.",
+			"m_c winces, awkwardly trying to massage their limb to soothe the aching muscles.",
+			"Relaxing in their nest it's all m_c can do to brace against the pulse of pain from where they knocked their limbs too hard."
+		]
+	},
+	"anxiety attack": {
+		"panic attack": [
+			"r_c carefully remains outside of m_c's personal space and attempts to count with them, desperately hoping the distraction will prevent their anxiety from further progressing to full panic.",
+			"m_c's tail lashes, eyes darting around the camp. Their paws dig into the dirt of the denfloor and they look moments away from bolting at the slightest movement.",
+			"Instead of fading the anxiety only seems to build and build until m_c feels like they can't breathe, everything is dangerous and wrong and they need out, out.",
+			"It's irrational, there's nothing there, they're not in any danger here. m_c keeps reminding themselves over and over as their chest grows tighter and tighter.",
+			"They can't breathe, m_c can't breathe drowning on land, drowning in the panic that floods their body putting all their fur on end."
+			]
+	},
+		"panic attack": {
+			"constant nightmares": [
+				"After all the panicking m_c weakly crawls on their belly to r_c asking for anything to help with the paranoia induced nightmares they've been suffering from.",
+				"m_c wakes up panting from their nest, paws still twitching with the desperate need to run and escape. It's just a nightmare, just one of many.",
+				"Another nightmare drags m_c down, leaving them tired and hollow looking the next day to the worry of their clanmates."
+			],
+			"shock": [
+				"While the panic has faded away now m_c stares almost blankly, eyes darting making r_c worried that they have gone into a state of shock.",
+				"m_c's heart still races, pounding and echoing in their ears, they should be calm but they can't calm down. Panic continues to vividly repeat in their mind.",
+				"Around and around in circles the fear echoes, feeling more and more like a loop that's trapping them into a state of shock."
+			]
+		}
 }

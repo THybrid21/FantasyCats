@@ -126,8 +126,24 @@
     "seizure prone": {
         "seizure": [
             "r_c spots the seizure coming, and brings m_c to their nest where it's always a little less upsetting to wake up.",
-            "m_c is exhausted and stressed, both the cause of and consequence of their seizures."
-        ]
+            "m_c is exhausted and stressed, both the cause of and consequence of their seizures.",
+			"m_c doesn't remember falling down, but when they blink their eyes dizzily they find themselves looking up at the sky above.",
+			"Tired and a little dizzy m_c still trembles as bit in their nest in the medicine den. They're unsure if that's the end of the seizure or not."
+        ],
+		"absence": [
+			"r_c comes over to check on m_c they've been silently standing in place and staring for a few heartbeats, it seems like they might have gone absent.",
+			"m_c stops mid action, just staring for a period as the sunlight shifts over their nose.",
+			"Carefully m_c's denmates check on them, they're just watching a spot on the wall.",
+			"m_c blinks and the camp seems to have moved around them, awkwardly they shuffle trying to figure out what tasks have been assigned.",
+			"When m_c blinks they find themselves no longer in the clearing but resting in the shade, a clanmate close by watching over them."
+		],
+		"spasms": [
+			"r_c gently guides m_c down into the nest, assuring them they understand while their forelimb refuses to remain in place beneath them.",
+			"One minute m_c is doing their duties as usual, the next one of their paws decides to shift sending them down with a surprised yowl.",
+			"m_c glares at their paw, frustrated that they can't keep it still when it messes up their carefully arranged nest.",
+			"m_c longingly watches their clanmates practice hunting techniques. They're unable to join as their forepaw keeps jumping around and they don't need more bruises.",
+			"m_c's tail aches after it stops spasming. Gingerly they raise their paws to rub it, hoping that it'll stay still for the rest of the time."
+		]
     },
     "allergies": {
         "running nose": [

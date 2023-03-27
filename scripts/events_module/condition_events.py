@@ -69,6 +69,8 @@ class Condition_Events():
             # create event text
             if chosen_illness in ["running nose", "stomachache"]:
                 event_string = f"{cat.name} has gotten a {chosen_illness}."
+            if chosen_illness == "anxiety attack":
+                event_string = f"{cat.name} has worked themselves up into an {chosen_illness}."
             else:
                 event_string = f"{cat.name} has gotten {chosen_illness}."
 
@@ -357,7 +359,8 @@ class Condition_Events():
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
             "stomachache": "diarrhea",
-            "grief stricken": "lasting grief"
+            "grief stricken": "lasting grief",
+            "anxiety attack": "panic attack"
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #

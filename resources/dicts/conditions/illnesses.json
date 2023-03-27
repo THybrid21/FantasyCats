@@ -23,7 +23,14 @@
         "medicine_duration": 1,
         "infectiousness": 0,
         "risks": [
-
+            {
+                "name": "bruises",
+                "chance": 15
+            },
+			{
+                "name": "sore",
+                "chance": 15
+            }
         ],
         "herbs": [
             "juniper",
@@ -640,7 +647,7 @@
             "thyme"
         ]
     },
-    "panic attack": {
+    "anxiety attack": {
         "severity": "minor",
         "mortality": {
             "newborn": 0,
@@ -661,11 +668,11 @@
             "senior": 0
         },
         "duration": 1,
-        "medicine_duration": 3,
+        "medicine_duration": 1,
         "infectiousness": 0,
         "risks": [
             {
-                "name": "anxiety attack",
+                "name": "panic attack",
                 "chance": 50
             }
 			],
@@ -674,7 +681,7 @@
 			"thyme"
         ]
     },	
-    "anxiety attack": {
+    "panic attack": {
         "severity": "major",
         "mortality": {
             "newborn": 0,
@@ -695,11 +702,15 @@
             "senior": 0
         },
         "duration": 2,
-        "medicine_duration": 3,
+        "medicine_duration": 1,
         "infectiousness": 0,
         "risks": [
             {
                 "name": "constant nightmares",
+                "chance": 15
+            },
+			            {
+                "name": "shock",
                 "chance": 15
             }
 			],
@@ -707,5 +718,78 @@
             "catmint",
 			"thyme"
         ]
-    }	
+    },
+	"absence": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 10,
+            "kitten": 20,
+            "adolescent": 30,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 20
+        },
+        "medicine_mortality": {
+            "newborn": 50,
+            "kitten": 60,
+            "adolescent": 70,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 60
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+
+        ],
+        "herbs": [
+            "juniper",
+            "poppy",
+            "thyme",
+            "ragwort"
+        ]
+    },
+    "spasms": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 10,
+            "kitten": 20,
+            "adolescent": 30,
+            "young adult": 40,
+            "adult": 40,
+            "senior adult": 40,
+            "senior": 10
+        },
+        "medicine_mortality": {
+            "newborn": 50,
+            "kitten": 60,
+            "adolescent": 70,
+            "young adult": 100,
+            "adult": 100,
+            "senior adult": 100,
+            "senior": 60
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+            {
+                "name": "bruises",
+                "chance": 15
+            },
+			{
+                "name": "sore",
+                "chance": 15
+            }
+        ],
+        "herbs": [
+            "juniper",
+            "poppy",
+            "thyme",
+            "ragwort"
+        ]
+    }
 }

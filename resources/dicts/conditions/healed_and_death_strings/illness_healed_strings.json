@@ -78,5 +78,24 @@
         "m_c picks themself up out of their nest and begins the day anew, a fresh conviction in their heart."
     ],
 	"malnourished": ["WARNING: this string should never appear, nutrition are handled only in freshkill events."],
-	"starving": ["WARNING: this string should never appear, nutrition are handled only in freshkill events."]
+	"starving": ["WARNING: this string should never appear, nutrition are handled only in freshkill events."],
+	"anxiety attack": [
+		"After a short while, m_c has calmed back down from their anxiety, no longer worrying about a threat that's not there.",
+		"m_c has spent the time talking with their clanmates and has realised that there's nothing to worry about.",
+		"Despite some lingering anxiety, m_c has calmed down and is able to feel secure in the knowledge that the clan is secure.",
+		"m_c feels much better after some rest and time spent watching the clan thrive."
+	],
+	"panic attack": [
+		"Despite still struggling a little bit m_c has mostly calmed down from their panic and feels able to take up their duties once more.",
+		"While their chest still races a bit as they leave the den, m_c is able to keep a clear head and rejoin their clanmates.",
+		"With the help of their clanmates m_c has steadied their breathing once more and feels ready to face the challenges of the day."
+	],
+    "absence": [
+        "m_c has come back to themself after been absent.",
+        "m_c stretches out and blinks, able to move and continue their day as normal."
+    ],	
+    "spasms": [
+        "Despite some lingering twitching m_c's recovered from their spasm.",
+        "m_c is able to get all of their paws underneath them without issues."
+    ]
 }

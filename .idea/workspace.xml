@@ -7,10 +7,12 @@
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/names/names.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/names/names.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/game_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/game_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/events_module/condition_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/condition_events.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/CREDITS.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/clan_cats.json" beforeDir="false" />
