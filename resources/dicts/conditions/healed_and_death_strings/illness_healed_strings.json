@@ -91,11 +91,16 @@
 		"With the help of their clanmates m_c has steadied their breathing once more and feels ready to face the challenges of the day."
 	],
     "absence": [
-        "m_c has come back to themself after been absent.",
-        "m_c stretches out and blinks, able to move and continue their day as normal."
+        "m_c has come back to themselves after been absent.",
+        "Between blinks m_c stretches out, continuing on their day as normal."
     ],	
     "spasms": [
         "Despite some lingering twitching m_c's recovered from their spasm.",
         "m_c is able to get all of their paws underneath them without issues."
+    ],
+	"rat bite fever": [
+		"Finally after moons of feeling touch and go the fever has left m_c's pelt and they feel better than ever.",
+		"Waking up m_c finally feels the relief of been in good health. No longer panting or whimpering, even the lingering rat bite seems to have healed.",
+		"m_c is so relieved to be able to get up out of the den and work once more. Even if that work is just clearing out their sickness scented bedding."
     ]
 }

@@ -219,7 +219,11 @@
             {
                 "name": "a festering wound",
                 "chance": 5
-            }
+            },
+			{
+				"name": "rat bite fever",
+				"chance": 10
+			}
         ],
         "also_got": [
             "torn pelt"

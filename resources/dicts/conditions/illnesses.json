@@ -693,9 +693,9 @@
             "senior": 0
         },
         "medicine_mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
+            "newborn": 60,
+            "kitten": 70,
+            "adolescent": 100,
             "young adult": 0,
             "adult": 0,
             "senior adult": 0,
@@ -791,5 +791,57 @@
             "thyme",
             "ragwort"
         ]
-    }
+    },
+    "rat bite fever": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 5,
+            "kitten": 10,
+            "adolescent": 20,
+            "young adult": 40,
+            "adult": 40,
+            "senior adult": 40,
+            "senior": 10
+        },
+        "medicine_mortality": {
+            "newborn": 50,
+            "kitten": 50,
+            "adolescent": 60,
+            "young adult": 90,
+            "adult": 90,
+            "senior adult": 90,
+            "senior": 60
+        },
+        "duration": 4,
+        "medicine_duration": 3,
+        "infectiousness": 0,
+        "risks": [
+            {
+                "name": "joint pain",
+                "chance": 10
+            },
+			{
+                "name": "sore",
+                "chance": 15
+            },
+			{
+				"name": "headache",
+				"chance": 5
+			},
+			{
+				"name": "torn pelt",
+				"chance": 20
+			},
+			{
+				"name": "weak leg",
+				"chance": 50
+			}
+        ],
+        "herbs": [
+			"ragwort",
+			"wild_garlic",
+			"oak_leaves",
+			"feverfew"
+        ]
+    }	
 }

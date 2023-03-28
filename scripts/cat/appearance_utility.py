@@ -23,7 +23,6 @@ from .pelts import (
     point_markings,
     scars1,
     scars3,
-    skin_sprites,
     spotted,
     tabbies,
     tortiebases,
@@ -46,6 +45,13 @@ from .pelts import (
     mono_eyes,
     purple_eyes,
     chromatic_eyes,
+    sus_eyes,
+    sus_blue,
+    sus_chrome,
+    sus_yellow,
+    sus_green,
+    sus_mono,
+    sus_purple
     )
 from scripts.cat.sprites import Sprites
 from scripts.game_structure.game_essentials import game
@@ -63,18 +69,14 @@ def init_eyes(cat):
         par1 = None
         par2 = None
         if cat.parent1 is None:
-            cat.eye_colour = choice(eye_colours)
+            cat.eye_colour = choice(eye_colours + sus_eyes)
         elif cat.parent2 is None:
             par1 = cat.all_cats[cat.parent1]
-            cat.eye_colour = choice(
-                [par1.eye_colour, choice(eye_colours)])
+            cat.eye_colour = choice([par1.eye_colour, choice(eye_colours + sus_eyes)])
         else:
             par1 = cat.all_cats[cat.parent1]
             par2 = cat.all_cats[cat.parent2]
-            cat.eye_colour = choice([
-                par1.eye_colour, par2.eye_colour,
-                choice(eye_colours)
-            ])
+            cat.eye_colour = choice([par1.eye_colour, par2.eye_colour, choice(eye_colours + sus_eyes)])
         num = game.config["cat_generation"]["base_heterochromia"]
         if cat.white_patches in [high_white, mostly_white, 'FULLWHITE'] or cat.pelt.colour == 'WHITE':
             num = num - 90
@@ -107,6 +109,24 @@ def init_eyes(cat):
                 cat.eye_colour2 = choice(eye_choice)
             elif cat.eye_colour in chromatic_eyes:
                 eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, purple_eyes, mono_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_yellow:
+                eye_choice = choice([sus_blue, sus_green, sus_purple, sus_mono, sus_chrome])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_blue:
+                eye_choice = choice([sus_yellow, sus_green, sus_purple, sus_mono, sus_chrome])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_green:
+                eye_choice = choice([sus_yellow, sus_blue, sus_purple, sus_mono, sus_chrome])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_purple:
+                eye_choice = choice([sus_yellow, sus_blue, sus_green, sus_mono, sus_chrome])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_mono:
+                eye_choice = choice([sus_yellow, sus_blue, sus_green, sus_purple, sus_chrome])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in sus_chrome:
+                eye_choice = choice([sus_yellow, sus_blue, sus_green, sus_purple, sus_mono])
                 cat.eye_colour2 = choice(eye_choice)
 
 
@@ -427,8 +447,8 @@ def init_sprite(cat):
     else:
         par1 = cat.all_cats[cat.parent1]
         par2 = cat.all_cats[cat.parent2]
-        cat.skin = choice([par1.skin, par2.skin, choice(random.choices(skin_categories, weights=(187, 6, 4, 3, 3), k=1)[0])]) 
-
+        cat.skin = choice([par1.skin, par2.skin, choice(random.choices(skin_categories, weights=(187, 6, 4, 3, 3), k=1)[0])])
+        
     if cat.skin in sphynx:
         cat.pelt.length = 'short'
             

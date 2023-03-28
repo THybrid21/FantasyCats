@@ -42,7 +42,13 @@
             "The worried look in r_c's eyes as they examine m_c's acrid rat bite makes m_c's heart sink.",
             "m_c tries to ignore the smell coming from the site of their festering rat bite."
 
-        ]
+        ],
+		"rat bite fever": [
+			"m_c's heart sinks more and more, by the look in r_c's eyes something has gone very wrong with their rat bite.", 
+			"Not only does m_c's rat bite feel like it's burning, now they feel like they're burning.",
+			"m_c writhes in the nest, their rat bite definitely doesn't feel like it's getting better, in fact it feels much like it's getting worse.",
+			"m_c knows something has gone horribly wrong when they can't keep their freshkill down that morning."
+		]
     },
     "tick bites": {
         "an infected wound": [

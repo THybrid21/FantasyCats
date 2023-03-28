@@ -978,21 +978,22 @@ class Cat():
             colour = 'heather blue'
         elif colour == 'sunlitice':
             colour = 'sunlit ice'
-        elif colour == 'greenyellow':
+        elif colour == 'greenyellow' or colour == 'susgreenyellow':
             colour = 'green-yellow'
-        elif colour == 'lilacgrey':
+        elif colour == 'lilacgrey' or colour == 'suspurplegrey':
             colour = 'lilac grey'
-        elif colour == 'browntwo':
-            colour = 'brown'        
-        elif colour == 'greytwo':
-            colour = 'grey'   
-        elif colour == 'yellowolive':
+        elif colour in ['browntwo', 'susvisor', 'suspeanut', 'susbrown', 'susbrowntwo']:
+            colour = 'brown'   
+        elif colour in ['greytwo', 'susgrey', 'susgreengrey', 'susolivegrey', 'susbrowngrey', 
+            'susbluegrey']:
+            colour = 'grey' 
+        elif colour == 'yellowolive' or colour == 'susyellowgreen':
             colour = 'yellow-olive'            
-        elif colour == 'ambertwo':
+        elif colour == 'ambertwo' or colour == 'susamber':
             colour = 'bright amber'   
-        elif colour == 'mintchoc':
+        elif colour == 'mintchoc' or colour == 'susmintchoc':
             colour = 'mint-choc'
-        elif colour == 'chocmint':
+        elif colour == 'chocmint' or colour == 'suschocmint':
             colour = 'choc-mint'               
         elif colour == 'monochrometwo' or colour == 'monochromethree':
             colour = 'monochrome'   
@@ -1000,38 +1001,81 @@ class Cat():
             colour = 'pink poppy'   
         elif colour == 'primaryb' or colour == 'primaryc':
             colour = 'primary'   
-        elif colour == 'chromeb' or colour == 'chromec':
+        elif colour in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
             colour = 'chrome'   
-        elif colour == 'rgbtwo' or colour == 'rgbthree':
+        elif colour in ['rgbtwo','rgbthree', 'susrgb']:
             colour = 'rgb'   
+        elif colour == 'susvisor':
+            colour = 'silver'     
+        elif colour == 'susnacre':
+            colour = 'nacre'   
+        elif colour == 'susnight':
+            colour = 'night'   
+        elif colour == 'susyellow' or colour == 'susbright':
+            colour = 'yellow'   
+        elif colour == 'susgoldgreen':
+            colour = 'gold-green'   
+        elif colour == 'suspoppy':
+            colour = 'poppy'   
+        elif colour in ['susgreen', 'susemerald', 'susjade']:
+            colour = 'green'   
+        elif colour == 'susolive':
+            colour = 'olive'   
+        elif colour == 'susgold':
+            colour = 'gold'   
+        elif colour in ['suscrimson', 'susscarlet']:
+            colour = 'crimson' 
+        elif colour in ['susgrape', 'susviolet']:
+            colour = 'purple' 
+        elif colour == 'susstrawberry':
+            colour = 'strawberry'   
+        elif colour == 'suspink' or colour == 'susmelon':
+            colour = 'pink'   
+        elif colour == 'susindigo':
+            colour = 'indigo'   
+        elif colour in ['susblue', 'susbluetwo', 'suscobolt']:
+            colour = 'cobolt' 
+        elif colour in ['susturquoise', 'sussky']:
+            colour = 'sky' 
+        elif colour == 'susocean':
+            colour = 'ocean'   
+        elif colour == 'suswhite':
+            colour = 'white'   
+        elif colour == 'susblack':
+            colour = 'black'   
+        elif colour == 'susbeach':
+            colour = 'beach'   
+        elif colour == 'susruben':
+            colour = 'ruben'   
         if self.eye_colour2 != None:
             if colour2 == 'palegreen':
                 colour2 = 'pale green'
-            if colour2 == 'darkblue':
+            elif colour2 == 'darkblue':
                 colour2 = 'dark blue'
-            if colour2 == 'paleblue':
+            elif colour2 == 'paleblue':
                 colour2 = 'pale blue'
-            if colour2 == 'paleyellow':
+            elif colour2 == 'paleyellow':
                 colour2 = 'pale yellow'
-            if colour2 == 'heatherblue':
+            elif colour2 == 'heatherblue':
                 colour2 = 'heather blue'
-            if colour2 == 'sunlitice':
+            elif colour2 == 'sunlitice':
                 colour2 = 'sunlit ice'
-            if colour2 == 'greenyellow':
+            elif colour2 == 'greenyellow' or colour2 == 'susgreenyellow':
                 colour2 = 'green-yellow'
-            if colour2 == 'lilacgrey':
+            elif colour2 == 'lilacgrey' or colour2 == 'suspurplegrey':
                 colour2 = 'lilac grey'
-            if colour2 == 'browntwo':
-                colour2 = 'brown'      
-            if colour2 == 'greytwo':
-                colour2 = 'grey'   
-            if colour2 == 'yellowolive':                
-                colour22 = 'yellow-olive'
-            elif colour2 == 'ambertwo':
+            elif colour2 in ['browntwo', 'susvisor', 'suspeanut', 'susbrown', 'susbrowntwo']:
+                colour2 = 'brown'   
+            elif colour2 in ['greytwo', 'susgrey', 'susgreengrey', 'susolivegrey', 'susbrowngrey', 
+                'susbluegrey']:
+                colour2 = 'grey' 
+            elif colour2 == 'yellowolive' or colour2 == 'susyellowgreen':
+                colour2 = 'yellow-olive'            
+            elif colour2 == 'ambertwo' or colour2 == 'susamber':
                 colour2 = 'bright amber'   
-            elif colour2 == 'mintchoc':
+            elif colour2 == 'mintchoc' or colour2 == 'susmintchoc':
                 colour2 = 'mint-choc'
-            elif colour2 == 'chocmint':
+            elif colour2 == 'chocmint' or colour2 == 'suschocmint':
                 colour2 = 'choc-mint'               
             elif colour2 == 'monochrometwo' or colour2 == 'monochromethree':
                 colour2 = 'monochrome'   
@@ -1039,10 +1083,52 @@ class Cat():
                 colour2 = 'pink poppy'   
             elif colour2 == 'primaryb' or colour2 == 'primaryc':
                 colour2 = 'primary'   
-            elif colour2 == 'chromeb' or colour2 == 'chromec':
+            elif colour2 in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
                 colour2 = 'chrome'   
-            elif colour2 == 'rgbtwo' or colour2 == 'rgbthree':
+            elif colour2 in ['rgbtwo','rgbthree', 'susrgb']:
                 colour2 = 'rgb'   
+            elif colour2 == 'susvisor':
+                colour2 = 'silver'     
+            elif colour2 == 'susnacre':
+                colour2 = 'nacre'   
+            elif colour2 == 'susnight':
+                colour2 = 'night'   
+            elif colour2 == 'susyellow' or colour2 == 'susbright':
+                colour2 = 'yellow'   
+            elif colour2 == 'susgoldgreen':
+                colour2 = 'gold-green'   
+            elif colour2 == 'suspoppy':
+                colour2 = 'poppy'   
+            elif colour2 in ['susgreen', 'susemerald', 'susjade']:
+                colour2 = 'green'   
+            elif colour2 == 'susolive':
+                colour2 = 'olive'   
+            elif colour2 == 'susgold':
+                colour2 = 'gold'   
+            elif colour2 in ['suscrimson', 'susscarlet']:
+                colour2 = 'crimson' 
+            elif colour2 in ['susgrape', 'susviolet']:
+                colour2 = 'purple' 
+            elif colour2 == 'susstrawberry':
+                colour2 = 'strawberry'   
+            elif colour2 == 'suspink' or colour2 == 'susmelon':
+                colour2 = 'pink'   
+            elif colour2 == 'susindigo':
+                colour2 = 'indigo'   
+            elif colour2 in ['susblue', 'susbluetwo', 'suscobolt']:
+                colour2 = 'cobolt' 
+            elif colour2 in ['susturquoise', 'sussky']:
+                colour2 = 'sky' 
+            elif colour2 == 'susocean':
+                colour2 = 'ocean'   
+            elif colour2 == 'suswhite':
+                colour2 = 'white'   
+            elif colour2 == 'susblack':
+                colour2 = 'black'   
+            elif colour2 == 'susbeach':
+                colour2 = 'beach'   
+            elif colour2 == 'susruben':
+                colour2 = 'ruben'   
             colour = colour + ' and ' + colour2
         return colour
 

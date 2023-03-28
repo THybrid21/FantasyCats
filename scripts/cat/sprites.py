@@ -184,9 +184,10 @@ sprites = Sprites(50)
 #tiles = Sprites(64)
 
 for x in [
-    'lineart', 'lineartdead', 'lineartdf', 'eyes', 'eyes2', 'eyeshybrid', 
-    'eyes2hybrid', 'skin', 'skin2', 'skinsphynx', 'wings', 'manes', 
-    'scars', 'missingscars', 'shadersnewwhite', 'lightingnew', 'fademask', 'fadestarclan', 'fadedarkforest',
+    'lineart', 'lineartdead', 'lineartdf', 'shadersnewwhite', 'lightingnew',
+    'eyes', 'eyes2', 'eyeshybrid', 'eyes2hybrid', 'sus', 'sus2',    
+    'skin', 'skin2', 'skinsphynx', 'wings', 'manes', 
+    'scars', 'missingscars', 'fademask', 'fadestarclan', 'fadedarkforest',
     'solidbrowns', 'solidgingers', 'solidgreys', 'solidblues', 'solidgreens',
     'solidpurples', 'solidyellows', 'solidpride'
 ]:
@@ -268,6 +269,7 @@ for i in range(0, 3):
     sprites.make_group('fadestarclan', (i, 0), f'fadestarclan{i}')
     sprites.make_group('fadedarkforest', (i, 0), f'fadedf{i}')
 
+#Regular Eyes
 for a, i in enumerate(['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 
         'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'HEATHERBLUE', 'SUNLITICE']):
     sprites.make_group('eyes', (a, 0), f'eyes{i}')
@@ -292,6 +294,23 @@ for a, i in enumerate(['POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBER
         'NACRE', 'NIGHT', 'OCEAN']):
     sprites.make_group('eyeshybrid', (a, 3), f'eyes{i}')
     sprites.make_group('eyes2hybrid', (a, 3), f'eyes2{i}')
+#AmongUs SUS
+for a, i in enumerate(['SUSVISOR', 'SUSGREY', 'SUSGREENGREY', 'SUSOLIVEGREY', 'SUSBROWNGREY', 'SUSBLUEGREY', 
+    'SUSPURPLEGREY', 'SUSDARKCHROME', 'SUSNACRE', 'SUSNIGHT', 'SUSCHROME', 'SUSRGB']):
+    sprites.make_group('sus', (a, 0), f'eyes{i}')
+    sprites.make_group('sus2', (a, 0), f'eyes2{i}')
+for a, i in enumerate(['SUSYELLOW', 'SUSAMBER', 'SUSGOLDGREEN', 'SUSBRIGHT', 'SUSMINTCHOC', 'SUSCHOCMINT',
+    'SUSGREEN', 'SUSEMERALD', 'SUSJADE', 'SUSOLIVE', 'SUSGOLD', 'SUSRUSSET']):
+    sprites.make_group('sus', (a, 1), f'eyes{i}')
+    sprites.make_group('sus2', (a, 1), f'eyes2{i}')
+for a, i in enumerate(['SUSPOPPY', 'SUSCRIMSON', 'SUSSCARLET', 'SUSGRAPE', 'SUSVIOLET', 'SUSSTRAWBERRY', 'SUSPINK',
+    'SUSINDIGO', 'SUSBLUE', 'SUSBLUETWO', 'SUSCOBOLT', 'SUSTURQUOISE']):
+    sprites.make_group('sus', (a, 2), f'eyes{i}')
+    sprites.make_group('sus2', (a, 2), f'eyes2{i}')
+for a, i in enumerate(['SUSSKY', 'SUSOCEAN', 'SUSYELLOWGREEN', 'SUSWHITE', 'SUSBLACK', 'SUSMELON', 'SUSBEACH',
+    'SUSGREENYELLOW', 'SUSPEANUT', 'SUSBROWN', 'SUSBROWNTWO', 'SUSRUBEN']):
+    sprites.make_group('sus', (a, 3), f'eyes{i}')
+    sprites.make_group('sus2', (a, 3), f'eyes2{i}')    
 
 # white patches
 for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'VAN', 'ANYTWO', 'SKELEPATCH']):
@@ -1960,9 +1979,11 @@ for a, i in enumerate(['DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'DARKSALMONMANE',
 for a, i in enumerate(['DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 
     'BLUEMANE', 'LIGHTBLUEMANE']):
     sprites.make_group('manes', (a, 2), f"skin{i}")    
-for a, i in enumerate(['ALBINO', 'ALBINOSPHYNX', 'MELANISTIC', 'MELANISTICSPHYNX']):
+for a, i in enumerate(['ALBINO', 'ALBINOSPHYNX', 'MELANISTIC', 'MELANISTICSPHYNX', 'SUSALBINO', 
+    'SUSALBINOSPHYNX', 'SUSMELANISTIC', 'SUSMELANISTICSPHYNX']):
     sprites.make_group('skin2', (a, 0), f"skin{i}")
-for a, i in enumerate(['ALBINOWING', 'MELANISTICWING', 'ALBINOMANE', 'MELANISTICMANE']):
+for a, i in enumerate(['ALBINOWING', 'MELANISTICWING', 'ALBINOMANE', 'MELANISTICMANE', 'SUSALBINOWING', 
+    'SUSMELANISTICWING', 'SUSALBINOMANE', 'SUSMELANISTICMANE']):
     sprites.make_group('skin2', (a, 1), f"skin{i}")
 for a, i in enumerate(['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 
     'RAINBOWWING', 'SILVERWING']):

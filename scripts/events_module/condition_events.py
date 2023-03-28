@@ -70,7 +70,7 @@ class Condition_Events():
                 if chosen_illness in ["running nose", "stomachache"]:
                     event_string = f"{cat.name} has gotten a {chosen_illness}."
                 elif chosen_illness == "anxiety attack":
-                    event_string = f"{cat.name} has worked themselves up into an {chosen_illness}."             
+                    event_string = f"{cat.name} has worked up into an {chosen_illness}."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 
@@ -357,7 +357,8 @@ class Condition_Events():
             "heat exhaustion": "heat stroke",
             "stomachache": "diarrhea",
             "grief stricken": "lasting grief",
-            "anxiety attack": "panic attack"
+            "anxiety attack": "panic attack",
+            "panic attack": "shock"
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #
@@ -447,7 +448,8 @@ class Condition_Events():
 
         injury_progression = {
             "poisoned": "redcough",
-            "shock": "lingering shock"
+            "shock": "lingering shock",
+            "rat bite": "rat bite fever"
         }
 
         # need to hold this number so that we can check if the leader has died

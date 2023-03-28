@@ -256,7 +256,7 @@ class Charcoal():
 
 class Ghost():
     name = "Ghost"
-    sprites = {1: 'tabby', 2: 'white'}
+    sprites = {1: 'ghost', 2: 'white'}
 
     def __init__(self, colour, white, length):
         self.white = white  # boolean; does cat have white on it or no
@@ -552,7 +552,7 @@ eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBL
     'PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RBG', 'RBGTWO', 'RBGTHREE', 'MONOCHROME', 
     'MONOCHROMETWO', 'MONOCHROMETHREE', 'POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH', 
     'NACRE', 'NIGHT', 'OCEAN']
-yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'BRONZE', 'GOLD', 'COPPER', 'GREENYELLOW', 'BROWN', 'BROWNtWO', 
+yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'BRONZE', 'GOLD', 'COPPER', 'GREENYELLOW', 'BROWN', 'BROWNTWO', 
                 'PEANUT', 'YELLOWOLIVE', 'SUNSHINE', 'AMBERTWO', 'BEACH']
 blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'AZURE', 
                 'COBOLT', 'OCEAN']
@@ -564,6 +564,23 @@ purple_eyes = ['POPPY', 'CRIMSON', 'RUBY', 'LILAC', 'VIOLET', 'GRAPE', 'INDIGO',
     'POPPYPINK', 'STRAWBERRY']
 chromatic_eyes = ['PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RBG', 
     'RBGTWO', 'RBGTHREE',]
+sus_yellow = ['SUSYELLOW', 'SUSAMBER', 'SUSGOLDGREEN', 'SUSBRIGHT', 'SUSGOLD', 'SUSYELLOWGREEN', 'SUSRUSSET', 
+    'SUSPEANUT', 'SUSBROWN', 'SUSBROWNTWO']
+sus_blue = ['SUSINDIGO', 'SUSBLUE', 'SUSBLUETWO', 'SUSCOBOLT', 'SUSTURQUOISE', 'SUSSKY', 'SUSOCEAN',
+    'SUSBEACH']
+sus_green = ['SUSMINTCHOC', 'SUSCHOCMINT', 'SUSGREEN', 'SUSEMERALD', 'SUSJADE', 'SUSOLIVE', 
+    'SUSGREENYELLOW']
+sus_mono = ['SUSVISOR', 'SUSGREY', 'SUSGREENGREY', 'SUSOLIVEGREY', 'SUSBROWNGREY', 'SUSBLUEGREY', 
+    'SUSPURPLEGREY', 'SUSWHITE', 'SUSBLACK']
+sus_purple = ['SUSPOPPY', 'SUSCRIMSON', 'SUSSCARLET', 'SUSGRAPE', 'SUSVIOLET', 'SUSSTRAWBERRY', 'SUSPINK',
+    'SUSMELON', 'SUSRUBEN']
+sus_chrome = ['SUSDARKCHROME',  'SUSNACRE', 'SUSNIGHT', 'SUSCHROME', 'SUSRGB']
+sus_eyes = ['SUSVISOR', 'SUSGREY', 'SUSGREENGREY', 'SUSOLIVEGREY', 'SUSBROWNGREY', 'SUSBLUEGREY', 
+    'SUSPURPLEGREY', 'SUSDARKCHROME', 'SUSNACRE', 'SUSNIGHT', 'SUSCHROME', 'SUSRGB', 'SUSYELLOW', 'SUSAMBER', 'SUSGOLDGREEN', 
+    'SUSBRIGHT', 'SUSMINTCHOC', 'SUSCHOCMINT', 'SUSGREEN', 'SUSEMERALD', 'SUSJADE', 'SUSOLIVE', 'SUSGOLD', 'SUSRUSSET', 
+    'SUSPOPPY', 'SUSCRIMSON', 'SUSSCARLET', 'SUSGRAPE', 'SUSVIOLET', 'SUSSTRAWBERRY', 'SUSPINK',
+    'SUSINDIGO', 'SUSBLUE', 'SUSBLUETWO', 'SUSCOBOLT', 'SUSTURQUOISE', 'SUSSKY', 'SUSOCEAN', 'SUSYELLOWGREEN', 
+    'SUSWHITE', 'SUSBLACK', 'SUSMELON', 'SUSBEACH', 'SUSGREENYELLOW', 'SUSPEANUT', 'SUSBROWN', 'SUSBROWNTWO', 'SUSRUBEN']
 # scars1 is scars from other cats, other animals - scars2 is missing parts - scars3 is "special" scars that could only happen in a special event
 # bite scars by @wood pank on discord
 scars1 = ["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY",
@@ -1076,6 +1093,8 @@ def describe_appearance(cat, short=False):
             else: 
                 color_name = f"{color_name} with small patches of white" 
 
+    if not short and cat.eye_colour in sus_eyes:
+        color_name = f"{color_name} is looking sus"
 
     # Here is the place where we can add some additional details about the cat, for the full non-short one. 
     # These include notable missing limbs, vitiligo, long-furred-ness, and 3 or more scars. 
@@ -1096,6 +1115,7 @@ def describe_appearance(cat, short=False):
         for scar in cat.scars:
             if scar in scar_details and scar_details[scar] not in additional_details:
                 additional_details.append(scar_details[scar])
+
         
         if len(additional_details) > 1:
             color_name = f"{color_name} with {', '.join(additional_details[:-1])} and {additional_details[-1]}"

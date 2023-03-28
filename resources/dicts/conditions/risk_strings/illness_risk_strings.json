@@ -111,16 +111,43 @@
 			"They can't breathe, m_c can't breathe drowning on land, drowning in the panic that floods their body putting all their fur on end."
 			]
 	},
-		"panic attack": {
-			"constant nightmares": [
-				"After all the panicking m_c weakly crawls on their belly to r_c asking for anything to help with the paranoia induced nightmares they've been suffering from.",
-				"m_c wakes up panting from their nest, paws still twitching with the desperate need to run and escape. It's just a nightmare, just one of many.",
-				"Another nightmare drags m_c down, leaving them tired and hollow looking the next day to the worry of their clanmates."
-			],
-			"shock": [
-				"While the panic has faded away now m_c stares almost blankly, eyes darting making r_c worried that they have gone into a state of shock.",
-				"m_c's heart still races, pounding and echoing in their ears, they should be calm but they can't calm down. Panic continues to vividly repeat in their mind.",
-				"Around and around in circles the fear echoes, feeling more and more like a loop that's trapping them into a state of shock."
-			]
-		}
+	"panic attack": {
+		"constant nightmares": [
+			"After all the panicking m_c weakly crawls on their belly to r_c asking for anything to help with the paranoia induced nightmares they've been suffering from.",
+			"m_c wakes up panting from their nest, paws still twitching with the desperate need to run and escape. It's just a nightmare, just one of many.",
+			"Another nightmare drags m_c down, leaving them tired and hollow looking the next day to the worry of their clanmates."
+		],
+		"shock": [
+			"While the panic has faded away now m_c stares almost blankly, eyes darting making r_c worried that they have gone into a state of shock.",
+			"m_c's heart still races, pounding and echoing in their ears, they should be calm but they can't calm down. Panic continues to vividly repeat in their mind.",
+			"Around and around in circles the fear echoes, feeling more and more like a loop that's trapping them into a state of shock."
+		]
+	},
+	"rat bite fever": {
+      "joint pain": [
+        "m_c whimpers as the pain echoes through their joints, the heat rolling off their body while they lay begging r_c to take away even the barest pain.",
+        "m_c lies hazily on their side, between the fever making their head spin and the pain that echoes through their joints they're not sure how much longer they want to be sick.",
+        "Wincing as they try to take their herbs m_c swears that they never want to mess with a rat again, this experience is not one they wish to repeat."
+      ],
+      "sore": [
+        "r_c fusses over m_c as they loll their head in the den, too weak from pain and fever to even eat the provided herbs on their own.",
+        "m_c can barely raise themselves from the nest to go for herbs, a deep ache dragging them back down.",
+        "The pain rolls over them, waves and waves of it making m_c wish that they had somehow avoided the rat bite."
+      ],
+      "headache": [
+        "m_c dully looks at r_c, while the fever saps their strength more their head echoes with a dull throb. Just more issues compounding one another.",
+        "m_c rolls over in the nest, purposely turning away from where the sun streaks into the den. They can't stand the way it makes them wince.",
+        "It feels like a kitten has been playing mossball right on top of m_c's head, pounding away while all they can do is mope."
+      ],
+      "torn pelt": [
+        "r_c sighs as they place new fresh cobwebs over the tears in m_c's pelt from where they've been poking around the rat bite.",
+        "As if the initial tear in m_c's pelt wasn't enough, their rolling around and scratching at it as only made it open once more.",
+        "m_c fusses over the new tears in their pelt, the injuries look odd and kind of raised under the skin."
+      ],
+      "weak leg": [
+        "As if m_c's day already wasn't horrible enough. As they enter the medicine den r_c has to catch them when the leg the rat bit gives out.",
+        "Gingerly m_c attempts to stand up. Their leg wobbles and barely seems to want to sustain them.",
+        "m_c asks a denmate for assistance to the medicine den. They're not so proud to hide that their leg doesn't want to fully support them anymore."
+      ]
+    }
 }
