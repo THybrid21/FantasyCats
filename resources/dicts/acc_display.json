@@ -455,223 +455,149 @@
     "plural": "hooded rats",
     "singular": "hooded rat"
   },
-
-  "CRIMSONSTAR": {
-    "default": "crimson starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "CRIMSONHAT": {
+    "default": "crimson feathered mouseketeer hat",
+    "plural": "crimson feathered mouseketeer hats",
+    "singular": "crimson feathered mouseketeer hat"
   },
-
-  "BLUESTAR": {
-    "default": "blue starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "BLUEHAT": {
+    "default": "blue feathered mouseketeer hat",
+    "plural": "blue feathered mouseketeer hats",
+    "singular": "blue feathered mouseketeer hat"
   },
-
-  "YELLOWSTAR": {
-    "default": "yellow starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "CYANHAT": {
+    "default": "cyan feathered mouseketeer hat",
+    "plural": "cyan feathered mouseketeer hats",
+    "singular": "cyan feathered mouseketeer hat"
   },
-
-  "REDSTAR": {
-    "default": "red starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "YELLOWHAT": {
+    "default": "yellow feathered mouseketeer hat",
+    "plural": "yellow feathered mouseketeer hats",
+    "singular": "yellow feathered mouseketeer hat"
   },
-
-  "CYANSTAR": {
-    "default": "cyan starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "LIMEHAT": {
+    "default": "lime feathered mouseketeer hat",
+    "plural": "lime feathered mouseketeer hats",
+    "singular": "lime feathered mouseketeer hat"
   },
-
-  "LIMESTAR": {
-    "default": "lime starfish",
-    "plural": "couple of starfish",
-    "singular": "starfish"
+  "GREENHAT": {
+    "default": "green feathered mouseketeer hat",
+    "plural": "green feathered mouseketeer hats",
+    "singular": "green feathered mouseketeer hat"
   },
-
-  "DARKSEAWEED": {
-    "default": "dark seaweed",
-    "plural": "pile of seaweed",
-    "singular": "seaweed"
+  "REDHAT": {
+    "default": "red feathered mouseketeer hat",
+    "plural": "red feathered mouseketeer hats",
+    "singular": "red feathered mouseketeer hat"
   },
-
-  "LIGHTSEAWEED": {
-    "default": "light seaweed",
-    "plural": "pile of seaweed",
-    "singular": "seaweed"
+  "RAINBOWHAT": {
+    "default": "rainbow feathered mouseketeer hat",
+    "plural": "rainbow feathered mouseketeer hats",
+    "singular": "rainbow feathered mouseketeer hat"
   },
-
-  "DRYSEAWEED": {
-    "default": "dried seaweed",
-    "plural": "dried pile of seaweed",
-    "singular": "dry seaweed"
+  "BLACKHAT": {
+    "default": "black feathered mouseketeer hat",
+    "plural": "black feathered mouseketeer hats",
+    "singular": "black feathered mouseketeer hat"
   },
-
-  "MAGICSEAWEED": {
-    "default": "magic seaweed",
-    "plural": "pile of purple seaweed",
-    "singular": "purple seaweed"
+  "WHITEHAT": {
+    "default": "white feathered mouseketeer hat",
+    "plural": "white feathered mouseketeer hats",
+    "singular": "white feathered mouseketeer hat"
   },
-
-  "DARKPEARLS": {
-    "default": "blue pearl chain",
-    "plural": "chain of blue pearls",
-    "singular": "shiny blue pearl"
+  "PINKHAT": {
+    "default": "pink feathered mouseketeer hat",
+    "plural": "pink feathered mouseketeer hats",
+    "singular": "pink feathered mouseketeer hat"
   },
-
-  "LIGHTPEARLS": {
-    "default": "white pearl chain",
-    "plural": "chain of white pearls",
-    "singular": "shiny white pearl"
+  "PURPLEHAT": {
+    "default": "purple feathered mouseketeer hat",
+    "plural": "purple feathered mouseketeer hats",
+    "singular": "purple feathered mouseketeer hat"
   },
-
-  "CRIMSONBC": {
-    "default": "crimson blood clan collar",
-    "plural": "crimson blood clan collars",
-    "singular": "crimson blood clan collar"
+  "MULTIHAT": {
+    "default": "lilac feathered mouseketeer hat",
+    "plural": "lilac feathered mouseketeer hats",
+    "singular": "lilac feathered mouseketeer hat"
   },
-  "BLUEBC": {
-    "default": "blue blood clan collar",
-    "plural": "blue blood clan collars",
-    "singular": "blue blood clan collar"
+  "INDIGOHAT": {
+    "default": "indigo feathered mouseketeer hat",
+    "plural": "indigo feathered mouseketeer hats",
+    "singular": "indigo feathered mouseketeer hat"
   },
-  "CYANBC": {
-    "default": "cyan blood clan collar",
-    "plural": "cyan blood clan collars",
-    "singular": "cyan blood clan collar"
+  "CRIMSONBOOT": {
+    "default": "set of crimson shame booties",
+    "plural": "set of crimson shame booties",
+    "singular": "set of crimson shame booties"
   },
-  "YELLOWBC": {
-    "default": "yellow blood clan collar",
-    "plural": "yellow blood clan collars",
-    "singular": "yellow blood clan collar"
+  "BLUEBOOT": {
+    "default": "set of blue shame booties",
+    "plural": "set of blue shame booties",
+    "singular": "set of blue shame booties"
   },
-  "LIMEBC": {
-    "default": "lime blood clan collar",
-    "plural": "lime blood clan collars",
-    "singular": "lime blood clan collar"
+  "CYANBOOT": {
+    "default": "set of cyan shame booties",
+    "plural": "set of cyan shame booties",
+    "singular": "set of cyan shame booties"
   },
-  "GREENBC": {
-    "default": "green blood clan collar",
-    "plural": "green blood clan collars",
-    "singular": "green blood clan collar"
+  "YELLOWBOOT": {
+    "default": "set of yellow shame booties",
+    "plural": "set of yellow shame booties",
+    "singular": "set of yellow shame booties"
   },
-  "REDBC": {
-    "default": "red blood clan collar",
-    "plural": "red blood clan collars",
-    "singular": "red blood clan collar"
+  "LIMEBOOT": {
+    "default": "set of lime shame booties",
+    "plural": "set of lime shame booties",
+    "singular": "set of lime shame booties"
   },
-  "RAINBCBC": {
-    "default": "rainbow blood clan collar",
-    "plural": "rainbow blood clan collars",
-    "singular": "rainbow clan blood clan collar"
+  "GREENBOOT": {
+    "default": "set of green shame booties",
+    "plural": "set of green shame booties",
+    "singular": "set of green shame booties"
   },
-  "BLACKBC": {
-    "default": "black blood clan collar",
-    "plural": "black blood clan collars",
-    "singular": "black blood clan collar"
+  "REDBOOT": {
+    "default": "set of red shame booties",
+    "plural": "set of red shame booties",
+    "singular": "set of red shame booties"
   },
-  "SPIKESBC": {
-    "default": "gold foil blood clan collar",
-    "plural": "gold foil blood clan collars",
-    "singular": "gold foil blood clan collar"
+  "RAINBOWBOOT": {
+    "default": "set of rainbow shame booties",
+    "plural": "set of rainbow shame booties",
+    "singular": "set of rainbow shame booties"
   },
-  "WHITEBC": {
-    "default": "white blood clan collar",
-    "plural": "white blood clan collars",
-    "singular": "white blood clan collar"
+  "BLACKBOOT": {
+    "default": "set of black shame booties",
+    "plural": "set of black shame booties",
+    "singular": "set of black shame booties"
   },
-  "PINKBC": {
-    "default": "pink blood clan collar",
-    "plural": "pink blood clan collars",
-    "singular": "pink blood clan collar"
+  "SPIKESBOOT": {
+    "default": "set of spiky shame booties",
+    "plural": "set of spiky shame booties",
+    "singular": "set of spiky shame booties"
   },
-  "PURPLEBC": {
-    "default": "purple blood clan collar",
-    "plural": "purple blood clan collars",
-    "singular": "purple blood clan collar"
+  "WHITEBOOT": {
+    "default": "set of white shame booties",
+    "plural": "set of white shame booties",
+    "singular": "set of white shame booties"
   },
-  "MULTIBC": {
-    "default": "lilac blood clan collar",
-    "plural": "lilac blood clan collars",
-    "singular": "lilac blood clan collar"
+  "PINKBOOT": {
+    "default": "set of pink shame booties",
+    "plural": "set of pink shame booties",
+    "singular": "set of pink shame booties"
   },
-
-  "CRIMSONCAPE": {
-    "default": "crimson cape",
-    "plural": "crimson capes",
-    "singular": "crimson cape"
+  "PURPLEBOOT": {
+    "default": "set of purple shame booties",
+    "plural": "set of purple shame booties",
+    "singular": "set of purple shame booties"
   },
-  "BLUECAPE": {
-    "default": "blue cape",
-    "plural": "blue capes",
-    "singular": "blue cape"
+  "MULTIBOOT": {
+    "default": "set of lilac shame booties",
+    "plural": "set of lilac shame booties",
+    "singular": "set of lilac shame booties"
   },
-  "CYANCAPE": {
-    "default": "cyan cape",
-    "plural": "cyan capes",
-    "singular": "cyan cape"
-  },
-  "YELLOWCAPE": {
-    "default": "yellow cape",
-    "plural": "yellow capes",
-    "singular": "yellow cape"
-  },
-  "LIMECAPE": {
-    "default": "lime cape",
-    "plural": "lime capes",
-    "singular": "lime cape"
-  },
-  "GREENCAPE": {
-    "default": "green cape",
-    "plural": "green capes",
-    "singular": "green cape"
-  },
-  "REDCAPE": {
-    "default": "red cape",
-    "plural": "red capes",
-    "singular": "red cape"
-  },
-  "RAINCAPECAPE": {
-    "default": "rainbow cape",
-    "plural": "rainbow capes",
-    "singular": "rainbow cape"
-  },
-  "BLACKCAPE": {
-    "default": "black cape",
-    "plural": "black capes",
-    "singular": "black cape"
-  },
-  "SPIKESCAPE": {
-    "default": "gold foil cape",
-    "plural": "gold foil capes",
-    "singular": "gold foil cape"
-  },
-  "WHITECAPE": {
-    "default": "white cape",
-    "plural": "white capes",
-    "singular": "white cape"
-  },
-  "ORANGECAPE": {
-    "default": "orange cape",
-    "plural": "orange capes",
-    "singular": "orange cape"
-  },
-  "PINKCAPE": {
-    "default": "pink cape",
-    "plural": "pink capes",
-    "singular": "pink cape"
-  },
-  "PURPLECAPE": {
-    "default": "purple cape",
-    "plural": "purple capes",
-    "singular": "purple cape"
-  },
-  "MULTICAPE": {
-    "default": "lilac cape",
-    "plural": "lilac capes",
-    "singular": "lilac cape"
-  }   
+  "INDIGOBOOT": {
+    "default": "set of indigo shame booties",
+    "plural": "set of indigo shame booties",
+    "singular": "set of indigo shame booties"
+  }
 }

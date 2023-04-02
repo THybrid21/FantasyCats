@@ -402,7 +402,11 @@
             {
                 "name": "deaf",
                 "chance": 80
-            }
+            },
+			{
+				"name": "nonverbal",
+				"chance": 20
+			}
         ],
         "herbs": []
     },
@@ -422,6 +426,14 @@
         "illness_infectiousness": [
         ],
         "risks": [
+			{
+				"name": "mute",
+				"chance": 120
+			},
+			{
+				"name": "nonverbal",
+				"chance": 20
+			}			
         ],
         "herbs": []
 
@@ -507,7 +519,11 @@
             {
                 "name": "running nose",
                 "chance": 20
-            }
+            },
+			{
+				"name": "rash",
+				"chance": 45
+			}
         ],
         "herbs": []
     },
@@ -580,7 +596,11 @@
             {
                 "name": "grief stricken",
                 "chance": 50
-            }
+            },
+			{
+				"name": "heavy soul",
+				"chance": 120
+			}
         ],
         "herbs": [
             "thyme",
@@ -667,7 +687,347 @@
 		"raspberry",
 		"juniper",
 		"ragwort",
-		"thyme"
-	]
-	}
+		"thyme",
+		"catmint"
+		]
+	},
+	"heavy soul": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "grief stricken",
+                "chance": 40
+            },
+            {
+                "name": "seasonal lethargy",
+                "chance": 30
+            },
+			{
+				"name": "lethargy",
+				"chance": 15
+			},
+			{
+				"name": "anxiety attack",
+				"chance": 40
+			},
+			{
+				"name": "absence",
+				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 90
+			}
+        ],
+        "herbs": [
+            "thyme",
+            "juniper",
+            "poppy"
+        ]
+    },
+    "starwalker": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 4,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "special interest",
+                "chance": 5
+            },
+            {
+                "name": "hyperfixation",
+                "chance": 10
+            },
+			{
+				"name": "stimming",
+				"chance": 5
+			},
+            {
+                "name": "nonverbal",
+                "chance": 40
+            },
+			{
+				"name": "anxiety attack",
+				"chance": 30
+			},
+			{
+				"name": "seasonal lethargy",
+				"chance": 30
+			},
+			{
+				"name": "absence",
+				"chance": 40
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 30
+			}
+        ],
+        "herbs": []
+    },
+    "anxiety": {
+        "severity": "major",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "anxiety attack",
+                "chance": 30
+            },
+			{
+				"name": "panic attack",
+				"chance": 30
+			},
+            {
+                "name": "indecision",
+                "chance": 20
+            },
+			{
+				"name": "impulsivity",
+				"chance": 20
+			},			
+			{
+				"name": "vivid daydreams",
+				"chance": 60
+			},
+			{
+				"name": "hallucinations",
+				"chance": 120
+			},
+			{
+				"name": "shock",
+				"chance": 60
+			},
+			{
+				"name": "world tired",
+				"chance": 90
+			}		
+        ],
+        "herbs": [
+			"chamomile",
+			"juniper",
+			"betony"
+		]
+    },
+    "ocd": {
+        "severity": "major",
+        "congenital": "always",
+        "moons_until": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "anxiety attack",
+                "chance": 30
+            },
+            {
+                "name": "indecision",
+                "chance": 20
+            }, 
+            {
+                "name": "compulsions",
+                "chance": 10
+            },
+            {
+                "name": "hyperfixation",
+                "chance": 20
+            },
+            {
+                "name": "paranoia",
+                "chance": 90
+            },
+			{
+				"name": "world tired",
+				"chance": 120
+			}
+       ],
+        "herbs":[ 
+			"chamomile",
+			"juniper",
+			"betony"
+		]
+    },	
+    "boundless energy": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+			{
+				"name": "zoomies",
+				"chance": 25
+			},
+			{
+				"name": "absence",
+				"chance": 25
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 80
+			},
+			{
+				"name": "hyperfixation",
+				"chance": 25
+			},
+            {
+                "name": "indecision",
+                "chance": 20
+            },
+            {
+                "name": "impulsivity",
+                "chance": 15
+            }					
+        ],
+        "herbs":[
+            "poppy",
+            "juniper",
+            "chamomile",
+			"rosemary"
+         ]
+    },
+    "antisocial": {
+            "severity": "minor",
+            "congenital": "always",
+            "moons_until": 2,
+            "mortality": {
+                "newborn": 0,
+                "kitten": 0,
+                "adolescent": 0,
+                "young adult": 0,
+                "adult": 0,
+                "senior adult": 0,
+                "senior": 0
+            },
+            "illness_infectiousness":[
+            ],
+            "risks": [
+            {
+                "name": "impulsivity",
+                "chance": 15
+            },
+			{
+				"name": "vivid daydreams",
+				"chance": 90
+			}			
+            ],
+            "herbs":[
+                "poppy",
+                "juniper",
+                "chamomile"
+             ]
+    },	
+    "mute": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 4,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[],
+        "risks": [],
+        "herbs":[]
+    },
+    "ongoing sleeplessness": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "lethargy",
+				"chance": 30
+			},
+            {
+				"name": "impulsivity",
+				"chance": 20
+			},			
+			{
+				"name": "hallucinations",
+				"chance": 10
+			},
+			{
+				"name": "world tired",
+				"chance": 90
+			},
+			{
+				"name": "constant nightmares",
+				"chance": 10
+			}
+        ],
+        "herbs": [
+            "honey",
+            "chamomile",
+            "poppy"
+		]
+    }	
 }

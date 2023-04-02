@@ -5,23 +5,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sprites/sus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/sus2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/accessories/booties.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/accessories/pibhat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/accessories/ratcessories.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/eczma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkledalmationyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklelynxyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparklespeckledyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbyblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbybrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbygingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbygreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbygreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbypride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbypurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/sparkletabbyyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spiritpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/spirityellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/sparkle/starpeltyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/dalmationyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/leonidyellows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxblues.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxbrowns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxgingers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxgreens.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxgreys.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxpride.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxpurples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/spotted/lynxyellows.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/acc_display.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/acc_display.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_death_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_death_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/game_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/game_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/appearance_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/appearance_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/cat/cats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/cats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/pelts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/pelts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/sprites.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/events_module/condition_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/condition_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/scar_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/scar_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/solid/falsesolidgingers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/solid/falsesolidpride.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/solid/falsesolidpurples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostblues.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostblues.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostbrowns.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostbrowns.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostgingers.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostgingers.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostgreens.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostgreens.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostgreys.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostgreys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostpride.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostpride.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostpurples.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostpurples.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/ghostyellows.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/tabby/ghostyellows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritblues.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritbrowns.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritgingers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritgreens.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritgreys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritpride.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spiritpurples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/tabby/spirityellows.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/CREDITS.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/clan_cats.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/102_conditions.json" beforeDir="false" />
@@ -617,7 +716,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkdbl/Documents/GitHub/clangen&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/WC Clan Gen/MerGen 3-30-23/main.py&quot;
   }
 }</component>
   <component name="RecentsManager">

@@ -847,18 +847,23 @@
             {
                 "name": "an infected wound",
                 "chance": 15
-            }
+            },
+			{
+				"name": "turmoiled litter",
+				"chance": 20
+			}
         ],
         "also_got": [
             "blood loss"
         ],
         "cause_permanent": [
-            "oak_leaves",
+        ],
+        "herbs": [
+		    "oak_leaves",
             "juniper",
             "ragwort",
             "moss"
-        ],
-        "herbs": []
+			]
     },
 
     "water in their lungs":{
@@ -1000,7 +1005,11 @@
             {
                 "name": "lingering shock",
                 "chance": 15
-            }
+            },
+			{
+				"name": "anxiety",
+				"chance": 15
+			}
         ],
         "also_got": [],
         "cause_permanent": [
@@ -1385,6 +1394,68 @@
             "juniper"
         ]
     },
+    "severe tick bites":{
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 40,
+            "kitten": 40,
+            "adolescent": 50,
+            "young adult": 60,
+            "adult": 60,
+            "senior adult": 50,
+            "senior": 40
+        },
+        "illness_infectiousness": [],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 40
+            },
+			{
+				"name": "spasms",
+				"chance": 40
+			}
+        ],
+        "also_got": [],
+        "cause_permanent": [
+            "paralyzed"		
+		],
+        "herbs": [
+            "moss",
+            "plantain",
+			"comfrey"
+        ]
+    },
+    "rash":{
+        "duration": 3,
+        "severity": "minor",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [
+            {
+                "name": "torn pelt",
+                "chance": 40
+            }
+        ],
+        "also_got": [],
+        "cause_permanent": [],
+        "herbs": [
+            "poppy",
+			"comfrey",
+			"elder_leaves"
+        ]
+    },	
     "pregnant": {
         "duration": 2,
         "severity": "major",

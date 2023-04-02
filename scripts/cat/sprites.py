@@ -122,6 +122,7 @@ class Sprites():
                 ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE",
                  "LEGBITE", "NECKBITE", "FACE"]):
             sprites.make_group('scars', (a, 2), f'scars{i}')
+            sprites.make_group('eczma', (a, 0), f'scarsRASH{i}')
         # missing parts
         for a, i in enumerate(
                 ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW"]):
@@ -142,6 +143,12 @@ class Sprites():
         for a, i in enumerate([
             "RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]):
             sprites.make_group('medcatherbs', (a, 2), f'acc_wild{i}')
+            
+        for a, i in enumerate(["RAT BLACK", "RAT BROWN", "RAT CREAM"]):
+            sprites.make_group('ratcessories', (a, 0), f'acc_wild{i}')
+        for a, i in enumerate(["RAT WHITE", "RAT GREY", "RAT HOODED"]):
+            sprites.make_group('ratcessories', (a, 1), f'acc_wild{i}')        
+            
         for a, i in enumerate(["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"]):
             sprites.make_group('collars', (a, 0), f'collars{i}')
         for a, i in enumerate(["GREEN", "RAINBOW", "BLACK", "SPIKES", "WHITE"]):
@@ -178,7 +185,21 @@ class Sprites():
             sprites.make_group('nyloncollars', (a, 1), f'collars{i}')
         for a, i in enumerate(["PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON"]):
             sprites.make_group('nyloncollars', (a, 2), f'collars{i}')
-
+        for a, i in enumerate(["CRIMSONHAT", "BLUEHAT", "YELLOWHAT", "CYANHAT", "REDHAT", 
+                                "LIMEHAT"]):
+            sprites.make_group('pibhat', (a, 0), f'collars{i}')
+        for a, i in enumerate(["GREENHAT", "RAINBOWHAT", "BLACKHAT", "WHITEHAT"]):
+            sprites.make_group('pibhat', (a, 1), f'collars{i}')
+        for a, i in enumerate(["PINKHAT", "PURPLEHAT", "MULTIHAT", "INDIGOHAT"]):
+            sprites.make_group('pibhat', (a, 2), f'collars{i}')
+        for a, i in enumerate(["CRIMSONBOOT", "BLUEBOOT", "YELLOWBOOT", "CYANBOOT", 
+                                "REDBOOT", "LIMEBOOT"]):
+            sprites.make_group('booties', (a, 0), f'collars{i}')
+        for a, i in enumerate(["GREENBOOT", "RAINBOWBOOT", "BLACKBOOT", "SPIKESBOOT", 
+                                "WHITEBOOT"]):
+            sprites.make_group('booties', (a, 1), f'collars{i}')
+        for a, i in enumerate(["PINKBOOT", "PURPLEBOOT", "MULTIBOOT", "INDIGOBOOT"]):
+            sprites.make_group('booties', (a, 2), f'collars{i}')
 
 sprites = Sprites(50)
 #tiles = Sprites(64)
@@ -187,14 +208,15 @@ for x in [
     'lineart', 'lineartdead', 'lineartdf', 'shadersnewwhite', 'lightingnew',
     'eyes', 'eyes2', 'eyeshybrid', 'eyes2hybrid', 'sus', 'sus2',    
     'skin', 'skin2', 'skinsphynx', 'wings', 'manes', 
-    'scars', 'missingscars', 'fademask', 'fadestarclan', 'fadedarkforest',
+    'eczma', 'scars', 'missingscars', 'fademask', 'fadestarclan', 'fadedarkforest',
     'solidbrowns', 'solidgingers', 'solidgreys', 'solidblues', 'solidgreens',
     'solidpurples', 'solidyellows', 'solidpride'
 ]:
     sprites.spritesheet(f"sprites/{x}.png", x)
 
 for x in [
-    'bellcollars', 'bowcollars', 'collars', 'medcatherbs', 'nyloncollars'
+    'bellcollars', 'bowcollars', 'collars', 'medcatherbs', 'nyloncollars',
+    'ratcessories', 'booties', 'pibhat'
 ]:
     sprites.spritesheet(f"sprites/accessories/{x}.png", x)    
 
@@ -206,12 +228,11 @@ for x in [
 
 for x in [
     'backedbrowns', 'backedgingers', 'backedgreys', 'backedblues', 'backedgreens',
-    'backedpurples', 'backedyellows', 'backedpride', 'falsesolidgingers', 'falsesolidpurples',
-    'falsesolidpride', 'smokebrowns', 'smokegingers', 'smokegreys', 'smokeblues', 'smokegreens',
-    'smokepurples', 'smokeyellows', 'smokepride', 'dobermanbrowns', 'dobermangingers', 'dobermangreys',
-    'dobermanblues', 'dobermangreens', 'dobermanpurples', 'dobermanyellows', 'dobermanpride',
-    'ponitbrowns', 'ponitgingers', 'ponitgreys', 'ponitblues', 'ponitgreens', 'ponitpurples', 'ponityellows',
-    'ponitpride', 'ratbrowns', 'ratgingers', 'ratgreys', 'ratblues', 'ratgreens', 'ratpurples', 
+    'backedpurples', 'backedyellows', 'backedpride', 'smokebrowns', 'smokegingers', 'smokegreys', 
+    'smokeblues', 'smokegreens', 'smokepurples', 'smokeyellows', 'smokepride', 'dobermanbrowns', 
+    'dobermangingers', 'dobermangreys', 'dobermanblues', 'dobermangreens', 'dobermanpurples', 'dobermanyellows', 
+    'dobermanpride', 'ponitbrowns', 'ponitgingers', 'ponitgreys', 'ponitblues', 'ponitgreens', 
+    'ponitpurples', 'ponityellows', 'ponitpride', 'ratbrowns', 'ratgingers', 'ratgreys', 'ratblues', 'ratgreens', 'ratpurples', 
     'ratyellows', 'ratpride', 'skelebrowns', 'skelegingers', 'skelegreys', 'skeleblues', 'skelegreens', 
     'skelepurples', 'skeleyellows', 'skelepride', 'skittybrowns', 'skittygingers', 'skittygreys', 
     'skittyblues',  'skittygreens', 'skittypurples', 'skittyyellows', 'skittypride', 'stainbrowns',
@@ -230,7 +251,11 @@ for x in [
     'bandedgingers', 'bandedgreys', 'bandedblues', 'bandedgreens', 'bandedpurples',
     'bandedyellows', 'bandedpride', 'snowflakebrowns', 'snowflakegingers', 'snowflakegreys', 
     'snowflakeblues', 'snowflakegreens', 'snowflakepurples', 'snowflakeyellows', 
-    'snowflakepride'
+    'snowflakepride', 'dalmationbrowns', 'dalmationgingers', 'dalmationgreys', 'dalmationblues',
+    'dalmationgreens', 'dalmationpurples', 'dalmationyellows', 'dalmationpride', 'leonidbrowns', 
+    'leonidgingers', 'leonidgreys', 'leonidblues', 'leonidgreens', 'leonidpurples', 
+    'leonidyellows', 'leonidpride', 'lynxbrowns', 'lynxgingers', 'lynxgreys', 'lynxblues',
+    'lynxgreens', 'lynxpurples', 'lynxyellows', 'lynxpride'
 ]:
     sprites.spritesheet(f"sprites/spotted/{x}.png", x)  
 
@@ -250,10 +275,23 @@ for x in [
     'ghostgingers', 'ghostgreys', 'ghostblues', 'ghostgreens', 'ghostpurples', 'ghostyellows',
     'ghostpride', 'hoodedbrowns', 'hoodedgingers', 'hoodedgreys', 'hoodedblues', 'hoodedgreens', 'hoodedpurples',
     'hoodedyellows', 'hoodedpride', 'merlebrowns', 'merlegingers', 'merlegreys', 'merleblues', 'merlegreens', 'merlepurples',
-    'merleyellows', 'merlepride', 'spiritbrowns', 'spiritgingers', 'spiritgreys', 'spiritblues', 
-    'spiritgreens', 'spiritpurples', 'spirityellows', 'spiritpride'
+    'merleyellows', 'merlepride'
 ]:
     sprites.spritesheet(f"sprites/tabby/{x}.png", x)  
+
+for x in [
+    'sparkledalmationbrowns', 'sparkledalmationgingers', 'sparkledalmationgreys', 'sparkledalmationblues', 
+    'sparkledalmationgreens', 'sparkledalmationpurples', 'sparkledalmationyellows', 'sparkledalmationpride', 
+    'sparklelynxbrowns', 'sparklelynxgingers', 'sparklelynxgreys', 'sparklelynxblues', 'sparklelynxgreens', 
+    'sparklelynxpurples', 'sparklelynxyellows', 'sparklelynxpride', 'sparklespeckledbrowns', 'sparklespeckledgingers', 
+    'sparklespeckledgreys', 'sparklespeckledblues', 'sparklespeckledgreens', 'sparklespeckledpurples', 'sparklespeckledyellows', 
+    'sparklespeckledpride', 'sparkletabbybrowns', 'sparkletabbygingers', 'sparkletabbygreys', 'sparkletabbyblues', 
+    'sparkletabbygreens', 'sparkletabbypurples', 'sparkletabbyyellows', 'sparkletabbypride', 'starpeltbrowns', 'starpeltgingers', 
+    'starpeltgreys', 'starpeltblues', 'starpeltgreens', 'starpeltpurples', 'starpeltyellows', 'starpeltpride', 
+    'spiritbrowns', 'spiritgingers', 'spiritgreys', 'spiritblues', 'spiritgreens', 'spiritpurples', 
+    'spirityellows', 'spiritpride'
+]:
+    sprites.spritesheet(f"sprites/sparkle/{x}.png", x)  
 
 # Line art
 sprites.make_group('lineart', (0, 0), 'lines')
@@ -1088,63 +1126,6 @@ for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
     sprites.make_group('backedyellows', (a, 3), f'backed{i}')
 for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
     sprites.make_group('backedpride', (a, 0), f'backed{i}')
-#falsesolid
-for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
-    sprites.make_group('solidbrowns', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
-    sprites.make_group('solidbrowns', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
-    sprites.make_group('solidbrowns', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
-    sprites.make_group('solidbrowns', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
-    sprites.make_group('falsesolidgingers', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
-    sprites.make_group('falsesolidgingers', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
-    sprites.make_group('falsesolidgingers', (a, 2), f'falsesolid{i}')   
-for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
-    sprites.make_group('falsesolidgingers', (a, 3), f'falsesolid{i}')  
-for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
-    sprites.make_group('solidgreys', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
-    sprites.make_group('solidgreys', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
-    sprites.make_group('solidgreys', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['BLACK', 'PITCH']):
-    sprites.make_group('solidgreys', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
-    sprites.make_group('solidblues', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
-    sprites.make_group('solidblues', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
-    sprites.make_group('solidblues', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
-    sprites.make_group('solidgreens', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
-    sprites.make_group('solidgreens', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
-    sprites.make_group('solidgreens', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['XANADU', 'DEEPFOREST']):
-    sprites.make_group('solidgreens', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
-    sprites.make_group('falsesolidpurples', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
-    sprites.make_group('falsesolidpurples', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
-    sprites.make_group('falsesolidpurples', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['GENDER', 'REDNEG']):
-    sprites.make_group('falsesolidpurples', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
-    sprites.make_group('solidyellows', (a, 0), f'falsesolid{i}')
-for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
-    sprites.make_group('solidyellows', (a, 1), f'falsesolid{i}')
-for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
-    sprites.make_group('solidyellows', (a, 2), f'falsesolid{i}')
-for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
-    sprites.make_group('solidyellows', (a, 3), f'falsesolid{i}')
-for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
-    sprites.make_group('falsesolidpride', (a, 0), f'falsesolid{i}')
 # doberman
 for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
     sprites.make_group('dobermanbrowns', (a, 0), f'doberman{i}')
@@ -1943,6 +1924,463 @@ for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
     sprites.make_group('spirityellows', (a, 3), f'spirit{i}')
 for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
     sprites.make_group('spiritpride', (a, 0), f'spirit{i}')
+# dalmation
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('dalmationbrowns', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('dalmationbrowns', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('dalmationbrowns', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('dalmationbrowns', (a, 3), f'dalmation{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('dalmationgingers', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('dalmationgingers', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('dalmationgingers', (a, 2), f'dalmation{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('dalmationgingers', (a, 3), f'dalmation{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('dalmationgreys', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('dalmationgreys', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('dalmationgreys', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('dalmationgreys', (a, 3), f'dalmation{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('dalmationblues', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('dalmationblues', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('dalmationblues', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('dalmationgreens', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('dalmationgreens', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('dalmationgreens', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('dalmationgreens', (a, 3), f'dalmation{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('dalmationpurples', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('dalmationpurples', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('dalmationpurples', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('dalmationpurples', (a, 3), f'dalmation{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('dalmationyellows', (a, 0), f'dalmation{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('dalmationyellows', (a, 1), f'dalmation{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('dalmationyellows', (a, 2), f'dalmation{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('dalmationyellows', (a, 3), f'dalmation{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('dalmationpride', (a, 0), f'dalmation{i}')
+# leonid
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('leonidbrowns', (a, 0), f'leonid{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('leonidbrowns', (a, 1), f'leonid{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('leonidbrowns', (a, 2), f'leonid{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('leonidbrowns', (a, 3), f'leonid{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('leonidgingers', (a, 0), f'leonid{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('leonidgingers', (a, 1), f'leonid{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('leonidgingers', (a, 2), f'leonid{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('leonidgingers', (a, 3), f'leonid{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('leonidgreys', (a, 0), f'leonid{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('leonidgreys', (a, 1), f'leonid{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('leonidgreys', (a, 2), f'leonid{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('leonidgreys', (a, 3), f'leonid{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('leonidblues', (a, 0), f'leonid{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('leonidblues', (a, 1), f'leonid{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('leonidblues', (a, 2), f'leonid{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('leonidgreens', (a, 0), f'leonid{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('leonidgreens', (a, 1), f'leonid{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('leonidgreens', (a, 2), f'leonid{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('leonidgreens', (a, 3), f'leonid{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('leonidpurples', (a, 0), f'leonid{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('leonidpurples', (a, 1), f'leonid{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('leonidpurples', (a, 2), f'leonid{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('leonidpurples', (a, 3), f'leonid{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('leonidyellows', (a, 0), f'leonid{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('leonidyellows', (a, 1), f'leonid{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('leonidyellows', (a, 2), f'leonid{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('leonidyellows', (a, 3), f'leonid{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('leonidpride', (a, 0), f'leonid{i}')
+# lynx
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('lynxbrowns', (a, 0), f'lynx{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('lynxbrowns', (a, 1), f'lynx{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('lynxbrowns', (a, 2), f'lynx{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('lynxbrowns', (a, 3), f'lynx{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('lynxgingers', (a, 0), f'lynx{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('lynxgingers', (a, 1), f'lynx{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('lynxgingers', (a, 2), f'lynx{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('lynxgingers', (a, 3), f'lynx{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('lynxgreys', (a, 0), f'lynx{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('lynxgreys', (a, 1), f'lynx{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('lynxgreys', (a, 2), f'lynx{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('lynxgreys', (a, 3), f'lynx{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('lynxblues', (a, 0), f'lynx{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('lynxblues', (a, 1), f'lynx{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('lynxblues', (a, 2), f'lynx{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('lynxgreens', (a, 0), f'lynx{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('lynxgreens', (a, 1), f'lynx{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('lynxgreens', (a, 2), f'lynx{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('lynxgreens', (a, 3), f'lynx{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('lynxpurples', (a, 0), f'lynx{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('lynxpurples', (a, 1), f'lynx{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('lynxpurples', (a, 2), f'lynx{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('lynxpurples', (a, 3), f'lynx{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('lynxyellows', (a, 0), f'lynx{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('lynxyellows', (a, 1), f'lynx{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('lynxyellows', (a, 2), f'lynx{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('lynxyellows', (a, 3), f'lynx{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('lynxpride', (a, 0), f'lynx{i}')
+# starpelt
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('starpeltbrowns', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('starpeltbrowns', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('starpeltbrowns', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('starpeltbrowns', (a, 3), f'starpelt{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('starpeltgingers', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('starpeltgingers', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('starpeltgingers', (a, 2), f'starpelt{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('starpeltgingers', (a, 3), f'starpelt{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('starpeltgreys', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('starpeltgreys', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('starpeltgreys', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('starpeltgreys', (a, 3), f'starpelt{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('starpeltblues', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('starpeltblues', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('starpeltblues', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('starpeltgreens', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('starpeltgreens', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('starpeltgreens', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('starpeltgreens', (a, 3), f'starpelt{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('starpeltpurples', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('starpeltpurples', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('starpeltpurples', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('starpeltpurples', (a, 3), f'starpelt{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('starpeltyellows', (a, 0), f'starpelt{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('starpeltyellows', (a, 1), f'starpelt{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('starpeltyellows', (a, 2), f'starpelt{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('starpeltyellows', (a, 3), f'starpelt{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('starpeltpride', (a, 0), f'starpelt{i}')
+# sparkletabby
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('sparkletabbybrowns', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('sparkletabbybrowns', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('sparkletabbybrowns', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('sparkletabbybrowns', (a, 3), f'sparkletabby{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('sparkletabbygingers', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('sparkletabbygingers', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('sparkletabbygingers', (a, 2), f'sparkletabby{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('sparkletabbygingers', (a, 3), f'sparkletabby{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('sparkletabbygreys', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('sparkletabbygreys', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('sparkletabbygreys', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('sparkletabbygreys', (a, 3), f'sparkletabby{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('sparkletabbyblues', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('sparkletabbyblues', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('sparkletabbyblues', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('sparkletabbygreens', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('sparkletabbygreens', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('sparkletabbygreens', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('sparkletabbygreens', (a, 3), f'sparkletabby{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('sparkletabbypurples', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('sparkletabbypurples', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('sparkletabbypurples', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('sparkletabbypurples', (a, 3), f'sparkletabby{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('sparkletabbyyellows', (a, 0), f'sparkletabby{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('sparkletabbyyellows', (a, 1), f'sparkletabby{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('sparkletabbyyellows', (a, 2), f'sparkletabby{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('sparkletabbyyellows', (a, 3), f'sparkletabby{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('sparkletabbypride', (a, 0), f'sparkletabby{i}')
+# sparklespeckled
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('sparklespeckledbrowns', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('sparklespeckledbrowns', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('sparklespeckledbrowns', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('sparklespeckledbrowns', (a, 3), f'sparklespeckled{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('sparklespeckledgingers', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('sparklespeckledgingers', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('sparklespeckledgingers', (a, 2), f'sparklespeckled{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('sparklespeckledgingers', (a, 3), f'sparklespeckled{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('sparklespeckledgreys', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('sparklespeckledgreys', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('sparklespeckledgreys', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('sparklespeckledgreys', (a, 3), f'sparklespeckled{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('sparklespeckledblues', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('sparklespeckledblues', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('sparklespeckledblues', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('sparklespeckledgreens', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('sparklespeckledgreens', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('sparklespeckledgreens', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('sparklespeckledgreens', (a, 3), f'sparklespeckled{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('sparklespeckledpurples', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('sparklespeckledpurples', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('sparklespeckledpurples', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('sparklespeckledpurples', (a, 3), f'sparklespeckled{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('sparklespeckledyellows', (a, 0), f'sparklespeckled{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('sparklespeckledyellows', (a, 1), f'sparklespeckled{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('sparklespeckledyellows', (a, 2), f'sparklespeckled{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('sparklespeckledyellows', (a, 3), f'sparklespeckled{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('sparklespeckledpride', (a, 0), f'sparklespeckled{i}')
+# sparkledalmation
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('sparkledalmationbrowns', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('sparkledalmationbrowns', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('sparkledalmationbrowns', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('sparkledalmationbrowns', (a, 3), f'sparkledalmation{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('sparkledalmationgingers', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('sparkledalmationgingers', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('sparkledalmationgingers', (a, 2), f'sparkledalmation{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('sparkledalmationgingers', (a, 3), f'sparkledalmation{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('sparkledalmationgreys', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('sparkledalmationgreys', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('sparkledalmationgreys', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('sparkledalmationgreys', (a, 3), f'sparkledalmation{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('sparkledalmationblues', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('sparkledalmationblues', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('sparkledalmationblues', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('sparkledalmationgreens', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('sparkledalmationgreens', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('sparkledalmationgreens', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('sparkledalmationgreens', (a, 3), f'sparkledalmation{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('sparkledalmationpurples', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('sparkledalmationpurples', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('sparkledalmationpurples', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('sparkledalmationpurples', (a, 3), f'sparkledalmation{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('sparkledalmationyellows', (a, 0), f'sparkledalmation{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('sparkledalmationyellows', (a, 1), f'sparkledalmation{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('sparkledalmationyellows', (a, 2), f'sparkledalmation{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('sparkledalmationyellows', (a, 3), f'sparkledalmation{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('sparkledalmationpride', (a, 0), f'sparkledalmation{i}')
+# sparklelynx
+for a, i in enumerate(['BEIGE', 'MEERKAT', 'KHAKI', 'CAPPUCCINO', 'ECRU', 'ASHBROWN']):
+    sprites.make_group('sparklelynxbrowns', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK']):
+    sprites.make_group('sparklelynxbrowns', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA']):
+    sprites.make_group('sparklelynxbrowns', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['COFFEE', 'TAUPE', 'UMBER']):
+    sprites.make_group('sparklelynxbrowns', (a, 3), f'sparklelynx{i}')
+for a, i in enumerate(['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS']):
+    sprites.make_group('sparklelynxgingers', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET']):
+    sprites.make_group('sparklelynxgingers', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT']):
+    sprites.make_group('sparklelynxgingers', (a, 2), f'sparklelynx{i}')   
+for a, i in enumerate(['CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD']):
+    sprites.make_group('sparklelynxgingers', (a, 3), f'sparklelynx{i}')  
+for a, i in enumerate(['WHITE', 'SILVER', 'BRONZE', 'GREY', 'MARENGO', 'BATTLESHIP']):
+    sprites.make_group('sparklelynxgreys', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'SOOT']):
+    sprites.make_group('sparklelynxgreys', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL']):
+    sprites.make_group('sparklelynxgreys', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['BLACK', 'PITCH']):
+    sprites.make_group('sparklelynxgreys', (a, 3), f'sparklelynx{i}')
+for a, i in enumerate(['PALEBOW', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM']):
+    sprites.make_group('sparklelynxblues', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC']):
+    sprites.make_group('sparklelynxblues', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW']):
+    sprites.make_group('sparklelynxblues', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD']):
+    sprites.make_group('sparklelynxgreens', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['OLIVE', 'DARKOLIVE', 'GREEN', 'FOREST', 'JADE']):
+    sprites.make_group('sparklelynxgreens', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['SPINNACH', 'SEAWEED', 'SACRAMENTO']):
+    sprites.make_group('sparklelynxgreens', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['XANADU', 'DEEPFOREST']):
+    sprites.make_group('sparklelynxgreens', (a, 3), f'sparklelynx{i}')
+for a, i in enumerate(['PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA']):
+    sprites.make_group('sparklelynxpurples', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT']):
+    sprites.make_group('sparklelynxpurples', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['PURPLE', 'WINE', 'RASIN']):
+    sprites.make_group('sparklelynxpurples', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['GENDER', 'REDNEG']):
+    sprites.make_group('sparklelynxpurples', (a, 3), f'sparklelynx{i}')
+for a, i in enumerate(['IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT']):
+    sprites.make_group('sparklelynxyellows', (a, 0), f'sparklelynx{i}')
+for a, i in enumerate(['LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY']):
+    sprites.make_group('sparklelynxyellows', (a, 1), f'sparklelynx{i}')
+for a, i in enumerate(['BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA']):
+    sprites.make_group('sparklelynxyellows', (a, 2), f'sparklelynx{i}')
+for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
+    sprites.make_group('sparklelynxyellows', (a, 3), f'sparklelynx{i}')
+for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
+    sprites.make_group('sparklelynxpride', (a, 0), f'sparklelynx{i}')
+
  
 # new new torties
 for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH']):

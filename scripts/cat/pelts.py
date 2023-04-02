@@ -23,29 +23,6 @@ class TwoColour():
 
     def __repr__(self):
         return f"white and {self.colour}{self.length}"
-class FalseSolid():
-    name = "FalseSolid"
-    sprites = {1: 'falsesolid'}
-    white_patches = None
-
-    def __init__(self, colour, length):
-        self.colour = colour
-        self.length = length
-        self.white = self.colour == "white"
-
-    def __repr__(self):
-        return self.colour + self.length
-class FalseTwoColour():
-    name = "FalseTwoColour"
-    sprites = {1: 'falsesolid', 2: 'white'}
-
-    def __init__(self, colour, length):
-        self.colour = colour
-        self.length = length
-        self.white = True
-
-    def __repr__(self):
-        return f"white and {self.colour}{self.length}"
 
 
 class Tabby():
@@ -431,6 +408,123 @@ class Spirit():
     def __repr__(self):
         return self.colour + self.length + " spirit"  
 
+class Starpelt():
+    name = "Starpelt"
+    sprites = {1: 'starpelt'}
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = self.colour == "white"
+
+    def __repr__(self):
+        return self.colour + self.length + " starpelt"  
+
+class Dalmation():
+    name = "Dalmation"
+    sprites = {1: 'dalmation', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} dalmation"
+        else:
+            return self.colour + self.length + " dalmation"  
+
+class Leonid():
+    name = "Leonid"
+    sprites = {1: 'leonid', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} leonid"
+        else:
+            return self.colour + self.length + " leonid"  
+
+class Lynx():
+    name = "Lynx"
+    sprites = {1: 'lynx', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} lynx"
+        else:
+            return self.colour + self.length + " lynx"  
+
+class SparkleTabby():
+    name = "SparkleTabby"
+    sprites = {1: 'sparkletabby', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} sparkletabby"
+        else:
+            return self.colour + self.length + " sparkletabby"  
+
+class SparkleSpeckled():
+    name = "SparkleSpeckled"
+    sprites = {1: 'sparklespeckled', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} sparklespeckled"
+        else:
+            return self.colour + self.length + " sparklespeckled"  
+
+class SparkleDalmation():
+    name = "SparkleDalmation"
+    sprites = {1: 'sparkledalmation', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} sparkledalmation"
+        else:
+            return self.colour + self.length + " sparkledalmation"  
+
+class SparkleLynx():
+    name = "SparkleLynx"
+    sprites = {1: 'sparklelynx', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  # boolean; does cat have white on it or no
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour}{self.length} sparklelynx"
+        else:
+            return self.colour + self.length + " sparklelynx"  
+
 class Wolf():
     name = "Wolf"
     sprites = {1: 'wolf'}
@@ -499,12 +593,6 @@ pelt_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD
     'SADDLE', 'CEDAR', 'ONYX', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE',
     'DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST',
     'AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
-pelt_falsesolid = ['PALECREAM', 'CREAM', 'ROSE', 'GINGER', 'SUNSET', 'RUFOUS',
-    'SAND', 'WOOD', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 
-    'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 
-    'ROSEWOOD', 'BLOOD', 'PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 
-    'DARKSAMON', 'MAGENTA', 'PURPLE', 'WINE', 'RASIN', 'GENDER', 'REDNEG',
-    'AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
 
 pelt_c_no_white = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'ROSE', 
     'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 'GARFIELD', 
@@ -541,7 +629,8 @@ tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALO
                   'ROBIN', 'BRINDLE', 'PAIGE']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
-               'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf']
+               'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
+               'lynx', 'starpelt', 'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx']
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -588,15 +677,15 @@ scars1 = ["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT",
           "BOTHBLIND", "BEAKCHEEK", "BEAKLOWER", "CATBITE", "RATBITE", "QUILLCHUNK", "QUILLSCRATCH"]
 scars2 = ["LEFTEAR", "RIGHTEAR", "NOTAIL", "HALFTAIL", "NOPAW", "NOLEFTEAR", "NORIGHTEAR", "NOEAR"]
 scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "FROSTFACE", "FROSTTAIL", "FROSTMITT",
-          "FROSTSOCK", ]
+          "FROSTSOCK", "RASH"]
 
 # make sure to add plural and singular forms of new accs to acc_display.json so that they will display nicely
 plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
                      "BLUEBELLS", "NETTLE", "POPPY", "LAVENDER", "HERBS", "PETALS", "DRY HERBS",
                      "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER"
                      ]
-wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"
-                    ]
+wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS",
+                    "RAT BLACK", "RAT BROWN", "RAT CREAM", "RAT WHITE", "RAT GREY", "RAT HOODED"]
 tail_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS"]
 collars = [
     "CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME", "GREEN", "RAINBOW",
@@ -608,16 +697,21 @@ collars = [
     "PURPLEBOW", "MULTIBOW", "INDIGOBOW", "CRIMSONNYLON", "BLUENYLON", "YELLOWNYLON", "CYANNYLON",
     "REDNYLON", "LIMENYLON", "GREENNYLON", "RAINBOWNYLON",
     "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
+    "CRIMSONHAT", "BLUEHAT", "YELLOWHAT", "CYANHAT", "REDHAT", "LIMEHAT", "GREENHAT", "RAINBOWHAT", 
+    "BLACKHAT", "WHITEHAT", "PINKHAT", "PURPLEHAT", "MULTIHAT", "INDIGOHAT", "CRIMSONBOOT", "BLUEBOOT", 
+    "YELLOWBOOT", "CYANBOOT", "REDBOOT", "LIMEBOOT", "GREENBOOT", "RAINBOWBOOT", "BLACKBOOT", "SPIKESBOOT", 
+    "WHITEBOOT", "PINKBOOT", "PURPLEBOOT", "MULTIBOOT", "INDIGOBOOT"
 ]
 
 tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-spotted = ["Speckled", "Rosette", "Snowflake", "Banded"]
-plain = ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour", "Smoke", 
-        "Backed", "Ghost", "Doberman", "Skitty", "Rat", "Wolf", "WolfBicolour"]
-exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", 
-        "Spirit"]
+spotted = ["Speckled", "Rosette", "Snowflake", "Banded", "Dalmation"]
+plain = ["SingleColour", "TwoColour", "Smoke",  "Backed", "Ghost", "Doberman", 
+        "Skitty", "Rat", "Wolf", "WolfBicolour"]
+exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Lynx", "Leonid"]
+sparkle_cats = ["Spirit", "Starpelt", "SparkleTabby", "SparkleSpeckled", "SparkleDalmation",
+        "SparkleLynx"]
 torties = ["Tortie", "Calico"]
-pelt_categories = [tabbies, spotted, plain, exotic, torties]
+pelt_categories = [tabbies, spotted, plain, exotic, sparkle_cats, torties]
 
 # SPRITE NAMES
 pride_colours = ['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
@@ -701,9 +795,6 @@ sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN'
 wings = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
             'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
             'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING', 'ALBINOWING', 'MELANISTICWING']
-manes = ['BLACKMANE', 'REDMANE', 'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE', 'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 
-        'DARKSALMONMANE', 'SALMONMANE', 'PEACHMANE', 'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 
-        'BLUEMANE', 'LIGHTBLUEMANE', 'ALBINOMANE', 'MELANISTICMANE']
 
 # CHOOSING PELT
 def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, determined=False):
@@ -731,18 +822,6 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return TwoColour(choice(pelt_c_no_white), length)
         else:
             return TwoColour(colour, length)
-    elif pelt == 'FalseSolid':
-        if colour is None and not white:
-            return FalseSolid(choice(pelt_falsesolid), length)
-        elif colour is None:
-            return FalseSolid("WHITE", length)
-        else:
-            return FalseSolid(colour, length)
-    elif pelt == 'FalseTwoColour':
-        if colour is None:
-            return FalseTwoColour(choice(pelt_falsesolid), length)
-        else:
-            return FalseTwoColour(colour, length)
     elif pelt == 'Tabby':
         if colour is None and white is None:
             return Tabby(choice(pelt_colours), choice([False, True]), length)
@@ -937,6 +1016,62 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return WolfBicolour(choice(pelt_c_no_white), length)
         else:
             return WolfBicolour(colour, length)
+    elif pelt == "Dalmation":
+        if colour is None and white is None:
+            return Dalmation(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Dalmation(choice(pelt_colours), white, length)
+        else:
+            return Dalmation(colour, white, length) 
+    elif pelt == "Leonid":
+        if colour is None and white is None:
+            return Leonid(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Leonid(choice(pelt_colours), white, length)
+        else:
+            return Leonid(colour, white, length) 
+    elif pelt == "Lynx":
+        if colour is None and white is None:
+            return Lynx(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return Lynx(choice(pelt_colours), white, length)
+        else:
+            return Lynx(colour, white, length) 
+    elif pelt == "Starpelt":
+        if colour is None and not white:
+            return Starpelt(choice(pelt_colours), length)
+        elif colour is None:
+            return Starpelt("WHITE", length)
+        else:
+            return Starpelt(colour, length) 
+    elif pelt == "SparkleTabby":
+        if colour is None and white is None:
+            return SparkleTabby(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return SparkleTabby(choice(pelt_colours), white, length)
+        else:
+            return SparkleTabby(colour, white, length) 
+    elif pelt == "SparkleSpeckled":
+        if colour is None and white is None:
+            return SparkleSpeckled(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return SparkleSpeckled(choice(pelt_colours), white, length)
+        else:
+            return SparkleSpeckled(colour, white, length) 
+    elif pelt == "SparkleDalmation":
+        if colour is None and white is None:
+            return SparkleDalmation(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return SparkleDalmation(choice(pelt_colours), white, length)
+        else:
+            return SparkleDalmation(colour, white, length) 
+    elif pelt == "SparkleLynx":
+        if colour is None and white is None:
+            return SparkleLynx(choice(pelt_colours), choice([False, True]), length)
+        elif colour is None:
+            return SparkleLynx(choice(pelt_colours), white, length)
+        else:
+            return SparkleLynx(colour, white, length) 
     elif pelt == 'Tortie':
         if white is None:
             return Tortie(colour, choice([False, True]), length)
@@ -994,7 +1129,12 @@ def describe_appearance(cat, short=False):
         "Hooded": "hooded charcoal c_n tabby",
         "Ponit": "bleach point c_n",
         "Spirit": "c_ng hostly spirit",
-        "WolfBicolour": "c_n painted wolf"
+        "WolfBicolour": "c_n painted wolf",
+        "SparkleTabby": "c_n sparkling tabby",
+        "SparkleSpeckled": "c_n sparkling speckled",
+        "SparkleDalmation": "c_n sparkling dalmation",
+        "SparkleLynx": "c_n sparkling lynx"
+        
     }
 
     # Start with determining the base color name. 
@@ -1007,8 +1147,8 @@ def describe_appearance(cat, short=False):
     elif cat.skin in melanistic_sprites:
         color_name = "melanistic"  
 
-    if cat.pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour", 
-    "Wolf", "WolfBicolour", "Tortie", "Calico"] and color_name == "white" or color_name == "petal" \
+    if cat.pelt.name not in ["SingleColour", "TwoColour", "Wolf", "WolfBicolour", 
+        "Tortie", "Calico"] and color_name == "white" or color_name == "petal" \
     or color_name == "ivory":
         color_name = "pale"
 
@@ -1050,7 +1190,7 @@ def describe_appearance(cat, short=False):
             else:
                 color_name = f"{color_name} {cat.pelt.name.lower()}"
 
-    elif cat.pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwoColour"]:
+    elif cat.pelt.name not in ["SingleColour", "TwoColour"]:
         color_name = f"{color_name} {cat.pelt.name.lower()}"
 
     if cat.skin in sphynx:

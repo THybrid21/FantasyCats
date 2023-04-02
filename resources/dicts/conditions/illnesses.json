@@ -97,7 +97,11 @@
             {
                 "name": "torn pelt",
                 "chance": 20
-            }
+            },
+			{
+				"name": "rash",
+				"chance": 50
+			}
         ],
         "herbs": [
             "plantain"
@@ -512,7 +516,11 @@
             {
                 "name": "diarrhea",
                 "chance": 8
-            }
+            },
+			{
+				"name": "constipation",
+				"chance": 10
+			}
         ],
         "herbs": [
             "juniper",
@@ -545,6 +553,10 @@
         "medicine_duration": 1,
         "infectiousness": 0,
         "risks": [
+			{
+				"name": "sleeplessness",
+				"chance": 25
+			}
         ],
         "herbs": [
             "juniper",
@@ -678,24 +690,25 @@
 			],
         "herbs": [
             "catmint",
-			"thyme"
+			"thyme",
+			"betony"
         ]
     },	
     "panic attack": {
         "severity": "major",
         "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
+            "newborn": 60,
+            "kitten": 70,
+            "adolescent": 100,
             "young adult": 0,
             "adult": 0,
             "senior adult": 0,
             "senior": 0
         },
         "medicine_mortality": {
-            "newborn": 60,
-            "kitten": 70,
-            "adolescent": 100,
+            "newborn": 90,
+            "kitten": 120,
+            "adolescent": 0,
             "young adult": 0,
             "adult": 0,
             "senior adult": 0,
@@ -709,14 +722,70 @@
                 "name": "constant nightmares",
                 "chance": 15
             },
-			            {
+			{
                 "name": "shock",
                 "chance": 15
-            }
-			],
+            },
+			{
+				"name": "anxiety",
+				"chance": 120
+			},
+			{
+				"name": "paranoia",
+				"chance": 50
+			}
+		],
         "herbs": [
             "catmint",
-			"thyme"
+			"thyme",
+			"betony"
+        ]
+    },
+    "paranoia": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 50,
+            "kitten": 50,
+            "adolescent": 60,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 70,
+            "kitten": 70,
+            "adolescent": 80,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 6,
+        "medicine_duration": 4,
+        "infectiousness": 0,
+        "risks": [
+            {
+                "name": "constant nightmares",
+                "chance": 15
+            },
+			{
+                "name": "shock",
+                "chance": 15
+            },
+			{
+				"name": "lethargy",
+				"chance": 15
+			},
+			{
+				"name": "nonverbal",
+				"chance": 50
+			}
+		],
+        "herbs": [
+            "catmint",
+			"thyme",
+			"betony"
         ]
     },
 	"absence": {
@@ -822,7 +891,7 @@
             },
 			{
                 "name": "sore",
-                "chance": 15
+                "chance": 10
             },
 			{
 				"name": "headache",
@@ -843,5 +912,586 @@
 			"oak_leaves",
 			"feverfew"
         ]
+    },
+    "constipation": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 3,
+            "kitten": 3,
+            "adolescent": 8,
+            "young adult": 10,
+            "adult": 15,
+            "senior adult": 10,
+            "senior": 5
+        },
+        "medicine_mortality": {
+            "newborn": 10,
+            "kitten": 10,
+            "adolescent": 15,
+            "young adult": 30,
+            "adult": 45,
+            "senior adult": 30,
+            "senior": 13
+        },
+        "duration": 2,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "betony",
+            "mullein",
+            "juniper",
+            "mallow"
+        ]
+    },		
+    "ticks": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 4,
+        "medicine_duration": 2,
+        "infectiousness": 35,
+        "risks": [
+            {
+                "name": "torn pelt",
+                "chance": 20
+            },
+			{
+				"name": "tick bites",
+				"chance": 10
+			},
+			{
+				"name": "severe tick bites",
+				"chance": 90
+			}
+        ],
+        "herbs": [
+            "plantain",
+			"comfrey"
+        ]
+    },
+    "seasonal lethargy": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 6,
+        "medicine_duration": 4,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "heavy soul",
+				"chance": 100
+			}
+			],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
+        ]
+    },
+    "lethargy": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 4,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
+        ]
+    },
+	"world tired": {
+		"severity": "severe",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 90,
+            "young adult": 100,
+            "adult": 150,
+            "senior adult": 150,
+            "senior": 90
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 120,
+            "young adult": 180,
+            "adult": 180,
+            "senior adult": 180,
+            "senior": 120
+        },
+        "duration": 6,
+        "medicine_duration": 5,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
+        ]
+    },	
+    "nonverbal": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 4,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "mute",
+				"chance": 90
+			}
+		],
+        "herbs": [
+			"honey",
+			"chamomile",
+			"betony"
+        ]
+    },	
+    "special interest": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 12,
+        "medicine_duration": 0,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": []
+    },
+    "hyperfixation": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 6,
+        "medicine_duration": 0,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": []
+    },
+    "stimming": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "catmint"
+        ]
+    },		
+    "indecision": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+			"chamomile",
+			"thyme"
+		]
+    },
+    "impulsivity": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+			"chamomile",
+			"thyme"
+		]
+    },	
+    "vivid daydreams": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "hallucinations",
+				"chance": 120
+			}
+		],
+        "herbs": [
+			"chamomile",
+			"thyme"
+        ]
+    },
+    "hallucinations": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy",
+			"rosemary"
+        ]
+    },
+    "zoomies": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "bruises",
+				"chance": 30
+			}
+		],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy",
+			"rosemary"
+        ]
+    },
+    "compulsions": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "bruises",
+				"chance": 30
+			}
+		],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy",
+			"rosemary"
+        ]
+    },	
+	"turmoiled litter": {
+		"severity": "severe",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "world tired",
+				"chance": 180
+			}
+		],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
+        ]
+    },			
+	"sleeplessness": {
+		"severity": "major",
+        "mortality": {
+            "newborn": 60,
+            "kitten": 60,
+            "adolescent": 60,
+            "young adult": 80,
+            "adult": 80,
+            "senior adult": 80,
+            "senior": 60
+        },
+        "medicine_mortality": {
+            "newborn": 100,
+            "kitten": 100,
+            "adolescent": 100,
+            "young adult": 120,
+            "adult": 120,
+            "senior adult": 120,
+            "senior": 100
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "ongoing sleeplessness",
+				"chance": 90
+			},
+			{
+				"name": "hallucinations",
+				"chance": 50
+			}
+		],
+        "herbs": [
+            "honey",
+            "chamomile",
+            "poppy"
+        ]
+    },	
+    "burn out": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+			"chamomile",
+			"thyme"
+		]
     }	
 }

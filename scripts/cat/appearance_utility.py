@@ -51,7 +51,8 @@ from .pelts import (
     sus_yellow,
     sus_green,
     sus_mono,
-    sus_purple
+    sus_purple,
+    sparkle_cats
     )
 from scripts.cat.sprites import Sprites
 from scripts.game_structure.game_essentials import game
@@ -186,27 +187,29 @@ def pelt_inheritance(cat, parents: tuple):
     # ------------------------------------------------------------------------------------------------------------#
 
     # Determine pelt.
-    weights = [0, 0, 0, 0]  #Weights for each pelt group. It goes: (tabbies, spotted, plain, exotic)
+    weights = [0, 0, 0, 0, 0]  #Weights for each pelt group. It goes: (tabbies, spotted, plain, exotic, sparkle_cats)
     for p_ in par_peltnames:
         if p_ in tabbies:
-            add_weight = (50, 10, 5, 7)
+            add_weight = (50, 10, 5, 7, 1)
         elif p_ in spotted:
-            add_weight = (10, 50, 5, 5)
+            add_weight = (10, 50, 5, 5, 1)
         elif p_ in plain:
-            add_weight = (5, 5, 50, 0)
+            add_weight = (5, 5, 50, 2, 0)
         elif p_ in exotic:
-            add_weight = (15, 15, 1, 45)
+            add_weight = (15, 15, 5, 45, 1)
+        elif p_ in sparkle_cats:
+            add_weight = (15, 15, 10, 25, 45)
         elif p_ is None:  # If there is at least one unknown parent, a None will be added to the set.
-            add_weight = (35, 20, 30, 15)
+            add_weight = (35, 20, 30, 15, 2)
         else:
-            add_weight = (0, 0, 0, 0)
+            add_weight = (0, 0, 0, 0, 0)
 
         for x in range(0, len(weights)):
             weights[x] += add_weight[x]
 
     #A quick check to make sure all the weights aren't 0
     if all([x == 0 for x in weights]):
-        weights = [1, 1, 1, 1]
+        weights = [1, 1, 1, 1, 1]
 
     # Now, choose the pelt category and pelt. The extra 0 is for the tortie pelts,
     chosen_pelt = choice(
@@ -345,7 +348,7 @@ def randomize_pelt(cat):
 
     # Determine pelt.
     chosen_pelt = choice(
-        random.choices(pelt_categories, weights=(35, 20, 30, 15, 0), k=1)[0]
+        random.choices(pelt_categories, weights=(35, 20, 30, 15, 1, 0), k=1)[0]
     )
 
     # Tortie chance
@@ -523,8 +526,8 @@ def init_pattern(cat):
 
             else:
                 # Normal generation
-                if cat.tortiebase in ["backed", "smoke", "single", "falsesolid", "ghost"]:
-                    cat.tortiepattern = choice(['backed', 'smoke', 'single', 'falsesolid', 'ghost', 'rat', 
+                if cat.tortiebase in ["backed", "smoke", "single", "ghost"]:
+                    cat.tortiepattern = choice(['backed', 'smoke', 'single', 'ghost', 'rat', 
                                     'snowflake', 'wolf', 'spirit'])
                 elif cat.tortiebase in ["speckled", "banded"]:
                     cat.tortiepattern = choice(['speckled', 'banded'])
@@ -716,7 +719,7 @@ def white_patches_inheritance(cat, parents: tuple):
         weights = [2, 1, 1, 0, 0]
         if not any(weights):
             weights = [2, 1, 1, 0, 0]
-    elif cat.tortiebase == "Spirit":
+    elif cat.tortiebase == "Spirit" or cat.tortiebase == "Starpelt":
         weights = [2, 1, 0, 0, 0]
         if not any(weights):
             weights = [2, 1, 0, 0, 0]

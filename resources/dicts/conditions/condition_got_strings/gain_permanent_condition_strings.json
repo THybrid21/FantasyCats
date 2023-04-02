@@ -206,5 +206,12 @@
             "m_c tries to keep the disappointment down. Logically, they knew this was inevitable. Emotionally, they just can't accept that they'll never walk again.",
             "m_c continues to do their exercises dutifully, hoping beyond hope that someday it will pay off. For now though, they know this paralysis is their new reality."
         ]
-    }
+    },
+    "severe tick bites": {
+        "paralyzed": [
+            "r_c looking rather harried comes over to m_c. As gently as they can they explain to m_c that the ticks have made them unable to walk.",
+			"With more than a little distress m_c keeps asking r_c over and over why their legs aren't responding.",
+			"Who knew a little harmless tick could cause this. m_c regrets how dismissive of tick bites they were before."
+        ]
+    }	
 }

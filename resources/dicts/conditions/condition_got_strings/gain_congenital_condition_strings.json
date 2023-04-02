@@ -70,7 +70,6 @@
 		"While m_c is playing with the other kittens they still, staring off at nothing before blinking and continuing as if no time passed at all.",
 		"m_c absently stares off at nothing, not responding when anyone calls their name.",
 		"m_c seems like a perfectly happy kitten, fine aside the fact that every so often they will lose balance due to an extra shaky paw."
-
     ],
     "allergies": [
         "m_c sneezes again, their frantic parent yowling about whitecough, but r_c calms everyone down. It's only allergies, and they have just the herbs to help.",
@@ -86,5 +85,57 @@
 		"m_c insists they're not lying, they have pains all the time. It doesn't look like it'll ever go away.",
 		"Unlike other kittens m_c keeps themselves mostly curled up in the nursery, constantly complaining of pains throughout their body.",
 		"When touched by another, m_c lets out yowls of pain. It's distressing for everyone that they can't really help."
+	],
+	"heavy soul": [
+        "r_c is brought to the nursery by a worried parent, m_c wasn't running around and playing like the other kits, just curled in a ball staring blankly at the wall. After some gentle talking with m_c the medicine cat sits back and softly explains they think it’s a heavy soul.",
+        "m_c hides from their denmates, much to the concern of their parent as they curl around their kit, they couldn't do much but purr in an attempt to comfort their child.",
+        "A denmate wonders why m_c won't play with anyone, and they try to become friends and play with them. m_c agrees to play with them, but don't seem too energetic about it.",
+        "m_c has seemed more sluggish then the other kits their age, less energetic. Less focused on the reality and more lost in their thoughts."
+	],
+	"starwalker": [
+	   "m_c has been having issues socializing with their denmates, they find it uncomfortable and somewhat terrifying. r_c understanding talks with them about it saying they don't have to force themselves into it.",
+       "m_c is just like any other kit, rolling around and batting at bugs they find. They're a bit louder, a bit more brash and doesn't seem to understand social cues. m_c might be a starwalker",
+       "m_c doesn't seem to be a big fan of eye contact, their eyes often drift from their parents face and they don't take well to social cues."	,
+	   "While the other kittens are rolling around m_c is more interested in talking with the clan's medicine cat and soaking up information about Starclan.",
+	   "m_c struggles to change their routine, preferring to do things one way alone.",
+	   "While the other kittens in the clan are out making multiple friends m_c prefers to stick with one or two particular cats and shies away from others.",
+	   "When it comes to trying out new games and nesting material m_c keeps making faces and looking very upset."
+	],
+	"anxiety": [
+		"r_c's growing very used to m_c coming into the medicine den with a twitching tail and pressed down ears. They sit together with r_c purring as they steadily answer all the rapid-fire worried questions.",
+		"When most kittens are already curiously looking around and exploring the camp, m_c is still hiding behind their parents and very awkwardly batting at leaves before running back into the nursery to hide.",
+		"It's normal for a kitten to get startled by new things, but even after identifying something m_c stares at it with wide eyes as if it would attack them.",
+		"No matter how many reassurances their parents give them m_c still worries about each action that they take.",
+		"m_c took their prey from the pile and then cried because they thought it might mean the rest of the clan wouldn't have enough."		
+	],
+	"ocd": [
+	    "m_c sleeps seperately from their parent and denmates, liking their own nest that they can decorate and keep to how they like it. r_c explains to their concerned parent that they could have ocd, and it's nothing serious.",
+        "m_c hisses when some of their denmates playfight near their nest, quick to realign what they knocked out of place. Their parent scolds them for this but m_c complains that it makes them anxious when their things are out of place.",
+        "m_c was seen sneaking out of camp and trotting towards a puddle, and rolling in it, seeming happy once they shake off the remaining water. When confronted, m_c just says water makes them feel cleaner.",
+		"Counting and recounting, m_c keeps doing things a certain number of times and when asked they just say it's a reasonable number of times.",
+		"Around and around, m_c keeps asking the same questions not settled even when the answer is the same every time.",
+		"m_c has little habits that they keep repeating like grooming their paws in a particular order or waving their tail at someone multiple times before they can even say a greeting.",
+		"When it comes to cleaning the den, m_c is the best helper and very particular. Even if they seem to need to place an item multiple times before it's just right.",
+		"m_c has to do certain things six times over, like having to look behind them every six steps , or they get very uncomfortable and borderline panicky"
+	],
+	"boundless energy": [
+        "m_c mewled and whined like any other kit, but their energy was through the nursery's roof and driving the queens mad, to the point they called r_c over just to see if they have anything to calm the rambunctious child. The medicine cat just chuckled, maybe the kit simply had boundless energy, and they had the right herb for it.",
+        "m_c was racing around the camp like an absolute whirlwind, getting under every cats paws, the warriors shake their heads and the queens sigh but as long as m_c doesn't get into trouble, they'll just have to deal with their energy.",
+        "m_c talked long into the afternoon about the bugs they saw, and how they're so cool and how they run away when you paw at them!",
+		"There's some frustration from the older clan members at how distractable m_c is, but it's just the way that they are.",
+		"m_c eagerly follows the older warriors and apprentices, bounding from cat to cat with questions that make heads spin."
+	],
+    "antisocial": [
+       "m_c has been getting into arguments with the other kits recently. They don't seem to understand what they did wrong, and don't seem bothered when other cats are upset with them. r_c understands they're not trying to upset anyone, they're just antisocial.",
+       "m_c has been having trouble enjoying the things around them, especially playing with other kits. They don't seem to enjoy being around others, and prefer to spend time on their own. m_c seems to be antisocial. They'll still live a normal, happy life, the medicine cat says, they just enjoy solitude more than others.",
+	   "While other kittens are making friends m_c seems to scew up their face a little bit and when asked admits that they don't really understand the point of socialisation.",
+	   "m_c seems to be a bit of a bully as a kitten, scaring the others off. It's not that they enjoy making the other kittens scared or cry it's just they don't really see the point in softening the truth.",
+	   "m_c prefers spending time alone in the nursery."
+    ],	
+	"mute": [
+		"When m_c's parents come in with them to visit r_c it's about worries with them not speaking. After some tests r_c sits back and gently explains it's simply that they're mute.",
+		"Initially there was some confusion over why m_c wasn't speaking, it's soon cleared up they don't have hearing issues they're just mute.",
+		"m_c has never needed words to speak, they're fluent enough with their body language and the clan adapts to help them be heard even in their silence.",
+		"Nobody knew silence could be so loud until m_c arrived."
 	]
 }

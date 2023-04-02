@@ -79,6 +79,9 @@ class Scar_Events():
             quill_scars = [
                 "QUILLCHUNK", "QUILLSCRATCH"
             ]
+            rash_scars = [
+                "RASH"
+            ]
 
             scar_pool = []
 
@@ -108,6 +111,8 @@ class Scar_Events():
                 scar_pool = eye_scars
             elif injury_name == "quilled by porcupine":
                 scar_pool = quill_scars
+            elif injury_name == "rash":
+                scar_pool = rash_scars
 
             for scar in cat.scars:
                 if scar:

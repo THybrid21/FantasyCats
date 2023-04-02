@@ -302,7 +302,8 @@ class Condition_Events():
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
-            "lasting grief", "fibro"
+            "lasting grief", "fibro", "heavy soul", "starwalker", "anxiety", "boundless energy", "mute", "ocd", 
+            "antisocial"
         ]
 
         got_condition = False
@@ -358,7 +359,8 @@ class Condition_Events():
             "stomachache": "diarrhea",
             "grief stricken": "lasting grief",
             "anxiety attack": "panic attack",
-            "panic attack": "shock"
+            "panic attack": "shock",
+            "panic attack": "paranoia"
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #
@@ -572,7 +574,8 @@ class Condition_Events():
         condition_progression = {
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
-            "partial hearing loss": "deaf"
+            "partial hearing loss": "deaf",
+            "lasting grief": "heavy soul"
         }
 
         conditions = deepcopy(cat.permanent_condition)

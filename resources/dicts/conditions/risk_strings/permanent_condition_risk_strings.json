@@ -94,7 +94,12 @@
         ],
         "redcough": [
             "r_c has quietly begun making m_c comfortable, or as comfortable as they can be hacking up so much blood.",
-            "m_c has been hacking up blood, their body growing weaker and weaker.  They may not last much longer."
+            "m_c has been hacking up blood, their body growing weaker and weaker. They may not last much longer."
+        ],
+		"paralyzed": [
+            "r_c has noticed that m_c has been having more trouble than usual getting around, sadly they have to inform them their wasting disease has proggressed to paralysis.",
+            "m_c wakes distressed, they can't feel their hindlegs. They struggle to even make it to the medicine den for help.",
+			"m_c finds themselves falling over more than usual, it would seem their hindlegs refuse to support them anymore."
         ]
     },
     "one bad eye": {
@@ -114,10 +119,25 @@
         "deaf": [
             "m_c explains to r_c with signs and body language that it doesn't seem like they're able to hear any details of the world anymore.",
             "m_c realizes one day that the noises around them are no longer just quiet, but completely silent. It seems they've lost their hearing entirely."
-
-        ]
+        ],
+		"nonverbal": [
+			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous they've just gone nonverbal.",
+			"m_c doesn't speak to anyone, preferring to use signs to communicate."
+		]
     },
-    "constant joint pain": {
+    "deaf": {
+		"mute": [
+			"r_c has noticed m_c getting quieter and quieter as time goes on. Coming over to check on them they discover that m_c's voice has left them.",
+			"m_c's awkward volume control has faded away until all their words are just too hard for their clanmates to hear.",
+			"After struggling for so long to be heard, m_c has settled into a calm silence."
+		],
+		"nonverbal": [
+			"r_c sits with m_c trading signs back and forth when they stop speaking.",
+			"Nobody minds when m_c has a few bad days and chooses to just use sign to communicate rather than trying to strain to speak.",
+			"Frustrated at not been able to tell if they're speaking clearly m_c just decides to use their best communication method instead."
+		]
+	},
+	"constant joint pain": {
         "joint pain": [
             "Sleepily, m_c thanks r_c for the pain relief. It feels like moons since they've been able to have a good rest without the awful pain that's been so intense lately.",
             "m_c's joint pain is worse than usual this moon, they find themselves barely able to get up out of their nest."
@@ -149,7 +169,12 @@
         "running nose": [
             "r_c sighs to see m_c headed towards them, and goes to fix up their normal herbal mix, hoping that the allergic reaction m_c keeps having fades soon.",
             "Seems it's allergy season! m_c has been sneezing and sniffling all moon."
-        ]
+        ],
+		"rash": [
+			"r_c fusses as m_c comes in wincing. It's hard to see between their fur but clear by the state of m_c's pawpads that they have a bad rash.",
+			"m_c winces as they try to groom themselves between sneezes. The skin under their pelt blisters beneath their tongue.",
+			"Irritably m_c scratches at their fur rather uselessly. This rash is horrible and they're really starting to hate this season due to it."
+		]
     },
     "recurring shock": {
         "constant nightmares": [
@@ -163,8 +188,16 @@
             "m_c stalks angrily from camp, the grief welling up in their throat feels like it will choke them and m_c can't help but find it unfair that this sadness won't go away.",
             "m_c breathes deeply, trying not to let this sudden wave of grief overtake them, but it's hard and it never really goes away.",
             "m_c wakes and nearly wails at the wave of grief that hits them. Today isn't starting well."
-        ]
+        ],
+		"heavy soul": [
+			"r_c helps m_c groom, purring all the while as comfortingly as they can. m_c just stares off into the distance, eyes almost seeming empty.",
+			"m_c's sadness has gone into numbness, something heavy weighs them down as they wander listlessly around the camp.",
+			"The grief becomes something numb, empty almost as m_c stares at the walls of their den. They don't know how they're supposed to get up after this.",
+            "m_c stared blankly up at the sky, feeling less motivated to do anything, their mind fogged with grief and despair.",
+            "m_c stalked out of camp, clawing at the ground as they went. It was so unfair, all of it, why did StarClan take them away? Why curse them with this darkness inside of them?"
+		]
     },
+	
     "persistent headaches": {
         "headache": [
             "m_c's headaches have plagued them particularly badly this moon, and r_c is running low on their pain-relieving mixture, having used so much up in keeping m_c feeling able.",
@@ -213,5 +246,257 @@
 			"When m_c attempts to get up from their bed they let out a yowl of distress, it would appear that only half of them has gotten up.",
 			"After a few moons of on and off falling over m_c finds one morning that they no longer have to worry about falling."
 		]
-    }	
+    },
+	"heavy soul": {
+		"grief stricken": [
+			"m_c wanders into the medicine den, fresh ache in their chest just looking for r_c for some comfort",
+			"There's no reason for this, nothing has happened recently. Yet m_c wakes with a wail, the weight of grief holding them down and aching as sharply as if someone had newly passed.",
+			"By Starclan m_c wishes that they could hold onto the small things. Instead of feeling this heavy blanket weight of sadness and longing for things gone.",
+			"m_c wanders listlessly around camp, looking for someone or something that is no longer there."
+		],
+		"seasonal lethargy": [
+			"As the season changes so does m_c's mood. They get more and more tired looking and r_c invites them into the medicine den, quietly sitting beside m_c and assuring them it's okay if they're tired and don't feel able to work.",
+			"m_c watches the season change around them, digging their paws into the nest around them. They really hate how this change makes them feel lost and small.",
+			"While the camp moves about, cats speaking with one another about chores and jobs for the season m_c remains tightly curled up in their den just too tired.",
+			"With only half of their mind on the task m_c listlessly wanders around the camp."
+		],
+		"lethargy": [
+			"r_c goes on a den visit to check in on m_c. They've been blankly staring at the den wall for most of the afternoon.",
+			"m_c comes into the medicine den looking barely able to carry themselves on their paws.",
+			"Their clanmates bring them a little bit of extra prey and bedding while m_c lays in their nest weighed down and exhausted.",
+			"Part of them wishes it were raining, m_c likes the rain the sound like a lullabye to take them away from the deep bone seated exhaustion.",
+			"m_c feels barely able to do their in camp jobs this moon."
+		],
+		"anxiety attack": [
+			"m_c pads into r_c's den with wide eyes and a shaking chest. Softly they just explain they wanted to check that r_c was still there.",
+			"While the rest of the camp keeps busy and in motion, m_c sits at the camp entry gazing out into the territory, tail twitching.",
+			"They don't know if they're tired or filled with energy, m_c's paws dig into their nesting as they keep checking that all their denmates are still there.",
+			"m_c hasn't been able to sleep with their head going around and around with thoughts that won't leave them alone."
+		],
+		"absence": [
+			"After the worried reports of their clanmates r_c comes to check on m_c with a package of herbs. They've been staring blankly at one spot of the den for hours now.",
+			"m_c's head spins and they feel like every blink the world around them speeds away from them. Leaving them disoriented and lost.",
+			"Between one blink and the next m_c feels like their soul has jumped and the world is somewhat under water.",
+			"m_c's denmates carefully make sure that there's nothing too out of place for when their mind comes back to them."
+		],
+		"world tired": [
+			"m_c curls up in the medicine den, softly admitting to r_c that they just want it to stop.",
+			"The world keeps spinning and spinning and just feels too much for m_c",
+			"Sometimes m_c wishes that the world would slow down or even stop for a short while. Just a small break and moment of peace.",
+			"m_c lies in their nest so completely exhausted, they should go to the medicine den but don't know if they could bring themselves to raise.",
+			"The world is too much, too loud, too bright, it's all m_c can do to hold themselves tight and avoid thinking that they wish it would go away.",
+			"m_c has been talking a lot more with their denmates about Starclan."
+		]
+	},
+	"starwalker": {
+		"special interest": [
+			"r_c listens patiently as m_c babbles for hours on end about the latest thing that has become an all-encompassing part of their identity",
+			"Some of their clanmates are struggling to keep m_c on topic as they keep losing focus when it's not about their latest interest.",
+			"m_c has been collecting a lot of things recently about one topic. They will eagerly talk a cat's ears off if allowed to.",
+			"Every patrol that m_c has gone on has heard about their latest interest, it's nice to see them so happy about finding something new to enjoy.",
+			"m_c is practically vibrating out of their pelt when they talk to their clanmates about their latest interest.",
+			"It looks like m_c has rediscovered an old special interest and is eagerly bouncing as they talk about it.",
+			"Finding something new to talk about is nice, but for m_c it's something special to return to an old favourite subject."
+		],
+		"hyperfixation": [
+			"m_c has been spinning in circles around r_c as they talk about a new interest that has caught their attention.",
+			"While this doesn't feel like it will become part of their entire world m_c has spent quite some time talking about a new topic with their clanmates.",
+			"m_c seems to have been doing nothing but training recently, focused on incorporating a new specific set of moves into their hunting style.",
+			"In the past few weeks m_c has gotten deeply interested in collecting together feathers and identifying which prey-bird they came from."
+		],
+		"stimming": [
+			"m_c has been bouncing around the camp flicking their tail and ears constantly. r_c watches with a very amused purr at their excited stimming.",
+			"It seems like m_c can barely stay still as they wriggle their whole body in their excitement for the day.",
+			"m_c keeps purring to themselves as an act of self soothing.",
+			"Some of m_c's clanmates find themselves confused at how they keep running around the camp in small circles seemingly chasing their tail."
+		],
+		"nonverbal": [
+			"This moon has been overwhelming for everyone r_c observes. They encouge the rest of the clan to be understanding of that when m_c goes silent.",
+			"m_c just nods their head and uses tail signs to talk with their clanmates.",
+			"m_c is so glad their clanmates understand that sometimes they just need the quiet when they can't speak."
+		],
+		"anxiety attack": [
+			"All that r_c can really do is listen to m_c talking in circles, purring in an attempt to give them something to steady them.",
+			"Unable to properly deal with been overwhelmed m_c has started to pace in place nervously.",
+			"m_c's mind has been going in circles around the same kinds of messy thoughts.",
+			"Unable to properly stim after some recent changes m_c has found themself with their fur all puffed up and the same anxieties keep circling in their head."
+		],
+		"seasonal lethargy": [
+			"m_c comes into r_c's den feeling incredibly tired and stressed from the changing of the season. r_c reassures them it's alright and they can take a break if they really need to.",
+			"As the season changes become more and more obvious m_c curls further into their nest trying to pretend things aren't changing so drastically.",
+			"m_c is frustrated and upset as the season changes, clawing at their nesting material and hating that a fog descends on them that nothing they do seems to fix."
+		],
+		"absence": [
+			"There's a kind of fuzz in m_c's head as they go to r_c to complain about losing time between blinks.",
+			"Sometimes m_c feels a bit extra fuzzy, when they stare off into the distance it feels like no time at all passes and they blink and the whole world has shifted."
+		],
+		"vivid daydreams": [
+			"r_c and m_c talk about their escapism daydreams. m_c is very eager and excited to share their rich imaginary world.",
+			"m_c keeps running in circles around the camp escaping into their head rather than facing reality.",
+			"More and more often m_c retreats into their own world in their head, tail lashing as they envision things that only they can see.",
+			"Sometimes m_c will narrate events and stories to the kits so fanciful.",
+			"Using daydreaming m_c admits that they've been practicing what they will talk with their clanmates about."
+		]
+	},
+	"anxiety": {
+		"anxiety attack": [
+			"It's not uncommon for m_c to come into the medicine den with worries and troubles swirling around their head. r_c has a specific pile of herbs set aside just for when they need them. Or simply for when they need to talk.",
+			"m_c's tail lashes, fur standing uncomfortably on end as they share some of the anxieties bothering them with a clanmate.",
+			"The sunshine offers no relief to m_c as they pace around the camp entry on edge.",
+			"m_c keeps going in circles, worriedly pacing and unable to settle down to sleep properly."
+		],
+		"panic attack": [
+			"r_c is doing a general den check for m_c when they notice that their breathing is coming particularly harshly.",
+			"Nobody is sure what happened, one second m_c is fine the next they're darting across the camp ears pressed down and fur all on end.",
+			"m_c has been pacing circles around the camp, fur on end and looking as if they're going to snap.",
+			"Tail lashing and fur on edge m_c reports to the medicine cat for reassurance.",
+			"m_c has been struggling to breathe, some of the clan worried about white cough but it seems to be just a bit of panic."
+		],
+		"indecision": [
+			"r_c gently sits beside m_c as they stand in place eyes wide struggling to decide what they want to do.",
+			"m_c keeps going back and forth between their options and isn't able to commit to any of them.",
+			"m_c's keeps second guessing their own opinion and is told they don't have to decide today if it's too hard."
+		],
+		"impulsivity": [
+			"r_c has noticed that m_c is running themselves thin jumping into things before they can overthink.",
+			"m_c took a piece of prey from the pile and spent the rest of the day looking like they might cry.",
+			"m_c has been volunteering for everything this moon without thinking."
+		],
+		"vivid daydreams": [
+			"r_c consults with m_c about their daydreaming, reassuring them that it's a perfectly fine coping mechanism.",
+			"m_c babbles into the air paws twitching as if they were sleeping with a particularly loud dream.",
+			"Rather than socialising with the rest of the clan, m_c has been withdrawing into themselves and their head to escape the pressing anxiety.",
+			"m_c sits quietly in the corner of the camp finding happiness in their own internal world.",
+			"Between bouts of anxiety, m_c is calming themselves down by retreating away from the world around them."
+		],
+		"hallucinations": [
+			"r_c talks m_c through the things that they're seeing and hearing. It helps m_c to more firmly ground themselves in reality.",
+			"m_c struggles to understand what is really there or not as the shadows seem to hold impossible things.",
+			"Sometimes when m_c sleeps they half wake up and there's things on top of them.",
+			"m_c feels frozen, rooted in place as something large pinches and pokes at them.",
+			"m_c admits to a clanmate that they're not sure if they can actually trust their ears and what they're hearing anymore."
+		],
+		"shock": [
+			"r_c talks softly with m_c while they stare blankly at the wall shaking.",
+			"After all the anxiety that m_c's had this week they lie in the back of the den and stare at the wall completely worn out.",
+			"m_c shivers in their nest, curling their tail around them and pressing their ears down.",
+			"The moon has been rough, m_c can barely keep their paws stable as they head towards the medicine den to ask for something to ease the pressure."
+		],
+		"world tired": [
+			"m_c wanders into the medicine den late at night to talk to r_c about how they've been having scary thoughts about themselves this moon.",
+			"The nights feel to drag on longer and longer, m_c twitching and unable to sleep as they keep irrationally wondering if they'll even wake up in the morning.",
+			"m_c refuses to go out on patrols, scared that they might do something bad.",
+			"Their denmates are struggling to reassure m_c that things will get better and they're not a bad cat.",
+			"m_c has been talking a lot more with their denmates about Starclan."
+		]
+	},
+	"ocd": {
+		"anxiety attack": [
+			"r_c can understand that m_c has more trouble than most keeping calm and talks with them about why they feel extra anxious when they fail to fully check the camp before doing their patrols.",
+			"m_c starts to think about a possibility that scares them and their mind fills with fog and their heart beats erratically and they panic waking up a friend.",
+			"A clanmate sits beside m_c and lets them ramble on as they start to catastrophize.",
+			"m_c starts crying because they didn't check the camp fully before leaving that morning."
+		],
+		"indecision": [
+			"r_c reassures m_c that it's alright to take some time to make a decision on things.",
+			"m_c has been sitting in place for most of the afternoon, seeming to be stuck on what to do.",
+			"Pacing around the camp m_c doesn't seem to be able to solidly make a decision.",
+			"m_c keeps fretting and worrying about what choices to make."
+		],
+		"compulsions": [
+			"r_c sits back and watches as m_c comes in just to reorder and count the herbs in the medicine den.",
+			"m_c decided to reorganise the entire freshkill pile into multiple piles of prey sorted by size.",
+			"Before they could go on patrol, m_c had to go back and forth between the camp and the start of the patrol route before they nodded and could proceed.",
+			"m_c has to stop every few minutes to shake off their paws.",
+			"When settling down to sleep, m_c has to get up and check the front of the den three times.",
+			"m_c keeps grooming the same spot on their pelt.",
+			"m_c keeps repeating behaviours and when asked can only explain that they need to do them."
+			],
+		"hyperfixation": [
+			"r_c is always grateful for m_c's help sorting through the herbs in the medicine den. They're always a good helper.",
+			"m_c has been really focused on the warrior code recently and keeps parroting the rules at everyone.",
+			"While it's nice that m_c cares so much about the code some of their clanmates are getting tired of been pulled up over every little thing.",
+			"m_c has been really focused on catching enough prey to feed everyone.",
+			"m_c has been eagerly practising battle moves every time they're awake.",
+			"m_c has been eagerly practising hunting techniques every time they're awake."
+			],
+		"paranoia": [
+			"r_c gently speaks to m_c. Talking at length with them about the herbs in the medicine den trying to assure them that they're safe.",
+			"m_c is wandering around the camp somehow convinced that the world will be ending soon and rather listless.",
+			"m_c refuses to eat the prey on the freshkill pile, instead going out each day to catch even fresher prey for themselves.",
+			"While the rest of the clan settles down for the night m_c is getting up every few hours to check and make sure that things are still safe and fine.",
+			"m_c keeps waking up their denmates to get them to check just one more time if they're sure the camp is secure.",
+			"They're not paranoid, m_c insists that it's just the proper level of caution as they check for the third time that afternoon that the nursery is secure."
+		]
+	},
+	"boundless energy": {
+		"zoomies": [
+			"This is a temporary string for r_c helping m_c with the zoomies.",
+			"This is a temporary symptoms string for m_c having the zoomies."		
+		],
+		"absence": [
+			"This is a temporary string for r_c helping m_c with absence.",
+			"This is a temporary symptoms string for m_c with absence."
+		],
+		"vivid daydreams": [
+			"This is a temporary string for r_c helping m_c with vivid daydreams.",
+			"This is a temporary symptoms string for m_c with vivid daydreams."
+		],
+		"hyperfixation": [
+			"This is a temporary string for r_c helping m_c with hyperfixation.",
+			"This is a temporary symptoms string for m_c with hyperfixation."		
+		],
+		"indecision": [
+			"This is a temporary string for r_c helping m_c with indecision.",
+			"This is a temporary symptoms string for m_c with indecision."
+		],
+		"impulsivity": [
+			"This is a temporary string for r_c helping m_c with impulsivity.",
+			"This is a temporary symptoms string for m_c with impulsivity."		
+		]
+	},
+	"antisocial": {
+		"impulsivity": [
+			"r_c watches as m_c runs themselves ragged jumping from task to task around camp.",
+			"m_c keeps making decisions without fully thinking through and planning them.",
+			"m_c is full of ambition and willingness to work but hasn't been thinking through the consequences of their decisions.",
+			"Rather than planning their days out, m_c has been volunteering themselves for every available job."
+		],
+		"vivid daydreams": [
+			"r_c talks with m_c about their recent daydreaming and planning for the future of the clan.",
+			"m_c has been spending the days daydreaming rather than talking with their clanmates.",
+			"In the downtime between patrols m_c has been daydreaming, lazily lashing their tail as they relax."
+		]
+	},
+	"ongoing sleeplessness": {
+		"lethargy": [
+			"m_c goes to talk with r_c about how their lack of sleep has been affecting them emotionally.",
+			"With all the lack of sleep it's no surprise for m_c that they're finding it harder and harder to be happy.",
+			"They're so tired, always so tired. m_c only wishes that tiredness would translate to actually sleeping.",
+			"m_c gazes blankly at the wall, they have no idea what time it is... it doesn't really make a difference with the weight in their limbs."
+		],
+		"impulsivity": [
+			"m_c's brain is a little bit burnt, they're jumping into things, even coming and talking to r_c was done without any thought put into it.",
+			"It's all m_c can do to even halfway remain on task, they're doing things without thinking.",
+			"There's no thoughts and m_c's head is empty. They're just doing.",
+			"m_c doesn't think, they just move, move and act. Thinking can come later when they have the energy to."
+		],
+		"hallucinations": [
+			"r_c sighs when a cat comes in reporting that m_c has zoned out into a sleeping while awake state. It's becoming too common from their sleeplessness.",
+			"m_c feels like they're slipping between reality and dreams, not quite awake as they go through their day.",
+			"m_c is distracted and everyone knows it, their brain in a dream even while they look and seem fully awake.",
+			"It's becoming increasingly harder for m_c to understand where reality starts and ends. Figures and shapes dance around them just outside their vision.",
+			"m_c jumps as a clanmate brushes against them, fur all on end as they admit surprise that the other cat is actually real."
+		],
+		"world tired": [
+			"r_c patiently sits with m_c as they wonder if they could ever fix their sleeplessness. It's made them so worn out.",
+			"m_c's brain feels like it's in a permanent fog, they so desperately and deerly want to sleep and debate if it would be worth it if they could never wake up.",
+			"m_c wonders how many poppy seeds is too many.",
+			"m_c has been talking a lot more with their denmates about Starclan."			
+		],
+		"constant nightmares": [
+			"m_c comes in to see r_c, picking up some poppy seeds in the hope for some temporary completely dream free sleep.",
+			"m_c whimpers as they wake up, pressing their ears flat. Bad enough they hardly sleep, now what little they do get is plagued with nightmares."
+		]
+	}
 }

@@ -102,5 +102,98 @@
 		"Finally after moons of feeling touch and go the fever has left m_c's pelt and they feel better than ever.",
 		"Waking up m_c finally feels the relief of been in good health. No longer panting or whimpering, even the lingering rat bite seems to have healed.",
 		"m_c is so relieved to be able to get up out of the den and work once more. Even if that work is just clearing out their sickness scented bedding."
-    ]
+    ],
+    "constipation": [
+		"After longer than m_c would like to admit, their constipation has passed.",
+		"With relief m_c finds that their trips to the dirtplace will once more end in a timely manner."
+	],
+	"ticks": [
+        "m_c has finally gotten rid of all their ticks.",
+        "m_c is free of ticks at last."
+    ],	
+	"seasonal lethargy": [
+		"m_c wakes to the new dawn with a lightness in their chest and paws that has long been missed.",
+		"With the sounds of the songbirds in their ears m_c finds that the weight of fog over them has risen.",
+		"As m_c observes the first growth of the season they feel like a new cat.",
+		"m_c feels their tail swish with rekindled hope and trust in their own paws.",
+		"As the season changes the heavy weight in m_c’s bones begins to fade. Finally they feel like they can rise with the sun rather than wishing it would leave them to sleep."
+	],
+	"lethargy": [
+		"After some moons the weight that's been in m_c's limbs has lifted and they finally leave their nest feeling rejuvinated.",
+		"While still somewhat tired, m_c is able to greet the dawn with the swish of their tail and a flick of their ears.",
+		"m_c feels their tail swish with rekindled hope and trust in their own paws.",
+		"m_c is able to raise their sun and face the dawn with renewed energy.",
+		"They might always be a bit tired and wrung out but m_c finds that it's the small things that make the days brighter."
+	],
+	"world tired": [
+		"While they're still not back to normal m_c is able to feel much more together.",
+		"m_c thanks Starclan for the life they've been given and the chances they have to make it better.",
+		"m_c has gotten over their world tiredness.",
+		"After some long talks with their clanmates m_c has been reassured that they are loved and cared for.",
+		"m_c has found a hobby and something to remind them that the world isn't all bad things."
+	],
+	"nonverbal": [
+		"While cats are surprised to see m_c speaking again it is welcomed easily.",
+		"m_c cracks a joke at the gathering and makes some of the cats from the other clans laugh.",
+		"m_c chats with some of their denmates comfortable and at ease."
+	],
+	"special interest": [
+		"While the intensity of m_c's love for the subject has faded it's not gone in the least and they're still ready to chat off another cat's ears if prompted.",
+		"m_c's able to refocus themselves and stay on task, without always bringing their special interest into it.",
+		"m_c has some listlessness when their interest fades to slightly less all consuming.",
+		"m_c will always love their special interest, but can also make room for new interests."
+	],
+	"hyperfixation": [
+		"m_c is no longer hyperfixated on a topic.",
+		"m_c has returned to their regular daily activities."
+	],
+	"stimming": [
+		"For the moment, m_c has calmed their stimming.",
+		"m_c's stimming has become slightly less obvious.",
+		"After bouncing all around in their excitement m_c has calmed down.",
+		"m_c's stimming has calmed them back down.",
+		"m_c's finished self soothing with their stimming."
+	],
+	"indecision": [
+		"After a long period of deliberation m_c has made a decision.",
+		"m_c no longer feels trapped by indecision."
+	],
+	"impulsivity": [
+		"m_c has a clear head and is thinking through their decisions once more.",
+		"While still a bit twitchy and eager m_c has slowed down their decisions."
+	],
+	"vivide daydreams": [
+		"After all the daydreaming m_c feels once more able to engage with reality.",
+		"m_c's stopped daydreaming.",
+		"m_c is a lot more relaxed and feels able to focus completely on their tasks."
+	],
+	"hallucinations": [
+		"m_c is relieved when their head clears and they're no longer experiencing confusion or distress over what they see and hear.",
+		"m_c's stopped halucinating things."
+	],
+	"zoomies": [
+		"m_c has calmed back down from all their zooming around.",
+		"After all their zooming m_c has calmed down.",
+		"The clan is relieved to see m_c is calm and collected once more.",
+		"m_c is no longer zooming around the camp like a particularly young kitten."
+	],
+	"compulsions": [
+		"With some relief m_c finds that they're able to balance their compulasions throughout the day.",
+		"m_c has figured out a way to factor their compulsions more naturally into their routine.",
+		"m_c's been able to reorganize themselves and their compulsions."
+	],
+	"turmoiled litter": [
+		"With much relief m_c is feeling a bit more like themself.",
+		"m_c could almost cry as a weight they weren't fully conscious of seems to lift.",
+		"m_c purrs as their kittens roll around them, finally feeling like they can move on.",
+		"Sometimes a bond isn't instant and m_c finds that's alright."		
+	],
+	"sleeplessness": [
+		"m_c is so relieved to just get a somewhat peaceful nights sleep once more.",
+		"Once more m_c is able to sleep. At least for now."
+	],
+	"burn out": [
+		"m_c is back on their paws after burn out.",
+		"m_c is no longer tired and exhausted from burn out."
+	]
 }

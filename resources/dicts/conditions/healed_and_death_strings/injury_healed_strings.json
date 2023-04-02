@@ -217,5 +217,15 @@
     "severe headache": [
         "m_c's headache is gone.",
         "m_c breathes a small sigh of relief. Finally, the deep throbbing in their head has subsided."
-    ]
+    ],
+	"severe tick bites": [
+        "The tick bites m_c was suffering from have healed.",
+        "m_c's tick bites are no longer bothering them.",
+        "m_c's tick bites have healed up."
+    ],
+	"rash": [
+		"Thankfully for m_c the rash they've been suffering from has cleared up.",
+		"m_c is grateful that they're able to go about their day without any more itching or dry skin under their fur.",
+		"m_c purrs in satisfaction able to once more clean themselves without any extra irritation from a rash."
+	]
 }
