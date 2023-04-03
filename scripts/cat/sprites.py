@@ -346,7 +346,7 @@ for a, i in enumerate(['AZURE', 'COBOLT', 'GRASS', 'MINT', 'LILACGREY', 'WHITE',
     sprites.make_group('eyeshybrid', (a, 1), f'eyes{i}')
     sprites.make_group('eyes2hybrid', (a, 1), f'eyes2{i}')
 for a, i in enumerate(['PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 
-        'CHROMEC', 'RBG', 'RBGTWO', 'RBGTHREE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE']):
+        'CHROMEC', 'RGB', 'RGBTWO', 'RGBTHREE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE']):
     sprites.make_group('eyeshybrid', (a, 2), f'eyes{i}')
     sprites.make_group('eyes2hybrid', (a, 2), f'eyes2{i}')
 for a, i in enumerate(['POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH',

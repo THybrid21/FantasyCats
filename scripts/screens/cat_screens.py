@@ -1038,6 +1038,8 @@ class ProfileScreen(Screens):
                 output += 'grieving!'
             elif "fleas" in the_cat.illnesses:
                 output += 'flea-ridden!'
+            elif "ticks" in the_cat.illnesses:
+                output += 'riddled with ticks!'            
             else:
                 output += 'sick!'
 

@@ -1006,7 +1006,7 @@ class Cat():
             colour = 'primary'   
         elif colour in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
             colour = 'chrome'   
-        elif colour in ['rgbtwo','rgbthree', 'susrgb']:
+        elif colour in ['rgbtwo', 'rgbthree', 'susrgb']:
             colour = 'rgb'   
         elif colour == 'susvisor':
             colour = 'silver'     
@@ -1088,7 +1088,7 @@ class Cat():
                 colour2 = 'primary'   
             elif colour2 in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
                 colour2 = 'chrome'   
-            elif colour2 in ['rgbtwo','rgbthree', 'susrgb']:
+            elif colour2 in ['rgbtwo', 'rgbthree', 'susrgb']:
                 colour2 = 'rgb'   
             elif colour2 == 'susvisor':
                 colour2 = 'silver'     
