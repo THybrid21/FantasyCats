@@ -212,7 +212,7 @@
             "The tick on m_c was left for far too long. The area is now swollen and warm - definite signs of infection."
         ],
 		"spasms": [
-			"Worryingly m_c's limbs aren't all staying in place. While they attempt to recover r_c reexamines the removed ticks they have to inform the clan of the risk these ticks may pose.",
+			"Worryingly m_c's limbs are beginning to spasm and jerk around them. While they attempt to recover in the medicine den, r_c reexamines the removed ticks they have to inform the clan of the risk these ticks may pose.",
 			"Alongside the tick bites, m_c has noticed that their limbs seem to have gained their own opinions on things.",
 			"m_c jerks around in their nest, awkwardly flailing a paw around without any real ability to stop it."
 		]
@@ -223,5 +223,22 @@
 			"After all the scratching they've done at the rash it's not a surprise that m_c has torn up their pelt.",
 			"All m_c's frantic itching has left their fur looking rather patchy in places."
 		]
-	}
+	},
+	"sunburn": {
+		"an infected wound": [
+			"When m_c comes to r_c for their typical care it's with a complaint that the burn feels like it's fresh once more.",
+			"m_c tries to ignore the returning heat to their sunburn, hoping that it'll just go away if they don't pay attention to it."
+		]
+	},
+	"severe sunburn": {
+		"an infected wound": [
+			"r_c gently soothes m_c's sunburn with a fresh coat of herbs and cobwebs, fussing as it looks rawer and has a bit of a sickly smell to it.",
+			"m_c worries about the smell that's starting to come from their sunburn."
+		],
+		"rash": [
+			"m_c complains to r_c about how their sunburn has become itchy and irritated. Looks like it's bubbled into a rash.",
+			"As their skin starts to peel from the sunburn, m_c discovers themselves getting itchier and itchier.",
+			"Below m_c's sunburn their skin has bubbled with an irritating itchy rash."
+		]
+	}		
 }

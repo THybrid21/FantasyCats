@@ -10,5 +10,25 @@
         "main_status_constraint": [
             "exiled"
         ]
-    }
+    },
+    {
+        "id": "skeptic_exiled",
+        "thoughts": [
+            "Scoffs at the thought they deserve this",
+			"Curls up in a den and listens to the rain",
+			"Is missing the company of c_n",
+			"Is telling some rogues about c_n",
+			"Is watching some kittypets and scoffing",
+			"Doesn't believe that this is a fair punishment",
+			"Wonders what r_c is doing",
+			"Wonders if anyone will care when they die",
+			"Wonders if they will actually go to any kind of afterlife",
+			"Imagines that they might be wandering the world forever"
+        ],
+        "main_status_constraint": [
+            "exiled"
+        ],
+		"main_trait_constraint": [
+            "skeptic"
+        ]    	
 ]

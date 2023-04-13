@@ -304,7 +304,9 @@
       "shameless",
       "sneaky",
       "troublesome",
-      "vengeful"
+      "vengeful",
+	  "stubborn",
+	  "rebellious"
     ],
     "As m_c touches noses with (mentor), they hope that they'll be a cool mentor that won't assign boring tasks. Anything but gathering moss or tick duty!"
   ],
@@ -320,7 +322,8 @@
       "bold",
       "daring",
       "fierce",
-      "playful"
+      "playful",
+	  "wandering"
     ],
     "(prefix)kit sits in front of the Clan with pride, their tiny heart beating so fast they think it might explode! They very excitedly touch noses with (mentor), happy to start their apprenticeship."
   ],
@@ -344,7 +347,8 @@
       "strange",
       "strict",
       "wise",
-      "thoughtful"
+      "thoughtful",
+	  "skeptic"
     ],
     "Surprising (mentor), the first thing that m_c asks to do once the meeting ends is gather moss so everyone has fresh bedding."
   ],
@@ -405,7 +409,8 @@
       "charismatic",
       "childish",
       "playful",
-      "thoughtful"
+      "thoughtful",
+	  "dreamer"
     ],
     "m_c purrs so hard that they're shaking as they touch noses with (mentor)."
   ],
@@ -426,7 +431,8 @@
       "fierce",
       "loyal",
       "righteous",
-      "wise"
+      "wise",
+	  "stubborn"
     ],
     "m_c silently swears to StarClan to do their best for the Clan as they touch noses with (mentor)."
   ],
@@ -448,7 +454,8 @@
       "righteous",
       "troublesome",
       "vengeful",
-      "thoughtful"
+      "thoughtful",
+	  "dramatic"
     ],
     "As m_c touches noses with (mentor), they hope they'll get to do something that will really impress the Clan on their first day. Maybe they could catch a big, fat rabbit? Or chase off a fox! That'll show the Clan they're the best apprentice anyone's ever seen!"
   ],
@@ -466,7 +473,9 @@
       "daring",
       "fierce",
       "troublesome",
-      "vengeful"
+      "vengeful",
+	  "stubborn",
+	  "rebellious"
     ],
     "m_c sits excitedly beside (mentor) as the meeting ends, and hopes they'll be doing something exciting like battle training first. Their claws are itching to tear at something."
   ],
@@ -487,7 +496,8 @@
       "responsible",
       "sneaky",
       "strict",
-      "wise"
+      "wise",
+	  "dreamer"
     ],
     "m_c touches noses with their mentor, (mentor), looking bored and unimpressed. But on the inside, they're bouncing around with euphoria as if they were still a kit!"
   ],
@@ -501,7 +511,9 @@
       "general_backstory",
       "ambitious",
       "shameless",
-      "troublesome"
+      "troublesome",
+	  "rebellious",
+	  "stubborn"
     ],
     "m_c has been pestering everyone for moons on when they finally get to be an apprentice, and everyone is relieved that they're finally free of the young cat's nagging... Until they start asking about when they're going to be a warrior as soon as the meeting ends."
   ],
@@ -516,7 +528,11 @@
       "bold",
       "daring",
       "confident",
-      "strange"
+      "strange",
+	  "stubborn",
+	  "dreamer",
+	  "skeptic",
+	  "dramatic"
     ],
     "As their mentor is about to be chosen, m_c interrupts and announces they want their mentor to be (mentor). They stride forward with confidence to touch noses with (mentor) when it's allowed."
   ],
@@ -531,7 +547,9 @@
       "bold",
       "daring",
       "childish",
-      "playful"
+      "playful",
+	  "dramatic",
+	  "wandering"
     ],
     "m_c can't believe their apprenticeship is finally here! Nearly tripping over their own paws, they scurry up to (mentor), excitedly touching noses with them."
   ],
@@ -867,7 +885,8 @@
       "general_leader",
       "general_backstory",
       "nervous",
-      "insecure"
+      "insecure",
+	  "dreamer"
     ],
     "Worried they may not be good as a hunter or fighter, but still wanting to make their Clan proud somehow, m_c decides to become a medicine cat apprentice under (mentor)."
   ],
@@ -1146,7 +1165,8 @@
       "general_leader",
       "general_backstory",
       "thoughtful",
-      "compassionate"
+      "compassionate",
+	  "dreamer"
     ],
     "Impressed by their eagerness, (mentor) chooses m_c as the Clan's new mediator apprentice."
   ],
@@ -1158,7 +1178,8 @@
       "general_leader",
       "general_backstory",
       "thoughtful",
-      "compassionate"
+      "compassionate",
+	  "wandering"
     ],
     "m_c has taken to following (mentor) around during their daily duties, fascinated by the life of a mediator. (mentor) is happy to train them. "
   ],
@@ -1713,7 +1734,7 @@
       "general_backstory",
       "playful"
     ],
-    "No one knows how (prefix)paw got their claws on it, but they manage to play with a shiny piece of Twoleg stuff the whole time while the other medicine cats give them their name - m_c. When asked why, m_c replied that one of their patients might like it, and they wanted to make sure it was safe before bringing it back home."
+    "No one knows how (prefix)paw got their claws on it, but they manage to play with a shiny piece of Peltshifter stuff the whole time while the other medicine cats give them their name - m_c. When asked why, m_c replied that one of their patients might like it, and they wanted to make sure it was safe before bringing it back home."
   ],
   "med_34": [
     [
@@ -1931,6 +1952,139 @@
     ],
     "Inspired by (prefix)paw's r_h, (previous_mentor) names them m_c, and welcomes them as a full medicine cat."
   ],
+  "med_53": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "skeptic"
+    ],
+    "(prefix)paw still doesn't seem to believe in Starclan but it makes no difference as they step up and are welcomed by (previous_mentor) as a full medicine cat by the name of m_c"
+  ],
+  "med_54": [
+    [
+      "medicine cat",
+      "prepared",
+      "dead_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "skeptic"
+    ],
+    "As m_c accepts their new name in the face of the full moon they take a deep breath. They only wish that (deadmentor) could be here to once more tell them the fantasy tales of Starclan."
+  ],  
+  "med_54_a": [
+    [
+      "medicine cat",
+      "unprepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "skeptic"
+    ],
+    "(prefix)paw hisses and lashes their tail when a clanmate calls them m_c. It's frustrating for them to hear the name knowing that they don't yet deserve it."
+  ],
+  "med_55": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "dramatic"
+    ],
+    "(prefix)paw practically flounces through Starclan with (previous_mentor). Proudly they puff up their chest as the starry cats around them grant them their new name of m_c."
+  ], 
+  "med_56": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "rebellious"
+    ],
+    "Rather than waiting for (previous_mentor) to name them m_c chooses to declare their own name. They just dare someone to tell them not to use it."
+  ],   
+  "med_57": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "dreamer"
+    ],
+    "(prefix)paw trots through the star fields of Starclan completely at ease. Looking around with wide eyes and a lashing tail as they're named m_c by those around them."
+  ],   
+  "med_57_a": [
+    [
+      "medicine cat",
+      "unprepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "dreamer"
+    ],
+    "With more than a little worry (previous_mentor) names (prefix)paw as m_c. Softly they remind them to get their head out of the clouds and into reality more."
+  ], 
+  "med_57_b": [
+    [
+      "medicine cat",
+      "early",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "dreamer"
+    ],
+    "(prefix)paw prances through the starfields, tail swishing and ears flicking as they follow after (previous_mentor). Standing before Starclan as m_c they purr as they're one step closer to making dreams reality."
+  ], 
+  "med_58": [
+    [
+      "medicine cat",
+      "prepared",
+      "dead_mentor",
+      "dead2_parents",
+      "general_leader",
+      "general_backstory",
+      "dreamer",
+	  "stubborn"
+    ],
+    "As they open their eyes to the starry fields of Starclan something in (prefix)paw sinks as they see (deadmentor), they had hoped. Something raises when they see dead_par1 and dead_par2 in the crowd as their new name of m_c is spoken."
+  ],     
+  "med_59": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "stubborn"
+    ],
+    "(prefix)paw sits resolutely in front of (previous_mentor), they have dilligently and stubbornly stuck with medicine cat training and now brim with pride to recieve the name of m_c."
+  ],    
+  "med_59_a": [
+    [
+      "medicine cat",
+      "unprepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "stubborn"
+    ],
+    "(prefix)paw knows they're not really prepared but they insist that (previous_mentor) give them their name anyway. With much reluctance they're called m_c and step up to be the latest medicine cat of the clan."
+  ],    
   "warrior_0": [
     [
       "warrior",

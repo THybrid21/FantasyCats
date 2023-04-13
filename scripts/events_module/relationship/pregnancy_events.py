@@ -226,24 +226,38 @@ class Pregnancy_Events():
         if cat.outside:
             return
 
-        thinking_amount = random.choices(["correct", "incorrect", "unsure"], [4, 1, 1], k=1)
-        if amount <= 3:
+        thinking_amount = random.choices(["correct", "incorrect", "unsure", "exact"], [4, 1, 2, 3], k=1)
+        if amount <= 6:
             correct_guess = "small"
+        elif amount >= 14:
+            correct_guess = "huge"
         else:
             correct_guess = "large"
 
         if thinking_amount[0] == "correct":
             if correct_guess == "small":
                 text = PREGNANT_STRINGS["litter_guess"][0]
+            elif correct_guess == "huge":
+                text = PREGNANT_STRINGS["litter_guess"][2]
             else:
                 text = PREGNANT_STRINGS["litter_guess"][1]
-        elif thinking_amount[0] == 'incorrect':
+        elif thinking_amount[0] == "incorrect":
             if correct_guess == "small":
-                text = PREGNANT_STRINGS["litter_guess"][1]
+                text = PREGNANT_STRINGS["litter_guess"][2 or 1]
+            if correct_guess == "huge":
+                text = PREGNANT_STRINGS["litter_guess"][0 or 1 or 4]
             else:
-                text = PREGNANT_STRINGS["litter_guess"][0]
+                text = PREGNANT_STRINGS["litter_guess"][0 or 2 or 4]
+        elif thinking_amount[0] == "exact":
+            thinking_amount = choice([amount - random.randint(1, 6), amount, amount + random.randint(1, 6)])
+            if thinking_amount < 1:
+                thinking_amount = 1
+            if thinking_amount == 1:
+                text = PREGNANT_STRINGS["litter_guess"][4]            
+            else:
+                text = f"{cat.name} isn't entirely certain but they think they will have a litter of {thinking_amount} kittens."
         else:
-            text = PREGNANT_STRINGS["litter_guess"][2]
+            text = PREGNANT_STRINGS["litter_guess"][3]
 
         if clan.game_mode != 'classic':
             try:

@@ -60,7 +60,7 @@
             "Wishes their Clanmates would just talk to each other",
             "Is upset at a recent negotiation with a rival Clan",
             "Is negotiating trading herbs with a rival Clan",
-            "Is negotiating with a kittypet to make use of the herbs in their Twoleg garden",
+            "Is negotiating with a kittypet to make use of the herbs in their Peltshifter garden",
             "Is dismayed at how quickly their Clanmates get into arguments",
             "Feels exhausted after mediating so many arguments",
             "Feels pride for their mediator work",
@@ -193,7 +193,38 @@
         "main_trait_constraint": [
             "vengeful"
         ]
-    }
+    },
+    {
+        "id": "skeptic_mediator",
+        "thoughts": [
+            "Feels like they're the only cat with a solid head on their shoulders",
+			"Is very tired of their clanmates squabbles",
+			"Thinks that they need to travel to o_c_n to talk to their leader"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+    {
+        "id": "peltshifted_mediator",
+        "thoughts": [
+            "Is struggling to do their job",
+			"Worries that they're not good enough for c_n",
+			"Got distracted by telling stories to the cats coming to them",
+			"Is taking notes on the den wall",
+			"Promises they won't share what their clanmates tell them",
+			"Is debating on meddling in some love lives",
+			"Is jealous of their clanmates",
+			"Dreads going to talk to o_c_n's mediator"
+        ],
+        "random_status_constraint": [
+            "mediator",
+            "mediator apprentice"
+        ],		
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    }	
 ]
 
 

@@ -93,7 +93,7 @@
             "Wonders if they can find a warm place to sleep tonight",
             "Was chased by a fox recently",
             "Wishes they were in a warm nest",
-            "Wonders what it's like to live with Twolegs",
+            "Wonders what it's like to live with Peltshifters",
             "Is struggling to survive on their own",
             "Is fighting with another rogue over food",
             "Laughed at the thought of dead cats 'watching over' c_n",
@@ -144,7 +144,7 @@
     {
         "id": "senior_rogue_thoughts",
         "thoughts": [
-            "Thinks about finding some Twolegs to help them in their old age",
+            "Thinks about finding some Peltshifters to help them in their old age",
             "Thinks their joints are aching too much to hunt today",
             "Wonders if they can carry on"
         ],

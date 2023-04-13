@@ -56,7 +56,7 @@
 			"scar",
 			"BRIDGE"
 		],
-		"intro_text":"Up at the front of the patrol, p_l hears a Twoleg monster zoom past on the water, and then startled yowling. Turning back, they spot r_c being washed away by the wave the monster brought in its wake.",
+		"intro_text":"Up at the front of the patrol, p_l hears a Peltshifter monster zoom past on the water, and then startled yowling. Turning back, they spot r_c being washed away by the wave the monster brought in its wake.",
 		"decline_text":"p_l runs back to camp to fetch help.",
 		"chance_of_success":50,
 		"exp":20,
@@ -119,7 +119,7 @@
 			"scar",
 			"BRIDGE"
 		],
-		"intro_text":"Trailing behind the patrol, there's a roar as a Twoleg monster passes the patrol on the nearby water. r_c looks up just in time to screech in terror as the wake from the monster sweeps over the path, knocking them into the water.",
+		"intro_text":"Trailing behind the patrol, there's a roar as a Peltshifter monster passes the patrol on the nearby water. r_c looks up just in time to screech in terror as the wake from the monster sweeps over the path, knocking them into the water.",
 		"decline_text":"Thankfully, they're near the bank, and wriggle their way clear.",
 		"chance_of_success":50,
 		"exp":20,
@@ -180,7 +180,7 @@
 			"scar",
 			"RIGHTEAR"
 		],
-		"intro_text":"Out in the wetlands training alone, there's a roar as a Twoleg monster passes r_c on the nearby water. r_c looks up just in time to screech in terror as the wake from the monster sweeps over the path, knocking them into the water.",
+		"intro_text":"Out in the wetlands training alone, there's a roar as a Peltshifter monster passes r_c on the nearby water. r_c looks up just in time to screech in terror as the wake from the monster sweeps over the path, knocking them into the water.",
 		"decline_text":"Thankfully, they're near the bank, and wriggle their way clear.",
 		"chance_of_success":50,
 		"exp":20,

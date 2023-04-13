@@ -128,7 +128,7 @@
 	{
 		"id": "platonic_inc_med10",
 		"interactions": [
-			"m_c wants to explore Twolegplace with r_c.",
+			"m_c wants to explore Peltshifterplace with r_c.",
 			"m_c wants to sneak along the border with r_c.",
 			"m_c tells r_c that there's so much to see in the world!"
 		],

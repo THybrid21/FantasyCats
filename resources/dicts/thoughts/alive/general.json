@@ -791,6 +791,100 @@
         ]
     },
     {
+        "id": "skeptic_apprentice",
+        "thoughts": [
+            "Is questioning if Starclan is real",
+			"Is questioning the leader's abilities, do they really have 9 lives?",
+			"Was caught nosing around Peltshifterplace recently",
+			"Smells a bit like kittypet food"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+    {
+        "id": "dramatic_apprentice",
+        "thoughts": [
+            "Stepped on a bug and spent the afternoon dramatically crying",
+			"Is overplaying a small cut they got",
+			"Is exaggerating their own greatness",
+			"Is showing off hoping the leader takes notice",
+			"Dramatically flops into their nest hoping someone asks what's wrong",
+			"Thinks they're the main character",
+			"Is preening thinking the latest clan prophecy is about them",
+			"Hopes they get to go to the gathering so they can brag to o_c_n's apprentices"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "dramatic"
+        ]
+    },
+    {
+        "id": "rebellious_apprentice",
+        "thoughts": [
+            "Snuck out to do some solo training",
+			"Was heard to reject the warrior code",
+			"Smells like kittypet food",
+			"Was caught in the catnip",
+			"Was caught recently trying to sneak across into o_c_n's territory",
+			"Has been considering the forest they see in their dreams",
+			"Mocks the warrior code"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "rebellious"
+        ]
+    },	
+    {
+        "id": "wandering_apprentice",
+        "thoughts": [
+            "Went missing for a week",
+			"Enjoys going on long journeys across the whole territory",
+			"Volunteers to go out early",
+			"Has been travelling further and further from the camp",
+			"Babbles with their clanmates about the mysteries of Peltshifterplace"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "wandering"
+        ]
+    },
+    {
+        "id": "stubborn_apprentice",
+        "thoughts": [
+            "Insists that they know how to train properly by themselves",
+			"Is repeatedly practicing a skill completely wrong",
+			"Refuses to admit any wrong doing",
+			"Can't stand been told what to do",
+			"Doesn't want to listen to anybody"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "stubborn"
+        ]
+    },
+    {
         "id": "gen_formerly_a_rogue_apprentice",
         "thoughts": [
             "Discovers that their self-taught method is less effective",
@@ -1203,24 +1297,10 @@
             "medicine cat apprentice"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+			"rebellious"
         ]
     },
-    {
-        "id": "med_cat_alive_kit",
-        "thoughts": [
-            "Is teaching kits about what plants to stay away from",
-            "Chased kits out of their den"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ],  
-        "random_status_constraint": [
-            "kitten"
-        ]
-    },
-
     {
         "id": "paralyzed_gen_to_alive_gen",
         "thoughts": [
@@ -1641,7 +1721,9 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "wasting disease"
+                "wasting disease",
+				"sphynxism",
+				"albinism"
             ]
         },
         "random_age_constrain": [
@@ -1752,5 +1834,540 @@
             "newborn",
             "kitten"
         ]
-    }
+    },
+    {
+        "id": "starwalker_to_alive_gen",
+        "thoughts": [
+            "Is running around in circles",
+			"Is collecting shiny rocks",
+			"Is collecting interesting feathers",
+			"Is talking about how interesting rats are",
+			"Is pretending they are a rat",
+			"Is talking with r_c about rats",
+			"Is talking about the story that rats brought the clans medicine",
+			"Is comparing the Clans structure to the Packs",
+			"Is talking about the Packs",
+			"Wonders if they're actually a peltshifter in cat form",
+			"Talks to r_c about how curious peltshifters are",
+			"Talks to r_c about the Packs",
+			"Wonders if the clan could make an agreement with the Packs",
+			"Wonders about the Mother Moon",
+			"Wonders if the Sun really is a dog",
+			"Is collecting old bits of shed and looks like crying",
+			"Is carefully burying the bones of prey",
+			"Is chasing their own tail",
+			"Is playing with a leaf",
+			"Is collecting leaves",
+			"Cried because someone threw out their collection",
+			"Is eagerly talking with r_c about different plants around the territory",
+			"Collected some deathberries and refuses to throw them out because they're pretty",
+			"Is talking all about deathberries",
+			"Is talking about deathberries and the theory of reincarnation",
+			"Wonders if the death tree is an omen",
+			"Is studying herblore with the medicine cat",
+			"Wonders if they should be a mediator",
+			"Wonders if they should be a medicine cat",
+			"Wonders if they should be a warrior",
+			"Is currently mad at r_c for something small",
+			"Is mad at r_c for stepping on their collection",
+			"Refuses to eat their prey because it's texture is wrong",
+			"Is really focused on the birds in the territory",
+			"Is talking with r_c about the different birds in their territory",
+			"Is talking with r_c about how it would feel to fly",
+			"Is squishing their paws in mud on purpose",
+			"Wandered off for a swim and is still damp",
+			"Rolled in the medicine den's catmint",
+			"Was telling stories to the kittens",
+			"Thinks that rats are great actually",
+			"Wonders if they need a service rat",
+			"Is babbling at r_c about hares",
+			"Is talking about the differences between hares and rabbits",
+			"Boasts they could easily catch a hare",
+			"Is pretending they are a hare",
+			"Is pretending they are a dog",
+			"Is practicing speaking in Fang"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "starwalker"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },	
+    {
+        "id": "starwalker_to_med_gen",
+        "thoughts": [
+            "Doesn't like been treated as if they're a forever kitten",
+			"Feels like r_c is mocking them",
+			"Came to r_c with some concerns about something they had seen",
+			"Is talking about omens with r_c",
+			"Doesn't like the clan whispering as if they're a prophecy cat",
+			"Sometimes wonders why they couldn't be born normal",
+			"Is talking to the r_c about some concerns",
+			"Doesn't think that r_c believes in them",
+			"Doesn't like the smell of the medicine den"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "starwalker"
+            ]
+        },
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "warrior",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_status_constraint": [
+            "medicine cat apprentice",
+            "medicine cat"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },	
+    {
+        "id": "fibro_to_alive_gen",
+        "thoughts": [
+            "Is having a bad day",
+			"Hisses when a clanmate accidentally brushes against them",
+			"Wishes that they could have just one day without pain",
+			"Baps r_c because they came slightly too close",
+			"Wishes that r_c would leave them alone for a minute",
+			"Is having a moment of peace in a sunbeam",
+			"Wonders if they could make it out of camp today",
+			"Wonders if it would be better if they had an injury to explain the pain",
+			"Is making up stories for why they're in pain all the time",
+			"Wishes that r_c could be in their paws for the day",
+			"Is trying their best",
+			"Doesn't want to take their painkiller herbs today for fear of been fuzzy",
+			"Is wincing as they walk around camp",
+			"Doesn't want to leave the nest today"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "fibro"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },	
+    {
+        "id": "albino_sphynx_to_alive_gen",
+        "thoughts": [
+			"Doesn't like how harsh the sun is",
+			"Doesn't like how other cats look at them funny",
+			"Is feeling insecure about how they look",
+			"Is exaggerating their weaknesses",
+			"Feels like they're the odd one out"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "albinism",
+				"sphynxism"
+            ]
+        },
+        "random_living_status": [
+            "living"
+        ]
+    },	
+    {
+        "id": "melanistic_to_alive_gen",
+        "thoughts": [
+            "Is pretending they're r_c's shadow come alive",
+			"Doesn't want to go on the night patrol because it's hard to see",
+			"Recently crashed into the wall of the den because it 'snuck up on them'",
+			"Doesn't like r_c very much",
+			"Refuses to go outside because it's too hot",
+			"Has been working really hard recently"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "melanism"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "grieving_to_alive_gen",
+        "thoughts": [
+            "Feels like they want to be alone for today",
+			"Is missing r_c like they vanished yesterday",
+			"Wonders if r_c is alright wherever they are",
+			"Thought they saw r_c the other day... but it was only a trick of light",
+			"Wonders if this grief will ever leave them",
+			"Curls up in the den and refuses to leave",
+			"Wanders around the camp listlessly looking for a cat who's not there",
+			"Is feeling sad today",
+			"Looks up at the stars and wonders if r_c is looking back",
+			"Wonders if r_c found their way safely to StarClan or not"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "lasting grief"
+            ]
+        },
+        "relationship_constraint": [
+            "parent/child",
+			"siblings",
+			"mentor/app",
+			"app/mentor",
+			"mates"
+        ],		
+        "random_living_status": [
+            "starclan",
+			"darkforest",
+			"unknownresidence"
+        ]
+    },		
+    {
+        "id": "anxiety_to_alive_gen",
+        "thoughts": [
+            "Is freaking out about their own shadow",
+			"Refuses to leave the den today",
+			"Is overgrooming",
+			"Sits and worries with their paws",
+			"Goes to the medicine cat about their anxieties",
+			"Is talking with r_c with a twitching tail",
+			"Has too many thoughts and is breathing harshly",
+			"Is struggling to deal with their emotions",
+			"Is struggling to keep themselves steady",
+			"Feels guilty about eating the mouse on the prey pile",
+			"Regrets eating today",
+			"Regrets not eating today",
+			"Wonders if they should leave the clan behind",
+			"Feels like a burden",
+			"Feels like they're a fake",
+			"Feels like everyone is looking at them and judging",
+			"Worries that they're not worthy of been a member of c_n",
+			"Is struggling to breathe"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "anxiety"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "heavy_soul_to_alive_gen",
+        "thoughts": [
+            "Feels very low today",
+			"Is too tired to leave the den",
+			"Mumbles something to r_c about been tired",
+			"Is having a hard moon",
+			"Looks up to the stars and wonders who's watching back",
+			"Feels like they're drowning in their own fur",
+			"Doesn't know if they know how to feel happy anymore",
+			"Is worried about what they might do if left alone",
+			"Is talking about r_c about how heavy the world is",
+			"Is worried about r_c",
+			"Is worried they will never feel happy again",
+			"Wonders why the world feels full of fog",
+			"Forewent eating today",
+			"Curls up in their den and refuses to leave",
+			"Pretends to be happy in front of the kittens",
+			"Reassures r_c that it's alright to feel sad sometimes",
+			"Reassures r_c that they're okay",
+			"Is appreciative that r_c chose to help them today",
+			"Feels tired",
+			"Feels sad",
+			"Doesn't want to eat because they're too tired",
+			"Doesn't feel like it's worth leaving camp today",
+			"Had a rare moment of happiness while sleeping in a sunbeam",
+			"Is talking to r_c about StarClan",
+			"Is wondering what is the true meaning of life"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "heavy soul"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "boundless_energy_to_alive_gen",
+        "thoughts": [
+            "Is racing around the camp",
+			"Challenges r_c to a race",
+			"Is skipping around camp cheerfully",
+			"Has the wriggles",
+			"Is chattering at their clanmates about something interesting",
+			"Was caught singing on their guard rotation",
+			"Is complaining about having to do the dawn patrol",
+			"Thinks that r_c hates them because they woke them from a nap",
+			"Accidentally stepped on their own tail",
+			"Is chasing their own tail",
+			"Got distracted by a bee",
+			"Vanished in the middle of a patrol",
+			"Fell into the river trying to catch a fish",
+			"Is collecting fishbones",
+			"Has forgotten which nest in the den is theirs",
+			"Ran so fast they ran into a tree",
+			"Tripped over their own paws... twice",
+			"Spoke too fast for r_c to keep up with them",
+			"Has all the thoughts, all the time",
+			"Is offended when someone calls them just a kitten"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "boundless energy"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "antisocial_to_alive_gen",
+        "thoughts": [
+            "Wants to be alone today",
+			"Is sitting apart from the rest of the clan",
+			"Is lashing their tail watching some clanmates talk",
+			"Made r_c cry the other day",
+			"Unintentionally scared the kittens today",
+			"Wants to go on a solo patrol",
+			"Hissed at r_c when they walked into their personal space",
+			"Finds r_c annoying"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "antisocial"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "declawed_to_alive_gen",
+        "thoughts": [
+            "Is crying at the pain in their paws",
+			"Attempts to flex their claws only to wince",
+			"Doesn't know if they can defend themselves properly anymore",
+			"Almost fell out of a tree today",
+			"Is wincing each step they take",
+			"Is grooming their sore paws",
+			"Doesn't understand why peltshifters would do this",
+			"Doesn't understand how kittypets could live like this",
+			"Hates the fact they don't have claws anymore",
+			"Isn't ready for practicing with r_c today",
+			"Is warning their clanmates about the worst that peltshifters can do",
+			"Is making up a dramatic story about the loss of their claws"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "declawed"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "peltshifted_apprentice",
+        "thoughts": [
+            "Struggles to get around some days",
+			"Was seen awkwardly trying to move around on only their hindlegs",
+			"Has some very odd turns of phrase",
+			"Doesn't enjoy eating freshkill",
+			"Cursed someone called God for putting them in this position",
+			"Knows far too much about peltshifters for anyone to be comfortable",
+			"Is fascinated by training",
+			"Insists that deathberries are to be called yew",
+			"Is horrified by the medicine cats herbs",
+			"Was startled by their own tail the other day",
+			"Forgot how to use their whiskers",
+			"Just realised they could purr again",
+			"Is struggling to cat",
+			"Complains about how hard fur is to keep clean",
+			"Worries about ticks and fleas",
+			"Volunteered to guard the camp... mostly so they didn't make a fool of themselves",
+			"Worries they stand out too much",
+			"Worries they don't stand out enough"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+            "peltshifted"
+        ]
+    },	
+    {
+        "id": "peltshifted_to_strange_gen",
+        "thoughts": [
+            "Is fascinated by r_c's stories and ideas",
+			"Has long and confusing talks with r_c",
+			"Is surprised there are any cats in the clan who actually seem to understand them",
+			"Was seen sharing tongues with r_c",
+			"Has convinced r_c that the correct term for peltshifters is humans",
+			"Is glad they have some friends in the clan, even if they are strange",
+			"Is the strange one next to r_c",
+			"Compares themselves to r_c and worries"
+        ],
+        "main_status_constraint": [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "main_trait_constraint": [
+            "peltshifted"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_trait_constraint": [
+            "strange",
+			"childish",
+			"playful"
+        ]		
+    },	
+    {
+        "id": "peltshifted_paralyzed_gen",
+        "thoughts": [
+            "Finds this... familiar",
+			"Is worried about how at ease they are with only having two walking legs",
+			"Is staring at their paralyzed half in fascination",
+			"Stepped on their own tail and looked at it in surprise"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
+        "main_status_constraint": [
+            "kitten",
+			"apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "main_trait_constraint": [
+            "peltshifted"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    }	
 ]

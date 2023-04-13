@@ -199,7 +199,8 @@
             "Drew blood during their battle training"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+			"rebellious"
         ]
     },
     {
@@ -208,7 +209,8 @@
             "Begs to be made a warrior early"
         ],
         "main_trait_constraint": [
-            "ambitious"
+            "ambitious",
+			"stubborn"
         ]
     },
     {
@@ -222,5 +224,206 @@
         "main_trait_constraint": [
             "ambitious"
         ]
-    } 
+    },
+    {
+        "id": "skeptic_warrior_apprentice",
+        "thoughts": [
+            "Is questioning if they even want to be a warrior in the future",
+			"Is wondering if they even should be a clan cat",
+			"Doubts StarClan is real",
+			"Proudly trots through the camp after they made an amazing catch",
+			"Is frowning as an elder tells them stories of how the clans came to be",
+			"Scoffs at the idea that the leader has nine lives",
+			"Isn't sure they truly believe the code is right"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },	
+    {
+        "id": "skeptic_warrior_apprentice_to_other",
+        "thoughts": [
+            "Doesn't believe r_c's tales of adventures",
+			"Doesn't believe r_c is telling the truth about their skills",
+			"Mocks r_c for their unfailing belief in the warrior code",
+			"Is worried that r_c might be too guillible",
+			"Doesn't feel like they fit in with the other apprentices",
+			"Got into a debate with the other apprentices over the warrior code",
+			"Feels jealous of r_c's beliefs in StarClan",
+			"Wonders if they could ever be as great as the other apprentices",
+			"Feels like they're the odd one out",
+			"Is wondering if any of the other apprentices actually like them",
+			"Confessed to r_c they didn't actually want to be a clan cat"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ],
+        "random_status_constraint": [
+            "apprentice",
+			"medicine cat apprentice",
+			"mediator apprentice"
+        ]
+    },	
+    {
+        "id": "skeptic_warrior_apprentice_to_disabled",
+        "thoughts": [
+            "Wonders why if StarClan was real it would let cats be hurt like they are",
+			"Wonders at how brave r_c is",
+			"Wonders if r_c likes them",
+			"Talks to r_c about the accomodations the clan has set up for them",
+			"Helps r_c around the camp when they need it",
+			"Wonders if r_c would be better off as a kittypet",
+			"Talks to r_c about why they believe in StarClan",
+			"Wishes they could believe in the way of the clanlife as much as their disabled clanmates",
+			"Wonders what it would be like if r_c could be a real warrior"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ],
+        "perm_conditions": {
+            "r_c": [
+                "paralyzed",
+				"heavy soul",
+				"anxiety",
+				"declawed",
+				"ocd",
+				"fibro",
+				"deaf",
+				"blind"
+            ]
+		}
+    },		
+    {
+        "id": "dramatic_warrior_apprentice",
+        "thoughts": [
+            "Was caught in a lie",
+			"Dramatically flounced around the camp when they got told to wait to be made a warrior",
+			"Believes they are the main character",
+			"Has been moping most of the day over something small"
+        ],
+        "main_trait_constraint": [
+            "dramatic"
+        ]
+    },	
+    {
+        "id": "dreamer_warrior_apprentice",
+        "thoughts": [
+            "Drifted off during battle training",
+			"Last seen napping in a sunbeam",
+			"Was talking to themselves about old stories",
+			"Stares off into the distance with a dreamy look on their face",
+			"Has been swishing their tail all through training",
+			"Thinks they might be seeing spirits",
+			"Is wondering if they should have been a medicine cat apprentice",
+			"Is admiring the camp",
+			"Is admiring the stars and imagining themselves in the starryfields",
+			"Wonders if they're entirely alive"
+        ],
+        "main_trait_constraint": [
+            "dreamer"
+        ]
+    },	
+    {
+        "id": "wandering_warrior_apprentice",
+        "thoughts": [
+            "Was caught on the other side of o_c_n's border",
+			"Watches the stars and believes they could find their way home by them",
+			"Wants to run away",
+			"Wonders what's beyond the horizon",
+			"Believes they're made for something greater and far beyond here",
+			"Sits on the hill and just feels the wind in their pelt",
+			"Wonders what's beyond the mountains",
+			"Wonders if the world has an end",
+			"Heard an interesting rumour about Peltshifterplace",
+			"Wonders what been a kittypet is like",
+			"Feels jealous of a rabbit"
+        ],
+        "main_trait_constraint": [
+            "wandering"
+        ]
+    },
+  {
+    "id": "paralyzed_warrior_apprentice",
+    "thoughts": [
+      "Is eager to prove themselves capable",
+      "Refuses to let anyone say they can't be a warrior",
+      "Is the fasted cat on two legs",
+      "Carefully judges whether they can do their tasks for the day",
+      "Is proudly standing among their clanmates",
+      "Wonders if they could become leader one day",
+      "Hopes they're an inspiration",
+      "Knows they're complete even without use of their hindlegs"
+    ],
+    "perm_conditions": {
+      "m_c": [
+        "paralyzed"
+      ]
+    }
+  },
+  {
+    "id": "starwalker_warrior_apprentice",
+    "thoughts": [
+      "Is eager to prove themselves capable",
+      "Weaves through their battle training like it's a dance",
+      "Is very wriggly today",
+      "It chattering at anyone who comes close to them",
+      "Got distracted by some interesting bugs",
+      "Got distracted by some songbirds in the trees",
+      "Practices extra hard in the hopes to get ahead",
+      "Dreams that they might one day be leader",
+      "Wonders if peltshifters can speak cat",
+      "Wonders why kittypets don't try to escape",
+      "Found a kittypet's bell and played with it most of the afternoon"
+    ],
+    "perm_conditions": {
+      "m_c": [
+        "starwalker",
+        "boundless energy"
+      ]
+    }
+  },
+  {
+    "id": "anxious_warrior_apprentice",
+    "thoughts": [
+      "Pretends that they can't hear their mentor calling them for training",
+      "Is hiding in the nursery like a kitten",
+      "Jumped at a leaf that landed on their back",
+      "Isn't sure that they're capable enough to be a warrior",
+      "Is experiencing self doubt",
+      "Trained alone so they wouldn't have to feel watched",
+      "Messed up a practice move because they second guessed it",
+      "Tripped over their own paws trying to stop too fast",
+      "Is worried that they'll never get any better",
+      "Got scared of the mouse they were supposed to catch",
+      "Is worried about the clouds in the sky",
+      "Wondering if they should have been a medicine cat apprentice instead"
+    ],
+    "perm_conditions": {
+      "m_c": [
+        "anxiety"
+      ]
+    }
+  },	
+    {
+        "id": "peltshifted_warrior_apprentice",
+        "thoughts": [
+            "Feels jealous of peltshifters",
+			"Is irrantionally frustated at having four legs",
+			"Stepped on their own tail today",
+			"Tried to pick something up with their forepaws and failed",
+			"Is crying because they sat on their own tail",
+			"Insists on calling peltshifters humans",
+			"Attempted to plant seeds today",
+			"Was talking about strange peltshifter things again",
+			"Was seen on the edge of kittypet territory",
+			"Has been having strange dreams recently",
+			"Is struggling with something",
+			"Wonders what they done to deserve the warmth and familiarity of c_n",
+			"Is nosing around the nursery",
+			"Cries seeing their former nest in the nursery been thrown away"
+        ],
+        "main_trait_constraint": [
+            "peltshifted"
+        ]
+    }
 ]

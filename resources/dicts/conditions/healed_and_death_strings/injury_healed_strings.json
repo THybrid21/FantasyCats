@@ -227,5 +227,21 @@
 		"Thankfully for m_c the rash they've been suffering from has cleared up.",
 		"m_c is grateful that they're able to go about their day without any more itching or dry skin under their fur.",
 		"m_c purrs in satisfaction able to once more clean themselves without any extra irritation from a rash."
+	],
+	"sunblindness": [
+		"m_c is so relieved to be able to blink their eyes and find that once more they're able to see the world around them.",
+		"There's a lot of purring from m_c as they greet their friends and family in the clan."
+	],
+	"sunburn": [
+		"With relief m_c is able to go about their day without any wincing as their sunburn has cleared up.",
+		"m_c purrs as they come out of the den, skin clear of any last remnants of sunburn."
+	],
+	"severe sunburn": [
+		"m_c freely grooms their sides, purring at the relief and comfort it's able to give them.",
+		"Carefully m_c avoids the direct sunlight of the camp, they're not willing to risk getting another sunburn anytime soon."
+	],
+	"wrenched claws": [
+		"m_c is so relieved when the ache in their paws finally goes away.",
+		"m_c flexes their paws, checking if their claws are still there. That was such a scary experience."
 	]
 }

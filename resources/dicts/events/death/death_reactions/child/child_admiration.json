@@ -374,5 +374,69 @@
     "no_body": [
 
     ]
-  }
+  },
+  "snuggly": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "skeptic": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "dramatic": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  }, 
+  "rebellious": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "dreamer": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "wandering": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "stubborn": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "peltshifted" : {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  }	  
 }

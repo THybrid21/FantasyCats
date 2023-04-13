@@ -123,6 +123,10 @@
 		"nonverbal": [
 			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous they've just gone nonverbal.",
 			"m_c doesn't speak to anyone, preferring to use signs to communicate."
+		],
+		"ear buzzing": [
+			"r_c doesn't know how to help m_c when they come in complaining of a flie getting caught in their ears. There's no fly to be found.",
+			"m_c keeps stopping and shaking their head rapidly, trying to get rid of the buzzing that fills their ears."
 		]
     },
     "deaf": {
@@ -174,6 +178,11 @@
 			"r_c fusses as m_c comes in wincing. It's hard to see between their fur but clear by the state of m_c's pawpads that they have a bad rash.",
 			"m_c winces as they try to groom themselves between sneezes. The skin under their pelt blisters beneath their tongue.",
 			"Irritably m_c scratches at their fur rather uselessly. This rash is horrible and they're really starting to hate this season due to it."
+		],
+		"ear buzzing": [
+			"r_c sits beside m_c watching as they shake their head for the third time that afternood complaining about the buzzing.",
+			"It would seem that sniffles and a watery nose aren't enough for m_c, now their ears keep buzzing and it's quite disorientating.",
+			"m_c complains that their ears feel full of dandelion fluff and feathers."
 		]
     },
     "recurring shock": {
@@ -206,8 +215,101 @@
         "severe headache": [
             "r_c sees m_c headed towards the medicine cat den, wincing with every step, and ducks inside to prepare a nest for them in the darkest, quietest corner possible.",
             "m_c wakes up with pounding head pain and horrible light sensitivity. They curl up as tightly in their nest as they can, screwing their eyes shut and flattening their ears. There's no way they'll get work done today."
-        ]
+        ],
+		"ear buzzing": [
+			"r_c keeps rolling some stones over and over in the den beside m_c hoping that the sound will cancel out the buzzing that they complain about.",
+			"As if m_c doesn't have enough issues with their headaches, now their ears are buzzing and no matter how much they shake their head or hide it doesn't go away."
+		]
     },
+	"albinism": {
+		"sunblindness": [
+			"Seeing m_c been guided towards the medicine den r_c slips inside to make sure that everything is tucked away safely and neatly in preparation.",
+			"m_c winces at both the pain in their eyes as well as the fact that they can't really see and can only hear the clammour of their clanmates around them.",
+			"m_c curses their sensitive eyes, now they have to spend time recovering from the glare of the sun.",
+			"The light of the sun reflecting off the grass and pools of water on the ground have caused m_c's eyes to ache and their vision to vanish."
+		],
+		"partial hearing loss": [
+			"r_c has to call a few times before m_c seems to hear them for a talk about their ears. It's gentle but m_c still furiously denies that there's anything wrong.",
+			"The clan has noticed that it's taking a few repeats before m_c seems to actually hear what is been discussed.",
+			"m_c curls up in the shade of the den, frustrated by how the world seems a little bit duller recently."
+		],
+		"wasting disease": [
+			"m_c has been feeling really sick recently so they go to r_c to talk about it. After some discussion they're both left worried with the conclusion it might be wasting disease.",
+			"Knowing that they're a bit weaker than their clanmates m_c isn't surprised to find themselves extra tired and ill recently.",
+			"Even knowing they're a bit weaker than their clanmates m_c never expected to be feeling this weak. Scarily it feels like they're fading."
+		],
+		"headache": [
+			"r_c carefully brings some water over to m_c where they lie curled up in the medicine den with a headache.",
+			"The day is so bright, too bright for m_c that it makes them wince and go back into the den to curl up and avoid the punishing glow."
+		],
+		"sunburn": [
+			"r_c winces alongside m_c as they come into the medicine den, pale fur shining with the bright horrible red marks below.",
+			"They were only out in the sun for a short while... but it was long enough for m_c to get a sunburn.",
+			"m_c is feeling miserable and sore, regretting giving into the urge to nap in a sunbeam."
+		],
+		"running nose": [
+			"While it's only a small sniffle, m_c still goes to the medicine den and r_c just to make sure.",
+			"m_c trots to the medicine den with a runny nose."
+		]
+	},
+	"melanism": {
+		"sunblindness": [
+			"r_c listens to m_c as they complain about the sun's glare reflecting up into their eyes.",
+			"It's not uncommon for m_c to struggle with walking around at night.",
+			"m_c blinks out the darkness from their eyes, it doesn't work."
+		],
+		"heat stroke": [
+			"m_c weakly pants for someone to fetch r_c, something is more wrong than usual.",
+			"m_c finds themselves cursing their black fur, it makes them warm up too fast and now they can't cool down, panting and uselessly rolling in the coolest corner of the den they could find mind more than hazy."
+		],
+		"heat exhaustion": [
+			"r_c softly guides m_c into a much cooler and shaded corner of the medicine den. Away from the heat of the sun.",
+			"If there's one thing dark black fur isn't good for it's the heat. Poor m_c has been lying desperately in a puddle in the hopes to cool down."
+		],
+		"running nose": [
+			"After all the extra work that m_c has been doing for the clan they come to r_c with a small bit of a running nose just to be safe.",
+			"Overworking themselves has made m_c a little bit worn down and they've gotten a running nose.",
+			"m_c keeps sniffing and is ferried off to the medicine cat den."
+		]
+	},
+	"sphynxism": {
+		"absence": [
+			"r_c notices that m_c keeps stopping and staring off into the distance for moments before continuing, sometimes mid-sentence. Cautiously they come over to check on them and make sure all is well.",
+			"m_c keeps staring and trailing off from their thoughts.",
+			"m_c's head feels a bit fuzzy when they're wandering around the camp, each blink feels like they're missing a fewheartbeats or turns."
+		],
+		"sunblindness": [
+			"r_c winces alongside m_c as the sun shines and burns particularly brightly for the day outside the den.",
+			"In the glare of the sun m_c hisses because it makes their eyes and skin burn.",
+			"m_c shakes their head and ducks back into the den, the world outside is just particularly blinding."
+		],
+		"headache": [
+			"m_c curls up in the medicine den, they only raise their head to explain to r_c they just needed somewhere shaded and quiet so they could settle their headache.",
+			"There's a bunch of bees and fog in m_c's head.",
+			"m_c remains curled up in the den, their clanmates know to give them some peace and quiet to recover in."
+		],
+		"heat exhaustion": [
+			"m_c weakly lies in the medicine den while r_c attends to them. r_c reassures that there's no shame for struggling with the heat.",
+			"With m_c's sensitivity to the weather and changes it's no surprise that they're struggling in the heat of the days",			
+			"m_c is barely able to raise from their nest swaying on their feet and more than a little bit distracted seeing."
+		],
+		"sunburn": [
+			"r_c winces as m_c weakly comes into the den. Their bare side, tail and paws are horibbly red and blistered. It's all r_c can do to gently apply the herbal paste to soothe it.",
+			"m_c whimpers coming in out of the sunshine, their skin is blistered and painful, even a glance makes their denmates wince in sympathy.",
+			"Even the clouds aren't enough to protect m_c entirely from the consequences of a day out in the heat and bright of the sun."
+		],
+		"severe sunburn": [
+			"m_c can't even make it to the medicine den, having to request a denmate's assistance in getting r_c to attend to the painful blisters and burns from the sun's glare all ofter their pelt.",
+			"m_c can barely move without wincing. Their skin is all tight and blistered, it feels like not an inch of them was spared.",
+			"It feels like no part of m_c managed to avoid getting burnt in the sun's rays.",
+			"m_c regrets that they felt the need to relax in a sunbeam, it was just so inviting."
+		],
+		"whitecough": [
+			"r_c ferries a coughing m_c into the medicine den, best to secure things before everyone catches whitecough",
+			"Unsurprisingly m_c has not been able to avoid the risk of sickness from been outside without any fur to protect them from the elements.",
+			"Weakly m_c coughs their way into the medicine den."
+		]
+	},
 	"fibro": {
         "joint pain": [
             "r_c can only set aside a nest and some herbs as m_c comes in complaining of joint pain.",
@@ -431,28 +533,36 @@
 	},
 	"boundless energy": {
 		"zoomies": [
-			"This is a temporary string for r_c helping m_c with the zoomies.",
-			"This is a temporary symptoms string for m_c having the zoomies."		
+			"r_c watches bemused as m_c dashes into their den, bounces around cheerfully babbling something before zooming off again into the camp.",
+			"m_c's energy always brings joy to the rest of the clan but sometimes they seem to have far too much of it.",
+			"The peace of the camp is hardly disturbed by m_c playing around like a young kitten.",
+			"m_c feels filled with the need to move, to jump around and just move."
 		],
 		"absence": [
-			"This is a temporary string for r_c helping m_c with absence.",
-			"This is a temporary symptoms string for m_c with absence."
+			"m_c sits in the medicine den beside r_c just staring off into the distance.",
+			"While walking around m_c kind of zones out and stares into the distance for periods of time.",
+			"m_c sits in place staring, paws vaguely tensing and untensing as they do so."
 		],
 		"vivid daydreams": [
-			"This is a temporary string for r_c helping m_c with vivid daydreams.",
-			"This is a temporary symptoms string for m_c with vivid daydreams."
+			"m_c talks to r_c at length about all their ideas and dreams to help the clan.",
+			"It's not odd to see m_c running around camp with their heads somewhere in the clouds.",
+			"m_c purrs in a sunbeam while their mind is elsewhere."
 		],
 		"hyperfixation": [
-			"This is a temporary string for r_c helping m_c with hyperfixation.",
-			"This is a temporary symptoms string for m_c with hyperfixation."		
+			"m_c spins circles around r_c running around and screaming about their latest interest and hyperfixation.",
+			"m_c frustratedly digs their paws into the dirt of the camp struggling to focus on their tasks when they would rather be doing something else with their hyperfixation.",
+			"m_c's clanmates purr in amusement listening to their rapid babbling."
 		],
 		"indecision": [
-			"This is a temporary string for r_c helping m_c with indecision.",
-			"This is a temporary symptoms string for m_c with indecision."
+			"m_c comes in to see r_c, tail twitching as they consult with them on how to make decision making easier.",
+			"m_c stands beside the camp entry way somewhat frozen taling with the deputy about what patrol to potentially go on."
 		],
 		"impulsivity": [
-			"This is a temporary string for r_c helping m_c with impulsivity.",
-			"This is a temporary symptoms string for m_c with impulsivity."		
+			"r_c sighs as they watch m_c racing around camp and leaping into decisions without fully considering the details.",
+			"m_c steps up as a volunteer for a patrol before fully listening to what it involves.",
+			"Before anyone has told them to m_c went out on a patrol alone.",
+			"m_c keeps picking up shiny things.",
+			"While out on patrol m_c keeps racing off at the slightest sight of anything in their peripheral."
 		]
 	},
 	"antisocial": {
@@ -469,6 +579,12 @@
 		]
 	},
 	"ongoing sleeplessness": {
+		"sleeplessness": [
+			"r_c sits with m_c well into the night while they stare listlessly and somewhat forlornly at their paws and the bedding of the nest around them.",
+			"m_c really wishes that they could just sleep, as the dawn rises up around them with yet another sleeplessnight fading away.",
+			"Some of m_c's denmates are getting really annoyed by them getting up and disturbing everyone else when they wander off.",
+			"While it's good for m_c to keep busy at night, their denmates worry as they see their fur getting messier and messier from lack of energy to care."
+		],
 		"lethargy": [
 			"m_c goes to talk with r_c about how their lack of sleep has been affecting them emotionally.",
 			"With all the lack of sleep it's no surprise for m_c that they're finding it harder and harder to be happy.",
@@ -497,6 +613,28 @@
 		"constant nightmares": [
 			"m_c comes in to see r_c, picking up some poppy seeds in the hope for some temporary completely dream free sleep.",
 			"m_c whimpers as they wake up, pressing their ears flat. Bad enough they hardly sleep, now what little they do get is plagued with nightmares."
+		],
+		"ear buzzing": [
+			"Due to m_c's lack of proper sleep it's no surprise to r_c when they come in complaining of a buzzing in their ears that's not helping anything.",
+			"m_c grumbles about the ringing in their ears like the bell on a kittypet's collar."
+		]
+	},
+	"declawed": {
+		"an infected wound": [
+			"r_c hisses as m_c limps into the medicine den. They don't even have to check to know there's something wrong with m_c's paws.",
+			"m_c can barely walk. Their paws are angry and swollen.",
+			"Once again m_c finds themselves cursing the peltshifters who done this to them as their paws burn and ache painfully around their toes."
+		],
+		"sore": [
+			"r_c sympathetically provides wrappings for m_c's sore paws. The wounds healed but still aching.",
+			"m_c winces as they flex a paw.",
+			"Without their claws m_c has been struggling to rebalance themselves and with all the walking around camp they find their paws aching and sore.",
+			"Waking up m_c knows it's not a good day, their paws are tender at even the slightest of brushes against the soft material of their nest."
+		],
+		"joint pain": [
+			"m_c talks with r_c in the medicine den about the soreness in the joints of their paws.",
+			"m_c hisses as they try to walk, the joints in their paws feel off and unbalanced.",
+			"With much pain m_c limps their way to the medicine den, paws feeling stiff and awkward."
 		]
 	}
 }

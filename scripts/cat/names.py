@@ -16,6 +16,7 @@ from .pelts import (
     tabbies,
     spotted,
     exotic,
+    sparkle_cats,
     torties,
     )
 
@@ -141,6 +142,8 @@ class Name():
                         possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
                     elif pelt in exotic or tortiebase in exotic:
                         possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
+                    elif pelt in exotic or tortiebase in sparkle_cats:
+                        possible_suffix_categories.append(self.names_dict["sparkle_suffixes"])
                     elif pelt in torties:
                         possible_suffix_categories.append(self.names_dict["tortie_suffixes"])   
                 if possible_suffix_categories:    

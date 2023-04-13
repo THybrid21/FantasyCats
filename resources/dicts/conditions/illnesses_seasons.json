@@ -7,7 +7,8 @@
 		"ticks": 4,
 		"zoomies": 3,
 		"sleeplessness": 10,
-		"burn out": 3
+		"burn out": 3,
+		"ear buzzing": 5
     },
     "Greenleaf":{
         "fleas": 2,
@@ -16,7 +17,8 @@
         "heat stroke":1,		
 		"anxiety attack": 3,
 		"ticks": 3,
-		"sleeplessness": 10
+		"sleeplessness": 10,
+		"ear buzzing": 5		
     },
     "Leaf-fall":{
         "fleas": 50,
@@ -27,7 +29,8 @@
 		"anxiety attack": 3,
 		"ticks": 50,
 		"seasonal lethargy": 50,
-		"sleeplessness": 10
+		"sleeplessness": 10,
+		"ear buzzing": 5
     },
     "Leaf-bare":{
         "fleas": 90,
@@ -39,6 +42,7 @@
 		"anxiety attack": 3,
 		"ticks": 90,
 		"sleeplessness": 10,
-		"burn out": 3
+		"burn out": 3,
+		"ear buzzing": 5
     }
 }

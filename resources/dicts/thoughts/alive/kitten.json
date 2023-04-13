@@ -17,7 +17,8 @@
     {
         "id": "kit_alive_elder",
         "thoughts": [
-            "Was nipped on the rump by an elder for being naughty"
+            "Was nipped on the rump by an elder for being naughty",
+			"Is listening intently as r_c tells them stories of the clan from the past."
         ],
         "random_status_constraint": [
             "elder"
@@ -217,6 +218,69 @@
         ],
         "main_trait_constraint": [
             "troublesome"
+        ]
+    },
+    {
+        "id": "snuggly_kit",
+        "thoughts": [
+            "Is snuggling up to their parents bellies",
+			"Is looking up at r_c hoping that they will snuggle with them",
+			"Is snuggled up with the elders in the den",
+			"Failing at playing hide and seek because they purr to loud",
+			"Purrs really loudly at the sight of r_c",
+			"Snuggling with the medicine cat",
+			"Really, really wants to snuggle"
+        ],
+        "main_trait_constraint": [
+            "snuggly"
+        ]
+    },
+    {
+        "id": "rebellious_kit",
+        "thoughts": [
+            "Refuses to listen to their parents lecturing them on StarClan",
+			"Is trying to sneak out of the camp",
+			"Is complaining about why they have to learn the Warrior Code",
+			"Doesn't want to listen to r_c lecture them",
+			"Is wondering if StarClan is even real",
+			"Refuses to eat the prey given to them",
+			"Is badgering r_c on the details of the Warrior Code",
+			"Wishes they could do what they wanted",
+			"Is refusing to take their herbs"
+        ],
+        "main_trait_constraint": [
+            "rebellious"
+        ]
+    },	
+    {
+        "id": "stubborn_kit",
+        "thoughts": [
+            "Refuses to listen to their parents lecturing them on StarClan",
+			"Is trying to sneak out of the camp",
+			"Is complaining about why they have to learn the Warrior Code",
+			"Doesn't want to listen to r_c lecture them",
+			"Refuses to eat the prey given to them",
+			"Wishes they could do what they wanted",
+			"Is whining about been groomed",
+			"Doesn't want to play with the other kittens"
+        ],
+        "main_trait_constraint": [
+            "stubborn"
+        ]
+    },	
+    {
+        "id": "peltshifted_kit",
+        "thoughts": [
+            "Is struggling to learn to walk",
+			"Mewls because they still don't know how to talk",
+			"Is delayed at learning their basic skills",
+			"Keeps crying in their sleep",
+			"Whines and shakes because they have confusing dreams",
+			"Is visiting the medicine den... again",
+			"Tripped over their own paws",
+			"Is clinging to a kittypet toy"
+        "main_trait_constraint": [
+            "peltshifted"
         ]
     }
 ]

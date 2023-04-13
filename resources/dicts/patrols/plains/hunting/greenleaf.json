@@ -32,7 +32,7 @@
         ]
     },
   {
-        "patrol_id": "pln_hunt_twolegsobject1",
+        "patrol_id": "pln_hunt_peltshiftersobject1",
         "biome": "plains",
         "season": "greenleaf",
         "tags": [
@@ -42,17 +42,17 @@
             "LEFTEAR",
             "torn ear"
         ],
-        "intro_text": "As the patrol wander near a Thunderpath, they watch Twolegs throw something from a monster. Intrigued, they wander over.",
-        "decline_text": "The patrol decides to avoid the Twoleg object.",
+        "intro_text": "As the patrol wander near a Thunderpath, they watch Peltshifters throw something from a monster. Intrigued, they wander over.",
+        "decline_text": "The patrol decides to avoid the Peltshifter object.",
         "chance_of_success": 50,
         "exp": 10,
         "success_text": [
             "The patrol interprets the purpose of the object. It seems to be a tiny compact den made of thin paper, with delicious grease on the inside. How strange.",
             null,
-            "s_c looks closely at the Twoleg object, studying it, wondering how specifically the Twolegs managed to make it stick together. It'd be wonderful if c_n had access to such good prey carrying bags."
+            "s_c looks closely at the Peltshifter object, studying it, wondering how specifically the Peltshifters managed to make it stick together. It'd be wonderful if c_n had access to such good prey carrying bags."
         ],
         "fail_text": [
-            "The patrol can't seem to interpret the purpose of the object. Twolegs are just mystifying.",
+            "The patrol can't seem to interpret the purpose of the object. Peltshifters are just mystifying.",
             null,
             null,
             "As r_c pokes around the strange smelling whatever-it-is, they poke past a piece of metal that tears through their ear, sending them skittering backwards with a yelp."

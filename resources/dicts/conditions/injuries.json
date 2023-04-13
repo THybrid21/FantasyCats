@@ -222,7 +222,7 @@
             },
 			{
 				"name": "rat bite fever",
-				"chance": 10
+				"chance": 5
 			}
         ],
         "also_got": [
@@ -1454,6 +1454,148 @@
             "poppy",
 			"comfrey",
 			"elder_leaves"
+        ]
+    },	
+    "sunblindness":{
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 30,
+            "kitten": 30,
+            "adolescent": 50,
+            "young adult": 70,
+            "adult": 70,
+            "senior adult": 70,
+            "senior": 50
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [],
+        "also_got": [
+        ],
+        "cause_permanent": [
+            "failing eyesight"
+        ],
+        "herbs": [
+            "cobwebs",
+            "goldenrod",
+            "marigold",
+            "oak_leaves",
+            "wild_garlic",
+            "juniper",
+            "ragwort",
+            "moss"
+        ]
+    },
+    "sunburn":{
+        "duration": 2,        
+		"severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 25
+            }
+        ],
+		"also_got": [
+			"heat exhaustion"
+		],
+        "cause_permanent": [
+        ],
+        "herbs": [
+            "cobwebs",
+            "marigold",
+            "wild_garlic",
+            "oak_leaves",
+            "goldenrod",
+            "juniper",
+            "ragwort",
+            "poppy",
+            "moss"
+        ]
+    },	
+    "severe sunburn":{
+        "duration": 4,
+        "severity": "severe",
+        "medicine_duration": 3,
+        "mortality": {
+            "newborn": 50,
+            "kitten": 50,
+            "adolescent": 100,
+            "young adult": 130,
+            "adult": 130,
+            "senior adult": 130,
+            "senior": 100
+        },
+        "illness_infectiousness": 0,
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 15
+            },
+			{
+				"name": "rash",
+				"chance": 15
+			}
+        ],
+		"also_got": [
+			"heat exhaustion",
+			"heat stroke"
+		],
+        "cause_permanent": [
+			"wasting disease"
+        ],
+        "herbs": [
+            "cobwebs",
+            "marigold",
+            "wild_garlic",
+            "oak_leaves",
+            "goldenrod",
+            "juniper",
+            "ragwort",
+            "poppy",
+            "moss"
+        ]
+    },
+    "wrenched claws":{
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [],
+        "also_got": [
+            "bruises",
+            "sore",
+            "joint pain"
+        ],
+        "cause_permanent": [
+			"declawed"	
+        ],
+        "herbs": [
+            "juniper",
+            "ragwort",
+            "daisy"
         ]
     },	
     "pregnant": {

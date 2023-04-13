@@ -406,6 +406,10 @@
 			{
 				"name": "nonverbal",
 				"chance": 20
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 15
 			}
         ],
         "herbs": []
@@ -523,6 +527,10 @@
 			{
 				"name": "rash",
 				"chance": 45
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 20
 			}
         ],
         "herbs": []
@@ -631,13 +639,142 @@
             {
                 "name": "headache",
                 "chance": 20
-            }
+            },
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			}			
         ],
         "herbs": [
             "poppy",
             "juniper"
         ]
     },
+        "albinism": {
+            "severity": "major",
+            "congenital": "always",
+            "moons_until": 2,
+            "mortality": {
+                "newborn": 35,
+                "kitten": 35,
+                "adolescent": 45,
+                "young adult": 60,
+                "adult": 60,
+                "senior adult": 60,
+                "senior": 50
+            },
+            "illness_infectiousness": [
+            ],
+            "risks": [
+                {
+                    "name": "sunblindness",
+                    "chance": 15
+                },
+                {
+                    "name": "partial hearing loss",
+                    "chance": 30
+                },
+                {
+                    "name": "wasting disease",
+                    "chance": 50
+                },
+                {
+                    "name": "headache",
+                    "chance": 15
+                },
+				{
+					"name": "sunburn",
+					"chance": 25
+				},
+				{
+					"name": "running nose",
+					"chance": 15
+				}
+            ],
+            "herbs": []
+        },
+        "melanism": {
+            "severity": "minor",
+            "congenital": "always",
+            "moons_until": 2,
+            "mortality": {
+                "newborn": 90,
+                "kitten": 90,
+                "adolescent": 0,
+                "young adult": 0,
+                "adult": 0,
+                "senior adult": 0,
+                "senior": 0
+            },
+            "illness_infectiousness": [
+            ],
+            "risks": [
+                {
+                    "name": "sunblindness",
+                    "chance": 45
+                },
+				{
+					"name": "heat stroke",
+					"chance": 75
+				},
+				{
+					"name": "heat exhaustion",
+					"chance": 25
+				},
+				{
+					"name": "running nose",
+					"chance": 15
+				}		
+            ],
+            "herbs": []
+        },
+        "sphynxism": {
+            "severity": "major",
+            "congenital": "always",
+            "moons_until": 0,
+            "mortality": {
+                "newborn": 25,
+                "kitten": 25,
+                "adolescent": 30,
+                "young adult": 45,
+                "adult": 50,
+                "senior adult": 50,
+                "senior": 45
+            },
+            "illness_infectiousness": [
+            ],
+            "risks": [
+                {
+                    "name": "absence",
+                    "chance": 45
+                },
+                {
+                    "name": "sunblindness",
+                    "chance": 45
+                },
+				{
+					"name": "headache",
+					"chance": 25
+				},
+				{
+					"name": "heat exhaustion",
+					"chance": 25
+				},
+				{
+					"name": "sunburn",
+					"chance": 15
+				},
+				{
+					"name": "severe sunburn",
+					"chance": 45
+				},
+				{
+					"name": "whitecough",
+					"chance": 50
+				}				
+            ],
+            "herbs": []
+        },
 	"fibro": {
 		"severity": "major",
 		"congenital": "always",
@@ -879,11 +1016,7 @@
             {
                 "name": "paranoia",
                 "chance": 90
-            },
-			{
-				"name": "world tired",
-				"chance": 120
-			}
+            }
        ],
         "herbs":[ 
 			"chamomile",
@@ -1004,6 +1137,10 @@
         ],
         "risks": [
 			{
+				"name": "sleeplessness",
+				"chance": 10
+			},
+			{
 				"name": "lethargy",
 				"chance": 30
 			},
@@ -1022,12 +1159,50 @@
 			{
 				"name": "constant nightmares",
 				"chance": 10
-			}
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			}			
         ],
         "herbs": [
             "honey",
             "chamomile",
             "poppy"
 		]
-    }	
+    },
+    "declawed": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 70
+            },
+            {
+                "name": "sore",
+                "chance": 10
+            },
+			{
+				"name": "joint pain",
+				"chance": 10
+			}
+        ],
+        "herbs": [
+            "juniper",
+            "ragwort"
+        ]
+    }
 }

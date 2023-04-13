@@ -6,12 +6,139 @@
   <component name="ChangeListManager">
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Credit List.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/credits_text.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/credits_text.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/pregnancy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/pregnancy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony-master.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony-master.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony_traits.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony_traits.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_admiration.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_admiration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_comfort.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_comfort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_dislike.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_dislike.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_jealousy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_jealousy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_platonic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_platonic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_trust.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/child/child_trust.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_admiration.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_admiration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_comfort.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_comfort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_dislike.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_dislike.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_jealousy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_jealousy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_platonic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_platonic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_romantic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_romantic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_trust.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/general/general_trust.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_admiration.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_admiration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_comfort.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_comfort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_dislike.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_dislike.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_jealousy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_jealousy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_romantic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_romantic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_trust.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/mate/mate_trust.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_admiration.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_admiration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_comfort.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_comfort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_dislike.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_dislike.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_jealousy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_jealousy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_platonic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_platonic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_trust.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/parent/parent_trust.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_admiration.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_admiration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_comfort.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_comfort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_dislike.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_dislike.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_jealousy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_jealousy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_platonic.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_platonic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_trust.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/death/death_reactions/sibling/sibling_trust.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/disasters/forest.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/disasters/forest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/beach/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/beach/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/mountainous/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/mountainous/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/elder.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/elder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/medicine.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/medicine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/warrior.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/warrior.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/names/names.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/names/names.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/beach/border/leaf-bare.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/beach/border/leaf-bare.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/beach/hunting/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/beach/hunting/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/beach/hunting/greenleaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/beach/hunting/greenleaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/beach/training/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/beach/training/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/beach/training/leaf-fall.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/beach/training/leaf-fall.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/desert/hunting/hunting_desert.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/desert/hunting/hunting_desert.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/disaster.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/disaster.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/forest/hunting/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/forest/hunting/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/forest/hunting/greenleaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/forest/hunting/greenleaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/forest/training/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/forest/training/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/general/border.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/general/border.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/general/medcat.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/general/medcat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/hunting/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/hunting/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/training/greenleaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/training/greenleaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/training/newleaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/mountainous/training/newleaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/new_cat.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/new_cat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/new_cat_hostile.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/new_cat_hostile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/new_cat_welcoming.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/new_cat_welcoming.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/plains/hunting/any.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/plains/hunting/any.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/plains/hunting/greenleaf.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/plains/hunting/greenleaf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/border/border_wetlands.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/border/border_wetlands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/hunting/hunting_wetlands.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/hunting/hunting_wetlands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/training/training_wetlands.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/patrols/wetlands/training/training_wetlands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/personality_compatibility.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/personality_compatibility.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/relationship_events/normal_interactions/platonic/increase.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/relationship_events/normal_interactions/platonic/increase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/relationship_events/normal_interactions/romantic/increase.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/relationship_events/normal_interactions/romantic/increase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/snippet_collections.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/snippet_collections.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/exiled.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/exiled.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/loner.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/loner.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/rogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/alive_outside/rogue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/deputy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/deputy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/leader.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/leader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator_apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator_apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat_apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat_apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/newborn.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/newborn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/dead/darkforest/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/dead/darkforest/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/dead/darkforest/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/dead/darkforest/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/dead/starclan/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/dead/starclan/general.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/game_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/game_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gamesettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gamesettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/appearance_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/appearance_utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/cats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/cats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/names.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/names.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/pelts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/pelts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/cat/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/condition_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/condition_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/relationship/pregnancy_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/relationship/pregnancy_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/scar_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/scar_events.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/screens/cat_screens.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/screens/cat_screens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/accessories/booties.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/accessories/booties.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/dicts/tint.json" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/dicts/tint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/eczma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/eyes.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/eyes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/eyes2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/eyes2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/eyes2hybrid.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/eyes2hybrid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/eyeshybrid.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/eyeshybrid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/lineart.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/lineart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/manes.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/manes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/patches/whitepatches.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/whitepatches.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/scars.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/scars.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/shadersnewwhite.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/shadersnewwhite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/skin.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/skin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/skin2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/skin2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/skinsphynx.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/skinsphynx.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/solid/ponitpride.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/solid/ponitpride.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/CREDITS.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/clan_cats.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/102_conditions.json" beforeDir="false" />
@@ -597,6 +724,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2McitrGZJiVRB9sFHrsiCL7gTyk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -607,7 +737,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkdbl/Documents/GitHub/clangen&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkdbl/Documents/GitHub/clangen&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
 }</component>
   <component name="RecentsManager">

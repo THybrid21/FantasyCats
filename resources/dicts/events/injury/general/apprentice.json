@@ -211,10 +211,10 @@
             "scar",
             "CATBITE"
         ],
-        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Twoleg object.",
+        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Peltshifter object.",
         "history_text": [
-            "m_c was scarred by r_c for messing with a Twoleg object.",
-            "m_c died after their mentor punished them for messing with a Twoleg object.",
+            "m_c was scarred by r_c for messing with a Peltshifter object.",
+            "m_c died after their mentor punished them for messing with a Peltshifter object.",
             null
         ],
         "cat_trait": ["troublesome", "childish", "playful", "adventurous"],
@@ -517,10 +517,10 @@
             "scar",
             "TAILSCAR"
         ],
-        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Twoleg object.",
+        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Peltshifter object.",
         "history_text": [
-            "m_c was scarred by r_c for messing with a Twoleg object.",
-            "m_c died after their mentor punished them for messing with a Twoleg object.",
+            "m_c was scarred by r_c for messing with a Peltshifter object.",
+            "m_c died after their mentor punished them for messing with a Peltshifter object.",
             null
         ],
         "cat_trait": ["troublesome", "childish", "playful", "adventurous"],
@@ -662,10 +662,10 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c's leg was badly hurt after their mentor used a Twoleg trap during a training exercise'.",
+        "event_text": "m_c's leg was badly hurt after their mentor used a Peltshifter trap during a training exercise'.",
         "history_text": [
-            "m_c was scarred when their mentor used a Twoleg trap for training.",
-            "m_c died after their mentor used a Twoleg trap for training.",
+            "m_c was scarred when their mentor used a Peltshifter trap for training.",
+            "m_c died after their mentor used a Peltshifter trap for training.",
             null
         ],
         "cat_trait": null,

@@ -5,7 +5,8 @@
             "Mewls pitifully for milk",
             "Tries to figure out all of the smells around them",
             "Snoozes peacefully",
-            "Tries to open their eyes, but it's all blurry"
+            "Tries to open their eyes, but it's all blurry",
+			"Is confused where they are"
         ],
         "main_age_constraint": [
             "newborn"

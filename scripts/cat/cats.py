@@ -10,7 +10,12 @@ from ..events_module.generate_events import GenerateEvents
 
 import ujson
 
-from .pelts import describe_appearance
+from .pelts import (
+    describe_appearance,
+    sphynx,
+    albino_sprites,
+    melanistic_sprites,
+)
 from .names import Name
 from .appearance_utility import (
     init_pelt,
@@ -44,22 +49,26 @@ class Cat():
         'confident', 'daring', 'faithful', 'fierce', 'insecure',
         'lonesome', 'loving', 'loyal', 'nervous', 'playful',
         'responsible', 'righteous', 'shameless', 'sneaky', 'strange', 'strict',
-        'thoughtful', 'troublesome', 'vengeful', 'wise'
+        'thoughtful', 'troublesome', 'vengeful', 'wise', 'skeptic', 'dramatic',
+        'rebellious', 'dreamer', 'wandering', 'stubborn', 'peltshifted'
     ]
     kit_traits = [
         'attention-seeker', 'bossy', 'bouncy', 'bullying', 'charming',
         'daring', 'daydreamer', 'impulsive', 'inquisitive', 'insecure',
-        'nervous', 'noisy', 'polite', 'quiet', 'sweet', 'troublesome'
+        'nervous', 'noisy', 'polite', 'quiet', 'sweet', 'troublesome', 
+        'snuggly', 'rebellious', 'stubborn', 'peltshifted'
     ]
     personality_groups = {
         'Outgoing': ['adventurous', 'bold', 'charismatic', 'childish', 'confident', 'daring',
-                     'playful', 'righteous', 'attention-seeker', 'bouncy', 'charming', 'noisy'],
+                     'playful', 'righteous', 'attention-seeker', 'bouncy', 'charming', 'noisy', 
+                     'dramatic', 'snuggly'],
         'Benevolent': ['faithful', 'loving', 'responsible', 'thoughtful', 'wise', 'inquisitive',
-                       'polite', 'sweet'],
+                       'polite', 'sweet', 'dreamer', 'wandering'],
         'Abrasive': ['ambitious', 'bloodthirsty', 'cold', 'fierce', 'shameless', 'strict',
-                     'troublesome', 'vengeful', 'bossy', 'bullying', 'impulsive'],
+                     'troublesome', 'vengeful', 'bossy', 'bullying', 'impulsive', 'rebellious',
+                     'stubborn'],
         'Reserved': ['calm', 'careful', 'insecure', 'lonesome', 'loyal', 'nervous', 'sneaky',
-                     'strange', 'daydreamer', 'quiet'],
+                     'strange', 'daydreamer', 'quiet', 'skeptic', 'peltshifted'],
     }
     ages = [
         'newborn', 'kitten', 'adolescent', 'young adult', 'adult', 'senior adult',
@@ -156,12 +165,12 @@ class Cat():
     # Ranges are inclusive to both bounds
     experience_levels_range = {
         "untrained": (0, 0),
-        "trainee": (1, 50),
-        "prepared": (51, 110),
-        "competent": (110, 170),
-        "proficient": (171, 240),
-        "expert": (241, 320),
-        "master": (321, 321)
+        "trainee": (1, 75),
+        "prepared": (76, 150),
+        "competent": (151, 225),
+        "proficient": (226, 300),
+        "expert": (301, 375),
+        "master": (376, 376)
     }
 
     all_cats: Dict[str, Cat] = {}  # ID: object
@@ -751,7 +760,7 @@ class Cat():
                 self.name.prefix) + 'kit. They smile as they finally become a warrior of the Clan and are now named ' + str(
                 self.name) + '.', "ceremony", involved_cats))
         elif self.status in ['kittypet', 'loner', 'rogue', 'former Clancat']:
-            if self.moons == 0:
+            if self.moons < 2:
                 self.status = 'newborn'
             elif self.moons < 6:
                 self.status = "kitten"
@@ -1148,7 +1157,7 @@ class Cat():
             return
 
         self.moons += 1
-        if self.moons == 1:
+        if self.moons == 2:
             self.status = 'kitten'
         self.in_camp = 1
 
@@ -1824,6 +1833,13 @@ class Cat():
             cat.scars.append('NOPAW')
         elif new_condition == "born without a tail":
             cat.scars.append('NOTAIL')
+        elif new_condition == "sphynxism":
+            cat.skin = choice(sphynx)
+            cat.pelt.length = 'short'
+        elif new_condition == "albinism":
+            cat.skin = choice(albino_sprites)
+        elif new_condition == "melanism":
+            cat.skin = choice(melanistic_sprites)  
 
         self.get_permanent_condition(new_condition, born_with=True)
 

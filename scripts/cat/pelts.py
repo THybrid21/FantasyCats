@@ -626,7 +626,10 @@ pelt_c_no_bw = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD
 
 tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR',
                   'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
-                  'ROBIN', 'BRINDLE', 'PAIGE']
+                  'ROBIN', 'BRINDLE', 'PAIGE', 'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 
+                  'BROKENFOUR', 'GLITCH', 'WAVE', 'STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL', 'SPOTSCHAOS', 
+                  'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 'TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK',
+                  'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK',  'FALSESOLID', 'SKELEMASK', 'DALMATIONSPOTS', 'LYNXMASK']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
                'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
@@ -677,7 +680,7 @@ scars1 = ["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT",
           "BOTHBLIND", "BEAKCHEEK", "BEAKLOWER", "CATBITE", "RATBITE", "QUILLCHUNK", "QUILLSCRATCH"]
 scars2 = ["LEFTEAR", "RIGHTEAR", "NOTAIL", "HALFTAIL", "NOPAW", "NOLEFTEAR", "NORIGHTEAR", "NOEAR"]
 scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "FROSTFACE", "FROSTTAIL", "FROSTMITT",
-          "FROSTSOCK", "RASH"]
+          "FROSTSOCK", "RASH", "DECLAWED"]
 
 # make sure to add plural and singular forms of new accs to acc_display.json so that they will display nicely
 plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
@@ -781,14 +784,12 @@ skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DAR
                 'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'BLACKMANE', 'REDMANE', 
                 'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE', 'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'DARKSALMONMANE', 
                 'SALMONMANE', 'PEACHMANE', 'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 'BLUEMANE', 'LIGHTBLUEMANE']
-skin_sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
-                'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE']
-albino_sprites = ['ALBINO', 'ALBINOSPHYNX', 'ALBINOWING', 'ALBINOMANE']
-melanistic_sprites = ['MELANISTIC', 'MELANISTICSPHYNX', 'MELANISTICWING', 'MELANISTICMANE'] 
+albino_sprites = ['ALBINO', 'ALBINOWING', 'ALBINOMANE']
+melanistic_sprites = ['MELANISTIC', 'MELANISTICWING', 'MELANISTICMANE'] 
 wing_sprites = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
                 'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
                 'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING']
-skin_categories = [skin_sprites, skin_sphynx, albino_sprites, melanistic_sprites, wing_sprites]
+skin_categories = [skin_sprites, wing_sprites]
 sphynx = ['S_BLACK', 'S_RED', 'S_PINK', 'S_DARKBROWN', 'S_BROWN', 'S_LIGHTBROWN', 'S_DARK', 'S_DARKGREY', 'S_GREY', 'S_DARKSALMON',
             'S_SALMON', 'S_PEACH', 'S_DARKMARBLED', 'S_MARBLED', 'S_LIGHTMARBLED', 'S_DARKBLUE', 'S_BLUE', 'S_LIGHTBLUE', 
             'ALBINOSPHYNX', 'MELANISTICSPHYNX']
@@ -1093,7 +1094,8 @@ def describe_appearance(cat, short=False):
             "darkgrey": "grey",
             "shinymew": "sky",
             "sonic": "blue",
-            "darksalmon": "salmon",
+            "samon": "salmon",
+            "darksamon": "salmon",
             "strakit": "purple",
             "gender": "blurple",
             "redneg": "blurple"
@@ -1108,7 +1110,8 @@ def describe_appearance(cat, short=False):
             "darkgrey": "dark grey",
             "shinymew": "shiny mew",
             "sonic": "sonic blue",
-            "darksalmon": "dark salmon",
+            "samon": "salmon",
+            "darksamon": "dark salmon",
             "strakit": "starkit purple",
             "gender": "genderfluid blurple",
             "redneg": "genderfluid blurple"
@@ -1128,7 +1131,7 @@ def describe_appearance(cat, short=False):
         "Skele": "c_n skeleton",
         "Hooded": "hooded charcoal c_n tabby",
         "Ponit": "bleach point c_n",
-        "Spirit": "c_ng hostly spirit",
+        "Spirit": "c_n ghostly spirit",
         "WolfBicolour": "c_n painted wolf",
         "SparkleTabby": "c_n sparkling tabby",
         "SparkleSpeckled": "c_n sparkling speckled",
@@ -1142,9 +1145,9 @@ def describe_appearance(cat, short=False):
     if color_name in renamed_colors:
         color_name = renamed_colors[color_name]
 
-    if cat.skin in albino_sprites:
+    if cat.skin in albino_sprites or cat.skin == "ALBINOSPHYNX":
         color_name = "albino"      
-    elif cat.skin in melanistic_sprites:
+    elif cat.skin in melanistic_sprites or cat.skin == "MELANISTICSPHYNX":
         color_name = "melanistic"  
 
     if cat.pelt.name not in ["SingleColour", "TwoColour", "Wolf", "WolfBicolour", 
@@ -1179,7 +1182,7 @@ def describe_appearance(cat, short=False):
             patches_color = cat.tortiecolour.lower()
             if patches_color in renamed_colors:
                 patches_color = renamed_colors[patches_color]
-            color_name = f"{color_name}/{patches_color}"
+            color_name = f"{color_name}-{patches_color}"
             
             if cat.pelt.colour in black_colours + grey_colours + white_colours + blue_colours and \
                 cat.tortiecolour in black_colours + grey_colours + white_colours + blue_colours:
@@ -1221,7 +1224,7 @@ def describe_appearance(cat, short=False):
     else:
         color_name = f"{color_name} eli"
 
-    if cat.white_patches and cat.skin not in albino_sprites + melanistic_sprites:
+    if cat.white_patches and cat.skin not in albino_sprites + melanistic_sprites + ["ALBINOSPHYNX", "MELANISTICSPHYNX"]:
         if cat.white_patches in high_white + mostly_white and cat.pelt.name != "Calico":
             if cat.white_patches_tint != "none":            
                 color_name = f"{color_name} with patches of {cat.white_patches_tint}"
@@ -1234,7 +1237,7 @@ def describe_appearance(cat, short=False):
                 color_name = f"{color_name} with small patches of white" 
 
     if not short and cat.eye_colour in sus_eyes:
-        color_name = f"{color_name} is looking sus"
+        color_name = f"{color_name} looking sus"
 
     # Here is the place where we can add some additional details about the cat, for the full non-short one. 
     # These include notable missing limbs, vitiligo, long-furred-ness, and 3 or more scars. 

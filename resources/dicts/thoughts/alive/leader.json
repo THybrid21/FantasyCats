@@ -83,7 +83,45 @@
         "main_trait_constraint": [
             "strange"
         ]
-    }
+    },
+	    {
+        "id": "skeptic_leader",
+        "thoughts": [
+            "Doesn't understand how they have managed to become leader",
+			"Doesn't feel worthy of the power that they feel thrumming under their pelt",
+			"Shakes their head and insists that they only have one life and they won't waste it",
+			"Stands proud to lead their clan",
+			"Is thinking about how to handle some news the medicine cat has told them",
+			"Is worrying abpout the changing seasons",
+			"Is worried about the whispers of peltshifter movements",
+			"Recently met a kittypet on the border",
+			"Is thinking about the future of c_n",
+			"Wonders if they should meet with the leader of o_c_n to talk about the recent revelations",
+			"Is worried about the next gathering",
+			"Doesn't feel worthy to be the leader",
+			"Is questioning if they should have been chosen at all"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+	    {
+        "id": "wandering_leader",
+        "thoughts": [
+            "Feels like the pressure is too much",
+			"Wants to travel to the other clans to get away from the stifling pressure of leadership",
+			"Left the clan alone for a couple of weeks",
+			"Took a run in the night and encourages their clanmates to do the same",
+			"Came back to camp this morning smelling of kittypet food",
+			"Is deeply considering abdicating their position to the deputy",
+			"Is antsy about something or other",
+			"Wants to run away from the clan entirely",
+			"Misses their freedom"
+        ],
+        "main_trait_constraint": [
+            "wandering"
+        ]
+    }	
 ]
 
 

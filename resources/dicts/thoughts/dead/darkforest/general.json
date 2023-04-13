@@ -65,5 +65,38 @@
         "random_living_status": [
             "living"
         ]
-    }
+    },
+    {
+        "id": "skeptic_dark_forest_cat",
+        "thoughts": [
+            "Shivers in the darkness of this forest",
+			"Wishes that they knew where they were",
+			"Wonders if they're actually still alive.",
+			"Thinks they saw another cat and hisses",
+			"Curses the Warrior Code",
+			"Is failing to groom muck from their coat",
+			"Looks up and wonders where the stars are",
+			"Thinks they found the tunnel to StarClan the other night",
+			"Is hoping that they fade soon",
+			"Wishes that death was nothingness"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+    {
+        "id": "rebellious_dark_forest_cat",
+        "thoughts": [
+            "Doesn't think they deserve this",
+			"Refuses to let the thorns keep them trapped here",
+			"Hisses and slashes at the shadows around them",
+			"Yowls and curses c_n for abandoning them to this place",
+			"Is thinking of how to escape this place",
+			"Refuses to admit that they brought this upon themselves"
+        ],
+        "main_trait_constraint": [
+            "rebellious",
+			"stubborn"
+        ]
+    },	
 ]

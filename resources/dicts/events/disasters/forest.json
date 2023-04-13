@@ -276,7 +276,7 @@
     }
   },
   {
-    "event": "Twoleg Invasion",
+    "event": "Peltshifter Invasion",
     "camp": [
       "any"
     ],
@@ -288,15 +288,15 @@
     "duration": 2,
     "rarity": "common",
     "trigger_events": [
-      "Twolegs have been spotted everywhere around c_n's territory, crawling in and out of brightly colored nests that have appeared out of nowhere, scaring off all the prey and trampling all the plants in the area. Some of the Twolegs even have fire! Patrols will have to be organized to keep an eye on them."
+      "Peltshifters have been spotted everywhere around c_n's territory, crawling in and out of brightly colored nests that have appeared out of nowhere, scaring off all the prey and trampling all the plants in the area. Some of the Peltshifters even have fire! Patrols will have to be organized to keep an eye on them."
     ],
     "progress_events": {
       "moon1": [
-        "The abundance of Twolegs in the area doesn't seem to be lessening no matter how many days have passed. Odd colored objects have been found where Twolegs have been, and some have been leaking odd liquids into the ground, spreading strange smells that linger."
+        "The abundance of Peltshifters in the area doesn't seem to be lessening no matter how many days have passed. Odd colored objects have been found where Peltshifters have been, and some have been leaking odd liquids into the ground, spreading strange smells that linger."
       ]
     },
     "conclusion_events": [
-      "The last Twoleg left yesterday, leaving behind strange objects, but thankfully taking the large, scary things with them. It seems for the time being, life can go back to normal."
+      "The last Peltshifter left yesterday, leaving behind strange objects, but thankfully taking the large, scary things with them. It seems for the time being, life can go back to normal."
     ],
     "secondary_disasters": [
       {
@@ -304,8 +304,8 @@
         "triggers_during": "end",
         "chance": 0,
         "trigger_events": [
-          "A Twoleg was seen playing with fire, seemingly enjoying the dangerous plaything like a kit does a mossball and, just like a kit, they lost control of it. The forest is too dry in greenleaf to stop the fire, and it quickly spreads, the cats of c_n only able to run with the rest of the animals in the forest.",
-          "The Twolegs seem to enjoy gathering around large fires, much to the terror of the Clan.  Though the fires seem to be put out before the Twolegs leave, it's no surprise when some embers persist and the forest begins to go up in flames."
+          "A Peltshifter was seen playing with fire, seemingly enjoying the dangerous plaything like a kit does a mossball and, just like a kit, they lost control of it. The forest is too dry in greenleaf to stop the fire, and it quickly spreads, the cats of c_n only able to run with the rest of the animals in the forest.",
+          "The Peltshifters seem to enjoy gathering around large fires, much to the terror of the Clan.  Though the fires seem to be put out before the Peltshifters leave, it's no surprise when some embers persist and the forest begins to go up in flames."
         ]
       },
       {
@@ -313,7 +313,7 @@
         "triggers_during": "during",
         "chance": 0,
         "trigger_events": [
-          "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick."
+          "The objects the Peltshifters bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick."
         ]
       }
     ],
@@ -336,7 +336,7 @@
     "duration": 2,
     "rarity": "uncommon",
     "trigger_events": [
-      "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick.",
+      "The objects the Peltshifters bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick.",
       "The prey has been easy to catch lately, though even the freshest of fresh-kill has seemed a little... off. The medicine cat den has more work than usual, and bellyaches are now very common."
     ],
     "progress_events": {
@@ -461,7 +461,7 @@
       "moon2": [
         "Hunting herbs is normally easier than hunting living breathing prey, but with the plants withering and dying, there's nothing c_n can do.",
         "They're going to start losing cats soon, if the forest doesn't regain its green pelt. Losing them to injuries they'd otherwise have survived, to diseases they should have been strong enough to fight off, unfair, unnecessary, uncalled for deaths.",
-        "Never did c_n think they'd envy the Twolegs and their ability to call plants from the ground. There are those who'd give their pelt to be capable of that right now, as the forest continues to fail them."
+        "Never did c_n think they'd envy the Peltshifters and their ability to call plants from the ground. There are those who'd give their pelt to be capable of that right now, as the forest continues to fail them."
       ]
     },
     "conclusion_events": [

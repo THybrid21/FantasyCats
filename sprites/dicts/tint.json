@@ -18,22 +18,23 @@
     "BLACK": "monochrome"
   },
   "possible_tints": {
-    "basic": ["pink", "gray", "red", "black", "orange", "none"],
-    "warm": ["yellow", "purple"],
-    "cool": ["blue", "purple"],
-    "white": ["yellow"],
-    "monochrome": ["blue"]
+    "any": ["pink", "gray", "red", "black", "orange", "yellow", "purple", "blue", "green", "none"],
+	"greyscale": ["green", "pink", "purple", "yellow", "gray"],
+	"gingerscale": ["orange", "red", "black", "gray"],
+	"greenscale": ["gray", "black", "red", "purple"],
+	"brownscale": ["blue", "red", "pink", "purple", "green", "black"]
   },
   "tint_colours":
   {
-    "pink": [253, 237, 237],
-    "gray": [225, 225, 225],
-    "red": [248, 226, 228],
-    "black": [195, 195, 195],
-    "orange": [255, 247, 235],
-    "yellow": [250, 248, 225],
-    "purple": [235, 225, 244],
-    "blue": [218, 237, 245],
+    "pink": [251,222,222],
+    "gray": [202,202,202],
+    "red": [238,185,190],
+    "black": [84,76,74],
+    "orange": [255,216,159],
+    "yellow": [239,233,159],
+    "purple": [223,206,237],
+    "blue": [198,227,240],
+	"green": [198,240,211],
     "none": null
   }
 }

@@ -108,7 +108,7 @@
     },
     "severe burn": {
         "lost their tail": [
-            "m_c makes a weak, very bad joke about their tail smelling like Twoleg food. Gently, r_c breaks the news that their burned flesh is going to need to be removed.",
+            "m_c makes a weak, very bad joke about their tail smelling like Peltshifter food. Gently, r_c breaks the news that their burned flesh is going to need to be removed.",
             "m_c's tail was almost completely taken by the fire, r_c tells them that at this point it would be better to cleanly remove what still remains.",
             "m_c is almost glad to be rid of their burned tail, which had long since ceased to feel like a real part of their body except for the pain. Almost."
 
@@ -213,5 +213,26 @@
 			"With more than a little distress m_c keeps asking r_c over and over why their legs aren't responding.",
 			"Who knew a little harmless tick could cause this. m_c regrets how dismissive of tick bites they were before."
         ]
-    }	
+    },
+	"sunblindness": {
+		"failing eyesight": [
+			"With much distress m_c asks r_c why their eyesight only seems to be partially back. With a solemn shake of the head r_c informs them it looks like the temporary sunblindness might have damaged their eyes more than initially assumed.",
+			"r_c gently guides m_c around the camp, testing their eyesight together it looks as though their eyesight might be failing.",
+			"m_c's sunblindness is gone, but they still find themselves squinting and struggling to see."
+		]
+	},
+	"severe sunburn": {
+		"wasting disease": [
+			"m_c doesn't even have to look up and see r_c's face to know it's bad news. They already know because they feel weak and awful.",
+			"r_c worriedly takes note of how m_c seems weaker than before they had the sunburn, something deep inside changed.",
+			"m_c watches tiredly from their nest, something deep within them aches and feels wrong."
+		]
+	},
+	"wrenched claws": {
+		"declawed": [
+			"r_c fusses over m_c's paws with them before sitting back and shaking their head sadly. It appears they'll have to learn to fight without their claws.",
+			"r_c frustratedly hisses over the state of m_c's paws and claws. Curse those horrible peltshifters who did this.",
+			"Curse them, curse those peltshifters for taking m_c away and bringing them back without their claws."
+		]
+	}
 }

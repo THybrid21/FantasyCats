@@ -22,7 +22,7 @@
             "Is watching over the Clan",
             "Is worried about the Clan",
             "Is relaxing in the sun",
-            "Is wondering about Twolegs",
+            "Is wondering about Peltshifters",
             "Is thinking about their ancient ancestors",
             "Is worried about the cats in the Dark Forest",
             "Is thinking of advice to give to a medicine cat",
@@ -299,5 +299,23 @@
             "mediator",
             "mediator apprentice"
         ]
-    }
+    },
+    {
+        "id": "gen_dead_skeptic_cat",
+        "thoughts": [
+            "Is constantly surprised to be in the starfields.",
+			"Wonders at the stars around them",
+			"Is struggling to understand that this is real",
+			"Watches over c_n in awe",
+			"Still can't believe that Starclan is real",
+			"Is wondering if this means there are other afterlives",
+			"Worries about the cats in the Dark Forest",
+			"Worries that they don't deserve to really be here",
+			"Is in awe that they get to see how c_n continues to grow without them",
+			"Is curious about the tunnel to the Dark Forest"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    }	
 ]

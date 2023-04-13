@@ -78,5 +78,25 @@
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null
-    }
+    },
+    {
+        "injury": "rash",
+        "camp": "any",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "m_c was dragged out into the ocean by the tide and due to the sand sticking in their fur has come back with a rash.",
+        "history_text": [
+            null,
+            "m_c died after they were dragged into the ocean and drowned.",
+            "were dragged out into the ocean."
+        ],
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    }	
 ]

@@ -83,7 +83,7 @@
     ],
     "decline_text": "They decide to leave the kit alone.",
     "antagonize_text": "Your patrol moves the kit away from the territory, they have no interest in strange kits.",
-    "antagonize_fail_text": "The kit smells of Twolegs, your patrol has no interest in what will surely grow to be a weak cat.",
+    "antagonize_fail_text": "The kit smells of Peltshifters, your patrol has no interest in what will surely grow to be a weak cat.",
     "chance_of_success": 40,
     "exp": 10,
     "win_skills": ["smart", "very smart", "extremely smart"],
@@ -272,11 +272,11 @@
     "antagonize_fail_text": "p_l begrudgingly follows the sound, only to find the bodies of a unknown queen and their kits beside them. If p_l had been quicker... Whatever the case, they return home, their mind clouded."
 },
 {
-    "patrol_id": "bch_bord_newcat_abandontwoleg1",
+    "patrol_id": "bch_bord_newcat_abandonpeltshifter1",
     "biome": "beach",
     "season": "Any",
     "tags": ["fighting", "border", "new_cat_elder_loner", "no_new_cat2", "no_new_cat3", "death"],
-    "intro_text": "r_c hears some odd noises coming from an abandoned Twoleg nest out on the cliffs above the beach.",
+    "intro_text": "r_c hears some odd noises coming from an abandoned Peltshifter nest out on the cliffs above the beach.",
     "decline_text": "r_c decides not to investigate.",
     "chance_of_success": 10,
     "exp": 30,
@@ -284,7 +284,7 @@
         "It's just an odd loner singing to themselves. r_c greets them, and as the loner's home isn't on c_n territory, it's a polite interaction without any hostility. The older cat looks like they could use a meal, and p_l invites them to c_n's camp. The loner agrees.",
         "It's just an odd loner singing to themselves. When they see r_c they invite them to sing along, but instead, r_c offers the strange, battered-looking cat an introduction to c_n. It's got to be far less lonely than their current life.",
         "s_c walks into an ambush set by a group of rogues. It's only by the grace of StarClan that s_c has the fighting skill and confidence to escape, running for their life to get back to camp. ",
-        "s_c has a bad feeling about this. At first it seems like they're being too cautious - but then they pick up on the scent of strange cats lingering around the Twoleg nest. Forewarned, s_c retreats to safety."
+        "s_c has a bad feeling about this. At first it seems like they're being too cautious - but then they pick up on the scent of strange cats lingering around the Peltshifter nest. Forewarned, s_c retreats to safety."
     ],
     "fail_text": [
         null,
@@ -305,11 +305,11 @@
     ]
 },
 {
-    "patrol_id": "bch_bord_newcat_abandontwoleg2",
+    "patrol_id": "bch_bord_newcat_abandonpeltshifter2",
     "biome": "beach",
     "season": "Any",
     "tags": ["fighting", "border", "new_cat_elder_loner", "no_new_cat2", "no_new_cat3", "multi_deaths"],
-    "intro_text": "The patrol hears some odd noises coming from an abandoned Twoleg nest out on the cliffs above the beach.",
+    "intro_text": "The patrol hears some odd noises coming from an abandoned Peltshifter nest out on the cliffs above the beach.",
     "decline_text": "The patrol decides not to investigate.",
     "chance_of_success": 40,
     "exp": 30,
@@ -317,7 +317,7 @@
         "It's just an odd loner singing to themselves. The patrol greets them, and as the loner's home isn't on c_n territory, it's a polite interaction without any hostility. The older cat looks like they could use a meal, and p_l invites them to c_n's camp. The loner agrees.",
         "It's just an odd loner singing to themselves. When they see r_c they invite them to sing along, but instead, r_c offers the strange, battered-looking cat an introduction to c_n. It's got to be far less lonely than their current life.",
         "The patrol walks into an ambush set by a group of rogues. It's only by the grace of StarClan that s_c is there, fighting with the ferocity of LionClan, the strength of TigerClan, and the agility of LeopardClan. Shaken, but no more than bruised, the patrol manages to retreat to safety.",
-        "s_c signals for the patrol to stop. Carefully, quietly, they explain their concerns about the unknown situation. At first it seems like they're being too cautious - but then p_l picks up on the scent of strange cats lingering around the Twoleg nest. Forewarned, the patrol retreats to safety."
+        "s_c signals for the patrol to stop. Carefully, quietly, they explain their concerns about the unknown situation. At first it seems like they're being too cautious - but then p_l picks up on the scent of strange cats lingering around the Peltshifter nest. Forewarned, the patrol retreats to safety."
     ],
     "fail_text": [
         null,
@@ -368,11 +368,11 @@
     ]
 },
 {
-    "patrol_id": "pln_bord_abandontwoleg1",
+    "patrol_id": "pln_bord_abandonpeltshifter1",
     "biome": "plains",
     "season": "Any",
     "tags": ["fighting", "border", "new_cat_elder_loner", "no_new_cat2", "no_new_cat3", "disaster"],
-    "intro_text": "Your patrol hears some odd noises coming from an abandoned Twoleg nest out on the plains.",
+    "intro_text": "Your patrol hears some odd noises coming from an abandoned Peltshifter nest out on the plains.",
     "decline_text": "Your patrol decides not to investigate.",
     "chance_of_success": 70,
     "exp": 30,
@@ -380,7 +380,7 @@
             "It's just an odd loner singing to themselves. The patrol greets them, and as the loner isn't inside c_n territory, it's a polite interaction without any hostility. The older cat looks like they could use a meal, and p_l invites them to c_n's camp. The loner agrees.",
             "It's just an odd loner singing to themselves. When they see the patrol they invite them to sing too, but instead, p_l offers the somewhat battered looking and strange cat an introduction to c_n. It's got to be far less lonely than their current life.",
             "Your patrol walks into an ambush by a group of rogues. It's only by the grace of StarClan that s_c is there, fighting with the ferocity of Lionclan, the strength of Tigerclan, and the flexibility of Leopardclan. Shaken, but no more than bruised, the patrol manages to retreat to safety.",
-            "s_c signals for the patrol to stop. Carefully, quietly, they explain their concerns about the unknown situation. And maybe they're being too cautious - but then p_l picks up on the scent of strange cats around the Twoleg den. Forewarned, the patrol retreats to safety."
+            "s_c signals for the patrol to stop. Carefully, quietly, they explain their concerns about the unknown situation. And maybe they're being too cautious - but then p_l picks up on the scent of strange cats around the Peltshifter den. Forewarned, the patrol retreats to safety."
     ],
     "fail_text": [
             null,
@@ -401,11 +401,11 @@
     ]
 },
 {
-    "patrol_id": "pln_bord_abandontwoleg2",
+    "patrol_id": "pln_bord_abandonpeltshifter2",
     "biome": "plains",
     "season": "Any",
     "tags": ["fighting", "border", "new_cat_elder_loner", "no_new_cat2", "no_new_cat3", "disaster"],
-    "intro_text": "r_c hears some odd noises coming from an abandoned Twoleg nest out on the plains.",
+    "intro_text": "r_c hears some odd noises coming from an abandoned Peltshifter nest out on the plains.",
     "decline_text": "Your patrol decides not to investigate.",
     "chance_of_success": 30,
     "exp": 30,
@@ -413,7 +413,7 @@
             "It's just an odd loner singing to themselves. r_c greets them, and as the loner isn't inside c_n territory, it's a polite interaction without any hostility. The older cat looks like they could use a meal, and p_l invites them to c_n's camp. The loner agrees.",
             "It's just an odd loner singing to themselves. When they see the patrol they invite them to sing too, but instead, p_l offers the somewhat battered looking and strange cat an introduction to c_n. It's got to be far less lonely than their current life.",
             "s_c walks into an ambush by a group of rogues. It's only by the grace of StarClan that s_c has the fighting skill and confidence to escape, running for their life.",
-            "s_c has a bad feeling about this. And maybe they're being too cautious - but then they pick up on the scent of strange cats around the Twoleg den. Forewarned, s_c retreats to safety."
+            "s_c has a bad feeling about this. And maybe they're being too cautious - but then they pick up on the scent of strange cats around the Peltshifter den. Forewarned, s_c retreats to safety."
     ],
     "fail_text": [
             null,
@@ -434,7 +434,7 @@
     ]
 },
 {
-    "patrol_id": "fst_hunt_twolegplacekittens1",
+    "patrol_id": "fst_hunt_peltshifterplacekittens1",
     "biome": "forest",
     "season": "Any",
     "tags": [
@@ -442,18 +442,18 @@
         "no_fail_prey",
         "new_cat_kittypet_female_dead_litter0_litter1_litter3_abandoned1_abandoned4"
     ],
-    "intro_text": "The patrol approaches a Twoleg nest in the woods while hunting.",
+    "intro_text": "The patrol approaches a Peltshifter nest in the woods while hunting.",
     "decline_text": "The patrol decides to hunt elsewhere.",
     "chance_of_success": 70,
     "exp": 30,
     "success_text": [
-        "p_l hears r_c softly calling them through the bushes, and drops the idea of following mouse scent, hurrying to their mate's side. r_c, head poking into the nest's garden through a gap in the fense, murmurs something about Twoleg kits. Twoleg kits? No, r_c corrects, the <i>Twolegs's kits</i>, the Twolegs <i>have kittens</i> wandering through the nest's garden, they need to be rescued.",
-        "Near the Twoleg den, p_l suddenly hears furious gowls. Tiny, adorable, furious growls. A kitten tries to pounce on p_l, barely coming up to their elbows. Before little teeth can do any damage, p_l gently flips the tiny cat over and places a gentle paw on their back, completely pinning them as they struggle with all their might. r_c, called over by the mighty fight, asks the little warrior what on earth they're doing. Why, they're defending their territory of course!",
+        "p_l hears r_c softly calling them through the bushes, and drops the idea of following mouse scent, hurrying to their mate's side. r_c, head poking into the nest's garden through a gap in the fense, murmurs something about Peltshifter kits. Peltshifter kits? No, r_c corrects, the <i>Peltshifters's kits</i>, the Peltshifters <i>have kittens</i> wandering through the nest's garden, they need to be rescued.",
+        "Near the Peltshifter den, p_l suddenly hears furious gowls. Tiny, adorable, furious growls. A kitten tries to pounce on p_l, barely coming up to their elbows. Before little teeth can do any damage, p_l gently flips the tiny cat over and places a gentle paw on their back, completely pinning them as they struggle with all their might. r_c, called over by the mighty fight, asks the little warrior what on earth they're doing. Why, they're defending their territory of course!",
         null,
-        "Furious, high pitched yowls greet the patrol, as a tiny kittypet kitten comes roaring out of the Twoleg nest to try and fight them. Terrifying. s_c tips the little fighter over and carefully scruffs the tiny warrior - they can't leave them here. The kitten insists that they're a big cat and they're <b>fine</b>, but after a couple minutes, does reveal their mother is dead. Twolegs have kept them alive somehow, but c_n will do better."
+        "Furious, high pitched yowls greet the patrol, as a tiny kittypet kitten comes roaring out of the Peltshifter nest to try and fight them. Terrifying. s_c tips the little fighter over and carefully scruffs the tiny warrior - they can't leave them here. The kitten insists that they're a big cat and they're <b>fine</b>, but after a couple minutes, does reveal their mother is dead. Peltshifters have kept them alive somehow, but c_n will do better."
     ],
     "fail_text": [
-        "Twoleg kits scare the patrol away."
+        "Peltshifter kits scare the patrol away."
     ],
     "win_trait":["careful", "thoughtful"],
     "min_cats": 2,

@@ -161,7 +161,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c got their paw stuck in a Twoleg trap, but luckily escaped with only a sprain.",
+        "event_text": "m_c got their paw stuck in a Peltshifter trap, but luckily escaped with only a sprain.",
         "history_text": [
             null,
             null,
@@ -378,10 +378,10 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c got their paw stuck in a Twoleg trap and while they eventually escaped, their leg is heavily injured.",
+        "event_text": "m_c got their paw stuck in a Peltshifter trap and while they eventually escaped, their leg is heavily injured.",
         "history_text": [
-            "m_c was scarred by a Twoleg trap.",
-            "m_c died from their injuries caused by a Twoleg trap.",
+            "m_c was scarred by a Peltshifter trap.",
+            "m_c died from their injuries caused by a Peltshifter trap.",
             null
         ],
         "cat_trait": null,
@@ -487,7 +487,7 @@
         ],
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful", "stubborn", "rebellious"],
         "other_cat_skill": null,
         "cat_negate_trait": ["loyal", "ambitious"]
     },
@@ -545,7 +545,7 @@
         ],
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful", "rebellious"],
         "other_cat_skill": null
     },
     {
@@ -672,6 +672,108 @@
         "negate_other_cat_skill": null,
         "backstory_constraint": null
      
-     }
-     
+     },
+    {
+        "injury": "sunburn",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall"
+        ],
+        "event_text": "m_c wakes up after falling asleep in a sunbeam to discover that they've stayed out for just a little bit too long.",
+        "history_text": [
+            null,
+            null,
+            null
+        ],
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },     
+    {
+        "injury": "rash",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "m_c was out on a walk alone when they heard a dog approaching! They crawled into a nearby bush to hide only to discover to their dismay it was poison ivy.",
+        "history_text": [
+            null,
+            null,
+            null
+        ],
+        "cat_trait": ["nervous", "wise", "insecure", "careful", "calm", "sneaky", "strange"],
+        "cat_skill": ["smart", "very smart", "extremely smart"],
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "wrenched claws",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare",
+            "scar",
+            "DECLAWED"
+        ],
+        "event_text": "m_c was captured by peltshifters, but managed to escape and return home",
+        "history_text": [
+            "m_c was scarred by peltshifters.",
+            "m_c died after they were taken away by peltshifters.",
+            "declawed by peltshifters"
+        ],
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null,
+        "accessories": ["COLLAR"]
+    },
+    {
+        "injury": "wrenched claws",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare",
+            "scar",
+            "DECLAWED"
+        ],
+        "event_text": "m_c got curious while out wandering the territory and got captured briefly by peltshifters.",
+        "history_text": [
+            "m_c was scarred by peltshifters.",
+            "m_c died after they were taken away by peltshifters.",
+            "declawed by peltshifters"
+        ],
+        "cat_trait": ["wandering", "strange", "dreamer"],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null,
+        "accessories": ["COLLAR"]
+    },
+    {
+        "injury": "wrenched claws",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare",
+            "scar",
+            "DECLAWED"
+        ],
+        "event_text": "Thinking that they could easily fight a peltshifter m_c went out into the territory hissing and spitting only to come back subdued.",
+        "history_text": [
+            "m_c was scarred by peltshifters.",
+            "m_c died after they were taken away by peltshifters.",
+            "declawed by peltshifters"
+        ],
+        "cat_trait": ["vengeful", "ambitious", "bloodthirsty"],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null,
+        "accessories": ["COLLAR"]
+    }		
 ]

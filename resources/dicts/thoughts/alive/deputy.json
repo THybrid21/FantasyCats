@@ -68,5 +68,37 @@
         "main_trait_constraint": [
             "strange"
         ]
-    }
+    },
+	{
+        "id": "skeptic_deputy_to_gen",
+        "thoughts": [
+            "Is having a crisis about their position as deputy",
+			"Wonders how they will ever survive as leader",
+			"Doubts that they will recieve nine lives",
+			"Carefully choses cats for the daily patrols",
+			"Worries about the clan",
+			"Worries about what will happen when l_n dies",
+			"Curls up in the den and wonders if they're truly able to fill the pawsteps of a leader",
+			"Follows the code as much as they can",
+			"Was forced to mediate between arguing clanmates",
+			"Is doubtful that anyone in c_n could look up to them"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+	{
+        "id": "peltshifted_deputy_to_gen",
+        "thoughts": [
+            "Is having a crisis about their position as deputy",
+			"Wonders how they will ever survive as leader",
+			"Doubts that they will recieve nine lives",
+			"Is struggling to understand how they recieved this position",
+			"Is having trouble speaking up in front of their clanmates",
+			"Has been speaking in a strange peltshifter language... somehow"
+        ],
+        "main_trait_constraint": [
+            "peltshifted"
+        ]
+    }	
 ]

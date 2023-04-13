@@ -133,7 +133,7 @@
     {
         "id": "daring_medicine_cat",
         "thoughts": [
-            "Steals catmint from a Twoleg garden"
+            "Steals catmint from a Peltshifter garden"
         ],
         "main_trait_constraint": [
             "daring"
@@ -314,6 +314,157 @@
         ]
     },
     {
+        "id": "skeptic_medicine_cat",
+        "thoughts": [
+            "Sasses the leader's choices",
+			"Rolls their eyes at their Clanmate's talk of StarClan",
+			"Had a strange dream the other night but dismisses it",
+			"Distracts themselves with sorting herbs",
+			"Hisses at the state of the herb stores.",
+			"Longs to have a mate and kits",
+			"Is thinking about love",
+			"Is wondering if they can afford to have kittens",
+			"Is brushing up on their herblore"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+    {
+        "id": "skeptic_to_app_medicine_cat",
+        "thoughts": [
+            "Scolds their apprentice for having their head in the clouds",
+			"Asks r_c to fetch them extra herbs",
+			"Calls r_c over to teach them how to properly bind a wound with cobwebs",
+			"Has a long discussion with r_c about the nature of belief",
+			"Let's r_c handle talking with Starclan",
+			"Talks to r_c about the folly of blind loyalty",
+			"Worries about whether they're a good teacher for r_c",
+			"Worries that r_c might fall to the shadows",
+			"Tells r_c how proud they are"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ],
+        "random_status_constraint": [
+            "medicine cat apprentice"
+        ],
+        "relationship_constraint": [
+            "mentor/app"
+        ]		
+    },	
+    {
+        "id": "dramatic_medicine_cat",
+        "thoughts": [
+            "Is over emphasising their capabilities",
+			"Is claiming the clan would entirely die without them",
+			"Spent most of the day grooming only for nobody to comment on it",
+			"Is preening at some light praise",
+			"Hopes Starclan can see how great they are",
+			"Stepped on a bug and is wailing about it",
+			"Thinks they're StarClan's gift to c_n",
+			"Wraps a clanmates small cut with a flourish",
+			"Dramatically flounces around camp announcing they're fetching herbs",
+			"Puts flowers in their fur just to dramatically flop down and scatter the petals around them",
+			"Wails dramatically about a splinter"
+        ],
+        "main_trait_constraint": [
+            "dramatic"
+        ]
+    },	
+    {
+        "id": "rebellious_medicine_cat",
+        "thoughts": [
+            "Sasses the leader's choices",
+			"Rolls their eyes at their Clanmate's talk of the rules",
+			"Thinks the Medicine Code is too restrictive",
+			"Thinks about having a mate and kits",
+			"Wonders about o_c_n's latest news",
+			"Sneaks out to try some cool battle moves they saw the warriors use",
+			"Forgets to treat a clanmate who mocked them",
+			"Ignores the omens that they were sent by StarClan",
+			"Tried to contact a cat from the Dark Forest"
+        ],
+        "main_trait_constraint": [
+            "rebellious"
+        ]
+    },	
+    {
+        "id": "dreamer_medicine_cat",
+        "thoughts": [
+            "Walks with their paws half in StarClan",
+			"Is considering a dream they had the other night",
+			"Sings to the cats in the medicine den",
+			"Stares at the clouds and wonders if the dogs up there watch them back",
+			"Was seen wandering the borders of o_c_n",
+			"Is staring longingly at the herbs",
+			"Was seen by the rivers edge staring intensely at the water",
+			"Is considering their name deeply",
+			"Is reading the clouds and predicting rain",
+			"Was seen talking with the rats of the forest about medicine",
+			"Wants to talk to o_c_n's medicine cat"
+        ],
+        "main_trait_constraint": [
+            "dreamer"
+        ]
+    },	
+    {
+        "id": "dreamer_medicine_cat_to_Dead",
+        "thoughts": [
+			"Is talking to the stars",
+			"Dreamt they were in the stars talking with r_c last night",
+			"Wonders if r_c would like anything left for them this moon",
+			"Is trotting around the camp talking to invisible cats",
+			"Listens to r_c tell them tales of the old clans",
+			"Is sure that they can see r_c among the cats of the clan",
+			"Prances around the camp feeling stardust beneath their paws",
+			"Hopes that r_c is doing well when they catch glimpses of them",
+			"Got a confusing message from r_c the other night",
+			"Prays that r_c is comfortable in their afterlife",
+			"Is listening to old cat ghost stories from r_c",
+			"Is asking r_c about the Packs",
+			"Is listening to old tales known by r_c"
+        ],
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
+        ],
+        "main_trait_constraint": [
+			"dreamer"
+        ],
+        "random_living_status": [
+            "starclan",
+			"darkforest",
+			"unknownresidence"
+        ]
+    },		
+    {
+        "id": "wandering_medicine_cat",
+        "thoughts": [
+            "Went missing for most of this week",
+			"Was last seen vanturing across o_c_n's territory",
+			"Heard interesting rumours about Peltshifterplace",
+			"Is looking towards the exit of the camp with longing",
+			"Has itchy paws and wants to wander the territory",
+			"Makes an excuse to get out of the boundaries of the camp"
+        ],
+        "main_trait_constraint": [
+            "wandering"
+        ]
+    },	
+    {
+        "id": "stubborn_medicine_cat",
+        "thoughts": [
+            "Refuses to give up on anyone",
+			"Stubbornly refuses to change their methods of healing",
+			"Thinks the younger cats don't understand what the world is like",
+			"Hisses as someone upsets their organized herbs"
+        ],
+        "main_trait_constraint": [
+            "stubborn"
+        ]
+    },	
+    {
         "id": "med_cat_dead_SC_gen",
         "thoughts": [
             "Wishes they could visit r_c in StarClan",
@@ -334,7 +485,7 @@
         "random_living_status": [
             "starclan"
         ]
-    },
+    },	
     {
         "id": "med_cat_dead_DF_gen",
         "thoughts": [
@@ -347,6 +498,19 @@
         ],
         "random_living_status": [
             "darkforest"
+        ]
+    },
+    {
+        "id": "med_cat_dead_UR_gen",
+        "thoughts": [
+            "Is surprised to see r_c in their dreams",
+			"Woke up after dreaming about a strange foggy realm",
+			"Has been seeing unknown cats floating around the camp recently",
+			"Has been hearing whispers on the breeze",
+			"Prays that r_c may find their way to rest safely"
+        ],
+        "random_living_status": [
+			"unknownresidence"
         ]
     },
     {
@@ -380,11 +544,47 @@
     {
         "id": "med_cat_alive_apprentice",
         "thoughts": [
-            "Is thinking about taking on a new apprentice"
+            "Is thinking about taking on a new apprentice",
+			"Has been watching r_c and wondering... would they be a good medicine cat"
         ],
         "random_status_constraint": [
             "apprentice",
             "kitten"
         ]
-    }     
+    },
+    {
+        "id": "med_cat_alive_kit",
+        "thoughts": [
+            "Is teaching kits about what plants to stay away from",
+            "Chased kits out of their den"
+        ],
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
+        ],  
+        "random_status_constraint": [
+            "kitten"
+        ]
+    },
+    {
+        "id": "peltshifted_medicine_cat",
+        "thoughts": [
+            "Rolls their eyes at the talk of StarClan",
+			"Is deeply considering a sign they saw",
+			"Had strange dreams last night and is still reeling",
+			"Calls the herbs strange names sometimes",
+			"Still mixes up holly and deathberries",
+			"Is having a crisis because they forgot the name of a herb",
+			"Walked into the wall of the medicine den",
+			"Tripped over their own paws",
+			"Wonders at what power might be beyond even Starclan"
+        ],
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
+        ], 
+        "main_trait_constraint": [
+            "peltshifted"
+        ]
+    }	
 ]

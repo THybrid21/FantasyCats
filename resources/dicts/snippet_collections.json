@@ -51,11 +51,11 @@
         ["a snake eating it's own tail"],
         ["a ghostly pair of eyes"],
         ["two pawprints overlapping"],
-        ["a broken Twoleg collar"],
+        ["a broken Peltshifter collar"],
         ["the glowing eyes of a monster"],
         ["skeletal trees against the sky"],
-        ["abandoned Twoleg dens", "spreading Twoleg dens"],
-        ["a tattered Twoleg pelt"],
+        ["abandoned Peltshifter dens", "spreading Peltshifter dens"],
+        ["a tattered Peltshifter pelt"],
         ["the reflection of a lion", "a tiger's reflection"],
         ["a twig burning from both ends"],
         ["the grin of a wolf"],
@@ -64,7 +64,7 @@
         ["a cat not yet born"],
         ["a cat nearly forgotten"],
         ["a cat covered in blood"],
-        ["a cat standing beside a Twoleg"],
+        ["a cat standing beside a Peltshifter"],
         ["stones dissolving in water"]
       ],
       "forest": [
@@ -498,7 +498,7 @@
       ["The Tenacious Rabbit", "The Rabbit Prince"],
       ["The Hare King", "The Witch Hare"],
       ["The Lion's Promise","How The Tiger Got It's Stripes","The Leopard's Spots","The Cougar's Claws"],
-      ["The Place of No Stars", "The Stars of Silverpelt"]
+      ["The Place of No Stars", "The Stars of Silverpelt", "The Mother Moon"]
     ],
     "forest": [
       ["The Cat Who Became a Porcupine", "The Cat Who Carried the Sun", "The Cat Who Grew Into an Oak", "The Willow Cat",
@@ -513,7 +513,7 @@
         "The Cat Who Carried The Sun", "The Cat Made From The Earth", "The Cats Made of Light", "The Great Worm-cat"],
       ["the Thunderbeasts"],
       ["How The Great Sytowers Came To Be"],
-      ["The Metal Trees of the Twolegs"],
+      ["The Metal Trees of the Peltshifters"],
       ["The Weasel's Lie"]
 
     ],
@@ -525,7 +525,7 @@
 
     ],
     "mountainous": [
-      ["The Eagle Who Became a Cat", "The She-cat Who Traded Her Voice", "The Cat Who Flew", "The Cat Who Carried The Sun",
+      ["The Eagle Who Became a Cat", "The Molly Who Traded Her Voice", "The Cat Who Flew", "The Cat Who Carried The Sun",
       "The Cats Made of Light"],
       ["The Mountain's Shadow"],
       ["The Hummingbird's Feather"],

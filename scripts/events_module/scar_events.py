@@ -30,13 +30,15 @@ class Scar_Events():
         amount_per_med = get_amount_cat_for_one_medic(game.clan)
         if medical_cats_condition_fulfilled(game.cat_class.all_cats.values(), amount_per_med):
             chance += 3
+        if injury_name == "wrenched claws":
+            chance = random.randint(0, 15)
         if len(cat.scars) < 4 and chance <= 6:
 
             # move potential scar text into displayed scar text
             cat.scar_event.append(scar_text)
 
             specialty = None  # Scar to be set
-
+                
             # scar pools
             bite_scars = [
                 "CATBITE"
@@ -82,6 +84,9 @@ class Scar_Events():
             rash_scars = [
                 "RASH"
             ]
+            declaw_scars = [
+                "DECLAWED"
+            ]
 
             scar_pool = []
 
@@ -113,6 +118,8 @@ class Scar_Events():
                 scar_pool = quill_scars
             elif injury_name == "rash":
                 scar_pool = rash_scars
+            elif injury_name == "wrenched claws":
+                scar_pool = declaw_scars
 
             for scar in cat.scars:
                 if scar:
@@ -132,7 +139,7 @@ class Scar_Events():
                                 if option in scar_pool:
                                     scar_pool.remove(option)
                         if "BOTHBLIND" in scar:
-                            for option in ["THREE", "RIGHTBLIND", "LEFTBLIND", "BOTHBLIND", "BRIGHTHEART"]:
+                            for option in ["THREE", "RIGHTBLIND", "LEFTBLIND", "BOTHBLIND", "BRIGHTHEART", "BLANKBLIND"]:
                                 if option in scar_pool:
                                     scar_pool.remove(option)
                         if "NOEAR" in scar:
@@ -197,6 +204,8 @@ class Scar_Events():
         else:
             if injury_name == "poisoned":
                 event_string = f"{cat.name} has recovered fully from the poison."
+            if injury_name == "wrenched claws":
+                event_string = f"That was a close call but luckily {cat.name}'s wrenched claws are back to full working order."
             else:
                 event_string = f"{cat.name}'s {injury_name} has healed so well that you can't even tell it happened."
             scar_given = None

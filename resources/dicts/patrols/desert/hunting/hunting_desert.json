@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "dst_gen_hunt_twolegplace1",
+        "patrol_id": "dst_gen_hunt_peltshifterplace1",
         "biome": "desert",
         "season": "Any",
         "tags": [
@@ -8,24 +8,24 @@
             "medium_prey0",
             "large_prey1"
         ],
-        "intro_text": "The patrol approaches a very strange Twolegplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Twoleg hut sits in one corner, seemingly abandoned.",
+        "intro_text": "The patrol approaches a very strange Peltshifterplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Peltshifter hut sits in one corner, seemingly abandoned.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "The patrol has a successful hunt. While Twolegs seem to have built this metal forest, they've also apparently abandoned it.",
-            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Twoleg leaves."
+            "The patrol has a successful hunt. While Peltshifters seem to have built this metal forest, they've also apparently abandoned it.",
+            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Peltshifter leaves."
         ],
         "fail_text": [
             "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful."
         ],
         "min_cats": 1,
         "max_cats": 3,
-        "antagonize_text": "The cats leap onto a Twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not Twoleg!",
+        "antagonize_text": "The cats leap onto a Peltshifter metal leaf, sending it over with a mighty crash. This is c_n territory, not Peltshifter!",
         "antagonize_fail_text": "Your cats try to knock over a metal leaf, but there aren't enough of them to force it over."
     },
     {
-        "patrol_id": "dst_gen_hunt_twolegplace2",
+        "patrol_id": "dst_gen_hunt_peltshifterplace2",
         "biome": "desert",
         "season": "Any",
         "tags": [
@@ -33,21 +33,21 @@
             "medium_prey0",
             "large_prey1"
         ],
-        "intro_text": "The patrol approaches a very strange Twolegplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Twoleg hut sits in one corner, seemingly abandoned.",
+        "intro_text": "The patrol approaches a very strange Peltshifterplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Peltshifter hut sits in one corner, seemingly abandoned.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
             "The patrol cats split up, using sentries to ensure that nothing disturbs their hunts.",
-            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Twoleg leaves. "
+            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Peltshifter leaves. "
         ],
         "fail_text": [
             "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful."
         ],
         "min_cats": 4,
         "max_cats": 6,
-        "antagonize_text": "The cats leap onto a Twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not Twoleg!",
-        "antagonize_fail_text": "The cats try to knock over a metal leaf. It works, but several members of the patrol spring backward, yowling in pain - the Twolegs have trapped the leaf, storing fire that does not burn in it!"
+        "antagonize_text": "The cats leap onto a Peltshifter metal leaf, sending it over with a mighty crash. This is c_n territory, not Peltshifter!",
+        "antagonize_fail_text": "The cats try to knock over a metal leaf. It works, but several members of the patrol spring backward, yowling in pain - the Peltshifters have trapped the leaf, storing fire that does not burn in it!"
     },
     {
         "patrol_id": "dst_hunt_strange1",
@@ -350,20 +350,20 @@
             "gone",
             "small_prey"
         ],
-        "intro_text": "r_c encounters a swarm of Twolegs, gathered in a dry riverbed.",
+        "intro_text": "r_c encounters a swarm of Peltshifters, gathered in a dry riverbed.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 60,
         "exp": 20,
         "success_text": [
-            "r_c immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, r_c uses the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and recognises that it can't be anything good, leaving immediately.",
-            "s_c spits in the Twolegs' direction and picking a different place to hunt."
+            "r_c immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Peltshifters in their territory.",
+            "Slyly, r_c uses the unusual presence of the weird Peltshifters to help their hunt, hiding on the outskirts of the area and waiting for the Peltshifters to flush prey towards them. It works, and they leave the Peltshifters to their business.",
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and recognises that it can't be anything good, leaving immediately.",
+            "s_c spits in the Peltshifters' direction and picking a different place to hunt."
         ],
         "fail_text": [
             null,
-            "s_c has heard terrible things about Twolegs, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Twoleg.",
-            "r_c mostly ignores the Twolegs as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they can do - eventually the Twolegs notice, and r_c is taken by them.",
+            "s_c has heard terrible things about Peltshifters, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Peltshifter.",
+            "r_c mostly ignores the Peltshifters as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they can do - eventually the Peltshifters notice, and r_c is taken by them.",
             null
         ],
         "win_skills": [
@@ -408,20 +408,20 @@
             "gone",
             "small_prey"
         ],
-        "intro_text": "r_c encounters a swarm of Twolegs, gathered in a dry riverbed.",
+        "intro_text": "r_c encounters a swarm of Peltshifters, gathered in a dry riverbed.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 60,
         "exp": 20,
         "success_text": [
-            "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, the cats use the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "s_c stops anyone from going near the Twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
+            "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Peltshifters in their territory.",
+            "Slyly, the cats use the unusual presence of the weird Peltshifters to help their hunt, hiding on the outskirts of the area and waiting for the Peltshifters to flush prey towards them. It works, and they leave the Peltshifters to their business.",
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "s_c stops anyone from going near the Peltshifters, repeating that true warriors have nothing to do with Peltshifters and their monsters, and the patrol leaves back into the desert."
         ],
         "fail_text": [
             null,
-            "s_c has heard terrible things about Twolegs, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Twoleg.",
-            "r_c mostly ignores the Twolegs as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they or the patrol can do - eventually the Twolegs notice, and r_c is taken by them.",
+            "s_c has heard terrible things about Peltshifters, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Peltshifter.",
+            "r_c mostly ignores the Peltshifters as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they or the patrol can do - eventually the Peltshifters notice, and r_c is taken by them.",
             null
         ],
         "win_skills": [
@@ -466,20 +466,20 @@
             "gone",
             "small_prey"
         ],
-        "intro_text": "r_c encounters a swarm of Twolegs, gathered in a dry riverbed.",
+        "intro_text": "r_c encounters a swarm of Peltshifters, gathered in a dry riverbed.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
-            "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, the cats use the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "s_c stops anyone from going near the Twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
+            "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Peltshifters in their territory.",
+            "Slyly, the cats use the unusual presence of the weird Peltshifters to help their hunt, hiding on the outskirts of the area and waiting for the Peltshifters to flush prey towards them. It works, and they leave the Peltshifters to their business.",
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "s_c stops anyone from going near the Peltshifters, repeating that true warriors have nothing to do with Peltshifters and their monsters, and the patrol leaves back into the desert."
         ],
         "fail_text": [
             null,
-            "s_c has heard terrible things about Twolegs, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Twoleg.",
-            "r_c mostly ignores the Twolegs as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they or the patrol can do - eventually the Twolegs notice, and r_c is taken by them.",
+            "s_c has heard terrible things about Peltshifters, but they still creep closer when one falls and starts yowling with pain. It's a mistake, and a trap snaps shut around them. They're taken out of the desert with the injured Peltshifter.",
+            "r_c mostly ignores the Peltshifters as they hunt, crawling into a metal box to follow the scent of food. But when they try to back up, the way is blocked, and there's nothing they or the patrol can do - eventually the Peltshifters notice, and r_c is taken by them.",
             null
         ],
         "win_skills": [

@@ -686,7 +686,11 @@
             {
                 "name": "panic attack",
                 "chance": 50
-            }
+            },
+			{
+				"name": "paranoia",
+				"chance": 50
+			}
 			],
         "herbs": [
             "catmint",
@@ -1492,6 +1496,36 @@
         "herbs": [
 			"chamomile",
 			"thyme"
+		]
+    },
+    "ear buzzing": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+			"chamomile",
+			"thyme",
+			"daisy"
 		]
     }	
 }

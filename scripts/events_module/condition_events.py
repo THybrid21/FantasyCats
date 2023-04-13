@@ -295,14 +295,15 @@ class Condition_Events():
             "LEFTBLIND": ["one bad eye", "failing eyesight"],
             "RIGHTBLIND": ["one bad eye", "failing eyesight"],
             "BOTHBLIND": ["blind"],
-            "RATBITE": ["weak leg"]
+            "RATBITE": ["weak leg"],
+            "DECLAWED": ["declawed"]
         }
 
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
-            "lasting grief", "fibro", "heavy soul", "starwalker", "anxiety", "boundless energy", "mute", "ocd", 
-            "antisocial"
+            "lasting grief", "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
+            "boundless energy", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness"
         ]
 
         got_condition = False
@@ -358,7 +359,8 @@ class Condition_Events():
             "grief stricken": "lasting grief",
             "anxiety attack": "panic attack",
             "panic attack": "shock",
-            "panic attack": "paranoia"
+            "panic attack": "paranoia",
+            "sleeplessness": "ongoing sleeplessness"
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #
@@ -449,7 +451,10 @@ class Condition_Events():
         injury_progression = {
             "poisoned": "redcough",
             "shock": "lingering shock",
-            "rat bite": "rat bite fever"
+            "rat bite": "rat bite fever",
+            "sunblindness": "fading eyesight",
+            "severe sunburn": "wasting disease",
+            "wrenched claws": "declawed"
         }
 
         # need to hold this number so that we can check if the leader has died

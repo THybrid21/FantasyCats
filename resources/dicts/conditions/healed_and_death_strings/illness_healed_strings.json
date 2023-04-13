@@ -90,7 +90,11 @@
 		"While their chest still races a bit as they leave the den, m_c is able to keep a clear head and rejoin their clanmates.",
 		"With the help of their clanmates m_c has steadied their breathing once more and feels ready to face the challenges of the day."
 	],
-    "absence": [
+    "paranoia": [
+		"m_c's taken a while, but after so long stewing in their own head it's a relief to be able to greet their clanmates without any sort of suspcions of danger anymore.",
+		"m_c is so relieved to be able to trust in their clan and themselves again."
+	],
+	"absence": [
         "m_c has come back to themselves after been absent.",
         "Between blinks m_c stretches out, continuing on their day as normal."
     ],	
@@ -116,7 +120,7 @@
 		"With the sounds of the songbirds in their ears m_c finds that the weight of fog over them has risen.",
 		"As m_c observes the first growth of the season they feel like a new cat.",
 		"m_c feels their tail swish with rekindled hope and trust in their own paws.",
-		"As the season changes the heavy weight in m_c’s bones begins to fade. Finally they feel like they can rise with the sun rather than wishing it would leave them to sleep."
+		"As the season changes the heavy weight in m_c's bones begins to fade. Finally they feel like they can rise with the sun rather than wishing it would leave them to sleep."
 	],
 	"lethargy": [
 		"After some moons the weight that's been in m_c's limbs has lifted and they finally leave their nest feeling rejuvinated.",
@@ -195,5 +199,10 @@
 	"burn out": [
 		"m_c is back on their paws after burn out.",
 		"m_c is no longer tired and exhausted from burn out."
+	],
+	"ear buzzing": [
+		"There is so much relief from m_c that their ears are no longer buzzing with flies.",
+		"m_c purrs when their ears stop tinkling.",
+		"m_c sits and shares tongues freely with their clanmates, no longer shaking their head to try and hear better."
 	]
 }

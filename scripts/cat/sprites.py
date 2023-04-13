@@ -120,7 +120,9 @@ class Sprites():
                 ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE",
                  "LEGBITE", "NECKBITE", "FACE"]):
             sprites.make_group('scars', (a, 2), f'scars{i}')
-            sprites.make_group('eczma', (a, 0), f'scarsRASH{i}')
+        for a, i in enumerate(
+                ["RASH", "DECLAWED"]):
+            sprites.make_group('scars', (a, 3), f'scars{i}')
         # missing parts
         for a, i in enumerate(
                 ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW"]):
@@ -223,7 +225,7 @@ for x in [
     'lineart', 'lineartdead', 'lineartdf', 'shadersnewwhite', 'lightingnew',
     'eyes', 'eyes2', 'eyeshybrid', 'eyes2hybrid', 'sus', 'sus2',    
     'skin', 'skin2', 'skinsphynx', 'wings', 'manes', 
-    'eczma', 'scars', 'missingscars', 'fademask', 'fadestarclan', 'fadedarkforest',
+    'scars', 'missingscars', 'fademask', 'fadestarclan', 'fadedarkforest',
     'solidbrowns', 'solidgingers', 'solidgreys', 'solidblues', 'solidgreens',
     'solidpurples', 'solidyellows', 'solidpride'
 ]:
@@ -2401,17 +2403,22 @@ for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
 
  
 # new new torties
-for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH']):
+for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 
+    'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'OREO', 'SWOOP']):
     sprites.make_group('tortiepatchesmasks', (a, 0), f"tortiemask{i}")
-for a, i in enumerate(['MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'OREO', 'SWOOP']):
+for a, i in enumerate(['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 
+    'STREAMSTRIKE', 'ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE']):
     sprites.make_group('tortiepatchesmasks', (a, 1), f"tortiemask{i}")
-for a, i in enumerate(['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE']):
+for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 
+    'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE']):
     sprites.make_group('tortiepatchesmasks', (a, 2), f"tortiemask{i}")
-for a, i in enumerate(['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE']):
+for a, i in enumerate(['STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL',
+     'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOOSTONE']):
     sprites.make_group('tortiepatchesmasks', (a, 3), f"tortiemask{i}")
-for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT']):
+for a, i in enumerate(['TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK', 'PONITMASK', 
+    'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'SKELEMASK', 'DALMATIONSPOTS', 'LYNXMASK']):
     sprites.make_group('tortiepatchesmasks', (a, 4), f"tortiemask{i}")
-
+    
 # SKINS
 for a, i in enumerate(['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN']):
     sprites.make_group('skin', (a, 0), f"skin{i}")

@@ -125,7 +125,13 @@
 			"Instead of fading the anxiety only seems to build and build until m_c feels like they can't breathe, everything is dangerous and wrong and they need out, out.",
 			"It's irrational, there's nothing there, they're not in any danger here. m_c keeps reminding themselves over and over as their chest grows tighter and tighter.",
 			"They can't breathe, m_c can't breathe drowning on land, drowning in the panic that floods their body putting all their fur on end."
-			]
+			],
+		"paranoia": [
+			"m_c watches r_c with wary eyes, tail twitching and ears pressed low. r_c carefully broadcasts and exaggerates their every movement to try and make them feel a bit more secure.",
+			"After working themselves into such anxiety m_c finds themselves struggling to get back out of it and on edge for the rest of the day.",
+			"m_c refuses to let themselves calm down, sure that there is something wrong and dangerous out there.",
+			"While there is no reason to worry m_c refuses to see it that way and stands stiffly at the camp entry fur all on end and ears raised to ear absolutely everything."
+		]
 	},
 	"panic attack": {
 		"constant nightmares": [
@@ -144,7 +150,7 @@
 		],
 		"paranoia": [
 			"m_c refuses to take the herbs that r_c is offering them, convinced that they might be dangerous and not actually helpful.",
-			"After all the panic, m_c has been twitching, muttering things that sound more and more paranoid.",
+			"After all the panic and anxiety, m_c has been twitching, muttering things that sound more and more paranoid.",
 			"They're just double checking things, just making sure the camp is secure m_c tells themselves.",
 			"m_c noses at their food and bedding for the third time today convinced that there's something in it that will harm them."
 		]
@@ -229,12 +235,12 @@
 	"compulsions": {
 		"bruises": [
 			"r_c understandingly helps m_c to soothe their bruises.",
-			"Some of m_c's compulsions included knocking themselves"
+			"Some of m_c's compulsions included knocking themselves and it's left them with a couple of bruises."
 		]
 	},
 	"turmoiled litter": {
 		"world tired": [
-			"m_c comes to r_c with ears and tail low. They admit that they're struggling.",
+			"m_c comes to r_c with ears and tail low. They admit that they're struggling and are a bit scared about what they might do if left alone.",
 			"m_c's heart aches watching their kittens, watching the world in general.",
 			"These emotions are like a blanket of snow covering m_c and leaving them shivering and wondering when the world will warm up once more.",
 			"m_c blankly stares at their kittens and clanmates feeling so very, very exhausted and worn."
