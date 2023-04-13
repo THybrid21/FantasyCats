@@ -39,6 +39,16 @@
     },
   {
         "camp": "any",
+        "tags": ["Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
+        "event_text": "While m_c was out playing near the camp it seems like a mischief of acc_plural adopted them.",
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null,
+        "accessories": ["RAT BLACK", "RAT BROWN", "RAT CREAM", "RAT WHITE", "RAT GREY", "RAT HOODED"]
+    },	
+  {
+        "camp": "any",
         "tags": ["other_cat_parent", "other_cat","Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
         "event_text": "No matter how hard r_c tries, there's always something stuck in m_c's fur.",
         "cat_trait": null,
