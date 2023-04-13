@@ -11,7 +11,6 @@ from scripts.utility import (
     add_children_to_cat,
     event_text_adjust,
     change_clan_relations,
-    change_clan_reputation,
     change_relationship_values, create_new_cat,
     create_outside_cat
 )
@@ -56,12 +55,12 @@ class Patrol():
         self.patrol_other_cats = []
         self.patrol_fail_stat_cat = None
         self.patrol_win_stat_cat = None
-        self.app1_name = None
-        self.app2_name = None
-        self.app3_name = None
-        self.app4_name = None
-        self.app5_name = None
-        self.app6_name = None
+        self.app1 = None
+        self.app2 = None
+        self.app3 = None
+        self.app4 = None
+        self.app5 = None
+        self.app6 = None
         self.other_clan = None
         self.experience_levels = []
         self.filter_count = 0
@@ -157,33 +156,18 @@ class Patrol():
 
         # grabbing the apprentices' names
         if len(self.patrol_apprentices) != 0:
-            if len(self.patrol_apprentices) == 1:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-            elif len(self.patrol_apprentices) == 2:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-                self.app2_name = str(self.patrol_apprentices[1].name)
-            elif len(self.patrol_apprentices) == 3:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-                self.app2_name = str(self.patrol_apprentices[1].name)
-                self.app3_name = str(self.patrol_apprentices[2].name)
-            elif len(self.patrol_apprentices) == 4:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-                self.app2_name = str(self.patrol_apprentices[1].name)
-                self.app3_name = str(self.patrol_apprentices[2].name)
-                self.app4_name = str(self.patrol_apprentices[3].name)
-            elif len(self.patrol_apprentices) == 5:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-                self.app2_name = str(self.patrol_apprentices[1].name)
-                self.app3_name = str(self.patrol_apprentices[2].name)
-                self.app4_name = str(self.patrol_apprentices[3].name)
-                self.app5_name = str(self.patrol_apprentices[4].name)
-            elif len(self.patrol_apprentices) == 6:
-                self.app1_name = str(self.patrol_apprentices[0].name)
-                self.app2_name = str(self.patrol_apprentices[1].name)
-                self.app3_name = str(self.patrol_apprentices[2].name)
-                self.app4_name = str(self.patrol_apprentices[3].name)
-                self.app5_name = str(self.patrol_apprentices[4].name)
-                self.app6_name = str(self.patrol_apprentices[5].name)
+            if len(self.patrol_apprentices) >= 1:
+                self.app1 = self.patrol_apprentices[0]
+            if len(self.patrol_apprentices) >= 2:
+                self.app2 = self.patrol_apprentices[1]
+            if len(self.patrol_apprentices) >= 3:
+                self.app3 = self.patrol_apprentices[2]
+            if len(self.patrol_apprentices) >= 4:
+                self.app4 = self.patrol_apprentices[3]
+            if len(self.patrol_apprentices) >= 5:
+                self.app5 = self.patrol_apprentices[4]
+            if len(self.patrol_apprentices) >= 6:
+                self.app6 = self.patrol_apprentices[5]
 
         if clan.all_clans and len(clan.all_clans) > 0:
             self.other_clan = choice(clan.all_clans)
@@ -714,9 +698,9 @@ class Patrol():
 
         # if patrol contains cats with autowin skill, chance of success is high. otherwise it will calculate the
         # chance by adding the patrol event's chance of success plus the patrol's total exp
-        success_adjust = (1 + 0.10) * len(self.patrol_cats) * self.patrol_total_experience / (
-                    len(self.patrol_cats) * gm_modifier)
-        success_chance = self.patrol_event.chance_of_success + success_adjust
+        success_adjust = (1 + 0.10 * len(self.patrol_cats)) * self.patrol_total_experience / (
+                    len(self.patrol_cats) * gm_modifier * 2)
+        success_chance = self.patrol_event.chance_of_success + int(success_adjust)
 
         # Auto-wins based on EXP are sorta lame. Often makes it immpossible for large patrols with experiences cats to fail patrols at all. 
         # EXP alone can only bring success chance up to 85. However, skills/traits can bring it up above that. 
@@ -727,9 +711,9 @@ class Patrol():
         for kitty in self.patrol_cats:
             if kitty.skill in self.patrol_event.win_skills:
                 success_chance += game.config["patrol_generation"]["win_stat_cat_modifier"]
-                if ("great" or "very") in kitty.skill:
+                if "great" in kitty.skill or "very" in kitty.skill:
                     success_chance += game.config["patrol_generation"]["better_stat_modifier"]
-                elif ("fantastic" or "excellent" or "extremely") in kitty.skill:
+                elif "fantastic" in kitty.skill or "excellent" in kitty.skill or "extremely" in kitty.skill:
                     success_chance += game.config["patrol_generation"]["best_stat_modifier"]
             if kitty.trait in self.patrol_event.win_trait:
                 success_chance += game.config["patrol_generation"]["win_stat_cat_modifier"]
@@ -739,11 +723,13 @@ class Patrol():
                 success_chance += game.config["patrol_generation"]["fail_stat_cat_modifier"]
 
             skill_updates += f"{kitty.name} updated chance to {success_chance} | "
+        if success_chance >= 120:
+            success_chance = 115
+            skill_updates += "success chance over 120, updated to 115"
         print(skill_updates)
-        print('ending chance', success_chance)
-
-        c = int(random.getrandbits(7))
+        c = int(random.random() * 120)
         outcome = int(random.getrandbits(4))
+        print('ending chance', success_chance, 'vs.', c)
 
         # denotes if they get the common "basic" outcome or the rare "basic" outcome
         rare = False
@@ -788,7 +774,7 @@ class Patrol():
                 for tag in self.patrol_event.tags:
                     if "new_cat" in tag:
                         if antagonize:
-                            self.handle_reputation(-20)
+                            self.handle_reputation(-10)
                         else:
                             self.handle_reputation(10)
                         break
@@ -900,7 +886,7 @@ class Patrol():
                         self.handle_clan_relations(difference=int(-1), antagonize=False, outcome=outcome)
                 elif "new_cat" in self.patrol_event.tags:
                     if antagonize:
-                        self.handle_reputation(-10)
+                        self.handle_reputation(-5)
                     else:
                         self.handle_reputation(0)
             self.handle_mentor_app_pairing()
@@ -1028,7 +1014,7 @@ class Patrol():
                 new_name = choice([True, False])
                 chosen_backstory = Cat.backstory_categories["rogue_backstories"]
                 if "medcat" in attribute_list:
-                    backstory = ["medicine_cat", "disgraced"]
+                    chosen_backstory = ["medicine_cat", "disgraced"]
                 if not success:
                     outsider = create_outside_cat(Cat, loner, backstory=choice(chosen_backstory))
                     self.results_text.append(f"The Clan has met {outsider}.")
@@ -1044,7 +1030,7 @@ class Patrol():
             kit = True
             age = randint(1, 5)
             status = "kitten"
-            chosen_backstory = ['abandoned2', 'abandoned1', 'abandoned3']
+            chosen_kit_backstory = ['abandoned2', 'abandoned1', 'abandoned3']
         elif "apprentice" in attribute_list:
             status = "apprentice"
         elif "warrior" in attribute_list:
@@ -1102,10 +1088,10 @@ class Patrol():
             # make sure kittens get correct backstory
             if "dead" in attribute_list:
                 print('parent is dead')
-                kit_backstory = ['orphaned', 'orphaned2']
+                chosen_kit_backstory = ['orphaned', 'orphaned2']
             else:
                 print('parent is alive')
-                kit_backstory = ['outsider_roots2']
+                chosen_kit_backstory = ['outsider_roots2', 'outsider_roots2']
             # make sure kittens get right age
             if "litternewborn" in attribute_list:
                 print('litter is newborn')
@@ -1115,21 +1101,30 @@ class Patrol():
                 print('litter is not newborn')
                 kit_age = randint(1, 5)
 
-        # giving specified backstories if any were specified
-        possible_backstories = []
-        for backstory in Cat.backstories:
-            if backstory in attribute_list:
-                possible_backstories.append(backstory)
+            # giving specified backstories if any were specified
+            possible_backstories = []
+            for backstory in Cat.backstories:
+                if f'{backstory}{outcome}' in attribute_list:
+                    possible_backstories.append(backstory)
 
-        if possible_backstories:
-            if "dead" in attribute_list:
+            if possible_backstories:
                 kit_backstory = possible_backstories
             else:
-                backstory = possible_backstories
-            # if none of these tags are present, then it uses the chosen_backstory from before
+                kit_backstory = chosen_kit_backstory
+
+            backstory = chosen_backstory
         else:
-            if "dead" in attribute_list:
-                kit_backstory = chosen_backstory
+            # giving specified backstories if any were specified
+            possible_backstories = []
+            for backstory in Cat.backstories:
+                if backstory in attribute_list:
+                    possible_backstories.append(backstory)
+
+            if possible_backstories:
+                backstory = possible_backstories
+            elif kit:
+                backstory = chosen_kit_backstory
+                # if none of these tags are present, then it uses the chosen_backstory from before
             else:
                 backstory = chosen_backstory
 
@@ -1196,7 +1191,7 @@ class Patrol():
                                                new_name=new_name,
                                                loner=loner,
                                                kittypet=kittypet,
-                                               kit=False,
+                                               kit=False, #this is for singular kits, litters need this to be false
                                                litter=True,
                                                other_clan=other_clan,
                                                backstory=kit_backstory,
@@ -1850,7 +1845,7 @@ class Patrol():
         """
         if "no_change_fail_rep" in self.patrol_event.tags and not self.success:
             difference = 0
-        change_clan_reputation(difference)
+        game.clan.reputation += difference
         if difference > 0:
             insert = "improved"
         elif difference == 0:

@@ -7,12 +7,10 @@ import ujson
 
 from re import sub
 from scripts.cat.cats import Cat
-from scripts.version import VERSION_NAME
+from scripts.version import SAVE_VERSION_NUMBER
 from scripts.cat.pelts import choose_pelt, vit, point_markings
 from scripts.utility import update_sprite, is_iterable
 from random import choice
-
-from json import JSONDecodeError
 
 def load_cats():
     try:
@@ -39,7 +37,7 @@ def json_load():
         game.switches['error_message'] = f'Can\t open {clan_cats_json_path}!'
         game.switches['traceback'] = e
         raise
-    except JSONDecodeError as e:
+    except ujson.JSONDecodeError as e:
         game.switches['error_message'] = f'{clan_cats_json_path} is malformed!'
         game.switches['traceback'] = e
         raise
@@ -219,6 +217,7 @@ def json_load():
             new_cat.prevent_fading = cat["prevent_fading"] if "prevent_fading" in cat else False
             new_cat.favourite = cat["favourite"] if "favourite" in cat else False
             new_cat.tint = cat["tint"] if "tint" in cat else "none"
+            #new_cat.pronouns = cat["pronouns"] if "pronouns" in cat else [new_cat.default_pronouns[0].copy()]
             all_cats.append(new_cat)
         except KeyError as e:
             if "ID" in cat:
@@ -501,12 +500,13 @@ def version_convert(version_info):
     if version_info is None:
         return
     
-    if version_info["version_name"] == VERSION_NAME:
+    if version_info["version_name"] == SAVE_VERSION_NUMBER:
         # Save was made on current version
         return
     
     if version_info["version_name"] is None:
         # Save was made before version number stoage was implemented. 
+        # (ie, save file version 0)
         # This means the EXP must be adjusted. 
         for c in Cat.all_cats.values():
             c.experience = c.experience * 3.2

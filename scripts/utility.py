@@ -7,12 +7,15 @@ TODO: Docs
 """  # pylint: enable=line-too-long
 
 from random import choice, choices, randint, random, sample
+import re
 import pygame
 from scripts.cat.names import names
 
 import ujson
 import logging
 
+import datetime
+from enum import Enum
 
 logger = logging.getLogger(__name__)
 from scripts.game_structure import image_cache
@@ -184,17 +187,37 @@ def get_current_season():
     return game.clan.current_season
 
 
-def change_clan_reputation(difference=0):
-    """
-    will change the clan's reputation with outsider cats according to the difference parameter.
-    """
-    # grab rep
-    reputation = int(game.clan.reputation)
-    # ensure this is an int value
-    difference = int(difference)
-    # change rep
-    reputation += difference
-    game.clan.reputation = reputation
+def pronoun_repl(m, cat_pronouns_dict):
+    """ Helper function for add_pronouns """
+    inner_details = m.group(1).split("/")
+    try:
+        d = cat_pronouns_dict[inner_details[1]][1]
+        if inner_details[0] == "PRONOUN":
+            pro = d[inner_details[2]]
+            if inner_details[-1] == "CAP":
+                pro = pro.capitalize()
+            return pro
+        elif inner_details[0] == "VERB":
+            return inner_details[d["conju"] + 1]
+        return "error1"
+    except KeyError as e:
+        logger.exception("Failed to load sprite")
+        return "error2"
+
+
+def name_repl(m, cat_dict):
+    return cat_dict[m.group(0)][0]
+
+
+def process_text(text, cat_dict):
+    """ Add the correct name and pronouns into a string. """
+    adjust_text = re.sub(r"\{(.*?)}", lambda x: pronoun_repl(x, cat_dict), text)
+
+    name_patterns = [re.escape(l) for l in cat_dict]
+
+    adjust_text = re.sub("|".join(name_patterns), lambda x: name_repl(x, cat_dict), adjust_text)
+    return adjust_text
+
 
 
 def change_clan_relations(other_clan, difference=0):
@@ -287,7 +310,6 @@ def create_new_cat(Cat,
 
     # cat creation and naming time
     for index in range(number_of_cats):
-
         # setting gender
         if not gender:
             _gender = choice(['female', 'male'])
@@ -345,8 +367,6 @@ def create_new_cat(Cat,
         if accessory:
             new_cat.accessory = accessory
 
-
-
         # give apprentice aged cat a mentor
         if new_cat.age == 'adolescent':
             new_cat.update_mentor()
@@ -368,27 +388,35 @@ def create_new_cat(Cat,
                 possible_conditions = []
                 for condition in PERMANENT:
                     if (kit or litter) and PERMANENT[condition]['congenital'] not in ['always', 'sometimes']:
-                        print(condition)
+                        continue
+                    # next part ensures that a kit won't get a condition that takes too long to reveal
+                    age = new_cat.moons
+                    leeway = 5 - (PERMANENT[condition]['moons_until'] + 1)
+                    if age > leeway:
                         continue
                     possible_conditions.append(condition)
-                print(possible_conditions)
-                chosen_condition = choice(possible_conditions)
-                born_with = False
-                if PERMANENT[chosen_condition]['congenital'] in ['always', 'sometimes']:
-                    born_with = True
+                # print(possible_conditions, str(new_cat.name), new_cat.moons)
 
-                new_cat.get_permanent_condition(chosen_condition, born_with)
+                if possible_conditions:
+                    chosen_condition = choice(possible_conditions)
+                    born_with = False
+                    if PERMANENT[chosen_condition]['congenital'] in ['always', 'sometimes']:
+                        born_with = True
 
-                # assign scars
-                if chosen_condition in ['lost a leg', 'born without a leg']:
-                    new_cat.scars.append('NOPAW')
-                elif chosen_condition in ['lost their tail', 'born without a tail']:
-                    new_cat.scars.append("NOTAIL")
+                    new_cat.get_permanent_condition(chosen_condition, born_with)
+                    if new_cat.permanent_condition[chosen_condition]["moons_until"] == 0:
+                        new_cat.permanent_condition[chosen_condition]["moons_until"] = -2
+
+                    # assign scars
+                    if chosen_condition in ['lost a leg', 'born without a leg']:
+                        new_cat.scars.append('NOPAW')
+                    elif chosen_condition in ['lost their tail', 'born without a tail']:
+                        new_cat.scars.append("NOTAIL")
 
         if outside:
             new_cat.outside = True
         if not alive:
-            new_cat.die()
+            new_cat.dead = True
 
         # newbie thought
         new_cat.thought = thought
@@ -434,8 +462,8 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
         if not alive:
             new_cat.dead = True
 
-        if thought:
-            new_cat.thought = thought
+        thought = "Wonders about those Clan cats they just met"
+        new_cat.thought = thought
 
         # create relationships - only with outsiders 
         # (this function will handle, that the cat only knows other outsiders)
@@ -799,120 +827,96 @@ def event_text_adjust(Cat,
     :return: the adjusted text
     """
 
-    name = str(cat.name)
-    other_name = None
+    cat_dict = {}
+
+    if not keep_m_c and cat:
+        cat_dict["m_c"] = (str(cat.name), choice(cat.pronouns))
+        cat_dict["p_l"] = cat_dict["m_c"]
     if other_cat:
-        other_name = str(other_cat.name)
-
-    adjust_text = text
-    if keep_m_c is False:
-        adjust_text = adjust_text.replace("m_c", str(name).strip())
-    if other_name:
-        adjust_text = adjust_text.replace("r_c", str(other_name))
+        cat_dict["r_c"] = (str(other_cat.name), choice(other_cat.pronouns))
     if other_clan_name:
-        adjust_text = adjust_text.replace("o_c", str(other_clan_name))
+        cat_dict["o_c"] = (other_clan_name, None)
+    if cat.mate:
+        mate = Cat.fetch_cat(cat.mate)
+        cat_dict["c_m"] = (str(mate.name), choice(mate.pronouns))
     if new_cat:
-        adjust_text = adjust_text.replace("n_c_pre", str(new_cat.name.prefix))
-        adjust_text = adjust_text.replace("n_c", str(new_cat.name))
-    if "acc_plural" in adjust_text:
-        adjust_text = adjust_text.replace("acc_plural", str(ACC_DISPLAY[cat.accessory]["plural"]))
-    if "acc_singular" in adjust_text:
-        adjust_text = adjust_text.replace("acc_singular", str(ACC_DISPLAY[cat.accessory]["singular"]))
+        cat_dict["n_c_pre"] = (str(new_cat.name.prefix), None)
+        cat_dict["n_c"] = (str(new_cat.name), choice(new_cat.pronouns))
 
-    if "omen_list" in adjust_text:
-        chosen_omens = get_snippet_list("omen_list", randint(2, 4), sense_groups=["sight"])
-        adjust_text = adjust_text.replace("omen_list", chosen_omens)
-    if "prophecy_list" in adjust_text:
-        chosen_prophecy = get_snippet_list("prophecy_list", randint(2, 4), sense_groups=["sight", "emotional", "touch"])
-        adjust_text = adjust_text.replace("prophecy_list", chosen_prophecy)
-    if "dream_list" in adjust_text:
-        chosen_dream = get_snippet_list("dream_list", randint(2, 4))
-        adjust_text = adjust_text.replace("dream_list", chosen_dream)
-    if "clair_list" in adjust_text:
-        chosen_clair = get_snippet_list("clair_list", randint(2, 4))
-        adjust_text = adjust_text.replace("clair_list", chosen_clair)
-    if "story_list" in adjust_text:
-        chosen_story = get_snippet_list("story_list", randint(1, 2))
-        adjust_text = adjust_text.replace("story_list", chosen_story)
+    if cat.accessory:
+        cat_dict["acc_plural"] = (str(ACC_DISPLAY[cat.accessory]["plural"]), None)
+        cat_dict["acc_singular"] = (str(ACC_DISPLAY[cat.accessory]["singular"]), None)
 
     if clan:
         _tmp = clan
     else:
         _tmp = game.clan
-    adjust_text = adjust_text.replace("c_n", str(_tmp.name) + "Clan")
-    adjust_text = adjust_text.replace("p_l", name)
+
+    cat_dict["c_n"] = (str(_tmp.name) + "Clan", None)
+
+    # Dreams and Omens
+    if "omen_list" in text:
+        chosen_omens = get_snippet_list("omen_list", randint(2, 4), sense_groups=["sight"])
+        cat_dict["omen_list"] = (chosen_omens, None)
+    if "prophecy_list" in text:
+        chosen_prophecy = get_snippet_list("prophecy_list", randint(2, 4), sense_groups=["sight", "emotional", "touch"])
+        cat_dict["prophecy_list"] = (chosen_prophecy, None)
+    if "dream_list" in text:
+        chosen_dream = get_snippet_list("dream_list", randint(2, 4))
+        cat_dict["dream_list"] = (chosen_dream, None)
+    if "clair_list" in text:
+        chosen_clair = get_snippet_list("clair_list", randint(2, 4))
+        cat_dict["clair_list"] = (chosen_clair, None)
+    if "story_list" in text:
+        chosen_story = get_snippet_list("story_list", randint(1, 2))
+        cat_dict["story_list"] = (chosen_story, None)
+
+    adjust_text = process_text(text, cat_dict)
 
     return adjust_text
 
 
 def ceremony_text_adjust(Cat, text, cat, dead_mentor=None, mentor=None, previous_alive_mentor=None, random_honor=None,
                          living_parents=(), dead_parents=()):
-    name = str(cat.name)
     prefix = str(cat.name.prefix)
     clanname = str(game.clan.name + "Clan")
 
-    if mentor:
-        mentor_name = str(mentor.name)
-    else:
-        mentor_name = "mentor_placeholder"
-
-    if dead_mentor:
-        dead_mentor_name = str(dead_mentor.name)
-    else:
-        dead_mentor_name = "dead_mentor_placeholder"
-
-    if previous_alive_mentor:
-        previous_alive_mentor_name = str(previous_alive_mentor.name)
-    else:
-        previous_alive_mentor_name = "previous_mentor_name"
-
-    if game.clan.leader:
-        leader_name = str(game.clan.leader.name)
-    else:
-        leader_name = "leader_placeholder"
-
-    if living_parents:
-        random_living_parent = choice(living_parents)
-    else:
-        random_living_parent = None
-
-    if dead_parents:
-        random_dead_parent = choice(dead_parents)
-    else:
-        random_dead_parent = None
-
     random_honor = random_honor
+    random_living_parent = None
+    random_dead_parent = None
 
     adjust_text = text
-    adjust_text = adjust_text.replace("(prefix)", prefix)
-    adjust_text = adjust_text.replace("m_c", name)
-    adjust_text = adjust_text.replace("c_n", clanname)
-    if mentor_name:
-        adjust_text = adjust_text.replace("(mentor)", mentor_name)
-    adjust_text = adjust_text.replace("l_n", leader_name)
-    adjust_text = adjust_text.replace("(deadmentor)", dead_mentor_name)
-    adjust_text = adjust_text.replace("(previous_mentor)", previous_alive_mentor_name)
 
-    # Living Parents
-    if "p1" in adjust_text and "p2" in adjust_text and len(living_parents) >= 2:
-        adjust_text = adjust_text.replace("p1", str(living_parents[0].name))
-        adjust_text = adjust_text.replace("p2", str(living_parents[1].name))
-    elif "p1" in adjust_text and random_living_parent:
-        adjust_text = adjust_text.replace("p1", str(random_living_parent.name))
-    elif "p2" in adjust_text and random_living_parent:
-        adjust_text = adjust_text.replace("p2", str(random_living_parent.name))
-
-    # Dead Parents
-    if "dead_par1" in adjust_text and "dead_par2" in adjust_text and len(dead_parents) >= 2:
-        adjust_text = adjust_text.replace("dead_par1", str(dead_parents[0].name))
-        adjust_text = adjust_text.replace("dead_par2", str(dead_parents[1].name))
-    elif "dead_par1" in adjust_text and random_dead_parent:
-        adjust_text = adjust_text.replace("dead_par1", str(random_dead_parent.name))
-    elif "dead_par2" in adjust_text and random_living_parent:
-        adjust_text = adjust_text.replace("dead_par2", str(random_dead_parent.name))
+    cat_dict = {
+        "m_c": (str(cat.name), choice(cat.pronouns)) if cat else ("cat_placeholder", None),
+        "(mentor)": (str(mentor.name), choice(mentor.pronouns)) if mentor else ("mentor_placeholder", None),
+        "(deadmentor)": (str(dead_mentor.name), choice(dead_mentor.pronouns)) if dead_mentor else ("dead_mentor_name", None),
+        "(previous_mentor)": (str(previous_alive_mentor.name), choice(previous_alive_mentor.pronouns)) if previous_alive_mentor else ("previous_mentor_name", None),
+        "l_n": (str(game.clan.leader.name), choice(game.clan.leader.pronouns)) if game.clan.leader else ("leader_name", None),
+        "c_n": (clanname, None),
+        "(prefix)": (prefix, None),
+    }
 
     if random_honor:
-        adjust_text = adjust_text.replace("r_h", random_honor)
+        cat_dict["r_h"] = (random_honor, None)
+
+    if "p1" in adjust_text and "p2" in adjust_text and len(living_parents) >= 2:
+        cat_dict["p1"] = (str(living_parents[0].name), choice(living_parents[0].pronouns))
+        cat_dict["p2"] = (str(living_parents[1].name), choice(living_parents[1].pronouns))
+    elif living_parents:
+        random_living_parent = choice(living_parents)
+        cat_dict["p1"] = (str(random_living_parent.name), choice(random_living_parent.pronouns))
+        cat_dict["p2"] = (str(random_living_parent.name), choice(random_living_parent.pronouns))
+
+    if "dead_par1" in adjust_text and "dead_par2" in adjust_text and len(dead_parents) >= 2:
+        cat_dict["dead_par1"] = (str(dead_parents[0].name), choice(dead_parents[0].pronouns))
+        cat_dict["dead_par2"] = (str(dead_parents[1].name), choice(dead_parents[1].pronouns))
+    elif dead_parents:
+        random_dead_parent = choice(dead_parents)
+        cat_dict["dead_par1"] = (str(random_dead_parent.name), choice(random_dead_parent.pronouns))
+        cat_dict["dead_par2"] = (str(random_dead_parent.name), choice(random_dead_parent.pronouns))
+
+    adjust_text = process_text(adjust_text, cat_dict)
 
     return adjust_text, random_living_parent, random_dead_parent
 
@@ -929,6 +933,13 @@ def scale(rect):
 
     return rect
 
+def scale_dimentions(dim):
+    dim = list(dim)
+    dim[0] = round(dim[0] / 1600 * screen_x) if dim[0] > 0 else dim[0]
+    dim[1] = round(dim[1] / 1400 * screen_y) if dim[1] > 0 else dim[1]
+    dim = tuple(dim)
+    
+    return dim
 
 def draw(cat, pos):
     new_pos = list(pos)
@@ -1147,6 +1158,36 @@ def apply_opacity(surface, opacity):
             surface.set_at((x, y), tuple(pixel))
     return surface
 
+# ---------------------------------------------------------------------------- #
+#                                Fun Date Stuff                                #
+# ---------------------------------------------------------------------------- #
+
+class SpecialDate(Enum):
+    """
+    Enum keeping track of registered 'special dates'. Format is (mm, dd).
+    """
+    APRIL_FOOLS = (4, 1)
+    HALLOWEEN = (10, 31)
+    NEW_YEARS = (1, 1)
+
+def is_today(date: SpecialDate) -> bool:
+    """
+    Checks if today is a specified 'special date'.
+    """
+    today = datetime.date.today()
+    return (today.month, today.day) == date.value
+
+def get_special_date() -> SpecialDate:
+    """
+    If today is a 'special date', return the SpecialDate. 
+
+    Otherwise, return None.
+    """
+    today = datetime.date.today()
+    for date in SpecialDate:
+        if (today.month, today.day) == date.value:
+            return date
+    return None
 
 # ---------------------------------------------------------------------------- #
 #                                     OTHER                                    #

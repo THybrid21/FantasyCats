@@ -168,11 +168,11 @@ class Events():
                 ghost_names.append(str(ghost.name))
             insert = adjust_list_text(ghost_names)
 
-            if len(Cat.dead_cats) > 1:
-                event = f"In the past moon {insert} have taken their places in StarClan. {game.clan.name}Clan mourns their loss, and " \
-                        f"their friends and family shared the best, and sometimes the worse, moments of their lives " \
-                        f"in stories passed around the circle of mourners as the elders carried them to their final " \
-                        f"resting place."
+            if len(Cat.dead_cats) > 1 and game.clan.game_mode != 'classic':
+                event = f"The past moon, {insert} have taken their place in StarClan. {game.clan.name}Clan mourns their " \
+                        f"loss, and their Clanmates will miss where they had been in their lives. Moments of their " \
+                        f"lives are shared in stories around the circle of mourners as those that were closest to them " \
+                        f"take them to their final resting place."
 
                 if len(ghost_names) > 2:
                     alive_cats = list(
@@ -180,7 +180,10 @@ class Events():
                             lambda kitty: (kitty.status != "leader" and not kitty.dead and
                                            not kitty.outside and not kitty.exiled), Cat.all_cats.values()))
                     # finds a percentage of the living clan to become shaken
-                    shaken_cats = random.sample(alive_cats, k=max(int((len(alive_cats) * random.choice([4, 5, 6])) / 100), 1))
+                    if len(alive_cats) == 0:
+                        return
+                    else:
+                        shaken_cats = random.sample(alive_cats, k=max(int((len(alive_cats) * random.choice([4, 5, 6])) / 100), 1))
 
                     shaken_cat_names = []
                     for cat in shaken_cats:
@@ -196,9 +199,9 @@ class Events():
 
             else:
                 event = f"The past moon, {insert} has taken their place in StarClan. {game.clan.name}Clan mourns their " \
-                        f"loss, and their friends and family shared the best, and sometimes the worse, moments of " \
-                        f"their lives in stories passed around the circle of mourners as the elders carried them to " \
-                        f"their final resting place."
+                        f"loss, and their Clanmates will miss the spot they took up in their lives. Moments of their " \
+                        f"life are shared in stories around the circle of mourners as those that were closest to them " \
+                        f"take them to their final resting place."
 
             game.cur_events_list.append(
                 Single_Event(event, ["birth_death"],
@@ -323,7 +326,6 @@ class Events():
             for herb in herbs:
                 adjust_by = random.choices([-2, -1, 0, 1, 2], [1, 2, 3, 2, 1],
                                            k=1)
-                # print(adjust_by)
                 game.clan.herbs[herb] += adjust_by[0]
                 if game.clan.herbs[herb] <= 0:
                     game.clan.herbs.pop(herb)
@@ -684,10 +686,9 @@ class Events():
 
         self.pregnancy_events.handle_having_kits(cat, clan=game.clan)
 
-        # killing exiled cats
-        if cat.exiled or cat.outside:
+        # killing outside cats
+        if cat.outside:
             if random.getrandbits(6) == 1 and not cat.dead:
-                # print("Cat Died: " + str(cat.name))
                 cat.dead = True
                 if cat.exiled:
                     text = f'Rumors reach your Clan that the exiled {cat.name} has died recently.'
@@ -765,6 +766,7 @@ class Events():
             cat.thoughts()
             return
 
+        self.handle_apprentice_EX(cat) # This must be before perform_ceremonies! 
         # this HAS TO be before the cat.is_disabled() so that disabled kits can choose a med cat or mediator position
         self.perform_ceremonies(cat)
 
@@ -776,7 +778,6 @@ class Events():
 
         self.coming_out(cat)
         self.pregnancy_events.handle_having_kits(cat, clan=game.clan)
-        self.handle_apprentice_EX(cat)
         cat.create_interaction()
 
         # this is the new interaction function, currently not active
@@ -1051,7 +1052,7 @@ class Events():
                             self.ceremony_accessory = True
                             self.gain_accessories(cat)
                         else:
-                            if cat.is_disabled():
+                            if cat.is_disabled() and not game.settings["retirement"]:
                                 for condition in cat.permanent_condition:
                                     if cat.permanent_condition[condition]["severity"] == "severe":
                                         cat.status = 'apprentice'
@@ -1619,12 +1620,10 @@ class Events():
 
         clan_size = len(alive_cats)
 
-        base_chance = 200
+        base_chance = 700
         if clan_size < 10:
             base_chance = 200
-        elif clan_size > 50:
-            base_chance = 700
-        elif clan_size > 30:
+        elif clan_size < 30:
             base_chance = 300
 
         reputation = game.clan.reputation
@@ -1725,7 +1724,6 @@ class Events():
         # check if clan has kits, if True then clan has kits
         alive_kits = get_alive_kits(Cat)
 
-        # chance to kill leader: 1/100
         # chance to kill leader: 1/100
         if not int(random.random() *
                    100) and cat.status == 'leader' and not cat.not_working():
@@ -2008,10 +2006,13 @@ class Events():
             if random.getrandbits(1):  # 50/50
                 if cat.gender == "male":
                     cat.genderalign = "trans female"
+                    #cat.pronouns = [cat.default_pronouns[1].copy()]
                 else:
                     cat.genderalign = "trans male"
+                    #cat.pronouns = [cat.default_pronouns[2].copy()]
             else:
                 cat.genderalign = "nonbinary"
+                #cat.pronouns = [cat.default_pronouns[0].copy()]
 
             if cat.gender == 'male':
                 gender = 'tom'

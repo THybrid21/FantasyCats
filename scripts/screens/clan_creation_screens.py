@@ -297,7 +297,7 @@ class MakeClanScreen(Screens):
             if old_biome is not None:
                 possible_biomes.remove(old_biome)
             self.biome_selected = choice(possible_biomes)
-            if self.biome_selected in ['Forest', 'Beach']:
+            if self.biome_selected != 'Plains':
                 self.selected_camp_tab = randrange(1, 4)
             else:
                 self.selected_camp_tab = randrange(1, 3)
@@ -514,7 +514,8 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER)
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((180, 430), (308, 60))), "", object_id="#cave_tab"
                                               , manager=MANAGER)
-
+            self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((85, 500), (358, 60))), "", object_id="#crystal_tab"
+                                              , manager=MANAGER)
         elif self.biome_selected == 'Plains':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((128, 360), (308, 60))), "", object_id="#grasslands_tab"
                                               , manager=MANAGER, )
@@ -686,6 +687,7 @@ class MakeClanScreen(Screens):
                                                                   pygame.transform.scale(MakeClanScreen.name_clan_img,
                                                                                          (1600, 1400))
                                                                   , manager=MANAGER)
+        self.elements['background'].disable()
         self.elements["random"] = UIImageButton(scale(pygame.Rect((448, 1190), (68, 68))), "",
                                                 object_id="#random_dice_button"
                                                 , manager=MANAGER)
@@ -727,6 +729,7 @@ class MakeClanScreen(Screens):
         self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 828), (1600, 572))),
                                                                   MakeClanScreen.leader_img, manager=MANAGER)
 
+        self.elements['background'].disable()
         self.clan_name_header()
 
         # Roll_buttons
@@ -809,6 +812,7 @@ class MakeClanScreen(Screens):
 
         self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 828), (1600, 572))),
                                                                   MakeClanScreen.deputy_img, manager=MANAGER)
+        self.elements['background'].disable()
         self.clan_name_header()
 
         # info for chosen cats:
@@ -849,6 +853,7 @@ class MakeClanScreen(Screens):
 
         self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 828), (1600, 572))),
                                                                   MakeClanScreen.medic_img, manager=MANAGER)
+        self.elements['background'].disable()
         self.clan_name_header()
 
         # info for chosen cats:
@@ -897,6 +902,7 @@ class MakeClanScreen(Screens):
                                                                       pygame.image.load(
                                                                           "resources/images/pick_clan_screen/clan_none_light.png").convert_alpha(),
                                                                       (1600, 1400)), manager=MANAGER)
+        self.elements['background'].disable()
         self.clan_name_header()
 
         # info for chosen cats:
