@@ -150,7 +150,7 @@
     "seizure prone": {
         "seizure": [
             "r_c spots the seizure coming, and brings m_c to {PRONOUN/m_c/poss} nest where it's always a little less upsetting to wake up.",
-            "m_c is exhausted and stressed, both the cause of and consequence of {PRONOUN/m_c/poss} seizures."
+            "m_c is exhausted and stressed, both the cause of and consequence of {PRONOUN/m_c/poss} seizures.",
 			"m_c doesn't remember falling down, but when they blink their eyes dizzily they find themselves looking up at the sky above.",
 			"Tired and a little dizzy m_c still trembles as bit in their nest in the medicine den. They're unsure if that's the end of the seizure or not."
         ],

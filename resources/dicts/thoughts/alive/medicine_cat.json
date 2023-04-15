@@ -379,7 +379,7 @@
 			"Rolls their eyes at their Clanmate's talk of the rules",
 			"Thinks the Medicine Code is too restrictive",
 			"Thinks about having a mate and kits",
-			"Wonders about o_c_n's latest news",
+			"Wonders about another clan's latest news",
 			"Sneaks out to try some cool battle moves they saw the warriors use",
 			"Forgets to treat a clanmate who mocked them",
 			"Ignores the omens that they were sent by StarClan",
@@ -396,13 +396,13 @@
 			"Is considering a dream they had the other night",
 			"Sings to the cats in the medicine den",
 			"Stares at the clouds and wonders if the dogs up there watch them back",
-			"Was seen wandering the borders of o_c_n",
+			"Was seen wandering the borders of another clan",
 			"Is staring longingly at the herbs",
 			"Was seen by the rivers edge staring intensely at the water",
 			"Is considering their name deeply",
 			"Is reading the clouds and predicting rain",
 			"Was seen talking with the rats of the forest about medicine",
-			"Wants to talk to o_c_n's medicine cat"
+			"Wants to talk to another clan's medicine cat"
         ],
         "main_trait_constraint": [
             "dreamer"
@@ -442,7 +442,7 @@
         "id": "wandering_medicine_cat",
         "thoughts": [
             "Went missing for most of this week",
-			"Was last seen vanturing across o_c_n's territory",
+			"Was last seen vanturing across another clan's territory",
 			"Heard interesting rumours about Peltshifterplace",
 			"Is looking towards the exit of the camp with longing",
 			"Has itchy paws and wants to wander the territory",

@@ -5,581 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/pregnancy.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/pregnancy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/misc_events/general/kitten.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/CREDITS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/102_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/104_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/108_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/110_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/114_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/121_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/127_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/140_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/144_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/148_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/15_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/176_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/177_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/179_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/17_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/180_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/190_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/194_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/207_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/219_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/220_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/24_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/33_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/38_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/41_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/43_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/44_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/52_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/70_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/85_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/88_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/89_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/conditions/95_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/deaths.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/faded_cats_info_copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/notes/371_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/notes/374_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/notes/375_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/other_clans.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/100_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/101_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/102_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/103_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/104_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/105_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/106_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/107_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/108_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/109_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/10_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/110_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/111_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/112_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/113_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/114_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/115_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/116_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/117_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/118_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/119_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/11_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/120_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/121_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/122_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/123_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/124_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/125_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/126_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/127_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/128_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/129_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/12_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/130_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/131_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/132_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/133_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/134_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/135_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/136_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/137_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/138_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/139_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/13_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/140_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/141_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/142_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/143_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/144_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/145_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/146_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/147_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/148_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/149_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/14_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/150_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/151_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/152_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/153_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/154_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/155_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/156_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/157_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/158_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/159_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/15_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/160_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/161_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/162_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/163_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/164_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/165_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/166_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/167_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/168_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/169_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/16_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/170_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/171_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/172_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/173_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/174_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/175_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/176_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/177_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/178_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/179_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/17_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/180_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/181_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/182_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/183_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/184_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/185_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/186_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/187_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/188_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/189_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/18_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/190_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/191_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/192_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/193_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/194_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/195_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/196_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/197_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/198_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/199_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/19_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/1_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/200_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/201_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/202_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/203_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/204_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/205_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/206_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/207_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/208_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/209_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/20_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/210_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/211_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/212_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/213_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/214_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/215_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/216_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/217_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/218_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/219_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/21_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/220_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/221_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/222_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/223_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/224_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/225_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/226_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/22_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/23_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/24_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/25_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/26_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/27_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/28_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/29_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/2_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/30_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/31_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/32_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/33_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/34_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/35_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/369_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/36_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/370_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/371_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/372_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/373_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/374_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/375_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/377_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/378_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/379_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/37_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/38_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/39_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/3_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/40_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/41_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/43_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/44_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/45_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/46_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/47_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/48_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/49_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/4_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/50_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/51_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/52_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/53_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/54_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/55_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/56_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/57_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/58_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/59_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/5_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/61_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/62_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/63_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/64_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/65_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/66_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/67_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/68_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/69_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/6_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/70_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/71_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/72_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/74_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/75_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/76_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/77_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/78_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/79_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/7_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/80_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/81_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/82_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/83_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/84_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/85_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/86_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/87_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/88_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/89_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/8_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/90_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/91_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/92_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/93_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/94_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/95_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/96_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/97_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/98_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/99_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crown/relationships/9_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Crownclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/conditions/287_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/conditions/288_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/faded_cats_info_copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/283_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/285_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/287_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/288_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/289_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/290_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/291_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/293_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/294_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/296_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/297_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/298_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/299_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/300_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/301_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/302_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollow/relationships/303_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Hollowclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/18_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/191_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/192_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/199_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/19_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/201_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/23_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/28_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/30_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/31_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/39_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/47_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/49_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/51_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/52_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/7_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/conditions/8_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/faded_cats_info_copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/10_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/11_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/12_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/13_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/14_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/15_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/16_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/17_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/18_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/190_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/191_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/192_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/193_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/196_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/197_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/198_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/199_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/19_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/200_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/201_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/20_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/21_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/22_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/23_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/24_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/25_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/26_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/27_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/28_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/29_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/2_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/30_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/31_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/32_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/33_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/34_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/35_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/36_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/37_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/38_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/39_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/3_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/40_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/41_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/42_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/43_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/44_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/45_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/47_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/48_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/49_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/4_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/50_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/51_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/52_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/53_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/54_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/5_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/7_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/8_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmare/relationships/9_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/Nightmareclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/clanlist.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save1/settings.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/CREDITS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/conditions/1_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/conditions/20_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/conditions/21_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/conditions/8_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/notes/18_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/notes/7_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/10_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/11_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/12_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/14_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/15_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/16_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/17_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/18_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/19_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/1_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/20_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/21_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/22_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/23_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/24_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/25_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/26_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/27_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/2_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/3_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/4_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/5_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/6_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/7_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/8_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallen/relationships/9_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Fallenclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/10_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/15_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/27_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/34_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/35_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/48_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/52_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/59_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/81_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/85_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/conditions/90_conditions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/faded_cats_info_copy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/10_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/12_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/14_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/15_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/16_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/1_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/28_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/3_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/47_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/notes/6_notes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/100_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/10_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/11_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/12_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/14_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/15_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/16_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/17_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/18_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/1_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/20_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/21_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/22_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/23_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/24_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/25_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/26_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/27_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/28_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/29_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/2_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/30_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/31_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/32_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/33_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/34_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/35_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/36_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/37_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/38_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/39_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/3_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/40_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/41_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/42_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/43_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/44_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/45_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/46_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/47_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/48_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/49_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/4_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/50_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/51_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/52_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/53_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/54_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/56_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/57_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/58_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/59_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/5_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/60_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/61_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/62_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/63_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/64_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/65_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/66_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/67_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/68_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/6_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/70_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/71_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/72_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/73_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/74_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/75_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/76_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/77_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/78_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/79_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/7_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/80_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/81_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/82_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/83_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/84_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/85_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/86_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/87_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/88_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/89_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/8_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/90_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/91_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/92_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/93_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/94_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/95_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/96_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/97_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/98_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/99_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Moth/relationships/9_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Mothclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/clan_cats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/freshkill_pile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/herbs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/nutrition_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/pregnancy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/38_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/39_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/41_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/42_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/43_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/44_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/45_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/46_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/48_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Web/relationships/49_relations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/Webclan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/clanlist.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testSaves/save2/settings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/leader.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/leader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/game_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/game_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/names.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/names.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/thoughts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/thoughts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -605,8 +47,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tkdbl/Documents/GitHub/clangen&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/WC Clan Gen/OGUpdate/clangen&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -615,19 +57,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="count_patrols (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="clangen" />
+    <configuration name="count_patrols" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\WC Clan Gen\OGUpdate\FantasyCats\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (FantasyCats)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources/dicts/patrols" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resources/dicts/patrols/count_patrols.py" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="C:/Users/tkdbl/Documents/GitHub/clangen/resources/count_patrols.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -637,18 +80,19 @@
       <method v="2" />
     </configuration>
     <configuration name="count_patrols" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="clangen" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\WC Clan Gen\OGUpdate\FantasyCats\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (FantasyCats)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources/dicts/patrols" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\tkdbl\Documents\GitHub\clangen\resources\count_patrols.py" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resources/dicts/patrols/count_patrols.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -657,16 +101,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="clangen" />
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="FantasyCats" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\WC Clan Gen\OGUpdate\FantasyCats\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (FantasyCats)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -678,10 +123,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.count_patrols" />
+      <item itemvalue="Python.main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.count_patrols (1)" />
+        <item itemvalue="Python.count_patrols" />
         <item itemvalue="Python.count_patrols" />
       </list>
     </recent_temporary>

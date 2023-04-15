@@ -293,6 +293,7 @@
 			"Is visiting the medicine den... again",
 			"Tripped over their own paws",
 			"Is clinging to a kittypet toy"
+            ],
         "main_trait_constraint": [
             "peltshifted"
         ]

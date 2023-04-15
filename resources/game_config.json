@@ -241,7 +241,7 @@
 		"permanent_condition_chance": 20
 	},
 	"clan_creation": {
-		"rerolls": 5,
+		"rerolls": -1,
 		"comment": "Set this to -1 for it to be infinite"
 	},
 	"graduation": {
