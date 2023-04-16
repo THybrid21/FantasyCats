@@ -556,7 +556,7 @@
         "id": "med_cat_alive_kit",
         "thoughts": [
             "Is teaching kits about what plants to stay away from",
-            "Chased kits out of their den"
+            "Chased kits out of {PRONOUN/m_c/poss} den"
         ],
         "main_status_constraint": [
             "medicine cat",
@@ -577,7 +577,8 @@
 			"Is having a crisis because they forgot the name of a herb",
 			"Walked into the wall of the medicine den",
 			"Tripped over their own paws",
-			"Wonders at what power might be beyond even Starclan"
+			"Wonders at what power might be beyond even Starclan",
+			"Is still horrified at the herbs they're using"
         ],
         "main_status_constraint": [
             "medicine cat",
