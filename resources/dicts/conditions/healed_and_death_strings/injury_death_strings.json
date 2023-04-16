@@ -73,5 +73,11 @@
     ],
 	"severe tick bites": [
 		"m_c has unfortunately passed due to complications from {PRONOUN/m_c/poss} severe tick bites."
+	],
+	"sunblindness": [
+		"Due to complications from {PRONOUN/m_c/poss} sunblindness m_c had an accident and has passed away."
+	],
+	"severe sunburn": [
+		"m_c died due to complications from a severe sunburn."
 	]
 }

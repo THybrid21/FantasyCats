@@ -41,10 +41,10 @@
 
         ],
 		"rat bite fever": [
-			"m_c's heart sinks more and more, by the look in r_c's eyes something has gone very wrong with their rat bite.", 
-			"Not only does m_c's rat bite feel like it's burning, now they feel like they're burning.",
-			"m_c writhes in the nest, their rat bite definitely doesn't feel like it's getting better, in fact it feels much like it's getting worse.",
-			"m_c knows something has gone horribly wrong when they can't keep their freshkill down that morning."
+			"m_c's heart sinks more and more, by the look in r_c's eyes something has gone very wrong with {PRONOUN/m_c/poss} rat bite.", 
+			"Not only does m_c's rat bite feel like it's burning, now {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like {PRONOUN/m_c/subject} {VERB/m_c/are/is} burning.",
+			"m_c writhes in the nest, {PRONOUN/m_c/poss} rat bite definitely doesn't feel like it's getting better, in fact it feels much like it's getting worse.",
+			"m_c knows something has gone horribly wrong when {PRONOUN/m_c/subject} can't keep {PRONOUN/m_c/poss} freshkill down that morning."
 		]
     },
     "tick bites": {
@@ -121,9 +121,9 @@
             "m_c tries not to hiss as {PRONOUN/m_c/poss} litter suckles. {PRONOUN/m_c/subject/CAP} {VERB/m_c/love/loves} them, {PRONOUN/m_c/subject} {VERB/m_c/do/does}, but giving birth was so painful, and the area feels swollen and infected now."
         ],
 		"turmoiled litter": [
-			"m_c tiredly asks r_c if there is something wrong with them, they just can't seem to bond with their litter at all.",
-			"Staring at their litter m_c wonders what is wrong with them. They should be happy, overjoyed at this but instead all they feel is hollow and tired.",
-			"While their litter plays around the nursery m_c can only curl in the nest and feel the weight of the world pressing down on them, how could they possibly manage to do this?"
+			"m_c tiredly asks r_c if there is something wrong with {PRONOUN/m_c/object}, {PRONOUN/m_c/subject} just can't seem to bond with {PRONOUN/m_c/poss} litter at all.",
+			"Staring at {PRONOUN/m_c/poss} litter m_c wonders what is wrong with {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} should be happy, overjoyed at this but instead all {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} is hollow and tired.",
+			"While {PRONOUN/m_c/poss} litter plays around the nursery m_c can only curl in the nest and feel the weight of the world pressing down on {PRONOUN/m_c/object}, how could {PRONOUN/m_c/subject} possibly manage to do this?"
 		]
     },
     "water in their lungs": {
@@ -157,8 +157,8 @@
 
         ],
 		"anxiety": [
-			"r_c has noticed that while the shock has gone it's replaced in m_c with a certain kind of worry that they wear like a cloud of dust on their pelt.",
-			"m_c has found that since their shock has faded it's been replaced with an itch under their fur and a certain kind of jumpiness that they just can't explain."
+			"r_c has noticed that while the shock has gone it's replaced in m_c with a certain kind of worry that {PRONOUN/m_c/subject} {VERB/m_c/wear/wears} like a cloud of dust on {PRONOUN/m_c/poss} pelt.",
+			"m_c has found that since {PRONOUN/m_c/poss} shock has faded it's been replaced with an itch under {PRONOUN/m_c/poss} fur and a certain kind of jumpiness that they {PRONOUN/m_c/subject} can't explain."
 		]
     },
     "shivering": {
@@ -216,33 +216,33 @@
             "The tick on m_c was left for far too long. The area is now swollen and warm - definite signs of infection."
         ],
 		"spasms": [
-			"Worryingly m_c's limbs are beginning to spasm and jerk around them. While they attempt to recover in the medicine den, r_c reexamines the removed ticks they have to inform the clan of the risk these ticks may pose.",
-			"Alongside the tick bites, m_c has noticed that their limbs seem to have gained their own opinions on things.",
-			"m_c jerks around in their nest, awkwardly flailing a paw around without any real ability to stop it."
+			"Worryingly m_c's limbs are beginning to spasm and jerk around {PRONOUN/m_c/object}. While {PRONOUN/m_c/subject} {VERB/m_c/attempt/attempts} to recover in the medicine den, r_c reexamines the removed ticks {PRONOUN/r_c/subject} {VERB/r_c/have/has} to inform the clan of the risk these ticks may pose.",
+			"Alongside the tick bites, m_c has noticed that {PRONOUN/m_c/poss} limbs seem to have gained their own opinions on things.",
+			"m_c jerks around in {PRONOUN/m_c/poss} nest, awkwardly flailing a paw around without any real ability to stop it."
 		]
     },
 	"rash": {
 		"torn pelt": [
 			"r_c very gently applies the herbal paste and cobwebs to the torn and raw patches around m_c's fur.",
-			"After all the scratching they've done at the rash it's not a surprise that m_c has torn up their pelt.",
-			"All m_c's frantic itching has left their fur looking rather patchy in places."
+			"After all the scratching {PRONOUN/m_c/subject} {VERB/m_c/have/has} done at the rash it's not a surprise that m_c has torn up {PRONOUN/m_c/poss} pelt.",
+			"All m_c's frantic itching has left {PRONOUN/m_c/poss} fur looking rather patchy in places."
 		]
 	},
 	"sunburn": {
 		"an infected wound": [
-			"When m_c comes to r_c for their typical care it's with a complaint that the burn feels like it's fresh once more.",
-			"m_c tries to ignore the returning heat to their sunburn, hoping that it'll just go away if they don't pay attention to it."
+			"When m_c comes to r_c for {PRONOUN/m_c/poss} typical care it's with a complaint that the burn feels like it's fresh once more.",
+			"m_c tries to ignore the returning heat to {PRONOUN/m_c/poss} sunburn, hoping that it'll just go away if {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} pay attention to it."
 		]
 	},
 	"severe sunburn": {
 		"an infected wound": [
 			"r_c gently soothes m_c's sunburn with a fresh coat of herbs and cobwebs, fussing as it looks rawer and has a bit of a sickly smell to it.",
-			"m_c worries about the smell that's starting to come from their sunburn."
+			"m_c worries about the smell that's starting to come from {PRONOUN/m_c/poss} sunburn."
 		],
 		"rash": [
-			"m_c complains to r_c about how their sunburn has become itchy and irritated. Looks like it's bubbled into a rash.",
-			"As their skin starts to peel from the sunburn, m_c discovers themselves getting itchier and itchier.",
-			"Below m_c's sunburn their skin has bubbled with an irritating itchy rash."
+			"m_c complains to r_c about how {PRONOUN/m_c/poss} sunburn has become itchy and irritated. Looks like it's bubbled into a rash.",
+			"As {PRONOUN/m_c/poss} skin starts to peel from the sunburn, m_c discovers{PRONOUN/m_c/self} getting itchier and itchier.",
+			"Below m_c's sunburn {PRONOUN/m_c/poss} skin has bubbled with an irritating itchy rash."
 		]
 	}		
 }

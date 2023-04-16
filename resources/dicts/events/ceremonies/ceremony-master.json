@@ -1951,7 +1951,7 @@
       "general_backstory",
       "skeptic"
     ],
-    "(prefix)paw still doesn't seem to believe in Starclan but it makes no difference as they step up and are welcomed by (previous_mentor) as a full medicine cat by the name of m_c"
+    "(prefix)paw still doesn't seem to believe in Starclan but it makes no difference as {PRONOUN/m_c/subject} step up and are welcomed by (previous_mentor) as a full medicine cat by the name of m_c"
   ],
   "med_54": [
     [
@@ -1963,7 +1963,7 @@
       "general_backstory",
       "skeptic"
     ],
-    "As m_c accepts their new name in the face of the full moon they take a deep breath. They only wish that (deadmentor) could be here to once more tell them the fantasy tales of Starclan."
+    "As m_c accepts {PRONOUN/m_c/poss} new name in the face of the full moon {PRONOUN/m_c/subject} {VERB/m_c/take/takes} a deep breath. {PRONOUN/m_c/subject/CAP} only wish that (deadmentor) could be here to once more tell {PRONOUN/m_c/object} the fantasy tales of Starclan."
   ],  
   "med_54_a": [
     [
@@ -1975,7 +1975,7 @@
       "general_backstory",
       "skeptic"
     ],
-    "(prefix)paw hisses and lashes their tail when a clanmate calls them m_c. It's frustrating for them to hear the name knowing that they don't yet deserve it."
+    "(prefix)paw hisses and lashes {PRONOUN/m_c/poss} tail when a clanmate calls {PRONOUN/m_c/object} m_c. It's frustrating for {PRONOUN/m_c/object} to hear the name knowing that {PRONOUN/m_c/subject} don't yet deserve it."
   ],
   "med_55": [
     [
@@ -1987,7 +1987,7 @@
       "general_backstory",
       "dramatic"
     ],
-    "(prefix)paw practically flounces through Starclan with (previous_mentor). Proudly they puff up their chest as the starry cats around them grant them their new name of m_c."
+    "(prefix)paw practically flounces through Starclan with (previous_mentor). Proudly {PRONOUN/m_c/subject} puff up {PRONOUN/m_c/poss} chest as the starry cats around grant {PRONOUN/m_c/object} {PRONOUN/m_c/poss} new name of m_c, honoring {PRONOUN/m_c/poss} r_h."
   ], 
   "med_56": [
     [
@@ -1999,7 +1999,7 @@
       "general_backstory",
       "rebellious"
     ],
-    "Rather than waiting for (previous_mentor) to name them m_c chooses to declare their own name. They just dare someone to tell them not to use it."
+    "Rather than waiting for (previous_mentor) to name {PRONOUN/m_c/object} m_c chooses to declare {PRONOUN/m_c/poss} own name. {PRONOUN/m_c/subject/CAP} just dare someone to tell {PRONOUN/m_c/object} not to use it."
   ],   
   "med_57": [
     [
@@ -2011,7 +2011,7 @@
       "general_backstory",
       "dreamer"
     ],
-    "(prefix)paw trots through the star fields of Starclan completely at ease. Looking around with wide eyes and a lashing tail as they're named m_c by those around them."
+    "(prefix)paw trots through the star fields of Starclan completely at ease. Looking around with wide eyes and a lashing tail as {PRONOUN/m_c/subject} {VERB/m_c/are/is} named m_c and honored by the StarClan cats for {PRONOUN/m_c/poss} r_h and r_h"
   ],   
   "med_57_a": [
     [
@@ -2023,7 +2023,7 @@
       "general_backstory",
       "dreamer"
     ],
-    "With more than a little worry (previous_mentor) names (prefix)paw as m_c. Softly they remind them to get their head out of the clouds and into reality more."
+    "With more than a little worry (previous_mentor) names (prefix)paw as m_c. Softly {PRONOUN/r_c/subject} {VERB/r_c/remind/reminds} {PRONOUN/m_c/object} to get {PRONOUN/m_c/poss} head out of the clouds and into reality more."
   ], 
   "med_57_b": [
     [
@@ -2035,7 +2035,7 @@
       "general_backstory",
       "dreamer"
     ],
-    "(prefix)paw prances through the starfields, tail swishing and ears flicking as they follow after (previous_mentor). Standing before Starclan as m_c they purr as they're one step closer to making dreams reality."
+    "(prefix)paw prances through the starfields, tail swishing and ears flicking as {PRONOUN/m_c/subject} follow after (previous_mentor). Standing before Starclan as m_c {PRONOUN/m_c/subject} purr as {PRONOUN/m_c/subject} {VERB/m_c/are/is} one step closer to making dreams reality."
   ], 
   "med_58": [
     [
@@ -2048,7 +2048,7 @@
       "dreamer",
 	  "stubborn"
     ],
-    "As they open their eyes to the starry fields of Starclan something in (prefix)paw sinks as they see (deadmentor), they had hoped. Something raises when they see dead_par1 and dead_par2 in the crowd as their new name of m_c is spoken."
+    "As {PRONOUN/m_c/subject} {VERB/m_c/open/opens} {PRONOUN/m_c/poss} eyes to the starry fields of Starclan something in (prefix)paw sinks as {PRONOUN/m_c/subject} {VERB/m_c/greet/greets} (deadmentor), something raises when they see dead_par1 and dead_par2 in the crowd as {PRONOUN/m_c/poss} new name of m_c is spoken."
   ],     
   "med_59": [
     [
@@ -2060,7 +2060,7 @@
       "general_backstory",
       "stubborn"
     ],
-    "(prefix)paw sits resolutely in front of (previous_mentor), they have dilligently and stubbornly stuck with medicine cat training and now brim with pride to recieve the name of m_c."
+    "(prefix)paw sits resolutely in front of (previous_mentor), {PRONOUN/m_c/subject} {VERB/m_c/have/has} dilligently and stubbornly stuck with medicine cat training and now sit brimming with pride to recieve the name of m_c."
   ],    
   "med_59_a": [
     [
@@ -2072,7 +2072,19 @@
       "general_backstory",
       "stubborn"
     ],
-    "(prefix)paw knows they're not really prepared but they insist that (previous_mentor) give them their name anyway. With much reluctance they're called m_c and step up to be the latest medicine cat of the clan."
+    "(prefix)paw knows that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not really prepared but still insist that (previous_mentor) give them {PRONOUN/m_c/poss} name anyway. With much reluctance (previous_mentor) calls {PRONOUN/m_c/object} m_c letting {PRONOUN/m_c/object} be the latest medicine cat of the clan."
+  ],    
+  "med_60": [
+    [
+      "medicine cat",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "peltshifted"
+    ],
+    "As (prefix)paw follows (previous_mentor) through the starry landscape {PRONOUN/m_c/subject} {VERB/m_c/find/finds} that the feeling of the starfields is familiar. That thought plays over {PRONOUN/m_c/poss} mind as they sit honered as m_c for {PRONOUN/m_c/poss} r_h."
   ],    
   "warrior_0": [
     [

@@ -211,7 +211,7 @@
             "scar",
             "CATBITE"
         ],
-        "event_text": "m_c was hurt by {PRONOUN/m_c/poss} mentor, r_c, as a punishment for messing with a Twoleg object.",
+        "event_text": "m_c was hurt by {PRONOUN/m_c/poss} mentor, r_c, as a punishment for messing with a Peltshifter object.",
         "history_text": [
             "m_c was scarred by r_c for messing with a Peltshifter object.",
             "m_c died after their mentor punished them for messing with a Peltshifter object.",
@@ -517,7 +517,7 @@
             "scar",
             "TAILSCAR"
         ],
-        "event_text": "m_c was hurt by {PRONOUN/m_c/poss} mentor, r_c, as a punishment for messing with a Twoleg object.",
+        "event_text": "m_c was hurt by {PRONOUN/m_c/poss} mentor, r_c, as a punishment for messing with a Peltshifter object.",
         "history_text": [
             "m_c was scarred by r_c for messing with a Peltshifter object.",
             "m_c died after their mentor punished them for messing with a Peltshifter object.",
@@ -662,7 +662,7 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c's leg was badly hurt after {PRONOUN/m_c/poss} mentor used a Twoleg trap during a training exercise'.",
+        "event_text": "m_c's leg was badly hurt after {PRONOUN/m_c/poss} mentor used a Peltshifter trap during a training exercise'.",
         "history_text": [
             "m_c was scarred when their mentor used a Peltshifter trap for training.",
             "m_c died after their mentor used a Peltshifter trap for training.",

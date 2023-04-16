@@ -344,7 +344,7 @@
     "chance_of_success": 30,
     "exp": 20,
     "success_text": [
-            "It's probably dangerous. But curiousity leads app1 on, where they carefully peek over a ridge as the source of the cries. A pampered halpless kittypet runs back and forth over the thunderpath, pleading fearfully for Twolegs, again and again and again. It isn't until their voice has gone hoarse and scratchy that app1 leaps out to surprise them - those Twolegs aren't coming back, and the kittypet can either follow app1, or freeze.",
+            "It's probably dangerous. But curiousity leads app1 on, where they carefully peek over a ridge as the source of the cries. A pampered halpless kittypet runs back and forth over the thunderpath, pleading fearfully for Peltshifters, again and again and again. It isn't until their voice has gone hoarse and scratchy that app1 leaps out to surprise them - those Peltshifters aren't coming back, and the kittypet can either follow app1, or freeze.",
             "StarClan, but the cat they find is weird, they fur soft and thin, their cries desperate as they call in confusion. app1 watches until their paws are cold and uncomfortable, crouched behind cover, but the dumb outsider doesn't even try to steal prey, they just wail for help, quieter and quieter as they begin to lose their voice. Finally, app1 can't take it anyone - striding out, they tell the cat to follow them, the Leader will know what to do with this.",
             null,
             "app1 follows the sad cries to find a kittypet, lost and alone and cold. They watch from under a rock overhang, but no, actually the kittypet is <i>that stupid</i> and it really seems likely they'll freeze to death if app1 doesn't do something. Ugh. Fine, well app1 can bring them back to camp, and then it's the Leader's problem to deal with, not app1's."
@@ -360,6 +360,6 @@
     "min_cats": 1,
     "max_cats": 1,
     "antagonize_text": "app1 screams that this is c_n's territory and there's no help for anyone else. A kittypet runs from them, terrified of the echoing voice.",
-    "antagonize_fail_text": "app1 charges after the sound to attack the cat, only for a kittypet to bowl them right over as the terrified Twoleg pet, fully grown and fat, runs app1 over in their haste to get away."
+    "antagonize_fail_text": "app1 charges after the sound to attack the cat, only for a kittypet to bowl them right over as the terrified Peltshifter pet, fully grown and fat, runs app1 over in their haste to get away."
 }
 ]

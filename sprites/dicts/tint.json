@@ -21,7 +21,7 @@
     "any": ["pink", "gray", "red", "black", "orange", "yellow", "purple", "blue", "green", "none"],
 	"greyscale": ["green", "pink", "purple", "yellow", "gray"],
 	"gingerscale": ["orange", "red", "black", "gray"],
-	"greenscale": ["gray", "black", "red", "purple"],
+	"greenscale": ["gray", "black", "red", "yellow", "purple"],
 	"brownscale": ["blue", "red", "pink", "purple", "green", "black"]
   },
   "tint_colours":

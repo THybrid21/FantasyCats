@@ -680,7 +680,7 @@
             "Greenleaf",
             "Leaf-fall"
         ],
-        "event_text": "m_c wakes up after falling asleep in a sunbeam to discover that they've stayed out for just a little bit too long.",
+        "event_text": "m_c wakes up after falling asleep in a sunbeam to discover that {PRONOUN/m_c/subject} {VERB/m_c/have/has} stayed out for just a little bit too long.",
         "history_text": [
             null,
             null,
@@ -699,7 +699,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c was out on a walk alone when they heard a dog approaching! They crawled into a nearby bush to hide only to discover to their dismay it was poison ivy.",
+        "event_text": "m_c was out on a walk alone when {PRONOUN/m_c/subject} heard a dog approaching! {PRONOUN/m_c/subject/CAP} crawled into a nearby bush to hide only to discover to {PRONOUN/m_c/poss} dismay it was poison ivy.",
         "history_text": [
             null,
             null,
@@ -764,7 +764,7 @@
             "scar",
             "DECLAWED"
         ],
-        "event_text": "Thinking that they could easily fight a peltshifter m_c went out into the territory hissing and spitting only to come back subdued.",
+        "event_text": "Thinking that {PRONOUN/m_c/subject} could easily fight a peltshifter m_c went out into the territory hissing and spitting only to come back subdued.",
         "history_text": [
             "m_c was scarred by peltshifters.",
             "m_c died after they were taken away by peltshifters.",
@@ -784,7 +784,7 @@
             "scar",
             "RATBITE"
         ],
-        "event_text": "While m_c was out patrolling the territory they stumbled up a rat and got into a spat with it. While they ultimately chased the rat off, it wasn't without getting a bite first.",
+        "event_text": "While m_c was out patrolling the territory {PRONOUN/m_c/subject} stumbled up a rat and got into a spat with it. While {PRONOUN/m_c/subject} ultimately chased the rat off, it wasn't without getting a bite first.",
         "history_text": [
             "m_c was scarred by a rat",
             "m_c died after they fought a rat",
@@ -803,7 +803,7 @@
             "scar",
             "RATBITE"
         ],
-        "event_text": "m_c was out on a hunt when they stumbled upon a rat's nest with new babies-- thinking it was an easy hunt they went in-- only OUCH, there were a few mamas nearby who took great offence to that.",
+        "event_text": "m_c was out on a hunt when {PRONOUN/m_c/subject} stumbled upon a rat's nest with new babies-- thinking it would be easy prey for the clan {PRONOUN/m_c/subject} tried to grab them-- only OUCH, there were a few mamas nearby who took great offence to that.",
         "history_text": [
             "m_c was scarred by a group of rats",
             "m_c died after they fought a mischief of rats",

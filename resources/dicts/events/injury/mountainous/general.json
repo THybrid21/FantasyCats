@@ -220,7 +220,7 @@
             "Greenleaf",
             "Leaf-fall"
         ],
-        "event_text": "The sun has been particularly harsh this season and poor m_c is left wincing when they wake up with a sunburn.",
+        "event_text": "The sun has been particularly harsh this season and poor m_c is left wincing when {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up with a sunburn.",
         "history_text": [
             null,
             null,
@@ -236,7 +236,7 @@
         "tags": [
             "Greenleaf"
         ],
-        "event_text": "m_c attempted to climb all the way to the top of their mountain in the harsh light of the sun. Now they reluctantly creep through the camp to see the medicine cat.",
+        "event_text": "m_c attempted to climb all the way to the top of {PRONOUN/m_c/poss} mountain in the harsh light of the sun. Now {PRONOUN/m_c/subject} reluctantly {VERB/m_c/creep/creeps} through the camp to see the medicine cat.",
         "history_text": [
             null,
             null,

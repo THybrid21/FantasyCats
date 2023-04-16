@@ -360,7 +360,9 @@ class Condition_Events():
             "anxiety attack": "panic attack",
             "panic attack": "shock",
             "panic attack": "paranoia",
-            "sleeplessness": "ongoing sleeplessness"
+            "sleeplessness": "ongoing sleeplessness",
+            "ticks": "tick bites",
+            "ticks": "severe tick bites"
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #

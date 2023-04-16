@@ -88,7 +88,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c was dragged out into the ocean by the tide and due to the sand sticking in their fur has come back with a rash.",
+        "event_text": "m_c was dragged out into the ocean by the tide and due to the sand sticking in {PRONOUN/m_c/poss} fur has come back with a rash.",
         "history_text": [
             null,
             "m_c died after they were dragged into the ocean and drowned.",

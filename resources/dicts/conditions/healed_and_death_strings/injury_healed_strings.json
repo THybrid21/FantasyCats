@@ -140,7 +140,7 @@
         "m_c finally feels back to normal after the strain of birthing a litter.",
         "m_c has healed from the strain of delivering {PRONOUN/m_c/poss} litter."
     ],
-    "water in their lungs": [
+    "water in {PRONOUN/m_c/poss} lungs": [
         "m_c's lungs finally feel back to normal.",
         "m_c is breathing normally again, the water in {PRONOUN/m_c/poss} lungs is gone.",
         "m_c has recovered from the water in tPRONOUN/m_c/poss} lungs.",
@@ -224,24 +224,24 @@
         "m_c's tick bites have healed up."
     ],
 	"rash": [
-		"Thankfully for m_c the rash they've been suffering from has cleared up.",
-		"m_c is grateful that they're able to go about their day without any more itching or dry skin under their fur.",
-		"m_c purrs in satisfaction able to once more clean themselves without any extra irritation from a rash."
+		"Thankfully for m_c the rash {PRONOUN/m_c/subject} {VERB/m_c/have/has} been suffering from has cleared up.",
+		"m_c is grateful that {PRONOUN/m_c/subject} {VERB/m_c/are/is} able to go about {PRONOUN/m_c/poss} day without any more itching or dry skin under {PRONOUN/m_c/poss} fur.",
+		"m_c purrs in satisfaction able to once more clean {PRONOUN/m_c/self} without any extra irritation from a rash."
 	],
 	"sunblindness": [
-		"m_c is so relieved to be able to blink their eyes and find that once more they're able to see the world around them.",
-		"There's a lot of purring from m_c as they greet their friends and family in the clan."
+		"m_c is so relieved to be able to blink {PRONOUN/m_c/poss} eyes and find that once more {PRONOUN/m_c/subject} {VERB/m_c/are/is} able to see the world around {PRONOUN/m_c/object}.",
+		"There's a lot of purring from m_c as {PRONOUN/m_c/subject} {VERB/m_c/greet/greets} {PRONOUN/m_c/poss} friends and family in the clan."
 	],
 	"sunburn": [
-		"With relief m_c is able to go about their day without any wincing as their sunburn has cleared up.",
-		"m_c purrs as they come out of the den, skin clear of any last remnants of sunburn."
+		"With relief m_c is able to go about {PRONOUN/m_c/poss} day without any wincing as {PRONOUN/m_c/poss} sunburn has cleared up.",
+		"m_c purrs as {PRONOUN/m_c/subject} {VERB/m_c/come/comes} out of the den, skin clear of any last remnants of sunburn."
 	],
 	"severe sunburn": [
-		"m_c freely grooms their sides, purring at the relief and comfort it's able to give them.",
-		"Carefully m_c avoids the direct sunlight of the camp, they're not willing to risk getting another sunburn anytime soon."
+		"m_c freely grooms {PRONOUN/m_c/poss} sides, purring at the relief and comfort it's able to give {PRONOUN/m_c/object}.",
+		"Carefully m_c avoids the direct sunlight of the camp, {PRONOUN/m_c/subject} {VERB/m_c/are/is} not willing to risk getting another sunburn anytime soon."
 	],
 	"wrenched claws": [
-		"m_c is so relieved when the ache in their paws finally goes away.",
-		"m_c flexes their paws, checking if their claws are still there. That was such a scary experience."
+		"m_c is so relieved when the ache in {PRONOUN/m_c/poss} paws finally goes away.",
+		"m_c flexes {PRONOUN/m_c/poss} paws, checking if {PRONOUN/m_c/poss} claws are still there. That was such a scary experience."
 	]
 }
