@@ -2,7 +2,7 @@
     {
         "id": "deputy_dead_deputy",
         "thoughts": [
-            "Wishes they could speak to r_c to learn how to assign patrols better"
+            "Wishes {PRONOUN/m_c/subject} could speak to r_c to learn how to assign patrols better"
         ],
         "random_status_constraint": [
             "deputy"
@@ -18,21 +18,21 @@
             "Is assigning cats to a hunting patrol",
             "Is wondering what it would be like to be a leader",
             "Is stressed about organizing patrols",
-            "Wonders who will give them nine lives",
+            "Wonders who will give {PRONOUN/m_c/object} nine lives",
             "Feels overworked",
             "Is hoping for a break",
             "Is assigning cats to the dawn patrol",
             "Is assigning cats to the hunting patrol",
             "Is assigning cats to patrol the borders",
-            "Can't believe they overslept today",
-            "Is unsure of what the rest of the Clan thinks of them as deputy"
+            "Can't believe {PRONOUN/m_c/subject} overslept today",
+            "Is unsure of what the rest of the Clan thinks of {PRONOUN/m_c/object} as deputy"
         ]
     },
     {
         "id": "deputy_alive_leader",
         "thoughts": [
-            "Is doing their best to honor their Clan and their leader",
-            "Must speak with the leader soon about something they found while out on patrol"
+            "Is doing {PRONOUN/m_c/poss} best to honor {PRONOUN/m_c/poss} Clan and {PRONOUN/m_c/poss} leader",
+            "Must speak with the leader soon about something {PRONOUN/m_c/subject} found while out on patrol"
         ],
         "random_status_constraint": [
             "leader"
@@ -61,7 +61,7 @@
         "id": "strange_deputy_to_gen",
         "thoughts": [
             "Accidentally assigns the same cat to three patrols",
-            "Insists a hunting patrol only bring back mice",
+            "Insists a hunting patrol to only bring back mice",
             "Goes missing and comes back smelling like garlic",
             "Is making odd noises"
         ],
@@ -72,16 +72,16 @@
 	{
         "id": "skeptic_deputy_to_gen",
         "thoughts": [
-            "Is having a crisis about their position as deputy",
-			"Wonders how they will ever survive as leader",
-			"Doubts that they will recieve nine lives",
+            "Is having a crisis about {PRONOUN/m_c/poss} position as deputy",
+			"Wonders how {PRONOUN/m_c/subject} will ever survive as leader",
+			"Doubts that {PRONOUN/m_c/subject} will recieve nine lives",
 			"Carefully choses cats for the daily patrols",
 			"Worries about the clan",
-			"Worries about what will happen when l_n dies",
-			"Curls up in the den and wonders if they're truly able to fill the pawsteps of a leader",
-			"Follows the code as much as they can",
+			"Worries about what will happen when the leader dies",
+			"Curls up in the den and wonders if {PRONOUN/m_c/subject} {VERB/cat/are/is} truly able to fill the pawsteps of a leader",
+			"Follows the code as much as {PRONOUN/m_c/subject} can",
 			"Was forced to mediate between arguing clanmates",
-			"Is doubtful that anyone in c_n could look up to them"
+			"Is doubtful that anyone in c_n could look up to {PRONOUN/m_c/object}"
         ],
         "main_trait_constraint": [
             "skeptic"
@@ -90,11 +90,11 @@
 	{
         "id": "peltshifted_deputy_to_gen",
         "thoughts": [
-            "Is having a crisis about their position as deputy",
-			"Wonders how they will ever survive as leader",
-			"Doubts that they will recieve nine lives",
-			"Is struggling to understand how they recieved this position",
-			"Is having trouble speaking up in front of their clanmates",
+            "Is having a crisis about {PRONOUN/m_c/poss} position as deputy",
+			"Wonders how {PRONOUN/m_c/subject} will ever survive as leader",
+			"Doubts that {PRONOUN/m_c/subject} will recieve nine lives",
+			"Is struggling to understand how {PRONOUN/m_c/subject} recieved this position",
+			"Is having trouble speaking up in front of {PRONOUN/m_c/poss} clanmates",
 			"Has been speaking in a strange peltshifter language... somehow"
         ],
         "main_trait_constraint": [
