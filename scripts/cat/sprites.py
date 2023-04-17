@@ -7,6 +7,7 @@ from scripts.game_structure.game_essentials import game
 class Sprites():
     cat_tints = {}
     white_patches_tints = {}
+    eye_tints = {}
 
     def __init__(self, original_size, new_size=None):
         self.size = original_size  # size of a single sprite in a spritesheet
@@ -30,6 +31,12 @@ class Sprites():
                 Sprites.white_patches_tints = ujson.loads(read_file.read())
         except:
             print("ERROR: Reading White Patches Tints")
+            
+        try:
+            with open("sprites/dicts/eye_tint.json", 'r') as read_file:
+                Sprites.eye_tints = ujson.loads(read_file.read())
+        except:
+            print("ERROR: Reading Eye Tints")
 
     def spritesheet(self, a_file, name):
         """
@@ -2400,7 +2407,6 @@ for a, i in enumerate(['SADDLE', 'CEDAR', 'ONYX']):
     sprites.make_group('sparklelynxyellows', (a, 3), f'sparklelynx{i}')
 for a, i in enumerate(['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']):
     sprites.make_group('sparklelynxpride', (a, 0), f'sparklelynx{i}')
-
  
 # new new torties
 for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 
@@ -2420,7 +2426,7 @@ for a, i in enumerate(['TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK', 'PONITMASK',
     sprites.make_group('tortiepatchesmasks', (a, 4), f"tortiemask{i}")
     
 # SKINS
-for a, i in enumerate(['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN']):
+for a, i in enumerate(['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', "RED"]):
     sprites.make_group('skin', (a, 0), f"skin{i}")
 for a, i in enumerate(['DARK', 'DARKGREY', 'GREY', 'DARKSALMON', 'SALMON', 'PEACH']):
     sprites.make_group('skin', (a, 1), f"skin{i}")

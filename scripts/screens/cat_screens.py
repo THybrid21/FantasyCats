@@ -344,7 +344,6 @@ class ProfileScreen(Screens):
                         self.the_cat.prevent_fading = False
                     else:
                         self.the_cat.prevent_fading = True
-                    update_sprite(self.the_cat)  # This will remove the transparency on the cat.
                     self.clear_profile()
                     self.build_profile()
 
@@ -393,7 +392,6 @@ class ProfileScreen(Screens):
                 self.the_cat.die()
                 self.the_cat.died_by.append(
                     f'It was the will of something even mightier than StarClan that this cat died.')
-                update_sprite(self.the_cat)
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
@@ -414,9 +412,6 @@ class ProfileScreen(Screens):
                         self.the_cat.df = True
                         game.clan.add_to_darkforest(self.the_cat)
                         self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
-
-                    # Update sprite in this situation.
-                    update_sprite(self.the_cat)
 
                 self.clear_profile()
                 self.build_profile()
@@ -510,7 +505,6 @@ class ProfileScreen(Screens):
         self.build_profile()
 
         self.hide_menu_buttons()  # Menu buttons don't appear on the profile screen
-        cat_profiles()
         self.update_platform()
         if game.last_screen_forProfile == 'med den screen':
             self.toggle_conditions_tab()
@@ -631,8 +625,9 @@ class ProfileScreen(Screens):
 
         # Create cat image object
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 400), (300, 300))),
+                                                                         
                                                                          pygame.transform.scale(
-                                                                             self.the_cat.large_sprite,
+                                                                             self.the_cat.sprite,
                                                                              (300, 300)), manager=MANAGER)
         self.profile_elements["cat_image"].disable()
 
@@ -2511,7 +2506,7 @@ class RoleScreen(Screens):
         self.selected_cat_elements["cat_image"] = pygame_gui.elements.UIImage(
             scale(pygame.Rect((490, 80), (300, 300))),
             pygame.transform.scale(
-                self.the_cat.big_sprite, (300, 300)),
+                self.the_cat.sprite, (300, 300)),
             manager=MANAGER
         )
 

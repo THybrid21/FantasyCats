@@ -839,4 +839,7 @@ def init_tint(cat):
         cat.white_patches_tint = choice(possible_tints)
     else:
         cat.white_patches_tint = "none"
+        
+    # EYE TINT:
+    cat.eye_tint = "none"
 
