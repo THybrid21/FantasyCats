@@ -516,6 +516,10 @@ class SettingsScreen(Screens):
             for contributor in credits_text["contrib"]:
                 info_text += contributor + "<br>"
                 tooltip_text.append(credits_text["contrib"][contributor])
+        elif string == "{insp}":
+            for contributor in credits_text["insp"]:
+                info_text += contributor + "<br>"
+                tooltip_text.append(credits_text["insp"][contributor])
         else:
             info_text += string
             info_text += "<br>"

@@ -1,3 +1,20 @@
+<strong>Hybrid Overhaul V4</strong>
+JUST in case people downloaded without reading first...
+<strong>WARNING:</strong> This mod includes a mental health expansion that includes a condition called "World Tired" this condition comes with suicidal theming--
+If you are uncomfortable with that it can be disabled by following the instructions in disable_worldtired.txt
+Otherwise continue on and enjoy... 
+
+In general the Hybrid Overhaul is updated to include:
+-Mental Health + Conditions
+-Albinism/Melanism/"Sphynixsm" as conditions.
+-New Accessories
+-New Pelts, with additional credits provided hopefully in the proper place.
+-Many, many new pelt colours, I am working on a guide hopefully coming soon.
+-New events and expansions to the lore!
+-New eyecolours and skins
+-A few new traits, and thoughts to go along with them.
+
+
 <strong>v0.8.4</strong>
 - fixed a crash when there was only one cat left in the clan
 - fixed some issues with the new name code
