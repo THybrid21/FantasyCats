@@ -7,12 +7,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c tried to sneak out of the camp, but fell and got a bruise before {PRONOUN/m_c/subject} even left the safety of the camp walls.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
+        "event_text": "m_c tried to sneak out of the camp, but fell and got a bruise before they even left the safety of the camp walls.",
         "cat_trait": ["daring", "impulsive", "inquisitive", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
@@ -26,12 +21,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c snuck out of camp and returned a bit bruised, but brimming with pride despite the scolding {PRONOUN/m_c/poss} {VERB/m_c/were/was} given.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
+        "event_text": "m_c snuck out of camp and returned a bit bruised, but brimming with pride despite the scolding they were given.",
         "cat_trait": ["daring", "impulsive", "inquisitive", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
@@ -46,16 +36,12 @@
             "Leaf-bare"
         ],
         "event_text": "m_c play-fought a bit too hard and got a bit bruised.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
         "cat_trait": ["daring", "bouncy", "bullying", "impulsive", "noisy", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null
     },
+
     {
         "injury": "scrapes",
         "tags": [
@@ -64,12 +50,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c tried to sneak out of the camp, but fell and scraped {PRONOUN/m_c/poss} paw before {PRONOUN/m_c/subject} even left the safety of the camp walls.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
+        "event_text": "m_c tried to sneak out of the camp, but fell and scraped their paw before they even left the safety of the camp walls.",
         "cat_trait": ["daring", "impulsive", "inquisitive", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
@@ -83,12 +64,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c snuck out of camp and returned scraped up, but brimming with pride despite the scolding {PRONOUN/m_c/poss} {VERB/m_c/were/was} given.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
+        "event_text": "m_c snuck out of camp and returned scraped up, but brimming with pride despite the scolding they were given.",
         "cat_trait": ["daring", "impulsive", "inquisitive", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
@@ -103,11 +79,6 @@
             "Leaf-bare"
         ],
         "event_text": "m_c play-fought a bit too hard and scraped {PRONOUN/m_c/self} up.",
-        "history_text": [
-            null,
-            null,
-            null
-        ],
         "cat_trait": ["daring", "bouncy", "bullying", "impulsive", "noisy", "troublesome"],
         "cat_skill": null,
         "other_cat_trait": null,
@@ -124,11 +95,6 @@
 			"RATBITE"
         ],
         "event_text": "m_c discovered a rat in camp and curious as all kittens are attempted to play with it. Only the rat bit {PRONOUN/m_c/object} instead.",
-        "history_text": [
-            "m_c was scarred by a rat that got into the camp",
-            "Poor m_c died from a rat bite.",
-            "m_c died after a rat bit them in the camp."
-        ],
         "cat_trait": null,
         "cat_skill": null,
         "other_cat_trait": null,
@@ -149,11 +115,6 @@
    "cat_skill": null,
    "other_cat_trait": null,
    "other_cat_skill": null,
-   "negate_cat_trait": null,
-   "negate_cat_skill": null,
-   "negate_other_cat_trait": null,
-   "negate_other_cat_skill": null,
-   "backstory_constraint": null
 
 },
 {
@@ -171,10 +132,5 @@
    "cat_skill": null,
    "other_cat_trait": null,
    "other_cat_skill": null,
-   "negate_cat_trait": null,
-   "negate_cat_skill": null,
-   "negate_other_cat_trait": null,
-   "negate_other_cat_skill": null,
-   "backstory_constraint": null
 }
 ]
