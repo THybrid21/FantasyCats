@@ -512,7 +512,7 @@
         "thoughts": [
             "Is making {PRONOUN/m_c/poss} mentor laugh",
             "Is really bonding with {PRONOUN/m_c/poss} mentor",
-            "Wants to show {PRONOUN/m_c/poss} mentor that {PRONOUN/m_c/subject} {VERB/cat/are/is} smart, skilled, and talented",
+            "Wants to show {PRONOUN/m_c/poss} mentor that {PRONOUN/m_c/subject} {VERB/m_c/are/is} smart, skilled, and talented",
             "Can see how busy {PRONOUN/m_c/poss} mentor is"
         ],
         "main_status_constraint": [
@@ -808,7 +808,7 @@
         "id": "skeptic_apprentice",
         "thoughts": [
             "Is questioning if Starclan is real",
-			"Is questioning the leader's abilities, {VERB/cat/do/does} {PRONOUN/m_c/subject} really have 9 lives?",
+			"Is questioning the leader's abilities, {VERB/m_c/do/does} {PRONOUN/m_c/subject} really have 9 lives?",
 			"Was caught nosing around Peltshifterplace recently",
 			"Smells a bit like kittypet food"
         ],
@@ -829,9 +829,9 @@
 			"Is exaggerating {PRONOUN/m_c/poss} own greatness",
 			"Is showing off hoping the leader takes notice",
 			"Dramatically flops into {PRONOUN/m_c/poss} nest hoping someone asks what's wrong",
-			"Thinks {PRONOUN/m_c/subject} {VERB/cat/are/is} the main character",
+			"Thinks {PRONOUN/m_c/subject} {VERB/m_c/are/is} the main character",
 			"Is preening thinking the latest clan prophecy is about {PRONOUN/m_c/object}",
-			"Hopes {PRONOUN/m_c/subject} {VERB/cat/get/gets} to go to the gathering so {PRONOUN/m_c/subject} can brag to another clan's apprentices"
+			"Hopes {PRONOUN/m_c/subject} {VERB/m_c/get/gets} to go to the gathering so {PRONOUN/m_c/subject} can brag to another clan's apprentices"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -883,7 +883,7 @@
     {
         "id": "stubborn_apprentice",
         "thoughts": [
-            "Insists that {PRONOUN/m_c/subject} {VERB/cat/know/knows} how to train properly by {PRONOUN/m_c/self}",
+            "Insists that {PRONOUN/m_c/subject} {VERB/m_c/know/knows} how to train properly by {PRONOUN/m_c/self}",
 			"Is repeatedly practicing a skill completely wrong",
 			"Refuses to admit any wrong doing",
 			"Can't stand been told what to do",

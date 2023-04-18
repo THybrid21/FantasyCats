@@ -264,13 +264,13 @@
     {
         "id": "skeptic_warrior_apprentice",
         "thoughts": [
-            "Is questioning if {PRONOUN/m_c/subject} even {VERB/cat/want/wants} to be a warrior in the future",
+            "Is questioning if {PRONOUN/m_c/subject} even {VERB/m_c/want/wants} to be a warrior in the future",
 			"Is wondering if {PRONOUN/m_c/subject} even should be a clan cat",
 			"Doubts StarClan is real",
 			"Proudly trots through the camp after {PRONOUN/m_c/subject} made an amazing catch",
 			"Is frowning as an elder tells {PRONOUN/m_c/object} stories of how the clans came to be",
 			"Scoffs at the idea that the leader has nine lives",
-			"Isn't sure {PRONOUN/m_c/subject} truly {VERB/cat/believe/believes} the code is right"
+			"Isn't sure {PRONOUN/m_c/subject} truly {VERB/m_c/believe/believes} the code is right"
         ],
         "main_trait_constraint": [
             "skeptic"
@@ -283,11 +283,11 @@
 			"Doesn't believe r_c is telling the truth about {PRONOUN/r_c/poss} skills",
 			"Mocks r_c for {PRONOUN/r_c/poss} unfailing belief in the warrior code",
 			"Is worried that r_c might be too guillible",
-			"Doesn't feel like {PRONOUN/m_c/subject} {VERB/cat/fit/fits} in with the other apprentices",
+			"Doesn't feel like {PRONOUN/m_c/subject} {VERB/m_c/fit/fits} in with the other apprentices",
 			"Got into a debate with the other apprentices over the warrior code",
 			"Feels jealous of r_c's beliefs in StarClan",
 			"Wonders if {PRONOUN/m_c/subject} could ever be as great as the other apprentices",
-			"Feels like {PRONOUN/m_c/subject} {VERB/cat/are/is} the odd one out",
+			"Feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} the odd one out",
 			"Is wondering if any of the other apprentices actually like {PRONOUN/m_c/object}",
 			"Confessed to r_c {PRONOUN/m_c/subject} didn't actually want to be a clan cat"
         ],
@@ -334,7 +334,7 @@
         "thoughts": [
             "Was caught in a lie",
 			"Dramatically flounced around the camp when {PRONOUN/m_c/subject} got told to wait to be made a warrior",
-			"Believes {PRONOUN/m_c/subject} {VERB/cat/are/is} the main character",
+			"Believes {PRONOUN/m_c/subject} {VERB/m_c/are/is} the main character",
 			"Has been moping most of the day over something small"
         ],
         "main_trait_constraint": [
@@ -353,7 +353,7 @@
 			"Is wondering if {PRONOUN/m_c/subject} should have been a medicine cat apprentice",
 			"Is admiring the camp",
 			"Is admiring the stars and imagining {PRONOUN/m_c/self} in the starryfields",
-			"Wonders if {PRONOUN/m_c/subject} {VERB/cat/are/is} entirely alive"
+			"Wonders if {PRONOUN/m_c/subject} {VERB/m_c/are/is} entirely alive"
         ],
         "main_trait_constraint": [
             "dreamer"
@@ -366,7 +366,7 @@
 			"Watches the stars and believes {PRONOUN/m_c/subject} could find {PRONOUN/m_c/poss} way home by {PRONOUN/m_c/object}",
 			"Wants to run away",
 			"Wonders what's beyond the horizon",
-			"Believes {PRONOUN/m_c/subject} {VERB/cat/are/is} made for something greater and far beyond here",
+			"Believes {PRONOUN/m_c/subject} {VERB/m_c/are/is} made for something greater and far beyond here",
 			"Sits on the hill and just feels the wind in {PRONOUN/m_c/poss} pelt",
 			"Wonders what's beyond the mountains",
 			"Wonders if the world has an end",
@@ -387,8 +387,8 @@
 			"Carefully judges whether {PRONOUN/m_c/subject} can do their tasks for the day",
 			"Is proudly standing among {PRONOUN/m_c/poss} clanmates",
 			"Wonders if {PRONOUN/m_c/subject} could become leader one day",
-			"Hopes {PRONOUN/m_c/subject} {VERB/cat/are/is} an inspiration",
-			"Knows {PRONOUN/m_c/subject} {VERB/cat/are/is} complete even without use of their hindlegs"
+			"Hopes {PRONOUN/m_c/subject} {VERB/m_c/are/is} an inspiration",
+			"Knows {PRONOUN/m_c/subject} {VERB/m_c/are/is} complete even without use of their hindlegs"
 	],
 	"perm_conditions": {
 	  "m_c": [
@@ -424,13 +424,13 @@
 			"Pretends that {PRONOUN/m_c/subject} can't hear {PRONOUN/m_c/poss} mentor calling {PRONOUN/m_c/object} for training",
 			"Is hiding in the nursery like a kitten",
 			"Jumped at a leaf that landed on {PRONOUN/m_c/poss} back",
-			"Isn't sure that {PRONOUN/m_c/subject} {VERB/cat/are/is} capable enough to be a warrior",
+			"Isn't sure that {PRONOUN/m_c/subject} {VERB/m_c/are/is} capable enough to be a warrior",
 			"Is experiencing self doubt",
 			"Trained alone so {PRONOUN/r_c/subject} wouldn't have to feel watched",
 			"Messed up a practice move because {PRONOUN/m_c/subject} second guessed it",
 			"Tripped over {PRONOUN/m_c/poss} own paws trying to stop too fast",
 			"Is worried that {PRONOUN/m_c/subject}'ll never get any better",
-			"Got scared of the mouse {PRONOUN/m_c/subject} {VERB/cat/were/was} supposed to catch",
+			"Got scared of the mouse {PRONOUN/m_c/subject} {VERB/m_c/were/was} supposed to catch",
 			"Is worried about the clouds in the sky",
 			"Wondering if {PRONOUN/m_c/subject} should have been a medicine cat apprentice instead"
 		],
