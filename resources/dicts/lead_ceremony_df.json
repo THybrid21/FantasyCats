@@ -72,7 +72,7 @@
     "benevolent_adult": {
       "tags": [],
       "lead_trait": [],
-      "star_trait": ["faithful", "loving", "responsible", "thoughtful", "wise", "charismatic"],
+      "star_trait": ["faithful", "loving", "responsible", "thoughtful", "wise", "charismatic", "dreamer", "wandering"],
       "rank": ["warrior", "elder", "leader", "medicine cat", "mediator"],
       "life_giving": [
         {
@@ -86,7 +86,7 @@
     "abrasive_adult": {
       "tags": [],
       "lead_trait": [],
-      "star_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless", "strict", "troublesome", "vengeful"],
+      "star_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless", "strict", "troublesome", "vengeful", "rebellious", "stubborn"],
       "rank": ["warrior", "elder", "leader", "medicine cat", "mediator"],
       "life_giving": [
         {
@@ -100,7 +100,7 @@
     "outgoing_adult": {
       "tags": [],
       "lead_trait": [],
-      "star_trait": ["adventurous", "bold", "charismatic", "childish", "confident", "daring", "playful", "righteous"],
+      "star_trait": ["adventurous", "bold", "charismatic", "childish", "confident", "daring", "playful", "righteous", "dramatic"],
       "rank": ["warrior", "elder", "leader", "medicine cat", "mediator"],
       "life_giving": [
         {
@@ -114,7 +114,7 @@
     "reserved_adult": {
       "tags": [],
       "lead_trait": [],
-      "star_trait": ["calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange"],
+      "star_trait": ["calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange", "skeptic", "peltshifted"],
       "rank": ["warrior", "elder", "leader", "medicine cat", "mediator"],
       "life_giving": [
         {

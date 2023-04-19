@@ -107,7 +107,7 @@
     "benevolent_adult_bloodthirsty_lead": {
       "tags": [],
       "lead_trait": ["bloodthirsty"],
-      "star_trait": ["faithful", "loving", "responsible", "thoughtful", "wise", "charismatic"],
+      "star_trait": ["faithful", "loving", "responsible", "thoughtful", "wise", "charismatic", "dreamer", "wandering"],
       "rank": ["warrior", "elder", "medicine cat", "mediator", "deputy"],
       "life_giving": [
         {
@@ -983,7 +983,7 @@
     "kind_kit": {
       "tags": [],
       "lead_trait": [],
-      "star_trait": ["polite", "sweet", "quiet", "insecure"],
+      "star_trait": ["polite", "sweet", "quiet", "insecure", "snuggly"],
       "rank": ["kitten"],
       "life_giving": [
         {
@@ -1172,7 +1172,7 @@
       "tags": ["new_clan"],
       "lead_trait": [],
       "text": [
-        "m_c_star wakes, {PRONOUN/m_c/poss} new name echoing in {PRONOUN/m_c/poss} ears."
+        "m_c_star wakes, {PRONOUN/m_c/poss} new name echoing in {PRONOUN/m_c/poss} ears.",
       ]
     },
 
