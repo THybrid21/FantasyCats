@@ -128,7 +128,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c got their paw stuck in a Twoleg trap, but luckily escaped with only a sprain.",
+        "event_text": "m_c got their paw stuck in a Peltshifter trap, but luckily escaped with only a sprain.",
         "cat_trait": null,
         "cat_skill": null,
         "other_cat_trait": null,
@@ -312,10 +312,10 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c got their paw stuck in a Twoleg trap, and while they eventually escaped, their leg is heavily injured.",
+        "event_text": "m_c got their paw stuck in a Peltshifter trap, and while they eventually escaped, their leg is heavily injured.",
         "history_text": {
-            "scar": "m_c was scarred by a Twoleg trap.",
-            "reg_death": "m_c died from their injuries caused by a Twoleg trap."
+            "scar": "m_c was scarred by a Peltshifter trap.",
+            "reg_death": "m_c died from their injuries caused by a Peltshifter trap."
         },
         "cat_trait": null,
         "cat_skill": null,

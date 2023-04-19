@@ -692,10 +692,10 @@
             "scar",
             "TAILSCAR"
         ],
-        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Twoleg object.",
+        "event_text": "m_c was hurt by their mentor, r_c, as a punishment for messing with a Peltshifter object.",
         "history_text": {
-            "scar": "m_c was scarred by their mentor, r_c, for messing with a Twoleg object.",
-            "reg_death": "m_c died from their wounds after their mentor hurt them for messing with a Twoleg object."
+            "scar": "m_c was scarred by their mentor, r_c, for messing with a Peltshifter object.",
+            "reg_death": "m_c died from their wounds after their mentor hurt them for messing with a Peltshifter object."
         },
         "cat_trait": ["troublesome", "childish", "playful", "adventurous"],
         "cat_skill": null,
@@ -833,10 +833,10 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c's leg was badly hurt after their mentor used a Twoleg trap during a training exercise.",
+        "event_text": "m_c's leg was badly hurt after their mentor used a Peltshifter trap during a training exercise.",
         "history_text": {
-            "scar": "m_c was scarred by their mentor, r_c, when they used a Twoleg trap for training.",
-            "reg_death": "m_c died from wounds caused by their mentor using a Twoleg trap for training."
+            "scar": "m_c was scarred by their mentor, r_c, when they used a Peltshifter trap for training.",
+            "reg_death": "m_c died from wounds caused by their mentor using a Peltshifter trap for training."
         },
         "cat_trait": null,
         "cat_skill": null,

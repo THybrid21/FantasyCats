@@ -25,7 +25,7 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "medium_prey0", "large_prey1"],
-        "intro_text": "The patrol approaches a Twoleg nest perched on the beachfront while hunting.",
+        "intro_text": "The patrol approaches a Peltshifter nest perched on the beachfront while hunting.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 40,
         "exp": 20,
@@ -46,7 +46,7 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "medium_prey0", "huge_prey1"],
-        "intro_text": "The patrol approaches a Twoleg nest perched on the beachfront while hunting.",
+        "intro_text": "The patrol approaches a Peltshifter nest perched on the beachfront while hunting.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 30,
         "exp": 20,
@@ -304,22 +304,22 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "gone", "small_prey0", "small_prey1"],
-        "intro_text": "Your patrol encounters a sandy beach where a lot of Twolegs linger.",
+        "intro_text": "Your patrol encounters a sandy beach where a lot of Peltshifters linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 60,
         "exp": 20,
         "success_text": [
             "They continue hunting undetected.",
             "Slyly, r_c uses the chance to get food, practicing {PRONOUN/r_c/poss} best kittypet impression until just the right moment, before darting forward and making off with a sandwich in {PRONOUN/r_c/poss} mouth.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
             null,
-            "The patrol mostly ignores the Twolegs. As they hunt they hear a yelp from r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} crawled into a metal Twolegs box, and there's nothing {PRONOUN/r_c/subject} or the rest of the patrol can do to get {PRONOUN/r_c/object} out - eventually the Twolegs notice, and r_c is taken by them.",
+            "The patrol mostly ignores the Peltshifters. As they hunt they hear a yelp from r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} crawled into a metal Peltshifters box, and there's nothing {PRONOUN/r_c/subject} or the rest of the patrol can do to get {PRONOUN/r_c/object} out - eventually the Peltshifters notice, and r_c is taken by them.",
             null,
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before {PRONOUN/s_c/subject} can decide whether to step closer, there's a swoosh, and a net falls around {PRONOUN/s_c/object}. s_c fights desperately, but the Twolegs take {PRONOUN/r_c/object} away in the monster."
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before {PRONOUN/s_c/subject} can decide whether to step closer, there's a swoosh, and a net falls around {PRONOUN/s_c/object}. s_c fights desperately, but the Peltshifters take {PRONOUN/r_c/object} away in the monster."
         ],
         "win_skills": ["extremely smart"],
         "win_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless", "strict", "troublesome", "vengeful"],
@@ -332,22 +332,22 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "gone", "medium_prey0", "large_prey1"],
-        "intro_text": "Your patrol encounters a sandy beach where a lot of Twolegs linger.",
+        "intro_text": "Your patrol encounters a sandy beach where a lot of Peltshifters linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
-            "They continue hunting undetected, using the presence of the Twolegs startling the local wildlife to bring back a good haul.",
+            "They continue hunting undetected, using the presence of the Peltshifters startling the local wildlife to bring back a good haul.",
             "Slyly, r_c uses the chance to get food, practicing {PRONOUN/r_c/poss} best kittypet impression until just the right moment, before darting forward and making off with a large lump of meat in {PRONOUN/r_c/poss} mouth.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
             null,
-            "The patrol mostly ignores the Twolegs. As they hunt they hear a yelp from r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} crawled into a metal Twolegs box, and there's nothing {PRONOUN/r_c/subject} or the rest of the patrol can do to get {PRONOUN/r_c/object} out - eventually the Twolegs notice, and r_c is taken by them.",
+            "The patrol mostly ignores the Peltshifters. As they hunt they hear a yelp from r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} crawled into a metal Peltshifters box, and there's nothing {PRONOUN/r_c/subject} or the rest of the patrol can do to get {PRONOUN/r_c/object} out - eventually the Peltshifters notice, and r_c is taken by them.",
             null,
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before {PRONOUN/s_c/subject} can decide whether to step closer, there's a swoosh, and a net falls around {PRONOUN/s_c/object}. s_c fights desperately, but the Twolegs take {PRONOUN/s_c/object} away in the monster."
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before {PRONOUN/s_c/subject} can decide whether to step closer, there's a swoosh, and a net falls around {PRONOUN/s_c/object}. s_c fights desperately, but the Peltshifters take {PRONOUN/s_c/object} away in the monster."
         ],
         "win_skills": ["extremely smart"],
         "win_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless","strict", "troublesome", "vengeful"],
@@ -360,22 +360,22 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "multi_gone", "small_prey0", "small_prey1"],
-        "intro_text": "Your patrol encounters a sandy beach where a lot of Twolegs linger.",
+        "intro_text": "Your patrol encounters a sandy beach where a lot of Peltshifters linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
             "They continue hunting undetected.",
             "Slyly, r_c uses the chance to get food, practicing {PRONOUN/r_c/poss} best kittypet impression until just the right moment, before darting forward and making off with a sandwich in {PRONOUN/r_c/poss} mouth.",
-            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
             null,
             "The patrol mostly ignores the Peltshifters. But as they hunt, the cats encounter appealing, delicious smelling mush in little burrows. Some of the patrol investigates, and doors slam down behind them. There's nothing they or the rest of the patrol can do to get them out - eventually the Peltshifters notice, and the trapped cats are taken.",
             null,
-            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? {PRONOUN/s_c/subject/CAP} {VERB/s_c/wander/wanders} closer, drawing more of the patrol in with {PRONOUN/s_c/object}. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Twolegs take them away in the monster."
+            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? {PRONOUN/s_c/subject/CAP} {VERB/s_c/wander/wanders} closer, drawing more of the patrol in with {PRONOUN/s_c/object}. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Peltshifters take them away in the monster."
         ],
         "win_skills": ["extremely smart"],
         "win_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless", "strict", "troublesome", "vengeful"],
@@ -388,21 +388,21 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["hunting", "gone", "warrior", "injury", "blood loss", "scrapes", "medium_prey0", "large_prey3"],
-        "intro_text": "r_c decides to hunt out near the Twoleg dens.",
+        "intro_text": "r_c decides to hunt out near the Peltshifter dens.",
         "decline_text": "On second thought, {PRONOUN/r_c/subject} {VERB/r_c/decide/decides} to reline {PRONOUN/r_c/poss} nest today instead.",
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} interrupted by Twolegs wandering through the woods a couple times, but it's a successful hunt.",
-            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} always wondered what it might taste like... dry, is the answer. Very odd.",
-            "s_c gets distracted from hunting by strange Twoleg activity around one of their dens. They appear to be hauling all their many, many varieties of nest lining out and into a big monster. s_c take the opportunity to grab a little soft thing, something that's almost shaped like prey. It'll be good for the nursery.",
-            "Calmly, s_c weaves around the Twoleg dens, picking out the mice from the tunnels and the birds off the strange metal hanging fruit. A successful, sneaky hunt."
+            "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} interrupted by Peltshifters wandering through the woods a couple times, but it's a successful hunt.",
+            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'s} always wondered what it might taste like... dry, is the answer. Very odd.",
+            "s_c gets distracted from hunting by strange Peltshifter activity around one of their dens. They appear to be hauling all their many, many varieties of nest lining out and into a big monster. s_c take the opportunity to grab a little soft thing, something that's almost shaped like prey. It'll be good for the nursery.",
+            "Calmly, s_c weaves around the Peltshifter dens, picking out the mice from the tunnels and the birds off the strange metal hanging fruit. A successful, sneaky hunt."
         ],
         "fail_text": [
             null,
-            "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, r_c is seen by Twolegs, and taken from c_n.",
-            "Carelessly, r_c is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/r_c/subject} {VERB/r_c/discover/discovers} that a broken window is just wide enough to push {PRONOUN/r_c/self} out to safety through, but the glass leaves {PRONOUN/r_c/object} bleeding as {PRONOUN/r_c/subject} {VERB/r_c/run/runs} back to c_n."
+            "The Peltshifters here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+            "Carelessly, r_c is seen by Peltshifters, and taken from c_n.",
+            "Carelessly, r_c is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/r_c/subject} {VERB/r_c/discover/discovers} that a broken window is just wide enough to push {PRONOUN/r_c/self} out to safety through, but the glass leaves {PRONOUN/r_c/object} bleeding as {PRONOUN/r_c/subject} {VERB/r_c/run/runs} back to c_n."
         ],
         "win_skills": ["smart", "very smart", "extremely smart"],
         "win_trait": [ "calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange"],
@@ -415,21 +415,21 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["app_stat", "hunting", "gone", "apprentice", "injury", "blood loss", "scrapes", "small_prey0", "medium_prey3"],
-        "intro_text": "app1 decides to hunt out near the Twoleg dens.",
+        "intro_text": "app1 decides to hunt out near the Peltshifter dens.",
         "decline_text": "On second thought, {PRONOUN/app1/subject} {VERB/r_c/decide/decides} to reline {PRONOUN/app1/poss} nest today instead.",
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "{PRONOUN/app1/subject/CAP}{VERB/app1/'re/'s} interrupted by Twolegs wandering through the woods a couple times, so {PRONOUN/app1/subject} {VERB/app1/miss/misses} a couple catches, but overall it works out.",
-            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app1. {PRONOUN/app1/subject/CAP}{VERB/app1/'ve/'s} always wondered what it might taste like... dry, is the answer. It's strangely appealing.",
+            "{PRONOUN/app1/subject/CAP}{VERB/app1/'re/'s} interrupted by Peltshifters wandering through the woods a couple times, so {PRONOUN/app1/subject} {VERB/app1/miss/misses} a couple catches, but overall it works out.",
+            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for app1. {PRONOUN/app1/subject/CAP}{VERB/app1/'ve/'s} always wondered what it might taste like... dry, is the answer. It's strangely appealing.",
             null,
             "Tail lashing excitedly, app1 hunts in the strange, forbidden land, ducking around corners and crawling over gardens with {PRONOUN/app1/poss} belly low to the ground. A successful, sneaky hunt."
         ],
         "fail_text": [
             null,
             "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, app1 is seen by Twolegs, and taken from c_n.",
-            "Carelessly, app1 is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/app1/subject} {VERB/app1/discover/discovers} that a broken window is just wide enough to push {PRONOUN/app1/self} out to safety through, but the glass leaves {PRONOUN/app1/object} bleeding as {PRONOUN/app1/subject} {VERB/app1/run/runs} back to c_n."
+            "Carelessly, app1 is seen by Peltshifters, and taken from c_n.",
+            "Carelessly, app1 is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/app1/subject} {VERB/app1/discover/discovers} that a broken window is just wide enough to push {PRONOUN/app1/self} out to safety through, but the glass leaves {PRONOUN/app1/object} bleeding as {PRONOUN/app1/subject} {VERB/app1/run/runs} back to c_n."
         ],
         "win_trait": ["calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange"],
         "fail_trait": ["altruistic", "compassionate", "empathetic", "faithful", "loving", "patient", "responsible", "thoughtful", "wise"],
@@ -453,15 +453,15 @@
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Twolegs wandering through the woods a couple times, but it's a successful hunt.",
-            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for r_c. {PRONOUN/r_c/subject/CAP} {VERB/r_c/fetch/fetches} p_l, and both cats investigate the food, loudly proclaiming how much better fresh-kill is, but both a little thrilled by the experience.",
-            "s_c shows the other cat all around the outskirts of the Twoleg dens, showing off how much {PRONOUN/s_c/subject} {VERB/s_c/know/knows} about the strange animals and their weird behavior, and enjoying getting to feel clever.",
+            "They're interrupted by Peltshifters wandering through the woods a couple times, but it's a successful hunt.",
+            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for r_c. {PRONOUN/r_c/subject/CAP} {VERB/r_c/fetch/fetches} p_l, and both cats investigate the food, loudly proclaiming how much better fresh-kill is, but both a little thrilled by the experience.",
+            "s_c shows the other cat all around the outskirts of the Peltshifter dens, showing off how much {PRONOUN/s_c/subject} {VERB/s_c/know/knows} about the strange animals and their weird behavior, and enjoying getting to feel clever.",
             "It's a strange adventure, odd and weird and a little thrilling. s_c takes the lead, but both s_c and r_c are wide-eyed and a little scared, in a fun way."
         ],
         "fail_text": [
-            "Carelessly, r_c is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/r_c/subject} {VERB/r_c/hear/hears} p_l yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, r_c presses {PRONOUN/r_c/poss} pelt against p_l on the way back to c_n.",
-            "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, r_c is seen by Twolegs, and taken from c_n.",
+            "Carelessly, r_c is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/r_c/subject} {VERB/r_c/hear/hears} p_l yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, r_c presses {PRONOUN/r_c/poss} pelt against p_l on the way back to c_n.",
+            "The Peltshifters here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+            "Carelessly, r_c is seen by Peltshifters, and taken from c_n.",
             null
         ],
         "win_skills": ["smart", "very smart", "extremely smart"],
@@ -475,18 +475,18 @@
         "biome": "beach",
         "season": "Any",
         "tags": ["app_stat", "hunting", "gone", "apprentice", "romantic", "platonic", "two_apprentices", "medium_prey0"],
-        "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Twoleg dens. Where apprentices are definitely not allowed.",
+        "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Peltshifter dens. Where apprentices are definitely not allowed.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
         "chance_of_success": 30,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Twolegs wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
-            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app2. {PRONOUN/app2/subject/CAP} {VERB/app2/fetch/fetches} app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are wide-eyed and thrilled by the experience.",
+            "They're interrupted by Peltshifters wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
+            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for app2. {PRONOUN/app2/subject/CAP} {VERB/app2/fetch/fetches} app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are wide-eyed and thrilled by the experience.",
             null,
             "Tail lashing excitedly, app1 hunts in the strange, forbidden land, ducking around corners and crawling over gardens with {PRONOUN/app1/poss} belly low to the ground. app2 tries to be even sneakier, and so app1 ups {PRONOUN/app1/poss} game, until they two are probably the most obvious pair of cats in the neighborhood."
         ],
         "fail_text": [
-            "Carelessly, app2 is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/app2/subject} {VERB/app2/hear/hears} app1 yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, app2 presses {PRONOUN/app2/poss} pelt against app1 as they pad home.",
+            "Carelessly, app2 is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, {PRONOUN/app2/subject} {VERB/app2/hear/hears} app1 yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, app2 presses {PRONOUN/app2/poss} pelt against app1 as they pad home.",
             "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
             "Carelessly, app1 is seen by Peltshifters, and taken from c_n.",
             null
@@ -506,15 +506,15 @@
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "Darting through quickly, {PRONOUN/r_c/subject} {VERB/r_c/see/sees} that the lovely smell is Twoleg mush, and {VERB/r_c/keep/keeps} running.",
-            "The lovely smell leads to Twoleg mush. Puzzled, r_c checks around {PRONOUN/r_c/object}, only for {PRONOUN/r_c/poss} fur to stand on end as {PRONOUN/r_c/subject} {VERB/r_c/realize/realizes} {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} standing in a metal tunnel, cloaked in rust and camouflage. It's to {PRONOUN/r_c/poss} great fortune that this trap seems to be broken, but whatever Twoleg restocked the bait might still be around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/leave/leaves} quickly.",
-            "Something about this situation sets all of s_c's instincts off. {PRONOUN/s_c/subject/CAP} {VERB/s_c/investigate/investigates}, carefully, and {VERB/s_c/strip/strips} the cover of the sand away from a Twoleg trap underneath.",
+            "Darting through quickly, {PRONOUN/r_c/subject} {VERB/r_c/see/sees} that the lovely smell is Peltshifter mush, and {VERB/r_c/keep/keeps} running.",
+            "The lovely smell leads to Peltshifter mush. Puzzled, r_c checks around {PRONOUN/r_c/object}, only for {PRONOUN/r_c/poss} fur to stand on end as {PRONOUN/r_c/subject} {VERB/r_c/realize/realizes} {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} standing in a metal tunnel, cloaked in rust and camouflage. It's to {PRONOUN/r_c/poss} great fortune that this trap seems to be broken, but whatever Peltshifter restocked the bait might still be around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/leave/leaves} quickly.",
+            "Something about this situation sets all of s_c's instincts off. {PRONOUN/s_c/subject/CAP} {VERB/s_c/investigate/investigates}, carefully, and {VERB/s_c/strip/strips} the cover of the sand away from a Peltshifter trap underneath.",
             "Something isn't right. Nervously pawing at the sand, s_c thinks that the smell is too good to be true. {PRONOUN/s_c/subject/CAP} {VERB/s_c/leave/leaves} it, deciding to return to camp and report it to the deputy instead."
         ],
         "fail_text": [
             null,
             "Easily swayed by the delicious smell, s_c wanders recklessly into the sheltered space, only to smack into a metal wall. Inside the trap, a young fox starts up a distressed wail, and s_c feels sympathy {PRONOUN/s_c/subject} never expected to feel for a fox, as well as the heart-stopping realization that it could easily have been {PRONOUN/s_c/object}.",
-            "r_c is caught in a trap hidden in the sand and is taken by Twolegs shortly after."
+            "r_c is caught in a trap hidden in the sand and is taken by Peltshifters shortly after."
         ],
         "win_skills": ["smart", "very smart", "extremely smart"],
         "win_trait": ["calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange"],
@@ -532,15 +532,15 @@
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "Darting through quickly, r_c sees that the lovely smell is Twoleg mush, and keeps running.",
-            "The lovely smell leads to Twoleg mush. Puzzled, r_c checks around {PRPONOUN/r_c/object}, only for {PRONOUN/r_c/poss} fur to stand on end as {PRONOUN/r_c/subject} {VERB/r_c/realize/realizes} {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} standing in a metal tunnel, cloaked in rust and camouflage. It's to {PRONOUN/r_c/poss} great fortune that this trap seems to be broken, but whatever Twoleg restocked the bait might still be around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/leave/leaves} quickly.",
-            "Something about this situation sets all of s_c's instincts off. {PRONOUN/s_c/subject/CAP} {VERB/s_c/investigate/investigates}, carefully, and the patrol helps {PRONOUN/s_c/object} strip the cover of the sand away from a Twoleg trap underneath.",
+            "Darting through quickly, r_c sees that the lovely smell is Peltshifter mush, and keeps running.",
+            "The lovely smell leads to Peltshifter mush. Puzzled, r_c checks around {PRPONOUN/r_c/object}, only for {PRONOUN/r_c/poss} fur to stand on end as {PRONOUN/r_c/subject} {VERB/r_c/realize/realizes} {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} standing in a metal tunnel, cloaked in rust and camouflage. It's to {PRONOUN/r_c/poss} great fortune that this trap seems to be broken, but whatever Peltshifter restocked the bait might still be around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/leave/leaves} quickly.",
+            "Something about this situation sets all of s_c's instincts off. {PRONOUN/s_c/subject/CAP} {VERB/s_c/investigate/investigates}, carefully, and the patrol helps {PRONOUN/s_c/object} strip the cover of the sand away from a Peltshifter trap underneath.",
             "Something isn't right. Nervously pawing at the sand, s_c thinks that the smell is too good to be true. {PRONOUN/s_c/subject/CAP} {VERB/s_c/leave/leaves} it, convincing the patrol to return to camp and report it to the deputy instead."
         ],
         "fail_text": [
             null,
             "Easily swayed by the delicious smell, s_c wanders recklessly into the sheltered space, only to smack into a metal wall. Inside the trap, a young fox starts up a distressed wail, and s_c feels sympathy {PRONOUN/s_c/subject} never expected to feel for a fox, as well as the heart-stopping realization that it could easily have been {PRONOUN/s_c/object}.",
-            "r_c is caught in a trap hidden in the sand! There's nothing the patrol is able to do to help {PRONOUN/r_c/object}, and r_c is taken by Twolegs shortly after."
+            "r_c is caught in a trap hidden in the sand! There's nothing the patrol is able to do to help {PRONOUN/r_c/object}, and r_c is taken by Peltshifters shortly after."
         ],
         "win_skills": ["smart", "very smart", "extremely smart"],
         "win_trait": ["calm", "careful", "insecure", "lonesome", "loyal", "nervous", "sneaky", "strange"],
