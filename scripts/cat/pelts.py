@@ -773,8 +773,8 @@ mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON
                 'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'DAPPLED', 'HAWK', 'FRECKLEMASK', 'MOTH']
 point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
     'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
-vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
-    'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKSIGHT']
+vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
+    'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKENED', 'BLACKSIGHT']
 white_sprites = [little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
 tint_colors = ['none', 'off white', 'gray', 'dark cream', 'cream', 'pink', 'blue-white', 'mint', 'black',

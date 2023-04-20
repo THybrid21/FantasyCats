@@ -407,9 +407,10 @@ for a, i in enumerate(['REVERSEPOINT', 'PONIT', 'LIGHTPOINT', 'SNOWSHOE', 'SNOWB
     sprites.make_group('colourpointpatches', (a, 1), f'white{i}')
 
 #Vitiligo
-for a, i in enumerate(['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'SHADOWSIGHT']):
+for a, i in enumerate(['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT']):
     sprites.make_group('vitilligopatches', (a, 0), f'white{i}')
-for a, i in enumerate(['BLACKVIT', 'BLACKVITTWO', 'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKSIGHT']):
+for a, i in enumerate(['BLACKVIT', 'BLACKVITTWO', 'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKENED',
+    'BLACKSIGHT']):
     sprites.make_group('vitilligopatches', (a, 1), f'white{i}')
 
 # single (solid)
