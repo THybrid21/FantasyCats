@@ -98,7 +98,7 @@
    "cat_trait": null,
    "cat_skill": null,
    "other_cat_trait": null,
-   "other_cat_skill": null,
+   "other_cat_skill": null
 
 	},
 	{
@@ -115,7 +115,7 @@
    "cat_trait": null,
    "cat_skill": null,
    "other_cat_trait": null,
-   "other_cat_skill": null,
+   "other_cat_skill": null
 	},
     {
         "injury": "rat bite",
@@ -128,6 +128,10 @@
 			"RATBITE"
         ],
         "event_text": "m_c discovered a rat in camp and curious as all kittens are attempted to play with it. Only the rat bit {PRONOUN/m_c/object} instead.",
+        "history_text": {
+            "scar": "m_c was scarred when they tried to play with a rat they found as a kit.",
+            "reg_death": "m_c died after been bitten by a rat as a kitten."
+        },
         "cat_trait": null,
         "cat_skill": null,
         "other_cat_trait": null,

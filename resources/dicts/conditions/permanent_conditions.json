@@ -1024,7 +1024,7 @@
 			"betony"
 		]
     },	
-    "boundless energy": {
+    "comet spirit": {
         "severity": "minor",
         "congenital": "always",
         "moons_until": 2,
@@ -1204,5 +1204,40 @@
             "juniper",
             "ragwort"
         ]
-    }
+    },
+    "peltshifted": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 200,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "nonverbal",
+                "chance": 40
+            },
+			{
+				"name": "anxiety attack",
+				"chance": 30
+			},
+			{
+				"name": "seasonal lethargy",
+				"chance": 30
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 30
+			}
+        ],
+        "herbs": []
+    },	
 }

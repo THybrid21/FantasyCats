@@ -2427,7 +2427,7 @@ for a, i in enumerate(['TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK', 'PONITMASK',
     sprites.make_group('tortiepatchesmasks', (a, 4), f"tortiemask{i}")
     
 # SKINS
-for a, i in enumerate(['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', "RED"]):
+for a, i in enumerate(['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN']):
     sprites.make_group('skin', (a, 0), f"skin{i}")
 for a, i in enumerate(['DARK', 'DARKGREY', 'GREY', 'DARKSALMON', 'SALMON', 'PEACH']):
     sprites.make_group('skin', (a, 1), f"skin{i}")

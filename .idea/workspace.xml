@@ -6,7 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/patches/vitilligopatches.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/vitilligopatches.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/beach/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/beach/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/injury/general/kitten.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/1_all_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/apprentice_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/deputy_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/elder_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/kitten_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/leader_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator_apprentice_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_app_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior_to_other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/cat_alive_general.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/cat_dead_general.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/exile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/family.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/apprentice.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/deputy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/elder.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/kitten.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/leader.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/med_apprentice.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/mediator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/mediator_apprentice.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/medicine.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/traits/warrior.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/cats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/cats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/condition_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/condition_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/screens/cat_screens.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/screens/cat_screens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/dicts/tint.json" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/dicts/tint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,14 +66,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WC Clan Gen/OGUpdate/clangen&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/WC Clan Gen/yeengen-development",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tkdbl\Documents\GitHub\clangen\resources" />
@@ -86,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true" nameIsGenerated="true">
       <module name="FantasyCats" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />

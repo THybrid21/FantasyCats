@@ -22,7 +22,7 @@
     "CHOCOLATE": "warm"
   },
   "possible_tints": {
-    "any": ["pink", "gray", "red", "black", "orange", "yellow", "purple", "blue", "green", "none"],
+    "any": ["pink", "gray", "red", "black", "orange", "yellow", "purple", "blue", "green"],
 	"greyscale": ["green", "pink", "purple", "yellow", "gray"],
 	"gingerscale": ["orange", "red", "black", "gray"],
 	"greenscale": ["gray", "black", "red", "yellow", "purple"],

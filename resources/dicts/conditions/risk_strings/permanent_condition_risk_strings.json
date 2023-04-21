@@ -531,7 +531,7 @@
 			"{PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} not paranoid, m_c insists that it's just the proper level of caution as {PRONOUN/m_c/subject} {VERB/m_c/check/checks} for the third time that afternoon that the nursery is secure."
 		]
 	},
-	"boundless energy": {
+	"comet spirit": {
 		"zoomies": [
 			"r_c watches bemused as m_c dashes into {PRONOUN/r_c/poss} den, bounces around cheerfully babbling something before zooming off again into the camp.",
 			"m_c's energy always brings joy to the rest of the clan but sometimes {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} to have far too much of it.",
@@ -636,5 +636,30 @@
 			"m_c hisses as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to walk, the joints in {PRONOUN/m_c/poss} paws feeling off and unbalanced.",
 			"With much pain m_c limps {PRONOUN/m_c/poss} way to the medicine den, paws feeling stiff and awkward."
 		]
-    }
+    },
+	"peltshifted": {
+		"nonverbal": [
+			"Struggling to speak and more than frustrated, m_c motions with {PRONOUN/m_c/poss} tail to r_c for communication instead.",
+			"No matter how much m_c tries the purrs and meows just seem to get stuck somewhere in {PRONOUN/m_c/poss} throat.",
+			"m_c stalks around the camp, fur bristling and mouth uselessly moving without words.",
+			"In a shaded corner of the camp, m_c draws patterns in the dirt to communicate with {PRONOUN/m_c/poss} clanmates rather than opening {PRONOUN/m_c/poss} their mouth.",
+			"Rather embarrassed m_c slinks into the medicine den to ask for help relearning to talk once more."
+		],
+		"anxiety attack": [
+			"m_c's paws scramble and scratch at the floor of the medicine den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/keep/keeps} looking at r_c with wide eyes and flatterned ears whenever {PRONOUN/r_c/subject} {VERB/m_c/speak/speaks}.",
+			"The camp is disturbed by m_c's frantic pacing back and forth throughout.",
+			"m_c's chest feels tight and {PRONOUN/m_c/poss} breathing is coming too fast. Only matched by the rapid swirling thoughts in {PRONOUN/m_c/poss} head."
+		],
+		"seasonal lethargy": [
+			"As the season changes around the camp r_c is surprised to find m_c curled up in the medicine den rather forelorn looking. The two of them chat well into the day, reassurances offered all around.",
+			"Change is a part of life, but for m_c it's all a bit too much.",
+			"Watching the animals and world change around {PRONOUN/m_c/object}, m_c can only look at their own paws feeling lost and alone."
+		],
+		"vivid daydreams": [
+			"m_c cheerfully talks to r_c about the dreams and thoughts that {PRONOUN/m_c/subject} {VERB/m_c/have/has} been having. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} really happy to share the world in {PRONOUN/m_c/poss} head.",
+			"m_c purrs in a sunbeam, {PRONOUN/m_c/poss} head filled with so many interesting things.",
+			"Talking to {PRONOUN/m_c/poss} clanmates, m_c has the most wild stories.",
+			"m_c's spending more and more time in {PRONOUN/m_c/poss} head."
+		]
+	}
 }

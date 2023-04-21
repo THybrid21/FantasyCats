@@ -309,7 +309,7 @@ class Condition_Events():
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
             "lasting grief", "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
-            "boundless energy", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness"
+            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "peltshifted"
         ]
 
         got_condition = False

@@ -53,13 +53,13 @@ class Cat():
         'lonesome', 'loving', 'loyal', 'nervous', 'playful',
         'responsible', 'righteous', 'shameless', 'sneaky', 'strange', 'strict',
         'thoughtful', 'troublesome', 'vengeful', 'wise', 'skeptic', 'dramatic',
-        'rebellious', 'dreamer', 'wandering', 'stubborn', 'peltshifted'
+        'rebellious', 'dreamer', 'wandering', 'stubborn'
     ]
     kit_traits = [
         'attention-seeker', 'bossy', 'bouncy', 'bullying', 'charming',
         'daring', 'daydreamer', 'impulsive', 'inquisitive', 'insecure',
         'nervous', 'noisy', 'polite', 'quiet', 'sweet', 'troublesome', 
-        'snuggly', 'rebellious', 'stubborn', 'peltshifted'
+        'snuggly', 'rebellious', 'stubborn'
     ]
     personality_groups = {
         'Outgoing': ['adventurous', 'bold', 'charismatic', 'childish', 'confident', 'daring',
@@ -71,7 +71,7 @@ class Cat():
                      'troublesome', 'vengeful', 'bossy', 'bullying', 'impulsive', 'rebellious',
                      'stubborn'],
         'Reserved': ['calm', 'careful', 'insecure', 'lonesome', 'loyal', 'nervous', 'sneaky',
-                     'strange', 'daydreamer', 'quiet', 'skeptic', 'peltshifted'],
+                     'strange', 'daydreamer', 'quiet', 'skeptic']
     }
     ages = [
         'newborn', 'kitten', 'adolescent', 'young adult', 'adult', 'senior adult',
@@ -401,7 +401,7 @@ class Cat():
             else:
                 self.trait = choice(self.kit_traits)
 
-        if self.trait in self.kit_traits and self.status not in ['kitten', 'newborn']:
+        if self.trait in self.kit_traits and self.trait and self.status not in ['kitten', 'newborn']:
             self.trait = choice(self.traits)
 
         if self.skill is None or self.skill == '???':

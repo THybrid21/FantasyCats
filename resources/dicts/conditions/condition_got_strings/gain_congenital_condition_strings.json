@@ -137,8 +137,8 @@
 		"When it comes to cleaning the den, m_c is the best helper and very particular. Even if {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} to need to place an item multiple times before it's just right.",
 		"m_c has to do certain things six times over, like having to look behind {PRONOUN/m_c/object} every six steps, or {PRONOUN/m_c/subject} {VERB/m_c/get/gets} very uncomfortable and borderline panicked"
 	],
-	"boundless energy": [
-        "m_c mewled and whined like any other kit, but {PRONOUN/m_c/poss} energy was through the nursery's roof and driving the queens mad, to the point they called r_c over just to see if {PRONOUN/r_c/subject} {VERB/r_c/have/has} anything to calm the rambunctious child. The medicine cat just chuckled, maybe the kit simply had boundless energy, {PRONOUN/r_c/subject} had the right herb for it.",
+	"comet spirit": [
+        "m_c mewled and whined like any other kit, but {PRONOUN/m_c/poss} energy was through the nursery's roof and driving the queens mad, to the point they called r_c over just to see if {PRONOUN/r_c/subject} {VERB/r_c/have/has} anything to calm the rambunctious child. The medicine cat just chuckled, maybe the kit simply has a comet spirit, {PRONOUN/r_c/subject} had the right herb for it.",
         "m_c was racing around the camp like an absolute whirlwind, getting under every cats paws, the warriors shake their heads and the queens sigh but as long as m_c doesn't get into trouble, they'll just have to deal with {PRONOUN/m_c/poss} energy.",
         "m_c talked long into the afternoon about the bugs {PRONOUN/m_c/subject} saw, and how they're so cool and how they run away when you paw at them!",
 		"There's some frustration from the older clan members at how distractable m_c is, but it's just the way that {PRONOUN/m_c/subject} {VERB/m_c/are/is}.",
@@ -156,5 +156,13 @@
 		"Initially there was some confusion over why m_c wasn't speaking, it's soon cleared up that there's nothing wrong {PRONOUN/m_c/subject} {VERB/m_c/are/is} just mute.",
 		"m_c has never needed words to speak, fluent enough with {PRONOUN/m_c/poss} body language and the clan adapts to help {PRONOUN/m_c/object} be heard even in {PRONOUN/m_c/poss} silence.",
 		"Nobody knew silence could be so loud until m_c arrived."
+	],
+	"peltshifted": [
+		"While m_c is for all the world exactly like all the other newborns in the nursery something about {PRONOUN/m_c/object} makes r_c's fur stand all on end.",
+		"m_c wriggles about and mewls in the nursery like every other kitten, but {PRONOUN/m_c/subject} {VERB/m_c/refuse/refuses} to stop no matter how much comfort is given.",
+		"m_c is a bit of an odd newborn, trying more than usual to open {PRONOUN/m_c/poss} eyes and shaking in the den if left for even a few seconds.",
+		"When m_c is finally able to speak, {PRONOUN/m_c/poss} first few words are odd, strange sounds that would almost seem to be like what a peltshifter might make.",
+		"In the nursery m_c's dreams take weird shapes and sounds, shifting and dancing away from {PRONOUN/m_c/object}.",
+		"m_c firmly believes that in another life {PRONOUN/m_c/subject} {VERB/m_c/were/was} something much different from a cat."
 	]
 }

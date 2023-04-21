@@ -590,6 +590,7 @@
         "backstory_constraint": null
      
      },
+    {
        "injury": "headache",
        "camp": "any",
        "tags": [
