@@ -85,22 +85,6 @@
         "other_cat_skill": null
     },
     {
-        "injury": "rat bite",
-        "tags": [
-            "Newleaf",
-            "Greenleaf",
-            "Leaf-fall",
-            "Leaf-bare",
-			"scar",
-			"RATBITE"
-        ],
-        "event_text": "m_c discovered a rat in camp and curious as all kittens are attempted to play with it. Only the rat bit {PRONOUN/m_c/object} instead.",
-        "cat_trait": null,
-        "cat_skill": null,
-        "other_cat_trait": null,
-        "other_cat_skill": null
-    },
-     {
    "injury": "headache",
    "camp": "any",
    "tags": [
@@ -116,8 +100,8 @@
    "other_cat_trait": null,
    "other_cat_skill": null,
 
-},
-{
+	},
+	{
    "injury": "severe headache",
    "camp": "any",
    "tags": [
@@ -132,5 +116,21 @@
    "cat_skill": null,
    "other_cat_trait": null,
    "other_cat_skill": null,
-}
+	},
+    {
+        "injury": "rat bite",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare",
+			"scar",
+			"RATBITE"
+        ],
+        "event_text": "m_c discovered a rat in camp and curious as all kittens are attempted to play with it. Only the rat bit {PRONOUN/m_c/object} instead.",
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    }
 ]
