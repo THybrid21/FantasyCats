@@ -97,8 +97,10 @@
 			"Is having trouble speaking up in front of {PRONOUN/m_c/poss} clanmates",
 			"Has been speaking in a strange peltshifter language... somehow"
         ],
-        "main_trait_constraint": [
-            "peltshifted"
-        ]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
     }	
 ]

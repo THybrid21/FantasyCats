@@ -1318,8 +1318,10 @@
 		"Tried walking around the den only on their hindpaws",
 		"Is talking about Thunderpath safety"
     ],
-    "main_trait_constraint": [
-        "peltshifted"
-    ]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
 }
 ]

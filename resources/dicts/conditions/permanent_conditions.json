@@ -1223,11 +1223,11 @@
         "risks": [
             {
                 "name": "nonverbal",
-                "chance": 40
+                "chance": 10
             },
 			{
 				"name": "anxiety attack",
-				"chance": 30
+				"chance": 15
 			},
 			{
 				"name": "seasonal lethargy",
@@ -1235,9 +1235,21 @@
 			},
 			{
 				"name": "vivid daydreams",
-				"chance": 30
+				"chance": 5
+			},
+			{
+				"name": "headache",
+				"chance": 10
+			},
+			{
+				"name": "constant nightmares",
+				"chance": 25
+			},
+			{
+				"name": "nest wetting",
+				"chance": 10
 			}
         ],
         "herbs": []
-    },	
+    }	
 }

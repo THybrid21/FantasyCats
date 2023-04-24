@@ -584,8 +584,10 @@
             "medicine cat",
             "medicine cat apprentice"
         ], 
-        "main_trait_constraint": [
-            "peltshifted"
-        ]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
     }	
 ]

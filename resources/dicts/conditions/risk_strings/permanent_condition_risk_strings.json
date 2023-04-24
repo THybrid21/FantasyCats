@@ -660,6 +660,22 @@
 			"m_c purrs in a sunbeam, {PRONOUN/m_c/poss} head filled with so many interesting things.",
 			"Talking to {PRONOUN/m_c/poss} clanmates, m_c has the most wild stories.",
 			"m_c's spending more and more time in {PRONOUN/m_c/poss} head."
+		],
+		"headache": [
+			"r_c blinks finding m_c hiding in the back of the medicine den, {PRONOUN/m_c/poss} head buried under some of the moss of the nests.",
+			"With so many thoughts in {PRONOUN/m_c/poss} head, it's no wonder it begins to hurt.",
+			"m_c whimpers and whines, trying to push through the throbbing pain in {PRONOUN/m_c/poss} head and continue with {PRONOUN/m_c/poss} daily duties.",
+			"Nobody has seen m_c out of the den all day, when the medicine cat goes to check on {PRONOUN/m_c/object}, it turns out to be over a headache."
+		],
+		"constant nightmares": [
+			"m_c creeps from the den over to where r_c sleeps in the medicine den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} still shaking from the nightmares that awoke {PRONOUN/m_c/object}.",
+			"m_c tosses and turns, {PRONOUN/m_c/poss} sleep is anything but restful, plagued with images and visions {PRONOUN/m_c/subject} can't explain.",
+			"m_c's denmates worriedly talk to the medicine cat about how {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not sleeping well."
+		],
+		"nest wetting": [
+			"To m_c's embarrassment {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} going to r_c to ask for some help with {PRONOUN/m_c/poss} recent bout of nest wetting.",
+			"m_c wakes up with a distressed yowl. Yet another morning where the bedding around {PRONOUN/m_c/object} is suspiciously wet.",
+			"With shame, m_c is seen carrying some soggy bedding out of the camp."
 		]
 	}
 }

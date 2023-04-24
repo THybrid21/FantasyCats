@@ -227,7 +227,8 @@
         "perm_conditions": {
             "m_c": [
                 "starwalker"
-            ],
+            ]
+		},
         "random_status_constraint": [
             "kitten",
             "apprentice",
@@ -243,7 +244,6 @@
         "random_living_status": [
             "living"
         ]
-        }
 	},
 	{
         "id": "ocd_medicine_cat_apprentice",

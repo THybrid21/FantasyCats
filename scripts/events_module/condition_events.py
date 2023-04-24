@@ -62,6 +62,8 @@ class Condition_Events():
                 # if a non-kitten got kittencough, switch it to whitecough instead
                 if chosen_illness == 'kittencough' and cat.status != 'kitten':
                     chosen_illness = 'whitecough'
+                elif chosen_illness == 'nest wetting' and cat.status not in ['kitten', 'apprentice']:
+                    chosen_illness = 'night dirtplacing'
                 # make em sick
                 cat.get_ill(chosen_illness)
 
@@ -70,6 +72,14 @@ class Condition_Events():
                     event_string = f"{cat.name} has gotten a {chosen_illness}."
                 elif chosen_illness == "anxiety attack":
                     event_string = f"{cat.name} has worked up into an {chosen_illness}."
+                elif chosen_illness == "seasonal lethargy":
+                    event_string = f"{cat.name} is experiencing some {chosen_illness} this season."
+                elif chosen_illness == "zoomies":
+                    event_string = f"{cat.name} has gotten the {chosen_illness}."
+                elif chosen_illness == "sleeplessness":
+                    event_string = f"{cat.name} has been unable to get any sleep."
+                elif chosen_illness in ['nest wetting', 'night dirtplacing']:
+                    event_string = f"To their embarrassment {cat.name} is experiencing {chosen_illness}."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 
@@ -368,7 +378,9 @@ class Condition_Events():
             "panic attack": "paranoia",
             "sleeplessness": "ongoing sleeplessness",
             "ticks": "tick bites",
-            "ticks": "severe tick bites"
+            "ticks": "severe tick bites",
+            "nest wetting": "night dirtplacing"
+            
         }
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #

@@ -458,8 +458,10 @@
 			"Is nosing around the nursery",
 			"Cries seeing {PRONOUN/m_c/poss} former nest in the nursery been thrown away"
 		],
-		"main_trait_constraint": [
-			"peltshifted"
-		]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
 	}
 ]

@@ -2072,7 +2072,8 @@
 			"siblings",
 			"mentor/app",
 			"app/mentor",
-			"mates"
+			"mates",
+			"littermates"
         ],		
         "random_living_status": [
             "starclan",
@@ -2088,7 +2089,7 @@
 			"Is overgrooming",
 			"Sits and worries with {PRONOUN/m_c/poss} paws",
 			"Goes to the medicine cat about {PRONOUN/m_c/poss} anxieties",
-			"Is talking with r_c with a twitching tail",
+			"Is talking with r_c with {PRONOUN/m_c/poss} tail twitching",
 			"Has too many thoughts and is breathing harshly",
 			"Is struggling to deal with {PRONOUN/m_c/poss} emotions",
 			"Is struggling to keep {PRONOUN/m_c/self} steady",
@@ -2174,7 +2175,7 @@
         ]
     },
     {
-        "id": "boundless_energy_to_alive_gen",
+        "id": "comet_spirit_to_alive_gen",
         "thoughts": [
             "Is racing around the camp",
 			"Challenges r_c to a race",
@@ -2315,9 +2316,11 @@
             "mediator apprentice",
             "medicine cat apprentice"
         ],
-        "main_trait_constraint": [
-            "peltshifted"
-        ]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
     },	
     {
         "id": "peltshifted_to_strange_gen",
@@ -2342,9 +2345,11 @@
             "leader",
             "elder"
         ],
-        "main_trait_constraint": [
-            "peltshifted"
-        ],
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        },
         "random_living_status": [
             "living"
         ],
@@ -2364,7 +2369,8 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "paralyzed"
+				"peltshifted",
+				"paralyzed"
             ]
         },
         "main_status_constraint": [
@@ -2378,9 +2384,6 @@
             "deputy",
             "leader",
             "elder"
-        ],
-        "main_trait_constraint": [
-            "peltshifted"
         ],
         "random_living_status": [
             "living"

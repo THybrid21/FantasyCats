@@ -300,9 +300,11 @@
 			"Tripped over their own paws",
 			"Is clinging to a kittypet toy"
             ],
-        "main_trait_constraint": [
-            "peltshifted"
-        ]
+        "perm_conditions": {
+            "m_c": [
+                "peltshifted"
+            ]
+        }
     }
 ]
 
