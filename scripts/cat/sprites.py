@@ -384,7 +384,7 @@ for a, i in enumerate(['EXTRA', 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG'
     'LIGHTSONG', 'BLACKSTAR', 'PIEBALD', 'CURVED', 'PETAL']):
     sprites.make_group('whitepatches', (a, 1), f'white{i}')
 for a, i in enumerate(['TIP', 'FANCY', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO', 'GOATEE', 'PAWS', 
-    'MITAINE', 'BROKENBLAZE', 'SCOURGE']):
+    'MITAINE', 'BROKENBLAZE', 'SCOURGE', 'DIVA']):
     sprites.make_group('whitepatches', (a, 2), f'white{i}')
 for a, i in enumerate(['TAIL', 'BLAZE', 'PRINCE', 'BIB', 'VEE', 'UNDERS', 'HONEY',
     'FAROFA', 'DAMIEN', 'MISTER', 'BELLY', 'TAILTIP', 'TOES']):
@@ -2414,7 +2414,7 @@ for a, i in enumerate(['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH',
     'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'OREO', 'SWOOP']):
     sprites.make_group('tortiepatchesmasks', (a, 0), f"tortiemask{i}")
 for a, i in enumerate(['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 
-    'STREAMSTRIKE', 'ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE']):
+    'STREAMSTRIKE', 'ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI']):
     sprites.make_group('tortiepatchesmasks', (a, 1), f"tortiemask{i}")
 for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 
     'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE']):

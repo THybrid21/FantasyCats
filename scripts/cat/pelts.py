@@ -626,10 +626,9 @@ pelt_c_no_bw = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD
 
 tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR',
                   'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
-                  'ROBIN', 'BRINDLE', 'PAIGE', 'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 
+                  'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 
                   'BROKENFOUR', 'GLITCH', 'WAVE', 'STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL', 'SPOTSCHAOS', 
-                  'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 'TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK',
-                  'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK',  'FALSESOLID', 'SKELEMASK', 'DALMATIONSPOTS', 'LYNXMASK']
+                  'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK',  'FALSESOLID', 'LYNXMASK']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
                'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
@@ -765,7 +764,7 @@ little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', '
                 'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
                 'EXTRA', 'TWIST', 'OKAPI']
 mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR',
-             'WINGS', 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
+             'WINGS', 'DIVA', 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
 high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
               'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
               'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'VENUS', 'CHANCE', 'RETSUKO']
