@@ -60,7 +60,7 @@
             "Wishes their Clanmates would just talk to each other",
             "Is upset at a recent negotiation with a rival Clan",
             "Is negotiating trading herbs with a rival Clan",
-            "Is negotiating with a kittypet to make use of the herbs in their Peltshifter garden",
+            "Is negotiating with a kittypet to make use of the herbs in their Twoleg garden",
             "Is dismayed at how quickly their Clanmates get into arguments",
             "Feels exhausted after mediating so many arguments",
             "Feels pride for their mediator work",
@@ -206,7 +206,7 @@
         ]
     },
     {
-        "id": "peltshifted_mediator",
+        "id": "echoingmemory_mediator",
         "thoughts": [
             "Is struggling to do their job",
 			"Worries that they're not good enough for c_n",
@@ -223,7 +223,7 @@
         ],		
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
     }	

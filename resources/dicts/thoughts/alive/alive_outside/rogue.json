@@ -103,7 +103,7 @@
             "Wonders if {PRONOUN/m_c/subject} can find a warm place to sleep tonight",
             "Was chased by a fox recently",
             "Wishes {PRONOUN/m_c/subject} were in a warm nest",
-            "Wonders what it's like to live with Peltshifters",
+            "Wonders what it's like to live with Twolegs",
             "Is struggling to survive on {PRONOUN/m_c/poss} own",
             "Is fighting with another rogue over food",
             "Laughed at the thought of dead cats 'watching over' c_n",
@@ -155,7 +155,7 @@
     {
         "id": "senior_rogue_thoughts",
         "thoughts": [
-            "Thinks about finding some Peltshifters to help {PRONOUN/m_c/object} in {PRONOUN/m_c/poss} old age",
+            "Thinks about finding some Twolegs to help {PRONOUN/m_c/object} in {PRONOUN/m_c/poss} old age",
             "Thinks {PRONOUN/m_c/poss} joints are aching too much to hunt today",
             "Wonders if {PRONOUN/m_c/subject} can carry on"
         ],

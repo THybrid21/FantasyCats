@@ -310,7 +310,7 @@
 			"Weakly m_c coughs {PRONOUN/m_c/poss} way into the medicine den."
 		]
 	},
-	"fibro": {
+	"constant roaming pain": {
         "joint pain": [
             "r_c can only set aside a nest and some herbs as m_c comes in complaining of joint pain.",
 			"m_c's been complaing for days, {PRONOUN/m_c/poss} joints seem to be giving them particular trouble this moon.",
@@ -329,8 +329,14 @@
 			"r_c gently scolds m_c when {PRONOUN/m_c/subject} {VERB/m_c/come/comes} into the medicine den, it looks like working too hard without taking breaks has made {PRONOUN/m_c/object} particularly sore.",
 			"After all the effort that {PRONOUN/m_c/subject} put into helping out the elders this moon, m_c has made {PRONOUN/m_c/self} sore. Not that it stops {PRONOUN/m_c/object} from taking pride in the effort.",
 			"m_c doesn't regret the extra work {PRONOUN/m_c/subject} put into helping this moon, even as {PRONOUN/m_c/subject} {VERB/m_c/wince/winces} simply walking back over to {PRONOUN/m_c/poss} nest.",
-			"Simply brushing up against someone makes m_c let out winces and little yowls of pain.",
 			"m_c lazes about in a sunbeam, watching content as {PRONOUN/m_c/poss} clanmates gather together for training that {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to spot for."
+		],
+		"acute pain": [
+			"r_c winces at the whimpers and shudders that m_c is doing. {PRONOUN/r_c/subject/CAP} {VERB/r_c/know/knows} that {PRONOUN/m_c/poss} is in a lot of pain and are only able to do so much with the herbs that {PRONOUN/r_c/subject} {VERB/m_c/have/has}.",
+			"m_c whimpers, whole body shaking as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to take the herbs given to {PRONOUN/m_c/object}. It's hard when the world spins and swims from all the pain.",
+			"A lot of m_c's clanmates are worried about {PRONOUN/m_c/object} due to how m_c refuses to move from the sheer pain of it.",
+			"Simply brushing up against someone makes m_c let out winces and little yowls of pain.",
+			"m_c's curled in {PRONOUN/m_c/poss} nest shaking, unable to move without letting out cries of pain."
 		],
 		"headache": [
 			"r_c fusses with the herbs as m_c comes into the den wincing with each blink. {PRONOUN/r_c/subject} gently {VERB/r_c/ease/eases} {PRONOUN/m_c/object} to a quiet and dark corner of the den to rest.",
@@ -347,6 +353,11 @@
 			"m_c has been complaining of tingling in {PRONOUN/m_c/poss} legs for days, one day it stops. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} relieved, until {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to move again.",
 			"When m_c attempts to get up from {PRONOUN/m_c/poss} bed {PRONOUN/m_c/subject} {VERB/m_c/let/lets} out a yowl of distress, it would appear that only half of {PRONOUN/m_c/object} has gotten up.",
 			"After a few moons of on and off falling over m_c finds one morning that {PRONOUN/m_c/subject} no longer {VERB/m_c/have/has} to worry about falling."
+		],
+		"rash": [
+			"With more than a little frustration m_c goes to r_c complaining about the rash that's growing beneath {PRONOUN/m_c/poss} fur.",
+			"m_c keeps scratching at a single spot, it looks like there's a rash forming.",
+			"m_c hisses while grooming, looks like the skin under {PRONOUN/m_c/poss} fur is starting to get flaky and patchy with a stress induced rash."
 		]
     },
 	"heavy soul": {
@@ -380,14 +391,6 @@
 			"m_c's head spins and {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like every blink the world around {PRONOUN/m_c/object} speeds away. Leaving {PRONOUN/m_c/object} disoriented and lost.",
 			"Between one blink and the next m_c feels like {PRONOUN/m_c/poss} soul has jumped and the world is somewhat under water.",
 			"m_c's denmates carefully make sure that there's nothing too out of place for when {PRONOUN/m_c/poss} mind comes back to {PRONOUN/m_c/object}."
-		],
-		"world tired": [
-			"m_c curls up in the medicine den, softly admitting to r_c that {PRONOUN/m_c/subject} just {VERB/m_c/want/wants} it to stop.",
-			"The world keeps spinning and spinning and just feels too much for m_c",
-			"Sometimes m_c wishes that the world would slow down or even stop for a short while. Just a small break and moment of peace.",
-			"m_c lies in {PRONOUN/m_c/poss} nest so completely exhausted, {PRONOUN/m_c/subject} should go to the medicine den but don't know if {PRONOUN/m_c/subject} could bring themselves to raise.",
-			"The world is too much, too loud, too bright, it's all m_c can do to hold {PRONOUN/m_c/self} tight and avoid thinking that {PRONOUN/m_c/subject} {VERB/m_c/wish/wishes} it would go away.",
-			"m_c has been talking a lot more with {PRONOUN/m_c/poss} denmates about StarClan."
 		]
 	},
 	"starwalker": {
@@ -483,13 +486,6 @@
 			"After all the anxiety that m_c's had this week {PRONOUN/m_c/subject} {VERB/m_c/lie/lies} in the back of the den and stare at the wall completely worn out.",
 			"m_c shivers in the nest, curling {PRONOUN/m_c/poss} tail around {PRONOUN/m_c/object} and pressing {PRONOUN/m_c/poss} ears down.",
 			"The moon has been rough, m_c can barely keep {PRONOUN/m_c/poss} paws stable as {PRONOUN/m_c/subject} {VERB/m_c/head/heads} towards the medicine den to ask for something to ease the pressure."
-		],
-		"world tired": [
-			"m_c wanders into the medicine den late at night to talk to r_c about how {PRONOUN/m_c/subject}{VERB/m_c/'ve/ has} been having scary thoughts about {PRONOUN/m_c/self} this moon.",
-			"The nights feel to drag on longer and longer, m_c twitching and unable to sleep as {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} irrationally wondering if {PRONOUN/m_c/subject}'ll even wake up in the morning.",
-			"m_c refuses to go out on patrols, scared that {PRONOUN/m_c/subject} might do something bad.",
-			"{PRONOUN/m_c/poss/CAP} denmates are struggling to reassure m_c that things will get better and {PRONOUN/m_c/subject} {VERB/m_c/are/is} not a bad cat.",
-			"m_c has been talking a lot more with {PRONOUN/m_c/poss} denmates about StarClan."
 		]
 	},
 	"ocd": {
@@ -603,13 +599,7 @@
 			"m_c is distracted and everyone knows it, {PRONOUN/m_c/poss} brain in a dream even while {PRONOUN/m_c/subject} {VERB/m_c/look/looks} and seem fully awake.",
 			"It's becoming increasingly harder for m_c to understand where reality starts and ends. Figures and shapes dance around {PRONOUN/m_c/object} just outside {PRONOUN/m_c/poss} vision.",
 			"m_c jumps as a clanmate brushes against {PRONOUN/m_c/object}, fur all on end as {PRONOUN/m_c/subject} {VERB/m_c/admit/admits} surprise that the other cat is actually real."
-		],
-		"world tired": [
-			"r_c patiently sits with m_c as {PRONOUN/m_c/subject} {VERB/m_c/wonder/wonders} if {PRONOUN/m_c/subject} {VERB/m_c/could/can} ever fix {PRONOUN/m_c/poss} sleeplessness. It's made {PRONOUN/m_c/object} so worn out.",
-			"m_c's brain feels like it's in a permanent fog, {PRONOUN/m_c/subject} so desperately and dearly want to sleep and debate if it would be worth it if {PRONOUN/m_c/subject} could never wake up.",
-			"m_c wonders how many poppy seeds is too many.",
-			"m_c has been talking a lot more with {PRONOUN/m_c/poss} denmates about StarClan."			
-		],
+		]
 		"constant nightmares": [
 			"m_c comes in to see r_c, picking up some poppy seeds in the hope for some temporary completely dream free sleep.",
 			"m_c whimpers as {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up, pressing {PRONOUN/m_c/poss} ears flat. Bad enough {PRONOUN/m_c/subject} hardly {VERB/m_c/sleep/sleeps}, now what little they do get is plagued with nightmares."
@@ -623,7 +613,7 @@
 		"an infected wound": [
 			"r_c hisses as m_c limps into the medicine den. {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} even have to check to know there's something wrong with m_c's paws.",
 			"m_c can barely walk. {PRONOUN/m_c/poss} paws are angry and swollen.",
-			"Once again m_c finds {PRONOUN/m_c/self} cursing the peltshifters who done this to {PRONOUN/m_c/object} as {PRONOUN/m_c/poss} paws burn and ache painfully around {PRONOUN/m_c/poss} toes."
+			"Once again m_c finds {PRONOUN/m_c/self} cursing the twolegs who done this to {PRONOUN/m_c/object} as {PRONOUN/m_c/poss} paws burn and ache painfully around {PRONOUN/m_c/poss} toes."
 		],
 		"sore": [
 			"r_c sympathetically provides wrappings for m_c's sore paws. The wounds healed but still aching.",
@@ -637,7 +627,7 @@
 			"With much pain m_c limps {PRONOUN/m_c/poss} way to the medicine den, paws feeling stiff and awkward."
 		]
     },
-	"peltshifted": {
+	"echoing memory": {
 		"nonverbal": [
 			"Struggling to speak and more than frustrated, m_c motions with {PRONOUN/m_c/poss} tail to r_c for communication instead.",
 			"No matter how much m_c tries the purrs and meows just seem to get stuck somewhere in {PRONOUN/m_c/poss} throat.",
@@ -676,6 +666,11 @@
 			"To m_c's embarrassment {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} going to r_c to ask for some help with {PRONOUN/m_c/poss} recent bout of nest wetting.",
 			"m_c wakes up with a distressed yowl. Yet another morning where the bedding around {PRONOUN/m_c/object} is suspiciously wet.",
 			"With shame, m_c is seen carrying some soggy bedding out of the camp."
+		],
+		"kittenspace": [
+			"m_c goes to r_c feeling much smaller than {PRONOUN/m_c/subject} {VERB/m_c/are/is}. r_c reassures {PRONOUN/m_c/object} alright, and {PRONOUN/r_c/subject} {VERB/r_c/are/is} here for {PRONOUN/m_c/object}.",
+			"After all the stress that m_c's been experiencing this moon, {PRONOUN/m_c/subject} feel rather floaty and small, wishing only for some quiet and naptime.",
+			"Despite been grown, m_c still has times when {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like been small and that's okay."
 		]
 	}
 }

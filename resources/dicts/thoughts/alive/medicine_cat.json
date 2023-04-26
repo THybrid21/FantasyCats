@@ -133,7 +133,7 @@
     {
         "id": "daring_medicine_cat",
         "thoughts": [
-            "Steals catmint from a Peltshifter garden"
+            "Steals catmint from a Twoleg garden"
         ],
         "main_trait_constraint": [
             "daring"
@@ -443,7 +443,7 @@
         "thoughts": [
             "Went missing for most of this week",
 			"Was last seen vanturing across another clan's territory",
-			"Heard interesting rumours about Peltshifterplace",
+			"Heard interesting rumours about Twolegplace",
 			"Is looking towards the exit of the camp with longing",
 			"Has itchy paws and wants to wander the territory",
 			"Makes an excuse to get out of the boundaries of the camp"
@@ -567,7 +567,7 @@
         ]
     },
     {
-        "id": "peltshifted_medicine_cat",
+        "id": "echoingmemory_medicine_cat",
         "thoughts": [
             "Rolls their eyes at the talk of StarClan",
 			"Is deeply considering a sign they saw",
@@ -586,7 +586,7 @@
         ], 
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
     }	

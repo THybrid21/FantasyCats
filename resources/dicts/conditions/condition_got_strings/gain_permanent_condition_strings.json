@@ -108,7 +108,7 @@
     },
     "severe burn": {
         "lost their tail": [
-            "m_c makes a weak, very bad joke about {PRONOUN/m_c/poss} tail smelling like Peltshifter food. Gently, r_c breaks the news that {PRONOUN/m_c/poss} burned flesh is going to need to be removed.",
+            "m_c makes a weak, very bad joke about {PRONOUN/m_c/poss} tail smelling like Twoleg food. Gently, r_c breaks the news that {PRONOUN/m_c/poss} burned flesh is going to need to be removed.",
             "m_c's tail was almost completely taken by the fire, r_c tells {PRONOUN/m_c/object} that at this point it would be better to cleanly remove what still remains.",
             "m_c is almost glad to be rid of {PRONOUN/m_c/poss} burned tail, which had long since ceased to feel like a real part of {PRONOUN/m_c/poss} body except for the pain. Almost."
         ],
@@ -225,8 +225,8 @@
 	"wrenched claws": {
 		"declawed": [
 			"r_c fusses over m_c's paws with {PRONOUN/m_c/object} before sitting back and shaking {PRONOUN/r_c/poss} head sadly. It appears {PRONOUN/m_c/subject} will have to learn to fight without {PRONOUN/m_c/poss} claws.",
-			"r_c frustratedly hisses over the state of m_c's paws and claws. Curse those horrible peltshifters who did this.",
-			"Curse them, curse those peltshifters for taking m_c away and bringing {PRONOUN/m_c/object} back without {PRONOUN/m_c/poss} claws."
+			"r_c frustratedly hisses over the state of m_c's paws and claws. Curse those horrible twolegs who did this.",
+			"Curse them, curse those twolegs for taking m_c away and bringing {PRONOUN/m_c/object} back without {PRONOUN/m_c/poss} claws."
 		]
 	}
 }

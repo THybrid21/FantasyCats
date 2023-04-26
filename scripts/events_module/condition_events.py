@@ -318,8 +318,8 @@ class Condition_Events():
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
-            "lasting grief", "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
-            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "peltshifted"
+            "lasting grief", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
+            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor"
         ]
 
         got_condition = False

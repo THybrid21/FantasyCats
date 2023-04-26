@@ -332,24 +332,24 @@
     }
 },
 {
-    "patrol_id": "bch_hunt_peltshiftersobject1",
+    "patrol_id": "bch_hunt_twolegsobject1",
     "biome": "beach",
     "season": "greenleaf",
     "tags": ["hunting", "injury", "sprain"],
-    "intro_text": "As the patrol arrives at a beach, they spot Peltshifters and their kits lounging around a brightly colored pelt of some kind, and smell food-scent.",
-    "decline_text": "The patrol decides to avoid the Peltshifters.",
+    "intro_text": "As the patrol arrives at a beach, they spot Twolegs and their kits lounging around a brightly colored pelt of some kind, and smell food-scent.",
+    "decline_text": "The patrol decides to avoid the Twolegs.",
     "chance_of_success": 40,
     "exp": 10,
     "success_text": [
-        "The patrol sneaks closer. It seems the Peltshifters are eating, though the open beach shore means the cats don't have any chances of stealing a bite.",
+        "The patrol sneaks closer. It seems the Twolegs are eating, though the open beach shore means the cats don't have any chances of stealing a bite.",
         null,
-        "s_c is more interested in the strangely-colored pelt than the food-scent, which the Peltshifters will undoubtedly be possessive of. {PRONOUN/s_c/subject/CAP} {VERB/s_c/wonder/wonders} how the odd creatures make such things, and why on earth they'd bring them to a beach to sit on pointlessly."
+        "s_c is more interested in the strangely-colored pelt than the food-scent, which the Twolegs will undoubtedly be possessive of. {PRONOUN/s_c/subject/CAP} {VERB/s_c/wonder/wonders} how the odd creatures make such things, and why on earth they'd bring them to a beach to sit on pointlessly."
     ],
     "fail_text": [
-        "The patrol can't seem to interpret the purpose of the Gathering. Peltshifters are just mystifying.",
+        "The patrol can't seem to interpret the purpose of the Gathering. Twolegs are just mystifying.",
         null,
         null,
-        "As the patrol gets close, a Peltshifter kit runs at them, screaming unintelligibly. While running away, r_c sprains a leg."
+        "As the patrol gets close, a Twoleg kit runs at them, screaming unintelligibly. While running away, r_c sprains a leg."
     ],
     "win_skills": ["smart", "very smart", "extremely smart"],
     "min_cats": 2,

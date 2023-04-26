@@ -51,11 +51,11 @@
         ["a snake eating it's own tail"],
         ["a ghostly pair of eyes"],
         ["two pawprints overlapping"],
-        ["a broken Peltshifter collar"],
+        ["a broken Twoleg collar"],
         ["the glowing eyes of a monster"],
         ["skeletal trees against the sky"],
-        ["abandoned Peltshifter dens", "spreading Peltshifter dens"],
-        ["a tattered Peltshifter pelt"],
+        ["abandoned Twoleg dens", "spreading Twoleg dens"],
+        ["a tattered Twoleg pelt"],
         ["the reflection of a lion", "a tiger's reflection"],
         ["a twig burning from both ends"],
         ["the grin of a wolf"],
@@ -64,7 +64,7 @@
         ["a cat not yet born"],
         ["a cat nearly forgotten"],
         ["a cat covered in blood"],
-        ["a cat standing beside a Peltshifter"],
+        ["a cat standing beside a Twoleg"],
         ["stones dissolving in water"]
       ],
       "forest": [
@@ -513,7 +513,7 @@
         "The Cat Who Carried The Sun", "The Cat Made From The Earth", "The Cats Made of Light", "The Great Worm-cat"],
       ["the Thunderbeasts"],
       ["How The Great Sytowers Came To Be"],
-      ["The Metal Trees of the Peltshifters"],
+      ["The Metal Trees of the Twolegs"],
       ["The Weasel's Lie"]
 
     ],

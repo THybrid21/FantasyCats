@@ -37,8 +37,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": false,
-		"peltshifted": true
+		"stubborn": false
     },
     "altruistic": {
         "ambitious": false,
@@ -77,8 +76,7 @@
 		"rebellious": true, 
 		"dreamer": false, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": null
+		"stubborn": false
     },
     "ambitious": {
         "bloodthirsty": true,
@@ -116,8 +114,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": null,
-		"peltshifted": false
+		"stubborn": null
     },
     "bloodthirsty": {
         "bold": true,
@@ -154,8 +151,7 @@
 		"rebellious": true, 
 		"dreamer": false, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
     },
     "bold": {
         "calm": false,
@@ -191,8 +187,7 @@
 		"rebellious": true, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "calm": {
         "careful": true,
@@ -227,8 +222,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": true,
-		"peltshifted": true
+		"stubborn": true
     },
     "careful": {
         "charismatic": null,
@@ -262,8 +256,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": false,
-		"peltshifted": null
+		"stubborn": false
     },
     "charismatic": {
         "childish": true,
@@ -296,8 +289,7 @@
 		"rebellious": null, 
 		"dreamer": true, 
 		"wandering": null,
-		"stubborn": false,
-		"peltshifted": null
+		"stubborn": false
     },
     "childish": {
         "cold": false,
@@ -329,8 +321,7 @@
 		"rebellious": true, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": false,
-		"peltshifted": true
+		"stubborn": false
     },
     "cold": {
         "compassionate": null,
@@ -361,8 +352,7 @@
 		"rebellious": true, 
 		"dreamer": false, 
 		"wandering": null,
-		"stubborn": null,
-		"peltshifted": false
+		"stubborn": null
     },
     "compassionate": {
         "confident": null,
@@ -392,8 +382,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": null
+		"stubborn": null
     },
     "confident": {
         "daring": true,
@@ -422,8 +411,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": true,
-		"peltshifted": null
+		"stubborn": true
     },
     "daring": {
         "empathetic": null,
@@ -451,8 +439,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "empathetic": {
         "faithful": true,
@@ -479,8 +466,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "faithful": {
         "faithful": null,
@@ -507,8 +493,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
     },
     "fierce": {
         "insecure": null,
@@ -533,8 +518,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": true,
-		"peltshifted": false
+		"stubborn": true
     },
     "insecure": {
         "lonesome": null,
@@ -558,8 +542,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": null
+		"stubborn": false
     },
     "lonesome": {
         "loving": false,
@@ -582,8 +565,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": true
+		"stubborn": false
     },
     "loving": {
         "loyal": true,
@@ -605,8 +587,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "loyal": {
         "nervous": true,
@@ -627,8 +608,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": true,
-		"peltshifted": null
+		"stubborn": true
     },
     "nervous": {
         "patient": true,
@@ -648,8 +628,7 @@
 		"rebellious": false, 
 		"dreamer": true, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": null
+		"stubborn": false
     },
     "patient": {
         "playful": true,
@@ -668,8 +647,7 @@
 		"rebellious": null, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": true,
-		"peltshifted": true
+		"stubborn": true
     },
     "playful": {
         "responsible": false,
@@ -687,8 +665,7 @@
 		"rebellious": null, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "responsible": {
         "righteous": null,
@@ -705,8 +682,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": false,
-		"stubborn": null,
-		"peltshifted": false
+		"stubborn": null
     },
     "righteous": {
         "shameless": null,
@@ -722,8 +698,7 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
     },
     "shameless": {
         "sneaky": true,
@@ -738,8 +713,7 @@
 		"rebellious": true, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "sneaky": {
         "strange": true,
@@ -753,8 +727,7 @@
 		"rebellious": null, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": null
+		"stubborn": null
     },
     "strange": {
         "strict": null,
@@ -767,8 +740,7 @@
 		"rebellious": true, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
     },
     "strict": {
         "thoughtful": null,
@@ -780,8 +752,7 @@
 		"rebellious": false, 
 		"dreamer": false, 
 		"wandering": false,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
     },
     "thoughtful": {
         "troublesome": null,
@@ -792,8 +763,7 @@
 		"rebellious": null, 
 		"dreamer": true, 
 		"wandering": null,
-		"stubborn": null,
-		"peltshifted": null
+		"stubborn": null
     },
     "troublesome": {
         "vengeful": null,
@@ -803,8 +773,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": true,
-		"peltshifted": null
+		"stubborn": true
     },
     "vengeful": {
         "wise": null,
@@ -813,8 +782,7 @@
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": null,
-		"peltshifted": null
+		"stubborn": null
     },
 	"wise": {
 		"skeptic": true,
@@ -822,40 +790,31 @@
 		"rebellious": false, 
 		"dreamer": null, 
 		"wandering": null,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
 	},
 	"skeptic": {
 		"dramatic": null,
 		"rebellious": true, 
 		"dreamer": null, 
 		"wandering": true,
-		"stubborn": false,
-		"peltshifted": false
+		"stubborn": false
 	},
 	"dramatic": {
 		"rebellious": null, 
 		"dreamer": true, 
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": null
+		"stubborn": null
 	},
 	"rebellious": {
 		"dreamer": null,
 		"wandering": null,
-		"stubborn": true,
-		"peltshifted": false
+		"stubborn": true
 	},
 	"dreamer": {
 		"wandering": true,
-		"stubborn": null,
-		"peltshifted": true
+		"stubborn": null
 	},
 	"wandering": {
-		"stubborn": null,
-		"peltshifted": true
-	},
-	"stubborn": {
-		"peltshifted": false
-	}
+        "stubborn": null
+    }
 }

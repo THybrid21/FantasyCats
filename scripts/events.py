@@ -1703,7 +1703,7 @@ class Events():
                 ' go missing in the night.',
                 ' are killed after a badger attack.',
                 ' die to a greencough outbreak.',
-                ' are taken away by Peltshifters.',
+                ' are taken away by Twolegs.',
                 ' eat tainted fresh-kill and die.',
             ])
             if game.clan.current_season == 'Leaf-bare':
@@ -1718,9 +1718,9 @@ class Events():
                 ])
             if dead_count >= 2:
                 event_string = f'{names}{random.choice(disaster)}'
-                if event_string == f'{names} are taken away by Peltshifters.':
+                if event_string == f'{names} are taken away by Twolegs.':
                     for kitty in dead_cats:
-                        self.handle_peltshifter_capture(kitty)
+                        self.handle_twoleg_capture(kitty)
                     game.cur_events_list.append(
                         Single_Event(event_string, "birth_death",
                                      involved_cats))
@@ -1764,14 +1764,14 @@ class Events():
                 cat, game.clan.current_season)
         return triggered_death
 
-    def handle_peltshifter_capture(self, cat):
+    def handle_twoleg_capture(self, cat):
         """
         TODO: DOCS
         """
         cat.outside = True
         cat.gone()
         # The outside-value must be set to True before the cat can go to cotc
-        cat.thought = "Is terrified as they are trapped in a large silver Peltshifter den"
+        cat.thought = "Is terrified as they are trapped in a large silver Twoleg den"
         # FIXME: Not sure what this is intended to do; 'cat_class' has no 'other_cats' attribute.
         # cat_class.other_cats[cat.ID] = cat
 

@@ -289,7 +289,7 @@
         ]
     },	
     {
-        "id": "peltshifted_kit",
+        "id": "echoingmemory_kit",
         "thoughts": [
             "Is struggling to learn to walk",
 			"Mewls because they still don't know how to talk",
@@ -302,7 +302,7 @@
             ],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
     }

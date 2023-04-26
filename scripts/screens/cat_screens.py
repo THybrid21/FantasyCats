@@ -79,18 +79,18 @@ def bs_blurb_text(cat):
         'outsider_roots1': "This cat was born into the Clan, but one of their parents is an outsider that belongs to no Clan.",
         'outsider_roots2': "This cat was born outside the Clan, but came to live in the Clan with their parent at a young age.",
         'loner1': "This cat joined the Clan by choice after living life as a loner.",
-        'loner2': "This cat used to live in a barn, but mostly stayed away from Peltshifters. They decided clanlife might be an interesting change of pace.",
-        'kittypet1': "This cat joined the Clan by choice after living life with Peltshifters as a kittypet.",
-        'kittypet2': 'This cat used to live on something called a "boat" with Peltshifters, but decided to join the Clan.',
-        'kittypet3': "This cat used be a kittypet. They got lost after wandering away, and when they returned home, they found their Peltshifters were gone. They eventually found their way to the Clan.",
-        'kittypet4': "This cat used to be a kittypet. One day, they got sick, and their Peltshifters brought them into the belly of a monster. The Peltshifters then left them to fend for themselves.",
+        'loner2': "This cat used to live in a barn, but mostly stayed away from Twolegs. They decided clanlife might be an interesting change of pace.",
+        'kittypet1': "This cat joined the Clan by choice after living life with Twolegs as a kittypet.",
+        'kittypet2': 'This cat used to live on something called a "boat" with Twolegs, but decided to join the Clan.',
+        'kittypet3': "This cat used be a kittypet. They got lost after wandering away, and when they returned home, they found their Twolegs were gone. They eventually found their way to the Clan.",
+        'kittypet4': "This cat used to be a kittypet. One day, they got sick, and their Twolegs brought them into the belly of a monster. The Twolegs then left them to fend for themselves.",
         'rogue1': "This cat joined the Clan by choice after living life as a rogue.",
-        'rogue2': "This cat used to live in a Peltshifterplace, scrounging for what they could find. They thought the Clan might offer them more security.",
+        'rogue2': "This cat used to live in a Twolegplace, scrounging for what they could find. They thought the Clan might offer them more security.",
         'rogue3': "This cat used to live alone in their own territory, but was chased out by something and eventually found the Clan.",
         'abandoned1': "This cat was found by the Clan as a kit and has been living with them ever since.",
         'abandoned2': "This cat was born outside of the Clan, but was brought to the Clan as a kit and has lived here ever since.",
         'abandoned3': "This cat was born into another Clan, but they were left here as a kit for the Clan to raise.",
-        'abandoned4': "This cat was found and taken in after being abandoned by their Peltshifters as a kit.",
+        'abandoned4': "This cat was found and taken in after being abandoned by their Twolegs as a kit.",
         'medicine_cat': "This cat was once a medicine cat in another Clan.",
         'otherclan': "This cat was born into another Clan, but came to this Clan by choice.",
         'otherclan2': "This cat was unhappy in their old Clan and decided to come here instead.",
@@ -100,11 +100,11 @@ def bs_blurb_text(cat):
         'retired_leader': "This cat used to be the leader of another Clan before deciding they needed a change of scenery after leadership became too much. They returned their nine lives and let their deputy take over before coming here.",
         'refugee': "This cat came to this Clan after fleeing from their former Clan and the tyrannical leader that had taken over.",
         'refugee2': "This cat used to live as a loner, but after another cat chased them from their home, they took refuge in the Clan.",
-        'refugee3': "This cat used to be a kittypet, but joined the Clan after fleeing from their cruel Peltshifter.",
+        'refugee3': "This cat used to be a kittypet, but joined the Clan after fleeing from their cruel Twoleg.",
         'refugee4': "This cat used to be in a rogue group, but joined the Clan after fleeing from the group's tyrannical leader.",
         'tragedy_survivor': "Something horrible happened to this cat's previous Clan. They refuse to speak about it.",
         'tragedy_survivor2': "This cat used to be part of a rogue group, but joined the Clan after something terrible happened to it.",
-        'tragedy_survivor3': "This cat used to be a kittypet, but joined the Clan after something terrible happened to their Peltshifters.",
+        'tragedy_survivor3': "This cat used to be a kittypet, but joined the Clan after something terrible happened to their Twolegs.",
         'tragedy_survivor4': "This cat used to be a loner, but joined the Clan after something terrible made them leave their old home behind.",
         'orphaned': "This cat was found with a deceased parent. The Clan took them in, but doesn't hide where they came from.",
         'orphaned2': "This cat was found with a deceased parent. The Clan took them in, but doesn't tell them where they really came from.",
@@ -1066,6 +1066,12 @@ class ProfileScreen(Screens):
                 output += 'flea-ridden!'
             elif "ticks" in the_cat.illnesses:
                 output += 'riddled with ticks!'            
+            elif "kittenspace" in the_cat.illnesses:
+                output += 'in kittenspace'
+            elif "lethargy" or "seasonal lethargy" in the_cat.illnesses:
+                output += 'experiencing lethargy'
+            elif "indecision" in the_cat.illnesses:
+                output += 'indecisive'
             else:
                 output += 'sick!'
 

@@ -83,7 +83,7 @@
     ],
     "decline_text": "They decide to leave the kit alone.",
     "antagonize_text": "Your patrol moves the kit away from the territory, they have no interest in strange kits.",
-    "antagonize_fail_text": "The kit smells of Peltshifters, your patrol has no interest in what will surely grow to be a weak cat.",
+    "antagonize_fail_text": "The kit smells of Twolegs, your patrol has no interest in what will surely grow to be a weak cat.",
     "chance_of_success": 40,
     "exp": 10,
     "win_skills": ["smart", "very smart", "extremely smart"],
@@ -172,7 +172,7 @@
     }
 },
 {
-    "patrol_id": "fst_hunt_peltshifterplacekittens1",
+    "patrol_id": "fst_hunt_twolegplacekittens1",
     "biome": "forest",
     "season": "Any",
     "tags": [
@@ -180,18 +180,18 @@
         "no_fail_prey",
         "new_cat_kittypet_female_dead_litter0_litter1_litter3_abandoned1_abandoned4"
     ],
-    "intro_text": "The patrol approaches a Peltshifter nest in the woods while hunting.",
+    "intro_text": "The patrol approaches a Twoleg nest in the woods while hunting.",
     "decline_text": "The patrol decides to hunt elsewhere.",
     "chance_of_success": 40,
     "exp": 30,
     "success_text": [
-        "p_l hears r_c softly calling them through the bushes, and drops the idea of following mouse scent, hurrying to their mate's side. r_c, head poking into the nest's garden through a gap in the fense, murmurs something about Peltshifter kits. Peltshifter kits? No, r_c corrects, the <i>Peltshifters's kits</i>, the Peltshifters <i>have kittens</i> wandering through the nest's garden. Uneasily, the patrol leaves, but both cats' minds return to the young cats in the days that follow.",
-        "Near the Peltshifter den, p_l suddenly hears furious gowls. Tiny, adorable, furious growls. A kitten tries to pounce on p_l, barely coming up to their elbows. Before little teeth can do any damage, p_l gently flips the tiny cat over and places a gentle paw on their back, completely pinning them as they struggle with all their might. r_c, called over by the mighty fight, asks the little warrior what on earth they're doing. Why, they're defending their territory of course! It might not be the done thing in c_n, but p_l is enchanted by the tiny warrior's bravery, and is willing to vouch for them.",
+        "p_l hears r_c softly calling them through the bushes, and drops the idea of following mouse scent, hurrying to their mate's side. r_c, head poking into the nest's garden through a gap in the fense, murmurs something about Twoleg kits. Twoleg kits? No, r_c corrects, the <i>Twolegs's kits</i>, the Twolegs <i>have kittens</i> wandering through the nest's garden. Uneasily, the patrol leaves, but both cats' minds return to the young cats in the days that follow.",
+        "Near the Twoleg den, p_l suddenly hears furious gowls. Tiny, adorable, furious growls. A kitten tries to pounce on p_l, barely coming up to their elbows. Before little teeth can do any damage, p_l gently flips the tiny cat over and places a gentle paw on their back, completely pinning them as they struggle with all their might. r_c, called over by the mighty fight, asks the little warrior what on earth they're doing. Why, they're defending their territory of course! It might not be the done thing in c_n, but p_l is enchanted by the tiny warrior's bravery, and is willing to vouch for them.",
         null,
-        "Furious, high pitched yowls greet the patrol, as a tiny kittypet kitten comes roaring out of the Peltshifter nest to try and fight them. Terrifying. s_c tips the little fighter over and carefully scruffs the tiny warrior, wondering what to do with them - s_c doesn't particularly want to hurt them, even if they aren't a Clancat. The kitten insists that they're a big cat and they're <b>fine</b>, but after a couple minutes, does reveal their mother is dead. Peltshifters have kept them alive somehow, but c_n will do better, and such a fierce heart shouldn't be left to wither in a soft kittypet life."
+        "Furious, high pitched yowls greet the patrol, as a tiny kittypet kitten comes roaring out of the Twoleg nest to try and fight them. Terrifying. s_c tips the little fighter over and carefully scruffs the tiny warrior, wondering what to do with them - s_c doesn't particularly want to hurt them, even if they aren't a Clancat. The kitten insists that they're a big cat and they're <b>fine</b>, but after a couple minutes, does reveal their mother is dead. Twolegs have kept them alive somehow, but c_n will do better, and such a fierce heart shouldn't be left to wither in a soft kittypet life."
     ],
     "fail_text": [
-        "Peltshifter kits scare the patrol away."
+        "Twoleg kits scare the patrol away."
     ],
     "win_trait":["careful", "thoughtful"],
     "min_cats": 2,
@@ -344,7 +344,7 @@
     "chance_of_success": 30,
     "exp": 20,
     "success_text": [
-            "It's probably dangerous. But curiousity leads app1 on, where they carefully peek over a ridge as the source of the cries. A pampered halpless kittypet runs back and forth over the thunderpath, pleading fearfully for Peltshifters, again and again and again. It isn't until their voice has gone hoarse and scratchy that app1 leaps out to surprise them - those Peltshifters aren't coming back, and the kittypet can either follow app1, or freeze.",
+            "It's probably dangerous. But curiousity leads app1 on, where they carefully peek over a ridge as the source of the cries. A pampered halpless kittypet runs back and forth over the thunderpath, pleading fearfully for Twolegs, again and again and again. It isn't until their voice has gone hoarse and scratchy that app1 leaps out to surprise them - those Twolegs aren't coming back, and the kittypet can either follow app1, or freeze.",
             "StarClan, but the cat they find is weird, they fur soft and thin, their cries desperate as they call in confusion. app1 watches until their paws are cold and uncomfortable, crouched behind cover, but the dumb outsider doesn't even try to steal prey, they just wail for help, quieter and quieter as they begin to lose their voice. Finally, app1 can't take it anyone - striding out, they tell the cat to follow them, the Leader will know what to do with this.",
             null,
             "app1 follows the sad cries to find a kittypet, lost and alone and cold. They watch from under a rock overhang, but no, actually the kittypet is <i>that stupid</i> and it really seems likely they'll freeze to death if app1 doesn't do something. Ugh. Fine, well app1 can bring them back to camp, and then it's the Leader's problem to deal with, not app1's."
@@ -360,6 +360,6 @@
     "min_cats": 1,
     "max_cats": 1,
     "antagonize_text": "app1 screams that this is c_n's territory and there's no help for anyone else. A kittypet runs from them, terrified of the echoing voice.",
-    "antagonize_fail_text": "app1 charges after the sound to attack the cat, only for a kittypet to bowl them right over as the terrified Peltshifter pet, fully grown and fat, runs app1 over in their haste to get away."
+    "antagonize_fail_text": "app1 charges after the sound to attack the cat, only for a kittypet to bowl them right over as the terrified Twoleg pet, fully grown and fat, runs app1 over in their haste to get away."
 }
 ]

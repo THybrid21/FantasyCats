@@ -370,7 +370,7 @@
 			"Sits on the hill and just feels the wind in {PRONOUN/m_c/poss} pelt",
 			"Wonders what's beyond the mountains",
 			"Wonders if the world has an end",
-			"Heard an interesting rumour about Peltshifterplace",
+			"Heard an interesting rumour about Twolegplace",
 			"Wonders what been a kittypet is like",
 			"Feels jealous of a rabbit"
         ],
@@ -407,7 +407,7 @@
 			"Got distracted by some songbirds in the trees",
 			"Practices extra hard in the hopes to get ahead",
 			"Dreams that {PRONOUN/m_c/subject} might one day be leader",
-			"Wonders if peltshifters can speak cat",
+			"Wonders if twolegs can speak cat",
 			"Wonders why kittypets don't try to escape",
 			"Found a kittypet's bell and played with it most of the afternoon"
 	],
@@ -441,16 +441,16 @@
 	}
 	},	
 	{
-		"id": "peltshifted_warrior_apprentice",
+		"id": "echoingmemory_warrior_apprentice",
 		"thoughts": [
-			"Feels jealous of peltshifters",
+			"Feels jealous of twolegs",
 			"Is irrantionally frustated at having four legs",
 			"Stepped on {PRONOUN/m_c/poss} own tail today",
 			"Tried to pick something up with {PRONOUN/m_c/poss} forepaws and failed",
 			"Is crying because {PRONOUN/m_c/subject} sat on {PRONOUN/m_c/poss} own tail",
-			"Insists on calling peltshifters humans",
+			"Insists on calling twolegs humans",
 			"Attempted to plant seeds today",
-			"Was talking about strange peltshifter things again",
+			"Was talking about strange twoleg things again",
 			"Was seen on the edge of kittypet territory",
 			"Has been having strange dreams recently",
 			"Is struggling with something",
@@ -460,7 +460,7 @@
 		],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
 	}

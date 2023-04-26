@@ -27,51 +27,51 @@
         "antagonize_fail_text": null
     },
     {
-        "patrol_id": "wtlnd_gen_hunt_peltshifterplace1",
+        "patrol_id": "wtlnd_gen_hunt_twolegplace1",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
             "hunting",
             "medium_prey"
         ],
-        "intro_text": "The patrol approaches a Peltshifter nest perched on the edge of a swamp, with smoke rising from it's corner.",
+        "intro_text": "The patrol approaches a Twoleg nest perched on the edge of a swamp, with smoke rising from it's corner.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "The patrol has a successful hunt, avoiding any Peltshifters.",
-            "The patrol finds some astonishingly fat chickens running around the Peltshifter nest, and helps themselves to one."
+            "The patrol has a successful hunt, avoiding any Twolegs.",
+            "The patrol finds some astonishingly fat chickens running around the Twoleg nest, and helps themselves to one."
         ],
         "fail_text": [
-            "Peltshifter kits scare the patrol away."
+            "Twoleg kits scare the patrol away."
         ],
         "min_cats": 1,
         "max_cats": 3,
-        "antagonize_text": "A Peltshifter kit approaches the patrol, and they send it away squawking with it's blood on their claws.",
-        "antagonize_fail_text": "The Peltshifter kits wandering around are unimpressed by the patrol and chase the cats for fun."
+        "antagonize_text": "A Twoleg kit approaches the patrol, and they send it away squawking with it's blood on their claws.",
+        "antagonize_fail_text": "The Twoleg kits wandering around are unimpressed by the patrol and chase the cats for fun."
     },
     {
-        "patrol_id": "wtlnd_gen_hunt_peltshifterplace2",
+        "patrol_id": "wtlnd_gen_hunt_twolegplace2",
         "biome": "wetland",
         "season": "Any",
         "tags": [
             "hunting"
         ],
-        "intro_text": "The patrol approaches a Peltshifter nest perched on the edge of a swamp, with smoke rising from it's corner.",
+        "intro_text": "The patrol approaches a Twoleg nest perched on the edge of a swamp, with smoke rising from it's corner.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
-            "The patrol cats split up, using sentries to ensure that the Peltshifters don't disturb their hunts.",
-            "The patrol finds some astonishingly fat chickens running around the Peltshifter nest, and helps themselves to as many as they can carry."
+            "The patrol cats split up, using sentries to ensure that the Twolegs don't disturb their hunts.",
+            "The patrol finds some astonishingly fat chickens running around the Twoleg nest, and helps themselves to as many as they can carry."
         ],
         "fail_text": [
-            "Peltshifter kits stomp through the damp swamp, scaring away prey and ruining the hunt."
+            "Twoleg kits stomp through the damp swamp, scaring away prey and ruining the hunt."
         ],
         "min_cats": 4,
         "max_cats": 6,
-        "antagonize_text": "Finding a Peltshifter kit wandering alone, the cats harass it until it flees squawking, it's blood on their claws.",
-        "antagonize_fail_text": "The Peltshifter kits wandering around are unimpressed by the patrol and chase the cats for fun."
+        "antagonize_text": "Finding a Twoleg kit wandering alone, the cats harass it until it flees squawking, it's blood on their claws.",
+        "antagonize_fail_text": "The Twoleg kits wandering around are unimpressed by the patrol and chase the cats for fun."
     },
     {
         "patrol_id": "wtlnd_hunt_strange1",
@@ -387,20 +387,20 @@
             "medium_prey0",
             "medium_prey1"
         ],
-        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Peltshifters linger.",
+        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 60,
         "exp": 20,
         "success_text": [
             "They continue hunting undetected.",
             "Slyly, r_c uses the chance to get food, practicing their best kittypet impression until just the right moment, before darting forward and making off with a sandwich in their mouth.",
-            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before they can decide whether to step closer, there's a swoosh, and a net falls around them. s_c fights desperately, but the Peltshifters take them away in the monster.",
-            "The patrol mostly ignores the Peltshifters. As they hunt they hear a yelp from r_c. They've crawled into a metal Peltshifters box, and there's nothing they or the rest of the patrol can do to get them out - eventually the Peltshifters notice, and r_c is taken by them.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before they can decide whether to step closer, there's a swoosh, and a net falls around them. s_c fights desperately, but the Twolegs take them away in the monster.",
+            "The patrol mostly ignores the Twolegs. As they hunt they hear a yelp from r_c. They've crawled into a metal Twolegs box, and there's nothing they or the rest of the patrol can do to get them out - eventually the Twolegs notice, and r_c is taken by them.",
             null
         ],
         "win_skills": [
@@ -440,20 +440,20 @@
             "large_prey0",
             "large_prey1"
         ],
-        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Peltshifters linger.",
+        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
-            "They continue hunting undetected, using the presence of the Peltshifters startling the local wildlife to bring back a good haul.",
+            "They continue hunting undetected, using the presence of the Twolegs startling the local wildlife to bring back a good haul.",
             "Slyly, r_c uses the chance to get food, practicing their best kittypet impression until just the right moment, before darting forward and making off with a large lump of meat in their mouth.",
-            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before they can decide whether to step closer, there's a swoosh, and a net falls around them. s_c fights desperately, but the Peltshifters take them away in the monster.",
-            "The patrol mostly ignores the Peltshifters. As they hunt they hear a yelp from r_c. They've crawled into a metal Peltshifters box, and there's nothing they or the rest of the patrol can do to get them out - eventually the Peltshifters notice, and r_c is taken by them.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? Before they can decide whether to step closer, there's a swoosh, and a net falls around them. s_c fights desperately, but the Twolegs take them away in the monster.",
+            "The patrol mostly ignores the Twolegs. As they hunt they hear a yelp from r_c. They've crawled into a metal Twolegs box, and there's nothing they or the rest of the patrol can do to get them out - eventually the Twolegs notice, and r_c is taken by them.",
             null
         ],
         "win_skills": [
@@ -493,20 +493,20 @@
             "medium_prey0",
             "medium_prey1"
         ],
-        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Peltshifters linger.",
+        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
             "They continue hunting undetected.",
             "Slyly, r_c uses the chance to get food, practicing their best kittypet impression until just the right moment, before darting forward and making off with a sandwich in their mouth.",
-            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? They wander closer, drawing more of the patrol in with them. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Peltshifters take them away in the monster.",
-            "The patrol mostly ignores the Peltshifters. But as they hunt, the cats encounter appealing, delicious smelling mush in little burrows. Some of the patrol investigates, and doors slam down behind them. There's nothing they or the rest of the patrol can do to get them out - eventually the Peltshifters notice, and the trapped cats are taken.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? They wander closer, drawing more of the patrol in with them. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Twolegs take them away in the monster.",
+            "The patrol mostly ignores the Twolegs. But as they hunt, the cats encounter appealing, delicious smelling mush in little burrows. Some of the patrol investigates, and doors slam down behind them. There's nothing they or the rest of the patrol can do to get them out - eventually the Twolegs notice, and the trapped cats are taken.",
             null
         ],
         "win_skills": [
@@ -546,20 +546,20 @@
             "large_prey0",
             "large_prey1"
         ],
-        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Peltshifters linger.",
+        "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
         "chance_of_success": 10,
         "exp": 20,
         "success_text": [
-            "They continue hunting undetected, using the presence of the Peltshifters startling the local wildlife to bring back a good haul.",
+            "They continue hunting undetected, using the presence of the Twolegs startling the local wildlife to bring back a good haul.",
             "Slyly, r_c uses the chance to get food, practicing their best kittypet impression until just the right moment, before darting forward and making off with a large lump of meat in their mouth.",
-            "s_c spots the Peltshifters unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c hisses and flees."
+            "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c hisses and flees."
         ],
         "fail_text": [
             null,
-            "A Peltshifter spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? They wander closer, drawing all of the patrol in with them. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Peltshifters take them away in the monster.",
-            "The patrol mostly ignores the Peltshifters. But as they hunt, the cats encounter appealing, delicious smelling mush in little burrows. The whole patrol investigates, and doors slam down behind them. There's nothing they can do to get out - eventually the Peltshifters notice, and the trapped cats are taken from c_n.",
+            "A Twoleg spots s_c and crouches down, clicking softly. s_c pauses - are they hurt? Do they want to make friends? They wander closer, drawing all of the patrol in with them. Before they can decide whether to step away, there's a swoosh, and a net falls around the cats. They fight desperately, but the Twolegs take them away in the monster.",
+            "The patrol mostly ignores the Twolegs. But as they hunt, the cats encounter appealing, delicious smelling mush in little burrows. The whole patrol investigates, and doors slam down behind them. There's nothing they can do to get out - eventually the Twolegs notice, and the trapped cats are taken from c_n.",
             null
         ],
         "win_skills": [
@@ -590,7 +590,7 @@
         "max_cats": 6
     },
     {
-        "patrol_id": "wtlnd_hunt_gonepeltshifterden1",
+        "patrol_id": "wtlnd_hunt_gonetwolegden1",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -600,21 +600,21 @@
             "medium_prey2",
             "large_prey3"
         ],
-        "intro_text": "r_c decides to hunt out near the Peltshifter dens.",
+        "intro_text": "r_c decides to hunt out near the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nest today instead.",
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Peltshifters wandering through the woods a couple times, but it's a successful hunt.",
-            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for r_c. They've always wondered what it might taste like... dry, is the answer. Very odd.",
-            "s_c gets distracted from hunting by strange Peltshifter activity around one of their dens. They appear to be hauling all their many, many varieties of nest lining out and into a big monster. s_c take the opportunity to grab a little soft thing, something that's almost shaped like prey. It'll be good for the nursery.",
-            "Calmly, s_c weaves around the Peltshifter dens, picking out the mice from the tunnels and the birds off the strange metal hanging fruit. A successful, sneaky hunt."
+            "They're interrupted by Twolegs wandering through the woods a couple times, but it's a successful hunt.",
+            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for r_c. They've always wondered what it might taste like... dry, is the answer. Very odd.",
+            "s_c gets distracted from hunting by strange Twoleg activity around one of their dens. They appear to be hauling all their many, many varieties of nest lining out and into a big monster. s_c take the opportunity to grab a little soft thing, something that's almost shaped like prey. It'll be good for the nursery.",
+            "Calmly, s_c weaves around the Twoleg dens, picking out the mice from the tunnels and the birds off the strange metal hanging fruit. A successful, sneaky hunt."
         ],
         "fail_text": [
             null,
-            "The Peltshifters here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, r_c is seen by Peltshifters, and taken from c_n.",
-            "Carelessly, r_c is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, they discover that a broken window is just wide enough to push themselves out to safety through, but the glass leaves them bleeding as they run back to c_n."
+            "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+            "Carelessly, r_c is seen by Twolegs, and taken from c_n.",
+            "Carelessly, r_c is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, they discover that a broken window is just wide enough to push themselves out to safety through, but the glass leaves them bleeding as they run back to c_n."
         ],
         "win_skills": [
             "smart",
@@ -646,7 +646,7 @@
         "max_cats": 1
     },
     {
-        "patrol_id": "wtlnd_hunt_gonepeltshifterden2",
+        "patrol_id": "wtlnd_hunt_gonetwolegden2",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -656,21 +656,21 @@
             "medium_prey0",
             "large_prey3"
         ],
-        "intro_text": "app1 decides to hunt out near the Peltshifter dens.",
+        "intro_text": "app1 decides to hunt out near the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nest today instead.",
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Peltshifters wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
-            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for app1. They've always wondered what it might taste like... dry, is the answer. It's strangely appealing.",
+            "They're interrupted by Twolegs wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
+            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app1. They've always wondered what it might taste like... dry, is the answer. It's strangely appealing.",
             null,
             "Tail lashing excitedly, app1 hunts in the strange, forbidden land, ducking around corners and crawling over gardens with their belly low to the ground. A successful, sneaky hunt."
         ],
         "fail_text": [
             null,
             "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, app1 is seen by Peltshifters, and taken from c_n.",
-            "Carelessly, app1 is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, they discover that a broken window is just wide enough to push themselves out to safety through, but the glass leaves them bleeding as they run back to c_n."
+            "Carelessly, app1 is seen by Twolegs, and taken from c_n.",
+            "Carelessly, app1 is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, they discover that a broken window is just wide enough to push themselves out to safety through, but the glass leaves them bleeding as they run back to c_n."
         ],
         "win_trait": [
             "calm",
@@ -697,7 +697,7 @@
         "max_cats": 1
     },
     {
-        "patrol_id": "wtlnd_hunt_peltshifterdencatdare1",
+        "patrol_id": "wtlnd_hunt_twolegdencatdare1",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -708,20 +708,20 @@
             "platonic",
             "medium_prey0"
         ],
-        "intro_text": "Boldly, eyes daring p_l to say no, r_c suggests hunting by the Peltshifter dens.",
+        "intro_text": "Boldly, eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Peltshifters wandering through the woods a couple times, but it's a successful hunt.",
-            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for r_c. They fetch p_l, and both cats investigate the food, loudly proclaiming how much better fresh-kill is, but both a little thrilled by the experience.",
-            "s_c shows the other cat all around the outskirts of the Peltshifter dens, showing off how much they know about the strange animals and their weird behavior, and enjoying getting to feel clever.",
+            "They're interrupted by Twolegs wandering through the woods a couple times, but it's a successful hunt.",
+            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for r_c. They fetch p_l, and both cats investigate the food, loudly proclaiming how much better fresh-kill is, but both a little thrilled by the experience.",
+            "s_c shows the other cat all around the outskirts of the Twoleg dens, showing off how much they know about the strange animals and their weird behavior, and enjoying getting to feel clever.",
             "It's a strange adventure, odd and weird and a little thrilling. s_c takes the lead, but both s_c and r_c are wide eyed and a little scared, in a fun way."
         ],
         "fail_text": [
-            "Carelessly, r_c is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, they hear p_l yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, r_c presses their pelt against p_l on the way back to c_n.",
-            "The Peltshifters here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, r_c is seen by Peltshifters, and taken from c_n.",
+            "Carelessly, r_c is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, they hear p_l yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, r_c presses their pelt against p_l on the way back to c_n.",
+            "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+            "Carelessly, r_c is seen by Twolegs, and taken from c_n.",
             null
         ],
         "win_skills": [
@@ -754,7 +754,7 @@
         "max_cats": 2
     },
     {
-        "patrol_id": "wtlnd_hunt_peltshifterdenappdare1",
+        "patrol_id": "wtlnd_hunt_twolegdenappdare1",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -766,20 +766,20 @@
             "platonic",
             "medium_prey0"
         ],
-        "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Peltshifter dens. Where apprentices are definitely not allowed.",
+        "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Twoleg dens. Where apprentices are definitely not allowed.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "They're interrupted by Peltshifters wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
-            "A friendly Peltshifters makes a psspsspss noise, and pours kittypet food on the ground for app2. They fetch app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are also wide eyed and thrilled by the experience.",
+            "They're interrupted by Twolegs wandering through the woods a couple times, so they miss a couple catches, but overall it works out.",
+            "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app2. They fetch app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are also wide eyed and thrilled by the experience.",
             null,
             "Tail lashing excitedly, app1 hunts in the strange, forbidden land, ducking around corners and crawling over gardens with their belly low to the ground. app2 tries to be even sneakier, and so app1 ups their game, until they're both probably the most obvious pair of cats in the neighborhood."
         ],
         "fail_text": [
-            "Carelessly, app2 is seen by Peltshifters, and is taken hissing and spitting to be locked in a monster's den. Overnight, they hear app1 yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, app2 presses their pelt against app1 as they pad home.",
+            "Carelessly, app2 is seen by Twolegs, and is taken hissing and spitting to be locked in a monster's den. Overnight, they hear app1 yowling from outside, and the two cats manage to craft an escape plan through a broken window. Shivering, app2 presses their pelt against app1 as they pad home.",
             "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
-            "Carelessly, app1 is seen by Peltshifters, and taken from c_n.",
+            "Carelessly, app1 is seen by Twolegs, and taken from c_n.",
             null
         ],
         "win_trait": [
@@ -807,7 +807,7 @@
         "max_cats": 2
     },
     {
-        "patrol_id": "wtlnd_hunt_gonepeltshiftertrap1",
+        "patrol_id": "wtlnd_hunt_gonetwolegtrap1",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -819,15 +819,15 @@
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "Darting through quickly, they see that the lovely smell is Peltshifter mush, and keep running.",
-            "The lovely smell leads to Peltshifter mush. Puzzled, r_c checks around them, only for their fur to stand on end as they realize they're standing in a metal tunnel, cloaked in rust and camouflage. It's to their great fortune that this trap seems to be broken, but whatever Peltshifter restocked the bait might still be around. They leave quickly.",
-            "Something about this situation sets all of s_c's instincts off. They investigate, carefully, and strip the cover of the swampgrass away from a Peltshifter trap underneath.",
+            "Darting through quickly, they see that the lovely smell is Twoleg mush, and keep running.",
+            "The lovely smell leads to Twoleg mush. Puzzled, r_c checks around them, only for their fur to stand on end as they realize they're standing in a metal tunnel, cloaked in rust and camouflage. It's to their great fortune that this trap seems to be broken, but whatever Twoleg restocked the bait might still be around. They leave quickly.",
+            "Something about this situation sets all of s_c's instincts off. They investigate, carefully, and strip the cover of the swampgrass away from a Twoleg trap underneath.",
             "Something isn't right. Nervously pawing at the swampgrass, s_c thinks that the smell is too good to be true. They leave it, deciding to return to camp and report it to the deputy instead."
         ],
         "fail_text": [
             null,
             "Easily swayed by the delicious smell, s_c wanders recklessly into the sheltered space, only to smack into a metal wall. Inside the trap, a young fox starts up a distressed wail, and s_c feels sympathy for it they never expected to feel for a fox, as well as the heart stopping realization that it could easily have been them.",
-            "r_c is caught in a trap hidden in the swampgrass and is taken by Peltshifters shortly after.",
+            "r_c is caught in a trap hidden in the swampgrass and is taken by Twolegs shortly after.",
             null
         ],
         "win_skills": [
@@ -856,7 +856,7 @@
         "max_cats": 1
     },
     {
-        "patrol_id": "wtlnd_hunt_gonepeltshiftertrap2",
+        "patrol_id": "wtlnd_hunt_gonetwolegtrap2",
         "biome": "wetlands",
         "season": "Any",
         "tags": [
@@ -868,15 +868,15 @@
         "chance_of_success": 50,
         "exp": 20,
         "success_text": [
-            "Darting through quickly, r_c sees that the lovely smell is Peltshifter mush, and keeps running.",
-            "The lovely smell leads to Peltshifter mush. Puzzled, r_c checks around them, only for their fur to stand on end as they realize they're standing in a metal tunnel, cloaked in rust and camouflage. It's to their great fortune that this trap seems to be broken, but whatever Peltshifter restocked the bait might still be around. They leave quickly.",
-            "Something about this situation sets all of s_c's instincts off. They investigate, carefully, and the patrol helps them strip the cover of the swampgrass away from a Peltshifter trap underneath.",
+            "Darting through quickly, r_c sees that the lovely smell is Twoleg mush, and keeps running.",
+            "The lovely smell leads to Twoleg mush. Puzzled, r_c checks around them, only for their fur to stand on end as they realize they're standing in a metal tunnel, cloaked in rust and camouflage. It's to their great fortune that this trap seems to be broken, but whatever Twoleg restocked the bait might still be around. They leave quickly.",
+            "Something about this situation sets all of s_c's instincts off. They investigate, carefully, and the patrol helps them strip the cover of the swampgrass away from a Twoleg trap underneath.",
             "Something isn't right. Nervously pawing at the swampgrass, s_c thinks that the smell is too good to be true. They leave it, convincing the patrol to return to camp and report it to the deputy instead."
         ],
         "fail_text": [
             null,
             "Easily swayed by the delicious smell, s_c wanders recklessly into the sheltered space, only to smack into a metal wall. Inside the trap, a young fox starts up a distressed wail, and s_c feels sympathy for it they never expected to feel for a fox, as well as the heart stopping realization that it could easily have been them.",
-            "r_c is caught in a trap hidden in the swampgrass! There's nothing the patrol is able to do to help them, and r_c is taken by Peltshifters shortly after.",
+            "r_c is caught in a trap hidden in the swampgrass! There's nothing the patrol is able to do to help them, and r_c is taken by Twolegs shortly after.",
             null
         ],
         "win_skills": [
@@ -1323,7 +1323,7 @@
         "success_text": [
             "A storm descends, sudden and violent, putting an end to any other thoughts but survival. The cats retreat into a grove of trees and cuddle together, sharing what little warmth they have. Each cat takes a turn on the most exposed side of the huddle, selflessly risking themselves.",
             null,
-            "A storm descends, sudden and violent, putting an end to any other thoughts but survival. s_c keeps everyone's spirits up as the patrol hides in an abandoned Peltshifters water-monster where the wind can't get them, until everyone is talking, shaky and unhappy, but keeping each other's spirits up.",
+            "A storm descends, sudden and violent, putting an end to any other thoughts but survival. s_c keeps everyone's spirits up as the patrol hides in an abandoned Twolegs water-monster where the wind can't get them, until everyone is talking, shaky and unhappy, but keeping each other's spirits up.",
             "A storm descends, sudden and violent, putting an end to any other thoughts but survival. As the cats hide from the wind, s_c keeps an eye out for everyone. It's a long couple of hours, but with gentle understanding and compassion the cats make it though safely, closer than ever afterwards."
         ],
         "fail_text": [

@@ -175,7 +175,7 @@
 			"m_c asks r_c to go fishing with {PRONOUN/m_c/object}, but they keep on getting distracted by each other.",
 			"m_c gives r_c a beautiful feather {PRONOUN/m_c/subject} found, and hides behind {PRONOUN/m_c/poss} whiskers when thanked.",
 			"m_c gives r_c a wonderfully colored pebble {PRONOUN/m_c/subject} found, and hides behind {PRONOUN/m_c/poss} whiskers when thanked.",
-			"m_c gives r_c a circular Peltshifter object {PRONOUN/m_c/subject} found, and hides behind {PRONOUN/m_c/poss} whiskers when thanked.",
+			"m_c gives r_c a circular Twoleg object {PRONOUN/m_c/subject} found, and hides behind {PRONOUN/m_c/poss} whiskers when thanked.",
 			"m_c compliments r_c on how well groomed {PRONOUN/r_c/poss} pelt is today.",
 			"m_c compliments r_c on how sharp {PRONOUN/r_c/poss} claws are today.",
 			"m_c compliments r_c on {PRONOUN/r_c/poss} catch during a hunting patrol, which causes {PRONOUN/r_c/object} to purr."

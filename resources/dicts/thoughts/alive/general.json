@@ -809,7 +809,7 @@
         "thoughts": [
             "Is questioning if Starclan is real",
 			"Is questioning the leader's abilities, {VERB/m_c/do/does} {PRONOUN/m_c/subject} really have 9 lives?",
-			"Was caught nosing around Peltshifterplace recently",
+			"Was caught nosing around Twolegplace recently",
 			"Smells a bit like kittypet food"
         ],
         "main_status_constraint": [
@@ -869,7 +869,7 @@
 			"Enjoys going on long journeys across the whole territory",
 			"Volunteers to go out early",
 			"Has been travelling further and further from the camp",
-			"Babbles with {PRONOUN/m_c/poss} clanmates about the mysteries of Peltshifterplace"
+			"Babbles with {PRONOUN/m_c/poss} clanmates about the mysteries of Twolegplace"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -1863,8 +1863,8 @@
 			"Is talking about the story that rats brought the clans medicine",
 			"Is comparing the Clans structure to the Packs",
 			"Is talking about the Packs",
-			"Wonders if {PRONOUN/m_c/subject}{VERB/m_c/'re/ is} actually a peltshifter in cat form",
-			"Talks to r_c about how curious peltshifters are",
+			"Wonders if {PRONOUN/m_c/subject}{VERB/m_c/'re/ is} actually a twoleg in cat form",
+			"Talks to r_c about how curious twolegs are",
 			"Talks to r_c about the Packs",
 			"Wonders if the clan could make an agreement with the Packs",
 			"Wonders about the Mother Moon",
@@ -2261,11 +2261,11 @@
 			"Almost fell out of a tree today",
 			"Is wincing each step {PRONOUN/m_c/subject} {VERB/m_c/take/takes}",
 			"Is grooming {PRONOUN/m_c/poss} sore paws",
-			"Doesn't understand why peltshifters would do this",
+			"Doesn't understand why twolegs would do this",
 			"Doesn't understand how kittypets could live like this",
 			"Hates the fact {PRONOUN/m_c/subject} {VERB/M_c/don't/doesn't} have claws anymore",
 			"Isn't ready for practicing with r_c today",
-			"Is warning {PRONOUN/m_c/poss} clanmates about the worst that peltshifters can do",
+			"Is warning {PRONOUN/m_c/poss} clanmates about the worst that twolegs can do",
 			"Is making up a dramatic story about the loss of {PRONOUN/m_c/poss} claws"
         ],
         "perm_conditions": {
@@ -2290,14 +2290,14 @@
         ]
     },
     {
-        "id": "peltshifted_apprentice",
+        "id": "echoingmemory_apprentice",
         "thoughts": [
             "Struggles to get around some days",
 			"Was seen awkwardly trying to move around on only {PRONOUN/m_c/poss} hindlegs",
 			"Has some very odd turns of phrase",
 			"Doesn't enjoy eating freshkill",
 			"Cursed someone called God for putting {PRONOUN/m_c/object} in this position",
-			"Knows far too much about peltshifters for anyone to be comfortable",
+			"Knows far too much about twolegs for anyone to be comfortable",
 			"Is fascinated by training",
 			"Insists that deathberries are to be called yew",
 			"Is horrified by the medicine cats herbs",
@@ -2318,18 +2318,18 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
     },	
     {
-        "id": "peltshifted_to_strange_gen",
+        "id": "echoingmemory_to_strange_gen",
         "thoughts": [
             "Is fascinated by r_c's stories and ideas",
 			"Has long and confusing talks with r_c",
 			"Is surprised there are any cats in the clan who actually seem to understand {PRONOUN/m_c/object}",
 			"Was seen sharing tongues with r_c",
-			"Has convinced r_c that the correct term for peltshifters is humans",
+			"Has convinced r_c that the correct term for twolegs is humans",
 			"Is glad {PRONOUN/m_c/subject} {VERB/m_c/have/has} some friends in the clan, even if those friends are strange",
 			"Is the strange one next to r_c",
 			"Compares {PRONOUN/m_c/self} to r_c and worries"
@@ -2347,7 +2347,7 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         },
         "random_living_status": [
@@ -2360,7 +2360,7 @@
         ]		
     },	
     {
-        "id": "peltshifted_paralyzed_gen",
+        "id": "echoingmemory_paralyzed_young__gen",
         "thoughts": [
             "Finds this... familiar",
 			"Is worried about how at ease {PRONOUN/m_c/subject} {VERB/m_c/are/is} with only having two walking legs",
@@ -2369,21 +2369,13 @@
         ],
         "perm_conditions": {
             "m_c": [
-				"peltshifted",
+				"echoing memory",
 				"paralyzed"
             ]
         },
         "main_status_constraint": [
             "kitten",
-			"apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "warrior",
-            "medicine cat",
-            "mediator",
-            "deputy",
-            "leader",
-            "elder"
+			"apprentice"
         ],
         "random_living_status": [
             "living"

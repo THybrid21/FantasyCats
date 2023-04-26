@@ -88,18 +88,18 @@
         ]
     },
 	{
-        "id": "peltshifted_deputy_to_gen",
+        "id": "echoingmemory_deputy_to_gen",
         "thoughts": [
             "Is having a crisis about {PRONOUN/m_c/poss} position as deputy",
 			"Wonders how {PRONOUN/m_c/subject} will ever survive as leader",
 			"Doubts that {PRONOUN/m_c/subject} will recieve nine lives",
 			"Is struggling to understand how {PRONOUN/m_c/subject} recieved this position",
 			"Is having trouble speaking up in front of {PRONOUN/m_c/poss} clanmates",
-			"Has been speaking in a strange peltshifter language... somehow"
+			"Has been speaking in a strange twoleg language... somehow"
         ],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
     }	

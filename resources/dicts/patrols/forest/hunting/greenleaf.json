@@ -517,16 +517,16 @@
             "large_prey2",
             "battle_injury"
         ],
-        "intro_text": "p_l leads the patrol towards the abandoned Peltshifter nest, listening to r_c's plan. Rats were seen hiding inside to protect themselves from the sweltering heat. Perhaps it would be a perfect hunting spot?",
+        "intro_text": "p_l leads the patrol towards the abandoned Twoleg nest, listening to r_c's plan. Rats were seen hiding inside to protect themselves from the sweltering heat. Perhaps it would be a perfect hunting spot?",
         "success_text": [
             "r_c leads the patrol towards the nest, pushing past the rotting wood blocking the entrance. The patrol gets to work rounding up and piling up the rats, and by nightfall they have so much it takes two trips to bring them back! r_c is congratulated for their ingenious plan.",
             "r_c leads the patrol towards the nest, and they quickly get to work hunting down the rats cornered near the smooth stones. It's a tough fight, with rats attempting to flee or attack the patrol, but in the end the patrol manages to get a hefty pile of prey for c_n."
         ],
         "fail_text": [
-            "r_c leads the cats to the abandoned Peltshifter nest, but as the cats search and search, all they can find are abandoned rats nests. r_c is scolded for wasting the patrol's valuable time.",
+            "r_c leads the cats to the abandoned Twoleg nest, but as the cats search and search, all they can find are abandoned rats nests. r_c is scolded for wasting the patrol's valuable time.",
             null,
             null,
-            "r_c leads the cats to the abandoned Peltshifter nest, but the rats seemed to be more lively than they thought. A harsh battle forces the patrol to retreat, r_c being the most harshly wounded."
+            "r_c leads the cats to the abandoned Twoleg nest, but the rats seemed to be more lively than they thought. A harsh battle forces the patrol to retreat, r_c being the most harshly wounded."
         ],
         "decline_text": "The other cats disagree with such a risk, and resume their normal hunting patrol.",
         "chance_of_success": 50,
@@ -797,7 +797,7 @@
     }
 },
 {
-    "patrol_id": "fst_hunt_peltshiftersobject1",
+    "patrol_id": "fst_hunt_twolegsobject1",
     "biome": "forest",
     "season": "greenleaf",
     "tags": [
@@ -805,17 +805,17 @@
         "injury",
         "burn"
     ],
-    "intro_text": "The patrol comes across a strange Peltshifters object smelling slightly of smoke and prey. Intriguing, but also sort of terrifying. Don't the Peltshifters know the danger of fire?",
-    "decline_text": "The patrol decides to avoid the Peltshifter object.",
+    "intro_text": "The patrol comes across a strange Twolegs object smelling slightly of smoke and prey. Intriguing, but also sort of terrifying. Don't the Twolegs know the danger of fire?",
+    "decline_text": "The patrol decides to avoid the Twoleg object.",
     "chance_of_success": 50,
     "exp": 10,
     "success_text": [
-        "The patrol interprets the purpose of the object. It seems like Peltshifters light their fresh-kill on fire before eating it! How strange.",
+        "The patrol interprets the purpose of the object. It seems like Twolegs light their fresh-kill on fire before eating it! How strange.",
         null,
-        "s_c looks closely at the Peltshifter object, studying it, wondering how specifically the Peltshifters harness and contain the power of fire without it escaping. Wouldn't it be wonderful if c_n could do that?"
+        "s_c looks closely at the Twoleg object, studying it, wondering how specifically the Twolegs harness and contain the power of fire without it escaping. Wouldn't it be wonderful if c_n could do that?"
     ],
     "fail_text": [
-        "The patrol can't seem to interpret the purpose of the object. Peltshifters are just mystifying.",
+        "The patrol can't seem to interpret the purpose of the object. Twolegs are just mystifying.",
         null,
         null,
         "As r_c pokes around the strange smelling whatever-it-is, they poke a piece of metal still holding the heat of fire in it, and skitter backwards with a yelp."
@@ -1778,7 +1778,7 @@
         "They're not the only creature taking advantage of the light rain to find food - though for the f_tp_p and the single f_tp_s they're bringing back to camp, that descision was a mistake.",
         "Some of the forest's plants, particularly the short-rooted undergrowth, will definitely appreciate the drink the sky is providing. r_c thanks the sky for a different reason, giving thanks to Starclan as they bring home a f_tp_s, a f_tp_s they found limping, and a old f_tp_s for the fresh-kill pile.",
         "The thick undergrowth of the forest is perfect for stalking - s_c doesn't know why cats would ever live elsewhere. They bring back a f_mp_s and a couple f_tp_p for good measure, pleased with the satisfying hunt.",
-        "With the sky gray and intermittently scattering water through c_n's territory, any Peltshifters will be huddled in their strange dens. s_c doesn't know why, but the behaviour is obvious. It makes it far safer to hunt near Peltshifter paths and dens, and s_c brings a nice f_mp_s and a very dumb f_tp_s that wandered in front of their nose back for the fresh-kill pile."
+        "With the sky gray and intermittently scattering water through c_n's territory, any Twolegs will be huddled in their strange dens. s_c doesn't know why, but the behaviour is obvious. It makes it far safer to hunt near Twoleg paths and dens, and s_c brings a nice f_mp_s and a very dumb f_tp_s that wandered in front of their nose back for the fresh-kill pile."
     ],
     "fail_text": [
         "The skies clear, and though r_c keeps hunting, the heat of the sun makes them sluggish and slow to react",

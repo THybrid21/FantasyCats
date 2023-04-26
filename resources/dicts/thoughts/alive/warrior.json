@@ -336,7 +336,7 @@
         "Is giggling about Clan drama with friends",
         "Is crunching leaves with their paws",
         "Is whining about Clan duties",
-        "Is distracted by a shiny Peltshifter trinket they found",
+        "Is distracted by a shiny Twoleg trinket they found",
         "Is gnawing on a small bone busily",
         "Is batting at a ball of moss",
         "Is preoccupied playing an important game of hide and seek",
@@ -1246,7 +1246,7 @@
     "id": "wandering_warrior",
     "thoughts": [
         "Has their head in the clouds",
-		"Was seen watching the Peltshifter place",
+		"Was seen watching the Twoleg place",
 		"Bragging about how far they've travelled",
 		"Vanished for a few weeks and come back smug",
 		"Is dreaming of leading the clan somewhere new",
@@ -1303,24 +1303,24 @@
         }
 },
 {
-    "id": "peltshifted_warrior",
+    "id": "echoingmemory_warrior",
     "thoughts": [
         "Struggled to eat their prey this moon",
 		"Was trying to start a fire in the clearing",
 		"Tripped over their own paws",
 		"Stepped on their own tail... somehow",
-		"Is speaking in a strange peltshifter language",
+		"Is speaking in a strange twoleg language",
 		"Worries that they're not good enough for c_n",
 		"Worries that they don't fit in c_n",
 		"Worries that they're not cut out for Clan life",
-		"Found a strange peltshifter object the other day",
+		"Found a strange twoleg object the other day",
 		"Is having weird dreams recently",
 		"Tried walking around the den only on their hindpaws",
 		"Is talking about Thunderpath safety"
     ],
         "perm_conditions": {
             "m_c": [
-                "peltshifted"
+                "echoing memory"
             ]
         }
 }

@@ -128,7 +128,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c got their paw stuck in a Peltshifter trap, but luckily escaped with only a sprain.",
+        "event_text": "m_c got their paw stuck in a Twoleg trap, but luckily escaped with only a sprain.",
         "cat_trait": null,
         "cat_skill": null,
         "other_cat_trait": null,
@@ -312,10 +312,10 @@
             "scar",
             "MANLEG"
         ],
-        "event_text": "m_c got their paw stuck in a Peltshifter trap, and while they eventually escaped, their leg is heavily injured.",
+        "event_text": "m_c got their paw stuck in a Twoleg trap, and while they eventually escaped, their leg is heavily injured.",
         "history_text": {
-            "scar": "m_c was scarred by a Peltshifter trap.",
-            "reg_death": "m_c died from their injuries caused by a Peltshifter trap."
+            "scar": "m_c was scarred by a Twoleg trap.",
+            "reg_death": "m_c died from their injuries caused by a Twoleg trap."
         },
         "cat_trait": null,
         "cat_skill": null,
@@ -665,10 +665,10 @@
             "scar",
             "DECLAWED"
         ],
-        "event_text": "m_c was captured by peltshifters, but managed to escape and return home",
+        "event_text": "m_c was captured by twolegs, but managed to escape and return home",
         "history_text": {
-            "scar": "m_c was scarred when they were taken by Peltshifters.",
-            "reg_death": "m_c died after they were taken away by Peltshifters."
+            "scar": "m_c was scarred when they were taken by Twolegs.",
+            "reg_death": "m_c died after they were taken away by Twolegs."
         },
         "cat_trait": null,
         "cat_skill": null,
@@ -686,12 +686,12 @@
             "scar",
             "DECLAWED"
         ],
-        "event_text": "m_c got curious while out wandering the territory and got captured briefly by peltshifters.",
+        "event_text": "m_c got curious while out wandering the territory and got captured briefly by twolegs.",
         "history_text": {
-            "scar": "m_c was scarred when they were taken by Peltshifters.",
-            "reg_death": "m_c died after they were taken away by Peltshifters."
+            "scar": "m_c was scarred when they were taken by Twolegs.",
+            "reg_death": "m_c died after they were taken away by Twolegs."
         },
-        "cat_trait": ["wandering", "strange", "dreamer", "peltshifted"],
+        "cat_trait": ["wandering", "strange", "dreamer"],
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null,
@@ -707,12 +707,12 @@
             "scar",
             "DECLAWED"
         ],
-        "event_text": "Thinking that {PRONOUN/m_c/subject} could easily fight a peltshifter m_c went out into the territory hissing and spitting only to come back subdued.",
+        "event_text": "Thinking that {PRONOUN/m_c/subject} could easily fight a twoleg m_c went out into the territory hissing and spitting only to come back subdued.",
         "history_text": {
-            "scar": "m_c was scarred when they were taken by Peltshifters.",
-            "reg_death": "m_c died after they were taken away by Peltshifters."
+            "scar": "m_c was scarred when they were taken by Twolegs.",
+            "reg_death": "m_c died after they were taken away by Twolegs."
         },
-        "cat_trait": ["vengeful", "ambitious", "bloodthirsty", "peltshifted"],
+        "cat_trait": ["vengeful", "ambitious", "bloodthirsty"],
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null,
