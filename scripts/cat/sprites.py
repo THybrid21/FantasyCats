@@ -2422,8 +2422,8 @@ for a, i in enumerate(['COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE',
 for a, i in enumerate(['STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL',
      'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOOSTONE']):
     sprites.make_group('tortiepatchesmasks', (a, 3), f"tortiemask{i}")
-for a, i in enumerate(['TICKEDMASK', 'SMOKEMASK', 'DOBERMANMASK', 'PONITMASK', 
-    'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'SKELEMASK', 'DALMATIONSPOTS', 'LYNXMASK']):
+for a, i in enumerate(['PONITMASK', 'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 
+    'LYNXMASK']):
     sprites.make_group('tortiepatchesmasks', (a, 4), f"tortiemask{i}")
     
 # SKINS

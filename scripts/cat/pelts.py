@@ -628,7 +628,7 @@ tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALO
                   'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
                   'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 
                   'BROKENFOUR', 'GLITCH', 'WAVE', 'STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL', 'SPOTSCHAOS', 
-                  'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK',  'FALSESOLID', 'LYNXMASK']
+                  'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'LYNXMASK']
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
                'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
