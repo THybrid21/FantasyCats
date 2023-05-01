@@ -407,36 +407,6 @@
         "main_trait_constraint": [
             "dreamer"
         ]
-    },	
-    {
-        "id": "dreamer_medicine_cat_to_Dead",
-        "thoughts": [
-			"Is talking to the stars",
-			"Dreamt they were in the stars talking with r_c last night",
-			"Wonders if r_c would like anything left for them this moon",
-			"Is trotting around the camp talking to invisible cats",
-			"Listens to r_c tell them tales of the old clans",
-			"Is sure that they can see r_c among the cats of the clan",
-			"Prances around the camp feeling stardust beneath their paws",
-			"Hopes that r_c is doing well when they catch glimpses of them",
-			"Got a confusing message from r_c the other night",
-			"Prays that r_c is comfortable in their afterlife",
-			"Is listening to old cat ghost stories from r_c",
-			"Is asking r_c about the Packs",
-			"Is listening to old tales known by r_c"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ],
-        "main_trait_constraint": [
-			"dreamer"
-        ],
-        "random_living_status": [
-            "starclan",
-			"darkforest",
-			"unknownresidence"
-        ]
     },		
     {
         "id": "wandering_medicine_cat",
@@ -462,28 +432,6 @@
         ],
         "main_trait_constraint": [
             "stubborn"
-        ]
-    },	
-    {
-        "id": "med_cat_dead_SC_gen",
-        "thoughts": [
-            "Wishes they could visit r_c in StarClan",
-            "Was given a prophecy by r_c",
-            "Was sent an omen by r_c",
-            "Is dreaming about r_c who gives them a message",
-            "Is visited by r_c",
-            "Senses r_c is nearby",
-            "Saw r_c in a dream, warning them about... something",
-            "Is asking for guidance from r_c",
-            "Is wondering desperately why r_c wasn't there when they needed them",
-            "Is sure that they saw r_c appear in the forest today... why?"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ],
-        "random_living_status": [
-            "starclan"
         ]
     },	
     {
@@ -551,43 +499,5 @@
             "apprentice",
             "kitten"
         ]
-    },
-    {
-        "id": "med_cat_alive_kit",
-        "thoughts": [
-            "Is teaching kits about what plants to stay away from",
-            "Chased kits out of {PRONOUN/m_c/poss} den"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ],  
-        "random_status_constraint": [
-            "kitten"
-        ]
-    },
-    {
-        "id": "echoingmemory_medicine_cat",
-        "thoughts": [
-            "Rolls their eyes at the talk of StarClan",
-			"Is deeply considering a sign they saw",
-			"Had strange dreams last night and is still reeling",
-			"Calls the herbs strange names sometimes",
-			"Still mixes up holly and deathberries",
-			"Is having a crisis because they forgot the name of a herb",
-			"Walked into the wall of the medicine den",
-			"Tripped over their own paws",
-			"Wonders at what power might be beyond even Starclan",
-			"Is still horrified at the herbs they're using"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ], 
-        "perm_conditions": {
-            "m_c": [
-                "echoing memory"
-            ]
-        }
-    }	
+    }
 ]

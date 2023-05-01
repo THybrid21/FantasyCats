@@ -243,5 +243,15 @@
 	"wrenched claws": [
 		"m_c is so relieved when the ache in {PRONOUN/m_c/poss} paws finally goes away.",
 		"m_c flexes {PRONOUN/m_c/poss} paws, checking if {PRONOUN/m_c/poss} claws are still there. That was such a scary experience."
+	],
+	"kittenspace": [
+		"m_c is done with self-soothing in kittenspace.",
+		"m_c is no longer in kittenspace.",
+		"Part of m_c is disappointed to no longer need to be in kittenspace."
+	],
+	"otherspace": [
+		"m_c is done with self-soothing in their safespace.",
+		"m_c is no longer in their safespace regression.",
+		"Part of m_c is disappointed to no longer need to be regressed and in {PRONOUN/m_c/poss} safespace."
 	]
 }

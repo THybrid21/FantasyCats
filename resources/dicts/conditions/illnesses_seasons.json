@@ -33,7 +33,8 @@
 		"seasonal lethargy": 50,
 		"sleeplessness": 10,
 		"ear buzzing": 5,
-		"nest wetting": 20
+		"nest wetting": 20,
+		"silvercough": 4
     },
     "Leaf-bare":{
         "fleas": 90,
@@ -47,6 +48,7 @@
 		"sleeplessness": 10,
 		"burn out": 3,
 		"ear buzzing": 5,
-		"nest wetting": 20
+		"nest wetting": 20,
+		"silvercough": 4
     }
 }

@@ -134,7 +134,11 @@
             {
                 "name": "yellowcough",
                 "chance": 60
-            }
+            },
+			{
+				"name": "longcough",
+				"chance": 120
+			}
         ],
         "herbs": [
             "catmint",
@@ -309,7 +313,11 @@
             {
                 "name": "whitecough",
                 "chance": 15
-            }
+            },
+			{
+				"name": "silvercough",
+				"chance": 15
+			}
         ],
         "herbs": [
             "ragwort",
@@ -318,6 +326,50 @@
         ]
     },
     "whitecough": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 15,
+            "kitten": 15,
+            "adolescent": 60,
+            "young adult": 70,
+            "adult": 70,
+            "senior adult": 70,
+            "senior": 15
+        },
+        "medicine_mortality": {
+            "newborn": 20,
+            "kitten": 20,
+            "adolescent": 80,
+            "young adult": 90,
+            "adult": 90,
+            "senior adult": 90,
+            "senior": 20
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 30,
+        "risks": [
+            {
+                "name": "greencough",
+                "chance": 18
+            },
+            {
+                "name": "silvercough",
+                "chance": 5
+            }			
+        ],
+        "herbs": [
+            "catmint",
+            "plantain",
+            "tansy",
+            "mullein",
+            "juniper",
+            "ragwort",
+            "poppy",
+            "moss"
+        ]
+    },
+    "silvercough": {
         "severity": "major",
         "mortality": {
             "newborn": 10,
@@ -356,7 +408,7 @@
             "poppy",
             "moss"
         ]
-    },
+    },	
     "yellowcough": {
         "severity": "major",
         "mortality": {
@@ -515,11 +567,15 @@
         "risks": [
             {
                 "name": "diarrhea",
-                "chance": 8
+                "chance": 10
             },
 			{
 				"name": "constipation",
 				"chance": 10
+			},
+			{
+				"name": "irritable bowels",
+				"chance": 50
 			}
         ],
         "herbs": [
@@ -1591,8 +1647,8 @@
 			"poppy"
 		]
     },
-    "kittenspace": {
-        "severity": "minor",
+    "dizziness": {
+        "severity": "major",
         "mortality": {
             "newborn": 0,
             "kitten": 0,
@@ -1616,8 +1672,9 @@
         "infectiousness": 0,
         "risks": [],
         "herbs": [
+			"chamomile",
 			"thyme",
-			"poppy"
+			"daisy"
 		]
-    }
+    }	
 }

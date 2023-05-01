@@ -1056,6 +1056,10 @@ class ProfileScreen(Screens):
                 output += 'recovering from birth!'
             elif "pregnant" in the_cat.injuries:
                 output += 'pregnant!'
+            elif "kittenspace" in the_cat.injuries:
+                output += 'in kittenspace'
+            elif "otherspace" in the_cat.injuries:
+                output += 'in safe-space'
             else:
                 output += "injured!"
         elif the_cat.is_ill():

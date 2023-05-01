@@ -2185,11 +2185,14 @@ class Cat():
         elif new_condition == "sphynxism":
             cat.skin = choice(sphynx)
             cat.pelt.length = 'short'
+            if cat.skin == "ALBINOSPHYNX":
+                self.get_permanent_condition("albinism", born_with=True)
+            elif cat.skin == "MELANISTICSPHYNX":
+                self.get_permanent_condition("melanism", born_with=True)
         elif new_condition == "albinism":
             cat.skin = choice(albino_sprites)
         elif new_condition == "melanism":
             cat.skin = choice(melanistic_sprites)  
-
         self.get_permanent_condition(new_condition, born_with=True)
 
     def get_permanent_condition(self, name, born_with=False, event_triggered=False):

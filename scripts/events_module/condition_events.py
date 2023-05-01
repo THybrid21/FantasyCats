@@ -324,9 +324,10 @@ class Condition_Events():
 
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
-            "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
+            "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
             "lasting grief", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
-            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor"
+            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor", 
+            "brain shock"
         ]
 
         got_condition = False
@@ -371,21 +372,20 @@ class Condition_Events():
         cat.healed_condition = False
         event_list = []
         illness_progression = {
-            "running nose": "whitecough",
-            "kittencough": "whitecough",
-            "whitecough": "greencough",
+            "running nose": ["whitecough", "silvercough"],
+            "kittencough": "silvercough",
+            "whitecough": ["silvercough", "greencough"],
+            "silvercough": "greencough",
             "greencough": "yellowcough",
             "yellowcough": "redcough",
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
-            "stomachache": "diarrhea",
+            "stomachache": ["diarrhea", "constipation"],
             "grief stricken": "lasting grief",
             "anxiety attack": "panic attack",
-            "panic attack": "shock",
-            "panic attack": "paranoia",
+            "panic attack": ["shock", "paranoia"],
             "sleeplessness": "ongoing sleeplessness",
-            "ticks": "tick bites",
-            "ticks": "severe tick bites",
+            "ticks": ["tick bites", "severe tick bites"],
             "nest wetting": "night dirtplacing"
             
         }
@@ -609,7 +609,9 @@ class Condition_Events():
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
             "partial hearing loss": "deaf",
-            "lasting grief": "heavy soul"
+            "lasting grief": "heavy soul",
+            "recurring shock": "echoing shock",
+            "echoing shock": "recurring shock"
         }
 
         conditions = deepcopy(cat.permanent_condition)

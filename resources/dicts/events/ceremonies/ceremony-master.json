@@ -2073,19 +2073,7 @@
       "stubborn"
     ],
     "(prefix)paw knows that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not really prepared but still insist that (previous_mentor) give them {PRONOUN/m_c/poss} name anyway. With much reluctance (previous_mentor) calls {PRONOUN/m_c/object} m_c letting {PRONOUN/m_c/object} be the latest medicine cat of the clan."
-  ],    
-  "med_60": [
-    [
-      "medicine cat",
-      "prepared",
-      "general_mentor",
-      "general_parents",
-      "general_leader",
-      "general_backstory",
-      "echoing memory"
-    ],
-    "As (prefix)paw follows (previous_mentor) through the starry landscape {PRONOUN/m_c/subject} {VERB/m_c/find/finds} that the feeling of the starfields is familiar. That thought plays over {PRONOUN/m_c/poss} mind as they sit honered as m_c for {PRONOUN/m_c/poss} r_h."
-  ],    
+  ],      
   "warrior_0": [
     [
       "warrior",

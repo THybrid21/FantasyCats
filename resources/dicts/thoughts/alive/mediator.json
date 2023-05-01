@@ -204,29 +204,7 @@
         "main_trait_constraint": [
             "skeptic"
         ]
-    },
-    {
-        "id": "echoingmemory_mediator",
-        "thoughts": [
-            "Is struggling to do their job",
-			"Worries that they're not good enough for c_n",
-			"Got distracted by telling stories to the cats coming to them",
-			"Is taking notes on the den wall",
-			"Promises they won't share what their clanmates tell them",
-			"Is debating on meddling in some love lives",
-			"Is jealous of their clanmates",
-			"Dreads going to talk to another clan's mediator"
-        ],
-        "random_status_constraint": [
-            "mediator",
-            "mediator apprentice"
-        ],		
-        "perm_conditions": {
-            "m_c": [
-                "echoing memory"
-            ]
-        }
-    }	
+    }
 ]
 
 

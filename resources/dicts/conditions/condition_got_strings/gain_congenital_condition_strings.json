@@ -164,5 +164,10 @@
 		"When m_c is finally able to speak, {PRONOUN/m_c/poss} first few words are odd, strange sounds that would almost seem to be like what a twoleg might make.",
 		"In the nursery m_c's dreams take weird shapes and sounds, shifting and dancing away from {PRONOUN/m_c/object}.",
 		"m_c firmly believes that in another life {PRONOUN/m_c/subject} {VERB/m_c/were/was} something much different from a cat."
+	],
+	"irritable bowels": [
+		"r_c is very carefully preparing yet another mixture of belly soothing herbs for m_c. {PRONOUN/r_c/subject}{VERB/m_c/'re/'s} worried about the consistancy of {PRONOUN/m_c/poss} issues.",
+		"m_c is yet again complaining about having a stomachache, this is becomming upsettingly common.",
+		"The parents of m_c worry when {PRONOUN/m_c/subject} {VERB/m_c/struggles/struggle} to properly eat and use the dirtplace, always in some form of discomfort."
 	]
 }

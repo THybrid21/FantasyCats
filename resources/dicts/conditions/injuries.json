@@ -1005,11 +1005,7 @@
             {
                 "name": "lingering shock",
                 "chance": 15
-            },
-			{
-				"name": "anxiety",
-				"chance": 15
-			}
+            }
         ],
         "also_got": [],
         "cause_permanent": [
@@ -1040,7 +1036,8 @@
         ],
         "also_got": [],
         "cause_permanent": [
-            "recurring shock"
+            "recurring shock",
+			"anxiety"
         ],
         "herbs": [
             "thyme",
@@ -1155,9 +1152,10 @@
             "failing eyesight",
             "one bad eye",
             "blind",
-            "loss of balance",
+            "constantly dizzy",
             "partial hearing loss",
-            "persistent headaches"
+            "persistent headaches",
+			"brain shock"
         ],
         "herbs": [
             "juniper",
@@ -1420,7 +1418,8 @@
         ],
         "also_got": [],
         "cause_permanent": [
-            "paralyzed"		
+            "paralyzed",
+			"brain shock"
 		],
         "herbs": [
             "moss",
@@ -1583,7 +1582,12 @@
             "senior": 0
         },
         "illness_infectiousness": [],
-        "risks": [],
+        "risks": [
+			{
+				"name": "an infected wound",
+				"chance": 20
+			}
+		],
         "also_got": [
             "bruises",
             "sore",
@@ -1598,6 +1602,54 @@
             "daisy"
         ]
     },	
+    "kittenspace": {
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [],
+        "also_got": [],
+        "cause_permanent": [
+			"regressor"	
+        ],
+        "herbs": [
+			"thyme",
+			"poppy"
+		]
+    },	
+    "otherspace": {
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [],
+        "also_got": [],
+        "cause_permanent": [
+			"regressor"
+        ],
+        "herbs": [
+			"thyme",
+			"poppy"
+		]
+    },
     "pregnant": {
         "duration": 2,
         "severity": "major",

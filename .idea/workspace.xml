@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="" />
+    <list default="true" id="ce42a407-0f2f-4ee3-bcef-95649ffaedf8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_congenital_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/condition_got_strings/gain_permanent_condition_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/illness_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/healed_and_death_strings/injury_healed_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/illnesses_seasons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/injuries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/permanent_conditions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/illness_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/injuries_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/conditions/risk_strings/permanent_condition_risk_strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony-master.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony-master.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony_traits.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/events/ceremonies/ceremony_traits.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/snippet_collections.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/snippet_collections.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/general.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/mediator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/medicine_cat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dicts/thoughts/alive/warrior.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/cats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/cats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/pelts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/pelts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cat/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat/sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/events_module/condition_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/events_module/condition_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/screens/cat_screens.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/screens/cat_screens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/tortiepatchesmasks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/patches/whitepatches.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/patches/whitepatches.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WC Clan Gen/yeengen-development&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WC Clan Gen/OGUpdate/DISABILITIES&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
