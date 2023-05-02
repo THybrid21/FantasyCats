@@ -2260,7 +2260,7 @@
 			"Wonders what it would be like to mentor an apprentice",
 			"Wishes that r_c would slow down a little bit",
 			"Wants r_c to know {PRONOUN/m_c/subject} enjoy the company",
-			"Is struggling to keep up with grooming"
+			"Is struggling to keep up with grooming",
 			"Wonders if there's something broken about {PRONOUN/m_c/object}"
         ],
         "perm_conditions": {
