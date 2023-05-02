@@ -1,16 +1,19 @@
 {
   "general": {
     "body": [
-      "It's sad, the vigil. More so because r_c knows {PRONOUN/r_c/subject} should care and doesn't, than any grief for m_c.",
-      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed r_c as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
-      "r_c is called to m_c's vigil, but declines to speak. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} not sure {PRONOUN/r_c/subject}'d have anything good to say.",
-      "They may have shared blood, but nothing more. r_c doesn't show up to m_c's vigil."
-    ],
+      "r_c watches the vigil being held for m_c from the sidelines, not at all sure how {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} about {PRONOUN/m_c/poss} death.",
+      "r_c resented m_c for what {PRONOUN/r_c/subject} couldn't have, but seeing m_c's body lying in the clearing as the Clan hold vigil for {PRONOUN/m_c/object} makes {PRONOUN/r_c/poss} jealousy feel petty and stupid.",
+      "r_c has always felt jealous of m_c, but could never want to take {PRONOUN/m_c/poss} place now, watching the Clan holding vigil for {PRONOUN/m_c/object}.",
+      "r_c listens to the stories being passed around as the vigil for m_c continues, and stalks off to {PRONOUN/r_c/poss} nest. {PRONOUN/r_c/subject/CAP} can't stand hearing everyone praise such a useless cat.",
+      "m_c really wasn't that great, but it's amazing how many cats want to ignore that now that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} dead, and r_c isn't interested in hearing it."
+
+,      "r_c knows that, even though m_c's family and friends are present at the vigil, everybody has a right to speak up, and so {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} everyone at the vigil just what {PRONOUN/r_c/subject} think of m_c."    ],
     "no_body": [
-      "It's sad, the vigil. More so because r_c knows {PRONOUN/r_c/subject} should care and doesn't, than any grief for m_c.",
-      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed r_c as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
-      "r_c is called to m_c's vigil, but declines to speak. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} not sure {PRONOUN/r_c/subject}'d have anything good to say.",
-      "They may have shared blood, but nothing more. r_c doesn't show up to m_c's vigil."
+      "r_c watches the vigil being held for m_c from the sidelines, not at all sure how {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} about {PRONOUN/m_c/poss} death.",
+      "r_c has always felt jealous of m_c, but could never want to take {PRONOUN/m_c/poss} place now, watching the Clan holding vigil for {PRONOUN/m_c/object}.",
+      "r_c listens to the stories being passed around as the vigil for m_c continues, and stalks off to {PRONOUN/r_c/poss} nest. {PRONOUN/r_c/subject/CAP} can't stand hearing everyone praise such a useless cat.",
+      "m_c really wasn't that great, but it's amazing how many cats want to ignore that now that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} dead, and r_c isn't interested in hearing it.",      "r_c knows that, even though m_c's family and friends are present at the vigil, everybody has a right to speak up, and so {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} everyone at the vigil just what {PRONOUN/r_c/subject} think of m_c."
+
     ]
   },
   "adventurous": {
@@ -366,62 +369,6 @@
     ]
   },
   "sweet": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "snuggly": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "skeptic": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "dramatic": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  }, 
-  "rebellious": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "dreamer": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "wandering": {
-    "body": [
-
-    ],
-    "no_body": [
-
-    ]
-  },
-  "stubborn": {
     "body": [
 
     ],

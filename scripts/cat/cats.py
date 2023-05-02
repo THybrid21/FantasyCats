@@ -6,7 +6,7 @@ import os.path
 import itertools
 
 from .history import History
-from ..datadir import get_save_dir
+from ..housekeeping.datadir import get_save_dir
 from ..events_module.generate_events import GenerateEvents
 
 import ujson
@@ -592,7 +592,9 @@ class Cat():
         self.relationships = {}
 
         for app in self.apprentice.copy():
-            Cat.fetch_cat(app).update_mentor()
+            fetched_cat = Cat.fetch_cat(app)
+            if fetched_cat:
+                fetched_cat.update_mentor()
         self.update_mentor()
 
         if game.clan.instructor.df is False:
@@ -625,7 +627,9 @@ class Cat():
         else:
             self.thought = "Is shocked that they have been exiled"
         for app in self.apprentice:
-            Cat.fetch_cat(app).update_mentor()
+            fetched_cat = Cat.fetch_cat(app)
+            if fetched_cat:
+                fetched_cat.update_mentor()
         self.update_mentor()
 
     def grief(self, body: bool):
@@ -769,7 +773,8 @@ class Cat():
             self.outside = True
         for app in self.apprentice.copy():
             app_ob = Cat.fetch_cat(app)
-            app_ob.update_mentor()
+            if app_ob:
+                app_ob.update_mentor()
         self.update_mentor()
         game.clan.add_to_outside(self)
 
@@ -848,11 +853,11 @@ class Cat():
         # If they have any apprentices, make sure they are still valid:
         if old_status == "medicine cat":
             game.clan.remove_med_cat(self)
-            for app in self.apprentice.copy():
-                Cat.fetch_cat(app).update_med_mentor()
-        else:
-            for app in self.apprentice.copy():
-                Cat.fetch_cat(app).update_mentor()
+
+        for app in self.apprentice.copy():
+            fetched_cat = Cat.fetch_cat(app)
+            if fetched_cat:
+                fetched_cat.update_med_mentor()
 
         # updates mentors
         if self.status == 'apprentice':
@@ -1360,7 +1365,7 @@ class Cat():
 
         for rel in relationships:
             kitty = self.fetch_cat(rel.cat_to)
-            if kitty.dead and kitty.status != 'newborn':
+            if kitty and kitty.dead and kitty.status != 'newborn':
                 # check where they reside
                 if starclan:
                     if kitty.ID not in game.clan.starclan_cats:
@@ -1375,11 +1380,11 @@ class Cat():
                     dead_relations.append(rel)
 
         # sort relations by the strength of their relationship
-
         dead_relations.sort(
             key=lambda rel: rel.romantic_love + rel.platonic_like + rel.admiration + rel.comfortable + rel.trust, reverse=True)
         for rel in dead_relations:
             print(self.fetch_cat(rel.cat_to).name)
+
         # if we have relations, then make sure we only take the top 8
         if dead_relations:
             i = 0
@@ -1400,6 +1405,7 @@ class Cat():
                 # then we just take however many are available
 
                 possible_sc_cats = [i for i in game.clan.starclan_cats if
+                                    self.fetch_cat(i) and
                                     i not in life_givers and
                                     self.fetch_cat(i).status not in ['leader', 'newborn']]
 
@@ -1410,6 +1416,7 @@ class Cat():
             else:
                 print(game.clan.darkforest_cats)
                 possible_df_cats = [i for i in game.clan.darkforest_cats if
+                                    self.fetch_cat(i) and
                                     i not in life_givers and
                                     self.fetch_cat(i).status not in ['leader', 'newborn']]
                 if len(possible_df_cats) - 1 < amount:
@@ -1429,24 +1436,28 @@ class Cat():
                 ancient_leader = True
                 if starclan:
                     for kitty in reversed(game.clan.starclan_cats):
-                        if self.fetch_cat(kitty).status == 'leader':
+                        if self.fetch_cat(kitty) and \
+                            self.fetch_cat(kitty).status == 'leader':
                             life_giving_leader = kitty
                             break
                 else:
                     for kitty in reversed(game.clan.darkforest_cats):
-                        if self.fetch_cat(kitty).status == 'leader':
+                        if self.fetch_cat(kitty) and \
+                            self.fetch_cat(kitty).status == 'leader':
                             life_giving_leader = kitty
                             break
             else:
                 # pick previous leader
                 if starclan:
                     for kitty in game.clan.starclan_cats:
-                        if self.fetch_cat(kitty).status == 'leader':
+                        if self.fetch_cat(kitty) and \
+                            self.fetch_cat(kitty).status == 'leader':
                             life_giving_leader = kitty
                             break
                 else:
                     for kitty in game.clan.darkforest_cats:
-                        if self.fetch_cat(kitty).status == 'leader':
+                        if self.fetch_cat(kitty) and \
+                            self.fetch_cat(kitty).status == 'leader':
                             life_giving_leader = kitty
                             break
 
@@ -1467,6 +1478,8 @@ class Cat():
         used_virtues = []
         for giver in life_givers:
             giver_cat = self.fetch_cat(giver)
+            if not giver_cat:
+                continue
             life_list = []
             for life in possible_lives:
                 tags = possible_lives[life]["tags"]
@@ -1487,7 +1500,15 @@ class Cat():
                     continue
                 elif "leader_child" in tags and giver_cat.ID not in self.get_children():
                     continue
+                elif "leader_sibling" in tags and giver_cat.ID not in self.get_siblings():
+                    continue
                 elif "leader_mate" in tags and giver_cat.ID not in self.mate:
+                    continue
+                elif "leader_former_mate" in tags and giver_cat.ID not in self.previous_mates:
+                    continue
+                if "leader_mentor" in tags and giver_cat.ID not in self.former_mentor:
+                    continue
+                if "leader_apprentice" in tags and giver_cat.ID not in self.former_apprentices:
                     continue
                 if possible_lives[life]["rank"]:
                     if rank not in possible_lives[life]["rank"]:
@@ -2469,7 +2490,7 @@ class Cat():
         # Check if current mentor is valid
         if self.mentor:
             mentor_cat = Cat.fetch_cat(self.mentor)  # This will return None if there is no current mentor
-            if not self.is_valid_med_mentor(mentor_cat):
+            if mentor_cat and not self.is_valid_med_mentor(mentor_cat):
                 self.__remove_mentor()
 
         # Need to pick a random mentor if not specified
@@ -2494,6 +2515,8 @@ class Cat():
         if not self.mentor:
             return
         mentor_cat = Cat.fetch_cat(self.mentor)
+        if not mentor_cat:
+            return
         if self.ID in mentor_cat.apprentice:
             mentor_cat.apprentice.remove(self.ID)
         if self.moons > 6 and self.ID not in mentor_cat.former_apprentices:
@@ -2508,6 +2531,8 @@ class Cat():
         self.patrol_with_mentor = 0
         self.mentor = new_mentor_id
         mentor_cat = Cat.fetch_cat(self.mentor)
+        if not mentor_cat:
+            return
         if self.ID not in mentor_cat.apprentice:
             mentor_cat.apprentice.append(self.ID)
 
@@ -2531,7 +2556,7 @@ class Cat():
         # Check if current mentor is valid
         if self.mentor:
             mentor_cat = Cat.fetch_cat(self.mentor)  # This will return None if there is no current mentor
-            if not self.is_valid_mentor(mentor_cat):
+            if mentor_cat and not self.is_valid_mentor(mentor_cat):
                 self.__remove_mentor()
 
         # Need to pick a random mentor if not specified

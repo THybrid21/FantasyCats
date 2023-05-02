@@ -16,12 +16,12 @@ import pygame
 
 from scripts.cat.history import History
 from scripts.events_module.generate_events import OngoingEvent
-from scripts.datadir import get_save_dir
+from scripts.housekeeping.datadir import get_save_dir
 
 import ujson
 
 from scripts.game_structure.game_essentials import game
-from scripts.version import get_version_info, SAVE_VERSION_NUMBER
+from scripts.housekeeping.version import get_version_info, SAVE_VERSION_NUMBER
 from scripts.utility import update_sprite, get_current_season, quit  # pylint: disable=redefined-builtin
 from scripts.cat.cats import Cat, cat_class
 from scripts.cat.names import names
@@ -1330,7 +1330,7 @@ class Clan():
 
     @reputation.setter
     def reputation(self, a: int):
-        self._reputation = int(self._reputation + a)
+        self._reputation = int(a)
         if self._reputation > 100:
             self._reputation = 100
         elif self._reputation < 0:
