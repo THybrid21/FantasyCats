@@ -137,23 +137,10 @@
 		"m_c is able to raise {PRONOUN/m_c/poss} sun and face the dawn with renewed energy.",
 		"They might always be a bit tired and wrung out but m_c finds that it's the small things that make the days brighter."
 	],
-	"world tired": [
-		"While {PRONOUN/m_c/subject} {VERB/m_c/are/is} still not back to normal m_c is able to feel much more together.",
-		"m_c thanks Starclan for the life they've been given and the chances they have to make it better.",
-		"m_c has gotten over {PRONOUN/m_c/poss} world tiredness.",
-		"After some long talks with {PRONOUN/m_c/poss} clanmates m_c has been reassured that they are loved and cared for.",
-		"m_c has found a hobby and something to remind {PRONOUN/m_c/object} that the world isn't all bad things."
-	],
 	"nonverbal": [
 		"While cats are surprised to see m_c speaking again it is welcomed easily.",
 		"m_c cracks a joke at the gathering and makes some of the cats from the other clans laugh.",
 		"m_c chats with some of {PRONOUN/m_c/poss} denmates comfortable and at ease."
-	],
-	"special interest": [
-		"While the intensity of m_c's love for the subject has faded it's not gone in the least and {PRONOUN/m_c/subject} {VERB/m_c/are/is} still ready to chat off another cat's ears if prompted.",
-		"m_c's able to refocus {PRONOUN/m_c/self} and stay on task, without always bringing {PRONOUN/m_c/poss} special interest into it.",
-		"m_c has some listlessness when {PRONOUN/m_c/poss} interest fades to slightly less all consuming.",
-		"m_c will always love {PRONOUN/m_c/poss} special interest, but can also make room for new interests."
 	],
 	"hyperfixation": [
 		"m_c is no longer hyperfixated on a topic.",
@@ -204,6 +191,10 @@
 		"m_c is so relieved to just get a somewhat peaceful nights sleep once more.",
 		"Once more m_c is able to sleep. At least for now."
 	],
+	"sleep paralysis": [
+		"m_c's no longer stuck in {PRONOUN/m_c/poss} nest frozen awake.",
+		"With relief m_c's recent bout of sleep paralysis seems to have passed."
+	],
 	"burn out": [
 		"m_c is back on {PRONOUN/m_c/poss} paws after burn out.",
 		"m_c is no longer tired and exhausted from burn out."
@@ -218,7 +209,7 @@
 		"m_c's no longer wetting the nest and is welcomed back in.",
 		"m_c purrs when they wake up in nice clean moss."
 	],
-	"night dirtplacing": [
+	"night dirtmaking": [
 		"m_c is able to once more sleep through the night without having to get up for the dirtplace.",
 		"To the relief of {PRONOUN/m_c/poss} denmates, m_c hasn't disturbed the den in the night anymore.",
 		"m_c rolls over in {PRONOUN/m_c/poss} nest, finally well rested without any night time trips to the dirtplace."

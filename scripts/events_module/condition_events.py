@@ -64,7 +64,7 @@ class Condition_Events():
                 if chosen_illness == 'kittencough' and cat.status != 'kitten':
                     chosen_illness = 'whitecough'
                 elif chosen_illness == 'nest wetting' and cat.status not in ['kitten', 'apprentice']:
-                    chosen_illness = 'night dirtplacing'
+                    chosen_illness = 'night dirtmaking'
                 # make em sick
                 cat.get_ill(chosen_illness)
 
@@ -79,8 +79,10 @@ class Condition_Events():
                     event_string = f"{cat.name} has gotten the {chosen_illness}."
                 elif chosen_illness == "sleeplessness":
                     event_string = f"{cat.name} has been unable to get any sleep."
-                elif chosen_illness in ['nest wetting', 'night dirtplacing']:
-                    event_string = f"To their embarrassment {cat.name} is experiencing {chosen_illness}."
+                elif chosen_illness in ['nest wetting', 'night dirtmaking']:
+                    event_string = f"Somewhat embarrassingly {cat.name} is experiencing {chosen_illness}."
+                elif chosen_illness == "nightmares":
+                    event_string = f"{cat.name} has been struggling recently with nightmares."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 
@@ -327,7 +329,7 @@ class Condition_Events():
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
             "lasting grief", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
             "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor", 
-            "brain shock"
+            "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "recurring rash"
         ]
 
         got_condition = False
@@ -381,12 +383,12 @@ class Condition_Events():
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
             "stomachache": ["diarrhea", "constipation"],
-            "grief stricken": "lasting grief",
+            "nightmares": "constant nightmares",
             "anxiety attack": "panic attack",
             "panic attack": ["shock", "paranoia"],
             "sleeplessness": "ongoing sleeplessness",
             "ticks": ["tick bites", "severe tick bites"],
-            "nest wetting": "night dirtplacing"
+            "nest wetting": "night dirtmaking"
             
         }
         # ---------------------------------------------------------------------------- #
@@ -482,7 +484,8 @@ class Condition_Events():
             "rat bite": "rat bite fever",
             "sunblindness": "fading eyesight",
             "severe sunburn": "wasting disease",
-            "wrenched claws": "declawed"
+            "wrenched claws": "declawed",
+            "fatigue": "constant fatigue"
         }
 
         # need to hold this number so that we can check if the leader has died
@@ -609,9 +612,8 @@ class Condition_Events():
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
             "partial hearing loss": "deaf",
-            "lasting grief": "heavy soul",
-            "recurring shock": "echoing shock",
-            "echoing shock": "recurring shock"
+            "lasting grief": "heavy soul"
+            
         }
 
         conditions = deepcopy(cat.permanent_condition)
@@ -799,6 +801,9 @@ class Condition_Events():
                 skip = False
                 if risk['name'] in progression:
                     if progression[risk['name']] in dictionary:
+                        skip = True
+                if cat.permanent_condition in ["recurring shock", "echoing shock"]:
+                    if risk['name'] in ["recurring shock", "echoing shock"]:
                         skip = True
                 # if it is, then break instead of giving the risk
                 if skip is True:

@@ -617,6 +617,7 @@ class Patrol():
             needed_tags.append("minor_injury")
             needed_tags.append("cold_injury")
             needed_tags.append("hot_injury")
+            needed_tags.append("regression")
         elif chosen_tag in ["less_prey", "prey"]:
             if chosen_tag == "prey":
                 not_allowed_tag = "death"
@@ -1168,7 +1169,8 @@ class Patrol():
                 "nc_sickness": ["greencough", "redcough", "whitecough", "yellowcough"],
                 "nc_battle_injury": ["claw-wound", "mangled leg", "mangled tail", "torn pelt", "bite-wound"],
                 "nc_hot_injury": ["heat exhaustion", "heat stroke", "dehydrated"],
-                "nc_cold_injury": ["shivering", "frostbite"]
+                "nc_cold_injury": ["shivering", "frostbite"],
+                "nc_regressed": ["kittenspace", "puppyspace"]
             }
             for tag in self.patrol_event.tags:
                 tag = tag.replace("nc_", "")
@@ -1552,7 +1554,8 @@ class Patrol():
             "cold_injury": ["shivering", "frostbite"],
             "big_bite_injury": ["bite-wound", "broken bone", "torn pelt", "mangled leg", "mangled tail"],
             "small_bite_injury": ["bite-wound", "torn ear", "torn pelt", "scrapes"],
-            "beak_bite": ["beak bite", "torn ear", "scrapes"]
+            "beak_bite": ["beak bite", "torn ear", "scrapes"],
+            "regression": ["kittenspace", "puppyspace"]
         }
 
         possible_conditions = []

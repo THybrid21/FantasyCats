@@ -1,5 +1,19 @@
 {
-    "broken jaw": {
+    "claw-wound": {
+		"echoing shock": [
+			"After m_c recovers from {PRONOUN/m_c/poss} claw-wound {PRONOUN/m_c/subject} still {VERB/m_c/seem/seems} to be on edge. After talking with r_c it's determined that the experience has left {PRONOUN/m_c/object} with some form of echoing shock.",
+			"Despite knowing that {PRONOUN/m_c/poss} clanmates would never hurt {PRONOUN/m_c/object}, m_c quietly admits to r_c that {PRONOUN/m_c/subject} can't help but find {PRONOUN/m_c/self} on edge just... waiting.",
+			"Even fully recovered from {PRONOUN/m_c/poss} claw-wound something still seems to be a bit off with m_c, something lingering over {PRONOUN/m_c/object}."
+		]
+	},
+	"cat bite": {
+		"echoing shock": [
+			"Ever since m_c was bitten by another cat {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been just ever so slightly on edge, even around r_c.",
+			"While the cat bite that m_c suffered has healed, r_c worries that there is something deeper that still lingers and bothers m_c.",
+			"m_c keeps telling {PRONOUN/m_c/self} everything is fine, yet still some sort of wrongness lingers under {PRONOUN/m_c/poss} fur."
+		]
+	},
+	"broken jaw": {
         "crooked jaw": [
             "Despite r_c's best efforts, m_c's jaw is healing crooked. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} just glad it's healing at all.",
             "r_c tells m_c that {PRONOUN/m_c/poss} jaw will never be aligned correctly again, but healing from a broken jaw at all is a miracle.",
@@ -29,14 +43,12 @@
             "m_c wakes up one leg less than {PRONOUN/m_c/subject} went to sleep with, and it's both upsetting and a relief. {PRONOUN/m_c/poss/CAP} leg was so mangled, and m_c in so much pain, that this might be for the best. But it's still a loss.",
             "The damage to m_c's leg has turned out to be too great and {PRONOUN/m_c/poss} leg had to be removed if {PRONOUN/m_c/subject} have any hope of recovery.",
             "m_c has healed from {PRONOUN/m_c/poss} mangled leg, but the leg had to be removed completely."
-
         ],
         "weak leg": [
             "r_c tells m_c that {PRONOUN/m_c/subject} might have to accept that {PRONOUN/m_c/poss} leg that was so badly mangled will always now be weaker. At least {PRONOUN/m_c/subject} still {VERB/m_c/have/has} it, but that's cold consolation to m_c, who feels like {PRONOUN/m_c/subject} {VERB/m_c/were/was} so close to healing perfectly.",
             "r_c explains to m_c that the weakness {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} in {PRONOUN/m_c/poss} leg will likely always be present, a consequence of the severe damage.",
             "m_c stands triumphantly on a leg that, while it'll always be weaker than {PRONOUN/m_c/poss} others, now works only a little worse than before. It's been a long journey to heal such a badly injured limb.",
             "m_c limps around the camp, happy to at least be up and moving, though the new limp is probably permanent."
-
         ],
         "twisted leg": [
             "m_c tells r_c it's fine, and {PRONOUN/m_c/subject} {VERB/m_c/know/knows} r_c did {PRONOUN/m_c/poss} best. {PRONOUN/m_c/poss/CAP} leg was too badly mangled, to heal this far is a miracle from StarClan, even if it is twisted.",
@@ -106,12 +118,15 @@
             "As m_c sleeps under poppyseed influence, r_c prepares for the grim task of removing {PRONOUN/m_c/poss} burned leg, before the festering illness in it can spread to the rest of {PRONOUN/m_c/object}.",
             "r_c informs m_c that the harsh burn has rendered {PRONOUN/m_c/poss} leg nearly useless. It will be better in the long run to remove the limb entirely.",
             "m_c feels almost guilty, but the absence of {PRONOUN/m_c/poss} leg is just so much less painful then how it felt while burned that it's impossible not to be relieved."
-
         ],
         "one bad eye": [
             "r_c peels the cobwebs away from m_c's face and holds back a wince. The eye is unsalvageable and the rest of the skin will likely never grow fur again.",
             "m_c can only be glad {PRONOUN/m_c/subject} {VERB/m_c/were/was} able to heal from the devastating burn, though {PRONOUN/m_c/subject} can't help but feel angry at {PRONOUN/m_c/poss} now vastly limited vision."
-        ]
+        ],
+		"recurring shock": [
+			"Ever since getting burnt m_c's been jumping at the shadows. {PRONOUN/m_c/subject/CAP} {VERB/m_c/tell/tells} r_c that {PRONOUN/m_c/subject} can't escape the fire, even now.",
+			"Even the smallest crackling of leaves makes something in m_c's chest race off, throwing {PRONOUN/m_c/poss} mind into fear and stress at the memory of burning."
+		]
     },
     "lingering shock": {
         "recurring shock": [
@@ -119,6 +134,11 @@
             "r_c tells m_c that {PRONOUN/r_c/subject} have no way to stop dreams or memories, only poppy seeds to help r_c sleep. Perhaps the memories will fade with time.",
             "m_c jumps, then realizes that it was just a leaf blowing in the wind. {PRONOUN/m_c/subject/CAP} {VERB/m_c/feel/feels} exhausted, and {PRONOUN/m_c/poss} memories feel like a trap that rears up to bite {PRONOUN/m_c/object} whenever {PRONOUN/m_c/subject} {VERB/m_c/relax/relaxes}."
         ],
+		"echoing shock": [
+			"m_c stalks around the medicine den asking r_c why the world still feels dangerous, why {PRONOUN/m_c/subject} can't seem to just feel comfortable anymore.",
+			"Despite the shock having passed something still sits tightly bound up in m_c's chest and {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to explain it clearly to r_c.",
+			"m_c feels like {PRONOUN/m_c/subject} no longer quite {VERB/m_c/belong/belongs} in the clan, changed in some way that {PRONOUN/m_c/poss} clanmates could never understand."
+		],
 		"anxiety": [
 			"r_c has noticed that while the shock has gone it's replaced in m_c with a certain kind of worry that {PRONOUN/m_c/subject} {VERB/m_c/wear/wears} like a cloud of dust on {PRONOUN/m_c/poss} pelt.",
 			"r_c shakes {PRONOUN/r_c/poss} head as m_c shakes. While the shock is gone, it seems to have left {PRONOUN/m_c/object} with a lingering sense of anxiety.",
@@ -153,6 +173,11 @@
             "m_c complains to r_c that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been plagued with horrible headaches since {PRONOUN/m_c/subject} hurt {PRONOUN/m_c/poss} head. r_c sadly admits that the headaches may always be a problem.",
             "m_c begrudgingly accepts that the horrible headaches {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been having might be a permanent side effect of {PRONOUN/m_c/poss} head damage."
         ],
+		"disrupted senses": [
+			"r_c's noticed that after recovering from {PRONOUN/m_c/poss} head damage m_c's been getting overwhelmed by things around the camp. After some talk it's determined that {PRONOUN/m_c/poss} senses have become disrupted.",
+			"While m_c's recovery has gone smoothly r_c's worried about how m_c will adjust to the altered way that {PRONOUN/m_c/poss} senses now work.",
+			"m_c's noticed that after recovering from {PRONOUN/m_c/poss} damaged head {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} seem to react to sensation in the same way {PRONOUN/m_c/subject} did before."
+		],
 		"brain shock": [
 			"After the damage done to m_c's head r_c reluctantly has to inform the clan that something deeper has been damaged and m_c now suffers from brain shock.",
 			"Ever since {PRONOUN/m_c/poss} head injury something has seemed to be different about m_c. r_c has informed the clan to take extra care with {PRONOUN/m_c/object}.",
@@ -214,6 +239,20 @@
 			"After m_c's recovery from {PRONOUN/m_c/poss} tick bites {PRONOUN/m_c/subject} {VERB/m_c/haven't/hasn't} been feeling the same, struggling to focus and keep up with the things that used to come so easily before."
 		]
     },
+	"world tired": {
+		"heavy soul": [
+			"While r_c is relieved to see that m_c is no longer feeling like life is too much... there's still a lingering worry over the new heaviness that {PRONOUN/m_c/subject} {VERB/m_c/carry/carries} with {PRONOUN/m_c/object}.",
+			"m_c keeps talking about feeling a deep aching heaviness over {PRONOUN/m_c/object} with r_c. It seems that while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} no longer world tired, {PRONOUN/m_c/poss} soul has become heavy.",
+			"Even no longer feeling like the world is too heavy, m_c feels weighed down and unable to quite feel happy with {PRONOUN/m_c/poss} clanmates."
+		]
+	},
+	"rash": {
+		"recurring rash": [
+			"r_c fusses over m_c, helping to apply the herbal paste to {PRONOUN/m_c/poss} rash that refuses to leave even with dilligent care.",
+			"After even just one missed day r_c hisses in sympathy with m_c to see that the rash has returned with a vengence.",
+			"More than a little frustrated, m_c complains about the rash that {PRONOUN/m_c/subject} had thought was gone."
+		]
+	},	
 	"sunblindness": {
 		"failing eyesight": [
 			"With much distress m_c asks r_c why {PRONOUN/m_c/poss} eyesight only seems to be partially back. With a solemn shake of the head r_c informs {PRONOUN/m_c/object} it looks like the temporary sunblindness might have damaged {PRONOUN/m_c/poss} eyes more than initially assumed.",
@@ -233,6 +272,10 @@
 			"r_c fusses over m_c's paws with {PRONOUN/m_c/object} before sitting back and shaking {PRONOUN/r_c/poss} head sadly. It appears {PRONOUN/m_c/subject} will have to learn to fight without {PRONOUN/m_c/poss} claws.",
 			"r_c frustratedly hisses over the state of m_c's paws and claws. Curse those horrible twolegs who did this.",
 			"Curse them, curse those twolegs for taking m_c away and bringing {PRONOUN/m_c/object} back without {PRONOUN/m_c/poss} claws."
+		],
+		"recurring shock": [
+			"Ever since m_c's experiece with the twolegs {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} told r_c about having recurring flashes of been in a scary place, with slippery surfaces and screaming creatures all around.",
+			"While m_c is relieved to still be fully capable, {PRONOUN/m_c/subject} can't help but keep flinching whenever even a whisper about twolegs is brought up."
 		]
 	},
 	"kittenspace": {
@@ -247,6 +290,28 @@
 			"When m_c comes out of {PRONOUN/m_c/poss} altered state of mind {PRONOUN/m_c/subject} {VERB/m_c/look/looks} over to r_c and asks if this might happen again.",
 			"Despite been older than the usual play pretend age m_c tells r_c that {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} that {PRONOUN/m_c/subject} would like to try this again one day.",
 			"m_c rolls around in {PRONOUN/m_c/poss} nest feeling secure in the knowledge that {PRONOUN/m_c/poss} safe-space will always be there for {PRONOUN/m_c/object} again in the future."
+		]
+	},
+	"overstimulation": {
+		"disrupted senses": [
+			"After m_c's bout of overstimulation r_c has a long chat with {PRONOUN/m_c/object} about setting up some proper accomodations around the camp for {PRONOUN/m_c/poss} disrupted senses.",
+			"m_c feels so relieved when r_c talks with {PRONOUN/m_c/object} about if {PRONOUN/m_c/subject} {VERB/m_c/need/needs} any other kind of accomodations after been overstimulated.",
+			"Quietly m_c goes to talk with {PRONOUN/m_c/poss} clanmates about strategies to avoid getting too disruptively overstimulated in the future.",
+			"Even with the most annoying sources of overstimulation gone, m_c still feels on edge and knows that there's only so much {PRONOUN/m_c/subject} can do on {PRONOUN/m_c/poss} own about avoiding it."
+		]
+	},
+	"understimulation": {
+		"disrupted senses": [
+			"After all the anxiety from been understimulated m_c quietly talks to r_c about how difficult it is for {PRONOUN/m_c/object} to balance sensations.",
+			"r_c asks m_c if everything is alright. m_c tells {PRONOUN/r_c/object} it's not and {PRONOUN/m_c/subject} {VERB/m_c/need/needs} more help to keep up sometimes.",
+			"More than a little bit off balance, m_c decides that {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to talk more with the medicine cat about how {PRONOUN/m_c/poss} senses are difficult to manage."
+		]
+	},
+	"fatigue": {
+		"constant fatigue": [
+			"r_c reassures m_c that it's alright if {PRONOUN/m_c/subject} still {VERB/m_c/feel/feels} exhausted, {PRONOUN/m_c/poss} fatigue just might be constant.",
+			"Despite following all of r_c's instructions m_c still seems to be experiencing ongoing and constant fatigue.",
+			"m_c feels only mildly better after {PRONOUN/m_c/poss} long rest, the fatigue seems to want to be a constant companion."
 		]
 	}
 }

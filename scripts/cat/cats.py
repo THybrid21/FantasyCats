@@ -643,11 +643,12 @@ class Cat():
 
         # major, cat won't patrol
         grief_major = [
-            'loving', 'compassionate', 'empathetic', 'insecure', 'lonesome', 'nervous'
+            'loving', 'compassionate', 'empathetic', 'insecure', 'lonesome', 'nervous', 'skeptic', 'dramatic'
         ]
         # minor, cat will patrol
         grief_minor = [
-            'daring', 'cold', 'bold', 'ambitious', 'bloodthirsty', 'responsible', 'loyal', 'strict', 'vengeful'
+            'daring', 'cold', 'bold', 'ambitious', 'bloodthirsty', 'responsible', 'loyal', 'strict', 'vengeful',
+            'dreamer', 'rebellious', 'wandering', 'stubborn'
         ]
 
         text = None

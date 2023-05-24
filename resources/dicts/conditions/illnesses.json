@@ -585,7 +585,7 @@
             "poppy"
         ]
     },
-    "constant nightmares": {
+    "nightmares": {
         "severity": "major",
         "mortality": {
             "newborn": 0,
@@ -611,6 +611,18 @@
         "risks": [
 			{
 				"name": "sleeplessness",
+				"chance": 25
+			},
+			{
+				"name": "constant nightmares",
+				"chance": 75
+			},
+			{
+				"name": "anxiety attack",
+				"chance": 25
+			},
+			{
+				"name": "sleep paralysis",
 				"chance": 25
 			}
         ],
@@ -649,7 +661,7 @@
                 "chance": 75
             },
             {
-                "name": "constant nightmares",
+                "name": "nightmares",
                 "chance": 15
             }
         ],
@@ -779,7 +791,7 @@
         "infectiousness": 0,
         "risks": [
             {
-                "name": "constant nightmares",
+                "name": "nightmares",
                 "chance": 15
             },
 			{
@@ -793,6 +805,10 @@
 			{
 				"name": "paranoia",
 				"chance": 50
+			},
+			{
+				"name": "dizziness",
+				"chance": 15
 			}
 		],
         "herbs": [
@@ -826,7 +842,7 @@
         "infectiousness": 0,
         "risks": [
             {
-                "name": "constant nightmares",
+                "name": "nightmares",
                 "chance": 15
             },
 			{
@@ -1111,36 +1127,6 @@
             "poppy"
         ]
     },
-	"world tired": {
-		"severity": "severe",
-        "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 90,
-            "young adult": 100,
-            "adult": 150,
-            "senior adult": 150,
-            "senior": 90
-        },
-        "medicine_mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 120,
-            "young adult": 180,
-            "adult": 180,
-            "senior adult": 180,
-            "senior": 120
-        },
-        "duration": 6,
-        "medicine_duration": 5,
-        "infectiousness": 0,
-        "risks": [],
-        "herbs": [
-            "juniper",
-            "thyme",
-            "poppy"
-        ]
-    },	
     "nonverbal": {
         "severity": "minor",
         "mortality": {
@@ -1176,32 +1162,6 @@
 			"betony"
         ]
     },	
-    "special interest": {
-        "severity": "minor",
-        "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "medicine_mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "duration": 12,
-        "medicine_duration": 0,
-        "infectiousness": 0,
-        "risks": [],
-        "herbs": []
-    },
     "hyperfixation": {
         "severity": "minor",
         "mortality": {
@@ -1512,11 +1472,62 @@
 			{
 				"name": "hallucinations",
 				"chance": 50
+			},
+			{
+				"name": "dizziness",
+				"chance": 25
+			},
+			{
+				"name": "nightmares",
+				"chance": 25
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 25
 			}
 		],
         "herbs": [
             "honey",
             "chamomile",
+            "poppy"
+        ]
+    },	
+    "sleep paralysis": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "nightmares",
+				"chance": 25
+			},
+			{
+				"name": "constant nightmares",
+				"chance": 75
+			}
+        ],
+        "herbs": [
+            "juniper",
+            "thyme",
             "poppy"
         ]
     },	
@@ -1613,7 +1624,7 @@
 			"poppy"
 		]
     },
-    "night dirtplacing": {
+    "night dirtmaking": {
         "severity": "minor",
         "mortality": {
             "newborn": 0,

@@ -79,5 +79,8 @@
 	],
 	"severe sunburn": [
 		"m_c died due to complications from a severe sunburn."
+	],
+	"world tired": [
+		"After a long struggle, m_c fell asleep and just never awoke again."
 	]
 }

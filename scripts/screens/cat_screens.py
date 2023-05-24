@@ -1084,8 +1084,12 @@ class ProfileScreen(Screens):
                 output += 'in kittenspace'
             elif "otherspace" in the_cat.injuries:
                 output += 'in safe-space'
+            elif "overstimulation" in the_cat.injuries:
+                output += 'overstimulated'
             else:
                 output += "injured!"
+            output += "\n"
+            
         elif the_cat.is_ill():
             if "grief stricken" in the_cat.illnesses:
                 output += 'grieving!'
@@ -1093,9 +1097,7 @@ class ProfileScreen(Screens):
                 output += 'flea-ridden!'
             elif "ticks" in the_cat.illnesses:
                 output += 'riddled with ticks!'            
-            elif "kittenspace" in the_cat.illnesses:
-                output += 'in kittenspace'
-            elif "lethargy" or "seasonal lethargy" in the_cat.illnesses:
+            elif the_cat.illnesses in ["lethargy", "seasonal lethargy"]:
                 output += 'experiencing lethargy'
             elif "indecision" in the_cat.illnesses:
                 output += 'indecisive'

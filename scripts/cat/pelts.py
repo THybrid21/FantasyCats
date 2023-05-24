@@ -24,6 +24,29 @@ class TwoColour():
     def __repr__(self):
         return f"white and {self.colour}{self.length}"
 
+class FalseSolid():
+    name = "FalseSolid"
+    sprites = {1: 'falsesolid'}
+    white_patches = None
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = self.colour == "white"
+
+    def __repr__(self):
+        return self.colour + self.length
+class FalseTwo():
+    name = "FalseTwo"
+    sprites = {1: 'falsesolid', 2: 'white'}
+
+    def __init__(self, colour, length):
+        self.colour = colour
+        self.length = length
+        self.white = True
+
+    def __repr__(self):
+        return f"white and {self.colour}{self.length}"
 
 class Tabby():
     name = "Tabby"
@@ -578,51 +601,70 @@ class Calico():
 
 
 # ATTRIBUTES, including non-pelt related
-pelt_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'ROSE', 
-    'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 'GARFIELD', 
-    'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD', 'SOOT', 'DARKGREY', 
-    'ANCHOR', 'CHARCOAL', 'COAL', 'BLACK', 'PITCH', 'GREY', 'MARENGO', 'BATTLESHIP', 'CADET', 
-    'BLUEGREY', 'STEEL', 'SLATE', 'CAPPUCCINO', 'ECRU', 'ASHBROWN', 'DUSTBROWN', 'SANDALWOOD', 
-    'PINECONE', 'WRENGE', 'BROWN', 'MINK', 'CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 
-    'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER', 'WHITE', 'SILVER', 'BRONZE', 'PALEBOW', 
-    'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM', 'SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC',
-    'POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW', 'PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 
-    'DARKSAMON', 'MAGENTA', 'PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'RASIN',
-    'GENDER', 'REDNEG', 'IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 
-    'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA', 
-    'SADDLE', 'CEDAR', 'ONYX', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE',
-    'DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST',
-    'AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
+pelt_colours = ['WHITE', 'PALECREAM', 'PANTONE', 'CREAM', 'BANNANA', 'HAY', 
+    'FARROW', 'BEIGE', 'MEERKAT', 'CAPPUCCINO', 'BRONZE', 'BATTLESHIP', 'SILVER', 
+    'SAMON', 'THISTLE', 'SAND', 'WOOD', 'APRICOT', 'ROSE', 'KHAKI', 'ECRU', 'CADET', 
+    'GREY', 'BLUEGREY', 'HONEY', 'FIRE', 'BRICK', 'GINGER', 'GARFIELD', 'DARKSAMON', 
+    'DUSTBROWN', 'ASHBROWN', 'WRENGE', 'CHESTNUT', 'GREY', 'MARENGO', 'STEEL', 'SOOT', 
+    'GOLD', 'SUNSET', 'RUFOUS', 'APPLE', 'MEDALLION', 'SANDALWOOD', 'PINECONE', 'MINK', 
+    'SLATE', 'ANCHOR', 'GRANOLA', 'RED', 'CARMINE', 'BURNT', 'SCARLET', 'BROWN', 'TAN', 
+    'SADDLE', 'BEAVER', 'XANADU', 'DARKGREY', 'COSMOS', 'CRIMSON', 'ROSEWOOD', 'BLOOD', 
+    'DARKBROWN', 'CHOCOLATE', 'MOCHA', 'ANCHOR', 'CHAROCOAL', 'CEDAR', 'COFFEE', 'TAUPE', 
+    'UMBER', 'COAL', 'BLACK', 'PITCH', 'PALEBOW', 'IVORY', 'CORAL', 'CHARTRUSE', 'MINT', 
+    'EMERALD', 'TURQUOISE', 'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'MAGENTA', 'PETAL', 'MEW', 
+    'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 
+    'HEATHER', 'AMYTHYST', 'LEMON', 'LAGUNA', 'FAWN', 'CORN', 'DARKOLIVE', 'SPINNACH', 
+    'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 'CHERRY', 'SUNSHINE', 'YELLOW', 'PYRITE', 
+    'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 'DENIUM', 'COBALT', 'STRAKIT', 'TART', 
+    'PINEAPPLE', 'TROMBONE', 'SEAGRASS', 'JADE', 'SONIC', 'NAVY', 'PURPLE', 'WINE', 
+    'BRIGHTCRIMSON', 'ROYALPURPLE', 'BRASS', 'FOREST', 'SEAFOAM', 'JEANS', 'JACKET', 
+    'DEEPOCEAN', 'BARN', 'GARNET', 'RASIN', 'RUST', 'DEEPFOREST', 'MALACHITE', 
+    'NIGHTTIME', 'ONYX', 'DUSKBOW', 'DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 
+    'DEMIROM', 'AGENDER', 'PAN', 'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 
+    'GENDER', 'BISEX', 'GLASS', 'POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 
+    'GAYBOW']
 
-pelt_c_no_white = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'ROSE', 
-    'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 'GARFIELD', 
-    'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD', 'SOOT', 'DARKGREY', 
-    'ANCHOR', 'CHARCOAL', 'COAL', 'BLACK', 'GREY', 'MARENGO', 'BATTLESHIP', 'CADET', 
-    'BLUEGREY', 'STEEL', 'SLATE', 'CAPPUCCINO', 'ECRU', 'ASHBROWN', 'DUSTBROWN', 'SANDALWOOD', 
-    'PINECONE', 'WRENGE', 'BROWN', 'MINK', 'CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 
-    'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER','TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM', 
-    'SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC', 'POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW', 
-    'PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 'DARKSAMON', 'MAGENTA', 'MEW', 
-    'HEATHER', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'RASIN','GENDER', 'REDNEG', 'BANNANA', 'FARROW', 
-    'HAY', 'FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 
-    'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA', 'SADDLE', 'CEDAR', 'ONYX', 'LIME', 'CHARTRUSE', 
-    'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE','DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 
-    'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST', 'GAYBOW']
-pelt_c_no_bw = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'ROSE', 
-    'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 'GARFIELD', 
-    'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD', 'GREY', 'MARENGO', 
-    'BATTLESHIP', 'CADET', 'BLUEGREY', 'STEEL', 'SLATE', 'CAPPUCCINO', 'ECRU', 
-    'ASHBROWN', 'DUSTBROWN', 'SANDALWOOD', 'PINECONE', 'WRENGE', 'BROWN', 'MINK', 
-    'CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER',
-    'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM', 'SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC',
-    'POWDERBLUE', 'JEANS', 'NAVY', 'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM', 'SHINYMEW', 
-    'SKY', 'TEAL', 'COBALT', 'SONIC', 'POWDERBLUE', 'JEANS', 'NAVY', 'PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 
-    'DARKSAMON', 'MAGENTA', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE',
-    'GENDER', 'REDNEG', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 
-    'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA', 
-    'SADDLE', 'CEDAR', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE',
-    'DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST',
-    'GAYBOW']  
+pelt_c_no_white = ['PALECREAM', 'PANTONE', 'CREAM', 'BANNANA', 'HAY', 
+    'FARROW', 'BEIGE', 'MEERKAT', 'CAPPUCCINO', 'BRONZE', 'BATTLESHIP', 'SILVER', 
+    'SAMON', 'THISTLE', 'SAND', 'WOOD', 'APRICOT', 'ROSE', 'KHAKI', 'ECRU', 'CADET', 
+    'GREY', 'BLUEGREY', 'HONEY', 'FIRE', 'BRICK', 'GINGER', 'GARFIELD', 'DARKSAMON', 
+    'DUSTBROWN', 'ASHBROWN', 'WRENGE', 'CHESTNUT', 'GREY', 'MARENGO', 'STEEL', 'SOOT', 
+    'GOLD', 'SUNSET', 'RUFOUS', 'APPLE', 'MEDALLION', 'SANDALWOOD', 'PINECONE', 'MINK', 
+    'SLATE', 'ANCHOR', 'GRANOLA', 'RED', 'CARMINE', 'BURNT', 'SCARLET', 'BROWN', 'TAN', 
+    'SADDLE', 'BEAVER', 'XANADU', 'DARKGREY', 'COSMOS', 'CRIMSON', 'ROSEWOOD', 'BLOOD', 
+    'DARKBROWN', 'CHOCOLATE', 'MOCHA', 'ANCHOR', 'CHAROCOAL', 'CEDAR', 'COFFEE', 'TAUPE', 
+    'UMBER', 'COAL', 'BLACK', 'PITCH', 'CORAL', 'CHARTRUSE', 'MINT', 'EMERALD', 'TURQUOISE', 
+    'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'MAGENTA', 'MEW', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 
+    'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 'HEATHER', 'AMYTHYST', 'LEMON', 'LAGUNA', 
+    'FAWN', 'CORN', 'DARKOLIVE', 'SPINNACH', 'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 
+    'CHERRY', 'SUNSHINE', 'YELLOW', 'PYRITE', 'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 
+    'DENIUM', 'COBALT', 'STRAKIT', 'TART', 'PINEAPPLE', 'TROMBONE', 'SEAGRASS', 'JADE', 
+    'SONIC', 'NAVY', 'PURPLE', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'BRASS', 'FOREST', 
+    'SEAFOAM', 'JEANS', 'JACKET', 'DEEPOCEAN', 'BARN', 'GARNET', 'RASIN', 'RUST', 
+    'DEEPFOREST', 'MALACHITE', 'NIGHTTIME', 'ONYX', 'DUSKBOW', 'DEMIENBY', 'DEMIBOY', 'TRANS', 
+    'ARO', 'DEMIROM', 'AGENDER', 'PAN', 'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 
+    'ASEXUAL', 'GENDER', 'BISEX', 'POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW']
+
+pelt_c_no_bw = ['PALECREAM', 'PANTONE', 'CREAM', 'BANNANA', 'HAY', 
+    'FARROW', 'BEIGE', 'MEERKAT', 'CAPPUCCINO', 'BRONZE', 'BATTLESHIP', 'SILVER', 
+    'SAMON', 'THISTLE', 'SAND', 'WOOD', 'APRICOT', 'ROSE', 'KHAKI', 'ECRU', 'CADET', 
+    'GREY', 'BLUEGREY', 'HONEY', 'FIRE', 'BRICK', 'GINGER', 'GARFIELD', 'DARKSAMON', 
+    'DUSTBROWN', 'ASHBROWN', 'WRENGE', 'CHESTNUT', 'GREY', 'MARENGO', 'STEEL', 
+    'GOLD', 'SUNSET', 'RUFOUS', 'APPLE', 'MEDALLION', 'SANDALWOOD', 'PINECONE', 'MINK', 
+    'SLATE', 'ANCHOR', 'GRANOLA', 'RED', 'CARMINE', 'BURNT', 'SCARLET', 'BROWN', 'TAN', 
+    'SADDLE', 'BEAVER', 'XANADU', 'DARKGREY', 'COSMOS', 'CRIMSON', 'ROSEWOOD', 'BLOOD', 
+    'DARKBROWN', 'CHOCOLATE', 'MOCHA', 'ANCHOR', 'CHAROCOAL', 'CEDAR', 'COFFEE', 'TAUPE', 
+    'UMBER', 'CORAL', 'CHARTRUSE', 'MINT', 'EMERALD', 'TURQUOISE', 'SKY', 'POWDERBLUE', 
+    'INDIGOBLUE', 'MAGENTA', 'MEW', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 
+    'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 'HEATHER', 'AMYTHYST', 'LEMON', 'LAGUNA', 
+    'FAWN', 'CORN', 'DARKOLIVE', 'SPINNACH', 'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 
+    'CHERRY', 'SUNSHINE', 'YELLOW', 'PYRITE', 'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 
+    'DENIUM', 'COBALT', 'STRAKIT', 'TART', 'PINEAPPLE', 'TROMBONE', 'SEAGRASS', 'JADE', 
+    'SONIC', 'NAVY', 'PURPLE', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'BRASS', 'FOREST', 
+    'SEAFOAM', 'JEANS', 'JACKET', 'DEEPOCEAN', 'BARN', 'GARNET', 'RUST', 'DEEPFOREST', 
+    'MALACHITE', 'NIGHTTIME', 'DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 'PAN', 
+    'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 'POLY', 'ENBY', 'INTERSEX', 
+    'MLM', 'WLW', 'GAYBOW']  
 
 tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR',
                   'OREO', 'SWOOP', 'HALF', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
@@ -633,7 +675,7 @@ tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALO
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
                'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
-               'lynx', 'starpelt', 'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx']
+               'lynx', 'starpelt', 'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx', 'falsesolid']
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -709,7 +751,7 @@ collars = [
 tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
 spotted = ["Speckled", "Rosette", "Snowflake", "Banded", "Dalmation"]
 plain = ["SingleColour", "TwoColour", "Smoke",  "Backed", "Ghost", "Doberman", 
-        "Skitty", "Rat", "Wolf", "WolfBicolour"]
+        "Skitty", "Rat", "Wolf", "WolfBicolour", "FalseSolid", "FalseTwo"]
 exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Lynx", "Leonid"]
 sparkle_cats = ["Spirit", "Starpelt", "SparkleTabby", "SparkleSpeckled", "SparkleDalmation",
         "SparkleLynx"]
@@ -717,38 +759,52 @@ torties = ["Tortie", "Calico"]
 pelt_categories = [tabbies, spotted, plain, exotic, sparkle_cats, torties]
 
 # SPRITE NAMES
-pride_colours = ['AGENDER', 'ENBY', 'ASEXUAL', 'TRANS', 'GAYBOW']
-single_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'ROSE', 
-    'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 'SCARLET', 'APRICOT', 'GARFIELD', 
-    'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 'ROSEWOOD', 'BLOOD', 'SOOT', 'DARKGREY', 
-    'ANCHOR', 'CHARCOAL', 'COAL', 'BLACK', 'PITCH', 'GREY', 'MARENGO', 'BATTLESHIP', 'CADET', 
-    'BLUEGREY', 'STEEL', 'SLATE', 'CAPPUCCINO', 'ECRU', 'ASHBROWN', 'DUSTBROWN', 'SANDALWOOD', 
-    'PINECONE', 'WRENGE', 'BROWN', 'MINK', 'CHESTNUT', 'TAN', 'DARKBROWN', 'BEAVER', 
-    'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER', 'WHITE', 'SILVER', 'BRONZE', 'PALEBOW', 
-    'TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'OCEAN', 'DENIUM', 'SHINYMEW', 'SKY', 'TEAL', 'COBALT', 'SONIC',
-    'POWDERBLUE', 'JEANS', 'NAVY', 'DUSKBOW', 'PANTONE', 'SAMON', 'THISTLE', 'AMYTHYST', 
-    'DARKSAMON', 'MAGENTA', 'PETAL', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'RASIN',
-    'GENDER', 'REDNEG', 'IVORY', 'BANNANA', 'FARROW', 'HAY', 'FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 
-    'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 'PINEAPPLE', 'TROMBONE', 'MEDALLION', 'GRANOLA', 
-    'SADDLE', 'CEDAR', 'ONYX', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE',
-    'DARKOLIVE', 'GREEN', 'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST']
-cream_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 'PANTONE', 'SAMON',
-    'THISTLE', 'BANNANA', 'FARROW', 'HAY']
+pride_colours = ['DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 'PAN', 'DEMIGIRL', 
+    'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 'POLY', 'ENBY', 'INTERSEX', 
+    'MLM', 'WLW', 'GAYBOW']
+single_colours = ['WHITE', 'PALECREAM', 'PANTONE', 'CREAM', 'BANNANA', 'HAY', 
+    'FARROW', 'BEIGE', 'MEERKAT', 'CAPPUCCINO', 'BRONZE', 'BATTLESHIP', 'SILVER', 
+    'SAMON', 'THISTLE', 'SAND', 'WOOD', 'APRICOT', 'ROSE', 'KHAKI', 'ECRU', 'CADET', 
+    'GREY', 'BLUEGREY', 'HONEY', 'FIRE', 'BRICK', 'GINGER', 'GARFIELD', 'DARKSAMON', 
+    'DUSTBROWN', 'ASHBROWN', 'WRENGE', 'CHESTNUT', 'GREY', 'MARENGO', 'STEEL', 'SOOT', 
+    'GOLD', 'SUNSET', 'RUFOUS', 'APPLE', 'MEDALLION', 'SANDALWOOD', 'PINECONE', 'MINK', 
+    'SLATE', 'ANCHOR', 'GRANOLA', 'RED', 'CARMINE', 'BURNT', 'SCARLET', 'BROWN', 'TAN', 
+    'SADDLE', 'BEAVER', 'XANADU', 'DARKGREY', 'COSMOS', 'CRIMSON', 'ROSEWOOD', 'BLOOD', 
+    'DARKBROWN', 'CHOCOLATE', 'MOCHA', 'ANCHOR', 'CHAROCOAL', 'CEDAR', 'COFFEE', 'TAUPE', 
+    'UMBER', 'COAL', 'BLACK', 'PITCH', 'PALEBOW', 'IVORY', 'CORAL', 'CHARTRUSE', 'MINT', 
+    'EMERALD', 'TURQUOISE', 'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'MAGENTA', 'PETAL', 'MEW', 
+    'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 
+    'HEATHER', 'AMYTHYST', 'LEMON', 'LAGUNA', 'FAWN', 'CORN', 'DARKOLIVE', 'SPINNACH', 
+    'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 'CHERRY', 'SUNSHINE', 'YELLOW', 'PYRITE', 
+    'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 'DENIUM', 'COBALT', 'STRAKIT', 'TART', 
+    'PINEAPPLE', 'TROMBONE', 'SEAGRASS', 'JADE', 'SONIC', 'NAVY', 'PURPLE', 'WINE', 
+    'BRIGHTCRIMSON', 'ROYALPURPLE', 'BRASS', 'FOREST', 'SEAFOAM', 'JEANS', 'JACKET', 
+    'DEEPOCEAN', 'BARN', 'GARNET', 'RASIN', 'RUST', 'DEEPFOREST', 'MALACHITE', 
+    'NIGHTTIME', 'ONYX', 'DUSKBOW']
+    
+cream_colours = ['PALECREAM', 'CREAM', 'BEIGE', 'MEERKAT', 'KHAKI', 'SAND', 'WOOD', 
+    'PANTONE', 'SAMON', 'THISTLE', 'BANNANA', 'FARROW', 'HAY']
 ginger_colours = ['ROSE', 'GINGER', 'SUNSET', 'RUFOUS', 'FIRE', 'BRICK', 'RED', 
     'SCARLET', 'APRICOT', 'GARFIELD', 'APPLE', 'CRIMSON', 'BURNT', 'CARMINE', 'COSMOS', 
-    'ROSEWOOD', 'BLOOD']
-black_colours = ['SOOT', 'DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL', 'BLACK', 'PITCH', 'ONYX', 'RASIN', 'DUSKBOW']
+    'ROSEWOOD', 'BLOOD', 'FLORAL', 'CHERRY', 'TART', 'BRIGHTCRIMSON', 'BARN', 'GARNET']
+black_colours = ['SOOT', 'DARKGREY', 'ANCHOR', 'CHARCOAL', 'COAL', 'BLACK', 
+    'PITCH', 'ONYX', 'RASIN', 'DUSKBOW']
 grey_colours = ['GREY', 'MARENGO', 'BATTLESHIP', 'CADET', 'BLUEGREY', 'STEEL', 'SLATE']
-white_colours = ['WHITE', 'SILVER', 'BRONZE', 'PALEBOW', 'PETAL', 'IVORY']
+white_colours = ['WHITE', 'SILVER', 'BRONZE', 'PALEBOW', 'PETAL', 'IVORY', 'GLASS']
 brown_colours = ['CAPPUCCINO', 'ECRU', 'ASHBROWN', 'DUSTBROWN', 'SANDALWOOD', 
     'PINECONE', 'WRENGE', 'BROWN', 'MINK', 'CHESTNUT', 'TAN', 'TROMBONE', 'MEDALLION', 'GRANOLA', 
-    'SADDLE', 'CEDAR', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER']
-blue_colours = ['TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'SHINYMEW', 'SKY', 'OCEAN', 'DENIUM', 'COBALT', 'SONIC', 'POWDERBLUE', 'JEANS', 'NAVY']
-yellow_colours = ['FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 'PINEAPPLE']
-purple_colours = ['AMYTHYST', 'DARKSAMON', 'MAGENTA', 'MEW', 'HEATHER', 
-    'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'GENDER', 'REDNEG']
+    'SADDLE', 'CEDAR', 'DARKBROWN', 'BEAVER', 'CHOCOLATE', 'MOCHA', 'COFFEE', 'TAUPE', 'UMBER', 'BRASS', 
+    'RUST']
+blue_colours = ['TURQUOISE', 'TIFFANY', 'SAPPHIRE', 'SHINYMEW', 'SKY', 'OCEAN', 'DENIUM', 'COBALT', 
+    'SONIC', 'POWDERBLUE', 'JEANS', 'NAVY', 'INDIGOBLUE', 'PUDDLE', 'INDIGOLIGHT', 'JACKET', 
+    'DEEPOCEAN', 'NIGHTTIME']
+yellow_colours = ['FAWN', 'HAZELNUT', 'LEMON', 'LAGUNA', 'YELLOW', 'CORN', 'GOLD', 'HONEY', 'BEE', 
+    'PINEAPPLE', 'SUNSHINE', 'PYRITE']
+purple_colours = ['AMYTHYST', 'DARKSAMON', 'MAGENTA', 'MEW', 'HEATHER', 'ORCHID', 'STRAKIT', 'PURPLE', 
+    'WINE', 'CORAL', 'ROYALPURPLE']
 green_colours = ['LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 'EMERALD', 'OLIVE', 'DARKOLIVE', 'GREEN', 
-    'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST']
+    'FOREST', 'JADE', 'SPINNACH', 'SEAWEED', 'SACRAMENTO', 'XANADU', 'DEEPFOREST', 'SEAGRASS', 'SEAFOAM', 
+    'MALACHITE']
 
 colour_categories = [cream_colours, ginger_colours, black_colours, grey_colours, white_colours, brown_colours, blue_colours, 
     yellow_colours, purple_colours, green_colours, pride_colours]
@@ -768,9 +824,9 @@ mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS
              'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'SHIBAINU', 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
 high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
               'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
-              'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'VENUS', 'CHANCE', 'RETSUKO']
+              'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
 mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
-                'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'DAPPLED', 'HAWK', 'FRECKLEMASK', 'MOTH']
+                'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'DAPPLED', 'HAWK', 'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
 point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
     'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
 vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
@@ -823,6 +879,18 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return TwoColour(choice(pelt_c_no_white), length)
         else:
             return TwoColour(colour, length)
+    if pelt == 'FalseSolid':
+        if colour is None and not white:
+            return FalseSolid(choice(pelt_colours), length)
+        elif colour is None:
+            return FalseSolid("WHITE", length)
+        else:
+            return FalseSolid(colour, length)
+    elif pelt == 'FalseTwo':
+        if colour is None:
+            return FalseTwo(choice(pelt_c_no_white), length)
+        else:
+            return FalseTwo(colour, length)
     elif pelt == 'Tabby':
         if colour is None and white is None:
             return Tabby(choice(pelt_colours), choice([False, True]), length)
@@ -1097,8 +1165,14 @@ def describe_appearance(cat, short=False):
             "samon": "salmon",
             "darksamon": "salmon",
             "strakit": "purple",
-            "gender": "blurple",
-            "redneg": "blurple"
+            "indigoblue": "indigo",
+            "indigolight": "indigo",
+            "seagrass": "olive",
+            "brightcrimson": "crimson",
+            "royalpurple": "purple",
+            "seafoam": "green",
+            "deepocean": "blue",
+            "nighttime": "midnight"
         }
     else:
         renamed_colors = {
@@ -1113,8 +1187,14 @@ def describe_appearance(cat, short=False):
             "samon": "salmon",
             "darksamon": "dark salmon",
             "strakit": "starkit purple",
-            "gender": "genderfluid blurple",
-            "redneg": "genderfluid blurple"
+            "indigoblue": "indigo blue",
+            "indigolight": "light indigo",
+            "seagrass": "sea grass green",
+            "brightcrimson": "crimson",
+            "royalpurple": "royal purple",
+            "seafoam": "seafoam green",
+            "deepocean": "deep ocean",
+            "nighttime": "midnight"
         }
 
     pattern_des = {
@@ -1151,7 +1231,7 @@ def describe_appearance(cat, short=False):
         color_name = "melanistic"  
 
     if cat.pelt.name not in ["SingleColour", "TwoColour", "Wolf", "WolfBicolour", 
-        "Tortie", "Calico"] and color_name == "white" or color_name == "petal" \
+        "Tortie", "Calico", "FalseSolid", "FalseTwo"] and color_name == "white" or color_name == "petal" \
     or color_name == "ivory":
         color_name = "pale"
 
@@ -1193,7 +1273,7 @@ def describe_appearance(cat, short=False):
             else:
                 color_name = f"{color_name} {cat.pelt.name.lower()}"
 
-    elif cat.pelt.name not in ["SingleColour", "TwoColour"]:
+    elif cat.pelt.name not in ["SingleColour", "TwoColour", "FalseSolid", "FalseTwo"]:
         color_name = f"{color_name} {cat.pelt.name.lower()}"
 
     if cat.skin in sphynx:
@@ -1217,9 +1297,9 @@ def describe_appearance(cat, short=False):
             else:
                 color_name = f"stained white"
     # Now it's time for gender
-    if cat.genderalign in ["female", "trans female"]:
+    if cat.genderalign in ["female", "trans female", "demifemale"]:
         color_name = f"{color_name} molly"
-    elif cat.genderalign in ["male", "trans male"]:
+    elif cat.genderalign in ["male", "trans male", "demimale"]:
         color_name = f"{color_name} tom"
     else:
         color_name = f"{color_name} eli"

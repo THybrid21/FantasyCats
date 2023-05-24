@@ -243,10 +243,10 @@
     {
         "id": "snuggly_kit",
         "thoughts": [
-            "Is snuggling up to their parents bellies",
-			"Is looking up at r_c hoping that they will snuggle with them",
+            "Is snuggling up to {PRONOUN/m_c/poss} parents bellies",
+			"Is looking up at r_c hoping that {PRONOUN/r_c/subject} will snuggle with {PRONOUN/m_c/object}",
 			"Is snuggled up with the elders in the den",
-			"Failing at playing hide and seek because they purr to loud",
+			"Failing at playing hide and seek because {PRONOUN/m_c/subject} {VERB/m_c/purr/purrs} too loud",
 			"Purrs really loudly at the sight of r_c",
 			"Snuggling with the medicine cat",
 			"Really, really wants to snuggle"
@@ -258,15 +258,15 @@
     {
         "id": "rebellious_kit",
         "thoughts": [
-            "Refuses to listen to their parents lecturing them on StarClan",
+            "Refuses to listen to {PRONOUN/m_c/poss} parents lectures on StarClan",
 			"Is trying to sneak out of the camp",
-			"Is complaining about why they have to learn the Warrior Code",
-			"Doesn't want to listen to r_c lecture them",
+			"Is complaining about why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to learn the Warrior Code",
+			"Doesn't want to listen to r_c lecture {PRONOUN/m_c/object}",
 			"Is wondering if StarClan is even real",
-			"Refuses to eat the prey given to them",
+			"Refuses to eat the prey given to {PRONOUN/m_c/object}",
 			"Is badgering r_c on the details of the Warrior Code",
-			"Wishes they could do what they wanted",
-			"Is refusing to take their herbs"
+			"Wishes {PRONOUN/m_c/subject} could do what {PRONOUN/m_c/subject} wanted",
+			"Is refusing to take {PRONOUN/m_c/poss} herbs"
         ],
         "main_trait_constraint": [
             "rebellious"
@@ -275,12 +275,12 @@
     {
         "id": "stubborn_kit",
         "thoughts": [
-            "Refuses to listen to their parents lecturing them on StarClan",
+            "Refuses to listen to {PRONOUN/m_c/poss} parents lectures on StarClan",
 			"Is trying to sneak out of the camp",
-			"Is complaining about why they have to learn the Warrior Code",
-			"Doesn't want to listen to r_c lecture them",
-			"Refuses to eat the prey given to them",
-			"Wishes they could do what they wanted",
+			"Is complaining about why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to learn the Warrior Code",
+			"Doesn't want to listen to r_c lecture {PRONOUN/m_c/object}",
+			"Refuses to eat the prey given to {PRONOUN/m_c/object}",
+			"Wishes {PRONOUN/m_c/subject} could do what {PRONOUN/m_c/subject} wanted",
 			"Is whining about been groomed",
 			"Doesn't want to play with the other kittens"
         ],
@@ -292,17 +292,32 @@
         "id": "echoingmemory_kit",
         "thoughts": [
             "Is struggling to learn to walk",
-			"Mewls because they still don't know how to talk",
-			"Is delayed at learning their basic skills",
-			"Keeps crying in their sleep",
-			"Whines and shakes because they have confusing dreams",
+			"Mewls because {PRONOUN/m_c/subject} still {VERB/m_c/don't/doesn't} know how to talk",
+			"Is delayed at learning {PRONOUN/m_c/poss} basic skills",
+			"Keeps crying in {PRONOUN/m_c/poss} sleep",
+			"Whines and shakes because {PRONOUN/m_c/subject} {VERB/m_c/have/has} confusing dreams",
 			"Is visiting the medicine den... again",
-			"Tripped over their own paws",
+			"Tripped over {PRONOUN/m_c/poss} own paws",
 			"Is clinging to a kittypet toy"
             ],
         "perm_conditions": {
             "m_c": [
                 "echoing memory"
+            ]
+        }
+    },	
+    {
+        "id": "disruptedsenses_kit",
+        "thoughts": [
+            "Complains loudly about how the world hates {PRONOUN/m_c/object}",
+			"Cries about how the world is too much",
+			"Is overwhelmed by all the sensations around {PRONOUN/m_c/object}",
+			"Wants to snuggle but doesn't like the feeling of touch",
+			"Doesn't like how much of the world there is"
+            ],
+        "perm_conditions": {
+            "m_c": [
+                "disrupted senses"
             ]
         }
     }
