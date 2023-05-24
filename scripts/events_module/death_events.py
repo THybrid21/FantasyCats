@@ -21,7 +21,6 @@ class Death_Events():
         self.had_one_event = False
         self.generate_events = GenerateEvents()
         self.history = History()
-        pass
 
     def handle_deaths(self, cat, other_cat, war, enemy_clan, alive_kits, murder=False):
         """ 
@@ -40,7 +39,7 @@ class Death_Events():
             other_clan_name = f'{other_clan.name}Clan'
 
         possible_short_events = self.generate_events.possible_short_events(cat.status, cat.age, "death")
-        print('death event', cat.ID)
+        #print('death event', cat.ID)
         final_events = self.generate_events.filter_possible_short_events(possible_short_events, cat, other_cat, war,
                                                                          enemy_clan,
                                                                          other_clan, alive_kits, murder=murder)
@@ -54,7 +53,7 @@ class Death_Events():
             print('WARNING: no death events found for', cat.name)
             return
         death_text = event_text_adjust(Cat, death_cause.event_text, cat, other_cat, other_clan_name)
-        print(death_text)
+        #print(death_text)
         additional_event_text = ""
 
         # assign default history
@@ -157,7 +156,7 @@ class Death_Events():
             for tag in death_cause.tags:
                 if tag in INJURIES:
                     other_cat.get_injured(tag)
-                    # TODO: consider how best to handle history for this (aka fix it later cus i don't wanna rn ;-;
+                    #TODO: consider how best to handle history for this (aka fix it later cus i don't wanna rn ;-;
                     #  and it's not being used by any events yet anyways)
 
         # handle relationships with other clans

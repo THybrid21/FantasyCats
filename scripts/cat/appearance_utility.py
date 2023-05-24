@@ -535,6 +535,8 @@ def init_pattern(cat):
             # and always get wildcard torties.
             if not wildcard_chance or random.getrandbits(wildcard_chance) == 1:
                 # This is the "wildcard" chance, where you can get funky combinations.
+                # people are fans of the print message so I'm putting it back
+                print("Wildcard tortie!")
 
                 # Allow any pattern:
                 cat.tortiepattern = choice(tortiebases)
@@ -864,7 +866,4 @@ def init_tint(cat):
         cat.white_patches_tint = choice(possible_tints)
     else:
         cat.white_patches_tint = "none"
-        
-    # EYE TINT:
-    cat.eye_tint = "none"
 

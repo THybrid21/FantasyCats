@@ -15,9 +15,7 @@ from scripts.patrol import Patrol
 
 import ujson
 
-from scripts.cat.names import names
 from scripts.cat.cats import Cat, cat_class
-from scripts.cat.pelts import collars
 from scripts.clan import HERBS
 from scripts.clan_resources.freshkill import FRESHKILL_EVENT_ACTIVE
 from scripts.conditions import medical_cats_condition_fulfilled, get_amount_cat_for_one_medic
@@ -28,14 +26,15 @@ from scripts.events_module.condition_events import Condition_Events
 from scripts.events_module.death_events import Death_Events
 from scripts.events_module.freshkill_pile_events import Freshkill_Events
 from scripts.events_module.disaster_events import DisasterEvents
+from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
-from scripts.utility import get_alive_kits, get_med_cats, ceremony_text_adjust, get_current_season, \
-    get_living_clan_cat_count, adjust_list_text, event_text_adjust, ongoing_event_text_adjust
+from scripts.utility import get_alive_kits, get_med_cats, ceremony_text_adjust, \
+    get_current_season, adjust_list_text, ongoing_event_text_adjust
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 from scripts.game_structure.windows import SaveError
-
+from scripts.housekeeping.datadir import get_save_dir
 
 class Events():
     """
@@ -65,6 +64,7 @@ class Events():
         self.death_events = Death_Events()
         self.freshkill_events = Freshkill_Events()
         self.new_cat_events = NewCatEvents()
+        self.outsider_events = OutsiderEvents()
         self.misc_events = MiscEvents()
         self.CEREMONY_TXT = None
         self.WAR_TXT = None
@@ -260,6 +260,7 @@ class Events():
                 game.save_cats()
                 game.clan.save_clan()
                 game.clan.save_pregnancy(game.clan)
+                game.save_events()
             except:
                 SaveError(traceback.format_exc())
 
@@ -353,7 +354,6 @@ class Events():
                     herbs_found = random.sample(HERBS, k=amount[0])
                     herb_display = []
                     for herb in herbs_found:
-                        # TODO: need to add bee sting events so that this herb is relevant.
                         if herb in ['blackberry']:
                             continue
                         if game.clan.current_season in [
@@ -693,23 +693,7 @@ class Events():
             cat.age = 'senior'
 
         self.pregnancy_events.handle_having_kits(cat, clan=game.clan)
-
-        # killing outside cats
-        if cat.outside:
-            if random.getrandbits(6) == 1 and not cat.dead:
-                cat.dead = True
-                if cat.exiled:
-                    text = f'Rumors reach your Clan that the exiled {cat.name} has died recently.'
-                elif cat.status in ['kittypet', 'loner', 'rogue', 'former Clancat']:
-                    text = f'Rumors reach your Clan that the {cat.status} ' \
-                           f'{cat.name} has died recently.'
-                else:
-                    cat.outside = False
-                    text = f"Will they reach StarClan, even so far away? {cat.name} isn't sure, " \
-                           f"but as they drift away, they hope to see " \
-                           f"familiar starry fur on the other side."
-                game.cur_events_list.append(
-                    Single_Event(text, "birth_death", cat.ID))
+        self.outsider_events.killing_outsiders(cat)
 
     def one_moon_cat(self, cat):
         """
@@ -973,7 +957,7 @@ class Events():
                 game.clan.new_leader(game.clan.deputy)
                 game.clan.leader_lives = 9
                 text = ''
-                if game.clan.deputy.trait == 'bloodthirsty':
+                if game.clan.deputy.personality.trait == 'bloodthirsty':
                     text = f'{game.clan.deputy.name} has become the new leader. ' \
                            f'They stare down at their Clanmates with unsheathed claws, ' \
                            f'promising a new era for the Clans.'
@@ -1075,7 +1059,7 @@ class Events():
                     elif has_med:
                         chance = int(chance * 2.22)
 
-                    if cat.trait in [
+                    if cat.personality.trait in [
                         'altruistic', 'compassionate', 'empathetic',
                         'wise', 'faithful'
                     ]:
@@ -1105,7 +1089,7 @@ class Events():
                                 break
 
                         chance = game.config["roles"]["mediator_app_chance"]
-                        if cat.trait in [
+                        if cat.personality.trait in [
                             'charismatic', 'empathetic', 'responsible',
                             'wise', 'thoughtful'
                         ]:
@@ -1358,7 +1342,7 @@ class Events():
 
             temp.update(
                 possible_ceremonies.intersection(
-                    self.ceremony_id_by_tag[cat.trait]))
+                    self.ceremony_id_by_tag[cat.personality.trait]))
 
             possible_ceremonies = temp
         except Exception as ex:
@@ -1373,7 +1357,7 @@ class Events():
                       encoding="ascii") as read_file:
                 TRAITS = ujson.loads(read_file.read())
             try:
-                random_honor = random.choice(TRAITS[cat.trait])
+                random_honor = random.choice(TRAITS[cat.personality.trait])
             except KeyError:
                 random_honor = "hard work"
         
@@ -1458,13 +1442,13 @@ class Events():
             chance += acc_chances["baby_modifier"]
         elif cat.age in ['senior adult', 'senior']:
             chance += acc_chances["elder_modifier"]
-        if cat.trait in [
+        if cat.personality.trait in [
             "adventurous", "childish", "confident", "daring", "playful",
             "attention-seeker", "bouncy", "sweet", "troublesome",
             "impulsive", "inquisitive", "strange", "shameless"
         ]:
             chance += acc_chances["happy_trait_modifier"]
-        elif cat.trait in [
+        elif cat.personality.trait in [
             "cold", "strict", "bossy", "bullying", "insecure", "nervous"
         ]:
             chance += acc_chances["grumpy_trait_modifier"]
@@ -1642,7 +1626,7 @@ class Events():
         # check if clan has kits, if True then clan has kits
         alive_kits = get_alive_kits(Cat)
 
-        # chance to kill leader: 1/100
+        # chance to kill leader: 1/125 by default
         if not int(random.random() * game.config["death_related"]["leader_death_chance"]) \
                 and cat.status == 'leader' \
                 and not cat.not_working():
@@ -1677,6 +1661,13 @@ class Events():
     def handle_murder(self, cat):
         relationships = cat.relationships.values()
         targets = []
+        kill_chance = game.config["death_related"]["base_murder_kill_chance"]
+        random_murder_chance = int(game.config["death_related"]["base_random_murder_chance"])
+
+        # if this cat is unstable and aggressive, we lower the random murder chance
+        murder_modifier = round(((0 + int(cat.personality.aggression)) * 0.1) + ((16 - int(cat.personality.stability)) * 0.1))
+        final_murder_chance = random.getrandbits(random_murder_chance - murder_modifier)
+        #print(str(cat.name) + " Murder Chance: " + str(final_murder_chance) + "/" + str(2**(random_murder_chance - murder_modifier)))
 
         # first we grab all hate and resentment relationships, if any
         hate_relation = [i for i in relationships if i.dislike > 50 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
@@ -1685,10 +1676,13 @@ class Events():
         targets.extend(resent_relation)
 
         # if we have some, then we need to decide if this cat will kill
-        if targets:
-            chosen_target = random.choice(targets)
+        if targets or final_murder_chance == 1:
+            if targets:
+                chosen_target = random.choice(targets)
+            else:
+                relations = [i for i in relationships if i.dislike > 1 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
+                chosen_target = random.choice(relations)
             print(cat.name, 'TARGET CHOSEN', Cat.fetch_cat(chosen_target.cat_to).name)
-            kill_chance = 120
 
             # chance to murder grows with the dislike and jealousy value
             kill_chance -= chosen_target.dislike
@@ -1696,11 +1690,16 @@ class Events():
             kill_chance -= chosen_target.jealousy
             print('JEALOUS MODIFIER', kill_chance)
 
-            # this next part is probably temporary, since the personality rework is coming up so
-            # TODO: when personality rework is out, make sure this is changed to take the rework into account
-            if cat.trait in ["vengeful", "bloodthirsty", "cold"]:
-                kill_chance -= 30
-                print('TRAIT MODIFIER', kill_chance)
+            facet_modifiers = (0 + int(cat.personality.aggression)) + \
+                (16 - int(cat.personality.stability)) + (16 - int(cat.personality.lawfulness))
+            
+            kill_chance = kill_chance - facet_modifiers
+            print('Kill chance after facets', kill_chance)
+
+            # this adds a bit of randomness
+            randomness_modifier = (random.getrandbits(10) * .001)
+            kill_chance = kill_chance - randomness_modifier
+            print("Final kill chance: " + str(kill_chance))
 
             if kill_chance < 1:
                 kill_chance = 1
@@ -2037,7 +2036,7 @@ class Events():
 
                     if leader_status == "here" and deputy_status == "not_here":
 
-                        if random_cat.trait == 'bloodthirsty':
+                        if random_cat.personality.trait == 'bloodthirsty':
                             text = f"{random_cat.name} has been chosen as the new deputy. " \
                                    f"They look at the Clan leader with an odd glint in their eyes."
                             # No additional involved cats
@@ -2123,5 +2122,24 @@ class Events():
                 game.cur_events_list.insert(
                     0, Single_Event(f"{game.clan.name}Clan has no deputy!"))
 
+def load_events():
+    """
+    Load events from events.json and place into game.cur_events_list.
+    """
+
+    clanname = game.clan.name
+    events_path = f'{get_save_dir()}/{clanname}/events.json'
+    events_list = []
+    try:
+        with open(events_path, 'r') as f:
+            events_list = ujson.loads(f.read())
+        for event_dict in events_list:
+            event_obj = Single_Event.from_dict(event_dict)
+            if event_obj:
+                game.cur_events_list.append(event_obj)
+    except FileNotFoundError:
+        pass
+    except (PermissionError, ujson.JSONDecodeError) as e:
+        traceback.format_exc()
 
 events_class = Events()
