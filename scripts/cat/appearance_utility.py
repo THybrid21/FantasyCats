@@ -837,27 +837,7 @@ def init_tint(cat):
     """Sets tint for pelt and white patches"""
 
     # PELT TINT
-    hit = randint(0, 45)
-    if hit <= 5:
-        if cat.pelt.colour in [black_colours, grey_colours, white_colours, blue_colours]:
-            possible_tints = Sprites.cat_tints["possible_tints"]["greyscale"].copy()
-            cat.tint = choice(possible_tints)
-        elif cat.pelt.colour in [ginger_colours, cream_colours, purple_colours]:
-            possible_tints = Sprites.cat_tints["possible_tints"]["gingerscale"].copy()
-            cat.tint = choice(possible_tints)
-        elif cat.pelt.colour in [brown_colours, yellow_colours]:
-            possible_tints = Sprites.cat_tints["possible_tints"]["brownscale"].copy()
-            cat.tint = choice(possible_tints)
-        elif cat.pelt.colour in green_colours:
-            possible_tints = Sprites.cat_tints["possible_tints"]["greenscale"].copy()
-            cat.tint = choice(possible_tints)
-        elif cat.pelt.colour in pride_colours:
-            cat.tint = "none"
-    elif hit <= 8:
-        possible_tints = Sprites.cat_tints["possible_tints"]["any"].copy()
-        cat.tint = choice(possible_tints)        
-    else:
-        cat.tint = "none"
+    cat.tint = "none"
 
     # WHITE PATCHES TINT
     if cat.white_patches or cat.points:
