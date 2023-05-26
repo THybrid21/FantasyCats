@@ -222,7 +222,7 @@
             "aggression": [0, 5],
             "stability": [12, 16]
         },
-        "flamboyant": {
+        "dramatic": {
             "lawfulness": [6, 10],
             "sociability": [13, 16],
             "aggression": [6, 12],
@@ -232,6 +232,30 @@
             "lawfulness": [0, 4],
             "sociability": [0, 16],
             "aggression": [6, 10],
+            "stability": [10, 16]
+        },
+        "skeptic": {
+            "lawfulness": [0, 10],
+            "sociability": [0, 16],
+            "aggression": [0, 8],
+            "stability": [14, 16]
+        },
+        "dreamer": {
+            "lawfulness": [10, 16],
+            "sociability": [10, 16],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+        "wandering": {
+            "lawfulness": [0, 10],
+            "sociability": [4, 15],
+            "aggression": [2, 13],
+            "stability": [8, 16]
+        },		
+        "stubborn": {
+            "lawfulness": [0, 6],
+            "sociability": [0, 10],
+            "aggression": [4, 8],
             "stability": [10, 16]
         }
     },
@@ -331,6 +355,24 @@
             "sociability": [8, 16],
             "aggression": [8, 16],
             "stability": [8, 16]
+        },
+        "rebellious": {
+            "lawfulness": [0, 4],
+            "sociability": [0, 16],
+            "aggression": [6, 10],
+            "stability": [10, 16]
+        },		
+        "snuggly": {
+            "lawfulness": [0, 16],
+            "sociability": [14, 16],
+            "aggression": [0, 4],
+            "stability": [10, 16]
+        },		
+        "stubborn": {
+            "lawfulness": [0, 6],
+            "sociability": [0, 10],
+            "aggression": [4, 8],
+            "stability": [10, 16]
         }
     }
 }
