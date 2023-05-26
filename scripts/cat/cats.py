@@ -3256,7 +3256,7 @@ class Cat():
 class Personality():
     """Hold personality information for a cat, and functions to deal with it """
     facet_types = ["lawfulness", "sociability", "aggression", "stability"]
-    facet_range = [0, 24]
+    facet_range = [0, 16]
     
     with open("resources/dicts/traits/trait_ranges.json", "r") as read_file:
         trait_ranges = ujson.loads(read_file.read())
@@ -3462,8 +3462,8 @@ class Personality():
         if possible_traits:
             self.trait = random.choice(possible_traits)
         else:
-            print("No possible traits! Using 'strange'")
-            self.trait = "strange"
+            print("No possible traits! Using 'mimic'")
+            self.trait = "mimic"
             
     def facet_wobble(self, max=5):
         """Makes a small adjusment to all the facets, and redetermines trait if needed."""        

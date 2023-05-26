@@ -30,6 +30,8 @@
 	"spotted_suffixes": ["spot", "spot", "spot", "spot"],
 	"exotic_suffixes": ["stripe", "stripe", "stripe", "stripe", "spot", "spot", "spot", "spot", "patch", "patch", "patch"],
 	"tortie_suffixes": ["spot", "spot", "spot", "spot", "patch", "patch", "patch"],
+	"sparkle_suffixes": ["shine", "shine", "shine", "magic", "magic", "magic", "moon", "moon", "sun", "sun", "earth", 
+		"earth", "spirt"],	
 
 	"normal_prefixes": ["Fluff", "Plume", "Down", "Shag", "Mop", "Fuzz", "Fan", "Little", "Small", "Tiny", "Runt", "Big", "Boney",
 			"Spike", "Ribbon", "Cotton", "Clear", "Silk", "Wool", "Bare", "Show", "Sparkle", "Single", "One", "Two", 

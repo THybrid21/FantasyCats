@@ -604,8 +604,7 @@ def init_pattern(cat):
                                                 'PETAL', 'MEW', 'CORAL', 'FLORAL', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 
                                                 'EMERALD', 'OLIVE'] + (pride_colours * 2))
                 elif cat.pelt.colour in ["CAPPUCCINO", "ECRU", "ASHBROWN", "DUSTBROWN", "SANDALWOOD", "PINECONE", "WRENGE", "BROWN", 
-                                            "MINK", "CHESTNUT", "TAN", "HAZELNUT", "MEDALLION", "YELLOW", "CORN", "BEE", 
-                                            "SUNSHINE", "PYRITE"]:
+                                            "MINK", "CHESTNUT", "TAN", "HAZELNUT", "MEDALLION", "YELLOW", "CORN", "BEE", "PYRITE"]:
                     cat.tortiecolour = choice(['GREY', 'MARENGO', 'BATTLESHIP', 'BLUEGREY', 'STEEL', 'SLATE', 'SAPPHIRE', 'OCEAN', 
                                                 'DENIUM', 'TEAL', 'COBALT', 'INDIGOBLUE', 'INDIGOLIGHT','ROSE', 'GINGER', 'SUNSET', 
                                                 'RUFOUS', 'FIRE', 'BRICK', 'APRICOT', 'GARFIELD', 'APPLE', 'DARKSAMON', 'AMYTHYST', 
