@@ -420,7 +420,7 @@ for a, i in enumerate(['PINEAPPLE', 'TROMBONE', 'SEAGRASS', 'JADE', 'SONIC', 'NA
     'BRIGHTCRIMSON', 'ROYALPURPLE']):
     sprites.make_group('solidunnaturals', (a, 4), f'single{i}')
 for a, i in enumerate(['BRASS', 'FOREST', 'SEAFOAM', 'JEANS', 'JACKET', 'DEEPOCEAN', 'BARN', 
-    'GARNET' 'RASIN']):
+    'GARNET', 'RASIN']):
     sprites.make_group('solidunnaturals', (a, 5), f'single{i}')
 for a, i in enumerate(['GRANOLA', 'RUST', 'DEEPFOREST', 'MALACHITE', 'NIGHTTIME', 'ONYX', 'DUSKBOW']):
     sprites.make_group('solidunnaturals', (a, 6), f'single{i}')   

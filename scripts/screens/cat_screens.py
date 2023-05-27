@@ -1441,9 +1441,9 @@ class ProfileScreen(Screens):
             graduation_history = "When {PRONOUN/m_c/subject} graduated, {PRONOUN/m_c/subject} {VERB/m_c/were/was} honored for {PRONOUN/m_c/poss} " +  app_ceremony['honor'] + "."
 
             grad_age = app_ceremony["graduation_age"]
-            if int(grad_age) < 11:
+            if int(grad_age) < 13:
                 graduation_history += " {PRONOUN/m_c/poss/CAP} training went so well that {PRONOUN/m_c/subject} graduated early at " + str(grad_age) + " moons old."
-            elif int(grad_age) > 13:
+            elif int(grad_age) > 15:
                 graduation_history += " {PRONOUN/m_c/subject/CAP} graduated late at " + str(grad_age) + " moons old."
             else:
                 graduation_history += " {PRONOUN/m_c/subject/CAP} graduated at " + str(grad_age) + " moons old."
