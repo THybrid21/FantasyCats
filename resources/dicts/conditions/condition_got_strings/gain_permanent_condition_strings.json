@@ -292,6 +292,13 @@
 			"m_c rolls around in {PRONOUN/m_c/poss} nest feeling secure in the knowledge that {PRONOUN/m_c/poss} safe-space will always be there for {PRONOUN/m_c/object} again in the future."
 		]
 	},
+	"earache": {
+		"partial hearing loss": [
+			"Ever since m_c's earache r_c has noticed that m_c's been struggling to properly hear {PRONOUN/m_c/poss} clanmates. After a few short talks it's determined that something deep in {PRONOUN/m_c/poss} ears must have gotten damaged.",
+			"As m_c recovers r_c talks with {PRONOUN/m_c/object} about the damage that the earache might have caused {PRONOUN/m_c/poss} ears.",
+			"m_c's noticed that after {PRONOUN/m_c/poss} earache {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} had a bit of trouble hearing {PRONOUN/m_c/poss} clanmates clearly."
+		]
+	},
 	"overstimulation": {
 		"disrupted senses": [
 			"After m_c's bout of overstimulation r_c has a long chat with {PRONOUN/m_c/object} about setting up some proper accomodations around the camp for {PRONOUN/m_c/poss} disrupted senses.",
