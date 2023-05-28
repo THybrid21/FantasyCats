@@ -75,6 +75,26 @@
         ]
     },
     {
+        "id": "ambitious_leader",
+        "thoughts": [
+            "Considers expanding the borders",
+            "Makes sure all cats are battle ready"
+        ],
+        "main_trait_constraint": [
+            "ambitious"
+        ]
+    },
+    {
+        "id": "bold_leader",
+        "thoughts": [
+            "Considers expanding the borders",
+            "Feels confident that the Clan admires {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+            "bold"
+        ]
+    },
+    {
         "id": "bloodthirsty_leader",
         "thoughts": [
             "Encourages warriors to start fights on border patrols",
@@ -86,6 +106,63 @@
         ],
         "main_trait_constraint": [
             "bloodthirsty"
+        ]
+    },
+    {
+        "id": "calm_leader",
+        "thoughts": [
+            "Stays composed when a cat comes to them in a panic",
+            "Watches over all the cats"
+        ],
+        "main_trait_constraint": [
+            "calm"
+        ]
+    },
+    {
+        "id": "careful_leader",
+        "thoughts": [
+            "Reminds a patrol not to stray over the border"
+        ],
+        "main_trait_constraint": [
+            "careful"
+        ]
+    },
+    {
+        "id": "charismatic_leader",
+        "thoughts": [
+            "Gives a particularly rousing speech at a Clan meeting",
+            "Feels confident that the Clan admires {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+            "charismatic"
+        ]
+    },
+    {
+        "id": "childish_leader",
+        "thoughts": [
+            "Pranks r_c by switching their fresh-kill with crowfood"
+        ],
+        "main_trait_constraint": [
+            "childish"
+        ]
+    },
+    {
+        "id": "cold_leader",
+        "thoughts": [
+            "Rolls {PRONOUN/m_c/poss} eyes as r_c suggests sharing their fresh-kill with other clans"
+        ],
+        "main_trait_constraint": [
+            "cold"
+        ]
+    },
+    {
+        "id": "insecure_leader",
+        "thoughts": [
+            "Thinks they don't deserve StarClan's blessing of 9 lives",
+            "Wonders if cats like {PRONOUN/m_c/object} as a leader"
+        ],
+        "main_trait_constraint": [
+            "insecure"
         ]
     },
     {
@@ -111,42 +188,42 @@
         ]
     },	
 	{
-	"id": "skeptic_leader",
-	"thoughts": [
-		"Doesn't understand how they have managed to become leader",
-		"Doesn't feel worthy of the power that they feel thrumming under their pelt",
-		"Shakes their head and insists that they only have one life and they won't waste it",
-		"Stands proud to lead their clan",
-		"Is thinking about how to handle some news the medicine cat has told them",
-		"Is worrying abpout the changing seasons",
-		"Is worried about the whispers of twoleg movements",
-		"Recently met a kittypet on the border",
-		"Is thinking about the future of c_n",
-		"Wonders if they should meet with the leader of another clan to talk about the recent revelations",
-		"Is worried about the next gathering",
-		"Doesn't feel worthy to be the leader",
-		"Is questioning if they should have been chosen at all"
-	],
-	"main_trait_constraint": [
-		"skeptic"
-	]
+		"id": "skeptic_leader",
+		"thoughts": [
+			"Doesn't understand how they have managed to become leader",
+			"Doesn't feel worthy of the power that they feel thrumming under their pelt",
+			"Shakes their head and insists that they only have one life and they won't waste it",
+			"Stands proud to lead their clan",
+			"Is thinking about how to handle some news the medicine cat has told them",
+			"Is worrying abpout the changing seasons",
+			"Is worried about the whispers of twoleg movements",
+			"Recently met a kittypet on the border",
+			"Is thinking about the future of c_n",
+			"Wonders if they should meet with the leader of another clan to talk about the recent revelations",
+			"Is worried about the next gathering",
+			"Doesn't feel worthy to be the leader",
+			"Is questioning if they should have been chosen at all"
+		],
+		"main_trait_constraint": [
+			"skeptic"
+		]
     },
 	{
-	"id": "wandering_leader",
-	"thoughts": [
-		"Feels like the pressure is too much",
-		"Wants to travel to the other clans to get away from the stifling pressure of leadership",
-		"Left the clan alone for a couple of weeks",
-		"Took a run in the night and encourages their clanmates to do the same",
-		"Came back to camp this morning smelling of kittypet food",
-		"Is deeply considering abdicating their position to the deputy",
-		"Is antsy about something or other",
-		"Wants to run away from the clan entirely",
-		"Misses their freedom"
-	],
-	"main_trait_constraint": [
-		"wandering"
-	]
-}
+		"id": "wandering_leader",
+		"thoughts": [
+			"Feels like the pressure is too much",
+			"Wants to travel to the other clans to get away from the stifling pressure of leadership",
+			"Left the clan alone for a couple of weeks",
+			"Took a run in the night and encourages their clanmates to do the same",
+			"Came back to camp this morning smelling of kittypet food",
+			"Is deeply considering abdicating their position to the deputy",
+			"Is antsy about something or other",
+			"Wants to run away from the clan entirely",
+			"Misses their freedom"
+		],
+		"main_trait_constraint": [
+			"wandering"
+		]
+	}
 ]
 
