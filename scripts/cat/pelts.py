@@ -12,6 +12,8 @@ class Pelt():
     sprites_names = {
         "SingleColour": 'single',
         'TwoColour': 'single',
+        'FalseSolid': 'falsesolid',
+        'FalseTwo': 'falsesolid',
         'Tabby': 'tabby',
         'Marbled': 'marbled',
         'Rosette': 'rosette',
@@ -23,7 +25,30 @@ class Pelt():
         'Classic': 'classic',
         'Sokoke': 'sokoke',
         'Agouti': 'agouti',
-        'Singlestripe': 'singlestripe',
+        'Backed': 'backed',
+        'Charcoal': 'charcoal',
+        'Ghost': 'ghost',
+        'Merle': 'merle',
+        'Doberman': 'doberman',
+        'Snowflake': 'snowflake',
+        'Skele': 'skele',
+        'Stain': 'stain', 
+        'Banded': 'banded',
+        'Rat': 'rat',
+        'Skitty': 'skitty',
+        'Hooded': 'hooded',
+        'Ponit': 'ponit',
+        'Spirit': 'spirit',
+        'Starpelt': 'starpelt',
+        'Dalmation': 'dalmation',
+        'Leonid': 'leonid',
+        'Lynx': 'lynx',
+        'SparkleTabby': 'sparkletabby',
+        'SparkleSpeckled': 'sparklespeckled',
+        'SparkleDalmation': 'sparkledalmation',
+        'SparkleLynx': 'sparklelynx',
+        'Wolf': 'wolf',
+        'WolfBiColour': 'wolf',
         'Tortie': None,
         'Calico': None,
     }
@@ -877,37 +902,16 @@ class Pelt():
 
     def init_tint(self):
         """Sets tint for pelt and white patches"""
+    # PELT TINT
+    cat.tint = "none"
 
-        # PELT TINT
-        # Basic tints as possible for all colors.
-        base_tints = Sprites.cat_tints["possible_tints"]["basic"]
-        if self.colour in Sprites.cat_tints["colour_groups"]:
-            color_group = Sprites.cat_tints["colour_groups"].get(self.colour, "warm")
-            color_tints = Sprites.cat_tints["possible_tints"][color_group]
-        else:
-            color_tints = []
-        
-        if base_tints or color_tints:
-            self.tint = choice(base_tints + color_tints)
-        else:
-            self.tint = "none"
-
-        # WHITE PATCHES TINT
-        if self.white_patches or self.points:
-            #Now for white patches
-            base_tints = Sprites.white_patches_tints["possible_tints"]["basic"]
-            if self.colour in Sprites.cat_tints["colour_groups"]:
-                color_group = Sprites.white_patches_tints["colour_groups"].get(self.colour, "white")
-                color_tints = Sprites.white_patches_tints["possible_tints"][color_group]
-            else:
-                color_tints = []
-            
-            if base_tints or color_tints:
-                self.white_patches_tint = choice(base_tints + color_tints)
-            else:
-                self.white_patches_tint = "none"    
-        else:
-            self.white_patches_tint = "none"
+    # WHITE PATCHES TINT
+    if cat.white_patches or cat.points:
+        #Now for white patches
+        possible_tints = Sprites.white_patches_tints["possible_tints"]["basic"].copy()
+        cat.white_patches_tint = choice(possible_tints)
+    else:
+        cat.white_patches_tint = "none"
 
     @property
     def white(self):
