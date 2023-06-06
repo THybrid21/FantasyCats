@@ -1,22 +1,48 @@
 [
     {
         "camp": "any",
-        "tags": ["Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
         "event_text": "m_c is scolded after sneaking out of camp."
     },
     {
         "camp": "any",
-        "tags": ["other_cat", "other_cat_adult", "Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
+        "tags": [
+            "other_cat",
+            "other_cat_adult",
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
         "event_text": "m_c falls into a river, but is saved by r_c."
     },
     {
         "camp": "any",
-        "tags": ["other_clan", "rel_down", "Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
+        "tags": [
+            "other_clan",
+            "rel_down",
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
         "event_text": "m_c accidentally trespasses onto o_c's territory."
     },
     {
         "camp": "any",
-        "tags": ["other_cat", "other_cat_app", "Newleaf", "Greenleaf", "Leaf-fall", "Leaf-bare"],
+        "tags": [
+            "other_cat",
+            "other_cat_app",
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
         "event_text": "m_c sneaks out of camp with r_c."
     },
     {

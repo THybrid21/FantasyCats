@@ -19,7 +19,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "bruises",
         "tags": [
@@ -34,7 +33,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "dislocated joint",
         "tags": [
@@ -63,7 +61,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "sprain",
         "tags": [
@@ -134,7 +131,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "cracked pads",
         "tags": [
@@ -169,12 +165,20 @@
             "Leaf-bare"
         ],
         "event_text": "m_c helped to strengthen the camp walls, but scraped up their paw pads in the process.",
-        "cat_trait": ["ambitious", "loyal", "responsible", "strict", "thoughtful", "wise"],
-        "cat_skill": ["camp keeper", "den builder"],
+        "cat_trait": [
+            "ambitious",
+            "loyal",
+            "responsible",
+            "strict",
+            "thoughtful",
+            "wise"
+        ],
+        "cat_skill": [
+            "CAMP,2"
+        ],
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "sore",
         "tags": [
@@ -189,7 +193,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "torn pelt",
         "tags": [
@@ -199,8 +202,18 @@
             "Leaf-bare"
         ],
         "event_text": "m_c was out on a walk alone when they heard a dog approaching! They crawled into a thorny shrub to hide, but got some nasty scratches in the process.",
-        "cat_trait": ["nervous", "wise", "insecure", "careful", "calm", "sneaky", "strange"],
-        "cat_skill": ["smart", "very smart", "extremely smart"],
+        "cat_trait": [
+            "nervous",
+            "wise",
+            "insecure",
+            "careful",
+            "calm",
+            "sneaky",
+            "strange"
+        ],
+        "cat_skill": [
+            "CLEVER,1"
+        ],
         "other_cat_trait": null,
         "other_cat_skill": null
     },
@@ -213,12 +226,21 @@
             "Leaf-bare"
         ],
         "event_text": "m_c was out on a walk alone when they heard a fox approaching! They crawled into a thorny shrub to hide, but got some nasty scratches in the process.",
-        "cat_trait": ["nervous", "wise", "insecure", "careful", "calm", "sneaky", "strange"],
-        "cat_skill": ["smart", "very smart", "extremely smart"],
+        "cat_trait": [
+            "nervous",
+            "wise",
+            "insecure",
+            "careful",
+            "calm",
+            "sneaky",
+            "strange"
+        ],
+        "cat_skill": [
+            "CLEVER,1"
+        ],
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "claw-wound",
         "tags": [
@@ -242,9 +264,20 @@
         },
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": [
+            "bloodthirsty",
+            "bold",
+            "cold",
+            "fierce",
+            "righteous",
+            "strict",
+            "vengeful"
+        ],
         "other_cat_skill": null,
-        "cat_negate_trait": ["loyal", "ambitious"]
+        "cat_negate_trait": [
+            "loyal",
+            "ambitious"
+        ]
     },
     {
         "injury": "claw-wound",
@@ -269,9 +302,20 @@
         },
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful", "ambitious"],
+        "other_cat_trait": [
+            "bloodthirsty",
+            "bold",
+            "cold",
+            "fierce",
+            "righteous",
+            "strict",
+            "vengeful",
+            "ambitious"
+        ],
         "other_cat_skill": null,
-        "cat_negate_trait": ["loyal"]
+        "cat_negate_trait": [
+            "loyal"
+        ]
     },
     {
         "injury": "claw-wound",
@@ -298,10 +342,17 @@
         },
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": [
+            "bloodthirsty",
+            "bold",
+            "cold",
+            "fierce",
+            "righteous",
+            "strict",
+            "vengeful"
+        ],
         "other_cat_skill": null
     },
-
     {
         "injury": "mangled leg",
         "tags": [
@@ -347,11 +398,23 @@
         },
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["ambitious", "bloodthirsty", "bold", "cold", "daring", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": [
+            "ambitious",
+            "bloodthirsty",
+            "bold",
+            "cold",
+            "daring",
+            "fierce",
+            "righteous",
+            "strict",
+            "vengeful"
+        ],
         "other_cat_skill": null,
-        "cat_negate_trait": ["loyal", "ambitious"]
+        "cat_negate_trait": [
+            "loyal",
+            "ambitious"
+        ]
     },
-
     {
         "injury": "mangled tail",
         "tags": [
@@ -371,7 +434,9 @@
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null,
-        "cat_negate_skill": ["great fighter", "excellent fighter"]
+        "cat_negate_skill": [
+            "FIGHTER,2"
+        ]
     },
     {
         "injury": "mangled tail",
@@ -391,9 +456,10 @@
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null,
-        "cat_negate_skill": ["great fighter", "excellent fighter"]
+        "cat_negate_skill": [
+            "FIGHTER,2"
+        ]
     },
-
     {
         "injury": "cat bite",
         "tags": [
@@ -419,7 +485,10 @@
         "cat_skill": null,
         "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful", "stubborn", "rebellious"],
         "other_cat_skill": null,
-        "cat_negate_trait": ["loyal", "ambitious"]
+        "cat_negate_trait": [
+            "loyal",
+            "ambitious"
+        ]
     },
     {
         "injury": "cat bite",
@@ -444,9 +513,19 @@
         },
         "cat_trait": null,
         "cat_skill": null,
-        "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful"],
+        "other_cat_trait": [
+            "bloodthirsty",
+            "bold",
+            "cold",
+            "fierce",
+            "righteous",
+            "strict",
+            "vengeful"
+        ],
         "other_cat_skill": null,
-        "cat_negate_trait": ["loyal"]
+        "cat_negate_trait": [
+            "loyal"
+        ]
     },
     {
         "injury": "cat bite",
@@ -476,7 +555,6 @@
         "other_cat_trait": ["bloodthirsty", "bold", "cold", "fierce", "righteous", "strict", "vengeful", "rebellious"],
         "other_cat_skill": null
     },
-
     {
         "injury": "small cut",
         "camp": "any",
@@ -507,7 +585,6 @@
         "other_cat_trait": null,
         "other_cat_skill": null
     },
-
     {
         "injury": "bee sting",
         "camp": "any",
@@ -531,9 +608,8 @@
         "negate_other_cat_trait": null,
         "negate_other_cat_skill": null,
         "backstory_constraint": null
-     
-     },
-     {
+    },
+    {
         "injury": "bee sting",
         "camp": "any",
         "tags": [
@@ -556,9 +632,8 @@
         "negate_other_cat_trait": null,
         "negate_other_cat_skill": null,
         "backstory_constraint": null
-     
-     },
-     {
+    },
+    {
         "injury": "bee sting",
         "camp": "any",
         "tags": [
@@ -588,7 +663,6 @@
         "negate_other_cat_trait": null,
         "negate_other_cat_skill": null,
         "backstory_constraint": null
-     
      },
     {
        "injury": "headache",
