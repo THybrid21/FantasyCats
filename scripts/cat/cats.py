@@ -12,12 +12,7 @@ from ..events_module.generate_events import GenerateEvents
 import ujson
 
 from .names import Name
-from .pelts import 
-    (Pelt
-    sphynx,
-    albino_sprites,
-    melanistic_sprites,
-)
+from .pelts import Pelt
 from scripts.conditions import Illness, Injury, PermanentCondition, get_amount_cat_for_one_medic, \
     medical_cats_condition_fulfilled
 import bisect
@@ -430,7 +425,7 @@ class Cat():
                              suffix,
                              self.pelt.colour,
                              self.pelt.name,
-                             self.tortiebase,
+                             self.pelt.tortiebase,
                              biome=biome,
                              specsuffix_hidden=self.specsuffix_hidden,
                              load_existing_name = loading_cat)
@@ -2041,16 +2036,16 @@ class Cat():
         elif new_condition == "born without a tail":
             cat.pelt.scars.append('NOTAIL')
         elif new_condition == "sphynxism":
-            cat.skin = choice(sphynx)
+            cat.skin = choice(Pelt.sphynx)
             cat.pelt.length = 'short'
             if cat.skin == "ALBINOSPHYNX":
                 self.get_permanent_condition("albinism", born_with=True)
             elif cat.skin == "MELANISTICSPHYNX":
                 self.get_permanent_condition("melanism", born_with=True)
         elif new_condition == "albinism":
-            cat.skin = choice(albino_sprites)
+            cat.skin = choice(Pelt.albino_sprites)
         elif new_condition == "melanism":
-            cat.skin = choice(melanistic_sprites)  
+            cat.skin = choice(Pelt.melanistic_sprites)
             
         self.get_permanent_condition(new_condition, born_with=True)
 
