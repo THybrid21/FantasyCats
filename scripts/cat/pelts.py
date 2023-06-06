@@ -1347,9 +1347,9 @@ class Pelt():
             color_name = color_name.replace("white and white", "white")
 
         if cat.pelt.white_patches and cat.pelt.skin not in Pelt.albino_sprites + Pelt.melanistic_sprites:
-            if cat.white_patches == "FULLWHITE":
+            if cat.pelt.white_patches == "FULLWHITE":
                 # If the cat is fullwhite, discard all other information. They are just white. 
-                if cat.white_patches_tint != "none":
+                if cat.pelt.white_patches_tint != "none":
                     color_name = f"stained {cat.pelt.white_patches_tint}"
                 else:
                     color_name = f"stained white"
@@ -1361,13 +1361,13 @@ class Pelt():
         else:
             color_name = f"{color_name} eli"
 
-        if cat.white_patches and cat.skin not in Pelt.albino_sprites + Pelt.melanistic_sprites + ["ALBINOSPHYNX", "MELANISTICSPHYNX"]:
-            if cat.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
-                if cat.white_patches_tint != "none":            
-                    color_name = f"{color_name} with patches of {cat.white_patches_tint}"
+        if cat.pelt.white_patches and cat.pelt.skin not in Pelt.albino_sprites + Pelt.melanistic_sprites + ["ALBINOSPHYNX", "MELANISTICSPHYNX"]:
+            if cat.pelt.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
+                if cat.pelt.white_patches_tint != "none":            
+                    color_name = f"{color_name} with patches of {cat.pelt.white_patches_tint}"
                 else: 
                     color_name = f"{color_name} with patches of white" 
-            elif cat.white_patches in Pelt.little_white + Pelt.mid_white and cat.pelt.name != "Calico":
+            elif cat.pelt.white_patches in Pelt.little_white + Pelt.mid_white and cat.pelt.name != "Calico":
                 if cat.pelt.white_patches_tint != "none":            
                     color_name = f"{color_name} with small patches of {cat.pelt.white_patches_tint}"
                 else: 
@@ -1404,7 +1404,7 @@ class Pelt():
                 color_name = f"{color_name} with {additional_details[0]}"
         
         
-            if len(cat.scars) >= 3:
+            if len(cat.pelt.scars) >= 3:
                 color_name = f"scarred {color_name}"
             if cat.pelt.length == "long":
                 color_name = f"long-furred {color_name}"
