@@ -1865,16 +1865,16 @@ class Cat():
         elif new_condition == "born without a tail":
             cat.pelt.scars.append('NOTAIL')
         elif new_condition == "sphynxism":
-            cat.skin = choice(Pelt.sphynx)
+            cat.pelt.skin = choice(Pelt.sphynx)
             cat.pelt.length = 'short'
-            if cat.skin == "ALBINOSPHYNX":
+            if cat.pelt.skin == "ALBINOSPHYNX":
                 self.get_permanent_condition("albinism", born_with=True)
-            elif cat.skin == "MELANISTICSPHYNX":
+            elif cat.pelt.skin == "MELANISTICSPHYNX":
                 self.get_permanent_condition("melanism", born_with=True)
         elif new_condition == "albinism":
-            cat.skin = choice(Pelt.albino_sprites)
+            cat.pelt.skin = choice(Pelt.albino_sprites)
         elif new_condition == "melanism":
-            cat.skin = choice(Pelt.melanistic_sprites)
+            cat.pelt.skin = choice(Pelt.melanistic_sprites)
             
         self.get_permanent_condition(new_condition, born_with=True)
 

@@ -654,7 +654,7 @@ class Events:
                     x.status = "kitten"
                 elif x.moons < 12:
                     x.status_change('apprentice')
-                elif x.moons < 120:
+                elif x.moons < 132:
                     x.status_change('warrior')
                 else:
                     x.status_change('elder')
@@ -764,7 +764,7 @@ class Events:
             cat.age = 'adolescent'
         elif cat.moons == 12:
             cat.age = 'adult'
-        elif cat.moons == 120:
+        elif cat.moons == 132:
             cat.age = 'senior'
             
         cat.skills.progress_skill(cat)
@@ -1088,9 +1088,9 @@ class Events:
                 game.clan.medicine_cat = cat
 
             # retiring to elder den
-            if cat.status in ['warrior', 'deputy'] and len(cat.apprentice) < 1 and cat.moons > 114:
+            if cat.status in ['warrior', 'deputy'] and len(cat.apprentice) < 1 and cat.moons > 128:
                 # There is some variation in the age. 
-                if cat.moons > 140 or not int(random.random() * (-0.7 * cat.moons + 100)):
+                if cat.moons > 160 or not int(random.random() * (-0.7 * cat.moons + 100)):
                     if cat.status == 'deputy':
                         game.clan.deputy = None
                     self.ceremony(cat, 'elder')

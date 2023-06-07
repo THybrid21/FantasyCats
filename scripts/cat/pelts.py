@@ -88,7 +88,7 @@ class Pelt():
     ]
     pelt_c_no_bw = [
         'BANNANA', 'PALECREAM', 'SAND', 'FARROW', 'CREAM', 'BEIGE', 'HAY', 'MEERKAT', 'KHAKI', 'SILVER', 'CADET',
-        'PANTONE', 'SAMON', 'THISTLE', 'WOOD', 'APRICOT', 'GINGER', 'GARFIELD', 'SUNSET', 'RUFOUS','HAZELNUT', 'BRONZE', 
+        'PANTONE', 'SAMON', 'THISTLE', 'WOOD', 'APRICOT', 'GINGER', 'GARFIELD', 'SUNSET', 'RUFOUS', 'HAZELNUT', 'BRONZE',
         'MARENGO', 'GOLD', 'FIRE', 'BRICK', 'ROSE', 'DARKSAMON', 'CAPPUCCINO', 'ECRU', 'PINECONE', 'TAN', 'GREY', 'BLUEGREY', 
         'BATTLESHIP', 'HONEY', 'MEDALLION', 'APPLE', 'RED', 'CRIMSON', 'DUSTBROWN', 'ASHBROWN', 'SANDALWOOD', 'WRENGE', 
         'STEEL', 'SLATE', 'GRANOLA', 'SADDLE', 'CARMINE', 'SCARLET', 'MINK', 'BROWN', 'CHESTNUT', 'BEAVER', 'XANADU', 'SOOT',
@@ -250,14 +250,16 @@ class Pelt():
         'POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
-                    'EXTRA']
+                    'EXTRA', 'TWIST', 'OKAPI']
     mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR',
-                'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER']
+                'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'SHIBAINU',
+                'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                 'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
-                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'SHIBAINU']
+                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
-                    'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO']
+                    'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'DAPPLED', 'HAWK', 
+                    'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
     'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
     vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
@@ -352,6 +354,7 @@ class Pelt():
         pelt_white = new_pelt.init_pattern_color(parents, gender)
         new_pelt.init_white_patches(pelt_white, parents)
         new_pelt.init_sprite()
+        new_pelt.init_skin(parents)
         new_pelt.init_scars(age)
         new_pelt.init_accessories(age)
         new_pelt.init_eyes(parents)
@@ -565,7 +568,7 @@ class Pelt():
         # ------------------------------------------------------------------------------------------------------------#
 
         # Determine pelt.
-        weights = [0, 0, 0, 0]  #Weights for each pelt group. It goes: (tabbies, spotted, plain, exotic)
+        weights = [0, 0, 0, 0, 0]  #Weights for each pelt group. It goes: (tabbies, spotted, plain, exotic)
         for p_ in par_peltnames:
             if p_ in Pelt.tabbies:
                 add_weight = (50, 10, 5, 7, 1)
@@ -626,7 +629,7 @@ class Pelt():
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
         # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-        weights = [0, 0, 0, 0]
+        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.cream_colours:
                 add_weight = (40, 20, 0, 0, 0, 10, 0, 5, 5, 2, 1)
@@ -856,7 +859,7 @@ class Pelt():
             for _par in parents:
                 if _par.pelt.skin in Pelt.albino_sprites + Pelt.melanistic_sprites + Pelt.sphynx:
                     _par.pelt.skin = choice(Pelt.skin_sprites)
-            self.skin = choice([i.pelt.skin for i in parents] + [choice(random.choices(Pelt.skin_categories, weights=(197, 3), k=1)[0])])
+                self.skin = choice([i.pelt.skin for i in parents] + [choice(random.choices(Pelt.skin_categories, weights=(197, 3), k=1)[0])])
 
     def init_scars(self, age):
         if age == "newborn":

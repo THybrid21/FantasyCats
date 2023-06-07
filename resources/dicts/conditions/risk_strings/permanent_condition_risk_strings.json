@@ -332,7 +332,7 @@
 		],
 		"sleep paralysis": [
 			"r_c's been noticing m_c struggling to sleep and wake up recently. After some talk it just seems to be a case of sleep paralysis that's troubling {PRONOUN/m_c/object}.",
-			"m_c believes that {PRONOUN/m_c/subject} {VERB/m_c/are/is} been stalked by cats from the Dark Forest, isisting that {PRONOUN/m_c/subject} {VERB/m_c/see/sees} them when waking up."
+			"m_c believes that {PRONOUN/m_c/subject} {VERB/m_c/are/is} been stalked by cats from the Dark Forest, insisting that {PRONOUN/m_c/subject} {VERB/m_c/see/sees} them when waking up."
 		],
 		"world tired": [
 			"r_c's been taking more and more time out of {PRONOUN/r_c/poss} day to check up on m_c, a little bit worried about how {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been drawing back from the clan recently.",
@@ -1121,7 +1121,9 @@
 		"sunblindness": [
 			"r_c helps m_c around the camp, softly talking to {PRONOUN/m_c/object} and offering {PRONOUN/r_c/poss} side for m_c's comfort.",
 			"Unsurprisingly, with m_c's sensitivity to the light outside, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} experiencing more than a bit of sunblindness this moon.",
-			"m_c woke up and stepped out of the den only to yowl as the sun burnt {PRONOUN/m_c/poss} eyes."
+			"m_c woke up and stepped out of the den only to yowl as the sun burnt {PRONOUN/m_c/poss} eyes.",
+			"m_c decides that the sun is evil and {PRONOUN/m_c/poss} enemy, clearly it's trying to blind {PRONOUN/m_c/object}.",
+			"While the day is too harsh for m_c, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} happy to take up the more quiet nighttime patrols. Even if just to avoid the sun."
 		],
 		"headache": [
 			"r_c listens to m_c's complain with empathy. {PRONOUN/r_c/subject/CAP} {VERB/r_c/have/has} just the herbs to help.",

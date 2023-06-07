@@ -666,6 +666,13 @@ class Pregnancy_Events():
                         kit.pelt.scars.append('NOPAW')
                     elif kit.permanent_condition[condition] == 'born without a tail':
                         kit.pelt.scars.append('NOTAIL')
+                    elif kit.permanent_condition[condition] == "sphynxism":
+                        kit.pelt.skin = choice(Pelt.sphynx)
+                        kit.pelt.length = 'short'
+                    elif kit.permanent_condition[condition] == "albinism":
+                        kit.pelt.skin = choice(Pelt.albino_sprites)
+                    elif kit.permanent_condition[condition] == "melanism":
+                        kit.pelt.skin = choice(Pelt.melanistic_sprites)
                 self.condition_events.handle_already_disabled(kit)
 
             # create and update relationships
