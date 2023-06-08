@@ -85,7 +85,7 @@
             "stability": [0, 12]
         },
 		"responsible": {
-            "lawfulness": [0, 16],
+            "lawfulness": [8, 16],
             "sociability": [8, 16],
             "aggression": [0, 12],
             "stability": [8, 16]
@@ -231,7 +231,7 @@
 		"skeptic": {
             "lawfulness": [0, 4],
             "sociability": [8, 16],
-            "aggression": [0, 16],
+            "aggression": [4, 16],
             "stability": [12, 16]
         },
 		"sneaky": {
@@ -357,7 +357,7 @@
             "stability": [0, 12]
         },
 		"polite": {
-            "lawfulness": [0, 16],
+            "lawfulness": [8, 16],
             "sociability": [8, 16],
             "aggression": [0, 12],
             "stability": [8, 16]
