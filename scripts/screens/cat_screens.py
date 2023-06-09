@@ -1051,6 +1051,12 @@ class ProfileScreen(Screens):
                     output += 'paralyzed'
                 elif "declawed" in the_cat.permanent_condition:
                     output += 'declawed'
+                elif "sphynxism"  in the_cat.permanent_condition:
+                    continue
+                elif "albinism" in the_cat.permanent_condition:
+                    continue
+                elif "melanism" in the_cat.permanent_condition:
+                    continue
                 else:
                     output += 'has a permanent condition'
 
@@ -1084,6 +1090,8 @@ class ProfileScreen(Screens):
                 output += 'experiencing lethargy'
             elif "indecision" in the_cat.illnesses:
                 output += 'indecisive'
+            elif "turmoiled litter" in the_cat.illnesses:
+                output += 'turmoiled!'      
             else:
                 output += 'sick!'
 
@@ -1890,6 +1898,10 @@ class ProfileScreen(Screens):
                     insert = 'has been recovering for'
                 elif name == 'pregnant':
                     insert = 'has been pregnant for'
+                elif name == 'kittenspace':
+                    insert = 'has been in kittenspace for'
+                elif name == 'otherspace':
+                    insert = 'has been in safe-space for'
                 if moons_with != 1:
                     text_list.append(f"{insert} {moons_with} moons")
                 else:
@@ -1914,6 +1926,8 @@ class ProfileScreen(Screens):
                 insert = "has been sick for"
                 if name == 'grief stricken':
                     insert = 'has been grieving for'
+                elif name == 'turmoiled litter':
+                    insert = 'has been in turmoil for'
                 if moons_with != 1:
                     text_list.append(f"{insert} {moons_with} moons")
                 else:

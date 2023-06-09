@@ -372,20 +372,19 @@ class Condition_Events():
         cat.healed_condition = False
         event_list = []
         illness_progression = {
-            "running nose": ["whitecough", "silvercough"],
+            "running nose": {"whitecough", "silvercough"},
             "kittencough": "silvercough",
-            "whitecough": ["silvercough", "greencough"],
-            "silvercough": "greencough",
+            "whitecough": {"silvercough", "greencough"},
             "greencough": "yellowcough",
             "yellowcough": "redcough",
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
-            "stomachache": ["diarrhea", "constipation"],
+            "stomachache": {"diarrhea", "constipation"},
             "nightmares": "constant nightmares",
             "anxiety attack": "panic attack",
-            "panic attack": ["shock", "paranoia"],
+            "panic attack": {"shock", "paranoia"},
             "sleeplessness": "ongoing sleeplessness",
-            "ticks": ["tick bites", "severe tick bites"],
+            "ticks": {"tick bites", "severe tick bites"},
             "nest wetting": "night dirtmaking"
             
         }
