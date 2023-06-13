@@ -106,8 +106,8 @@ class Pelt():
 
     tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'HALF',
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA',
-                    'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL',
-                    'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE', 
+                    'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT',  'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'BLANKET', 
+                    'EMBER', 'COMBO', 'BLENDED', 'SCATTER', 'LIGHT', 'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE', 
                     'STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL', 'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOOSTONE', 
                     'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'LYNXMASK']
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
@@ -252,13 +252,13 @@ class Pelt():
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
                     'EXTRA', 'TWIST', 'OKAPI']
     mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR',
-                'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'SHIBAINU',
+                'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'SHIBAINU',
                 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                 'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
                 'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'OWL', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
-                    'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'DAPPLED', 'HAWK', 
+                    'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'DAPPLED', 'HAWK', 
                     'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
     'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
