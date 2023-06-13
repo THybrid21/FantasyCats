@@ -21,7 +21,7 @@ from scripts.game_structure.game_essentials import game
 from itertools import combinations
 from scripts.cat.names import names
 from scripts.cat.skills import SkillPath
-from scripts.cat.cats import Cat, cat_class, ILLNESSES, INJURIES, PERMANENT
+from scripts.cat.cats import Cat, ILLNESSES, INJURIES, PERMANENT, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.cat_relations.relationship import Relationship
 from scripts.clan_resources.freshkill import ADDITIONAL_PREY, PREY_REQUIREMENT, HUNTER_EXP_BONUS, HUNTER_BONUS, \
@@ -1210,7 +1210,7 @@ class Patrol():
         if cat_type == 'kittypet':
             kittypet = True
             new_name = choice([True, False])
-            chosen_backstory = Cat.backstory_categories["kittypet_backstories"]
+            chosen_backstory = BACKSTORIES["backstory_categories"]["kittypet_backstories"]
             if "medcat" in attribute_list:
                 status = 'medicine cat'
                 chosen_backstory = ["wandering_healer1", "wandering_healer2"]
@@ -1221,7 +1221,7 @@ class Patrol():
         elif cat_type == 'loner':
             loner = True
             new_name = choice([True, False])
-            chosen_backstory = Cat.backstory_categories["loner_backstories"]
+            chosen_backstory = BACKSTORIES["backstory_categories"]["loner_backstories"]
             if "medcat" in attribute_list:
                 status = 'medicine cat'
                 chosen_backstory = ["wandering_healer1", "wandering_healer2"]
@@ -1232,7 +1232,7 @@ class Patrol():
         elif cat_type == 'rogue':
             loner = True
             new_name = choice([True, False])
-            chosen_backstory = Cat.backstory_categories["rogue_backstories"]
+            chosen_backstory = BACKSTORIES["backstory_categories"]["rogue_backstories"]
             if "medcat" in attribute_list:
                 status = 'medicine cat'
                 chosen_backstory = ["wandering_healer1", "wandering_healer2"]
@@ -1243,7 +1243,7 @@ class Patrol():
         elif cat_type == 'clancat':
             other_clan = self.other_clan
             new_name = False
-            chosen_backstory = Cat.backstory_categories["former_clancat_backstories"]
+            chosen_backstory = BACKSTORIES["backstory_categories"]["former_clancat_backstories"]
             if "medcat" in attribute_list:
                 status = 'medicine cat'
                 chosen_backstory = ["medicine_cat", "disgraced1"]
@@ -1253,7 +1253,7 @@ class Patrol():
                 return
         else:
             other_clan = self.other_clan
-            chosen_backstory = Cat.backstory_categories["former_clancat_backstories"]
+            chosen_backstory = BACKSTORIES["backstory_categories"]["former_clancat_backstories"]
             # failsafe in case self.other_clan is None for some reason
             if "medcat" in attribute_list:
                 status = 'medicine cat'
@@ -1261,7 +1261,7 @@ class Patrol():
             if not other_clan:
                 loner = True
                 new_name = choice([True, False])
-                chosen_backstory = Cat.backstory_categories["rogue_backstories"]
+                chosen_backstory = BACKSTORIES["backstory_categories"]["rogue_backstories"]
                 if "medcat" in attribute_list:
                     chosen_backstory = ["medicine_cat", "disgraced1"]
                 if not success:
@@ -1352,7 +1352,7 @@ class Patrol():
 
             # giving specified backstories.json if any were specified
             possible_backstories = []
-            for backstory in Cat.backstories:
+            for backstory in BACKSTORIES["backstories"]:
                 if f'{backstory}{outcome}' in attribute_list:
                     possible_backstories.append(backstory)
 
@@ -1365,7 +1365,7 @@ class Patrol():
         else:
             # giving specified backstories.json if any were specified
             possible_backstories = []
-            for backstory in Cat.backstories:
+            for backstory in BACKSTORIES["backstories"]:
                 if backstory in attribute_list:
                     possible_backstories.append(backstory)
 
@@ -1970,15 +1970,13 @@ class Patrol():
         }
         outcome_number = outcomes[outcome]
         outcome = outcome_number
-
-        for x in range(len(no_herbs_tags)):
-            if f"no_herbs{x}" in self.patrol_event.tags and outcome == x:
-                return
+        
+        if f"no_herbs{outcome}" in self.patrol_event.tags:
+            return
 
         large_amount = None
-        for x in range(len(many_herbs_tags)):
-            if f"many_herbs{x}" in self.patrol_event.tags and outcome == x:
-                large_amount = 4
+        if f"many_herbs{outcome}" in self.patrol_event.tags:
+            large_amount = 4
 
         if "random_herbs" in self.patrol_event.tags:
             number_of_herb_types = choices([1, 2, 3], [6, 5, 1], k=1)
