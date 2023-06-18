@@ -256,7 +256,7 @@ class Pelt():
                 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                 'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
-                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'OWL', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
+                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'OWL', 'BUB', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'DAPPLED', 'HAWK', 
                     'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
