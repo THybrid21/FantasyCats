@@ -769,7 +769,7 @@ class MakeClanScreen(Screens):
         """Get tooltip for cat. Tooltip displays name, sex, age group, and trait."""
 
 
-        return f"<b>{cat.name}</b><br>{cat.gender}<br>{cat.age}<br>{cat.personality.trait}<br>{cat.skills.skill_string(short=True)}<br>{cat.moons} moons"
+        return f"<b>{cat.name}</b><br>{cat.gender}<br>{cat.age}<br>{cat.personality.trait}<br>{cat.moons} moons"
 
     def open_game_mode(self):
         # Clear previous screen
@@ -924,7 +924,9 @@ class MakeClanScreen(Screens):
                                                                   manager=MANAGER)
 
         self.elements['select_cat'] = UIImageButton(scale(pygame.Rect((468, 696), (664, 104))), "",
-                                                    object_id="#nine_lives_button", visible=False, manager=MANAGER)
+                                                    object_id="#nine_lives_button", 
+                                                    starting_height=2,
+                                                    visible=False, manager=MANAGER)
         # Error message, to appear if you can't choose that cat.
         self.elements['error_message'] = pygame_gui.elements.UITextBox(
             "Too young to become leader",
@@ -966,7 +968,9 @@ class MakeClanScreen(Screens):
                                                                   manager=MANAGER)
 
         self.elements['select_cat'] = UIImageButton(scale(pygame.Rect((418, 696), (768, 104))), "",
-                                                    object_id="#support_leader_button", visible=False, manager=MANAGER)
+                                                    object_id="#support_leader_button", 
+                                                    starting_height=2,
+                                                    visible=False, manager=MANAGER)
         # Error message, to appear if you can't choose that cat.
         self.elements['error_message'] = pygame_gui.elements.UITextBox(
             "Too young to become deputy",
@@ -1011,6 +1015,7 @@ class MakeClanScreen(Screens):
         self.elements['select_cat'] = UIImageButton(scale(pygame.Rect((520, 684), (612, 116))),
                                                     "",
                                                     object_id="#aid_clan_button",
+                                                    starting_height=2,
                                                     visible=False,
                                                     manager=MANAGER)
         # Error message, to appear if you can't choose that cat.
@@ -1059,6 +1064,7 @@ class MakeClanScreen(Screens):
         self.elements['select_cat'] = UIImageButton(scale(pygame.Rect((706, 720), (190, 60))),
                                                     "",
                                                     object_id="#recruit_button",
+                                                    starting_height=2,
                                                     visible=False,
                                                     manager=MANAGER)
 
