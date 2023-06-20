@@ -829,9 +829,9 @@
             "senior": 0
         },
         "medicine_mortality": {
-            "newborn": 70,
-            "kitten": 70,
-            "adolescent": 80,
+            "newborn": 80,
+            "kitten": 80,
+            "adolescent": 100,
             "young adult": 0,
             "adult": 0,
             "senior adult": 0,

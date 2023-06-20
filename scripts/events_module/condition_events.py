@@ -406,7 +406,10 @@ class Condition_Events():
 
             # death event text and break bc any other illnesses no longer matter
             if cat.dead and cat.status != 'leader':
-                event = f"{cat.name} died of {illness}."
+                if illness in ["panic attack", "paranoia", "sleeplessness"]:
+                    event = f"{cat.name} died in an accident related to their {illness}."
+                else: 
+                    event = f"{cat.name} died of {illness}."
                 # clear event list to get rid of any healed or risk event texts from other illnesses
                 event_list.clear()
                 event_list.append(event)

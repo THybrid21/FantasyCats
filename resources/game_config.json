@@ -241,8 +241,8 @@
 		"base_heterochromia": 120,
 		"direct_inheritance": 15,
 		"wildcard_tortie": 10,
-		"vit_chance": 25,
-		"random_point_chance": 15
+		"vit_chance": 10,
+		"random_point_chance": 5
 	},
 	"cat_name_controls": {
 		"always_name_after_appearance": false,
