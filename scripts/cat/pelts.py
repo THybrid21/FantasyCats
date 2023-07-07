@@ -1349,7 +1349,7 @@ class Pelt():
         if "white and white" in color_name:
             color_name = color_name.replace("white and white", "white")
 
-        if cat.pelt.white_patches and cat.pelt.skin not in Pelt.albino_sprites + Pelt.melanistic_sprites:
+        if cat.pelt.white_patches and cat.pelt.skin not in Pelt.albino_sprites + Pelt.melanistic_sprites + ["ALBINOSPHYNX", "MELANISTICSPHYNX"]:
             if cat.pelt.white_patches == "FULLWHITE":
                 # If the cat is fullwhite, discard all other information. They are just white. 
                 if cat.pelt.white_patches_tint != "none":

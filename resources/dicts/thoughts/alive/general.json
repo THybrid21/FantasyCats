@@ -2757,7 +2757,8 @@
 			"Is worried about the pain in {PRONOUN/m_c/poss} head",
 			"Struggling to speak clearly",
 			"Forgot how to talk briefly today",
-			"Is having a hard time"
+			"Is having a hard time",
+			"Head empty, no thoughts"
         ],
         "perm_conditions": {
             "m_c": [
