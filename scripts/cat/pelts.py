@@ -250,13 +250,14 @@ class Pelt():
         'POPPYPINK', 'STRAWBERRY', 'MINTCHOC', 'CHOCMINT', 'AMBERTWO', 'BEACH', 'NACRE', 'NIGHT', 'OCEAN']
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
-                    'EXTRA', 'TWIST', 'OKAPI']
+                    'EXTRA', 'MOUSTACHE', 'REVERSEHEART', 'TWIST', 'OKAPI']
     mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR',
                 'WINGS', 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'SHIBAINU',
-                'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
+                'BOWTIE', 'VEST', 'MOSSCLAW', 'NIGHTMIST', 'SKELEPATCH']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                 'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
-                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'OWL', 'BUB', 'VENUS', 'CHANCE', 'RETSUKO', 'HOODED']
+                'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'OWL', 'BUB', 'SPARROW', 'VENUS', 'CHANCE', 'RETSUKO', 
+                'HOODED']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'DAPPLED', 'HAWK', 
                     'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
