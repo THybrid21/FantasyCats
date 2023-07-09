@@ -2376,7 +2376,13 @@
             "Finds the Code too restrictive sometimes",
             "Worries about {PRONOUN/m_c/poss} clanmates",
             "Wonders if {PRONOUN/m_c/subject} {VERB/m_c/are/is} heartless sometimes",
-            "Fears {PRONOUN/m_c/poss} lack of empathy sometimes"
+            "Fears {PRONOUN/m_c/poss} lack of empathy sometimes",
+			"Is confused why another cat is upset at {PRONOUN/m_c/object}",
+			"Got into an argument with another cat",
+			"Is spending some time by {PRONOUN/m_c/self}",
+			"Just wants to be left alone right now",
+			"Is feeling irritable",
+			"Took a walk to get some peace and quiet"
         ],
         "perm_conditions": {
             "m_c": [

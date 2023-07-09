@@ -33,13 +33,11 @@ class Pelt():
         'Stain': 'stain', 
         'Banded': 'banded',
         'Rat': 'rat',
-        'Skitty': 'skitty',
         'Hooded': 'hooded',
         'Ponit': 'ponit',
         'Spirit': 'spirit',
         'Starpelt': 'starpelt',
         'Dalmation': 'dalmation',
-        'Leonid': 'leonid',
         'Lynx': 'lynx',
         'SparkleTabby': 'sparkletabby',
         'SparkleSpeckled': 'sparklespeckled',
@@ -112,8 +110,8 @@ class Pelt():
                     'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'LYNXMASK']
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                 'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
-               'banded', 'snowflake', 'rat', 'hooded', 'skitty', 'ponit', 'spirit', 'wolf', 'dalmation', 'leonid',
-               'lynx', 'starpelt', 'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx', 'falsesolid']
+               'banded', 'snowflake', 'rat', 'hooded', 'ponit', 'spirit', 'wolf', 'dalmation', 'lynx', 'starpelt', 
+               'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx', 'falsesolid']
 
     pelt_length = ["short", "medium", "long"]
 
@@ -190,8 +188,8 @@ class Pelt():
     tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
     spotted = ["Speckled", "Rosette", "Snowflake", "Banded", "Dalmation"]
     plain = ["SingleColour", "TwoColour", "Smoke",  "Backed", "Ghost", "Doberman", 
-            "Skitty", "Rat", "Wolf", "WolfBicolour", "FalseSolid", "FalseTwo"]
-    exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Lynx", "Leonid"]
+            "Rat", "Wolf", "WolfBicolour", "FalseSolid", "FalseTwo"]
+    exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Lynx"]
     sparkle_cats = ["Spirit", "Starpelt", "SparkleTabby", "SparkleSpeckled", "SparkleDalmation",
             "SparkleLynx"]
     torties = ["Tortie", "Calico"]
@@ -260,7 +258,7 @@ class Pelt():
                 'HOODED']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'DAPPLED', 'HAWK', 
-                    'FRECKLEMASK', 'MOTH', 'FRINGEKIT']
+                    'FRECKLEMASK', 'MOTH', 'FRINGEKIT', 'SKITTY']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
     'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
     vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
@@ -455,9 +453,9 @@ class Pelt():
         
     def init_eyes(self, parents):
         if not parents:
-            self.eye_colour = choice(Pelt.eye_colours)
+            self.eye_colour = choice(Pelt.eye_colours + Pelt.sus_eyes)
         else:
-            self.eye_colours = choice([i.pelt.eye_colour for i in parents] + [choice(Pelt.eye_colours)])
+            self.eye_colours = choice([i.pelt.eye_colour for i in parents] + [choice(Pelt.eye_colours + Pelt.sus_eyes)])
         
         #White patches must be initalized before eye color. 
         num = game.config["cat_generation"]["base_heterochromia"]
@@ -1343,8 +1341,6 @@ class Pelt():
 
         if cat.pelt.points and cat.pelt.name not in ["Doberman", "Ponit"]:
             color_name = f"{color_name} point"
-            if "ginger point" in color_name:
-                color_name.replace("ginger point", "flame point")
 
         if "white and white" in color_name:
             color_name = color_name.replace("white and white", "white")
