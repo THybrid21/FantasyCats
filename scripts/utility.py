@@ -1362,6 +1362,7 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
             new_sprite.blit(sprites.sprites['lighting' + cat_sprite], (0, 0))
 
         new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
+
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
         new_sprite.blit(sprites.sprites['skin' + cat.pelt.skin + cat_sprite], (0, 0))
