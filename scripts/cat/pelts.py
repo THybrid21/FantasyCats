@@ -34,7 +34,6 @@ class Pelt():
         'Banded': 'banded',
         'Rat': 'rat',
         'Hooded': 'hooded',
-        'Ponit': 'ponit',
         'Spirit': 'spirit',
         'Starpelt': 'starpelt',
         'Dalmation': 'dalmation',
@@ -110,7 +109,7 @@ class Pelt():
                     'PONITMASK', 'REVPONITMASK', 'ERAPONITMASK', 'FALSESOLID', 'LYNXMASK']
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                 'classic', 'sokoke', 'agouti', 'backed', 'charcoal', 'ghost', 'merle', 'doberman', 'skele', 'stain', 
-               'banded', 'snowflake', 'rat', 'hooded', 'ponit', 'spirit', 'wolf', 'dalmation', 'lynx', 'starpelt', 
+               'banded', 'snowflake', 'rat', 'hooded', 'spirit', 'wolf', 'dalmation', 'lynx', 'starpelt', 
                'sparkledalmation', 'sparkletabby', 'sparklespeckled', 'sparklelynx', 'falsesolid']
 
     pelt_length = ["short", "medium", "long"]
@@ -189,7 +188,7 @@ class Pelt():
     spotted = ["Speckled", "Rosette", "Snowflake", "Banded", "Dalmation"]
     plain = ["SingleColour", "TwoColour", "Smoke",  "Backed", "Ghost", "Doberman", 
             "Rat", "Wolf", "WolfBicolour", "FalseSolid", "FalseTwo"]
-    exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Ponit", "Lynx"]
+    exotic = ["Bengal", "Marbled", "Skele", "Stain", "Charcoal", "Hooded", "Lynx"]
     sparkle_cats = ["Spirit", "Starpelt", "SparkleTabby", "SparkleSpeckled", "SparkleDalmation",
             "SparkleLynx"]
     torties = ["Tortie", "Calico"]
@@ -260,18 +259,16 @@ class Pelt():
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO', 'PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'DAPPLED', 'HAWK', 
                     'FRECKLEMASK', 'MOTH', 'FRINGEKIT', 'SKITTY']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'REVERSEPOINT', 'PONIT', 
-    'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT']
+    'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT', 'WHITEPOINT']
     vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SHADOWSIGHT', 'BLACKVIT', 'BLACKVITTWO', 
     'BLACKMOON', 'BLACKPHANTOM', 'BLACKPOWDER', 'BLACKENED', 'BLACKSIGHT']
     white_sprites = [
         little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
     skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
-                'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'BLACKMANE', 'REDMANE', 
-                'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE', 'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'DARKSALMONMANE', 
-                'SALMONMANE', 'PEACHMANE', 'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 'BLUEMANE', 'LIGHTBLUEMANE']
-    albino_sprites = ['ALBINO', 'ALBINOWING', 'ALBINOMANE']
-    melanistic_sprites = ['MELANISTIC', 'MELANISTICWING', 'MELANISTICMANE'] 
+                'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
+    albino_sprites = ['ALBINO', 'ALBINOWING']
+    melanistic_sprites = ['MELANISTIC', 'MELANISTICWING'] 
     wing_sprites = ['WHITEWING', 'BLUEGREENWING', 'REDWING', 'PURPLEFADEWING', 'RAINBOWWING', 'SILVERWING',
                     'STRAKITWING', 'SONICWING', 'MEWWING', 'OLIVEWING', 'GREENWING', 'GREYWING', 'GREYFADEWING',
                     'BROWNFADEWING', 'PARROTWING', 'GOLDWING', 'LIGHTBROWNWING', 'BLACKWING']
@@ -931,17 +928,15 @@ class Pelt():
                         self.tortiepattern = choice(['speckled', 'banded'])
                     elif self.tortiebase in ["charcoal", "hooded"]:
                         self.tortiepattern = choice(['charcoal', 'hooded', 'spirit'])    
-                    elif self.tortiebase == "ponit":
-                        self.tortiepattern = 'ponit' 
                     elif self.tortiebase == "spirit":
-                        self.tortiepattern = random.choices([self.tortiebase, 'wolf', 'single', 'skele', 'ponit'], weights=[75, 15, 10, 4, 1], k=1)[0]
+                        self.tortiepattern = random.choices([self.tortiebase, 'wolf', 'single', 'skele'], weights=[75, 15, 10, 4, 1], k=1)[0]
                     else:
                         self.tortiepattern = random.choices([self.tortiebase, 'ghost', 'rat', 'skele', 'spirit'], weights=[93, 3, 3, 1, 1], k=1)[0]
 
                     # Ginger is often dupliselfed to increase its chances
                     if self.colour in ["WHITE", "SILVER", "BRONZE", "CADET", "PALEBOW", "TURQUOISE", "TIFFANY", 
                                                 "SHINYMEW", "SKY", "POWDERBLUE", "PUDDLE"]:
-                        self.tortiecolour = choice([ 'PALECREAM', 'CREAM', 'SAND', 'WOOD', 'PANTONE', 'SAMON', 'THISTLE', 'PETAL', 
+                        self.tortiecolour = choice(['PALECREAM', 'CREAM', 'SAND', 'WOOD', 'PANTONE', 'SAMON', 'THISTLE', 'PETAL', 
                                                     'MEW', 'CORAL', 'FLORAL', 'LIME', 'CHARTRUSE', 'LETTUCE', 'GRASS', 'MINT', 
                                                     'EMERALD', 'OLIVE'] + (Pelt.pride_colours * 2))
                     elif self.colour in ["GREY", "MARENGO", "BATTLESHIP", "BLUEGREY", "STEEL", "SLATE", "SAPPHIRE", "OCEAN", 
@@ -1122,7 +1117,7 @@ class Pelt():
             # safe then sorry.
             if not any(weights):
                 weights = [2, 1, 0, 0, 0]
-        elif self.name in ["Ponit", "Spirit", "Starpelt"] or self.tortiebase in ["Ponit", "Spirit", "Starpelt"]:
+        elif self.name in ["Spirit", "Starpelt"] or self.tortiebase in ["Spirit", "Starpelt"]:
             weights = [2, 1, 0, 0, 0]
             if not any(weights):
                 weights = [2, 1, 0, 0, 0]
@@ -1232,6 +1227,25 @@ class Pelt():
                 "deepocean": "blue",
                 "nighttime": "midnight"
             }
+            pattern_des = {
+                "Marbled": "c_n tabby",
+                "Mackerel": "c_n tabby",
+                "Classic": "c_n tabby",
+                "Agouti": "c_n ticked",
+                "Backed": "backed c_n",
+                "Sokoke": "c_n tabby",
+                "Charcoal": "charcoal c_n tabby",
+                "Ghost": "c_n tabby",
+                "Doberman": "c_n point",
+                "Skele": "c_n skeleton",
+                "Hooded": "charcoal c_n tabby",
+                "Spirit": "c_n spirit",
+                "WolfBicolour": "c_n wolf",
+                "SparkleTabby": "c_n tabby",
+                "SparkleSpeckled": "c_n speckled",
+                "SparkleDalmation": "c_n dalmation",
+                "SparkleLynx": "c_n lynx"            
+            }             
         else:
             renamed_colors = {
                 "ashbrown": "ash brown",
@@ -1254,29 +1268,26 @@ class Pelt():
                 "deepocean": "deep ocean",
                 "nighttime": "midnight"
             }
-
-        pattern_des = {
-            "Marbled": "c_n marbled tabby",
-            "Ticked": "c_n ticked tabby",
-            "Mackerel": "c_n mackerel tabby",
-            "Classic": "c_n classic tabby",
-            "Agouti": "c_n ticked tabby",
-            "Backed": "stripe backed c_n",
-            "Sokoke": "c_n sokoke tabby",
-            "Charcoal": "charcoal c_n tabby",
-            "Ghost": "c_n ghost tabby",
-            "Doberman": "c_n doberman point",
-            "Skele": "c_n skeleton",
-            "Hooded": "hooded charcoal c_n tabby",
-            "Ponit": "bleach point c_n",
-            "Spirit": "c_n ghostly spirit",
-            "WolfBicolour": "c_n painted wolf",
-            "SparkleTabby": "c_n sparkling tabby",
-            "SparkleSpeckled": "c_n sparkling speckled",
-            "SparkleDalmation": "c_n sparkling dalmation",
-            "SparkleLynx": "c_n sparkling lynx"
-            
-        }
+            pattern_des = {
+                "Marbled": "c_n marbled tabby",
+                "Ticked": "c_n ticked tabby",
+                "Mackerel": "c_n mackerel tabby",
+                "Classic": "c_n classic tabby",
+                "Agouti": "c_n ticked tabby",
+                "Backed": "stripe backed c_n",
+                "Sokoke": "c_n sokoke tabby",
+                "Charcoal": "charcoal c_n tabby",
+                "Ghost": "c_n ghost tabby",
+                "Doberman": "c_n doberman point",
+                "Skele": "c_n skeleton",
+                "Hooded": "hooded charcoal c_n tabby",
+                "Spirit": "c_n ghostly spirit",
+                "WolfBicolour": "c_n painted wolf",
+                "SparkleTabby": "c_n sparkling tabby",
+                "SparkleSpeckled": "c_n sparkling speckled",
+                "SparkleDalmation": "c_n sparkling dalmation",
+                "SparkleLynx": "c_n sparkling lynx"            
+            }
 
         # Start with determining the base color name. 
         color_name = str(cat.pelt.colour).lower()
@@ -1339,7 +1350,7 @@ class Pelt():
         elif cat.pelt.skin in Pelt.wings:
             color_name = 'winged ' + color_name 
 
-        if cat.pelt.points and cat.pelt.name not in ["Doberman", "Ponit"]:
+        if cat.pelt.points and cat.pelt.name not in ["Doberman"]:
             color_name = f"{color_name} point"
 
         if "white and white" in color_name:
@@ -1352,10 +1363,11 @@ class Pelt():
                     color_name = f"stained {cat.pelt.white_patches_tint}"
                 else:
                     color_name = f"stained white"
+
         # Now it's time for gender
-        if cat.genderalign in ["female", "trans female", "demifemale"]:
+        if cat.genderalign in ["female", "trans female", "demigirl"]:
             color_name = f"{color_name} molly"
-        elif cat.genderalign in ["male", "trans male", "demimale"]:
+        elif cat.genderalign in ["male", "trans male", "demiguy"]:
             color_name = f"{color_name} tom"
         else:
             color_name = f"{color_name} eli"

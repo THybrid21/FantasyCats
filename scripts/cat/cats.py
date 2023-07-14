@@ -280,11 +280,16 @@ class Cat():
             # trans cat chances
             trans_chance = randint(0, 50)
             nb_chance = randint(0, 75)
+            demi_chance = randint(0, 75)
             if self.gender == "female" and not self.status in ['newborn', 'kitten']:
                 if trans_chance == 1:
                     self.genderalign = "trans male"
                 elif nb_chance == 1:
                     self.genderalign = "nonbinary"
+                elif demi_chance == 1:
+                    self.genderalign = "demiguy"
+                elif demi_chance == 0:
+                    self.genderalign = "demigirl"
                 else:
                     self.genderalign = self.gender
             elif self.gender == "male" and not self.status in ['newborn', 'kitten']:
@@ -292,14 +297,18 @@ class Cat():
                     self.genderalign = "trans female"
                 elif nb_chance == 1:
                     self.genderalign = "nonbinary"
+                elif demi_chance == 1:
+                    self.genderalign = "demigirl"
+                elif demi_chance == 0:
+                    self.genderalign = "demiguy"
                 else:
                     self.genderalign = self.gender
             else:
                 self.genderalign = self.gender
 
-            """if self.genderalign in ["female", "trans female"]:
+            """if self.genderalign in ["female", "trans female", "demigirl"]:
                 self.pronouns = [self.default_pronouns[1].copy()]
-            elif self.genderalign in ["male", "trans male"]:
+            elif self.genderalign in ["male", "trans male", "demiguy"]:
                 self.pronouns = [self.default_pronouns[2].copy()]"""
 
             # APPEARANCE
