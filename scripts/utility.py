@@ -1363,20 +1363,22 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
 
         new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
 
-        # draw skin and scars2
+        # draw skin
         blendmode = pygame.BLEND_RGBA_MIN
         new_sprite.blit(sprites.sprites['skin' + cat.pelt.skin + cat_sprite], (0, 0))
-        
-        if not scars_hidden:
-            for scar in cat.pelt.scars:
-                if scar in cat.pelt.scars2:
-                    new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
 
         #draw dead affects
         if cat.df:
             new_sprite.blit(sprites.sprites['lineartdf' + cat_sprite], (0, 0))
         elif cat.dead:
             new_sprite.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
+        
+        #draw scars2
+        if not scars_hidden:
+            for scar in cat.pelt.scars:
+                if scar in cat.pelt.scars2:
+                    new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
+
 
         # draw accessories
         if not acc_hidden:        

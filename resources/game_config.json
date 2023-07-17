@@ -218,7 +218,7 @@
 	"pregnancy": {
 		"birth_cooldown": 6,
 		"primary_chance_mated": 45,
-		"primary_chance_unmated": 110,
+		"primary_chance_unmated": 90,
 		"random_affair_chance": 70,
 		"unmated_random_affair_chance": 20,
 		"tiny_litter_possibility": {"young adult": 18, "adult": 10, "senior adult": 15, "senior": 24},
