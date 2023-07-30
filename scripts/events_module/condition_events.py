@@ -84,7 +84,7 @@ class Condition_Events():
                 elif chosen_illness == "nightmares":
                     event_string = f"{cat.name} has been struggling recently with nightmares."
                 elif chosen_illness == "ear buzzing":
-                    event_string = f"{cat.name} has experiencing some buzzing in their ears."
+                    event_string = f"{cat.name} has been experiencing some buzzing in their ears."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 

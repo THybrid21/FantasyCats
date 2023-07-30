@@ -877,5 +877,61 @@
        "cat_skill": null,
        "other_cat_trait": null,
        "other_cat_skill": null
+    },    
+	{
+       "injury": "kittenspace",
+       "camp": "any",
+       "tags": [
+           "Newleaf",
+           "Greenleaf",
+           "Leaf-fall",
+           "Leaf-bare"
+       ],
+       "event_text": "After talking with the medicine cat about everything that's been on {PRONOUN/m_c/poss} mind, m_c's decided to try a little bit of regression in order to cope.",
+       "history_text": null,
+       "cat_trait": null,
+       "cat_skill": null,
+       "other_cat_trait": null,
+       "other_cat_skill": null
+    },    
+	{
+       "injury": "kittenspace",
+       "camp": "any",
+       "tags": [
+           "Newleaf",
+           "Greenleaf",
+           "Leaf-fall",
+           "Leaf-bare"
+       ],
+       "event_text": "m_c's been acting a little bit different than usual, much younger and more reliant on {PRONOUN/m_c/poss} clanmates.",
+       "history_text": null,
+       "cat_trait": [
+			"childish",
+			"insecure",
+			"nervous"
+	   ],
+       "cat_skill": null,
+       "other_cat_trait": null,
+       "other_cat_skill": null
+    },    
+	{
+       "injury": "otherspace",
+       "camp": "any",
+       "tags": [
+           "Newleaf",
+           "Greenleaf",
+           "Leaf-fall",
+           "Leaf-bare"
+       ],
+       "event_text": "After getting stressed out by taking on too many jobs at once m_c's started to act like something other than a cat.",
+       "history_text": null,
+       "cat_trait": [
+			"childish",
+			"insecure",
+			"nervous"
+	   ],
+       "cat_skill": null,
+       "other_cat_trait": null,
+       "other_cat_skill": null
     }
 ]

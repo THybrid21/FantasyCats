@@ -365,7 +365,7 @@ class Pelt():
         
         #First, convert from some old names that may be in white_patches. 
         if self.white_patches == 'POINTMARK':
-            self.white_patches = "SEALPOINT"
+            self.white_patches = "LIGHTPOINT"
         elif self.white_patches == 'PANTS2':
             self.white_patches = 'PANTSTWO'
         elif self.white_patches == 'ANY2':
@@ -799,6 +799,8 @@ class Pelt():
         elif chosen_pelt in ["Wolf", "WolfBicolour"]:
             if chosen_white:
                 chosen_pelt = "WolfBicolour"
+            else:
+                chosen_white = "Wolf"
         elif chosen_pelt == "Calico":
             if not chosen_white:
                 chosen_pelt = "Tortie"
@@ -1182,7 +1184,27 @@ class Pelt():
     def init_tint(self):
         """Sets tint for pelt and white patches"""
     # PELT TINT
-        self.tint = "none"
+        hit = random.randint(0, 20)
+        if hit <= 5:
+            possible_tints = Sprites.cat_tints["possible_tints"]["any"].copy()
+            self.tint = choice(possible_tints)  
+        elif hit <= 10:      
+            if self.colour in [Pelt.black_colours, Pelt.grey_colours, Pelt.white_colours, Pelt.blue_colours]:
+                possible_tints = Sprites.cat_tints["possible_tints"]["greyscale"].copy()
+                self.tint = choice(possible_tints)
+            elif self.colour in [Pelt.ginger_colours, Pelt.cream_colours, Pelt.purple_colours]:
+                possible_tints = Sprites.cat_tints["possible_tints"]["gingerscale"].copy()
+                self.tint = choice(possible_tints)
+            elif self.colour in [Pelt.brown_colours, Pelt.yellow_colours]:
+                possible_tints = Sprites.cat_tints["possible_tints"]["brownscale"].copy()
+                self.tint = choice(possible_tints)
+            elif self.colour in Pelt.green_colours:
+                possible_tints = Sprites.cat_tints["possible_tints"]["greenscale"].copy()
+                self.tint = choice(possible_tints)
+            elif self.colour in Pelt.pride_colours:
+                self.tint = "none"
+        else:
+            self.tint = "none"
 
     # WHITE PATCHES TINT
         if self.white_patches or self.points:
@@ -1312,7 +1334,7 @@ class Pelt():
             if short:
             # If using short, don't describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
                 if cat.pelt.colour in Pelt.black_colours + Pelt.grey_colours + Pelt.white_colours + Pelt.blue_colours and \
-                cat.pelt.tortiecolour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours + Pelt.blue_colours:
+                cat.pelt.tortiecolour in Pelt.black_colours + Pelt.grey_colours + Pelt.white_colours + Pelt.blue_colours:
                     color_name = "mottled"
                 elif cat.pelt.colour in Pelt.brown_colours + Pelt.yellow_colours and \
                 cat.pelt.tortiecolour in Pelt.brown_colours + Pelt.yellow_colours:
@@ -1335,10 +1357,10 @@ class Pelt():
                 
                 if cat.pelt.colour in Pelt.black_colours + Pelt.grey_colours + Pelt.white_colours + Pelt.blue_colours and \
                     cat.pelt.tortiecolour in Pelt.black_colours + Pelt.grey_colours + Pelt.white_colours + Pelt.blue_colours:
-                    color_name = "mottled"
+                    color_name = f"{color_name} mottled"
                 elif cat.pelt.colour in Pelt.brown_colours + Pelt.yellow_colours and \
                     cat.pelt.tortiecolour in Pelt.brown_colours + Pelt.yellow_colours:
-                    colour_name = "splattered"
+                    colour_name = f"{color_name} splattered"
                 else:
                     color_name = f"{color_name} {cat.pelt.name.lower()}"
 

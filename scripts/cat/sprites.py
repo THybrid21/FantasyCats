@@ -340,28 +340,31 @@ for a, i in enumerate(['SUSSKY', 'SUSOCEAN', 'SUSYELLOWGREEN', 'SUSWHITE', 'SUSB
     sprites.make_group('sus2', (a, 3), f'eyes2{i}')    
 
 # white patches
-for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'VAN', 'ANYTWO', 'SAVANNAH', 
-    'FADESPOTS', 'SKELEPATCH', 'HOODED', 'TOPCOVER', 'DAPPLEPAW', 'PEBBLESHINE', 'BUB']):
+for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'VAN', 'ANYTWO', 
+    'SAVANNAH', 'FADESPOTS', 'PEBBLESHINE', 'SKELEPATCH', 'HOODED', 'SKITTY', 'FRINGEKIT']):
     sprites.make_group('whitepatches', (a, 0), f'white{i}')
-for a, i in enumerate(['EXTRA', 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG', 'LIGHTSONG', 
-    'BLACKSTAR', 'PIEBALD', 'CURVED', 'PETAL', 'SHIBAINU', 'BEARD', 'OWL', 'BOWTIE']):
+for a, i in enumerate(['EXTRA', 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG',  
+    'LIGHTSONG', 'BLACKSTAR', 'PIEBALD', 'CURVED', 'PETAL', 'SHIBAINU', 'OWL']):
     sprites.make_group('whitepatches', (a, 1), f'white{i}')
 for a, i in enumerate(['TIP', 'FANCY', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO', 'GOATEE', 
-    'PAWS', 'MITAINE', 'BROKENBLAZE', 'SCOURGE', 'DIVA', 'WOODPECKER', 'BOOTS']):
+    'PAWS', 'MITAINE', 'BROKENBLAZE', 'SCOURGE', 'DIVA', 'BEARD']):
     sprites.make_group('whitepatches', (a, 2), f'white{i}')
 for a, i in enumerate(['TAIL', 'BLAZE', 'PRINCE', 'BIB', 'VEE', 'UNDERS', 'HONEY',
-    'FAROFA', 'DAMIEN', 'MISTER', 'BELLY', 'TAILTIP', 'TOES', 'MISS', 'COW', 'COWTWO']):
+    'FAROFA', 'DAMIEN', 'MISTER', 'BELLY', 'TAILTIP', 'TOES', 'TOPCOVER']):
     sprites.make_group('whitepatches', (a, 3), f'white{i}')
 for a, i in enumerate(
         ['APRON', 'CAPSADDLE', 'MASKMANTLE', 'SQUEAKS', 'STAR', 'TOESTAIL', 'RAVENPAW',
-        'PANTS', 'REVERSEPANTS', 'SKUNK', 'HALFWHITE', 'APPALOOSA', 'MOUSTACHE', 'REVERSEHEART']):
+        'PANTS', 'REVERSEPANTS', 'SKUNK', 'HALFWHITE', 'APPALOOSA', 'DAPPLEPAW']):
     sprites.make_group('whitepatches', (a, 4), f'white{i}')
 for a, i in enumerate(['HEART', 'LILTWO', 'GLASS', 'MOORISH', 'MAO', 'LUNA', 'CHESTSPECK', 
-    'WINGS', 'PAINTED', 'HEARTTWO', 'FRINGEKIT', 'SPARROW', 'VEST']):
-    sprites.make_group('whitepatches', (a, 5), 'white' + i)
-for a, i in enumerate(['VENUS', 'CHANCE', 'MOSSCLAW', 'DAPPLED', 'NIGHTMIST', 'HAWK',
-    'TWIST', 'RETSUKO', 'OKAPI', 'FRECKLEMASK', 'MOTH', 'SKITTY']):
+    'WINGS', 'PAINTED', 'HEARTTWO', 'WOODPECKER']):
+    sprites.make_group('whitepatches', (a, 5), f'white{i}')
+for a, i in enumerate(['BOOTS', 'MISS', 'COW', 'COWTWO', 'BUB', 'BOWTIE', 'MUSTACHE', 
+    'REVERSEHEART', 'SPARROW', 'VEST']):
     sprites.make_group('whitepatches', (a, 6), 'white' + i)
+for a, i in enumerate(['VENUS', 'CHANCE', 'MOSSCLAW', 'DAPPLED', 'NIGHTMIST', 'HAWK',
+    'TWIST', 'RETSUKO', 'OKAPI', 'FRECKLEMASK', 'MOTH']):
+    sprites.make_group('whitepatches', (a, 7), 'white' + i)	
 
 #Colourpoints
 for a, i in enumerate(['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT']):

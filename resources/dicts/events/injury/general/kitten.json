@@ -105,7 +105,14 @@
             "Leaf-bare"
         ],
         "event_text": "m_c play-fought a bit too hard and scraped {PRONOUN/m_c/self} up.",
-        "cat_trait": ["daring", "bouncy", "bullying", "impulsive", "noisy", "troublesome"],
+        "cat_trait": [
+			"daring", 
+			"bouncy", 
+			"bullying", 
+			"impulsive", 
+			"noisy", 
+			"troublesome"
+		],
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null
@@ -162,5 +169,103 @@
         "cat_skill": null,
         "other_cat_trait": null,
         "other_cat_skill": null
-    }
+    },
+    {
+        "injury": "overstimulation",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "Due to the loudness and chaos of the camp poor m_c's gotten incredibly overwhelmed.",
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "overstimulation",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "m_c has been withdrawing more and more from {PRONOUN/m_c/poss} clanmates, shaking and overwhelmed with the activity all around.",
+        "cat_trait": [
+			"quiet",
+			"insecure",
+			"nervous",
+			"lonesome"
+		],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "overstimulation",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "Because of {PRONOUN/m_c/poss} quieter nature, poor m_c's found it a bit difficult to find peace playing in the camp.",
+        "cat_trait": [
+			"quiet",
+			"insecure",
+			"nervous",
+			"lonesome"
+		],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "kittenspace",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "Upset by the fact that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not the baby anymore, m_c's been going out of {PRONOUN/m_c/poss} way to act even more like a kitten than {PRONOUN/m_c/subject} already {VERB/m_c/are/is}.",
+        "cat_trait": [
+			"attention-seeker",
+			"snuggly"
+		],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "kittenspace",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "From the sheer stress of the idea of growing up m_c's decided that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} ever want to imagine {PRONOUN/m_c/self} as any older than {PRONOUN/m_c/subject} {VERB/m_c/are/is} now.",
+        "cat_trait": [
+			"nervous",
+			"insecure"
+		],
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    },
+    {
+        "injury": "otherspace",
+        "tags": [
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "event_text": "Whenever m_c finds that {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} too overwhelmed {PRONOUN/m_c/subject} {VERB/m_c/find/finds} escape in becoming something not a cat.",
+        "cat_trait": null,
+        "cat_skill": null,
+        "other_cat_trait": null,
+        "other_cat_skill": null
+    }	
 ]

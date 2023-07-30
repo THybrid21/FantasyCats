@@ -739,6 +739,11 @@ class ProfileScreen(Screens):
         output += 'fur length: ' + the_cat.pelt.length
         # NEWLINE ----------
 
+        if the_cat.pelt.tint != "none":
+           output += "\n" 
+           output += 'tint: ' + the_cat.pelt.tint.lower()
+            # NEWLINE ----------
+
         # ACCESSORY
         if the_cat.pelt.accessory:
             output += "\n"
