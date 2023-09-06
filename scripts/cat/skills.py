@@ -204,7 +204,7 @@ class Skill():
         SkillPath.CLAIRVOYANT: "predicting",
         SkillPath.PROPHET: "prophesying",
         SkillPath.GHOST: "ghosts",
-        SkillPath.DARK: "Dark Forest"
+        SkillPath.DARK: "dark forest"
     }
     
     
