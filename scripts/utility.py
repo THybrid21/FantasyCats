@@ -1190,18 +1190,46 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
     
     # setting the cat_sprite (bc this makes things much easier)
     if not no_not_working and cat.not_working() and age != 'newborn' and game.config['cat_sprites']['sick_sprites']:
-        if age in ['kitten', 'adolescent']:
-            cat_sprite = str(19)
-        else:
-            cat_sprite = str(18)
-    elif cat.pelt.paralyzed and age != 'newborn':
-        if age in ['kitten', 'adolescent']:
-            cat_sprite = str(17)
-        else:
-            if cat.pelt.length == 'long':
-                cat_sprite = str(16)
+        if cat.pelt.paralyzed and cat.pelt.length == 'snat':
+            if cat.age in ['kitten', 'adolescent']:
+                cat_sprite = str(53)
             else:
-                cat_sprite = str(15)
+                cat_sprite = str(52)      
+        else:
+            if age in ['kitten', 'adolescent']:
+                if cat.pelt.length == 'snat':
+                    cat_sprite = str(51)
+                elif cat.pelt.length == 'bare':
+                    cat_sprite = str(101)
+                elif cat.pelt.length == 'skele':
+                    cat_sprite = str(104)
+                elif cat.pelt.length == 'wolf':
+                    cat_sprite = str(106)
+                else:
+                    cat_sprite = str(48)
+            else:
+                if cat.pelt.length == 'snat':
+                    cat_sprite = str(44)
+                elif cat.pelt.length == 'bare':
+                    cat_sprite = str(100)
+                elif cat.pelt.length == 'skele':
+                    cat_sprite = str(103)
+                elif cat.pelt.length == 'wolf':
+                    cat_sprite = str(105)
+                else:
+                    cat_sprite = str(47)
+    elif cat.pelt.paralyzed:
+        if age in ['newborn']:
+            if cat.pelt.length == 'snat':
+                cat_sprite = str(35)
+            if cat.pelt.length == 'skele':
+                cat_sprite = str(93)
+            cat_sprite = str(cat.pelt.cat_sprites['newborn'])                
+        elif age in ['kitten', 'adolescent']:
+            cat_sprite = str(cat.pelt.cat_sprites['para_young'])
+        else:
+             if age != 'newborn':
+                cat_sprite = str(cat.pelt.cat_sprites['para_adult'])
     else:
         if age == 'elder' and not game.config['fun']['all_cats_are_newborn']:
             age = 'senior'
@@ -1273,10 +1301,22 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
         if cat.pelt.vitiligo:
             new_sprite.blit(sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite], (0, 0))
 
+        if cat.pelt.albino:
+            new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
+        elif cat.pelt.melanistic:
+            new_sprite.blit(sprites.sprites['melanism' + cat.pelt.melanistic + cat_sprite], (0, 0))
+
         # draw eyes & scars1
         eyes = sprites.sprites['eyes' + cat.pelt.eye_colour + cat_sprite].copy()
         if cat.pelt.eye_colour2 != None:
             eyes.blit(sprites.sprites['eyes2' + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+        elif cat.pelt.eye_colour3 != None:
+            eyes.blit(sprites.sprites['eyes3' + cat.pelt.eye_colour3 + cat_sprite], (0, 0))
+
+        if cat.pelt.eye_lazy != None:
+            eyes.blit(sprites.sprites['eyes4' + cat.pelt.eye_lazy + cat_sprite], (0, 0))
+        if cat.pelt.eye_lazy2 != None:
+            eyes.blit(sprites.sprites['eyes5' + cat.pelt.eye_lazy2 + cat_sprite], (0, 0))
         new_sprite.blit(eyes, (0, 0))
 
         if not scars_hidden:
@@ -1290,25 +1330,19 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
         if game.settings['shaders'] and not dead:
             new_sprite.blit(sprites.sprites['shaders' + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(sprites.sprites['lighting' + cat_sprite], (0, 0))
+        if not dead:
+            new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
+        elif cat.df:
+            new_sprite.blit(sprites.sprites['lineartdf' + cat_sprite], (0, 0))
+        elif dead:
+            new_sprite.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
 
-        new_sprite.blit(sprites.sprites['lines' + cat_sprite], (0, 0))
-
-        # draw skin
+        # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
         new_sprite.blit(sprites.sprites['skin' + cat.pelt.skin + cat_sprite], (0, 0))
-
-        #draw dead affects
-        if cat.df:
-            new_sprite.blit(sprites.sprites['lineartdf' + cat_sprite], (0, 0))
-        elif cat.dead:
-            new_sprite.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
-        
-        #draw scars2
-        if not scars_hidden:
-            for scar in cat.pelt.scars:
-                if scar in cat.pelt.scars2:
-                    new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
-
+        for scar in cat.pelt.scars:
+            if scar in cat.pelt.scars2:
+                new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
 
         # draw accessories
         if not acc_hidden:        

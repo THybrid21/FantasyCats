@@ -264,28 +264,28 @@ class Pregnancy_Events():
 
         if thinking_amount[0] == "correct":
             if correct_guess == "small":
-                text = PREGNANT_STRINGS["litter_guess"][0]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
             elif correct_guess == "huge":
-                text = PREGNANT_STRINGS["litter_guess"][2]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]
             else:
-                text = PREGNANT_STRINGS["litter_guess"][1]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]
         elif thinking_amount[0] == "incorrect":
             if correct_guess == "small":
-                text = PREGNANT_STRINGS["litter_guess"][2 or 1]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2 or 1]
             if correct_guess == "huge":
-                text = PREGNANT_STRINGS["litter_guess"][0 or 1 or 4]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0 or 1 or 4]
             else:
-                text = PREGNANT_STRINGS["litter_guess"][0 or 2 or 4]
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0 or 2 or 4]
         elif thinking_amount[0] == "exact":
             thinking_amount = choice([amount - random.randint(1, 6), amount, amount + random.randint(1, 6)])
             if thinking_amount < 1:
                 thinking_amount = 1
             if thinking_amount == 1:
-                text = PREGNANT_STRINGS["litter_guess"][4]            
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][4]            
             else:
                 text = f"{cat.name} isn't entirely certain but they think they will have a litter of {thinking_amount} kittens."
         else:
-            text = PREGNANT_STRINGS["litter_guess"][3]
+            text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]
 
         if clan.game_mode != 'classic':
             try:
@@ -721,8 +721,6 @@ class Pregnancy_Events():
                         kit.pelt.scars.append('NOPAW')
                     elif kit.permanent_condition[condition] == 'born without a tail':
                         kit.pelt.scars.append('NOTAIL')
-                    elif kit.permanent_condition[condition] == "sphynxism":
-                        kit.pelt.length = 'sphynx'
                     elif kit.permanent_condition[condition] == "albinism":
                         kit.pelt.skin = "ALBINO"
                     elif kit.permanent_condition[condition] == "melanism":

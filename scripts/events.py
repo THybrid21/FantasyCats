@@ -2021,18 +2021,12 @@ class Events:
 
             if random.getrandbits(1):  # 50/50
                 if cat.gender == "male":
-                    trans_options = [
-                        "trans female",
-                        "demigirl"
-                    ]
-                    cat.genderalign = random.choices(trans_options)
+                    trans_options = ["trans female", "demigirl"]
+                    cat.genderalign = random.choice(trans_options)
                     # cat.pronouns = [cat.default_pronouns[1].copy()]
                 else:
-                    trans_options = [
-                        "trans male",
-                        "demiguy"
-                    ]
-                    cat.genderalign = random.choices(trans_options)
+                    trans_options = ["trans male", "demiguy"]
+                    cat.genderalign = random.choice(trans_options)
                     #cat.pronouns = [cat.default_pronouns[2].copy()]
             elif random.getrandbits(2):
                 if cat.gender == "male":

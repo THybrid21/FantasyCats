@@ -127,26 +127,12 @@ class Name():
         if colour is not None:
             if colour in Pelt.black_colours:
                 possible_prefix_categories.append(self.names_dict["black_prefixes"])
-            elif colour in Pelt.grey_colours:
-                possible_prefix_categories.append(self.names_dict["grey_prefixes"])
             elif colour in Pelt.white_colours:
                 possible_prefix_categories.append(self.names_dict["white_prefixes"])
             elif colour in Pelt.ginger_colours:
                 possible_prefix_categories.append(self.names_dict["ginger_prefixes"])
             elif colour in Pelt.brown_colours:
-                possible_prefix_categories.append(self.names_dict["brown_prefixes"])                   
-            elif colour in Pelt.cream_colours:
-                possible_prefix_categories.append(self.names_dict["cream_prefixes"])
-            elif colour in Pelt.yellow_colours:
-                possible_prefix_categories.append(self.names_dict["yellow_prefixes"])
-            elif colour in Pelt.green_colours:
-                possible_prefix_categories.append(self.names_dict["green_prefixes"])                    
-            elif colour in Pelt.blue_colours:
-                possible_prefix_categories.append(self.names_dict["blue_prefixes"])
-            elif colour in Pelt.purple_colours:
-                possible_prefix_categories.append(self.names_dict["purple_prefixes"])
-            elif colour in Pelt.pride_colours:
-                possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
+                possible_prefix_categories.append(self.names_dict["brown_prefixes"])  
         if possible_prefix_categories and not named_after_biome:
             prefix_category = random.choice(possible_prefix_categories)
             self.prefix = random.choice(prefix_category)
@@ -174,8 +160,6 @@ class Name():
                 possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
             elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
                 possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
-            elif pelt in Pelt.sparkle_cats or tortiebase in Pelt.sparkle_cats:
-                possible_suffix_categories.append(self.names_dict["sparkle_suffixes"])
             elif pelt in Pelt.torties:
                 possible_suffix_categories.append(self.names_dict["tortie_suffixes"])   
         if possible_suffix_categories:    

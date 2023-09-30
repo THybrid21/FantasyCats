@@ -807,6 +807,7 @@ class Cat():
     def describe_eyes(self):
         colour = str(self.pelt.eye_colour).lower()
         colour2 = str(self.pelt.eye_colour2).lower()
+        colour3 = str(self.pelt.eye_colour3).lower()
 
         if colour == 'palegreen':
             colour = 'pale green'
@@ -820,75 +821,58 @@ class Cat():
             colour = 'heather blue'
         elif colour == 'sunlitice':
             colour = 'sunlit ice'
-        elif colour == 'greenyellow' or colour == 'susgreenyellow':
+        elif colour == 'greenyellow':
             colour = 'green-yellow'
-        elif colour == 'lilacgrey' or colour == 'suspurplegrey':
+        elif colour == 'lilacgrey':
             colour = 'lilac grey'
-        elif colour in ['browntwo', 'susvisor', 'suspeanut', 'susbrown', 'susbrowntwo']:
+        elif colour == 'browntwo':
             colour = 'brown'   
-        elif colour in ['greytwo', 'susgrey', 'susgreengrey', 'susolivegrey', 'susbrowngrey', 
-            'susbluegrey']:
+        elif colour == 'greytwo':
             colour = 'grey' 
-        elif colour == 'yellowolive' or colour == 'susyellowgreen':
+        elif colour == 'yellowolive':
             colour = 'yellow-olive'            
-        elif colour == 'ambertwo' or colour == 'susamber':
+        elif colour == 'ambertwo':
             colour = 'bright amber'   
-        elif colour == 'mintchoc' or colour == 'susmintchoc':
+        elif colour == 'mintchoc':
             colour = 'mint-choc'
-        elif colour == 'chocmint' or colour == 'suschocmint':
+        elif colour == 'chocmint':
             colour = 'choc-mint'               
-        elif colour == 'monochrometwo' or colour == 'monochromethree':
+        elif colour in ['monochrometwo', 'monochromethree']:
             colour = 'monochrome'   
-        elif colour == 'poppypink':
+        elif colour == 'pinkpoppy':
             colour = 'pink poppy'   
-        elif colour == 'primaryb' or colour == 'primaryc':
+        elif colour in ['primaryb', 'primaryc']:
             colour = 'primary'   
-        elif colour in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
+        elif colour in ['chromeb', 'chromec']:
             colour = 'chrome'   
-        elif colour in ['rgbtwo', 'rgbthree', 'susrgb']:
-            colour = 'rgb'   
-        elif colour == 'susvisor':
-            colour = 'silver'     
-        elif colour == 'susnacre':
-            colour = 'nacre'   
-        elif colour == 'susnight':
-            colour = 'night'   
-        elif colour == 'susyellow' or colour == 'susbright':
-            colour = 'yellow'   
-        elif colour == 'susgoldgreen':
-            colour = 'gold-green'   
-        elif colour == 'suspoppy':
-            colour = 'poppy'   
-        elif colour in ['susgreen', 'susemerald', 'susjade']:
-            colour = 'green'   
-        elif colour == 'susolive':
-            colour = 'olive'   
-        elif colour == 'susgold':
-            colour = 'gold'   
-        elif colour in ['suscrimson', 'susscarlet']:
-            colour = 'crimson' 
-        elif colour in ['susgrape', 'susviolet']:
-            colour = 'purple' 
-        elif colour == 'susstrawberry':
-            colour = 'strawberry'   
-        elif colour == 'suspink' or colour == 'susmelon':
-            colour = 'pink'   
-        elif colour == 'susindigo':
-            colour = 'indigo'   
-        elif colour in ['susblue', 'susbluetwo', 'suscobolt']:
-            colour = 'cobolt' 
-        elif colour in ['susturquoise', 'sussky']:
-            colour = 'sky' 
-        elif colour == 'susocean':
-            colour = 'ocean'   
-        elif colour == 'suswhite':
-            colour = 'white'   
-        elif colour == 'susblack':
-            colour = 'black'   
-        elif colour == 'susbeach':
-            colour = 'beach'   
-        elif colour == 'susruben':
-            colour = 'ruben'   
+        elif colour in ['rgbtwo', 'rgbthree']:
+            colour = 'rgb'     
+        elif colour == 'violetpink':
+            colour = 'violet'  
+        elif colour == 'yellowpink':
+            colour = 'yellow'
+        elif colour == 'bluepink':
+            colour = 'blue'
+        elif colour == 'mintpink':
+            colour = 'mint'
+        elif colour == 'ghostpink':
+            colour = 'ghost'
+        elif colour == 'sunshadow':
+            colour = 'sun shadow'
+        elif colour == 'darkcyan':
+            colour = 'dark cyan'
+        elif colour == 'deepblue':
+            colour = 'deep blue'
+        elif colour == 'greengrey':
+            colour = 'green-grey'
+        elif colour == 'greycoal':
+            colour = 'coal'
+        elif colour == 'fauxvoid':
+            colour = 'faux void'
+        elif colour in ['lightpoppy', 'darkpoppy']:
+            colour = 'poppy'
+        elif colour == 'sunsetgrass':
+            colour = 'sunset grass'
         if self.pelt.eye_colour2:
             if colour2 == 'palegreen':
                 colour2 = 'pale green'
@@ -902,76 +886,126 @@ class Cat():
                 colour2 = 'heather blue'
             elif colour2 == 'sunlitice':
                 colour2 = 'sunlit ice'
-            elif colour2 == 'greenyellow' or colour2 == 'susgreenyellow':
+            elif colour2 == 'greenyellow':
                 colour2 = 'green-yellow'
-            elif colour2 == 'lilacgrey' or colour2 == 'suspurplegrey':
+            elif colour2 == 'lilacgrey':
                 colour2 = 'lilac grey'
-            elif colour2 in ['browntwo', 'susvisor', 'suspeanut', 'susbrown', 'susbrowntwo']:
+            elif colour2 == 'browntwo':
                 colour2 = 'brown'   
-            elif colour2 in ['greytwo', 'susgrey', 'susgreengrey', 'susolivegrey', 'susbrowngrey', 
-                'susbluegrey']:
+            elif colour2 == 'greytwo':
                 colour2 = 'grey' 
-            elif colour2 == 'yellowolive' or colour2 == 'susyellowgreen':
+            elif colour2 == 'yellowolive':
                 colour2 = 'yellow-olive'            
-            elif colour2 == 'ambertwo' or colour2 == 'susamber':
+            elif colour2 == 'ambertwo':
                 colour2 = 'bright amber'   
-            elif colour2 == 'mintchoc' or colour2 == 'susmintchoc':
+            elif colour2 == 'mintchoc':
                 colour2 = 'mint-choc'
-            elif colour2 == 'chocmint' or colour2 == 'suschocmint':
+            elif colour2 == 'chocmint':
                 colour2 = 'choc-mint'               
-            elif colour2 == 'monochrometwo' or colour2 == 'monochromethree':
+            elif colour2 in ['monochrometwo', 'monochromethree']:
                 colour2 = 'monochrome'   
-            elif colour2 == 'poppypink':
+            elif colour2 == 'pinkpoppy':
                 colour2 = 'pink poppy'   
-            elif colour2 == 'primaryb' or colour2 == 'primaryc':
+            elif colour2 in ['primaryb', 'primaryc']:
                 colour2 = 'primary'   
-            elif colour2 in ['chromeb', 'chromec', 'susdarkchrome', 'suschrome']:
+            elif colour2 in ['chromeb', 'chromec']:
                 colour2 = 'chrome'   
-            elif colour2 in ['rgbtwo', 'rgbthree', 'susrgb']:
-                colour2 = 'rgb'   
-            elif colour2 == 'susvisor':
-                colour2 = 'silver'     
-            elif colour2 == 'susnacre':
-                colour2 = 'nacre'   
-            elif colour2 == 'susnight':
-                colour2 = 'night'   
-            elif colour2 == 'susyellow' or colour2 == 'susbright':
-                colour2 = 'yellow'   
-            elif colour2 == 'susgoldgreen':
-                colour2 = 'gold-green'   
-            elif colour2 == 'suspoppy':
-                colour2 = 'poppy'   
-            elif colour2 in ['susgreen', 'susemerald', 'susjade']:
-                colour2 = 'green'   
-            elif colour2 == 'susolive':
-                colour2 = 'olive'   
-            elif colour2 == 'susgold':
-                colour2 = 'gold'   
-            elif colour2 in ['suscrimson', 'susscarlet']:
-                colour2 = 'crimson' 
-            elif colour2 in ['susgrape', 'susviolet']:
-                colour2 = 'purple' 
-            elif colour2 == 'susstrawberry':
-                colour2 = 'strawberry'   
-            elif colour2 == 'suspink' or colour2 == 'susmelon':
-                colour2 = 'pink'   
-            elif colour2 == 'susindigo':
-                colour2 = 'indigo'   
-            elif colour2 in ['susblue', 'susbluetwo', 'suscobolt']:
-                colour2 = 'cobolt' 
-            elif colour2 in ['susturquoise', 'sussky']:
-                colour2 = 'sky' 
-            elif colour2 == 'susocean':
-                colour2 = 'ocean'   
-            elif colour2 == 'suswhite':
-                colour2 = 'white'   
-            elif colour2 == 'susblack':
-                colour2 = 'black'   
-            elif colour2 == 'susbeach':
-                colour2 = 'beach'   
-            elif colour2 == 'susruben':
-                colour2 = 'ruben'   
+            elif colour2 in ['rgbtwo', 'rgbthree']:
+                colour2 = 'rgb'     
+            elif colour2 == 'violetpink':
+                colour2 = 'violet'  
+            elif colour2 == 'yellowpink':
+                colour2 = 'yellow'
+            elif colour2 == 'bluepink':
+                colour2 = 'blue'
+            elif colour2 == 'mintpink':
+                colour2 = 'mint'
+            elif colour2 == 'ghostpink':
+                colour2 = 'ghost'
+            elif colour2 == 'sunshadow':
+                colour2 = 'sun shadow'
+            elif colour2 == 'darkcyan':
+                colour2 = 'dark cyan'
+            elif colour2 == 'deepblue':
+                colour2 = 'deep blue'
+            elif colour2 == 'greengrey':
+                colour2 = 'green-grey'
+            elif colour2 == 'greycoal':
+                colour2 = 'coal'
+            elif colour2 == 'fauxvoid':
+                colour2 = 'faux void'
+            elif colour2 in ['lightpoppy', 'darkpoppy']:
+                colour2 = 'poppy'
+            elif colour2 == 'sunsetgrass':
+                colour2 = 'sunset grass'
             colour = colour + ' and ' + colour2
+        elif self.pelt.eye_colour3:
+            if colour3 == 'palegreen':
+                colour3 = 'pale green'
+            elif colour3 == 'darkblue':
+                colour3 = 'dark blue'
+            elif colour3 == 'paleblue':
+                colour3 = 'pale blue'
+            elif colour3 == 'paleyellow':
+                colour3 = 'pale yellow'
+            elif colour3 == 'heatherblue':
+                colour3 = 'heather blue'
+            elif colour3 == 'sunlitice':
+                colour3 = 'sunlit ice'
+            elif colour3 == 'greenyellow':
+                colour3 = 'green-yellow'
+            elif colour3 == 'lilacgrey':
+                colour3 = 'lilac grey'
+            elif colour3 == 'browntwo':
+                colour3 = 'brown'   
+            elif colour3 == 'greytwo':
+                colour3 = 'grey' 
+            elif colour3 == 'yellowolive':
+                colour3 = 'yellow-olive'            
+            elif colour3 == 'ambertwo':
+                colour3 = 'bright amber'   
+            elif colour3 == 'mintchoc':
+                colour3 = 'mint-choc'
+            elif colour3 == 'chocmint':
+                colour3 = 'choc-mint'               
+            elif colour3 in ['monochrometwo', 'monochromethree']:
+                colour3 = 'monochrome'   
+            elif colour3 == 'pinkpoppy':
+                colour3 = 'pink poppy'   
+            elif colour3 in ['primaryb', 'primaryc']:
+                colour3 = 'primary'   
+            elif colour3 in ['chromeb', 'chromec']:
+                colour3 = 'chrome'   
+            elif colour3 in ['rgbtwo', 'rgbthree']:
+                colour3 = 'rgb'     
+            elif colour3 == 'violetpink':
+                colour3 = 'violet'  
+            elif colour3 == 'yellowpink':
+                colour3 = 'yellow'
+            elif colour3 == 'bluepink':
+                colour3 = 'blue'
+            elif colour3 == 'mintpink':
+                colour3 = 'mint'
+            elif colour3 == 'ghostpink':
+                colour3 = 'ghost'
+            elif colour3 == 'sunshadow':
+                colour3 = 'sun shadow'
+            elif colour3 == 'darkcyan':
+                colour3 = 'dark cyan'
+            elif colour3 == 'deepblue':
+                colour3 = 'deep blue'
+            elif colour3 == 'greengrey':
+                colour3 = 'green-grey'
+            elif colour3 == 'greycoal':
+                colour3 = 'coal'
+            elif colour3 == 'fauxvoid':
+                colour3 = 'faux void'
+            elif colour3 in ['lightpoppy', 'darkpoppy']:
+                colour3 = 'poppy'
+            elif colour3 == 'sunsetgrass':
+                colour3 = 'sunset grass'
+            colour = 'half ' + colour + ' and half ' + colour3
+
         return colour
 
     def convert_history(self, died_by, scar_events):
@@ -1527,12 +1561,12 @@ class Cat():
                 self.leader_death_heal = True
                 game.clan.leader_lives -= 1
                 if game.clan.leader_lives > 0:
-                    text = f"{self.name} lost a life to {illness}."
+                    text = f"{self.name} lost a life to their {illness}."
                     # game.health_events_list.append(text)
                     # game.birth_death_events_list.append(text)
                     game.cur_events_list.append(Single_Event(text, ["birth_death", "health"], game.clan.leader.ID))
                 elif game.clan.leader_lives <= 0:
-                    text = f"{self.name} lost their last life to {illness}."
+                    text = f"{self.name} lost their last life to their {illness}."
                     # game.health_events_list.append(text)
                     # game.birth_death_events_list.append(text)
                     game.cur_events_list.append(Single_Event(text, ["birth_death", "health"], game.clan.leader.ID))
@@ -1863,8 +1897,8 @@ class Cat():
         self.get_injured(injury, event_triggered=True)
 
     def congenital_condition(self, cat):
-        possible_conditions = []
 
+        possible_conditions = []
         for condition in PERMANENT:
             possible = PERMANENT[condition]
             if possible["congenital"] in ['always', 'sometimes']:
@@ -1876,18 +1910,45 @@ class Cat():
             cat.pelt.scars.append('NOPAW')
         elif new_condition == "born without a tail":
             cat.pelt.scars.append('NOTAIL')
-        elif new_condition == "sphynxism":
-            cat.pelt.skin = choice(Pelt.sphynx)
-            cat.pelt.length = 'short'
-            if cat.pelt.skin == "ALBINOSPHYNX":
-                self.get_permanent_condition("albinism", born_with=True)
-            elif cat.pelt.skin == "MELANISTICSPHYNX":
-                self.get_permanent_condition("melanism", born_with=True)
         elif new_condition == "albinism":
-            cat.pelt.skin = choice(Pelt.albino_sprites)
+            cat.pelt.skin = "ALBINO"
+            cat.pelt.albino = choice(Pelt.albinism)
+            cat.pelt.eye_colour = choice(Pelt.albino_eyes)
+            if cat.pelt.eye_colour2 != None:
+                possible_eyes = Pelt.albino_eyes.copy()
+                possible_eyes.remove(self.pelt.eye_colour)
+                cat.pelt.eye_colour2 = choice(possible_eyes)                  
+            elif cat.pelt.eye_colour3 != None:
+                possible_eyes = Pelt.albino_eyes.copy()
+                possible_eyes.remove(self.pelt.eye_colour)
+                cat.pelt.eye_colour3 = choice(possible_eyes) 
+            if cat.pelt.eye_lazy != None:
+                if cat.pelt.eye_colour2 != None:
+                    cat.pelt.eye_lazy = self.eye_colour2
+                else: 
+                    cat.pelt.eye_lazy = self.eye_colour
+                if self.eye_colour3 != None:
+                    cat.pelt.eye_lazy2 = self.eye_colour3
         elif new_condition == "melanism":
-            cat.pelt.skin = choice(Pelt.melanistic_sprites)
-            
+            cat.pelt.skin = "MELANISTIC"
+            cat.pelt.melanistic = choice(Pelt.melanism)
+            cat.pelt.eye_colour = choice(Pelt.melanistic_eyes)
+            if cat.pelt.eye_colour2 != None:
+                possible_eyes = Pelt.melanistic_eyes.copy()
+                possible_eyes.remove(self.pelt.eye_colour)
+                cat.pelt.eye_colour2 = choice(possible_eyes)
+            elif cat.pelt.eye_colour3 != None:
+                possible_eyes = Pelt.melanistic_eyes.copy()
+                possible_eyes.remove(self.pelt.eye_colour)
+                cat.pelt.eye_colour3 = choice(possible_eyes)  
+            if cat.pelt.eye_lazy != None:
+                if cat.pelt.eye_colour2 != None:
+                    cat.pelt.eye_lazy = self.eye_colour2
+                else: 
+                    cat.pelt.eye_lazy = self.eye_colour
+                if self.eye_colour3 != None:
+                    cat.pelt.eye_lazy2 = self.eye_colour3
+
         self.get_permanent_condition(new_condition, born_with=True)
 
     def get_permanent_condition(self, name, born_with=False, event_triggered=False):
@@ -3055,17 +3116,24 @@ class Cat():
                 "pelt_name": self.pelt.name,
                 "pelt_color": self.pelt.colour,
                 "pelt_length": self.pelt.length,
+                "sprite_newborn": self.pelt.cat_sprites['newborn'],
                 "sprite_kitten": self.pelt.cat_sprites['kitten'],
                 "sprite_adolescent": self.pelt.cat_sprites['adolescent'],
                 "sprite_adult": self.pelt.cat_sprites['adult'],
                 "sprite_senior": self.pelt.cat_sprites['senior'],
+                "sprite_para_young": self.pelt.cat_sprites['para_young'],
                 "sprite_para_adult": self.pelt.cat_sprites['para_adult'],
                 "eye_colour": self.pelt.eye_colour,
                 "eye_colour2": self.pelt.eye_colour2 if self.pelt.eye_colour2 else None,
+                "eye_colour3": self.pelt.eye_colour3 if self.pelt.eye_colour3 else None,
+                "eye_lazy": self.pelt.eye_lazy if self.pelt.eye_lazy else None,
+                "eye_lazy2": self.pelt.eye_lazy2 if self.pelt.eye_lazy2 else None,
                 "reverse": self.pelt.reverse,
                 "white_patches": self.pelt.white_patches,
                 "vitiligo": self.pelt.vitiligo,
                 "points": self.pelt.points,
+                "albino": self.pelt.albino,
+                "melanistic": self.pelt.melanistic,
                 "white_patches_tint": self.pelt.white_patches_tint,
                 "pattern": self.pelt.pattern,
                 "tortie_base": self.pelt.tortiebase,

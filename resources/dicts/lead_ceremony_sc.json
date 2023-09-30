@@ -1079,7 +1079,7 @@
       "life_giving": [
         {
           "text": "Finally, r_c steps forward. There is a conflicted expression on {PRONOUN/r_c/poss} face when {PRONOUN/r_c/subject} {VERB/r_c/step/steps} forward and {VERB/r_c/stare/stares} into m_c's eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} a life for [virtue].",
-          "virtue": ["endurance in the face of hardship", "knowing when to fight and when to choose peace", "leadership through the darkest times", "loyalty to {PRONOUN/m_c/poss} Clan", "the strength to overcome {PRONOUN/m_c/poss} fears", "tireless energy"]
+          "virtue": ["endurance in the face of hardship", "knowing when to fight and when to choose peace", "leadership through the darkest times", "loyalty to the Clan", "the strength to overcome fears", "tireless energy"]
         }
       ]
     },

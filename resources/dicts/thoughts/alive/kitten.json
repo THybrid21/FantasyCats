@@ -424,22 +424,23 @@
                 "echoing memory"
             ]
         }
-    },	
+    },
     {
         "id": "disruptedsenses_kit",
         "thoughts": [
             "Complains loudly about how the world hates {PRONOUN/m_c/object}",
-			"Cries about how the world is too much",
-			"Is overwhelmed by all the sensations around {PRONOUN/m_c/object}",
-			"Wants to snuggle but doesn't like the feeling of touch",
-			"Doesn't like how much of the world there is"
-            ],
+            "Cries about how the world is too much",
+            "Is overwhelmed by all the sensations around {PRONOUN/m_c/object}",
+            "Wants to snuggle but doesn't like the feeling of touch",
+            "Doesn't like how much of the world there is"
+        ],
         "perm_conditions": {
             "m_c": [
                 "disrupted senses"
             ]
-        },
-		
+        }
+    },
+    {
         "id": "lonesome_kit",
         "thoughts": [
             "Is feeling alone",
@@ -463,7 +464,7 @@
         "thoughts": [
             "Wakes r_c in the middle of the night to ask a question about snails",
             "Wakes up early to say hello to the dawn patrol",
-            "Follows r_c around so closely that {PRONOUN/m_c/subject} step on {PRONOUN/r_c/poss} paw",
+            "Follows r_c around so closely that {PRONOUN/m_c/subject} {VERB/m_c/step/steps} on {PRONOUN/r_c/poss} paw",
             "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally says hello back",
             "Is showing everycat the bug {PRONOUN/m_c/subject} caught earlier",
             "Is in r_c's way... again",

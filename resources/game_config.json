@@ -236,14 +236,14 @@
 		]
 	},
 	"cat_generation": {
-		"base_permanent_condition": 25,
+		"base_permanent_condition": 2,
 		"base_male_tortie": 18,
 		"base_female_tortie": 9,
 		"base_heterochromia": 120,
 		"direct_inheritance": 15,
 		"wildcard_tortie": 10,
-		"vit_chance": 10,
-		"random_point_chance": 5
+		"vit_chance": 30,
+		"random_point_chance": 25
 	},
 	"cat_name_controls": {
 		"always_name_after_appearance": false,
@@ -335,7 +335,7 @@
 		"war_injury_modifier": 100
 	},
 	"clan_creation": {
-		"rerolls": 5,
+		"rerolls": -1,
 		"comment": "Set this to -1 for it to be infinite"
 	},
 	"graduation": {

@@ -116,8 +116,8 @@ class Sprites():
         # if anyone changes lineart for whatever reason update this
         if isinstance(self.size, int):
             pass
-        elif width / 3 == height / 7:
-            self.size = width / 3
+        elif width / 9 == height / 12:
+            self.size = width / 9
         else:
             self.size = 50 # default, what base clangen uses
             print(f"lineart.png is not 3x7, falling back to {self.size}")
@@ -126,14 +126,17 @@ class Sprites():
         del width, height # unneeded
 
         for x in [
-            'lineart', 'singlecolours', 'speckledcolours', 'tabbycolours',
-            'whitepatches', 'eyes', 'eyes2', 'eyes3', 'eyes4', 'eyes5', 'skin', 'scars', 'missingscars',
+            'lineart', 'singlecolours', 'singlepride', 'speckledcolours', 'tabbycolours',
+            'whitepatches', 'eyes', 'eyes2', 'eyes3', 'eyes4', 'eyes5', 
+            'skin', 'scars', 'missingscars',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
             'bengalcolours', 'marbledcolours', 'rosettecolours', 'smokecolours', 'tickedcolours', 
             'mackerelcolours', 'classiccolours', 'sokokecolours', 'agouticolours', 'singlestripecolours', 
             'shadersnewwhite', 'lineartdead', 'tortiepatchesmasks', 
             'medcatherbs', 'lineartdf', 'lightingnew', 'fademask',
-            'fadestarclan', 'fadedarkforest'
+            'fadestarclan', 'fadedarkforest',
+            
+            'albinism', 'melanism', 'hybrideyes', 'hybrideyes2', 'hybrideyes3', 'hybrideyes4', 'hybrideyes5'
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -165,12 +168,47 @@ class Sprites():
             self.make_group('eyes5', (a, 0), f'eyes5{i}')
         for a, i in enumerate(
                 ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER',
-                'PALEYELLOW', 'GOLD', 'GREENYELLOW']):
+                'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'SUNSET', 'GHOST', 'VOID']):
             self.make_group('eyes', (a, 1), f'eyes{i}')
             self.make_group('eyes2', (a, 1), f'eyes2{i}')
             self.make_group('eyes3', (a, 1), f'eyes3{i}')
             self.make_group('eyes4', (a, 1), f'eyes4{i}')
             self.make_group('eyes5', (a, 1), f'eyes5{i}')
+        ##Hybrid Custom Eyes
+        for a, i in enumerate(
+                ['POPPY', 'CRIMSON', 'RUBY', 'PINKPOPPY', 'BROWN', 'BROWNTWO', 
+					'PEANUT', 'CHOCMINT', 'MINTCHOC', 'MINT', 'JADE', 'GRASS']):
+            self.make_group('hybrideyes', (a, 0), f'eyes{i}')
+            self.make_group('hybrideyes2', (a, 0), f'eyes2{i}')
+            self.make_group('hybrideyes3', (a, 0), f'eyes3{i}')
+            self.make_group('hybrideyes4', (a, 0), f'eyes4{i}')
+            self.make_group('hybrideyes5', (a, 0), f'eyes5{i}')
+        for a, i in enumerate(
+                ['STRAWBERRY', 'VIOLET', 'LILAC', 'GRAPE', 'INDIGO', 'COBOLT',
+					'AZURE', 'OCEAN', 'DEPTHS', 'SKY', 'BEACH', 'SUNGRASS']):
+            self.make_group('hybrideyes', (a, 1), f'eyes{i}')
+            self.make_group('hybrideyes2', (a, 1), f'eyes2{i}')
+            self.make_group('hybrideyes3', (a, 1), f'eyes3{i}')
+            self.make_group('hybrideyes4', (a, 1), f'eyes4{i}')
+            self.make_group('hybrideyes5', (a, 1), f'eyes5{i}')			
+        for a, i in enumerate(
+                ['WHITE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE', 
+                    'LILACGREY', 'GREYTWO', 'GREYCOAL', 'FAUXVOID', 'ASPEN', 
+                    'GREENGREY', 'ECTOPLASM', 'YELLOWOLIVE']):
+            self.make_group('hybrideyes', (a, 2), f'eyes{i}')
+            self.make_group('hybrideyes2', (a, 2), f'eyes2{i}')
+            self.make_group('hybrideyes3', (a, 2), f'eyes3{i}')
+            self.make_group('hybrideyes4', (a, 2), f'eyes4{i}')
+            self.make_group('hybrideyes5', (a, 2), f'eyes5{i}')			
+        for a, i in enumerate(
+                ['AMBERTWO', 'SUNSHINE', 'PYRITE', 'PRIMARY', 'PRIMARYB', 
+                    'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RGB', 
+                    'RGBTWO', 'RGBTHREE']):
+            self.make_group('hybrideyes', (a, 3), f'eyes{i}')
+            self.make_group('hybrideyes2', (a, 3), f'eyes2{i}')
+            self.make_group('hybrideyes3', (a, 3), f'eyes3{i}')
+            self.make_group('hybrideyes4', (a, 3), f'eyes4{i}')
+            self.make_group('hybrideyes5', (a, 3), f'eyes5{i}')			
 
         # white patches
         for a, i in enumerate(['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANYTWO',
@@ -205,6 +243,32 @@ class Sprites():
         for a, i in enumerate(['BULLSEYE']):
             self.make_group('whitepatches', (a, 8), 'white' + i)
 
+        ##Albinism + Melanism Sheets
+        for a, i in enumerate(
+                ['FLATALBINO', 'REDALBINO', 'PINKALBINO', 'VIOLETALBINO', 'BLUEALBINO', 'GREENALBINO',
+                    'YELLOWALBINO']):
+            self.make_group('albinism', (a, 0), f'albinism{i}')     
+        for a, i in enumerate(
+                ['PINK', 'VIOLETPINK', 'YELLOWPINK', 'CYANPINK', 'BLUEPINK', 'MINTPINK', 'NACRE', 
+                    'GHOSTPINK', 'LIGHTPOPPY', 'SUNGRASS']):
+            self.make_group('albinism', (a, 1), f'eyes' + i)
+            self.make_group('albinism', (a, 2), f'eyes2{i}')
+            self.make_group('albinism', (a, 3), f'eyes3{i}')
+            self.make_group('albinism', (a, 4), f'eyes4{i}')
+            self.make_group('albinism', (a, 5), f'eyes5{i}')	
+        for a, i in enumerate(
+                ['FLATMELANISTIC', 'REDMELANISTIC', 'PINKMELANISTIC', 'VIOLETMELANISTIC', 'BLUEMELANISTIC',
+                    'GREENMELANISTIC', 'YELLOWMELANISTIC']):
+            self.make_group('melanism', (a, 0), f'melanism{i}')    
+        for a, i in enumerate(
+                ['RUBEN', 'DUSK', 'SUNSHADOW', 'DARKCYAN', 'DEEPBLUE', 'FERN', 'NIGHT',  'BLACKHOLE', 
+                    'DARKPOPPY', 'SUNSETGRASS']):
+            self.make_group('melanism', (a, 1), f'eyes' + i)
+            self.make_group('melanism', (a, 2), f'eyes2{i}')
+            self.make_group('melanism', (a, 3), f'eyes3{i}')
+            self.make_group('melanism', (a, 4), f'eyes4{i}')
+            self.make_group('melanism', (a, 5), f'eyes5{i}')	
+
         # single (solid)
         for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
             self.make_group('singlecolours', (a, 0), f'single{i}')
@@ -212,6 +276,14 @@ class Sprites():
             self.make_group('singlecolours', (a, 1), f'single{i}')
         for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
             self.make_group('singlecolours', (a, 2), f'single{i}')
+        for a, i in enumerate(['DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 
+            'PAN']):
+            sprites.make_group('singlepride', (a, 0), f'single{i}')
+        for a, i in enumerate(['DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 
+            'BISEX', 'GLASS']):
+            sprites.make_group('singlepride', (a, 1), f'single{i}')
+        for a, i in enumerate(['POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW']):
+            sprites.make_group('singlepride', (a, 2), f'single{i}')
         # tabby
         for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
             self.make_group('tabbycolours', (a, 0), f'tabby{i}')
