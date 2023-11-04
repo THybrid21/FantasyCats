@@ -99,7 +99,7 @@ class Sprites():
         # if anyone changes lineart for whatever reason update this
         if isinstance(self.size, int):
             pass
-        elif width / 9 == height / 12:
+        elif width / 9 == height / 18:
             self.size = width / 9
         else:
             self.size = 50 # default, what base clangen uses
@@ -109,7 +109,7 @@ class Sprites():
         del width, height # unneeded
 
         for x in [
-            'lineart', 'singlecolours', 'singlepride', 'speckledcolours', 'tabbycolours',
+            'lineart', 'singlecolours', 'speckledcolours', 'tabbycolours',
             'whitepatches', 'eyes', 'eyes2', 'eyes3', 'eyes4', 'eyes5', 
             'skin', 'scars', 'missingscars',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
@@ -264,14 +264,6 @@ class Sprites():
             self.make_group('singlecolours', (a, 1), f'single{i}')
         for a, i in enumerate(['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']):
             self.make_group('singlecolours', (a, 2), f'single{i}')
-        for a, i in enumerate(['DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 
-            'PAN']):
-            sprites.make_group('singlepride', (a, 0), f'single{i}')
-        for a, i in enumerate(['DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 
-            'BISEX', 'GLASS']):
-            sprites.make_group('singlepride', (a, 1), f'single{i}')
-        for a, i in enumerate(['POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW']):
-            sprites.make_group('singlepride', (a, 2), f'single{i}')
         # tabby
         for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK']):
             self.make_group('tabbycolours', (a, 0), f'tabby{i}')

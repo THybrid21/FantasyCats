@@ -118,15 +118,13 @@ class Pelt():
     single_colours = [
         'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
         'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE', 'DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 
-        'PAN', 'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 
-        'POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW'
+        'CHOCOLATE'
     ]
     ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']
     black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK']
     white_colours = ['WHITE', 'PALEGREY', 'SILVER']
     brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
-    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours, pride_colours]
+    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours]
     
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
@@ -528,22 +526,20 @@ class Pelt():
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
         # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-        weights = [0, 0, 0, 0, 0]
+        weights = [0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.ginger_colours:
-                add_weight = (40, 0, 0, 10, 10)
+                add_weight = (40, 0, 0, 10)
             elif p_ in Pelt.black_colours:
-                add_weight = (0, 40, 2, 5, 10)
+                add_weight = (0, 40, 2, 5)
             elif p_ in Pelt.white_colours:
-                add_weight = (0, 5, 40, 0, 10)
+                add_weight = (0, 5, 40, 0)
             elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35, 10)
-            elif p_ in Pelt.pride_colours:
-                add_weight = (10, 10, 10, 10, 50)
+                add_weight = (10, 5, 0, 35)
             elif p_ is None:
-                add_weight = (40, 40, 40, 40, 40)
+                add_weight = (40, 40, 40, 40)
             else:
-                add_weight = (0, 0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
@@ -900,15 +896,15 @@ class Pelt():
 
                     # Ginger is often duplicated to increase its chances
                     if (self.colour in Pelt.black_colours) or (self.colour in Pelt.white_colours):
-                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.brown_colours + (Pelt.pride_colours * 2))
+                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.brown_colours)
 
                     elif self.colour in Pelt.ginger_colours:
-                        self.tortiecolour = choice(Pelt.brown_colours + Pelt.black_colours * 2 + (Pelt.pride_colours * 2))
+                        self.tortiecolour = choice(Pelt.brown_colours + Pelt.black_colours * 2)
 
                     elif self.colour in Pelt.brown_colours:
                         possible_colors = Pelt.brown_colours.copy()
                         possible_colors.remove(self.colour)
-                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2) + (Pelt.pride_colours * 2))
+                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2))
                         self.tortiecolour = choice(possible_colors)
 
                     elif self.colour in Pelt.pride_colours:

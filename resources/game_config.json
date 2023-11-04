@@ -240,7 +240,7 @@
 		"base_male_tortie": 18,
 		"base_female_tortie": 9,
 		"base_heterochromia": 120,
-		"base_blep": 10,
+		"base_blep": 120,
 		"direct_inheritance": 15,
 		"wildcard_tortie": 10,
 		"vit_chance": 30,
