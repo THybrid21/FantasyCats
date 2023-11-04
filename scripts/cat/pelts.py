@@ -24,6 +24,7 @@ class Pelt():
         'Sokoke': 'sokoke',
         'Agouti': 'agouti',
         'Singlestripe': 'singlestripe',
+        'Masked': 'masked',
         'Tortie': None,
         'Calico': None,
     }
@@ -48,8 +49,9 @@ class Pelt():
     tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'HALF',
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
-                    'BRIE', 'BELOVED']
-    tortiebases = ['single'] ##, 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel', 'classic', 'sokoke', 'agouti', 'singlestripe'
+                    'BRIE', 'BELOVED', 'BODY', 'SHILOH']
+    tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel', 'classic', 
+                    'sokoke', 'agouti', 'singlestripe', 'masked']
 
     pelt_length = ["short", "medium", "long", "snat", "wolf", "skele", "bare", "catfish", "scug", "saint"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -102,10 +104,10 @@ class Pelt():
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["SingleColour", "TwoColour"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
-    spotted = ["SingleColour", "TwoColour"]##"Speckled", "Rosette"
-    plain = ["SingleColour", "TwoColour"]##, "Smoke", "Singlestripe"
-    exotic = ["SingleColour", "TwoColour"]##"Bengal", "Marbled"
+    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
+    spotted = ["Speckled", "Rosette"]
+    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe"]
+    exotic = ["Bengal", "Marbled", "Masked"]
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
@@ -129,18 +131,19 @@ class Pelt():
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
                     'EXTRA', 'MUSTACHE', 'REVERSEHEART', 'SPARKLE', 'RIGHTEAR', 'LEFTEAR', 'ESTRELLA', 'REVERSEEYE', 'BACKSPOT',
-                    'EYEBAGS']
+                    'EYEBAGS', 'LOCKET']
     mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR', 'WINGS',
-                'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'BOWTIE', 'VEST', 'FADEBELLY']
+                'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'BOWTIE', 'VEST',
+                'FADEBELLY', 'DIGIT', 'FCTWO', 'FCONE', 'MIA', 'ROSINA', 'PRINCESS']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                 'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
                 'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'SHIBAINU', 'OWL', 'BUB', 'SPARROW', 'TRIXIE',
-                'SAMMY', 'FRONT', 'BLOSSOMSTEP', 'BULLSEYE']
+                'SAMMY', 'FRONT', 'BLOSSOMSTEP', 'BULLSEYE', 'FINN', 'SCAR', 'BUSTER', 'HAWKBLAZE', 'CAKE']
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO','PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'LOVEBUG', 'SHOOTINGSTAR',
-                    'EYESPOT', 'PEBBLE', 'TAILTWO', 'BUDDY']
+                    'EYESPOT', 'PEBBLE', 'TAILTWO', 'BUDDY', 'KROPKA']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'KARPATI']
-    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED']
+    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY']
     white_sprites = [
         little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
@@ -1166,10 +1169,11 @@ class Pelt():
             "Agouti": "c_n tabby",
             "Singlestripe": "dorsal-striped c_n",
             "Rosette": "unusually spotted c_n",
-            "Sokoke": "c_n tabby"
+            "Sokoke": "c_n tabby",
+            "Masked": "masked c_n tabby"
         }
 
-        # Start with determining the base color name. 
+        # Start with determining the base color name
         color_name = str(cat.pelt.colour).lower()
         if color_name in renamed_colors:
             color_name = renamed_colors[color_name]
@@ -1179,18 +1183,18 @@ class Pelt():
         elif cat.pelt.melanistic:
             color_name = "melanistic"  
         
-        # Replace "white" with "pale" if the cat is 
+        # Replace "white" with "pale" if the cat is white
         if cat.pelt.name not in ["SingleColour", "TwoColour", "Tortie", "Calico"] and color_name == "white":
             color_name = "pale"
 
-        # Time to descibe the pattern and any additional colors. 
+        # Time to descibe the pattern and any additional colors
         if cat.pelt.name in pattern_des:
             color_name = pattern_des[cat.pelt.name].replace("c_n", color_name)
         elif cat.pelt.name in Pelt.torties:
-            # Calicos and Torties need their own desciptions. 
+            # Calicos and Torties need their own desciptions
             if short:
-                # If using short, don't add describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
-                # If using short, don't describe the colors of calicos and torties. Just call them calico, tortie, or mottled. 
+                # If using short, don't add describe the colors of calicos and torties. Just call them calico, tortie, or mottled
+                # If using short, don't describe the colors of calicos and torties. Just call them calico, tortie, or mottled
                 if cat.pelt.colour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours and \
                     cat.pelt.tortiecolour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours:
                     color_name = "mottled"
@@ -1230,7 +1234,7 @@ class Pelt():
         # Here is the place where we can add some additional details about the cat, for the full non-short one. 
         # These include notable missing limbs, vitiligo, long-furred-ness, and 3 or more scars. 
         if not short:
-            
+
             scar_details = {
                 "NOTAIL": "no tail", 
                 "HALFTAIL": "half a tail", 
