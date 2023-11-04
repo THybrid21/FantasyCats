@@ -109,9 +109,11 @@ def json_load():
                 tortiepattern=cat["tortie_pattern"],
                 pattern=cat["pattern"],
                 skin=cat["skin"],
+                blep=cat["blep"],
                 tint=cat["tint"] if "tint" in cat else "none",
                 scars=cat["scars"] if "scars" in cat else [],
                 accessory=cat["accessory"],
+                magic=cat["magic"] if "magic" in cat else None,
                 opacity=cat["opacity"] if "opacity" in cat else 100
             )
             

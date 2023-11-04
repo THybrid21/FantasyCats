@@ -66,7 +66,7 @@ class Sprites():
                    pos,
                    name,
                    sprites_x=9,
-                   sprites_y=12):  # pos = ex. (2, 3), no single pixels
+                   sprites_y=18):  # pos = ex. (2, 3), no single pixels
         """
         Divide sprites on a sprite-sheet into groups of sprites that are easily accessible.
 
@@ -136,7 +136,8 @@ class Sprites():
             'medcatherbs', 'lineartdf', 'lightingnew', 'fademask',
             'fadestarclan', 'fadedarkforest',
             
-            'albinism', 'melanism', 'hybrideyes', 'hybrideyes2', 'hybrideyes3', 'hybrideyes4', 'hybrideyes5'
+            'albinism', 'melanism', 'hybrideyes', 'hybrideyes2', 'hybrideyes3', 'hybrideyes4', 'hybrideyes5',
+            'blep', 'skingills'
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -250,7 +251,7 @@ class Sprites():
             self.make_group('albinism', (a, 0), f'albinism{i}')     
         for a, i in enumerate(
                 ['PINK', 'VIOLETPINK', 'YELLOWPINK', 'CYANPINK', 'BLUEPINK', 'MINTPINK', 'NACRE', 
-                    'GHOSTPINK', 'LIGHTPOPPY', 'SUNGRASS']):
+                    'GHOSTPINK', 'LIGHTPOPPY', 'LIGHTBROWN']):
             self.make_group('albinism', (a, 1), f'eyes' + i)
             self.make_group('albinism', (a, 2), f'eyes2{i}')
             self.make_group('albinism', (a, 3), f'eyes3{i}')
@@ -262,7 +263,7 @@ class Sprites():
             self.make_group('melanism', (a, 0), f'melanism{i}')    
         for a, i in enumerate(
                 ['RUBEN', 'DUSK', 'SUNSHADOW', 'DARKCYAN', 'DEEPBLUE', 'FERN', 'NIGHT',  'BLACKHOLE', 
-                    'DARKPOPPY', 'SUNSETGRASS']):
+                    'DARKPOPPY', 'DARKBROWN']):
             self.make_group('melanism', (a, 1), f'eyes' + i)
             self.make_group('melanism', (a, 2), f'eyes2{i}')
             self.make_group('melanism', (a, 3), f'eyes3{i}')
@@ -382,10 +383,23 @@ class Sprites():
         # SKINS
         for a, i in enumerate(['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'ALBINO']):
             self.make_group('skin', (a, 0), f"skin{i}")
+            self.make_group('blep', (a, 0), f"blep{i}")
         for a, i in enumerate(['DARK', 'DARKGREY', 'GREY', 'DARKSALMON', 'SALMON', 'PEACH', 'MELANISTIC']):
             self.make_group('skin', (a, 1), f"skin{i}")
+            self.make_group('blep', (a, 1), f"blep{i}")
         for a, i in enumerate(['DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'WHITEMARBLE']):
             self.make_group('skin', (a, 2), f"skin{i}")
+            self.make_group('blep', (a, 2), f"blep{i}")
+
+        for a, i in enumerate(['BLACKGILL', 'REDGILL', 'PINKGILL', 'DARKBROWNGILL', 'BROWNGILL', 'LIGHTBROWNGILL', 'ALBINOGILL']):
+            self.make_group('skingills', (a, 0), f"skin{i}")
+            self.make_group('blep', (a, 0), f"blep{i}")
+        for a, i in enumerate(['DARKGILL', 'DARKGREYGILL', 'GREYGILL', 'DARKSALMONGILL', 'SALMONGILL', 'PEACHGILL', 'MELANISTICGILL']):
+            self.make_group('skingills', (a, 1), f"skin{i}")
+            self.make_group('blep', (a, 1), f"blep{i}")
+        for a, i in enumerate(['DARKMARBLEDGILL', 'MARBLEDGILL', 'LIGHTMARBLEDGILL', 'DARKBLUEGILL', 'BLUEGILL', 'LIGHTBLUEGILL', 'WHITEMARBLEGILL']):
+            self.make_group('skingills', (a, 2), f"skin{i}")
+            self.make_group('blep', (a, 2), f"blep{i}")
 
         self.load_scars()
 

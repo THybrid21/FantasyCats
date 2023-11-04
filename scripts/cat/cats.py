@@ -1911,7 +1911,7 @@ class Cat():
         elif new_condition == "born without a tail":
             cat.pelt.scars.append('NOTAIL')
         elif new_condition == "albinism":
-            cat.pelt.skin = "ALBINO"
+            cat.pelt.skin = choice(["ALBINO", "ALBINOGILL"])
             cat.pelt.albino = choice(Pelt.albinism)
             cat.pelt.eye_colour = choice(Pelt.albino_eyes)
             if cat.pelt.eye_colour2 != None:
@@ -1929,8 +1929,10 @@ class Cat():
                     cat.pelt.eye_lazy = self.eye_colour
                 if self.eye_colour3 != None:
                     cat.pelt.eye_lazy2 = self.eye_colour3
+            if cat.pelt.blep != None:
+                cat.pelt.blep = cat.pelt.skin
         elif new_condition == "melanism":
-            cat.pelt.skin = "MELANISTIC"
+            cat.pelt.skin = choice(["MELANISTIC", "MELANISTICGILL"])
             cat.pelt.melanistic = choice(Pelt.melanism)
             cat.pelt.eye_colour = choice(Pelt.melanistic_eyes)
             if cat.pelt.eye_colour2 != None:
@@ -1948,6 +1950,8 @@ class Cat():
                     cat.pelt.eye_lazy = self.eye_colour
                 if self.eye_colour3 != None:
                     cat.pelt.eye_lazy2 = self.eye_colour3
+            if cat.pelt.blep != None:
+                cat.pelt.blep = cat.pelt.skin
 
         self.get_permanent_condition(new_condition, born_with=True)
 

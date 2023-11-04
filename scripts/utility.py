@@ -1205,6 +1205,10 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                     cat_sprite = str(104)
                 elif cat.pelt.length == 'wolf':
                     cat_sprite = str(106)
+                elif cat.pelt.length == 'catfish':
+                    cat_sprite = str(154)
+                elif cat.pelt.length in ['scug', 'saint']:
+                    cat_sprite = str(159)
                 else:
                     cat_sprite = str(48)
             else:
@@ -1216,6 +1220,10 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                     cat_sprite = str(103)
                 elif cat.pelt.length == 'wolf':
                     cat_sprite = str(105)
+                elif cat.pelt.length == 'catfish':
+                    cat_sprite = str(153)
+                elif cat.pelt.length in ['scug', 'saint']:
+                    cat_sprite = str(158)
                 else:
                     cat_sprite = str(47)
     elif cat.pelt.paralyzed:
@@ -1287,7 +1295,12 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
 
             new_sprite.blit(white_patches, (0, 0))
 
-        # draw vit & points
+        # draw vit, albinism/melanism & points
+
+        if cat.pelt.albino != None:
+            new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
+        elif cat.pelt.melanistic != None:
+            new_sprite.blit(sprites.sprites['melanism' + cat.pelt.melanistic + cat_sprite], (0, 0))
 
         if cat.pelt.points:
             points = sprites.sprites['white' + cat.pelt.points + cat_sprite].copy()
@@ -1300,11 +1313,6 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
 
         if cat.pelt.vitiligo:
             new_sprite.blit(sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite], (0, 0))
-
-        if cat.pelt.albino:
-            new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
-        elif cat.pelt.melanistic:
-            new_sprite.blit(sprites.sprites['melanism' + cat.pelt.melanistic + cat_sprite], (0, 0))
 
         # draw eyes & scars1
         eyes = sprites.sprites['eyes' + cat.pelt.eye_colour + cat_sprite].copy()
@@ -1344,7 +1352,7 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
             if scar in cat.pelt.scars2:
                 new_sprite.blit(sprites.sprites['scars' + scar + cat_sprite], (0, 0), special_flags=blendmode)
 
-        # draw accessories
+        # draw accessories(and blep)
         if not acc_hidden:        
             if cat.pelt.accessory in cat.pelt.plant_accessories:
                 new_sprite.blit(sprites.sprites['acc_herbs' + cat.pelt.accessory + cat_sprite], (0, 0))
@@ -1352,6 +1360,9 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 new_sprite.blit(sprites.sprites['acc_wild' + cat.pelt.accessory + cat_sprite], (0, 0))
             elif cat.pelt.accessory in cat.pelt.collars:
                 new_sprite.blit(sprites.sprites['collars' + cat.pelt.accessory + cat_sprite], (0, 0))
+
+        if cat.pelt.blep:
+                new_sprite.blit(sprites.sprites['blep' + cat.pelt.skin + cat_sprite], (0, 0))            
 
         # Apply fading fog
         if cat.pelt.opacity <= 97 and not cat.prevent_fading and game.clan.clan_settings["fading"] and dead:

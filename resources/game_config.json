@@ -236,14 +236,16 @@
 		]
 	},
 	"cat_generation": {
-		"base_permanent_condition": 2,
+		"base_permanent_condition": 25,
 		"base_male_tortie": 18,
 		"base_female_tortie": 9,
 		"base_heterochromia": 120,
+		"base_blep": 10,
 		"direct_inheritance": 15,
 		"wildcard_tortie": 10,
 		"vit_chance": 30,
-		"random_point_chance": 25
+		"random_point_chance": 25,
+		"magic": 150
 	},
 	"cat_name_controls": {
 		"always_name_after_appearance": false,
