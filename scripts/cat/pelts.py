@@ -478,11 +478,11 @@ class Pelt():
             elif p_ in Pelt.spotted:
                 add_weight = (10, 50, 5, 5)
             elif p_ in Pelt.plain:
-                add_weight = (5, 5, 50, 0)
+                add_weight = (0, 0, 50, 0)
             elif p_ in Pelt.exotic:
                 add_weight = (15, 15, 1, 45)
             elif p_ is None:  # If there is at least one unknown parent, a None will be added to the set.
-                add_weight = (35, 20, 30, 15)
+                add_weight = (0, 0, 30, 0)
             else:
                 add_weight = (0, 0, 0, 0)
 
@@ -631,7 +631,7 @@ class Pelt():
 
         # Determine pelt.
         chosen_pelt = choice(
-            random.choices(Pelt.pelt_categories, weights=(35, 20, 30, 15, 0), k=1)[0]
+            random.choices(Pelt.pelt_categories, weights=(0, 0, 30, 0, 0), k=1)[0]
         )
 
         # Tortie chance

@@ -1933,8 +1933,6 @@ class Cat():
                     cat.pelt.eye_lazy = self.eye_colour
                 if self.eye_colour3 != None:
                     cat.pelt.eye_lazy2 = self.eye_colour3
-            if cat.pelt.blep != None:
-                cat.pelt.blep = cat.pelt.skin
         elif new_condition == "melanism":
             cat.pelt.skin = choice(["MELANISTIC", "MELANISTICGILL"])
             cat.pelt.melanistic = choice(Pelt.melanism)
@@ -1954,8 +1952,6 @@ class Cat():
                     cat.pelt.eye_lazy = self.eye_colour
                 if self.eye_colour3 != None:
                     cat.pelt.eye_lazy2 = self.eye_colour3
-            if cat.pelt.blep != None:
-                cat.pelt.blep = cat.pelt.skin
 
         self.get_permanent_condition(new_condition, born_with=True)
 
