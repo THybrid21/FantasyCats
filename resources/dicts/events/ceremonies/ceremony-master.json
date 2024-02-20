@@ -660,7 +660,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "p1 is watching with pride as m_c is named and given to (mentor) to apprentice under. {PRONOUN/p1/subject/CAP} know that (mentor) was a good choice."
+    "p1 is watching with pride as m_c is named and given to (mentor) to apprentice under. {PRONOUN/p1/subject/CAP} {VERB/p1/know/knows} that (mentor) was a good choice."
   ],
   "app_38": [
     [
@@ -1871,7 +1871,7 @@
       "strange",
       "oblivious"
     ],
-    "No one knows why (old_name) brought a mossball to {PRONOUN/m_c/poss} medicine cat naming ceremony. StarClan grants {PRONOUN/m_c/object} the name m_c all the same, welcoming {PRONOUN/m_c/object} into the full mysteries of StarClan."
+    "No one knows why (old_name) brought a moss-ball to {PRONOUN/m_c/poss} medicine cat naming ceremony. StarClan grants {PRONOUN/m_c/object} the name m_c all the same, welcoming {PRONOUN/m_c/object} into the full mysteries of StarClan."
   ],
   "med_39": [
     [
@@ -2522,7 +2522,7 @@
       "general_backstory",
       "faithful"
     ],
-    "(old_name)'s eyes glimmer while l_n talks about {PRONOUN/m_c/poss} accomplishments. {PRONOUN/m_c/poss} gaze isn't focused on the leader, however, but the stars shining behind {PRONOUN/l_n/object}. As {PRONOUN/m_c/subject} {VERB/m_c/are/is} given the name m_c, {PRONOUN/m_c/object} {VERB/m_c/wonder/wonders} if StarClan honors {PRONOUN/m_c/poss} r_h, too."
+    "(old_name)'s eyes glimmer while l_n talks about {PRONOUN/m_c/poss} accomplishments. {PRONOUN/m_c/poss/CAP} gaze isn't focused on the leader, however, but the stars shining behind {PRONOUN/l_n/object}. As {PRONOUN/m_c/subject} {VERB/m_c/are/is} given the name m_c, {PRONOUN/m_c/subject} {VERB/m_c/wonder/wonders} if StarClan honors {PRONOUN/m_c/poss} r_h, too."
   ],
   "warrior_27": [
     [
@@ -2745,7 +2745,7 @@
       "wise",
       "cunning"
     ],
-    "l_n almost feels intimidated by the knowledge (old_name) has gathered in {PRONOUN/m_c/poss} months of training and feels confident when {PRONOUN/l_n/subject} {VERB/l_n/name/names} {PRONOUN/m_c/object} m_c in honor of {PRONOUN/m_c/poss} r_h."
+    "l_n almost feels intimidated by the knowledge (old_name) has gathered in {PRONOUN/m_c/poss} moons of training and feels confident when {PRONOUN/l_n/subject} {VERB/l_n/name/names} {PRONOUN/m_c/object} m_c in honor of {PRONOUN/m_c/poss} r_h."
   ],
   "warrior_45": [
     [
@@ -2867,7 +2867,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "p1 can hardly believe how quickly time has passed since (old_name) was a kit. It still feels like just yesterday that {PRONOUN/m_c/subject} {VERB/m_c/were/was} tumbling around the nursery, chasing after a mossball or some other cat's tail. Misty-eyed with pride and joy, p1 throws {PRONOUN/p1/poss} head back and tries to cheer the loudest as (old_name) is named m_c and honored for {PRONOUN/m_c/poss} r_h."
+    "p1 can hardly believe how quickly time has passed since (old_name) was a kit. It still feels like just yesterday that {PRONOUN/m_c/subject} {VERB/m_c/were/was} tumbling around the nursery, chasing after a moss-ball or some other cat's tail. Misty-eyed with pride and joy, p1 throws {PRONOUN/p1/poss} head back and tries to cheer the loudest as (old_name) is named m_c and honored for {PRONOUN/m_c/poss} r_h."
   ],
   "warrior_55": [
     [
@@ -2983,7 +2983,7 @@
       "prepared",
       "general_mentor",
       "general_parents",
-      "general_leader",
+      "yes_leader",
       "general_backstory",
       "all_traits"
     ],
@@ -2995,7 +2995,7 @@
       "prepared",
       "general_mentor",
       "general_parents",
-      "general_leader",
+      "yes_leader",
       "general_backstory",
       "all_traits"
     ],
@@ -3006,7 +3006,7 @@
       "mediator",
       "alive_mentor",
       "general_parents",
-      "general_leader",
+      "yes_leader",
       "general_backstory",
       "all_traits"
     ],

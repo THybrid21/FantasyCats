@@ -228,7 +228,7 @@ class Sprites():
         for a, i in enumerate(['BULLSEYE', 'FINN', 'DIGIT', 'KROPKA', 'FCTWO', 'FCONE', 'MIA', 'SCAR',
             'BUSTER', 'SMOKEY', 'HAWKBLAZE', 'CAKE', 'ROSINA', 'PRINCESS']):
             self.make_group('whitepatches', (a, 8), f'white{i}')
-        for a, i in enumerate(['LOCKET']):
+        for a, i in enumerate(['LOCKET', 'BLAZEMASK', 'TEARS', 'DOUGIE']):
             self.make_group('whitepatches', (a, 9), 'white' + i)
 
         ##Albinism + Melanism Sheets
@@ -407,6 +407,9 @@ class Sprites():
                 ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE",
                  "LEGBITE", "NECKBITE", "FACE"]):
             self.make_group('scars', (a, 2), f'scars{i}')
+        for a, i in enumerate(
+                ["HINDLEG", "BACK", "QUILLSIDE", "SCRATCHSIDE", "TOE", "BEAKSIDE", "CATBITETWO", "SNAKETWO", "FOUR"]):
+            self.make_group('scars', (a, 3), f'scars{i}')
         # missing parts
         for a, i in enumerate(
                 ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW"]):
