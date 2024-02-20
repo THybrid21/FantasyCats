@@ -49,7 +49,7 @@ class Pelt():
     tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'HALF',
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
-                    'BRIE', 'BELOVED', 'BODY', 'SHILOH']
+                    'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel', 'classic', 
                     'sokoke', 'agouti', 'singlestripe', 'masked']
 
@@ -104,10 +104,10 @@ class Pelt():
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-    spotted = ["Speckled", "Rosette"]
-    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe"]
-    exotic = ["Bengal", "Marbled", "Masked"]
+    tabbies = ["SingleColour", "TwoColour", "Singlestripe"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
+    spotted = ["SingleColour", "TwoColour", "Singlestripe"]##"Speckled", "Rosette"
+    plain = ["SingleColour", "TwoColour", "Singlestripe"]##"Smoke", 
+    exotic = ["SingleColour", "TwoColour", "Singlestripe"]##"Bengal", "Marbled", "Masked"
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
@@ -813,7 +813,7 @@ class Pelt():
         
         num = game.config["cat_generation"]["base_blep"]
         for _par in parents:
-            if _par.pelt.blep != None:
+            if _par.pelt.blep == True:
                 num -= 90        
         if num < 0:
             num = 1

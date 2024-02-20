@@ -265,10 +265,10 @@
             "stability": [12, 16]
         },	
 		"mimic": {
-			"lawfulness": [0, 0],
-			"sociability": [0, 0],
-			"aggression": [0, 0],
-			"stability": [0, 0]
+			"lawfulness": [0, 2],
+			"sociability": [0, 2],
+			"aggression": [0, 2],
+			"stability": [0, 2]
 		}
     },
     "kit_traits": {
@@ -405,10 +405,10 @@
             "stability": [0, 12]
         },
 		"mimic": {
-			"lawfulness": [0, 0],
-			"sociability": [0, 0],
-			"aggression": [0, 0],
-			"stability": [0, 0]
+			"lawfulness": [0, 2],
+			"sociability": [0, 2],
+			"aggression": [0, 2],
+			"stability": [0, 2]
 		}
     }
 }
