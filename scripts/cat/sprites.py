@@ -106,7 +106,9 @@ class Sprites():
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead',
-            'eyes', 'eyes2', 'skin', 'skingills', 'blep', 
+            'eyes', 'eyes2', 'eyes3', 'eyes4', 'eyes5', 
+            'hybrideyes', 'hybrideyes2', 'hybrideyes3', 'hybrideyes4', 'hybrideyes5',             
+            'skin', 'skingills', 'blep', 
             'scars', 'missingscars',
             'medcatherbs',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
@@ -115,9 +117,9 @@ class Sprites():
             'rosettecolours', 'smokecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours', 
             'sokokecolours', 'agouticolours', 'singlestripecolours', 'maskedcolours', 
             
-            'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals' 
+            'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals',
             'shadersnewwhite', 'lightingnew',
-            'whitepatches', 'tortiepatchesmasks', 
+            'whitepatches', 'tortiepatchesmasks', 'albinism', 'melanism',
             'fademask', 'fadestarclan', 'fadedarkforest'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -160,7 +162,7 @@ class Sprites():
             ['AMBERTWO', 'SUNSHINE', 'PYRITE', 'PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RGB', 'RGBTWO', 'RGBTHREE']
     ]
 
-        for row, colors in enumerate(eye_colors):
+        for row, colors in enumerate(hybrid_eyes):
             for col, color in enumerate(colors):
                 self.make_group('hybrideyes', (col, row), f'eyes{color}')
                 self.make_group('hybrideyes2', (col, row), f'eyes2{color}')

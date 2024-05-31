@@ -70,8 +70,6 @@ class Name():
         self.prefix = prefix
         self.suffix = suffix
         self.specsuffix_hidden = specsuffix_hidden
-        self.moons = moons
-
         name_fixpref = False
 
         # Set prefix

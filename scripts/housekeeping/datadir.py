@@ -33,7 +33,7 @@ def get_data_dir():
 
     return user_data_dir('ClanGen', 'FantasyCats')
     if get_version_info().is_dev():
-        return user_data_dir('ClanGenBeta', 'ClanGen')
+        return user_data_dir('ClanGenBeta', 'FantasyCats')
     return user_data_dir('ClanGen', 'ClanGen')
 
 
