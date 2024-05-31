@@ -105,84 +105,44 @@ class Condition_Events():
             random_number = int(
                     random.random() * game.get_config_value("condition_related", f"{game.clan.game_mode}_illness_chance"))
 
-            if cat.pelt.length == 'bare':
-                if not cat.dead and not cat.is_ill() and random_number <= 30 and not event_string:            
-                    season_dict = Condition_Events.ILLNESSES_SEASON_LIST[season]
-                    possible_illnesses = []
+            if not cat.dead and not cat.is_ill() and random_number <= 10 and not event_string:
+                season_dict = Condition_Events.ILLNESSES_SEASON_LIST[season]
+                possible_illnesses = []
 
-                    # pick up possible illnesses from the season dict
-                    for illness_name in season_dict:
-                        possible_illnesses += [illness_name] * season_dict[illness_name]
+                # pick up possible illnesses from the season dict
+                for illness_name in season_dict:
+                    possible_illnesses += [illness_name] * season_dict[illness_name]
 
-                    # pick a random illness from those possible
-                    random_index = int(random.random() * len(possible_illnesses))
-                    chosen_illness = possible_illnesses[random_index]
-                    # if a non-kitten got kittencough, switch it to whitecough instead
-                    if chosen_illness == 'kittencough' and cat.status != 'kitten':
-                        chosen_illness = 'whitecough'
-                    elif chosen_illness == 'nest wetting' and cat.status not in ['kitten', 'apprentice']:
-                        chosen_illness = 'night dirtmaking'
-                    # make em sick
-                    cat.get_ill(chosen_illness)
+                # pick a random illness from those possible
+                random_index = int(random.random() * len(possible_illnesses))
+                chosen_illness = possible_illnesses[random_index]
+                # if a non-kitten got kittencough, switch it to whitecough instead
+                if chosen_illness == 'kittencough' and cat.status != 'kitten':
+                    chosen_illness = 'whitecough'
+                elif chosen_illness == 'nest wetting' and cat.status not in ['kitten', 'apprentice']:
+                    chosen_illness = 'night dirtmaking'
+                # make em sick
+                cat.get_ill(chosen_illness)
 
-                    # create event text
-                    if chosen_illness in ['running nose', 'stomachache']:
-                        event_string = f"{cat.name} has gotten a {chosen_illness}."
-                    elif chosen_illness == "anxiety attack":
-                        event_string = f"{cat.name} has worked up into an {chosen_illness}."
-                    elif chosen_illness == "seasonal lethargy":
-                        event_string = f"{cat.name} is experiencing some {chosen_illness}."
-                    elif chosen_illness == "zoomies":
-                        event_string = f"{cat.name} has gotten the {chosen_illness}."
-                    elif chosen_illness == "sleeplessness":
-                        event_string = f"{cat.name} has been unable to get any sleep."
-                    elif chosen_illness in ['nest wetting', 'night dirtmaking']:
-                        event_string = f"Somewhat embarrassingly {cat.name} is experiencing {chosen_illness}."
-                    elif chosen_illness == "nightmares":
-                        event_string = f"{cat.name} has been struggling recently with nightmares."
-                    elif chosen_illness == "ear buzzing":
-                        event_string = f"{cat.name} has been experiencing some buzzing in their ears."
-                    else:
-                        event_string = f"{cat.name} has gotten {chosen_illness}."
-            else:
-                if not cat.dead and not cat.is_ill() and random_number <= 10 and not event_string:
-                    season_dict = Condition_Events.ILLNESSES_SEASON_LIST[season]
-                    possible_illnesses = []
-
-                    # pick up possible illnesses from the season dict
-                    for illness_name in season_dict:
-                        possible_illnesses += [illness_name] * season_dict[illness_name]
-
-                    # pick a random illness from those possible
-                    random_index = int(random.random() * len(possible_illnesses))
-                    chosen_illness = possible_illnesses[random_index]
-                    # if a non-kitten got kittencough, switch it to whitecough instead
-                    if chosen_illness == 'kittencough' and cat.status != 'kitten':
-                        chosen_illness = 'whitecough'
-                    elif chosen_illness == 'nest wetting' and cat.status not in ['kitten', 'apprentice']:
-                        chosen_illness = 'night dirtmaking'
-                    # make em sick
-                    cat.get_ill(chosen_illness)
-
-                    # create event text
-                    if chosen_illness in ['running nose', 'stomachache']:
-                        event_string = f"{cat.name} has gotten a {chosen_illness}."
-                    elif chosen_illness == "anxiety attack":
-                        event_string = f"{cat.name} has worked up into an {chosen_illness}."
-                    elif chosen_illness == "seasonal lethargy":
-                        event_string = f"{cat.name} is experiencing some {chosen_illness}."
-                    elif chosen_illness == "zoomies":
-                        event_string = f"{cat.name} has gotten the {chosen_illness}."
-                    elif chosen_illness == "sleeplessness":
-                        event_string = f"{cat.name} has been unable to get any sleep."
-                    elif chosen_illness in ['nest wetting', 'night dirtmaking']:
-                        event_string = f"Somewhat embarrassingly {cat.name} is experiencing {chosen_illness}."
-                    elif chosen_illness == "nightmares":
-                        event_string = f"{cat.name} has been struggling recently with nightmares."
-                    elif chosen_illness == "ear buzzing":
-                        event_string = f"{cat.name} has been experiencing some buzzing in their ears."
-                    else:
-                        event_string = f"{cat.name} has gotten {chosen_illness}."
+                # create event text
+                if chosen_illness in ['running nose', 'stomachache']:
+                    event_string = f"{cat.name} has gotten a {chosen_illness}."
+                elif chosen_illness == "anxiety attack":
+                    event_string = f"{cat.name} has worked up into an {chosen_illness}."
+                elif chosen_illness == "seasonal lethargy":
+                    event_string = f"{cat.name} is experiencing some {chosen_illness}."
+                elif chosen_illness == "zoomies":
+                    event_string = f"{cat.name} has gotten the {chosen_illness}."
+                elif chosen_illness == "sleeplessness":
+                    event_string = f"{cat.name} has been unable to get any sleep."
+                elif chosen_illness in ['nest wetting', 'night dirtmaking']:
+                    event_string = f"Somewhat embarrassingly {cat.name} is experiencing {chosen_illness}."
+                elif chosen_illness == "nightmares":
+                    event_string = f"{cat.name} has been struggling recently with nightmares."
+                elif chosen_illness == "ear buzzing":
+                    event_string = f"{cat.name} has been experiencing some buzzing in their ears."
+                else:
+                    event_string = f"{cat.name} has gotten {chosen_illness}."
 
             # if an event happened, then add event to cur_event_list and save death if it happened.
             if event_string:

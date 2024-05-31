@@ -60,7 +60,7 @@ class Cat():
         "leader"
     ]
 
-    gender_tags = {'female': 'F', 'male': 'M'}
+    gender_tags = {'female': 'F', 'male': 'M', 'intersex': 'I'}
 
     # EX levels and ranges.
     # Ranges are inclusive to both bounds
@@ -275,9 +275,17 @@ class Cat():
         else:
             self.backstory = self.backstory
 
+        genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
+                            "genderfluid", "bigender", "pangender", "???"]
+
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
-            self.gender = choice(["female", "male"])
+            intersexchance = randint(1,100)
+            #probability that the cat will be intersex.. base chance around 5%
+            if intersexchance <= 10 and example is False:
+                self.gender = "intersex"
+            else:
+                self.gender = choice(["female", "male"])
         self.g_tag = self.gender_tags[self.gender]
 
         # These things should only run when generating a new cat, rather than loading one in.
@@ -285,27 +293,27 @@ class Cat():
             # trans cat chances
             trans_chance = randint(0, 50)
             nb_chance = randint(0, 75)
-            demi_chance = randint(0, 75)
-            if self.gender == "female" and not self.status in ['newborn', 'kitten']:
+            if self.gender == "female" and not self.status in ['newborn']:
                 if trans_chance == 1:
                     self.genderalign = "trans male"
                 elif nb_chance == 1:
-                    self.genderalign = "nonbinary"
-                elif demi_chance == 1:
-                    self.genderalign = "demiguy"
-                elif demi_chance == 0:
-                    self.genderalign = "demigirl"
+                    self.genderalign = choice(genderqueer_list)
                 else:
                     self.genderalign = self.gender
-            elif self.gender == "male" and not self.status in ['newborn', 'kitten']:
+            elif self.gender == "male" and not self.status in ['newborn']:
                 if trans_chance == 1:
                     self.genderalign = "trans female"
                 elif nb_chance == 1:
-                    self.genderalign = "nonbinary"
-                elif demi_chance == 1:
-                    self.genderalign = "demigirl"
-                elif demi_chance == 0:
-                    self.genderalign = "demiguy"
+                    self.genderalign = choice(genderqueer_list)
+            elif self.gender == "intersex" and not self.status in ['newborn']:
+                if trans_chance == 1:
+                    self.genderalign = choice(["trans male", "trans female"])
+                elif nb_chance == 1:
+                    intergenderchance = randint(1,2)
+                    if intergenderchance == 1:
+                        self.genderalign = "intergender"
+                    else:
+                        self.genderalign = choice(genderqueer_list)
                 else:
                     self.genderalign = self.gender
             else:
@@ -313,11 +321,64 @@ class Cat():
 
             """if self.genderalign in ["female", "trans female", "demigirl"]:
                 self.pronouns = [self.default_pronouns[1].copy()]
-            elif self.genderalign in ["male", "trans male", "demiguy"]:
+            elif self.genderalign in ["male", "trans male", "demiboy"]:
                 self.pronouns = [self.default_pronouns[2].copy()]"""
 
             # APPEARANCE
             self.pelt = Pelt.generate_new_pelt(self.gender, [Cat.fetch_cat(i) for i in (self.parent1, self.parent2) if i], self.age)
+            if self.pelt.length == "bare":
+                self.get_permanent_condition("sphynxism", born_with=True)
+
+            specialty_conditions = []            
+            self_specialty = randint(1,120)
+            if self_specialty == 1 and example is False:            
+                for condition in PERMANENT:
+                    specialty = PERMANENT[condition]
+                    if specialty["congenital"] in ['genetic']:
+                        specialty_conditions.append(condition)
+            
+                new_condition = choice(specialty_conditions)
+                
+                if new_condition == "albinism":
+                    self.pelt.skin = choice(["ALBINO", "ALBINOGILL"])
+                    self.pelt.albino = choice(Pelt.albinism)
+                    self.pelt.eye_colour = choice(Pelt.albino_eyes)
+                    if self.pelt.eye_colour2 != None:
+                        possible_eyes = Pelt.albino_eyes.copy()
+                        possible_eyes.remove(self.pelt.eye_colour)
+                        self.pelt.eye_colour2 = choice(possible_eyes)                  
+                    elif self.pelt.eye_colour3 != None:
+                        possible_eyes = Pelt.albino_eyes.copy()
+                        possible_eyes.remove(self.pelt.eye_colour)
+                        self.pelt.eye_colour3 = choice(possible_eyes) 
+                    if self.pelt.eye_lazy != None:
+                        if self.pelt.eye_colour2 != None:
+                            self.pelt.eye_lazy = self.pelt.eye_colour2
+                        else: 
+                            self.pelt.eye_lazy = self.pelt.eye_colour
+                        if self.eye_colour3 != None:
+                            self.pelt.eye_lazy2 = self.pelt.eye_colour3
+                elif new_condition == "melanism":
+                    self.pelt.skin = choice(["MELANISTIC", "MELANISTICGILL"])
+                    self.pelt.melanistic = choice(Pelt.melanism)
+                    self.pelt.eye_colour = choice(Pelt.melanistic_eyes)
+                    if self.pelt.eye_colour2 != None:
+                        possible_eyes = Pelt.melanistic_eyes.copy()
+                        possible_eyes.remove(self.pelt.eye_colour)
+                        self.pelt.eye_colour2 = choice(possible_eyes)
+                    elif self.pelt.eye_colour3 != None:
+                        possible_eyes = Pelt.melanistic_eyes.copy()
+                        possible_eyes.remove(self.pelt.eye_colour)
+                        self.pelt.eye_colour3 = choice(possible_eyes)  
+                    if self.pelt.eye_lazy != None:
+                        if self.pelt.eye_colour2 != None:
+                            self.pelt.eye_lazy = self.pelt.eye_colour2
+                        else: 
+                            self.pelt.eye_lazy = self.pelt.eye_colour
+                        if self.eye_colour3 != None:
+                            self.pelt.eye_lazy2 = self.pelt.eye_colour3
+
+                self.get_permanent_condition(new_condition, born_with=True)
             
             #Personality
             self.personality = Personality(kit_trait=self.is_baby())
@@ -1905,57 +1966,34 @@ class Cat():
     def congenital_condition(self, cat):
 
         possible_conditions = []
+        multiple_condition_chance = game.config["cat_generation"]["multiple_permanent_conditions"]
+        max_conditions = game.config["cat_generation"]["max_conditions_born_with"]
+        conditions = 1
+        count = 1
+
         for condition in PERMANENT:
             possible = PERMANENT[condition]
             if possible["congenital"] in ['always', 'sometimes']:
                 possible_conditions.append(condition)
 
-        new_condition = choice(possible_conditions)
+        while count <= max_conditions:
+            if randint(1, multiple_condition_chance) == 1:
+                conditions += 1
+            count += 1
 
-        if new_condition == "born without a leg":
-            cat.pelt.scars.append('NOPAW')
-        elif new_condition == "born without a tail":
-            cat.pelt.scars.append('NOTAIL')
-        elif new_condition == "albinism":
-            cat.pelt.skin = choice(["ALBINO", "ALBINOGILL"])
-            cat.pelt.albino = choice(Pelt.albinism)
-            cat.pelt.eye_colour = choice(Pelt.albino_eyes)
-            if cat.pelt.eye_colour2 != None:
-                possible_eyes = Pelt.albino_eyes.copy()
-                possible_eyes.remove(self.pelt.eye_colour)
-                cat.pelt.eye_colour2 = choice(possible_eyes)                  
-            elif cat.pelt.eye_colour3 != None:
-                possible_eyes = Pelt.albino_eyes.copy()
-                possible_eyes.remove(self.pelt.eye_colour)
-                cat.pelt.eye_colour3 = choice(possible_eyes) 
-            if cat.pelt.eye_lazy != None:
-                if cat.pelt.eye_colour2 != None:
-                    cat.pelt.eye_lazy = self.eye_colour2
-                else: 
-                    cat.pelt.eye_lazy = self.eye_colour
-                if self.eye_colour3 != None:
-                    cat.pelt.eye_lazy2 = self.eye_colour3
-        elif new_condition == "melanism":
-            cat.pelt.skin = choice(["MELANISTIC", "MELANISTICGILL"])
-            cat.pelt.melanistic = choice(Pelt.melanism)
-            cat.pelt.eye_colour = choice(Pelt.melanistic_eyes)
-            if cat.pelt.eye_colour2 != None:
-                possible_eyes = Pelt.melanistic_eyes.copy()
-                possible_eyes.remove(self.pelt.eye_colour)
-                cat.pelt.eye_colour2 = choice(possible_eyes)
-            elif cat.pelt.eye_colour3 != None:
-                possible_eyes = Pelt.melanistic_eyes.copy()
-                possible_eyes.remove(self.pelt.eye_colour)
-                cat.pelt.eye_colour3 = choice(possible_eyes)  
-            if cat.pelt.eye_lazy != None:
-                if cat.pelt.eye_colour2 != None:
-                    cat.pelt.eye_lazy = self.eye_colour2
-                else: 
-                    cat.pelt.eye_lazy = self.eye_colour
-                if self.eye_colour3 != None:
-                    cat.pelt.eye_lazy2 = self.eye_colour3
+        while conditions:
+            new_condition = choice(possible_conditions)
+            while new_condition in cat.permanent_condition:
+                new_condition = choice(possible_conditions)
+        
 
-        self.get_permanent_condition(new_condition, born_with=True)
+            if new_condition == "born without a leg":
+                cat.pelt.scars.append('NOPAW')
+            elif new_condition == "born without a tail":
+                cat.pelt.scars.append('NOTAIL')
+
+            self.get_permanent_condition(new_condition, born_with=True)
+            conditions -= 1
 
     def get_permanent_condition(self, name, born_with=False, event_triggered=False):
         if name not in PERMANENT:
@@ -2119,11 +2157,16 @@ class Cat():
         condition_directory = get_save_dir() + '/' + clanname + '/conditions'
         condition_file_path = condition_directory + '/' + self.ID + '_conditions.json'
 
-        if (not self.is_ill() and not self.is_injured() and not self.is_disabled()) or self.dead or self.outside:
+        if (not self.is_ill() and not self.is_injured() and not self.is_disabled()):
             if os.path.exists(condition_file_path):
                 os.remove(condition_file_path)
             return
-
+        if self.outside or self.dead:
+            if not self.is_disabled():
+                if os.path.exists(condition_file_path):
+                    os.remove(condition_file_path)
+                return
+                
         conditions = {}
 
         if self.is_ill():

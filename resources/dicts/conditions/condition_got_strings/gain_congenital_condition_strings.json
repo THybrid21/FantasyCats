@@ -80,6 +80,12 @@
 		"When {PRONOUN/m_c/poss} parent takes them out for night trips to the dirtplace m_c whines about how much {PRONOUN/m_c/subject} {VERB/m_c/hate/hates} it.",
 		"m_c doesn't like going out in the sunshine at midday, {PRONOUN/m_c/subject} {VERB/m_c/complain/complains} it's simply too hot."
 	],
+	"sphynxism": [
+		"r_c fusses over m_c's bare pelt. When most kittens have their fur all grown in by this point m_c's skin still remains clear to see.",
+		"m_c whines about been kept in the den, {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} understand why {PRONOUN/m_c/poss} lack of fur even matters.",
+		"Despite their bare pelt, m_c is just as playful as any kitten and doesn't see why it would make {PRONOUN/m_c/object} different.",
+		"There's a lot of shock as m_c's first week passes and {PRONOUN/m_c/poss} fur still hasn't properly grown in."
+	],
 	"constant roaming pain": [
 		"After moons of m_c complaining of pains through {PRONOUN/m_c/poss} kithood, r_c sits back and softly explains that this pain will follow {PRONOUN/m_c/object} through {PRONOUN/m_c/poss} whole life and {PRONOUN/r_c/subject} can only offer temporary relief.",
 		"m_c insists that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not lying, {PRONOUN/m_c/subject} {VERB/m_c/have/has} pains all the time. It doesn't look like it'll ever go away.",

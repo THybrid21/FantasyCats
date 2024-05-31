@@ -129,12 +129,26 @@ class Name():
         if colour is not None:
             if colour in Pelt.black_colours:
                 possible_prefix_categories.append(self.names_dict["black_prefixes"])
+            elif colour in Pelt.grey_colours:
+                possible_prefix_categories.append(self.names_dict["grey_prefixes"])
             elif colour in Pelt.white_colours:
                 possible_prefix_categories.append(self.names_dict["white_prefixes"])
             elif colour in Pelt.ginger_colours:
                 possible_prefix_categories.append(self.names_dict["ginger_prefixes"])
             elif colour in Pelt.brown_colours:
-                possible_prefix_categories.append(self.names_dict["brown_prefixes"])  
+                possible_prefix_categories.append(self.names_dict["brown_prefixes"])                   
+            elif colour in Pelt.cream_colours:
+                possible_prefix_categories.append(self.names_dict["cream_prefixes"])
+            elif colour in Pelt.yellow_colours:
+                possible_prefix_categories.append(self.names_dict["yellow_prefixes"])
+            elif colour in Pelt.green_colours:
+                possible_prefix_categories.append(self.names_dict["green_prefixes"])                    
+            elif colour in Pelt.blue_colours:
+                possible_prefix_categories.append(self.names_dict["blue_prefixes"])
+            elif colour in Pelt.purple_colours:
+                possible_prefix_categories.append(self.names_dict["purple_prefixes"])
+            elif colour in Pelt.pride_colours:
+                possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
         if possible_prefix_categories and not named_after_biome:
             prefix_category = random.choice(possible_prefix_categories)
             self.prefix = random.choice(prefix_category)

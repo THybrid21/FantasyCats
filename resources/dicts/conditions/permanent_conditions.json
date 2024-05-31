@@ -767,8 +767,8 @@
     },
 	"albinism": {
 		"severity": "major",
-		"congenital": "always",
-		"moons_until": 2,
+		"congenital": "genetic",
+		"moons_until": 1,
 		"mortality": {
 			"newborn": 35,
 			"kitten": 35,
@@ -814,8 +814,8 @@
 	},
 	"melanism": {
 		"severity": "minor",
-		"congenital": "always",
-		"moons_until": 2,
+		"congenital": "genetic",
+		"moons_until": 1,
 		"mortality": {
 			"newborn": 90,
 			"kitten": 90,
@@ -851,6 +851,57 @@
 			{
 				"name": "fatigue",
 				"chance": 45
+			}
+		],
+		"herbs": []
+	},
+	"sphynxism": {
+		"severity": "major",
+		"congenital": "yes",
+		"moons_until": 0,
+		"mortality": {
+			"newborn": 25,
+			"kitten": 25,
+			"adolescent": 30,
+			"young adult": 45,
+			"adult": 50,
+			"senior adult": 50,
+			"senior": 45
+		},
+		"illness_infectiousness": [
+		],
+		"risks": [
+			{
+				"name": "absence",
+				"chance": 45
+			},
+			{
+				"name": "sunblindness",
+				"chance": 45
+			},
+			{
+				"name": "headache",
+				"chance": 25
+			},
+			{
+				"name": "heat exhaustion",
+				"chance": 25
+			},
+			{
+				"name": "sunburn",
+				"chance": 15
+			},
+			{
+				"name": "severe sunburn",
+				"chance": 45
+			},
+			{
+				"name": "silvercough",
+				"chance": 50
+			},
+			{
+				"name": "overstimulation",
+				"chance": 25
 			}
 		],
 		"herbs": []

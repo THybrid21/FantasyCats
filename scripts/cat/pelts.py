@@ -23,7 +23,7 @@ class Pelt():
         'Classic': 'classic',
         'Sokoke': 'sokoke',
         'Agouti': 'agouti',
-        'Singlestripe': 'singlestripe',
+        'Backed': 'backed',
         'Masked': 'masked',
         'Tortie': None,
         'Calico': None,
@@ -51,7 +51,7 @@ class Pelt():
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel', 'classic', 
-                    'sokoke', 'agouti', 'singlestripe', 'masked']
+                    'sokoke', 'agouti', 'Backed', 'masked']
 
     pelt_length = ["short", "medium", "long", "snat", "wolf", "skele", "bare", "catfish", "scug", "saint"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -105,10 +105,10 @@ class Pelt():
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["SingleColour", "TwoColour", "Singlestripe"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
-    spotted = ["SingleColour", "TwoColour", "Singlestripe"]##"Speckled", "Rosette"
-    plain = ["SingleColour", "TwoColour", "Singlestripe"]##"Smoke", 
-    exotic = ["SingleColour", "TwoColour", "Singlestripe"]##"Bengal", "Marbled", "Masked"
+    tabbies = ["SingleColour", "TwoColour", "Backed"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
+    spotted = ["SingleColour", "TwoColour", "Backed"]##"Speckled", "Rosette"
+    plain = ["SingleColour", "TwoColour", "Backed"]##"Smoke", 
+    exotic = ["SingleColour", "TwoColour", "Backed"]##"Bengal", "Marbled", "Masked"
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
@@ -117,15 +117,50 @@ class Pelt():
         'PAN', 'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 
         'POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW']
     single_colours = [
-        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'WHITE', 'PALEGREY', 'SILVER', 'BANNANA', 'PALECREAM', 'SAND', 'CREAM', 'LIGHTBROWN', 
+        'FARROW', 'BEIGE', 'HAY', 'MEERKAT', 'PANTONE', 'PALEGINGER', 'WOOD', 'GOLDEN', 'APRICOT', 
+        'GINGER', 'LILAC', 'KHAKI', 'HAZELNUT', 'CADET', 'BRONZE', 'MARENGO', 'SAMON', 'THISTLE', 'GOLD', 
+        'FIRE', 'GARFIELD', 'DARKGINGER', 'GOLDEN-BROWN', 'CAPPUCCINO', 'ECRU', 'GREY', 'BLUEGREY', 
+        'BATTLESHIP', 'HONEY', 'MEDALLION', 'BRICK', 'ROSE', 'SIENNA', 'DUSTBROWN', 'ASHBROWN', 
+        'SANDALWOOD', 'WRENGE', 'PINECONE', 'STEEL', 'SLATE', 'GRANOLA', 'SADDLE', 'SUNSET', 'APPLE', 
+        'RED', 'RUFOUS', 'TAN', 'CHESTNUT', 'MINK', 'BROWN', 'XANADU', 'SOOT', 'CEDAR', 'DARKSAMON', 
+        'CRIMSON', 'CARMINE', 'SCARLET', 'COSMOS', 'BEAVER', 'DARKBROWN', 'CHOCOLATE', 'DARKGREY', 'CHARCOAL', 
+        'ANCHOR', 'ROSEWOOD', 'BURNT', 'BLOOD', 'COFFEE', 'MOCHA', 'TAUPE', 'UMBER', 'COAL', 'GHOST', 
+        'BLACK', 'PITCH', 'DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 'PAN', 'DEMIGIRL', 
+        'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 'GLASS', 'POLY', 'ENBY', 'INTERSEX', 'MLM', 
+        'WLW', 'GAYBOW', 'PALEBOW', 'IVORY', 'CORAL', 'CHARTRUSE', 'MINT', 'MINTY', 'EMERALD', 'TURQUOISE', 
+        'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'MAGENTA', 'PETAL', 'MEW', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 
+        'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 'HEATHER', 'AMYTHYST', 'LEMON', 'LAGUNA', 'FAWN', 'CORN', 
+        'DARKOLIVE', 'SPINNACH', 'WAVES', 'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 'CHERRY', 'SUNSHINE', 'BEE', 
+        'PYRITE', 'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 'DENIUM', 'COBALT', 'STRAKIT', 'BUBBLEGUM', 'TART',
+        'YELLOW', 'PINEAPPLE', 'SEAGRASS', 'JADE', 'FLUORITE', 'DARKTEAL', 'SONIC', 'NAVY', 'PURPLE', 'WINE', 
+        'BRIGHTCRIMSON', 'ROYALPURPLE', 'TROMBONE', 'BRASS', 'YELLOW-GREEN', 'FOREST', 'SEAFOAM', 'FERN', 
+        'JEANS', 'JACKET', 'DEEPOCEAN', 'DARKSTRAKIT', 'BARN', 'GARNET', 'DIJON', 'RUST', 'COPPER', 'DEEPOLIVE', 
+        'DEEPFOREST', 'MALACHITE', 'OCEANIC', 'NIGHTTIME', 'ONYX', 'RASIN', 'DUSKBOW'
     ]
-    ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']
-    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK']
-    white_colours = ['WHITE', 'PALEGREY', 'SILVER']
-    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
-    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours]
+    cream_colours = ['BANNANA', 'PALECREAM', 'SAND', 'CREAM', 'CORAL', 'MEW']
+    ginger_colours = ['PALEGINGER', 'WOOD', 'GOLDEN', 'APRICOT', 'GINGER', 'GOLD', 'FIRE', 'GARFIELD', 
+        'DARKGINGER', 'HONEY', 'BRICK', 'ROSE', 'SIENNA', 'SUNSET', 'APPLE', 'RED', 'RUFOUS', 'CRIMSON', 'CARMINE', 
+        'SCARLET', 'COSMOS', 'ROSEWOOD', 'BURNT', 'BLOOD']
+    black_colours = ['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'ONYX', 'RASIN']
+    grey_colours = ['CADET', 'BRONZE', 'MARENGO', 'GREY', 'BLUEGREY', 'BATTLESHIP', 'STEEL', 'SLATE', 'XANADU', 'SOOT', 
+        'DARKGREY', 'CHARCOAL', 'ANCHOR']
+    white_colours = ['WHITE', 'PALEGREY', 'SILVER', 'GLASS', 'PALEBOW', 'IVORY', 'PETAL']
+    brown_colours = ['LIGHTBROWN', 'FARROW', 'BEIGE', 'HAY', 'MEERKAT', 'PANTONE', 'LILAC', 'KHAKI', 'HAZELNUT', 'SAMON', 
+        'THISTLE', 'GOLDEN-BROWN', 'CAPPUCCINO', 'ECRU', 'MEDALLION', 'DUSTBROWN', 'ASHBROWN', 'SANDALWOOD', 'WRENGE', 
+        'PINECONE', 'GRANOLA', 'SADDLE', 'TAN', 'CHESTNUT', 'MINK', 'BROWN', 'CEDAR', 'DARKSAMON', 'BEAVER', 'DARKBROWN', 
+        'CHOCOLATE', 'COFFEE', 'MOCHA', 'TAUPE', 'UMBER', 'BRASS', 'YELLOW-GREEN', 'DIJON', 'RUST', 'COPPER']
+    blue_colours = ['TURQUOISE', 'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 
+        'WAVES', 'SAPPHIRE', 'OCEAN', 'TEAL', 'DENIUM', 'COBALT', 'DARKTEAL', 'SONIC', 'NAVY', 'JEANS', 
+        'JACKET', 'DEEPOCEAN', 'OCEANIC', 'NIGHTTIME']
+    yellow_colours = ['LEMON', 'LAGUNA', 'FAWN', 'CORN', 'SUNSHINE', 'BEE', 'PYRITE', 'YELLOW', 'PINEAPPLE', 'TROMBONE']
+    purple_colours = ['MAGENTA', 'PETAL', 'MEW', 'HEATHER', 'AMYTHYST', 'ORCHID', 'FLORAL', 'CHERRY', 'STRAKIT', 'BUBBLEGUM', 
+        'TART', 'PURPLE', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'DARKSTRAKIT', 'BARN', 'GARNET']
+    green_colours = ['CHARTRUSE', 'MINT', 'MINTY', 'EMERALD', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 'DARKOLIVE', 'SPINNACH', 'GREEN', 
+        'SEAWEED', 'SACRAMENTO', 'SEAGRASS', 'JADE', 'FLUORITE', 'FOREST', 'SEAFOAM', 'FERN', 'DEEPOLIVE', 'DEEPFOREST', 
+        'MALACHITE']
+    colour_categories = [cream_colours, ginger_colours, black_colours, grey_colours, white_colours, brown_colours, blue_colours, 
+    yellow_colours, purple_colours, green_colours, pride_colours]
     
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
@@ -502,15 +537,19 @@ class Pelt():
         # Tortie chance
         tortie_chance_f = game.config["cat_generation"]["base_female_tortie"]  # There is a default chance for female tortie
         tortie_chance_m = game.config["cat_generation"]["base_male_tortie"]
+        tortie_chance_i = game.config["cat_generation"]["base_intersex_tortie"]
         for p_ in par_pelts:
             if p_.name in Pelt.torties:
                 tortie_chance_f = int(tortie_chance_f / 2)
+                tortie_chance_i = int(tortie_chance_i - 1)
                 tortie_chance_m = tortie_chance_m - 1
                 break
 
         # Determine tortie:
         if gender == "female":
             torbie = random.getrandbits(tortie_chance_f) == 1
+        elif gender == "intersex":
+            torbie = random.getrandbits(tortie_chance_i) == 1        
         else:
             torbie = random.getrandbits(tortie_chance_m) == 1
 
@@ -527,27 +566,41 @@ class Pelt():
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
         # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-        weights = [0, 0, 0, 0]
+        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
+            if p_ in Pelt.cream_colours:
+                add_weight = (40, 20, 0, 0, 0, 10, 0, 5, 5, 2, 1)
             if p_ in Pelt.ginger_colours:
-                add_weight = (40, 0, 0, 10)
+                add_weight = (20, 40, 0, 0, 0, 10, 0, 0, 5, 0, 5)
             elif p_ in Pelt.black_colours:
-                add_weight = (0, 40, 2, 5)
+                add_weight = (0, 0, 40, 20, 2, 5, 5, 0, 0, 0, 1)
+            elif p_ in Pelt.grey_colours:
+                add_weight = (0, 0, 10, 40, 10, 2, 5, 0, 0, 1, 1)            
             elif p_ in Pelt.white_colours:
-                add_weight = (0, 5, 40, 0)
+                add_weight = (2, 0, 5, 20, 40, 0, 5, 2, 0, 1, 1)
             elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35)
+                add_weight = (5, 10, 5, 2, 0, 35, 0, 5, 0, 1, 1)
+            elif p_ in Pelt.blue_colours:
+                add_weight = (0, 0, 20, 20, 20, 0, 25, 0, 2, 0, 5)
+            elif p_ in Pelt.yellow_colours:
+                add_weight = (10, 0, 0, 0, 10, 20, 0, 25, 0, 5, 5)
+            elif p_ in Pelt.purple_colours:
+                add_weight = (20, 20, 0, 0, 0, 0, 0, 5, 25, 0, 5)
+            elif p_ in Pelt.green_colours:
+                add_weight = (2, 0, 0, 1, 1, 1, 0, 5, 0, 35, 5)
+            elif p_ in Pelt.pride_colours:
+                add_weight = (1, 5, 1, 1, 1, 1, 5, 5, 5, 5, 45)
             elif p_ is None:
-                add_weight = (40, 40, 40, 40)
+                add_weight = (40, 40, 40, 40, 40, 40, 2, 2, 2, 15, 5)
             else:
-                add_weight = (0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
 
             # A quick check to make sure all the weights aren't 0
             if all([x == 0 for x in weights]):
-                weights = [1, 1, 1, 1, 1]
+                weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
         chosen_pelt_color = choice(
             random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
@@ -658,7 +711,7 @@ class Pelt():
         # ------------------------------------------------------------------------------------------------------------#
 
         chosen_pelt_color = choice(
-            random.choices(Pelt.colour_categories, k=1)[0]
+            random.choices(Pelt.colour_categories, weights=(30, 45, 40, 30, 25, 45, 15, 15, 10, 25, 2), k=1)[0]
         )
 
         # ------------------------------------------------------------------------------------------------------------#
@@ -808,7 +861,7 @@ class Pelt():
             self.skin = choice(Pelt.skin_sprites)
         else:
             for _par in parents:
-                if _par.pelt.skin in ["ALBINO", "MELANISTIC"]:
+                if _par.pelt.skin in ["ALBINO", "ALBINOGILL", "MELANISTIC", "MELANISTICGILL"]:
                     _par.pelt.skin = choice(Pelt.skin_sprites)
                 self.skin = choice([i.pelt.skin for i in parents] + Pelt.skin_sprites)
         
@@ -890,34 +943,94 @@ class Pelt():
                     # Normal generation
                     self.tortiepattern = self.tortiebase
 
-                    if self.colour == "WHITE":
-                        possible_colors = Pelt.white_colours.copy()
-                        possible_colors.remove("WHITE")
-                        self.colour = choice(possible_colors)
+                    # Ginger is often dupliselfed to increase its chances
+                    if self.colour in ["WHITE", "PALEGREY", "SILVER", "CADET", "BRONZE", "TURQUOISE", "SKY", 
+                                        "SHINYMEW", "PUDDLE", "TIFFANY", "PALEBOW"]:
+                        self.tortiecolour = choice(['PALECREAM', 'SAND', 'CREAM', 'PALEGINGER', 'WOOD', 'GOLDEN', 'APRICOT', 'CORAL', 
+                                                'PETAL', 'MEW', 'MAGENTA', 'HEATHER', 'AMYTHYST', 'CHARTRUSE', 'MINT', 'MINTY', 'LIME', 
+                                                'LETTUCE', 'GRASS', 'OLIVE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["MARENGO", "GREY", "BLUEGREY", "BATTLESHIP", "STEEL", "SLATE", "POWDERBLUE", 
+                                        "INDIGOBLUE", "INDIGOLIGHT", "WAVES", "SAPPHIRE", "OCEAN", "TEAL", 
+                                        "DENIUM", "COBALT"]:
+                        self.tortiecolour = choice(['GINGER', 'GOLD', 'FIRE', 'GARFIELD', 'DARKGINGER', 'HONEY', 'BRICK', 'ROSE', 'ORCHID', 
+                                                'FLORAL', 'CHERRY', 'STRAKIT', 'BUBBLEGUM', 'TART', 'PURPLE', 'EMERALD', 'DARKOLIVE', 'SPINNACH', 
+                                                'GREEN', 'SEAWEED', 'SACRAMENTO', 'SEAGRASS', 'JADE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["XANADU", "SOOT", "DARKGREY", "CHARCOAL", "ANCHOR", "COAL", "GHOST", 
+                                        "BLACK", "PITCH", "DUSKBOW", "DARKTEAL", "SONIC", "NAVY", "JEANS", 
+                                        "JACKET", "DEEPOCEAN", "OCEANIC", "NIGHTTIME"]:
+                        self.tortiecolour = choice(['SIENNA', 'SUNSET', 'APPLE', 'RED', 'RUFOUS', 'CRIMSON', 'CARMINE', 'SCARLET', 'COSMOS', 'ROSEWOOD',
+                                                'BURNT', 'BLOOD', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'DARKSTRAKIT', 'BARN', 'GARNET', 'RASIN', 'FLUORITE', 
+                                                'FOREST', 'SEAFOAM', 'FERN', 'DEEPOLIVE', 'DEEPFOREST', 'MALACHITE'] + (Pelt.pride_colours * 2))
+                    
+                    elif self.colour in ["PALECREAM", "SAND", "CREAM", "PALEGINGER", "WOOD", "GOLDEN", "APRICOT", "CORAL", 
+                                        "PETAL", "MEW", "MAGENTA", "HEATHER", "AMYTHYST"]:
+                        self.tortiecolour = choice(['WHITE', 'PALEGREY', 'SILVER', 'CADET', 'BRONZE', 'TURQUOISE', 'SKY', 
+                                                'SHINYMEW', 'PUDDLE', 'TIFFANY', 'PALEBOW', 'CHARTRUSE', 'MINT', 'MINTY', 'LIME', 
+                                                'LETTUCE', 'GRASS', 'OLIVE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["GINGER", "GOLD", "FIRE", "GARFIELD", "DARKGINGER", "HONEY", "BRICK", "ROSE", "ORCHID", 
+                                        "FLORAL", "CHERRY", "STRAKIT", "BUBBLEGUM", "TART", "PURPLE"]:
+                        self.tortiecolour = choice(['MARENGO', 'GREY', 'BLUEGREY', 'BATTLESHIP', 'STEEL', 'SLATE', 'POWDERBLUE', 
+                                                'INDIGOBLUE', 'INDIGOLIGHT', 'WAVES', 'SAPPHIRE', 'OCEAN', 'TEAL', 
+                                                'DENIUM', 'COBALT', 'EMERALD', 'DARKOLIVE', 'SPINNACH', 
+                                                'GREEN', 'SEAWEED', 'SACRAMENTO', 'SEAGRASS', 'JADE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["SIENNA", "SUNSET", "APPLE", "RED", "RUFOUS", "CRIMSON", "CARMINE", "SCARLET", "COSMOS", "ROSEWOOD",
+                                        "BURNT", "BLOOD", "WINE", "BRIGHTCRIMSON", "ROYALPURPLE", "DARKSTRAKIT", "BARN", "GARNET", "RASIN"]:                   
+                        self.tortiecolour = choice(['XANADU', 'SOOT', 'DARKGREY', 'CHARCOAL', 'ANCHOR', 'COAL', 'GHOST', 
+                                                'BLACK', 'PITCH', 'DUSKBOW', 'DARKTEAL', 'SONIC', 'NAVY', 'JEANS', 
+                                                'JACKET', 'DEEPOCEAN', 'OCEANIC', 'NIGHTTIME', 'FLUORITE', 
+                                                'FOREST', 'SEAFOAM', 'FERN', 'DEEPOLIVE', 'DEEPFOREST', 'MALACHITE'] + (Pelt.pride_colours * 2))
 
-                    # Ginger is often duplicated to increase its chances
-                    if (self.colour in Pelt.black_colours) or (self.colour in Pelt.white_colours):
-                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.brown_colours)
+                    elif self.colour in ["BANNANA", "LIGHTBROWN", "FARROW", "BEIGE", "HAY", "MEERKAT", "PANTONE", "LILAC", "KHAKI", 
+                                        "HAZELNUT", "SAMON", "IVORY", "LEMON", "LAGUNA", "FAWN", "CORN"]:
+                        self.tortiecolour = choice(['WHITE', 'PALEGREY', 'SILVER', 'CADET', 'BRONZE', 'TURQUOISE', 'SKY', 
+                                                'SHINYMEW', 'PUDDLE', 'TIFFANY', 'PALEBOW', 'PALECREAM', 'SAND', 'CREAM', 'PALEGINGER', 
+                                                'WOOD', 'GOLDEN', 'APRICOT', 'CORAL', 'PETAL', 'MEW', 'MAGENTA', 'HEATHER', 'AMYTHYST', 
+                                                'CHARTRUSE', 'MINT', 'MINTY', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["THISTLE", "GOLDEN-BROWN", "CAPPUCCINO", "ECRU", "MEDALLION", "DUSTBROWN", "ASHBROWN", 
+                                        "SANDALWOOD", "WRENGE", "PINECONE", "GRANOLA", "SADDLE", "TAN", "CHESTNUT", "MINK", "BROWN", 
+                                        "BEE", "PYRITE", "YELLOW", "PINEAPPLE"]:
+                        self.tortiecolour = choice(['MARENGO', 'GREY', 'BLUEGREY', 'BATTLESHIP', 'STEEL', 'SLATE', 'GINGER', 'GOLD', 
+                                                'FIRE', 'GARFIELD', 'DARKGINGER', 'HONEY', 'BRICK', 'ROSE', 'ORCHID', 'FLORAL', 'CHERRY', 
+                                                'STRAKIT', 'BUBBLEGUM', 'TART', 'PURPLE', 'POWDERBLUE', 'INDIGOBLUE', 'INDIGOLIGHT', 
+                                                'WAVES', 'SAPPHIRE', 'OCEAN', 'TEAL', 'DENIUM', 'COBALT', 'EMERALD', 'DARKOLIVE', 'SPINNACH', 
+                                                'GREEN', 'SEAWEED', 'SACRAMENTO', 'SEAGRASS', 'JADE'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["CEDAR", "DARKSAMON", "BEAVER", "DARKBROWN", "CHOCOLATE", "COFFEE", "MOCHA", "TAUPE", "UMBER", "TROMBONE", 
+                                        "BRASS", "YELLOW-GREEN", "DIJON", "RUST", "COPPER", "ONYX"]:
+                        self.tortiecolour = choice(['XANADU', 'SOOT', 'DARKGREY', 'CHARCOAL', 'ANCHOR', 'COAL', 'GHOST', 'BLACK', 
+                                                'PITCH', 'DUSKBOW', 'SIENNA', 'SUNSET', 'APPLE', 'RED', 'RUFOUS', 'CRIMSON', 'CARMINE', 'SCARLET', 
+                                                'COSMOS', 'ROSEWOOD', 'BURNT', 'BLOOD', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'DARKSTRAKIT', 'BARN', 
+                                                'GARNET', 'RASIN', 'DARKTEAL', 'SONIC', 'NAVY', 'JEANS', 'JACKET', 'DEEPOCEAN', 'OCEANIC', 'NIGHTTIME', 
+                                                'FLUORITE', 'FOREST', 'SEAFOAM', 'FERN', 'DEEPOLIVE', 'DEEPFOREST', 'MALACHITE'] + (Pelt.pride_colours * 2))
 
-                    elif self.colour in Pelt.ginger_colours:
-                        self.tortiecolour = choice(Pelt.brown_colours + Pelt.black_colours * 2)
-
-                    elif self.colour in Pelt.brown_colours:
-                        possible_colors = Pelt.brown_colours.copy()
-                        possible_colors.remove(self.colour)
-                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2))
+                    elif self.colour in ["CHARTRUSE", "MINT", "MINTY", "LIME", "LETTUCE", "GRASS", "OLIVE"]:
+                        self.tortiecolour = choice (['WHITE', 'PALEGREY', 'SILVER', 'CADET', 'BRONZE', 'TURQUOISE', 'SKY', 
+                                                'SHINYMEW', 'PUDDLE', 'TIFFANY', 'PALEBOW', 'PALECREAM', 'SAND', 'CREAM', 'PALEGINGER', 
+                                                'WOOD', 'GOLDEN', 'APRICOT', 'CORAL', 'PETAL', 'MEW', 'MAGENTA', 'HEATHER', 'AMYTHYST'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["EMERALD", "DARKOLIVE", "SPINNACH", "GREEN", "SEAWEED", "SACRAMENTO", "SEAGRASS", "JADE"]:
+                        self.tortiecolour = choice (['MARENGO', 'GREY', 'BLUEGREY', 'BATTLESHIP', 'STEEL', 'SLATE', 'GINGER', 'GOLD', 
+                                                'FIRE', 'GARFIELD', 'DARKGINGER', 'HONEY', 'BRICK', 'ROSE', 'ORCHID', 'FLORAL', 'CHERRY', 
+                                                'STRAKIT', 'BUBBLEGUM', 'TART', 'PURPLE', 'POWDERBLUE', 'INDIGOBLUE', 'INDIGOLIGHT', 
+                                                'WAVES', 'SAPPHIRE', 'OCEAN', 'TEAL', 'DENIUM', 'COBALT'] + (Pelt.pride_colours * 2))
+                    elif self.colour in ["FLUORITE", "FOREST", "SEAFOAM", "FERN", "DEEPOLIVE", "DEEPFOREST", "MALACHITE"]:
+                        self.tortiecolour = choice (['XANADU', 'SOOT', 'DARKGREY', 'CHARCOAL', 'ANCHOR', 'COAL', 'GHOST', 'BLACK', 
+                                                'PITCH', 'DUSKBOW', 'SIENNA', 'SUNSET', 'APPLE', 'RED', 'RUFOUS', 'CRIMSON', 'CARMINE', 'SCARLET', 
+                                                'COSMOS', 'ROSEWOOD', 'BURNT', 'BLOOD', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE', 'DARKSTRAKIT', 'BARN', 
+                                                'GARNET', 'RASIN', 'DARKTEAL', 'SONIC', 'NAVY', 'JEANS', 'JACKET', 'DEEPOCEAN', 'OCEANIC', 'NIGHTTIME'] + (Pelt.pride_colours * 2))
+                                
+                    elif self.colour == "GLASS":
+                        possible_colors = Pelt.pelt_colours.copy()
+                        possible_colors.remove(self.pelt.colour)
                         self.tortiecolour = choice(possible_colors)
-
+                    
                     elif self.colour in Pelt.pride_colours:
                         possible_colors = Pelt.pride_colours.copy()
                         possible_colors.remove(self.colour)
+                        possible_colors.extend(['STRAKIT', 'DARKSTRAKIT', 'PITCH', 'PALEBOW', 'DUSKBOW'])
                         self.tortiecolour = choice(possible_colors)
 
-                    else:
-                        self.tortiecolour = "GOLDEN"
-
             else:
-                self.tortiecolour = "GOLDEN"
+                self.tortiecolour = choice(Pelt.pride_colours)
+                
         else:
             self.tortiebase = None
             self.tortiepattern = None
@@ -1088,15 +1201,20 @@ class Pelt():
             possible_tints = sprites.cat_tints["possible_tints"]["any"].copy()
             self.tint = choice(possible_tints)  
         elif hit <= 10:      
-            if self.colour in [Pelt.black_colours, Pelt.white_colours]:
+            if self.colour in [Pelt.black_colours, Pelt.grey_colours, Pelt.white_colours, Pelt.blue_colours]:
                 possible_tints = sprites.cat_tints["possible_tints"]["greyscale"].copy()
                 self.tint = choice(possible_tints)
-            elif self.colour in [Pelt.ginger_colours]:
+            elif self.colour in [Pelt.ginger_colours, Pelt.cream_colours, Pelt.purple_colours]:
                 possible_tints = sprites.cat_tints["possible_tints"]["gingerscale"].copy()
                 self.tint = choice(possible_tints)
-            elif self.colour in [Pelt.brown_colours]:
+            elif self.colour in [Pelt.brown_colours, Pelt.yellow_colours]:
                 possible_tints = sprites.cat_tints["possible_tints"]["brownscale"].copy()
                 self.tint = choice(possible_tints)
+            elif self.colour in Pelt.green_colours:
+                possible_tints = sprites.cat_tints["possible_tints"]["greenscale"].copy()
+                self.tint = choice(possible_tints)
+            elif self.colour in Pelt.pride_colours:
+                self.tint = "none"
         else:
             self.tint = "none"
 
@@ -1123,35 +1241,49 @@ class Pelt():
         # Define look-up dictionaries
         if short:
             renamed_colors = {
-                "white": "pale",
-                "palegrey": "gray",
-                "darkgrey": "gray",
-                "grey": "gray",
-                "paleginger": "ginger",
-                "darkginger": "ginger",
-                "sienna": "ginger",
-                "lightbrown": "brown",
-                "lilac": "brown",
-                "golden-brown": "brown",
+                "ashbrown": "brown",
+                "dustbrown": "brown",
                 "darkbrown": "brown",
-                "chocolate": "brown",
-                "ghost": "black"
+                "palecream": "cream",
+                "bluegrey": "grey",
+                "darkgrey": "grey",
+                "shinymew": "sky",
+                "sonic": "blue",
+                "samon": "salmon",
+                "darksamon": "salmon",
+                "strakit": "purple",
+                "darkstrakit": "purple",
+                "indigoblue": "indigo",
+                "indigolight": "indigo",
+                "seagrass": "olive",
+                "brightcrimson": "crimson",
+                "royalpurple": "purple",
+                "seafoam": "green",
+                "deepocean": "blue",
+                "nighttime": "midnight"
             }
         else:
             renamed_colors = {
-                "white": "pale",
-                "palegrey": "pale gray",
-                "grey": "gray",
-                "darkgrey": "dark gray",
-                "paleginger": "pale ginger",
-                "darkginger": "dark ginger",
-                "sienna": "dark ginger",
-                "lightbrown": "light brown",
-                "lilac": "light brown",
-                "golden-brown": "golden brown",
+                "ashbrown": "ash brown",
+                "dustbrown": "dust brown",
                 "darkbrown": "dark brown",
-                "chocolate": "dark brown",
-                "ghost": "black"
+                "palecream": "pale cream",
+                "bluegrey": "blue-grey",
+                "darkgrey": "dark grey",
+                "shinymew": "shiny mew",
+                "sonic": "sonic blue",
+                "samon": "salmon",
+                "darksamon": "dark salmon",
+                "strakit": "starkit purple",
+                "darkstrakit": "dark starkit purple",
+                "indigoblue": "indigo blue",
+                "indigolight": "light indigo",
+                "seagrass": "sea grass green",
+                "brightcrimson": "crimson",
+                "royalpurple": "royal purple",
+                "seafoam": "seafoam green",
+                "deepocean": "deep ocean",
+                "nighttime": "midnight"
             }
 
         pattern_des = {
@@ -1164,7 +1296,7 @@ class Pelt():
             "Mackerel": "c_n tabby",
             "Classic": "c_n tabby",
             "Agouti": "c_n tabby",
-            "Singlestripe": "dorsal-striped c_n",
+            "Backed": "backed c_n",
             "Rosette": "unusually spotted c_n",
             "Sokoke": "c_n tabby",
             "Masked": "masked c_n tabby"
@@ -1276,11 +1408,15 @@ class Pelt():
             color_name = f"{color_name} molly"
         elif cat.genderalign in ["male", "trans male"]:
             color_name = f"{color_name} tom"
-        else:
+        elif cat.pelt.length != ["scug", "saint"] and not short: 
             color_name = f"{color_name} cat"
+        else:
+            color_name = f"{color_name} cat"        
 
         if cat.pelt.white_patches and not cat.pelt.albino and not cat.pelt.melanistic:
-            if cat.pelt.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
+            if short:
+                color_name = f"{color_name} with patches" 
+            elif cat.pelt.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
                 if cat.pelt.white_patches_tint != "none":            
                     color_name = f"{color_name} with patches of {cat.pelt.white_patches_tint}"
                 else: 
@@ -1290,7 +1426,7 @@ class Pelt():
                     color_name = f"{color_name} with small patches of {cat.pelt.white_patches_tint}"
                 else: 
                     color_name = f"{color_name} with small patches of white"
-
+               
         return color_name
     
     def get_sprites_name(self):

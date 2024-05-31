@@ -9,13 +9,12 @@
 	"To m_c's surprise the stomachache that {PRONOUN/m_c/subject} {VERB/m_c/have/has} been experiencing turns out to be kits."
   ],
   "litter_guess": [
-    "m_c thinks {PRONOUN/m_c/subject}'ll have a small litter.",
-    "m_c thinks {PRONOUN/m_c/subject}'ll have a large litter.",
-	"m_c feels absolutely swollen with kittens, {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} this will be a huge litter.",
-    "m_c is unsure how many kits {PRONOUN/m_c/subject}'ll have.",
-	"m_c thinks that {PRONOUN/m_c/subject}'ll only have a single kitten.",
     "m_c hopes the litter will be small - {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} overwhelmed at the idea of a big litter.",
-    "m_c is hoping for a big litter!",
+    "m_c is hoping {PRONOUN/m_c/subject}'ll have a large litter.",
+	"m_c feels absolutely swollen with kittens, {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} this will be a huge litter.",
+	"m_c thinks that {PRONOUN/m_c/subject}'ll only have a single kitten."
+	],
+  "unsure_litter_guess": [
     "m_c is unsure how many kits {PRONOUN/m_c/subject}'ll have.",
     "m_c wonders how much of {PRONOUN/m_c/poss} expanding belly is kits and how much is pregnancy weight.",
     "m_c has no idea how big {PRONOUN/m_c/subject} should craft the nest in the nursery {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} creating - but it needs the softest materials, the best moss.",
@@ -23,7 +22,8 @@
     "m_c wonders how many names {PRONOUN/m_c/subject} should think about, for {PRONOUN/m_c/poss} kits. {PRONOUN/m_c/subject/CAP} have no idea how many {PRONOUN/m_c/subject}'ll need, and what if {PRONOUN/m_c/subject} meet {PRONOUN/m_c/poss} litter for the first time and one of the names just doesn't fit?!",
     "m_c feels like {PRONOUN/m_c/poss} entire existence is one long trip between water and the dirtplace, again and again. This pregnancy is so much harder than {PRONOUN/m_c/subject} were expecting.",
     "m_c curls up, purring at {PRONOUN/m_c/poss} belly, hoping the unknown number of kittens within can hear {PRONOUN/m_c/poss} love for them - {PRONOUN/m_c/subject} can't wait to meet them." 
-  ],
+	],
+  
 
 
   "major_severity": [

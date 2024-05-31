@@ -273,7 +273,7 @@
     },
     "kit_traits": {
         "unruly": {
-            "lawfulness": [4 12],
+            "lawfulness": [4, 12],
             "sociability": [0, 16],
             "aggression": [4, 12],
             "stability": [4, 12]

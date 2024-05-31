@@ -447,6 +447,49 @@
 			"After all the extra work that m_c has been doing around the camp, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} exhausted {PRONOUN/m_c/self}."
 		]
 	},
+	"sphynxism": {
+		"absence": [
+			"r_c notices that m_c keeps stopping and staring off into the distance for moments before continuing, sometimes mid-sentence. Cautiously {PRONOUN/r_c/subject} {VERB/m_c/come/comes} over to check on {PRONOUN/m_c/object} and make sure all is well.",
+			"m_c keeps staring and trailing off from {PRONOUN/m_c/poss} thoughts.",
+			"m_c's head feels a bit fuzzy when {PRONOUN/m_c/subject} {VERB/m_c/are/is} wandering around the camp, each blink feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} missing a few heartbeats or turns."
+		],
+		"sunblindness": [
+			"r_c winces alongside m_c as the sun shines and burns particularly brightly for the day outside the den.",
+			"In the glare of the sun m_c hisses because it makes {PRONOUN/m_c/poss} eyes and skin burn.",
+			"m_c shakes {PRONOUN/m_c/poss} head and ducks back into the den, the world outside is just particularly blinding."
+		],
+		"headache": [
+			"m_c curls up in the medicine den, {PRONOUN/m_c/subject} only {VERB/m_c/raise/raises} {PRONOUN/m_c/poss} head to explain to r_c {PRONOUN/m_c/subject} just needed somewhere shaded and quiet so {PRONOUN/m_c/subject} could settle {PRONOUN/m_c/poss} headache.",
+			"There's a bunch of bees and fog in m_c's head.",
+			"m_c remains curled up in the den, {PRONOUN/m_c/poss} clanmates know to give {PRONOUN/m_c/object} some peace and quiet to recover in."
+		],
+		"heat exhaustion": [
+			"m_c weakly lies in the medicine den while r_c attends to {PRONOUN/m_c/object}. r_c reassures {PRONOUN/m_c/object} that there's no shame for struggling with the heat.",
+			"With m_c's sensitivity to the weather and changes it's no surprise that {PRONOUN/m_c/subject} {VERB/m_c/are/is} struggling in the heat of the days",			
+			"m_c is barely able to raise from {PRONOUN/m_c/poss} nest swaying on {PRONOUN/m_c/poss} feet and more than a little bit disoriented and panting."
+		],
+		"sunburn": [
+			"r_c winces as m_c weakly comes into the den. {PRONOUN/m_c/poss/CAP} bare side, tail and paws are horibbly red and blistered. It's all r_c can do to gently apply the herbal paste to soothe the burn.",
+			"m_c whimpers coming in out of the sunshine, {PRONOUN/m_c/poss} skin is blistered and painful, even a glance makes {PRONOUN/m_c/poss} denmates wince in sympathy.",
+			"Even the clouds aren't enough to protect m_c entirely from the consequences of a day out in the heat and bright of the sun."
+		],
+		"severe sunburn": [
+			"m_c can't even make it to the medicine den, having to request a denmate's assistance in getting r_c to attend to the painful blisters and burns from the sun's glare all over {PRONOUN/m_c/poss} pelt.",
+			"m_c can barely move without wincing. {PRONOUN/m_c/poss/CAP} skin is all tight and blistered, it feels like not an inch of {PRONOUN/m_c/object} was spared.",
+			"It feels like no part of m_c managed to avoid getting burnt in the sun's rays.",
+			"m_c regrets that {PRONOUN/m_c/subject} felt the need to relax in a sunbeam, it was just so inviting."
+		],
+		"silvercough": [
+			"r_c ferries a coughing m_c into the medicine den, best to secure {PRONOUN/m_c/object} before everyone catches silvercough",
+			"Unsurprisingly m_c has not been able to avoid the risk of sickness from been outside without any fur to protect {PRONOUN/m_c/object} from the elements.",
+			"Weakly m_c coughs {PRONOUN/m_c/poss} way into the medicine den."
+		],
+		"overstimulation": [
+			"r_c struggles to help m_c recenter {PRONOUN/m_c/self}, {PRONOUN/m_c/poss} ears flattened and eyes wide barely focusing on {PRONOUN/r_c/object}.",
+			"The world shakes and shifts around m_c too fast for {PRONOUN/m_c/object} to handle.",
+			"m_c curls up in {PRONOUN/m_c/poss} nest, trembling and hoping desperately that things will calm down."
+		]
+	},
 	"constant roaming pain": {
         "joint pain": [
             "r_c can only set aside a nest and some herbs as m_c comes in complaining of joint pain.",
