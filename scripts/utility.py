@@ -1251,12 +1251,12 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 cat_sprite = str(35)
             if cat.pelt.length == 'skele':
                 cat_sprite = str(93)
-            cat_sprite = str(cat.pelt.cat_sprites['newborn'])                
+            else:
+                cat_sprite = str(cat.pelt.cat_sprites['newborn'])                
         elif age in ['kitten', 'adolescent']:
             cat_sprite = str(cat.pelt.cat_sprites['para_young'])
         else:
-             if age != 'newborn':
-                cat_sprite = str(cat.pelt.cat_sprites['para_adult'])
+            cat_sprite = str(cat.pelt.cat_sprites['para_adult'])
     else:
         if age == 'elder' and not game.config['fun']['all_cats_are_newborn']:
             age = 'senior'
@@ -1301,7 +1301,7 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
             tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
 
-        # draw white patches
+        # draw white patches & vit
         if cat.pelt.white_patches is not None:
             white_patches = sprites.sprites['white' + cat.pelt.white_patches + cat_sprite].copy()
 
@@ -1311,10 +1311,18 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
                 tint.fill(tuple(sprites.white_patches_tints["tint_colours"][cat.pelt.white_patches_tint]))
                 white_patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
-
             new_sprite.blit(white_patches, (0, 0))
 
-        # draw vit, albinism/melanism & points
+        if cat.pelt.vitiligo:
+            vitiligo = sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite].copy()
+            if cat.pelt.vitiligo_tint != "none" and cat.pelt.vitiligo_tint in sprites.vitiligo_tint[
+                "tint_colours"]:
+                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                tint.fill(tuple(sprites.vitiligo_tint["tint_colours"][cat.pelt.vitiligo_tint]))
+                vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+            new_sprite.blit(vitiligo, (0, 0))
+
+        # draw albinism/melanism & points
 
         if cat.pelt.albino != None:
             new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
@@ -1329,9 +1337,6 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 tint.fill(tuple(sprites.white_patches_tints["tint_colours"][cat.pelt.white_patches_tint]))
                 points.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(points, (0, 0))
-
-        if cat.pelt.vitiligo:
-            new_sprite.blit(sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite], (0, 0))
 
         # draw eyes & scars1
         eyes = sprites.sprites['eyes' + cat.pelt.eye_colour + cat_sprite].copy()

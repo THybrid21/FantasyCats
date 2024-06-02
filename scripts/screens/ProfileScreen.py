@@ -679,7 +679,7 @@ class ProfileScreen(Screens):
         if the_cat.genderalign is None or the_cat.genderalign == the_cat.gender:
             output += str(the_cat.gender)
         else:
-            output += str(the_cat.genderalign)
+            output += str(the_cat.genderalign + ", " + str(the_cat.gender))
         # NEWLINE ----------
         output += "\n"
 

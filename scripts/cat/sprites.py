@@ -35,6 +35,12 @@ class Sprites():
                 self.white_patches_tints = ujson.loads(read_file.read())
         except:
             print("ERROR: Reading White Patches Tints")
+
+        try:
+            with open("sprites/dicts/vitiligo_tint.json", 'r') as read_file:
+                self.vitiligo_tint = ujson.loads(read_file.read())
+        except:
+            print("ERROR: Reading Vitiligo Tints")
             
     def spritesheet(self, a_file, name):
         """
@@ -119,13 +125,18 @@ class Sprites():
             
             'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals',
             'shadersnewwhite', 'lightingnew',
-            'whitepatches', 'tortiepatchesmasks', 'albinism', 'melanism',
             'fademask', 'fadestarclan', 'fadedarkforest'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
             else:
                 self.spritesheet(f"sprites/{x}.png", x)
+
+        for x in [
+            'whitepatches', 'tortiepatchesmasks', 'vitiligo', 
+            'colourpointpatches', 'albinism', 'melanism'
+        ]:
+            sprites.spritesheet(f"sprites/patches/{x}.png", x) 
 
         # Line art
         self.make_group('lineart', (0, 0), 'lines')
@@ -187,6 +198,24 @@ class Sprites():
         for row, patches in enumerate(white_patches):
             for col, patch in enumerate(patches):
                 self.make_group('whitepatches', (col, row), f'white{patch}')
+
+        vitiligo = [
+            ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY'], 
+            ['SHADOWSIGHT']
+        ]
+        
+        for row, vitiligo in enumerate(vitiligo):
+            for col, vit in enumerate(vitiligo):
+                self.make_group('vitiligo', (col, row), f'white{vit}')
+
+        colourpoint = [
+            ['COLOURPOINT', 'RAGDOLL', 'KARPATI', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT'], 
+            ['REVERSEPOINT', 'PONIT', 'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT', 'WHITEPOINT']
+        ]
+        
+        for row, colourpoint in enumerate(colourpoint):
+            for col, colorpoint in enumerate(colourpoint):
+                self.make_group('colourpointpatches', (col, row), f'white{colorpoint}')
 
         ##Albinism + Melanism Sheets
         for a, i in enumerate(

@@ -182,7 +182,7 @@
 		"max_conditions_born_with": 3,
 		"base_male_tortie": 18,
 		"base_female_tortie": 9,
-		"base_intersex_tortie": 4,
+		"base_intersex_tortie": 6,
 		"base_heterochromia": 120,
 		"base_blep": 120,
 		"direct_inheritance": 15,

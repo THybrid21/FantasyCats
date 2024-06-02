@@ -277,7 +277,7 @@ class Cat():
             self.backstory = self.backstory
 
         genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
-                            "genderfluid", "bigender", "pangender", "???"]
+                            "genderfluid", "bigender", "pangender", "questioning"]
 
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
@@ -285,6 +285,9 @@ class Cat():
             #probability that the cat will be intersex.. base chance around 5%
             if intersexchance <= 10 and example is False:
                 self.gender = "intersex"
+                infertile = randint(1, 120)
+                if infertile <= 10:
+                    self.get_permanent_condition("infertile", born_with=True)                
             else:
                 self.gender = choice(["female", "male"])
         self.g_tag = self.gender_tags[self.gender]
@@ -306,17 +309,12 @@ class Cat():
                     self.genderalign = "trans female"
                 elif nb_chance == 1:
                     self.genderalign = choice(genderqueer_list)
-            elif self.gender == "intersex" and not self.status in ['newborn']:
-                if trans_chance == 1:
-                    self.genderalign = choice(["trans male", "trans female"])
-                elif nb_chance == 1:
-                    intergenderchance = randint(1,2)
-                    if intergenderchance == 1:
-                        self.genderalign = "intergender"
-                    else:
-                        self.genderalign = choice(genderqueer_list)
                 else:
                     self.genderalign = self.gender
+            elif self.gender == "intersex":
+                self.genderalign = choice(["male", "female", "intergender"])
+                if nb_chance == 1:
+                    self.genderalign = choice(genderqueer_list)
             else:
                 self.genderalign = self.gender
 
@@ -3193,6 +3191,7 @@ class Cat():
                 "albino": self.pelt.albino,
                 "melanistic": self.pelt.melanistic,
                 "white_patches_tint": self.pelt.white_patches_tint,
+                "vitiligo_tint": self.pelt.vitiligo_tint,
                 "pattern": self.pelt.pattern,
                 "tortie_base": self.pelt.tortiebase,
                 "tortie_color": self.pelt.tortiecolour,

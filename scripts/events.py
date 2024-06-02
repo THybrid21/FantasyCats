@@ -2324,51 +2324,114 @@ class Events:
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""
+        genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demienby",
+                        "genderfluid", "bigender", "pangender", "questioning"]
+        involved_cats = [cat.ID]
+
+        if cat.genderalign in ['male', 'trans male', 'demiboy']:
+            gender = 'tom'
+        elif cat.genderalign in ['female', 'trans female', 'demigirl']:
+            gender = 'molly'
+        else:
+            gender = cat.genderalign
+
         if cat.genderalign == cat.gender:
-            if cat.moons < 6:
-                return
-
-            involved_cats = [cat.ID]
-            if cat.age == 'adolescent':
-                transing_chance = random.getrandbits(8)  # 2/256
-            elif cat.age == 'young adult':
-                transing_chance = random.getrandbits(9)  # 2/512
+            if cat.age in ['kitten', 'adolescent']:
+                transing_chance = random.randint(0, 256)
+            elif cat.age in ['young adult', 'adult']:
+                transing_chance = random.randint(0, 512)
             else:
-                # adult, senior adult, elder
-                transing_chance = random.getrandbits(10)  # 2/1028
-
-            if transing_chance:
-                # transing_chance != 0, no trans kitties today...    L
-                return
-
+                # senior adult & elder
+                transing_chance = random.randint(0, 1024)
+        elif cat.genderalign == "questioning":
+            transing_chance = random.randint(0, 512)
+        else:
+            transing_chance = random.randint(0, 1024)
+        detransition_chance = random.randint(0, 1024)
+        
+        if transing_chance == 0:
+            # transing_chance != 0, no trans kitties today...    L
             if random.getrandbits(1):  # 50/50
-                if cat.gender == "male":
-                    trans_options = ["trans female", "demigirl"]
-                    cat.genderalign = random.choice(trans_options)
+                if cat.gender == "male" and cat.genderalign in ['male', 'demiboy']:
+                    cat.genderalign = random.choice(["trans female", "demigirl"])
                     # cat.pronouns = [cat.default_pronouns[1].copy()]
+                elif cat.gender == "female" and cat.genderalign in ['female', 'demigirl']:
+                    cat.genderalign = random.choice(["trans male", "demiboy"])
+                    # cat.pronouns = [cat.default_pronouns[2].copy()]
+                elif cat.genderalign == "intergender":# 50/50 
+                    cat.genderalign = random.choice(["trans female", "trans male"])
                 else:
-                    trans_options = ["trans male", "demiguy"]
-                    cat.genderalign = random.choice(trans_options)
-                    #cat.pronouns = [cat.default_pronouns[2].copy()]
-            elif random.getrandbits(2):
-                if cat.gender == "male":
-                    cat.genderalign = "demiguy"
-                    #cat.pronouns = [cat.default_pronouns[2].copy()]
-                else:
-                    cat.genderalign = "demigirl"
-                    #cat.pronouns = [cat.default_pronouns[1].copy()]
-            else:
-                cat.genderalign = "nonbinary"
-                # cat.pronouns = [cat.default_pronouns[0].copy()]
+                    if cat.genderalign in genderqueer_list:
+                        return
+                    else:
+                        cat.genderalign = random.choice(genderqueer_list)
+                        # cat.pronouns = [cat.default_pronouns[0].copy()]
+            elif cat.genderalign == "questioning":
+                euphoria = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
+                        "genderfluid", "bigender", "pangender"]
+                cat.genderalign = random.choice(euphoria)
 
-            if cat.gender == 'male':
-                gender = 'tom'
+                if cat.genderalign in ["trans male", "demiboy"]:
+                    trans = "tom"
+                elif cat.genderalign in ["trans female", "demigirl"]:
+                    trans = "molly"
+                else:
+                    trans = cat.genderalign
+
+                text = f"{cat.name} has come to the conclusion that {trans} fully explains what they are."
+                game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                return 
             else:
-                gender = 'molly'
-            text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore."
-            game.cur_events_list.append(
-                Single_Event(text, "misc", involved_cats))
-            # game.misc_events_list.append(text)
+                if cat.genderalign in genderqueer_list:
+                    return              
+                else:
+                    cat.genderalign = random.choice(genderqueer_list)
+                    # cat.pronouns = [cat.default_pronouns[0].copy()]
+
+            if cat.genderalign in ['trans male', 'demiboy']:
+                trans = "tom"
+                # cat.pronouns = [cat.default_pronouns[2].copy()]
+            elif cat.genderalign == ['trans female', 'demigirl']:
+                trans = "molly"
+                # cat.pronouns = [cat.default_pronouns[1].copy()]
+            else:
+                trans = cat.genderalign
+
+            text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore - {trans} does it much better."
+            game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+            # game.misc_events_list.append(text)  
+            return
+
+        ##Untransing the kitties, :P
+        if detransition_chance == 0:                
+            if cat.genderalign in ["trans male", "demiboy"]:
+                trans = "tom"
+            elif cat.genderalign in ["trans female", "demigirl"]:
+                trans = "molly"
+            else:
+                trans = cat.genderalign
+
+            if cat.gender == "male" and cat.genderalign in ["trans female", "demigirl", "questioning"]:
+                cat.genderalign = random.choice(["male", "demiboy"])                     
+                # cat.pronouns = [cat.default_pronouns[2].copy()]
+            elif cat.gender == "female" and cat.genderalign == ["trans male", "demiboy", "questioning"]:
+                cat.genderalign = random.choice(["female", "demigirl"])
+                # cat.pronouns = [cat.default_pronouns[1].copy()]
+            elif cat.gender == "intersex" and cat.genderalign != "intergender":
+                cat.genderalign = "intergender"        
+            else:
+                return
+
+            if cat.genderalign in ['male', 'demiboy']:
+                gender = 'a tom'
+            elif cat.genderalign in ['female', 'demigirl']:
+                gender = 'a molly'
+            else:
+                gender = cat.genderalign
+
+            text = f"{cat.name} has come to the conclusion that {trans} isn't accurate and in fact they were {gender} after all."
+            game.cur_events_list.append(Single_Event(text, "misc", involved_cats))   
+  
 
     def check_and_promote_leader(self):
         """ Checks if a new leader need to be promoted, and promotes them, if needed.  """

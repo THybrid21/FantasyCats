@@ -67,8 +67,7 @@ class Pelt():
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
-    tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel', 'classic', 
-                    'sokoke', 'agouti', 'Backed', 'masked']
+    tortiebases = ['single', 'backed']
 
     pelt_length = ["short", "medium", "long", "snat", "wolf", "skele", "bare", "catfish", "scug", "saint"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -193,8 +192,9 @@ class Pelt():
     mostly_white = ['VAN', 'ONEEAR', 'LIGHTSONG', 'TAIL', 'HEART', 'MOORISH', 'APRON', 'CAPSADDLE',
                     'CHESTSPECK', 'BLACKSTAR', 'PETAL', 'HEARTTWO','PEBBLESHINE', 'BOOTS', 'COW', 'COWTWO', 'LOVEBUG', 'SHOOTINGSTAR',
                     'EYESPOT', 'PEBBLE', 'TAILTWO', 'BUDDY', 'KROPKA']
-    point_markings = ['COLOURPOINT', 'RAGDOLL', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'KARPATI']
-    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY']
+    point_markings = ['COLOURPOINT', 'RAGDOLL', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'KARPATI', 'REVERSEPOINT', 
+                        'PONIT', 'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT', 'WHITEPOINT']
+    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY', 'SHADOWSIGHT']
     white_sprites = [
         little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
@@ -242,6 +242,7 @@ class Pelt():
                  skin:str="BLACK",
                  blep:bool=False,
                  white_patches_tint:str="none",
+                 vitiligo_tint:str="none",
                  newborn_sprite:int=None,
                  kitten_sprite:int=None,
                  adol_sprite:int=None,
@@ -275,6 +276,7 @@ class Pelt():
         self.scars = scars if isinstance(scars, list) else []
         self.tint = tint
         self.white_patches_tint = white_patches_tint
+        self.vitiligo_tint = vitiligo_tint
         self.cat_sprites =  {
             "newborn": newborn_sprite if newborn_sprite is not None else 0,
             "kitten": kitten_sprite if kitten_sprite is not None else 0,
@@ -708,9 +710,12 @@ class Pelt():
         # Tortie chance
         # There is a default chance for female tortie, slightly increased for completely random generation.
         tortie_chance_f = game.config["cat_generation"]["base_female_tortie"] - 1
+        tortie_chance_i = game.config["cat_generation"]["base_intersex_tortie"] - 1
         tortie_chance_m = game.config["cat_generation"]["base_male_tortie"]
         if gender == "female":
             torbie = random.getrandbits(tortie_chance_f) == 1
+        if gender == "intersex":
+            torbie = random.getrandbits(tortie_chance_i) == 1
         else:
             torbie = random.getrandbits(tortie_chance_m) == 1
 
@@ -892,6 +897,7 @@ class Pelt():
         hit = random.randint(0, num)
         if hit == 0:
             self.blep = True
+            print("Blep!")
 
     def init_scars(self, age):
         if age == "newborn":
@@ -1166,8 +1172,8 @@ class Pelt():
         vit_chance = max(game.config["cat_generation"]["vit_chance"] - len(par_vit), 0)
         if not random.getrandbits(vit_chance):
             self.vitiligo = choice(Pelt.vit)
-
-        #Moved the Points for my mod. Because no to your restrictions
+        
+        #Moved the Points for my mod. Because "no" to your restrictions
         par_points = []
         for p in parents:
             if p.pelt.points:
@@ -1181,19 +1187,15 @@ class Pelt():
                 self.points = None
 
         if par_points:
-            chance = 10 - len(par_points)
+            point_chance = 10 - len(par_points)
         else:
-            chance = game.config["cat_generation"]["random_point_chance"]
-
-        if self.name != "Tortie" and not (random.random() * chance):
-            self.points = choice(Pelt.point_markings)
-        else:
-            self.points = None
+            point_chance = game.config["cat_generation"]["random_point_chance"]
 
         # Points determination. Tortie can't be pointed
-        if self.name != "Tortie" and not random.getrandbits:
+        if self.name != "Tortie" and not random.getrandbits(point_chance):
             # Cat has colorpoint!
             self.points = choice(Pelt.point_markings)
+            print("Colourpoint!")
         else:
             self.points = None
 
@@ -1206,7 +1208,6 @@ class Pelt():
                 self.randomize_white_patches()
         else:
             self.white_patches = None
-            self.points = None
 
     def init_tint(self):
         """Sets tint for pelt and white patches"""
@@ -1243,6 +1244,29 @@ class Pelt():
         else:
             self.white_patches_tint = "none"
 
+    # NOW FOR VITILIGO TINTS! JUST AS BONUS
+        if self.vitiligo:
+            vit_tints = random.randint(1, 15)
+            if vit_tints == 1:
+                base_tints = sprites.vitiligo_tint["possible_tints"]["basic"].copy()
+                if self.colour in Pelt.black_colours:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["black"].copy()
+                elif self.colour in Pelt.white_colours:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["white"].copy()            
+                elif self.colour in [Pelt.grey_colours, Pelt.blue_colours]:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["gray"].copy()
+                elif self.colour in [Pelt.ginger_colours, Pelt.cream_colours, Pelt.purple_colours]:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["ginger"].copy()
+                elif self.colour in [Pelt.brown_colours, Pelt.yellow_colours]:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["brown"].copy()
+                elif self.colour in Pelt.green_colours:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["green"].copy()
+                else:
+                    possible_tints = sprites.vitiligo_tint["possible_tints"]["basic"]                 
+                self.vitiligo_tint = choice(base_tints + possible_tints)
+        else:
+            self.vitiligo_tint = "none"
+
     @property
     def white(self):
         return self.white_patches or self.points
@@ -1264,6 +1288,10 @@ class Pelt():
                 "palecream": "cream",
                 "bluegrey": "grey",
                 "darkgrey": "grey",
+                "petal": "white",
+                "ivory": "white",
+                "rasin": "black",
+                "onyx": "black",
                 "shinymew": "sky",
                 "sonic": "blue",
                 "samon": "salmon",
@@ -1287,6 +1315,10 @@ class Pelt():
                 "palecream": "pale cream",
                 "bluegrey": "blue-grey",
                 "darkgrey": "dark grey",
+                "petal": "white",
+                "ivory": "white",
+                "rasin": "black",
+                "onyx": "black",
                 "shinymew": "shiny mew",
                 "sonic": "sonic blue",
                 "samon": "salmon",
@@ -1421,9 +1453,9 @@ class Pelt():
                 color_name = f"{color_name} slugcat"
 
         # Now it's time for gender
-        if cat.genderalign in ["female", "trans female"]:
+        if cat.genderalign in ["female", "trans female", "demigirl"]:
             color_name = f"{color_name} molly"
-        elif cat.genderalign in ["male", "trans male"]:
+        elif cat.genderalign in ["male", "trans male", "demiboy"]:
             color_name = f"{color_name} tom"
         elif cat.pelt.length != ["scug", "saint"] and not short: 
             color_name = f"{color_name} cat"
@@ -1434,13 +1466,21 @@ class Pelt():
             if short:
                 color_name = f"{color_name} with patches" 
             elif cat.pelt.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
-                if cat.pelt.white_patches_tint != "none":            
+                if cat.pelt.white_patches_tint in ["black", "midnight", "scarlet"] and cat.pelt.colour in ["BLACK", "ONYX", "RASIN", "DUSKBOW"]:
+                    return color_name                
+                elif cat.pelt.white_patches_tint != "none":            
                     color_name = f"{color_name} with patches of {cat.pelt.white_patches_tint}"
+                elif cat.pelt.colour in ["WHITE", "IVORY", "PETAL", "PALEBOW"]:
+                    return color_name
                 else: 
                     color_name = f"{color_name} with patches of white" 
             elif cat.pelt.white_patches in Pelt.little_white + Pelt.mid_white and cat.pelt.name != "Calico":
-                if cat.pelt.white_patches_tint != "none":            
+                if cat.pelt.white_patches_tint in ["black", "midnight", "scarlet"] and cat.pelt.colour in ["BLACK", "ONYX", "RASIN", "DUSKBOW"]:
+                    return color_name      
+                elif cat.pelt.white_patches_tint != "none":            
                     color_name = f"{color_name} with small patches of {cat.pelt.white_patches_tint}"
+                elif cat.pelt.colour in ["WHITE", "IVORY", "PETAL", "PALEBOW"]:
+                    return color_name
                 else: 
                     color_name = f"{color_name} with small patches of white"
                

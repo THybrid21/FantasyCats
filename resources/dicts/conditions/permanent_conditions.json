@@ -896,7 +896,7 @@
 				"chance": 45
 			},
 			{
-				"name": "silvercough",
+				"name": "greencough",
 				"chance": 50
 			},
 			{
@@ -1638,7 +1638,7 @@
                 "chance": 15
             },
 			{
-				"name": "silvercough",
+				"name": "greencough",
 				"chance": 15
 			},
 			{
@@ -1833,5 +1833,24 @@
             "chamomile",
             "poppy"
 		]
+    },
+    "infertile": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 12,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+        ],
+        "herbs": []
     }
 }
