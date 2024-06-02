@@ -139,7 +139,7 @@ class Cat():
             self.adoptive_parents = []
             self.mate = []
             self.status = status
-            self.pronouns = [self.default_pronouns[0].copy()]
+            self.pronouns = [] #Needs to be set as a list
             self.moons = moons
             self.dead_for = 0
             self.dead = True
@@ -291,12 +291,18 @@ class Cat():
             else:
                 self.gender = choice(["female", "male"])
         self.g_tag = self.gender_tags[self.gender]
+        
+        '''if self.genderalign == "":
+            self.genderalign = self.gender'''
 
-        # These things should only run when generating a new cat, rather than loading one in.
+         # These things should only run when generating a new cat, rather than loading one in.
         if not loading_cat:
             # trans cat chances
+            theythemdefault = game.settings["they them default"] 
+            self.genderalign = self.gender
             trans_chance = randint(0, 50)
             nb_chance = randint(0, 75)
+            
             if self.gender == "female" and not self.status in ['newborn']:
                 if trans_chance == 1:
                     self.genderalign = "trans male"
@@ -318,10 +324,10 @@ class Cat():
             else:
                 self.genderalign = self.gender
 
-            """if self.genderalign in ["female", "trans female", "demigirl"]:
+            if self.genderalign in ["female", "trans female", "demigirl"]:
                 self.pronouns = [self.default_pronouns[1].copy()]
             elif self.genderalign in ["male", "trans male", "demiboy"]:
-                self.pronouns = [self.default_pronouns[2].copy()]"""
+                self.pronouns = [self.default_pronouns[2].copy()]
 
             # APPEARANCE
             self.pelt = Pelt.generate_new_pelt(self.gender, [Cat.fetch_cat(i) for i in (self.parent1, self.parent2) if i], self.age)
@@ -338,6 +344,7 @@ class Cat():
             
                 new_condition = choice(specialty_conditions)
                 
+                # ALBINO AND MELANISTIC CATS! REAL! #
                 if new_condition == "albinism":
                     self.pelt.skin = choice(["ALBINO", "ALBINOGILL"])
                     self.pelt.albino = choice(Pelt.albinism)
@@ -396,16 +403,16 @@ class Cat():
                     m -= 1
             elif self.age in ['young adult', 'adult']:
                 self.experience = randint(Cat.experience_levels_range["prepared"][0],
-                                          Cat.experience_levels_range["proficient"][1])
+                                        Cat.experience_levels_range["proficient"][1])
             elif self.age in ['senior adult']:
                 self.experience = randint(Cat.experience_levels_range["competent"][0],
-                                          Cat.experience_levels_range["expert"][1])
+                                        Cat.experience_levels_range["expert"][1])
             elif self.age in ['senior']:
                 self.experience = randint(Cat.experience_levels_range["competent"][0],
-                                          Cat.experience_levels_range["master"][1])
+                                        Cat.experience_levels_range["master"][1])
             else:
                 self.experience = 0
-                
+                    
             if not skill_dict:
                 self.skills = CatSkills.generate_new_catskills(self.status, self.moons)
 
@@ -3148,7 +3155,7 @@ class Cat():
                 "specsuffix_hidden": self.name.specsuffix_hidden,
                 "gender": self.gender,
                 "gender_align": self.genderalign,
-                #"pronouns": self.pronouns,
+                "pronouns": self.pronouns,
                 "birth_cooldown": self.birth_cooldown,
                 "status": self.status,
                 "backstory": self.backstory if self.backstory else None,

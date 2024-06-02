@@ -2354,10 +2354,10 @@ class Events:
             if random.getrandbits(1):  # 50/50
                 if cat.gender == "male" and cat.genderalign in ['male', 'demiboy']:
                     cat.genderalign = random.choice(["trans female", "demigirl"])
-                    # cat.pronouns = [cat.default_pronouns[1].copy()]
+                    cat.pronouns = [cat.default_pronouns[1].copy()]
                 elif cat.gender == "female" and cat.genderalign in ['female', 'demigirl']:
                     cat.genderalign = random.choice(["trans male", "demiboy"])
-                    # cat.pronouns = [cat.default_pronouns[2].copy()]
+                    cat.pronouns = [cat.default_pronouns[2].copy()]
                 elif cat.genderalign == "intergender":# 50/50 
                     cat.genderalign = random.choice(["trans female", "trans male"])
                 else:
@@ -2365,7 +2365,7 @@ class Events:
                         return
                     else:
                         cat.genderalign = random.choice(genderqueer_list)
-                        # cat.pronouns = [cat.default_pronouns[0].copy()]
+                        cat.pronouns = [cat.default_pronouns[0].copy()]
             elif cat.genderalign == "questioning":
                 euphoria = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
                         "genderfluid", "bigender", "pangender"]
@@ -2386,14 +2386,14 @@ class Events:
                     return              
                 else:
                     cat.genderalign = random.choice(genderqueer_list)
-                    # cat.pronouns = [cat.default_pronouns[0].copy()]
+                    cat.pronouns = [cat.default_pronouns[0].copy()]
 
             if cat.genderalign in ['trans male', 'demiboy']:
                 trans = "tom"
-                # cat.pronouns = [cat.default_pronouns[2].copy()]
+                cat.pronouns = [cat.default_pronouns[2].copy()]
             elif cat.genderalign == ['trans female', 'demigirl']:
                 trans = "molly"
-                # cat.pronouns = [cat.default_pronouns[1].copy()]
+                cat.pronouns = [cat.default_pronouns[1].copy()]
             else:
                 trans = cat.genderalign
 
