@@ -286,7 +286,7 @@ class Cat():
             if intersexchance <= 10 and example is False:
                 self.gender = "intersex"
                 infertile = randint(1, 120)
-                if infertile <= 10:
+                if infertile == 1:
                     self.get_permanent_condition("infertile", born_with=True)                
             else:
                 self.gender = choice(["female", "male"])

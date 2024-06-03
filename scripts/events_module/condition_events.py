@@ -471,16 +471,20 @@ class Condition_Events():
         starting_life_count = game.clan.leader_lives
         cat.healed_condition = False
         event_list = []
-        base_illness = ["running nose", "kittencough", "whitecough", "silvercough", "greencough",
-                        "yellowcough", "an infected wound", "heat exhaustion", "stomachache",
-                        "nightmares", "anxiety attack", "panic attack", "sleeplessness",
-                        "ticks", "nest wetting"]
-        progression = [["whitecough", "silvercough"], "silvercough", ["silvercough", "greencough"], "greencough",
-                        "yellowcough", "redcough", "a festering wound", "heat stroke", ["diarrhea", "constipation"],
-                        "constant nightmares", "panic attack", ["shock", "paranoia"], "ongoing sleeplessness", 
-                        ["tick bites", "severe tick bites"], "night dirtmaking"]
-        illness_progression = dict(zip(base_illness, progression))
-
+        illness_progression = {
+            "running nose": "whitecough",
+            "kittencough": "whitecough",
+            "whitecough": "greencough",
+            "greencough": "yellowcough",
+            "yellowcough": "redcough",
+            "an infected wound": "a festering wound",
+            "heat exhaustion": "heat stroke",
+            "anxiety attack": "panic attack",
+            "panic attack": "paranoia",
+            "nest wetting": "night dirtmaking",
+            "nonverbal": "mute"
+        }
+        
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #
         # ---------------------------------------------------------------------------- #
@@ -693,8 +697,9 @@ class Condition_Events():
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
             "partial hearing loss": "deaf",
-            "lasting grief": "heavy soul"
-            
+            "lasting grief": "heavy soul",
+            "recurring shock": "echoing shock",
+            "echoing shock": "recurring shock"            
         }
 
         conditions = deepcopy(cat.permanent_condition)
@@ -883,9 +888,6 @@ class Condition_Events():
                 skip = False
                 if risk['name'] in progression:
                     if progression[risk['name']] in dictionary:
-                        skip = True
-                elif cat.permanent_condition in ["recurring shock", "echoing shock"]:
-                    if risk['name'] in ["recurring shock", "echoing shock"]:
                         skip = True
                 # if it is, then break instead of giving the risk
                 if skip is True:

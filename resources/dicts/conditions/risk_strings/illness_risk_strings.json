@@ -22,8 +22,8 @@
 		]
     },
     "kittencough": {
-        "silvercough": [
-            "r_c quietly tells m_c's parent that {PRONOUN/r_c/subject} {VERB/r_c/need/needs} to move m_c to the medicine cat den. m_c's kittencough has progressed to silvercough.",
+        "greencough": [
+            "r_c quietly tells m_c's parent that {PRONOUN/r_c/subject} {VERB/r_c/need/needs} to move m_c to the medicine cat den. m_c's kittencough has progressed to greencough.",
             "m_c coughs pathetically, wondering why it's not getting better, and why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to be in the stinky medicine cat den now."
         ]
     },
@@ -38,27 +38,13 @@
             "r_c attempts to move m_c to the medicine cat den, where the whitecough that {PRONOUN/m_c/poss} running nose has turned into is more easily monitored.",
             "m_c brings {PRONOUN/m_c/self} to the medicine cat den, concerned {PRONOUN/m_c/poss} running nose only seems to be getting worse.",
 			"Despite {PRONOUN/m_c/poss} running nose only getting worse, m_c refuses to stay in the medicine den because it's only a little whitecough."
-        ],
-		"silvercough": [
-			"r_c herds m_c gently to the medicine den as {PRONOUN/m_c/subject} {VERB/m_c/cough/coughs}. There the silvercough can be more easily monitored and treated.",
-			"m_c brings {PRONOUN/m_c/self} to the medicine den, not only is {PRONOUN/m_c/poss} running nose not going away, it seems to be getting worse instead.",
-			"Miserably, m_c coughs and sneezing {PRONOUN/m_c/poss} way to the medicine den, it seems {PRONOUN/m_c/poss} running nose has turned into silvercough."
-		]
+        ]
     },
     "whitecough": {
         "greencough":[
             "r_c searches through {PRONOUN/r_c/poss} herb stores. m_c's whitecough has progressed to greencough, greatly worrying {PRONOUN/r_c/object}.",
-            "m_c coughs, feeling like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} hacking up half {PRONOUN/m_c/poss} lungs. This is definitely worse than whitecough ever gets."
-        ],
-		"silvercough": [
-			"r_c herds m_c to the medicine den, scolding {PRONOUN/m_c/object} for the lack of care for {PRONOUN/m_c/self}. Now the whitecough has become a more severe silvercough.",
-			"Due to the stubborn lack of nestrest m_c is now miserably curled up in the medicine den, coughing with silvercough instead."
-		]
-    },
-    "silvercough": {
-        "greencough":[
-            "r_c searches through {PRONOUN/r_c/poss} herb stores. m_c's silvercough has progressed to greencough, greatly worrying {PRONOUN/r_c/object}.",
-            "m_c coughs, feeling like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} hacking up half {PRONOUN/m_c/poss} lungs. This is definitely worse than silvercough ever gets."
+            "m_c coughs, feeling like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} hacking up half {PRONOUN/m_c/poss} lungs. This is definitely worse than whitecough ever gets.",			
+			"Due to the stubborn lack of nestrest m_c is now miserably curled up in the medicine den, coughing with greencough instead."
         ]
     },
     "yellowcough": {
@@ -76,15 +62,17 @@
     "stomachache": {
         "diarrhea": [
             "Embarrassed, m_c reports to r_c that {PRONOUN/m_c/poss} stomachache is now having consequences at the other end of {PRONOUN/m_c/poss} digestive system. r_c, as non-squeamish as all medicine cats, tells m_c that it's now very important {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} drinking water, as the diarrhea will make {PRONOUN/m_c/object} lose it quickly.",
-            "m_c is now spending more time at the dirtplace than in camp, as {PRONOUN/m_c/poss} stomachache has progressed to diarrhea."
+            "m_c is now spending more time at the dirtplace than in camp, as {PRONOUN/m_c/poss} stomachache has worsened with diarrhea."
         ],
 		"constipation": [
 			"With some worry m_c goes to r_c to embarrassingly talk about how {PRONOUN/m_c/subject} {VERB/m_c/haven't/hasn't} been able to properly go to the dirtplace. r_c patiently encourages {PRONOUN/m_c/object} to have more water and {PRONOUN/m_c/poss} herbs to keep up energy.",
 			"It would seem the bloat from m_c's stomache has made it more difficult for {PRONOUN/m_c/object} to properly go, {PRONOUN/m_c/poss} clanmates worry seeing them straining for hours at the dirtplace stuck."
     	],
 		"irritable bowels": [
-			"m_c uncomfortably talks with r_c about how even after the stomachache's passed something still seems to be a bit irritated i {PRONOUN/m_c/poss} belly.",
-			"While m_c's stomachache has passed there's a lingering sense that something within is wrong. {PRONOUN/m_c/subject/CAP} still {VERB/m_c/feel/feels} a bit bloated and off."
+			"m_c uncomfortably talks with r_c about how even after the stomachache's passed something still seems to be a bit irritated in {PRONOUN/m_c/poss} belly.",
+			"While m_c's stomachache has passed there's a lingering sense that something within is wrong. {PRONOUN/m_c/subject/CAP} still {VERB/m_c/feel/feels} a bit bloated and off.",
+			"Even though the worst of m_c's stomachache has passed {PRONOUN/m_c/subject} still {VERB/m_c/find/finds} {PRONOUN/m_c/self} feeling a bit uncomfortable in the belly.",
+			"Despite m_c's stomach settling down {PRONOUN/m_c/subject} still seems to be a bit wary of taking more prey, as if another pain is just waiting to pounce on {PRONOUN/m_c/object}."
 		]
 	},
     "nightmares": {

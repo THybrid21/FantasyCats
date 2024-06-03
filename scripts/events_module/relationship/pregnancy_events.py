@@ -243,13 +243,79 @@ class Pregnancy_Events():
                     cats_involved.append(kit.ID)
                 game.cur_events_list.append(Single_Event(print_event, "birth_death", cats_involved))
                 return
+            
+            if not other_cat and cat.gender == 'intersex': 
+            #Intersex cats should be 50-50 on pregnancy if they're not infertile.
+                if random.randint(0,1):
+                    amount = Pregnancy_Events.get_amount_of_kits(cat)
+                    kits = Pregnancy_Events.get_kits(amount, cat, None, clan)
+                    insert = 'this should not display'
+                    if amount == 1:
+                        insert = 'a single kitten'
+                    if amount > 1:
+                        insert = f'a litter of {amount} kits'
+                    print_event = f"{cat.name} brought {insert} back to camp, but refused to talk about their origin."
+                    cats_involved = [cat.ID]
+                    for kit in kits:
+                        cats_involved.append(kit.ID)
+                    game.cur_events_list.append(Single_Event(print_event, "birth_death", cats_involved))
+                    return
 
+                clan.pregnancy_data[cat.ID] = {
+                    "second_parent": str(other_cat.ID) if other_cat else None,
+                    "moons": 0,
+                    "amount": 0
+                }
+
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["announcement"])
+                if clan.game_mode != 'classic':
+                    severity = random.choices(["minor", "major"], [3, 1], k=1)
+                    cat.get_injured("pregnant", severity=severity[0])
+                    text += choice(Pregnancy_Events.PREGNANT_STRINGS[f"{severity[0]}_severity"])
+                text = event_text_adjust(Cat, text, cat, clan=clan)
+                game.cur_events_list.append(Single_Event(text, "birth_death", cat.ID))
+                return
+            
             # if the other cat is a female and the current cat is a male, make the female cat pregnant
             pregnant_cat = cat
             second_parent = other_cat
             if cat.gender == 'male' and other_cat is not None and other_cat.gender == 'female':
                 pregnant_cat = other_cat
                 second_parent = cat
+            elif cat.gender == 'male' and other_cat is not None and other_cat.gender == 'intersex':
+                if random.randint(0,1):            
+                    pregnant_cat = other_cat
+                    second_parent = cat
+                amount = Pregnancy_Events.get_amount_of_kits(cat)
+                kits = Pregnancy_Events.get_kits(amount, cat, other_cat, clan)
+                insert = 'this should not display'
+                if amount == 1:
+                    insert = 'a single kitten'
+                if amount > 1:
+                    insert = f'a litter of {amount} kits'
+                print_event = f"{cat.name} and {other_cat.name} brought {insert} back to camp."
+                cats_involved = [cat.ID]
+                for kit in kits:
+                    cats_involved.append(kit.ID)
+                game.cur_events_list.append(Single_Event(print_event, "birth_death", cats_involved))
+                return
+            elif cat.gender == 'intersex' and other_cat is not None and other_cat.gender == 'female':
+                if random.randint(0,1):            
+                    pregnant_cat = other_cat
+                    second_parent = cat
+                amount = Pregnancy_Events.get_amount_of_kits(cat)
+                kits = Pregnancy_Events.get_kits(amount, cat, other_cat, clan)
+                insert = 'this should not display'
+                if amount == 1:
+                    insert = 'a single kitten'
+                if amount > 1:
+                    insert = f'a litter of {amount} kits'
+                print_event = f"{cat.name} and {other_cat.name} brought {insert} back to camp."
+                cats_involved = [cat.ID]
+                for kit in kits:
+                    cats_involved.append(kit.ID)
+                game.cur_events_list.append(Single_Event(print_event, "birth_death", cats_involved))
+                return
 
             clan.pregnancy_data[pregnant_cat.ID] = {
                 "second_parent": str(second_parent.ID) if second_parent else None,
@@ -529,9 +595,14 @@ class Pregnancy_Events():
         if not Pregnancy_Events.check_if_can_have_kits(second_parent, single_parentage, allow_affair):
             return False, False
 
+        if "infertile" in cat.permanent_condition or "infertile" in second_parent.permanent_condition:
+            False, True
+
         # Check to see if the pair can have kits.
         if cat.gender == second_parent.gender:
-            if same_sex_birth:
+            if cat.gender == 'intersex':
+                return True, True
+            elif same_sex_birth:
                 return True, False
             elif not same_sex_adoption:
                 return False, False

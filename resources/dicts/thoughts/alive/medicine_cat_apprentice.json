@@ -362,7 +362,7 @@
         ]
 	},
 	{
-        "id": "ocd_medicine_cat_apprentice",
+        "id": "obsessive mind_medicine_cat_apprentice",
         "thoughts": [
             "Is intently focusing on the herbs they're sorting.",
 			"Forgot to eat today and is stressing about it to their denmates",
@@ -377,7 +377,7 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "ocd"
+                "obsessive mind"
             ]
         },
         "random_status_constraint": [

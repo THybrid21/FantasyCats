@@ -85,8 +85,8 @@
             "r_c worst fears are realized, as whitecough has infected m_c with {PRONOUN/m_c/poss} weakened lungs.",
             "m_c's weak lungs have left {PRONOUN/m_c/subject} coughing and wheezing this moon, unable to resist potential sickness."
         ],
-		"silvercough": [
-			"It's the season for whitecough and silvercough, despite r_c helping m_c to take extra precautions {PRONOUN/m_c/subject} {VERB/m_c/sit/sits} miserably curled up in the den with silvercough.",
+		"greencough": [
+			"It's the season for whitecough and despite r_c helping m_c to take extra precautions {PRONOUN/m_c/subject} {VERB/m_c/sit/sits} miserably curled up in the den with greencough.",
 			"m_c's weakened lungs leave them unable to propely fight off the sickness this moon. Coughing and spluttering {PRONOUN/m_c/subject} {VERB/m_c/find/finds} a nice nest to wait it out."
 		]
     },
@@ -444,7 +444,8 @@
 		],
 		"fatigue": [
 			"r_c looks up to see m_c flop into the den. {PRONOUN/m_c/poss/CAP} {VERB/m_c/admit/admits} that it's just so tiring how the clan looks to {PRONOUN/m_c/object}.",
-			"After all the extra work that m_c has been doing around the camp, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} exhausted {PRONOUN/m_c/self}."
+			"After all the extra work that m_c has been doing around the camp, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} exhausted {PRONOUN/m_c/self}.",
+			"m_c feels like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been on {PRONOUN/m_c/poss} feet for days, maybe {PRONOUN/m_c/subject} could sleep for that long as well."
 		]
 	},
 	"sphynxism": {
@@ -479,8 +480,8 @@
 			"It feels like no part of m_c managed to avoid getting burnt in the sun's rays.",
 			"m_c regrets that {PRONOUN/m_c/subject} felt the need to relax in a sunbeam, it was just so inviting."
 		],
-		"silvercough": [
-			"r_c ferries a coughing m_c into the medicine den, best to secure {PRONOUN/m_c/object} before everyone catches silvercough",
+		"greencough": [
+			"r_c ferries a coughing m_c into the medicine den, best to secure {PRONOUN/m_c/object} before everyone catches greencough",
 			"Unsurprisingly m_c has not been able to avoid the risk of sickness from been outside without any fur to protect {PRONOUN/m_c/object} from the elements.",
 			"Weakly m_c coughs {PRONOUN/m_c/poss} way into the medicine den."
 		],
@@ -738,7 +739,7 @@
 			"Strange monsters have been stalking around m_c."
 		]
 	},
-	"ocd": {
+	"obsessive mind": {
 		"anxiety attack": [
 			"r_c can understand that m_c has more trouble than most keeping calm and talks with {PRONOUN/m_c/object} about why {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} extra anxious when {PRONOUN/m_c/subject} {VERB/m_c/fail/fails} to fully check the camp before doing {PRONOUN/m_c/poss} patrols.",
 			"m_c starts to think about a possibility that scares {PRONOUN/m_c/object} and {PRONOUN/m_c/poss} mind fills with fog and heart beating erratically.{PRONOUN/m_c/subject/CAP} {VERB/m_c/panic/panics} waking up a friend.",
@@ -1108,9 +1109,10 @@
 			"Unsurprising to r_c, as whitecough season comes around m_c's longcough comes with {PRONOUN/m_c/object} complaining of chills and aches.",
 			"m_c always has a cough, it's no wonder that {PRONOUN/m_c/subject} missed when that cough became an illness."
 		],
-		"silvercough": [
-			"It's whitecough season again, and r_c's been checking each clanmate for the illness. m_c's surprised when r_c shakes {PRONOUN/r_c/poss} head and calls {PRONOUN/m_c/object} inot the den, it seems {PRONOUN/m_c/poss} usual cough has masked the silvercough.",
-			"m_c's coughing has been a lot worse, a lot more frequent recently. Talking to the medicine cat {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} unsurprised to discover it's compounded by silvercough."
+		"greencough": [
+			"It's whitecough season again, and r_c's been checking each clanmate for the illness. m_c's surprised when r_c shakes {PRONOUN/r_c/poss} head and calls {PRONOUN/m_c/object} inot the den, it seems {PRONOUN/m_c/poss} usual cough has masked the greencough.",
+			"m_c's coughing has been a lot worse, a lot more frequent recently. Talking to the medicine cat {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} unsurprised to discover it's compounded by greencough.",
+			"Once more it seems that m_c's gotten greencough. Miserably {PRONOUN/m_c/subject} {VERB/m_c/slink/slinks} over to the medicine den hoping it'll pass quickly."
 		],
 		"fatigue": [
 			"With all of the coughing that m_c is doing, r_c worries that it might be causing {PRONOUN/m_c/object} fatigue.",
@@ -1215,7 +1217,7 @@
 		"running nose": [
 			"r_c's noticed that m_c has a bit of a running nose. While it's nothing dangerous for now, {PRONOUN/r_c/subject} still {VERB/r_c/herd/herds} {PRONOUN/m_c/object} into the medicine den for a check up just to be safe.",
 			"m_c has caught a bit of the sniffles this moon.",
-			"As whitecough and silvercough season has come around, m_c's gotten a small running nose that {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} won't become anything worse."
+			"As whitecough season has come around, m_c's gotten a small running nose that {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} won't become anything worse."
 		],
 		"whitecough": [
 			"As whitecough season comes around again r_c notices that m_c is one of the first in the clan who's unfortunate enough to catch it.",

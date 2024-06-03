@@ -262,7 +262,11 @@
             {
                 "name": "whitecough",
                 "chance": 20
-            }
+            },
+			{
+				"name": "greencough",
+				"chance": 50
+			}
         ],
         "herbs": [
             "betony",
@@ -1152,7 +1156,7 @@
 			"betony"
 		]
     },
-    "ocd": {
+    "obsessive mind": {
         "severity": "major",
         "congenital": "always",
         "moons_until": 3,
