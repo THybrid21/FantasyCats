@@ -1,18 +1,24 @@
+import os
+
 import pygame
 
 import ujson
 
+from scripts.cat.names import names
 from scripts.game_structure.game_essentials import game
+
 
 class Sprites():
     cat_tints = {}
     white_patches_tints = {}
+    clan_symbols = []
 
     def __init__(self):
         """Class that handles and hold all spritesheets. 
-        Size is normall automatically determined by the size
+        Size is normally automatically determined by the size
         of the lineart. If a size is passed, it will override 
         this value. """
+        self.symbol_dict = None
         self.size = None
         self.spritesheets = {}
         self.images = {}
@@ -20,7 +26,7 @@ class Sprites():
 
         # Shared empty sprite for placeholders
         self.blank_sprite = None
-        
+
         self.load_tints()
 
     def load_tints(self):
@@ -55,16 +61,13 @@ class Sprites():
     def make_group(self, spritesheet, pos, name, sprites_x=9, sprites_y=18):
 
         """
-        Divide sprites on a sprite-sheet into groups of sprites that are easily accessible.
-
-        Parameters:
-        spritesheet -- Name of spritesheet.
-        pos -- (x,y) tuple of offsets. NOT pixel offset, but offset of other sprites.
-        name -- Name of group to make.
-        
-        Keyword Arguments
-        sprites_x -- Number of sprites horizontally (default: 3)
-        sprites_y -- Number of sprites vertically (default: 3)
+        Divide sprites on a spritesheet into groups of sprites that are easily accessible
+        :param spritesheet: Name of spritesheet file
+        :param pos: (x,y) tuple of offsets. NOT pixel offset, but offset of other sprites
+        :param name: Name of group being made
+        :param sprites_x: default 3, number of sprites horizontally
+        :param sprites_y: default 3, number of sprites vertically
+        :param no_index: default False, set True if sprite name does not require cat pose index
         """
 
         group_x_ofs = pos[0] * sprites_x * self.size
@@ -74,6 +77,11 @@ class Sprites():
         # splitting group into singular sprites and storing into self.sprites section
         for y in range(sprites_y):
             for x in range(sprites_x):
+                if no_index:
+                    full_name = f"{name}"
+                else:
+                    full_name = f"{name}{i}"
+
                 try:
                     new_sprite = pygame.Surface.subsurface(
                         self.spritesheets[spritesheet],
@@ -81,22 +89,25 @@ class Sprites():
                         group_y_ofs + y * self.size,
                         self.size, self.size
                     )
+
                 except ValueError:
                     # Fallback for non-existent sprites
+                    print(f"WARNING: nonexistent sprite - {full_name}")
                     if not self.blank_sprite:
                         self.blank_sprite = pygame.Surface(
                             (self.size, self.size),
                             pygame.HWSURFACE | pygame.SRCALPHA
                         )
                     new_sprite = self.blank_sprite
-                self.sprites[f'{name}{i}'] = new_sprite
+
+                self.sprites[full_name] = new_sprite
                 i += 1
 
     def load_all(self):
         # get the width and height of the spritesheet
         lineart = pygame.image.load('sprites/lineart.png')
         width, height = lineart.get_size()
-        del lineart # unneeded
+        del lineart  # unneeded
 
         # if anyone changes lineart for whatever reason update this
         if isinstance(self.size, int):
@@ -104,11 +115,12 @@ class Sprites():
         elif width / 9 == height / 18:
             self.size = width / 9
         else:
-            self.size = 50 # default, what base clangen uses
+            self.size = 50  # default, what base clangen uses
             print(f"lineart.png is not 3x7, falling back to {self.size}")
-            print(f"if you are a modder, please update scripts/cat/sprites.py and do a search for 'if width / 3 == height / 7:'")
+            print(
+                f"if you are a modder, please update scripts/cat/sprites.py and do a search for 'if width / 3 == height / 7:'")
 
-        del width, height # unneeded
+        del width, height  # unneeded
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead',
@@ -126,6 +138,7 @@ class Sprites():
             'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals',
             'shadersnewwhite', 'lightingnew',
             'fademask', 'fadestarclan', 'fadedarkforest'
+            'symbols'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -154,8 +167,10 @@ class Sprites():
 
         # Define eye colors
         eye_colors = [
-            ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'HEATHERBLUE', 'SUNLITICE'],
-            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'SUNSET', 'GHOST', 'VOID']
+            ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
+            'HEATHERBLUE', 'SUNLITICE'],
+            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 
+            'SUNSET', 'GHOST', 'VOID']
         ]
 
         for row, colors in enumerate(eye_colors):
@@ -167,10 +182,14 @@ class Sprites():
                 self.make_group('eyes5', (col, row), f'eyes5{color}')
 
         hybrid_eyes = [
-            ['POPPY', 'CRIMSON', 'RUBY', 'PINKPOPPY', 'BROWN', 'BROWNTWO', 'PEANUT', 'CHOCMINT', 'MINTCHOC', 'MINT', 'JADE', 'GRASS'],
-            ['STRAWBERRY', 'VIOLET', 'LILAC', 'GRAPE', 'INDIGO', 'COBOLT', 'AZURE', 'OCEAN', 'DEPTHS', 'SKY', 'BEACH', 'SUNGRASS'],
-            ['WHITE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE', 'LILACGREY', 'GREYTWO', 'GREYCOAL', 'FAUXVOID', 'ASPEN', 'GREENGREY', 'ECTOPLASM', 'YELLOWOLIVE'],
-            ['AMBERTWO', 'SUNSHINE', 'PYRITE', 'PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 'CHROMEC', 'RGB', 'RGBTWO', 'RGBTHREE']
+            ['POPPY', 'CRIMSON', 'RUBY', 'PINKPOPPY', 'BROWN', 'BROWNTWO', 'PEANUT', 'CHOCMINT', 'MINTCHOC',
+            'MINT', 'JADE', 'GRASS'],
+            ['STRAWBERRY', 'VIOLET', 'LILAC', 'GRAPE', 'INDIGO', 'COBOLT', 'AZURE', 'OCEAN', 'DEPTHS', 'SKY',
+            'BEACH', 'SUNGRASS'],
+            ['WHITE', 'MONOCHROME', 'MONOCHROMETWO', 'MONOCHROMETHREE', 'LILACGREY', 'GREYTWO', 'GREYCOAL', 
+            'FAUXVOID', 'ASPEN', 'GREENGREY', 'ECTOPLASM', 'YELLOWOLIVE'],
+            ['AMBERTWO', 'SUNSHINE', 'PYRITE', 'PRIMARY', 'PRIMARYB', 'PRIMARYC', 'CHROME', 'CHROMEB', 
+            'CHROMEC', 'RGB', 'RGBTWO', 'RGBTHREE']
     ]
 
         for row, colors in enumerate(hybrid_eyes):
@@ -183,15 +202,24 @@ class Sprites():
     
         # Define white patches
         white_patches = [
-            ['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANYTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SAVANNAH', 'FADESPOTS', 'PEBBLESHINE'],
-            ['EXTRA', 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG', 'RAGDOLL', 'LIGHTSONG', 'VITILIGO', 'BLACKSTAR', 'PIEBALD', 'CURVED', 'PETAL', 'SHIBAINU', 'OWL'],
-            ['TIP', 'FANCY', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO', 'GOATEE', 'VITILIGOTWO', 'PAWS', 'MITAINE', 'BROKENBLAZE', 'SCOURGE', 'DIVA', 'BEARD'],
-            ['TAIL', 'BLAZE', 'PRINCE', 'BIB', 'VEE', 'UNDERS', 'HONEY', 'FAROFA', 'DAMIEN', 'MISTER', 'BELLY', 'TAILTIP', 'TOES', 'TOPCOVER'],
-            ['APRON', 'CAPSADDLE', 'MASKMANTLE', 'SQUEAKS', 'STAR', 'TOESTAIL', 'RAVENPAW', 'PANTS', 'REVERSEPANTS', 'SKUNK', 'KARPATI', 'HALFWHITE', 'APPALOOSA', 'DAPPLEPAW'],
-            ['HEART', 'LILTWO', 'GLASS', 'MOORISH', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'MAO', 'LUNA', 'CHESTSPECK', 'WINGS', 'PAINTED', 'HEARTTWO', 'WOODPECKER'],
-            ['BOOTS', 'MISS', 'COW', 'COWTWO', 'BUB', 'BOWTIE', 'MUSTACHE', 'REVERSEHEART', 'SPARROW', 'VEST', 'LOVEBUG', 'TRIXIE', 'SAMMY', 'SPARKLE'],
-            ['RIGHTEAR', 'LEFTEAR', 'ESTRELLA', 'SHOOTINGSTAR', 'EYESPOT', 'REVERSEEYE', 'FADEBELLY', 'FRONT', 'BLOSSOMSTEP', 'PEBBLE', 'TAILTWO', 'BUDDY', 'BACKSPOT', 'EYEBAGS'],
-            ['BULLSEYE', 'FINN', 'DIGIT', 'KROPKA', 'FCTWO', 'FCONE', 'MIA', 'SCAR', 'BUSTER', 'SMOKEY', 'HAWKBLAZE', 'CAKE', 'ROSINA', 'PRINCESS'],
+            ['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANYTWO', 'MOON', 'PHANTOM', 'POWDER',
+             'BLEACHED', 'SAVANNAH', 'FADESPOTS', 'PEBBLESHINE'],
+            ['EXTRA', 'ONEEAR', 'BROKEN', 'LIGHTTUXEDO', 'BUZZARDFANG', 'RAGDOLL', 'LIGHTSONG', 'VITILIGO', 'BLACKSTAR',
+             'PIEBALD', 'CURVED', 'PETAL', 'SHIBAINU', 'OWL'],
+            ['TIP', 'FANCY', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO', 'GOATEE', 'VITILIGOTWO', 'PAWS', 'MITAINE',
+             'BROKENBLAZE', 'SCOURGE', 'DIVA', 'BEARD'],
+            ['TAIL', 'BLAZE', 'PRINCE', 'BIB', 'VEE', 'UNDERS', 'HONEY', 'FAROFA', 'DAMIEN', 'MISTER', 'BELLY',
+             'TAILTIP', 'TOES', 'TOPCOVER'],
+            ['APRON', 'CAPSADDLE', 'MASKMANTLE', 'SQUEAKS', 'STAR', 'TOESTAIL', 'RAVENPAW', 'PANTS', 'REVERSEPANTS',
+             'SKUNK', 'KARPATI', 'HALFWHITE', 'APPALOOSA', 'DAPPLEPAW'],
+            ['HEART', 'LILTWO', 'GLASS', 'MOORISH', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'MAO', 'LUNA', 'CHESTSPECK',
+             'WINGS', 'PAINTED', 'HEARTTWO', 'WOODPECKER'],
+            ['BOOTS', 'MISS', 'COW', 'COWTWO', 'BUB', 'BOWTIE', 'MUSTACHE', 'REVERSEHEART', 'SPARROW', 'VEST',
+             'LOVEBUG', 'TRIXIE', 'SAMMY', 'SPARKLE'],
+            ['RIGHTEAR', 'LEFTEAR', 'ESTRELLA', 'SHOOTINGSTAR', 'EYESPOT', 'REVERSEEYE', 'FADEBELLY', 'FRONT',
+             'BLOSSOMSTEP', 'PEBBLE', 'TAILTWO', 'BUDDY', 'BACKSPOT', 'EYEBAGS'],
+            ['BULLSEYE', 'FINN', 'DIGIT', 'KROPKA', 'FCTWO', 'FCONE', 'MIA', 'SCAR', 'BUSTER', 'SMOKEY', 'HAWKBLAZE',
+             'CAKE', 'ROSINA', 'PRINCESS'],
             ['LOCKET', 'BLAZEMASK', 'TEARS', 'DOUGIE']
         ]
 
@@ -242,8 +270,6 @@ class Sprites():
             self.make_group('melanism', (a, 3), f'eyes3{i}')
             self.make_group('melanism', (a, 4), f'eyes4{i}')
             self.make_group('melanism', (a, 5), f'eyes5{i}')	
-
-
 
         # Define colors and categories
         color_categories = [
@@ -302,12 +328,13 @@ class Sprites():
         # tortiepatchesmasks
         tortiepatchesmasks = [
             ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'HALF', 'STREAK', 'MASK', 'SMOKE'],
-            ['MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'OREO', 'SWOOP', 'CHIMERA', 'CHEST', 'ARMTAIL', 'GRUMPYFACE'],
+            ['MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR', 'OREO', 'SWOOP', 'CHIMERA', 'CHEST', 'ARMTAIL',
+             'GRUMPYFACE'],
             ['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'SMUDGED', 'DAUB', 'EMBER', 'BRIE'],
             ['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'DAPPLENIGHT', 'BLANKET', 'BELOVED', 'BODY'],
             ['SHILOH', 'FRECKLED', 'HEARTBEAT']
         ]
- 
+
         for row, masks in enumerate(tortiepatchesmasks):
             for col, mask in enumerate(masks):
                 self.make_group('tortiepatchesmasks', (col, row), f"tortiemask{mask}")
@@ -336,16 +363,21 @@ class Sprites():
                 self.make_group('blep', (col, row), f"blep{color}")            
 
         self.load_scars()
+        self.load_symbols()
 
     def load_scars(self):
         """
         Loads scar sprites and puts them into groups.
         """
-       # Define scars 
+
+        # Define scars
         scars_data = [
-            ["ONE", "TWO", "THREE", "MANLEG", "BRIGHTHEART", "MANTAIL", "BRIDGE", "RIGHTBLIND", "LEFTBLIND", "BOTHBLIND", "BURNPAWS", "BURNTAIL"],
-            ["BURNBELLY", "BEAKCHEEK", "BEAKLOWER", "BURNRUMP", "CATBITE", "RATBITE", "FROSTFACE", "FROSTTAIL", "FROSTMITT", "FROSTSOCK", "QUILLCHUNK", "QUILLSCRATCH"],
-            ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE", "LEGBITE", "NECKBITE", "FACE"],
+            ["ONE", "TWO", "THREE", "MANLEG", "BRIGHTHEART", "MANTAIL", "BRIDGE", "RIGHTBLIND", "LEFTBLIND",
+             "BOTHBLIND", "BURNPAWS", "BURNTAIL"],
+            ["BURNBELLY", "BEAKCHEEK", "BEAKLOWER", "BURNRUMP", "CATBITE", "RATBITE", "FROSTFACE", "FROSTTAIL",
+             "FROSTMITT", "FROSTSOCK", "QUILLCHUNK", "QUILLSCRATCH"],
+            ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE", "LEGBITE",
+             "NECKBITE", "FACE"],
             ["HINDLEG", "BACK", "QUILLSIDE", "SCRATCHSIDE", "TOE", "BEAKSIDE", "CATBITETWO", "SNAKETWO", "FOUR"]
         ]
 
@@ -363,7 +395,6 @@ class Sprites():
         for row, missing_parts in enumerate(missing_parts_data):
             for col, missing_part in enumerate(missing_parts):
                 self.make_group('missingscars', (col, row), f'scars{missing_part}')
-
 
         # accessories
         medcatherbs_data = [
@@ -427,12 +458,40 @@ class Sprites():
             for col, bowcollar in enumerate(bowcollars):
                 self.make_group('bowcollars', (col, row), f'collars{bowcollar}')
 
-        #nyloncollars
+        # nyloncollars
         for row, nyloncollars in enumerate(nyloncollars_data):
             for col, nyloncollar in enumerate(nyloncollars):
                 self.make_group('nyloncollars', (col, row), f'collars{nyloncollar}')
 
-            
+    def load_symbols(self):
+        """
+        loads clan symbols
+        """
 
-# CREATE INSTANCE 
+        if os.path.exists('resources/dicts/clan_symbols.json'):
+            with open('resources/dicts/clan_symbols.json') as read_file:
+                self.symbol_dict = ujson.loads(read_file.read())
+
+        # U and X omitted from letter list due to having no prefixes
+        letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+                   "V", "W", "Y", "Z"]
+
+        # sprite names will format as "symbol{PREFIX}{INDEX}", ex. "symbolSPRING0"
+        y_pos = 1
+        for letter in letters:
+            for i, symbol in enumerate([symbol for symbol in self.symbol_dict if
+                                        letter in symbol and self.symbol_dict[symbol]["variants"]]):
+                x_mod = 0
+                for variant_index in range(self.symbol_dict[symbol]["variants"]):
+                    x_mod += variant_index
+                    self.clan_symbols.append(f"symbol{symbol.upper()}{variant_index}")
+                    self.make_group('symbols',
+                                    (i + x_mod, y_pos),
+                                    f"symbol{symbol.upper()}{variant_index}",
+                                    sprites_x=1, sprites_y=1, no_index=True)
+
+            y_pos += 1
+
+
+# CREATE INSTANCE
 sprites = Sprites()

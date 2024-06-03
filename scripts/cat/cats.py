@@ -195,6 +195,7 @@ class Cat():
         self.dead = False
         self.exiled = False
         self.outside = False
+        self.driven_out = False
         self.dead_for = 0  # moons
         self.thought = ''
         self.genderalign = None
@@ -524,7 +525,7 @@ class Cat():
                 fetched_cat.update_mentor()
         self.update_mentor()
 
-        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body != None:
+        if game.clan and game.clan.game_mode != 'classic' and not self.outside and not self.exiled:
             self.grief(body)
 
         if not self.outside:
@@ -747,10 +748,12 @@ class Cat():
         game.clan.add_to_outside(self)
 
     def add_to_clan(self) -> list:
-        """ Makes a "outside cat" a Clan cat. Returns a list of any additional cats that
+        """ Makes an "outside cat" a Clan cat. Returns a list of IDs for any additional cats that
             are coming with them. """
         self.outside = False
-
+        if not self.exiled:
+            History.add_beginning(self)
+        self.exiled = False
         game.clan.add_to_clan(self)
 
         # check if there are kits under 12 moons with this cat and also add them to the clan
@@ -760,6 +763,7 @@ class Cat():
             child = Cat.all_cats[child_id]
             if child.outside and not child.exiled and not child.dead and child.moons < 12:
                 child.add_to_clan()
+                History.add_beginning(child)
                 ids.append(child_id)
         
         return ids
@@ -3176,6 +3180,7 @@ class Cat():
                 "no_retire": self.no_retire,
                 "no_mates": self.no_mates,
                 "exiled": self.exiled,
+                "driven_out": self.driven_out,
                 "pelt_name": self.pelt.name,
                 "pelt_color": self.pelt.colour,
                 "pelt_length": self.pelt.length,
