@@ -406,39 +406,6 @@
         "main_trait_constraint": [
             "stubborn"
         ]
-    },	
-    {
-        "id": "echoingmemory_kit",
-        "thoughts": [
-            "Is struggling to learn to walk",
-			"Mewls because {PRONOUN/m_c/subject} still {VERB/m_c/don't/doesn't} know how to talk",
-			"Is delayed at learning {PRONOUN/m_c/poss} basic skills",
-			"Keeps crying in {PRONOUN/m_c/poss} sleep",
-			"Whines and shakes because {PRONOUN/m_c/subject} {VERB/m_c/have/has} confusing dreams",
-			"Is visiting the medicine den... again",
-			"Tripped over {PRONOUN/m_c/poss} own paws",
-			"Is clinging to a kittypet toy"
-            ],
-        "perm_conditions": {
-            "m_c": [
-                "echoing memory"
-            ]
-        }
-    },
-    {
-        "id": "disruptedsenses_kit",
-        "thoughts": [
-            "Complains loudly about how the world hates {PRONOUN/m_c/object}",
-            "Cries about how the world is too much",
-            "Is overwhelmed by all the sensations around {PRONOUN/m_c/object}",
-            "Wants to snuggle but doesn't like the feeling of touch",
-            "Doesn't like how much of the world there is"
-        ],
-        "perm_conditions": {
-            "m_c": [
-                "disrupted senses"
-            ]
-        }
     },
     {
         "id": "shy_kit",
@@ -566,6 +533,40 @@
         "main_trait_constraint": [
             "bossy"
         ]
+    },
+    {
+        "id": "echoingmemory_kit",
+        "thoughts": [
+            "Is struggling to learn to walk",
+			"Mewls because {PRONOUN/m_c/subject} still {VERB/m_c/don't/doesn't} know how to talk",
+			"Is delayed at learning {PRONOUN/m_c/poss} basic skills",
+			"Keeps crying in {PRONOUN/m_c/poss} sleep",
+			"Whines and shakes because {PRONOUN/m_c/subject} {VERB/m_c/have/has} confusing dreams",
+			"Is visiting the medicine den... again",
+			"Tripped over {PRONOUN/m_c/poss} own paws",
+			"Is clinging to a kittypet toy"
+            ],
+        "perm_conditions": {
+            "m_c": [
+                "echoing memory"
+            ]
+        }
+    },
+    {
+        "id": "disruptedsenses_kit",
+        "thoughts": [
+            "Complains loudly about how the world hates {PRONOUN/m_c/object}",
+            "Cries about how the world is too much",
+            "Is overwhelmed by all the sensations around {PRONOUN/m_c/object}",
+            "Wants to snuggle but doesn't like the feeling of touch",
+            "Doesn't like how much of the world there is",
+			"Emotions feel too big"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "disrupted senses"
+            ]
+        }
     }
 ]
 

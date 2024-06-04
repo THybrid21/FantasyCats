@@ -3,8 +3,8 @@ import os
 import ujson
 
 from scripts.housekeeping.datadir import get_save_dir
-from .pelts import Pelt
 from scripts.game_structure.game_essentials import game
+from scripts.cat.pelts import Pelt
 
 
 class Name():
@@ -54,8 +54,7 @@ class Name():
                             _tmp = new_name.split(':')
                             names_dict["special_suffixes"][_tmp[0]] = _tmp[1]
 
-
-    def __init__(self, 
+    def __init__(self,
                  status="warrior",
                  prefix=None,
                  suffix=None,
@@ -70,7 +69,9 @@ class Name():
         self.prefix = prefix
         self.suffix = suffix
         self.specsuffix_hidden = specsuffix_hidden
+
         name_fixpref = False
+        # Set prefix
 
         # Set prefix
         if prefix is None:
@@ -182,7 +183,7 @@ class Name():
             self.suffix = random.choice(suffix_category)
         else:
             self.suffix = random.choice(self.names_dict["normal_suffixes"])
-    
+
     def __repr__(self):
         # Handles predefined suffixes (such as newborns being kit), then suffixes based on ages (fixes #2004, just trust me)
         if self.status in self.names_dict["special_suffixes"] and not self.specsuffix_hidden:
@@ -190,7 +191,6 @@ class Name():
         if game.config['fun']['april_fools']:
             return self.prefix + 'egg'
         return self.prefix + self.suffix
-
 
 
 names = Name()

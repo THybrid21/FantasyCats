@@ -4,9 +4,6 @@ import random
 from re import sub
 from scripts.game_structure.game_essentials import game
 
-
-    
-
 class Pelt():
     
     sprites_names = {
@@ -1442,13 +1439,13 @@ class Pelt():
             if cat.pelt.length == "bare":
                 color_name = f"furless {color_name}"
             if cat.pelt.length == "snat":
-                color_name = f"slime {color_name}"
+                color_name = f"{color_name} snail-cat"
             if cat.pelt.length == "wolf":
-                color_name = f"canid-furred {color_name}"
+                color_name = f"canine {color_name}"
             if cat.pelt.length == "skele":
                 color_name = f"skeletonized {color_name}"
             if cat.pelt.length == "catfish":
-                color_name = f"fishy {color_name}"
+                color_name = f"amphibious {color_name}"
             if cat.pelt.length in ["scug", "saint"]:
                 color_name = f"{color_name} slugcat"
 
@@ -1457,7 +1454,7 @@ class Pelt():
             color_name = f"{color_name} molly"
         elif cat.genderalign in ["male", "trans male", "demiboy"]:
             color_name = f"{color_name} tom"
-        elif cat.pelt.length != ["scug", "saint"] and not short: 
+        elif cat.pelt.length != ["scug", "saint", "snat", "wolf"] and not short: 
             color_name = f"{color_name} cat"
         else:
             color_name = f"{color_name} cat"        

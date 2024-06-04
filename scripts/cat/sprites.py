@@ -4,7 +4,6 @@ import pygame
 
 import ujson
 
-from scripts.cat.names import names
 from scripts.game_structure.game_essentials import game
 
 
@@ -58,7 +57,8 @@ class Sprites():
         """
         self.spritesheets[name] = pygame.image.load(a_file).convert_alpha()
 
-    def make_group(self, spritesheet, pos, name, sprites_x=9, sprites_y=18):
+    def make_group(self, spritesheet, pos, name, sprites_x=9, sprites_y=18,
+                   no_index=False):
 
         """
         Divide sprites on a spritesheet into groups of sprites that are easily accessible
@@ -92,7 +92,6 @@ class Sprites():
 
                 except ValueError:
                     # Fallback for non-existent sprites
-                    print(f"WARNING: nonexistent sprite - {full_name}")
                     if not self.blank_sprite:
                         self.blank_sprite = pygame.Surface(
                             (self.size, self.size),
@@ -137,7 +136,7 @@ class Sprites():
             
             'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals',
             'shadersnewwhite', 'lightingnew',
-            'fademask', 'fadestarclan', 'fadedarkforest'
+            'fademask', 'fadestarclan', 'fadedarkforest',
             'symbols'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:

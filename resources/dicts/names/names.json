@@ -7,7 +7,6 @@
     "mediator apprentice": "paw",
     "leader": "star"
     },
-	
 	"normal_suffixes" : ["fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "pelt", "pelt", "pelt", "pelt", 
         "pelt", "pelt", "pelt", "pelt", "pelt", "pelt", "skin", "skin", "skin", "skin", "skin", "skin", "skin", "skin", "skin", 
 		"skin", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat","face", "face", "face", 
@@ -31,9 +30,9 @@
 	"exotic_suffixes": ["stripe", "stripe", "stripe", "stripe", "spot", "spot", "spot", "spot", "patch", "patch", "patch"],
 	"tortie_suffixes": ["spot", "spot", "spot", "spot", "patch", "patch", "patch"],
 	"sparkle_suffixes": ["shine", "shine", "shine", "magic", "magic", "magic", "moon", "moon", "sun", "sun", "earth", 
-		"earth", "spirt"],	
+		"earth", "spirt"],
 
-	"normal_prefixes": ["Fluff", "Plume", "Down", "Shag", "Mop", "Fuzz", "Fan", "Little", "Small", "Tiny", "Runt", "Big", "Boney",
+  "normal_prefixes": [ "Fluff", "Plume", "Down", "Shag", "Mop", "Fuzz", "Fan", "Little", "Small", "Tiny", "Runt", "Big", "Boney",
 			"Spike", "Ribbon", "Cotton", "Clear", "Silk", "Wool", "Bare", "Show", "Sparkle", "Single", "One", "Two", 
 			"Three", "Four", "Five", "Six", "Ichi", "Ni", "San", "Yon", "Go", "Roku", "Nana", "Hatchi", "Kyu", "Kit",
 			"Tiger", "Leopard", "Lion", "Hyena", "Wolf", "Fox", "Blank", "Autumn", "Bayou", "Bay", "Desert", "Cliff",
@@ -47,7 +46,19 @@
 			"Sneeze", "Song", "Spire", "Spring", "Strike", "Stump", "Swallow", "Swamp", "Sweet", "Tall", "Tip",
 			"Torn", "Tuft", "Tumble", "Whirl", "Wild", "Lightning", "Odd", "Echo", "Bluff", "Cold", "Rumble",
 			"Bloom", "Blossom", "Bubble", "Petal", "Ripple", "Yin", "Yang", "Blight", "Hollow", "Broken", "Blotch",
-			"Dog", "Dead", "Kink", "Sphynx", "Bare", "Bald"],
+			"Dog", "Dead", "Kink", "Sphynx", "Bare", "Bald"
+  ],
+
+  "clan_prefixes": [
+    "Air", "Ashen", "Bat", "Bleak", "Bone", "Branch", "Burn", "Burnet", "Buttercup", "Canary", "Cinder", "Cloud",
+    "Cloudy", "Cotton", "Crocus", "Crow", "Dandelion", "Day", "Doe", "Dove", "Egg", "Ember", "Fig", "Fire", "Flame",
+    "Flare", "Flurry", "Freeze", "Frost", "Frozen", "Ghost", "Glint", "Gossamer", "Grackle", "Hawthorn", "Heather",
+    "Hickory", "Hollyhock", "Ibis", "Ice", "Icicle", "Icy", "Jasmine", "Larkspur", "Log", "Lyre", "Magpie", "Midnight",
+    "Mist", "Morel", "Mulberry", "Night", "Oleander", "Orchid", "Otter", "Owl", "Pebble", "Plox", "Pipit", "Plume",
+    "Privet", "Rime", "Rock", "Rue", "Saffron", "Scale", "Scrub", "Shade", "Shadow", "Shatter", "Smoke", "Snapdragon",
+    "Snow", "Snowy", "Soot", "Spindle", "Stag", "Stone", "Storm", "Sun", "Swan", "Teasel", "Tree", "Twig", "Twilight",
+    "Verbena", "Vervain", "Violet", "Vole", "Warbler", "Wisp"
+  ],
 
 	"black_prefixes": ["Black", "Grey", "Dark", "Slate", "Wool", "Down", "Mouse", "Lynx", "Otter", "Deer", "Faun", "Rat", "Mole",
 			"Bat", "Sheep", "Rabbit", "Hare", "Shrew", "Vole", "Horse", "Beagle", "Terrier", "Badger", "Genet", 
@@ -345,7 +356,7 @@
     "Mountainous": [
     "Alpaca", "Alpine", "Avalanche", "Basalt", "Blizzard", "Boulder", "Caribou", "Cavern", "Cave", "Chamois", "Chasm", "Cliff", "Cliff", "Crag",
     "Eagle", "Eagle", "Echo", "Echo", "Flint", "Goat", "Granite", "Gravel", "High", "Lichen",
-    "Mountain", "Peak", "Pebble", "Pinnacle", "Rock", "Rocky", "Ram", "Salt", "Shale", "Shard", "Spire", "Stone", "Steppe", 
+    "Mountain", "Peak", "Pebble", "Pinnacle", "Rock", "Rocky", "Ram", "Salt", "Shale", "Shard", "Spire", "Stone", "Steppe",
     "Summit", "Volcano", "Yucca", "Whistle", "Whisper", "Whisper", "Mica", "Frigid", "Abyss"
     ],
     "Wetlands": [
@@ -366,7 +377,8 @@
     ]
   },
 
-	"loner_names": [
+
+  "loner_names": [
     "Abigail", "Abuko", "Abyss", "Abby", "Acacia", "Ace", "Adaliz", "Adam", "Admiral", "Adora", "Aether", "Albert", "Alberto", "Alfred", "Agatha", "Agent Smith", "Agnes", "Ah ha", "Ah", "Aidan", "Aiden",
     "Akila", "Akilah", "Alaska", "Alastair", "Alba", "Albedo", "Alcina", "Alcor", "Alcyone", "Aldrich", "Alec", "Alex", "Alexa", "Alfie", "Alfredo", "Algernon", "Alice", 
     "Alien", "Alma", "Alonzo", "Alphonse", "Alphys", "Altair", "Amanda", "Amani", "Amaretto", "Amari", "Amaya", "Amber", "Amelia", "Amethyst", "Amigo", "Amir", "Amity", 
@@ -473,9 +485,9 @@
     "Wendy", "Weston", "Whiskers", "Whiskey", "Whisper", "Whitney", "Whiz Kid", "Wiggity Wacks", "Wigglebutt", "Wiggly", "Wiggog Yrath", "Wikipedia", "Wilbur", "Willow", "Windy", 
     "Winry", "Wishbone", "Wisp", "Wisteria", "Wizard", "Wolfe", "Wolfgang", "Wolverine", "Wonder", 
     "Worm", "Wrath", "X'ek", "Xelle", "Xhosa", "Xiao", "Xola", "Yaoyao", "Yazhu", "Yeet", "Yeeted", "Yen", "Yeobo", "Yeza", 
-    "Yinuo", "Yokai", "Yoonmin", "Yooted", "Yoshi", "Yote", "Yuca", "Yuka", "Yuki", "Yumeko", "Yusuke", "Yuzu", "Yvaine", 
-    "Zahra", "Zambezi", "Zambia", "Zaniah", "Zari", "Zariah", "Zazu", "Zekrom", "Zelda", "Zell", 
-    "Zendaya", "Zeraora", "Zikomo", "Zim", "Zion", "Zira", "Ziti", "Zoe", "Zorro", "Zorua", "Zuberi", "Zuko", "Zuma", "Zuna", "Zuva"
+    "Yinuo", "Yippee", "Yokai", "Yoonmin", "Yooted", "Yoshi", "Yote", "Yuca", "Yuka", "Yuki", "Yumeko", "Yusuke", "Yuzu", "Yvaine", 
+    "Zach", "Zachary", "Zahra", "Zambezi", "Zambia", "Zaniah", "Zari", "Zariah", "Zazu", "Zebra", "Zekrom", "Zelda", "Zell", 
+    "Zendaya", "Zenith", "Zeraora", "Zikomo", "Zim", "Zion", "Zira", "Ziti", "Zoe", "Zoomie", "Zorro", "Zorua", "Zuberi", "Zuko", "Zuma", "Zuna", "Zuva"
     ],
 	"animal_suffixes": [
 		"badger", "bat", "bear", "bee", "beetle", "bird", "bug", "cricket", "deer", "eagle", "elk", "falcon", "fawn", "fish", "fox", "goose", "hare", "hawk", "horse", 
@@ -492,12 +504,12 @@
     "Kestrel", "Kingfisher", "Kite", "Lamb", "Lark", "Leopard", "Lion", "Lizard", "Loach", "Locust", "Lynx", "Magpie", "Mamba", "Mantis", "Marlin", "Meerkat", "Midge", 
     "Mink", "Minnow", "Mite", "Mole", "Moorhen", "Moose", "Mosquito", "Moth", "Mouse", "Newt", "Nightingale", "Octopus", "Oriole", "Oryx", "Osprey", "Otter", "Owl", 
     "Panther", "Partridge", "Pelican", "Perch", "Pheasant", "Pigeon", "Pike", "Pipit", "Pronghorn", "Python", "Quail", "Rabbit", "Raccoon", "Ram", "Rat", "Raven", 
-    "Roach", "Robin", "Sable", "Salamander", "Salmon", "Sardine", "Scorpion", "Seabass", "Seagull", "Serpent", "Shark", "Sheep", "Shrew", "Shrike", "Skink", "Skunk", 
+    "Roach", "Robin", "Sable", "Salamander", "Salmon", "Sardine", "Scorpion", "Seabass", "Seagull", "Serpent", "Shark", "Sheep", "Shrew", "Shrike", "Skink", "Skunk",
     "Slug", "Snail", "Snake", "Sparrow", "Spider", "Spoonbill", "Squid", "Squirrel", "Stag", "Starling", "Stoat", "Stork", "Swallow", "Swan", "Tadpole", "Taipan", 
     "Tarantula", "Tiger", "Toad", "Trout", "Turtle", "Viper", "Vixen", "Vole", "Vulture", "Warbler", "Wasp", "Weasel", "Weevil", "Whale", "Wolf", "Wolverine", "Worm", 
     "Wren"
 	],
 	"inappropriate_names": [
-		"Wetback", "Yellowface", "Redface", "Blackface", "Brownface", "Pancakeface", "Yellowbone", "Milkface"
+		"wetback", "yellowface", "redface", "blackface", "brownface", "pancakeface", "yellowbone", "molesting", "milkface"
 	]
 }
