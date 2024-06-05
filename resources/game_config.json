@@ -223,10 +223,15 @@
 	"roles": {
 		"mediator_app_chance": 50,
 		"base_medicine_app_chance": 25,
+		"permaqueen_app_chance": 25,
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
-		}
+		},
+		"become_permaqueen_chances": {
+			"warrior": 5000,
+			"elder": 1000
+		}		
 	},
 	"lost_cat": {
 		"rejoin_chance": 20
@@ -297,10 +302,12 @@
 	"graduation": {
 		"base_app_timeskip_ex": [[3, 12],[8, 9]],
 		"base_med_app_timeskip_ex": [[2, 10],[5, 6]],
+		"base_pqueen_app_timeskip_ex": [[2, 8],[4, 5]],
 		"max_apprentice_age": {
 			"medicine cat apprentice": 30,
 			"apprentice": 25,
-			"mediator apprentice": 30
+			"mediator apprentice": 30,
+			"permaqueen apprentice": 25
 		},
 		"min_graduating_age": 9
 	},

@@ -77,7 +77,7 @@
       "tags": [],
       "lead_trait": [],
       "star_trait": ["faithful", "loving", "responsible", "thoughtful", "wise", "charismatic", "dreamer", "wandering"],
-      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice", "permaqueen", "permaqueen apprentice"],
       "life_giving": [
         {
           "text": "Despite looking quite out of place among the battle-hardened shadows, r_c still places {PRONOUN/r_c/poss} muzzle harshly against the new leader's head. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} a life for [virtue], hoping that {PRONOUN/m_c/subject} will remember {PRONOUN/m_c/poss} own kindness.",
@@ -91,7 +91,7 @@
       "tags": [],
       "lead_trait": [],
       "star_trait": ["ambitious", "bloodthirsty", "cold", "fierce", "shameless", "strict", "troublesome", "vengeful", "rebellious", "stubborn"],
-      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice", "permaqueen", "permaqueen apprentice"],
       "life_giving": [
         {
           "text": "r_c stalks up to the new leader, eyes burning with the increasingly familiar Dark Forest ferocity. {PRONOUN/r_c/subject/CAP} {VERB/r_c/touch/touches} {PRONOUN/r_c/poss} nose to m_c's head, giving {PRONOUN/m_c/object} a life for [virtue]. m_c reels back with the emotion of the life that courses through {PRONOUN/m_c/object}.",
@@ -105,7 +105,7 @@
       "tags": [],
       "lead_trait": [],
       "star_trait": ["adventurous", "bold", "charismatic", "childish", "confident", "daring", "playful", "righteous", "dramatic"],
-      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice", "permaqueen", "permaqueen apprentice"],
       "life_giving": [
         {
           "text": "r_c jovially jaunts up to the new leader. The dark murk on {PRONOUN/r_c/poss} fur or the red eyes did not seem to dampen {PRONOUN/r_c/poss} spirit one bit. {PRONOUN/r_c/subject/CAP} {VERB/r_c/touch/touches} {PRONOUN/r_c/poss} nose to m_c's head, giving {PRONOUN/m_c/object} a life for [virtue]. When m_c looks up, r_c is walking away from the scene in high spirits.",
@@ -942,29 +942,19 @@
       ]
     },
 	
-    "skeptic_warrior_EXAMPLE": {
+    "skeptic_warrior": {
       "tags": [],
       "lead_trait": ["skeptic"],
       "star_trait": [],
-      "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["warrior", "deputy"],
       "life_giving": [
         {
-          "text": "r_c walks up to m_c, offering a life for [virtue]. They smile, and state that the Clan will do well under m_c's leadership.",
-          "virtue": ["ambition", "bravery", "certainty", "clear judgement", "confidence", "courage",
-      "determination", "endurance", "farsightedness", "instincts", "strength", "ferocity", "cunning", "shamelessness", "zealotry", "bloodlust", "restless energy", 
-      "stubbornness", "authority"]
+          "text": "With mirrored skepticsm r_c walks up to m_c. With a roll of {PRONOUN/r_c/poss} eyes and no words exchanged {PRONOUN/m_c/subject} {VERB/r_c/give/gives} a life for [virtue]",
+          "virtue": ["certainty", "clear judgement", "confidence", "courage", "endurance", "farsightedness", "strength", "ferocity", "cunning", "shamelessness", "bloodlust", "authority"]
         },
         {
-          "text": "A new cat approaches. r_c steps forward to give m_c a life for [virtue]. m_c grits their teeth as the life rushes into them.",
-          "virtue": ["ambition", "bravery", "certainty", "clear judgement", "confidence", "courage",
-      "determination", "endurance", "farsightedness", "instincts", "strength", "ferocity", "cunning", "shamelessness", "zealotry", "bloodlust", "restless energy", 
-      "stubbornness", "authority"]
-        },
-        {
-          "text": "r_c dips their head in greeting. Energy surges through m_c's pelt as they receive a life for [virtue]. They reassure m_c that they are almost done.",
-          "virtue": ["ambition", "bravery", "certainty", "clear judgement", "confidence", "courage",
-      "determination", "endurance", "farsightedness", "instincts", "strength", "ferocity", "cunning", "shamelessness", "zealotry", "bloodlust", "restless energy", 
-      "stubbornness", "authority"]
+          "text": "As if mocking m_c, r_c steps out from behind {PRONOUN/m_c/object} with a wicked grin and swishing tail. \"With this life, I grant you [virtue].\" {PRONOUN/r_c/poss} part down {PRONOUN/r_c/subject} swiftly vanished back into the shadows around.",
+          "virtue": ["determination", "endurance", "strength", "ferocity", "cunning", "bloodlust", "stubbornness", "authority"]
         }
       ]
     },
@@ -1080,7 +1070,7 @@
       "tags": [],
       "lead_trait": [],
       "star_trait": [],
-      "rank": ["apprentice", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen apprentice"],
       "life_giving": [
         {
           "text": "A young cat is next to give a life. Crimson gloom reflects off {PRONOUN/r_c/poss} youthful eyes. r_c stretches up to give a life for [virtue].",
@@ -1093,7 +1083,7 @@
       "tags": [],
       "lead_trait": ["bloodthirsty"],
       "star_trait": [],
-      "rank": ["apprentice", "medicine cat apprentice", "mediator apprentice"],
+      "rank": ["apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen apprentice"],
       "life_giving": [
         {
           "text": "A young cat is next to give a life. {PRONOUN/r_c/subject/CAP} {VERB/r_c/hesitate/hesitates}, before an older cat shoves {PRONOUN/r_c/object} forward, growling in {PRONOUN/r_c/poss} ear. r_c stretches up to give a life for [virtue].",
@@ -1150,6 +1140,18 @@
         {
           "text": "r_c approaches next, a dark expression on {PRONOUN/r_c/poss} face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/offer/offers} a life for [virtue], whispering to inspire true loyalty through fear of punishment.",
           "virtue": ["clear sight", "devotion", "faith", "healing", "patience", "wisdom"]
+        }
+      ]
+    }, 
+	"default_permaqueen": {
+      "tags": [],
+      "lead_trait": [],
+      "star_trait": [],
+      "rank": ["permaqueen"],
+      "life_giving": [
+        {
+          "text": "r_c slinks forwards from the crowd next, fur mattered and no kittens in sight. Gazing at m_c with something sharp {PRONOUN/m_c/subject} {VERB/m_c/speak/speaks} with a raspy voice offering up a life for [virtue].",
+          "virtue": ["affection", "compassion", "empathy", "duty", "protection", "pride"]
         }
       ]
     },

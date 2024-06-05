@@ -278,5 +278,9 @@
 	"fatigue": [
 		"m_c is relieved to wake up and feel like {PRONOUN/m_c/subject} {VERB/m_c/have/has} the energy for the day once more.",
 		"After the constant tiredness that's weighed m_c down, it's nice to see {PRONOUN/m_c/object} with a spring in {PRONOUN/m_c/poss} step once more."
+	],
+	"cutter's sickness": [
+		"It's a relief to the whole clan when m_c emerges into the light of the camp, finally free from the illness clinging to {PRONOUN/m_c/object}.",
+		"Purring m_c greets the clan, freed from the grasp of Cutter's Sickness."
 	]
 }

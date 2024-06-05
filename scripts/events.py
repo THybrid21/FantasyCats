@@ -19,6 +19,7 @@ from scripts.patrol.patrol import Patrol
 import ujson
 
 from scripts.cat.cats import Cat, cat_class, BACKSTORIES
+from scripts.clan import Clan
 from scripts.clan import HERBS
 from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE, FRESHKILL_EVENT_ACTIVE
 from scripts.conditions import medical_cats_condition_fulfilled, get_amount_cat_for_one_medic
@@ -454,6 +455,20 @@ class Events:
                         f"become the Clan's newest mediator. ", "ceremony",
                         cat.ID))
                 cat.status_change("mediator")
+
+    def queen_events(self, cat):
+        """ Check for queen events """
+                    
+        # Note: These chances are large since it triggers every moon.
+        # Checking every moon has the effect giving older cats more chances to become a mediator
+        _ = game.config["roles"]["become_permaqueen_chances"]
+        if cat.status in _ and not int(random.random() * _[cat.status]):
+            game.cur_events_list.append(
+                Single_Event(
+                    f"{cat.name} had chosen to use their skills and experience to help nuture the "
+                    f"Clan's young. A meeting is called, and they "
+                    f"become the Clan's newest permaqueen. ", "ceremony", cat.ID))
+            cat.status_change("permaqueen")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""
@@ -1048,6 +1063,13 @@ class Events:
                 else:
                     text += "child."
 
+            ##Now we attempt something risky
+            cutter = random.randint(0, 100)
+            if cutter <= 10:
+                cat.get_injured("cutter's sickness")
+                text += "Of course not all seems entirely well.",
+                "m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying state of Cutter's Sickness."
+
             text = event_text_adjust(Cat, text, lost_cat, clan=game.clan)
 
             game.cur_events_list.append(
@@ -1057,15 +1079,17 @@ class Events:
         print("checking ceremonies for returned cat")
         for cat_ID in cat_IDs:
             x = Cat.fetch_cat(cat_ID)
-            if x.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "kitten", "newborn"]:
+            if x.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen apprentice", "kitten", "newborn"]:
                 if x.moons >= 15:
                     if x.status == "medicine cat apprentice":
                         self.ceremony(x, "medicine cat")
                     elif x.status == "mediator apprentice":
                         self.ceremony(x, "mediator")
+                    elif x.status == "permaqueen apprentice":
+                        self.ceremony(x, "permaqueen")
                     else:
                         self.ceremony(x, "warrior")
-                elif x.status not in ["apprentice", "medicine cat apprentice", "mediator apprentice"] and x.moons >= 6:
+                elif x.status not in ["apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen apprentice"] and x.moons >= 6:
                     self.ceremony(x, "apprentice")
             elif x.status != 'medicine cat':
                 if x.moons == 0:
@@ -1177,6 +1201,7 @@ class Events:
 
         # Handle Mediator Events
         self.mediator_events(cat)
+        self.permaqueen_events(cat)
 
         # handle nutrition amount
         # (CARE: the cats has to be fed before - should be handled in "one_moon" function)
@@ -1491,7 +1516,7 @@ class Events:
 
                     if cat.personality.trait in [
                         'altruistic', 'compassionate', 'empathetic',
-                        'wise', 'faithful'
+                        'wise', 'faithful', 'dreamer'
                     ]:
                         chance = int(chance / 1.3)
                     if cat.is_disabled():
@@ -1537,14 +1562,44 @@ class Events:
                             self.ceremony_accessory = True
                             self.gain_accessories(cat)
                         else:
-                            self.ceremony(cat, 'apprentice')
-                            self.ceremony_accessory = True
-                            self.gain_accessories(cat)
+                            # Chance for mediator apprentice
+                            permaqueen_list = list(filter(lambda x: x.status == "permaqueen" and not x.dead
+                                              and not x.outside, Cat.all_cats_list))
+
+                            # This checks if at least one mediator already has an apprentice.
+                            has_permaqueen_apprentice = False
+                            for c in permaqueen_list:
+                                if c.apprentice:
+                                    has_permaqueen_apprentice = True
+                                    break
+
+                            chance = game.config["roles"]["permaqueen_app_chance"]
+                            if cat.personality.trait in [
+                                'calm', 'compassionate', 'responsible',
+                                'strict', 'skeptic'
+                            ]:
+                                chance = int(chance / 1.5)
+                            if cat.is_disabled():
+                                chance = int(chance / 2)
+
+                            if chance == 0:
+                                chance = 1
+
+                            # Anyone can choose to become a Permaqueen, even if there isn't already one in the clan.
+                            if not has_permaqueen_apprentice and not int(random.random() * chance):
+                                self.ceremony(cat, 'permaqueen apprentice')
+                                self.ceremony_accessory = True
+                                self.gain_accessories(cat)
+
+                            else:
+                                self.ceremony(cat, 'apprentice')
+                                self.ceremony_accessory = True
+                                self.gain_accessories(cat)
 
             # graduate
             if cat.status in [
                 "apprentice", "mediator apprentice",
-                "medicine cat apprentice"
+                "medicine cat apprentice", "permaqueen apprentice"
             ]:
 
                 if game.clan.clan_settings["12_moon_graduation"]:
@@ -1578,6 +1633,11 @@ class Events:
 
                     elif cat.status == 'mediator apprentice':
                         self.ceremony(cat, 'mediator', preparedness)
+                        self.ceremony_accessory = True
+                        self.gain_accessories(cat)
+
+                    elif cat.status == 'permaqueen apprentice':
+                        self.ceremony(cat, 'permaqueen', preparedness)
                         self.ceremony_accessory = True
                         self.gain_accessories(cat)
 
@@ -1628,7 +1688,8 @@ class Events:
         mentor_type = {
             "medicine cat": ["medicine cat"],
             "warrior": ["warrior", "deputy", "leader", "elder"],
-            "mediator": ["mediator"]
+            "mediator": ["mediator"],
+            "permaqueen": ["permaqueen"] 
         }
 
         try:
@@ -1636,7 +1697,7 @@ class Events:
             possible_ceremonies.update(self.ceremony_id_by_tag[promoted_to])
 
             # Get ones for prepared status ----------------------------------------------
-            if promoted_to in ["warrior", "medicine cat", "mediator"]:
+            if promoted_to in ["warrior", "medicine cat", "mediator", "permaqueen"]:
                 possible_ceremonies = possible_ceremonies.intersection(
                     self.ceremony_id_by_tag[preparedness])
 
@@ -1779,7 +1840,7 @@ class Events:
 
         # getting the random honor if it's needed
         random_honor = None
-        if promoted_to in ['warrior', 'mediator', 'medicine cat']:
+        if promoted_to in ['warrior', 'mediator', 'medicine cat', 'permaqueen']:
             resource_dir = "resources/dicts/events/ceremonies/"
             with open(f"{resource_dir}ceremony_traits.json",
                       encoding="ascii") as read_file:
@@ -1789,7 +1850,7 @@ class Events:
             except KeyError:
                 random_honor = "hard work"
 
-        if cat.status in ["warrior", "medicine cat", "mediator"]:
+        if cat.status in ["warrior", "medicine cat", "mediator", "permaqueen"]:
             History.add_app_ceremony(cat, random_honor)
 
         ceremony_tags, ceremony_text = self.CEREMONY_TXT[random.choice(
@@ -1873,7 +1934,8 @@ class Events:
         if cat.personality.trait in [
             "adventurous", "childish", "confident", "daring", "playful",
             "attention-seeker", "bouncy", "sweet", "troublesome",
-            "impulsive", "inquisitive", "strange", "shameless"
+            "impulsive", "inquisitive", "strange", "shameless",
+            "dreamer", "wandering"
         ]:
             chance += acc_chances["happy_trait_modifier"]
         elif cat.personality.trait in [
@@ -1944,7 +2006,7 @@ class Events:
         TODO: DOCS
         """
         if cat.status in [
-            "apprentice", "medicine cat apprentice", "mediator apprentice"
+            "apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen apprentice"
         ]:
 
             if cat.not_working() and int(random.random() * 3):
@@ -1955,6 +2017,8 @@ class Events:
 
             if cat.status == "medicine cat apprentice":
                 ran = game.config["graduation"]["base_med_app_timeskip_ex"]
+            elif cat.status == "permaqueen apprentice":
+                ran = game.config["graduation"]["base_pqueen_app_timeskip_ex"]            
             else:
                 ran = game.config["graduation"]["base_app_timeskip_ex"]
 
@@ -2139,10 +2203,21 @@ class Events:
             if not random.getrandbits(9):  # 1/512
                 self.handle_mass_extinctions(cat)
                 return True
+        # Adjust kitten mortality by the permaqueens
+        chance_death = game.get_config_value("death_related", f"{game.clan.game_mode}_death_chance")
+        try:
+            if cat.status == "kitten" or cat.status == "newborn":
+                num_queens = 0
+                for c in game.clan.clan_cats:
+                    if not Cat.all_cats.get(c).outside and not Cat.all_cats.get(c).dead:
+                        if Cat.all_cats.get(c).status == "permaqueen" or Cat.all_cats.get(c).status == "permaqueen apprentice":
+                            num_queens+=1
+                chance_death+=(num_queens*5)
+        except:
+            print("couldn't handle permaqueen mortality")
 
         # final death chance and then, if not triggered, head to injuries
-        if not int(random.random() * game.get_config_value("death_related", f"{game.clan.game_mode}_death_chance")) \
-                and not cat.not_working():  # 1/400
+        if not int(random.random() * chance_death) and not cat.not_working():  # 1/400
             Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False), enemy_clan, alive_kits)
             return True
         else:

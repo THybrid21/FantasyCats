@@ -76,8 +76,8 @@
 			"Curses the Warrior Code",
 			"Is failing to groom muck from their coat",
 			"Looks up and wonders where the stars are",
-			"Thinks they found the tunnel to StarClan the other night",
-			"Is hoping that they fade soon",
+			"Thinks {PRONOUN/m_c/subject} found the tunnel to StarClan the other night",
+			"Is hoping that {PRONOUN/m_c/subject} fade soon",
 			"Wishes that death was nothingness"
         ],
         "main_trait_constraint": [

@@ -408,6 +408,12 @@
 			"{PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} only out in the sun for a short while... but it was long enough for m_c to get a sunburn.",
 			"m_c is feeling miserable and sore, regretting giving into the urge to nap in a sunbeam."
 		],
+		"severe sunburn": [
+			"r_c shakes {PRONOUN/r_c/poss} head seeing m_c gently herded into the medicine den. Not only is m_c sunburnt, it's a severe one.",
+			"m_c didn't think that {PRONOUN/m_c/subject} {VERB/m_c/were/was} out in the sun for that long, yet the angry red marks stingling under {PRONOUN/m_c/poss} fur tells another story.",
+			"m_c's unfortunately gotten a severe burn from been out in the heat of the sun this moon.",
+			"With {PRONOUN/m_c/poss} light and fine fur it's no wonder that poor m_c's had to go to the medicine den for a sunburn this season."
+		],
 		"running nose": [
 			"While it's only a small sniffle, m_c still goes to the medicine den and r_c just to make sure.",
 			"m_c trots to the medicine den with a runny nose."

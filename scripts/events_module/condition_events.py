@@ -5,6 +5,7 @@ from copy import deepcopy
 from scripts.cat.cats import Cat
 from scripts.cat.history import History
 from scripts.cat.pelts import Pelt
+from scripts.clan import Clan
 from scripts.conditions import medical_cats_condition_fulfilled, get_amount_cat_for_one_medic
 from scripts.utility import event_text_adjust, get_med_cats, change_relationship_values, change_clan_relations, \
     history_text_adjust
@@ -105,7 +106,18 @@ class Condition_Events():
             # ---------------------------------------------------------------------------- #
             random_number = int(
                     random.random() * game.get_config_value("condition_related", f"{game.clan.game_mode}_illness_chance"))
-
+           # Adjust kitten illness chance for the number permaqueens
+            try:
+                if cat.status == "kitten" or cat.status == "newborn":
+                    num_queens = 0
+                    for c in game.clan.clan_cats:
+                        if not Cat.all_cats.get(c).outside and not Cat.all_cats.get(c).dead:
+                            if Cat.all_cats.get(c).status == "permaqueen" or Cat.all_cats.get(c).status == "permaqueen apprentice":
+                                num_queens+=1
+                    random_number+=(num_queens*5)
+            except:
+                print("couldn't handle permaqueen illness prevention")
+                
             if not cat.dead and not cat.is_ill() and random_number <= 10 and not event_string:
 
                 # CLAN FOCUS!

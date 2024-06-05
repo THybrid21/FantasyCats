@@ -218,6 +218,8 @@ class GenerateEvents:
 
         if cat_type in ["medicine cat", "medicine cat apprentice"]:
             cat_type = "medicine"
+        elif cat_type in ["permaqueen", "permaqueen apprentice"]:
+            cat_type = "permaqueen"
         elif cat_type in ["mediator", "mediator apprentice"]:
             cat_type = "mediator"
 

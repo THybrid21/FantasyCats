@@ -91,6 +91,7 @@ class AllegiancesScreen(Screens):
         living_cats = [i for i in Cat.all_cats.values() if not (i.dead or i.outside)]
         living_meds = []
         living_mediators = []
+        living_permaqueens = []
         living_warriors = []
         living_apprentices = []
         living_kits = []
@@ -102,7 +103,9 @@ class AllegiancesScreen(Screens):
                 living_warriors.append(cat)
             elif cat.status == "mediator":
                 living_mediators.append(cat)
-            elif cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice"]:
+            elif cat.status == "permaqueen":
+                living_permaqueens.append(cat)
+            elif cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "permaqueen_apprentice"]:
                 living_apprentices.append(cat)
             elif cat.status in ["kitten", "newborn"]:
                 living_kits.append(cat)
@@ -183,7 +186,7 @@ class AllegiancesScreen(Screens):
             outputs.append(_box)
 
         # Queens and Kits Box:
-        if queen_dict or living_kits:
+        if queen_dict or living_kits or living_permaqueens:
             _box = ["", ""]
             _box[0] = '<b><u>QUEENS AND KITS</u></b>'
 
@@ -203,9 +206,15 @@ class AllegiancesScreen(Screens):
 
                 all_entries.append(self.generate_one_entry(queen, kittens))
 
+            for qu in living_permaqueens:
+                if qu.ID not in queen_dict.keys():
+                    all_entries.append(self.generate_one_entry(qu))                    
             # Now kittens without carers
             for k in living_kits:
-                all_entries.append(f"{str(k.name).upper()} - {k.describe_cat(short=True)}")
+                if living_permaqueens:
+                    all_entries.append(f"{str(k.name).upper()} - {k.describe_cat(short=True)} been cared for by the permaqueens")
+                else:
+                    all_entries.append(f"{str(k.name).upper()} - {k.describe_cat(short=True)}")
 
             _box[1] = "\n".join(all_entries)
             outputs.append(_box)

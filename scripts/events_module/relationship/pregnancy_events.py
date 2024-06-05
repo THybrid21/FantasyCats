@@ -369,11 +369,26 @@ class Pregnancy_Events():
                 text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]
         elif thinking_amount[0] == "incorrect":
             if correct_guess == "small":
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2 or 1]
+                guess = random.randint(1, 2)
+                if guess == 1:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]
+                else:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]                
             elif correct_guess == "huge":
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0 or 1 or 3]
+                guess = random.randint(1, 3)
+                if guess == 1:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
+                elif guess == 2:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]
+                else:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]                    
             else:
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0 or 2 or 3]
+                if guess == 1:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
+                elif guess == 2:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]
+                else:
+                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]   
         elif thinking_amount[0] == "exact":
             thinking_amount = choice([amount - random.randint(1, 6), amount, amount + random.randint(1, 6)])
             if thinking_amount < 1:

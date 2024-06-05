@@ -265,19 +265,18 @@
         "id": "skeptic_medicine_cat_apprentice",
         "thoughts": [
             "Is wondering why cats even belive in Starclan",
-			"Loudly sorts the herbs in front of them to drown out their mentor's lecture",
-			"Wishes the other apprentices would leave them alone while they're learning herbs",
-			"Treats r_c for a small cut on their paw",
-			"Wishes that the twolegs wouldn't leave out so many traps",
+			"Wishes the other apprentices would leave {PRONOUN/m_c/object} alone while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} learning herbs",
+			"Treats r_c for a small cut on {PRONOUN/r_c/poss} paw",
+			"Wishes that Twolegs wouldn't leave out so many traps",
 			"Is wondering if been a kittypet would be less stressful.",
-			"Is sitting and contemplating what their name might be",
-			"Hopes that their medicine cat name will end in anything but -feather",
+			"Is sitting and contemplating what {PRONOUN/m_c/poss} name might be",
+			"Hopes that {PRONOUN/m_c/poss} medicine cat name will end in anything but -feather",
 			"Thinks that Starclan is a myth to calm worried kits",
-			"Wishes that they had the foresight to choose to be a regular apprentice",
-			"Knows they don't believe in Starclan but tries to anyway",
-			"Is thinking they will be the best Medicine Cat in c_n without Starclan",
-			"Wonders why they can't learn at least basic self defense",
-			"Dreamt they were in a starry field last night and scoffs"
+			"Wishes that {PRONOUN/m_c/subject} had the foresight to choose to be a regular apprentice",
+			"Knows {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} believe in Starclan but tries to anyway",
+			"Is thinking {PRONOUN/m_c/subject} will be the best Medicine Cat in c_n even without Starclan",
+			"Wonders why {PRONOUN/m_c/subject} can't learn at least basic self defense",
+			"Dreamt {VERB/m_c/were/was} in a starry field last night and scoffs"
         ],
         "main_trait_constraint": [
 			"skeptic"
@@ -297,48 +296,88 @@
         "random_living_status": [
             "living"
         ]		
-    },	
+    },
+    {
+        "id": "skeptic_medicine_cat_apprentice_to_mentor",
+        "thoughts": [
+			"Loudly sorts the herbs to drown out {PRONOUN/m_c/poss} mentor's lecture",
+			"Wishes that r_c would stop lecturing {PRONOUN/m_c/object} about StarClan",
+			"Is happy to be learning from r_c",
+			"Wonders if r_c is proud of {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+			"skeptic"
+        ],
+        "random_status_constraint": [
+            "medicine cat"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "relationship_constraint": [
+            "app/mentor"
+        ]		
+    },
     {
         "id": "dreamer_medicine_cat_apprentice",
         "thoughts": [
-			"Sings softly to themselves to memorise herbs",
-			"Is prancing around the medicine den while nobody's watching.",
-			"Zones out while their mentor lectures them about herbs they're already familiar with.",
-			"Is hoping that their medicine cat name will end in -feather or -wing",
-			"Rolling in the catmint while nobody's looking",
+			"Sings softly to {PRONOUN/m_c/self} to memorise herbs",
+			"Is hoping that {PRONOUN/m_c/poss} medicine cat name will end in -feather or -wing",
 			"Is daydreaming about r_c been leader",
-			"Wonders what kind of legacy they will leave as a medicine cat."
+			"Wonders what kind of legacy {PRONOUN/m_c/subject} will leave as a medicine cat."
         ],
         "main_trait_constraint": [
 			"dreamer"
         ],
         "random_status_constraint": [
             "kitten",
-            "apprentice"
+			"apprentice",
+			"warrior",
+			"deputy"
         ],
         "random_living_status": [
             "living"
+        ]
+    },	
+    {
+        "id": "dreamer_medicine_cat_apprentice",
+        "thoughts": [
+			"Is prancing around the medicine den while nobody's watching.",
+			"Zones out while {PRONOUN/m_c/poss} mentor lectures them about herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} already familiar with.",
+			"Rolling in the catmint while r_c's not looking"
+        ],
+        "main_trait_constraint": [
+			"dreamer"
+        ],
+        "random_status_constraint": [
+            "medicine cat"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "relationship_constraint": [
+            "app/mentor"
         ]
     },
 	{
         "id": "starwalker_medicine_cat_apprentice",
         "thoughts": [
-            "Is intently focusing on the herbs they're sorting.",
-			"Forgot to eat today and is wondering if anyone will notice if they take prey in the night",
+            "Is intently focusing on the herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} sorting",
+			"Forgot to eat today and is wondering if anyone will notice if {PRONOUN/m_c/subject} take prey in the night",
 			"Is doing circles around the medicine cat den",
-			"Chattering to r_c all about the herbs that they're learning.",
-			"Is intently watching as spiders spin cobwebs in the corner of the medicine den",
-			"Swishing their tail happily while they sort herbs",
-			"Volunteers to collect extra herbs for their mentor.",
-			"Is dilligently checking up on their sick clanmates.",
-			"Chatters to nobody about their favourite herbs.",
-			"Wonders about the first medicine cats.",
+			"Is chattering to r_c about all of the herbs that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} learning",
+			"Is intently watching as spiders spin webs in the corner of the medicine den",
+			"Is swishing {PRONOUN/m_c/poss} tail happily while they sort herbs",
+			"Volunteers to collect extra herbs for {PRONOUN/m_c/poss} mentor",
+			"Is diligently checking up on their sick Clanmates",
+			"Chatters to nobody about {PRONOUN/m_c/poss} favourite herbs",
+			"Wonders about the first medicine cats",
 			"Has heard that rats know how to cure Carrionplace Disease",
 			"Is worrying about r_c",
-			"Is worrying that they have forgotten something while sorting the herbs",
+			"Is worrying that {PRONOUN/m_c/subject} {VERB/m_c/have/has} forgotten something while sorting the herbs",
 			"Keeps rolling in the catmint to try and calm down",
-			"Hopes that their medicine cat name will end in -wing",
-			"Didn't hear r_c calling their name and was surprised when they looked up from the herbs"
+			"Hopes that {PRONOUN/m_c/poss} medicine cat name will end in -wing",
+			"Didn't hear r_c calling {PRONOUN/m_c/poss} name and was surprised when {PRONOUN/m_c/subject} looked up from the herbs"
         ],
         "perm_conditions": {
             "m_c": [
@@ -360,20 +399,45 @@
         "random_living_status": [
             "living"
         ]
-	},
+	}, 	
+    {
+        "id": "starwalker_medicine_cat_apprentice_den",
+        "thoughts": [
+			"Is prancing around the medicine den while nobody's watching",
+			"Zones out while {PRONOUN/m_c/poss} mentor lectures them about herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} already familiar with.",
+			"Rolling in the catmint while r_c's not looking",
+			"Talks to r_c about how overwhlmed {PRONOUN/m_c/subject} feel recently",
+			"Is glad that r_c is {PRONOUN/m_c/poss} mentor",
+			"Expresses appreciation for r_c's patience with {PRONOUN/m_c/object}"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "starwalker"
+            ]
+		},
+        "random_status_constraint": [
+            "medicine cat"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "relationship_constraint": [
+            "app/mentor"
+        ]
+    },
 	{
         "id": "obsessive mind_medicine_cat_apprentice",
         "thoughts": [
-            "Is intently focusing on the herbs they're sorting.",
-			"Forgot to eat today and is stressing about it to their denmates",
+            "Is intently focusing on the herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} sorting",
+			"Forgot to eat today and is stressing about it to {PRONOUN/m_c/poss} denmates",
 			"Is recounting the herbs and making sure they're even",
 			"Is sorting the herbs into piles based on size",
 			"Is double checking that none of the herbs have gone bad",
-			"Talking to r_c about an issue they came into the den about last week",
+			"Is talking to r_c about an issue {PRONOUN/m_c/subject} ran into concerning the den last week",
 			"Was seen chucking out day old herbs",
-			"Is crying to r_c because they don't think they're good enough to be a medicine cat",
+			"Is crying to r_c because {PRONOUN/m_c/subject} don't think {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} good enough to be a medicine cat",
 			"Cries while sorting the moss for the nests",
-			"Cries because the webs aren't even around the den"
+			"Cries because the cobwebs aren't even around the den"
         ],
         "perm_conditions": {
             "m_c": [
@@ -390,6 +454,53 @@
             "deputy",
             "leader",
             "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+	},
+	{
+        "id": "anxious_medicine_cat_apprentice",
+        "thoughts": [
+            "Is smelling some lavender to help {PRONOUN/m_c/object} stay calm",
+            "Is smelling some mint to help {PRONOUN/m_c/object} stay calm",
+            "Finds the scents of the medicine den calming",
+            "Is telling r_c about how much {PRONOUN/m_c/subject} like the smell of lavender",
+            "Is telling r_c about how much {PRONOUN/m_c/subject} like the smell of mint"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "anxiety"
+            ]
+        },
+        "random_status_constraint": [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+	},
+	{
+        "id": "anxious_medicine_cat_apprentice_to_medicine_cat",
+        "thoughts": [
+            "Asks r_c if {PRONOUN/m_c/subject} can collect more lavender the next time they go out foraging together",
+            "Asks r_c if {PRONOUN/m_c/subject} can collect more mint the next time they go out foraging together"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "anxiety"
+            ]
+        },
+        "random_status_constraint": [
+            "medicine cat"
         ],
         "random_living_status": [
             "living"

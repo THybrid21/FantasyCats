@@ -347,6 +347,10 @@ class ClanSettingsScreen(Screens):
                 warriors += 1
             elif cat.status == "apprentice":
                 warrior_apprentices += 1
+            elif cat.status == "permaqueen apprentice":
+                permaqueen_apprentices += 1
+            elif cat.status == "permaqueen":
+                queens += 1
             elif cat.status == "mediator apprentice":
                 mediator_apprentices += 1
             elif cat.status == "mediator":
@@ -364,6 +368,8 @@ class ClanSettingsScreen(Screens):
         f"Medicine Cat Apprentices: {med_cat_apprentices}\n" \
         f"Warriors: {warriors}\n" \
         f"Warrior Apprentices: {warrior_apprentices}\n" \
+        f"Queens: {queens}\n" \
+        f"Queen Apprentices: {permaqueen_apprentices}\n" \
         f"Mediators: {mediators}\n" \
         f"Mediators Apprentices: {mediator_apprentices}\n" \
         f"Elders: {elders}\n" \

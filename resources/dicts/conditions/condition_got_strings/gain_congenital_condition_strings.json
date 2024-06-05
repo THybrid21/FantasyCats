@@ -77,7 +77,7 @@
 	"melanism": [
 		"r_c watches as m_c struggles to get out during the day, panting when the sun falls directly on {PRONOUN/m_c/object}.",
 		"m_c doesn't like playing at night, always squinting and struggling to see where {PRONOUN/m_c/subject} {VERB/m_c/are/is} going.",
-		"When {PRONOUN/m_c/poss} parent takes them out for night trips to the dirtplace m_c whines about how much {PRONOUN/m_c/subject} {VERB/m_c/hate/hates} it.",
+		"When {PRONOUN/m_c/poss} parent takes {PRONOUN/m_c/object} out for night trips to the dirtplace m_c whines about how much {PRONOUN/m_c/subject} {VERB/m_c/hate/hates} it.",
 		"m_c doesn't like going out in the sunshine at midday, {PRONOUN/m_c/subject} {VERB/m_c/complain/complains} it's simply too hot."
 	],
 	"sphynxism": [

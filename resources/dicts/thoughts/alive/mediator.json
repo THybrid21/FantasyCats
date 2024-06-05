@@ -190,9 +190,9 @@
     {
         "id": "skeptic_mediator",
         "thoughts": [
-            "Feels like they're the only cat with a solid head on their shoulders",
-			"Is very tired of their clanmates squabbles",
-			"Thinks that they need to travel to another clan to talk to their leader"
+            "Feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} the only cat with a solid head on {PRONOUN/m_c/poss} shoulders",
+			"Is very tired of {PRONOUN/m_c/poss} clanmates squabbles",
+			"Thinks that {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to travel to another clan to talk to the leader"
         ],
         "main_trait_constraint": [
             "skeptic"

@@ -1366,6 +1366,129 @@
     ],
     "(old_name) always dreamed of becoming a mediator: Now that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} m_c, an apprentice being mentored by (mentor), it feels like a wish come true."
   ],
+  "permaqueen_app_0": [
+    [
+      "permaqueen apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Feeling a deep bond with the nursery, m_c has chosen to serve the Clan as a permaqueen apprentice. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} excited to begin {PRONOUN/m_c/poss} nurturing journey."
+  ],
+  "permaqueen_app_1": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Rather than the thrill of the hunt or the heat of battle, m_c is drawn to the gentle rhythm of the nursery. With (mentor) by {PRONOUN/m_c/poss} side, {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} ready to learn the ways of the permaqueens."
+  ],
+  "permaqueen_app_2": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Having always felt a connection to the kits, m_c is inspired by (mentor)'s dedication in the nursery. Eager to follow in {PRONOUN/(mentor)/poss} pawsteps, m_c is taken under (mentor)'s nurturing wing."
+  ],
+  "permaqueen_app_3": [
+    [
+      "permaqueen apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "With a heart full of compassion, m_c sees the importance of the next generation and decides to dedicate {PRONOUN/m_c/poss} life to the well-being of the Clan's kits."
+  ],
+  "permaqueen_app_4": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "compassionate",
+      "nurturing"
+    ],
+    "Recognizing m_c's innate ability to care and nurture, (mentor) feels it's only natural to train m_c as the next permaqueen apprentice."
+  ],
+  "permaqueen_app_5": [
+    [
+      "permaqueen apprentice",
+      "general_parents",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "compassionate",
+      "nurturing"
+    ],
+    "Captivated by the tales and warmth of the nursery, m_c has been shadowing (mentor), showing an interest in becoming a permaqueen apprentice. (mentor) welcomes the enthusiastic new pupil."
+  ],
+  "permaqueen_app_6": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "While m_c admires the bravery of warriors and the wisdom of elders, {PRONOUN/m_c/poss} heart lies with the young ones in the nursery. Under (mentor)'s guidance, m_c embarks on the path to become a devoted carer."
+  ],
+  "permaqueen_app_7": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Despite some questioning looks, m_c is firm in {PRONOUN/m_c/poss} resolve to be under (mentor)'s tutelage: the future of the Clan lies in the paws of the kits, and that's where m_c wants to be."
+  ],
+  "permaqueen_app_8": [
+    [
+      "permaqueen apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c believes that being a permaqueen apprentice is {PRONOUN/m_c/poss} true calling; m_c hopes to make a lasting impact in the heart of the nursery."
+  ],
+  "permaqueen_app_9": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "It's a dream come true for m_c: to be under (mentor)'s guidance and be a permaqueen apprentice. For m_c, the nursery is where the heart of the Clan beats strongest."
+  ],
+  "permaqueen_app_10": [
+    [
+      "permaqueen apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Every Clan's strength lies in its young, and m_c wishes to be at the forefront of that, learning and growing as a permaqueen apprentice with (mentor) to guide the way."
+  ],
   "med_0": [
     [
       "medicine cat",
@@ -2039,7 +2162,7 @@
       "general_backstory",
       "skeptic"
     ],
-    "(old_name) still doesn't seem to believe in Starclan but it makes no difference as {PRONOUN/m_c/subject} step up and are welcomed by (previous_mentor) as a full medicine cat by the name of m_c"
+    "(old_name) still doesn't seem to believe in Starclan but it makes no difference as {PRONOUN/m_c/subject} {VERB/m_c/step/steps} up and are welcomed by (previous_mentor) as a full medicine cat by the name of m_c"
   ],
   "med_54": [
     [
@@ -2063,7 +2186,7 @@
       "general_backstory",
       "skeptic"
     ],
-    "(old_name) hisses and lashes {PRONOUN/m_c/poss} tail when a clanmate calls {PRONOUN/m_c/object} m_c. It's frustrating for {PRONOUN/m_c/object} to hear the name knowing that {PRONOUN/m_c/subject} don't yet deserve it."
+    "(old_name) hisses and lashes {PRONOUN/m_c/poss} tail when a clanmate calls {PRONOUN/m_c/object} m_c. It's frustrating for {PRONOUN/m_c/object} to hear the name knowing that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} yet deserve it."
   ],
   "med_55": [
     [
@@ -3011,6 +3134,69 @@
       "all_traits"
     ],
     "(previous_mentor) tells l_n that (old_name) has completed {PRONOUN/m_c/poss} mediator training, and l_n gives {PRONOUN/m_c/object} the name m_c after {PRONOUN/m_c/poss} r_h, welcoming {PRONOUN/m_c/object} as the Clan's new mediator."
+  ],
+  "permaqueen_0_b": [
+    [
+      "permaqueen",
+      "early",
+      "general_mate",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Young (old_name) is ready to embrace their role as a permaqueen earlier than many expected. The Clan gathers to offer support and blessings for their new journey."
+  ],
+  "permaqueen_1": [
+    [
+      "permaqueen",
+      "prepared",
+      "general_mate",
+      "general_parents",
+      "general_mentor",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "With grace and patience, m_c has settled into their duties, nurturing the future of the Clan."
+  ],
+  "permaqueen_2": [
+    [
+      "permaqueen",
+      "unprepared",
+      "general_mate",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Though some in the Clan whisper doubts of (old_name)'s new role, l_n welcomes them with warmth and hope, confident in their dedication as a permaqueen."
+  ],
+  "permaqueen_3": [
+    [
+      "permaqueen",
+      "prepared",
+      "general_mate",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Having shown unwavering love for the Clan's kits, (old_name) is embraced by l_n as m_c, a symbol of life and hope for the Clan."
+  ],
+  "permaqueen_4": [
+    [
+      "permaqueen",
+      "general_parents",
+      "general_mentor",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "The Clan has watched (old_name) rise with strength and grace, choosing the path of a permaqueen. Their dedication is an inspiration to all, and they are warmly acknowledged as m_c."
   ],
   "elder_0": [
     [

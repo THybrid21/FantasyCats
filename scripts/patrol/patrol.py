@@ -125,7 +125,7 @@ class Patrol():
         for cat in patrol_cats:
             self.patrol_cats.append(cat)
             
-            if cat.status == 'apprentice' or cat.status == 'medicine cat apprentice':
+            if cat.status == 'apprentice' or cat.status == 'medicine cat apprentice' or cat.status == 'permaqueen apprentic':
                 self.patrol_apprentices.append(cat)
             
             self.patrol_status_list.append(cat.status)
@@ -142,13 +142,13 @@ class Patrol():
                 else:
                     self.patrol_statuses["healer cats"] = 1
             
-            if cat.status in ("apprentice", "medicine cat apprentice"):
+            if cat.status in ("apprentice", "medicine cat apprentice", "permaqueen apprentice"):
                 if "all apprentices" in self.patrol_statuses:
                     self.patrol_statuses["all apprentices"] += 1
                 else:
                     self.patrol_statuses["all apprentices"] = 1
                     
-            if cat.status in ("warrior", "deputy", "leader"):
+            if cat.status in ("warrior", "deputy", "leader", "permaqueen"):
                 if "normal adult" in self.patrol_statuses:
                     self.patrol_statuses["normal adult"] += 1
                 else:
@@ -179,10 +179,13 @@ class Patrol():
         elif "deputy" in self.patrol_status_list:
             index = self.patrol_status_list.index("deputy")
             self.patrol_leader = self.patrol_cats[index]
+        elif "permaqueen" in self.patrol_status_list:
+            index = self.patrol_status_list.index("permaqueen")
+            self.patrol_leader = self.patrol_cats[index]
         else:
             # Get the oldest cat
             possible_leader = [i for i in self.patrol_cats if i.status not in 
-                               ["medicine cat apprentice", "apprentice"]]
+                               ["medicine cat apprentice", "apprentice", "permaqueen apprentice"]]
             if possible_leader:
                 # Flip a coin to pick the most experience, or oldest. 
                 if randint(0, 1):
@@ -225,6 +228,7 @@ class Patrol():
         possible_patrols = []
         # this next one is needed for Classic specifically
         patrol_type = "med" if ['medicine cat', 'medicine cat apprentice'] in self.patrol_status_list else patrol_type
+        patrol_type = "training" if ['permaqueen', 'permaqueen apprentice'] in self.patrol_status_list else patrol_type
         patrol_size = len(self.patrol_cats)
         reputation = game.clan.reputation  # reputation with outsiders
         other_clan = self.other_clan

@@ -5,8 +5,12 @@
     "apprentice": "paw",
     "medicine cat apprentice": "paw",
     "mediator apprentice": "paw",
+    "permaqueen apprentice": "paw",
     "leader": "star"
     },
+	"permaqueen_suffixes": ["heart", "heart", "heart", "heart", "heart", "heart", "flower", "flower", "flower", "flower", "flower", 
+	"path", "path", "path", "path", "berry", "berry", "berry", "berry"],
+	
 	"normal_suffixes" : ["fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "fur", "pelt", "pelt", "pelt", "pelt", 
         "pelt", "pelt", "pelt", "pelt", "pelt", "pelt", "skin", "skin", "skin", "skin", "skin", "skin", "skin", "skin", "skin", 
 		"skin", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat", "coat","face", "face", "face", 
