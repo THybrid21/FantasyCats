@@ -4,6 +4,7 @@ import pygame
 
 import ujson
 
+from scripts.cat.names import names
 from scripts.game_structure.game_essentials import game
 
 
@@ -57,8 +58,13 @@ class Sprites():
         """
         self.spritesheets[name] = pygame.image.load(a_file).convert_alpha()
 
-    def make_group(self, spritesheet, pos, name, sprites_x=9, sprites_y=18,
-                   no_index=False):
+    def make_group(self,
+                   spritesheet,
+                   pos,
+                   name,
+                   sprites_x=9,
+                   sprites_y=18,
+                   no_index=False):  # pos = ex. (2, 3), no single pixels
 
         """
         Divide sprites on a spritesheet into groups of sprites that are easily accessible
@@ -92,6 +98,7 @@ class Sprites():
 
                 except ValueError:
                     # Fallback for non-existent sprites
+                    print(f"WARNING: nonexistent sprite - {full_name}")
                     if not self.blank_sprite:
                         self.blank_sprite = pygame.Surface(
                             (self.size, self.size),
@@ -198,7 +205,7 @@ class Sprites():
                 self.make_group('hybrideyes3', (col, row), f'eyes3{color}')
                 self.make_group('hybrideyes4', (col, row), f'eyes4{color}')
                 self.make_group('hybrideyes5', (col, row), f'eyes5{color}')
-    
+
         # Define white patches
         white_patches = [
             ['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANYTWO', 'MOON', 'PHANTOM', 'POWDER',
