@@ -775,6 +775,9 @@ generate_events = GenerateEvents()
 generate_events = GenerateEvents()
 
 
+generate_events = GenerateEvents()
+
+
 class ShortEvent:
     def __init__(
             self,
