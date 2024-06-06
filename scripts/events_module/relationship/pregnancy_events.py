@@ -352,53 +352,43 @@ class Pregnancy_Events():
         if cat.outside:
             return
 
-        thinking_amount = random.choices(["correct", "incorrect", "unsure", "exact"], [4, 1, 2, 3], k=1)
+        thinking_amount = random.choices(["correct", "incorrect", "unsure", "exact"], [3, 5, 3, 2], k=1)
         if amount <= 6:
             correct_guess = "small"
-        elif amount >= 14:
+        elif amount >= 11:
             correct_guess = "huge"
         else:
             correct_guess = "large"
 
         if thinking_amount[0] == "correct":
             if correct_guess == "small":
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["small_litter"])
             elif correct_guess == "huge":
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["huge_litter"])
             else:
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["large_litter"])
         elif thinking_amount[0] == "incorrect":
             if correct_guess == "small":
-                guess = random.randint(1, 2)
-                if guess == 1:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]
-                else:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]                
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["large_litter"] + 
+                        Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["huge_litter"])              
             elif correct_guess == "huge":
-                guess = random.randint(1, 3)
-                if guess == 1:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
-                elif guess == 2:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]
-                else:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][1]                    
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["large_litter"] + 
+                        Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["small_litter"] + 
+                        Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["single_kitten"])                    
             else:
-                if guess == 1:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][0]
-                elif guess == 2:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][2]
-                else:
-                    text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]   
+                text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["huge_litter"] + 
+                        Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["small_litter"] + 
+                        Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["single_kitten"])      
         elif thinking_amount[0] == "exact":
             thinking_amount = choice([amount - random.randint(1, 6), amount, amount + random.randint(1, 6)])
             if thinking_amount < 1:
                 thinking_amount = 1
             if thinking_amount == 1:
-                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guess"][3]            
+                text = Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["single_kitten"]            
             else:
-                text = f"{cat.name} isn't entirely certain but they think they will have a litter of {thinking_amount} kittens."
+                text = f"{cat.name} isn't entirely certain but thinks it will be a litter of {thinking_amount} kittens."
         else:
-            text = choice(Pregnancy_Events.PREGNANT_STRINGS["unsure_litter_guess"])
+            text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guesses"]["unsure_litter_guess"])
 
         if clan.game_mode != 'classic':
             try:

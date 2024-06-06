@@ -328,5 +328,15 @@
     "no_body": [
 
     ]
+  },
+  "zealous": {
+    "body": [
+		"r_c repeats prayers upon prays over m_c. Choking on {PRONOUN/r_c/poss} words r_c feels like {PRONOUN/r_c/poss} world is shattering around {PRONOUN/m_c/object}."
+    ],
+    "no_body": [
+		"Without m_c's body r_c listlessly wanders the camp, repeating prayers upon prayers to StarClan, desperately hoping that they will reach m_c.",
+		"Without m_c's body r_c worries for {PRONOUN/m_c/poss} safety on the travel to StarClan, fearing that it would be a hard, impossible journey.",
+		"Choking on {PRONOUN/r_c/poss} words at m_c's vigil, r_c wonders why StarClan is challenging {PRONOUN/m_c/object} like this."
+    ]
   }
 }

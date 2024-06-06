@@ -265,6 +265,9 @@ class PatrolScreen(Screens):
                 if self.patrol_type == 'med':
                     self.patrol_type = 'general'
 
+            if any((cat.status in ['permaqueen', 'permaqueen apprentice'] for cat in self.current_patrol)):
+                self.patrol_type = 'training'
+
             self.elements['paw'].enable()
             self.elements['mouse'].enable()
             self.elements['claws'].enable()
@@ -279,6 +282,9 @@ class PatrolScreen(Screens):
                 text = 'random patrol type'
             elif self.patrol_type == 'training':
                 text = 'training'
+                if any((cat.status in ['permaqueen', 'permaqueen apprentice'] for cat in self.current_patrol)):
+                    self.elements['mouse'].disable()
+                    self.elements['claws'].disable()                    
             elif self.patrol_type == 'border':
                 text = 'border'
             elif self.patrol_type == 'hunting':
@@ -300,7 +306,7 @@ class PatrolScreen(Screens):
             )
 
             able_no_med = [cat for cat in self.able_cats if
-                           cat.status not in ['medicine cat', 'medicine cat apprentice']]
+                           cat.status not in ['medicine cat', 'medicine cat apprentice', 'permaqueen', 'permaqueen apprentice']]
             if game.clan.clan_settings['random med cat']:
                 able_no_med = self.able_cats
             if len(able_no_med) == 0:

@@ -345,7 +345,8 @@
         ],
         "random_trait_constraint": [
             "faithful",
-			"loyal"
+			"loyal",
+			"zealous"
         ]
     },
 	{
@@ -363,6 +364,15 @@
 		],
 		"main_trait_constraint": [
 			"wandering"
+		]
+	},
+	{
+		"id": "zealous_leader",
+		"thoughts": [
+			"Is sure {PRONOUN/m_c/subject} {VERB/m_c/know/knows} exactly what StarClan wants for c_n"
+		],
+		"main_trait_constraint": [
+			"zealous"
 		]
 	}
 ]

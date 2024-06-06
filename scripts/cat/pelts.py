@@ -1039,7 +1039,7 @@ class Pelt():
                                 
                     elif self.colour == "GLASS":
                         possible_colors = Pelt.pelt_colours.copy()
-                        possible_colors.remove(self.pelt.colour)
+                        possible_colors.remove(self.colour)
                         self.tortiecolour = choice(possible_colors)
                     
                     elif self.colour in Pelt.pride_colours:

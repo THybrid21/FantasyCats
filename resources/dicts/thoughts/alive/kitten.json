@@ -102,10 +102,48 @@
         ]
     },
     {
+        "id": "kit_alive_permaqueen",
+        "thoughts": [
+            "Is asking r_c where kits come from",
+			"Is asking r_c why {PRONOUN/r_c/subject} decided to stay in the nursey",
+			"Was caught trying to sneak out of camp by r_c",
+			"Is whining about r_c's fussing",
+			"Wishes that r_c would leave {PRONOUN/m_c/object} alone",
+			"Wishes that r_c would give {PRONOUN/m_c/object} more attention",
+			"Is following after r_c",
+			"Is underpaw of the permanent queens",
+			"Hides behind r_c",
+			"Is annoyed with r_c",
+			"Wonders why cats become a permanent queen",
+			"Is doing den chores with r_c"
+        ],
+        "random_status_constraint": [
+            "permaqueen",
+            "permaqueen apprentice"
+        ]
+    },
+    {
+        "id": "kit_dead_permaqueen",
+        "thoughts": [
+            "Is listening to stories about r_c",
+			"Wonders if r_c would have liked them"
+        ],
+        "random_status_constraint": [
+            "permaqueen",
+            "permaqueen apprentice"
+        ],
+        "relationship_constraint": [
+            "stranger"
+        ],
+        "random_living_status": [
+            "starclan"
+        ]
+    },
+    {
         "id": "bouncy_kit",
         "thoughts": [
             "Is pretending to be a rabbit and hopping about",
-            "Is pawing at r_c's tail from behind them",
+            "Is pawing at r_c's tail from behind {PRONOUN/r_c/object}",
             "Wants to play forever",
             "Is running circles around r_c",
             "Is trying to catch {PRONOUN/m_c/poss} tail",
@@ -360,54 +398,6 @@
         ]
     },
     {
-        "id": "snuggly_kit",
-        "thoughts": [
-            "Is snuggling up to {PRONOUN/m_c/poss} parents bellies",
-			"Is looking up at r_c hoping that {PRONOUN/r_c/subject} will snuggle with {PRONOUN/m_c/object}",
-			"Is snuggled up with the elders in the den",
-			"Failing at playing hide and seek because {PRONOUN/m_c/subject} {VERB/m_c/purr/purrs} too loud",
-			"Purrs really loudly at the sight of r_c",
-			"Snuggling with the medicine cat",
-			"Really, really wants to snuggle"
-        ],
-        "main_trait_constraint": [
-            "snuggly"
-        ]
-    },
-    {
-        "id": "rebellious_kit",
-        "thoughts": [
-            "Refuses to listen to {PRONOUN/m_c/poss} parents lectures on StarClan",
-			"Is trying to sneak out of the camp",
-			"Is complaining about why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to learn the Warrior Code",
-			"Doesn't want to listen to r_c lecture {PRONOUN/m_c/object}",
-			"Is wondering if StarClan is even real",
-			"Refuses to eat the prey given to {PRONOUN/m_c/object}",
-			"Is badgering r_c on the details of the Warrior Code",
-			"Wishes {PRONOUN/m_c/subject} could do what {PRONOUN/m_c/subject} wanted",
-			"Is refusing to take {PRONOUN/m_c/poss} herbs"
-        ],
-        "main_trait_constraint": [
-            "rebellious"
-        ]
-    },	
-    {
-        "id": "stubborn_kit",
-        "thoughts": [
-            "Refuses to listen to {PRONOUN/m_c/poss} parents lectures on StarClan",
-			"Is trying to sneak out of the camp",
-			"Is complaining about why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to learn the Warrior Code",
-			"Doesn't want to listen to r_c lecture {PRONOUN/m_c/object}",
-			"Refuses to eat the prey given to {PRONOUN/m_c/object}",
-			"Wishes {PRONOUN/m_c/subject} could do what {PRONOUN/m_c/subject} wanted",
-			"Is whining about been groomed",
-			"Doesn't want to play with the other kittens"
-        ],
-        "main_trait_constraint": [
-            "stubborn"
-        ]
-    },
-    {
         "id": "shy_kit",
         "thoughts": [
             "Is feeling alone",
@@ -431,7 +421,7 @@
         "thoughts": [
             "Wakes r_c in the middle of the night to ask a question about snails",
             "Wakes up early to say hello to the dawn patrol",
-            "Follows r_c around so closely that {PRONOUN/m_c/subject} step on {PRONOUN/r_c/poss} paw",
+            "Follows r_c around so closely that {PRONOUN/m_c/subject} {VERB/m_c/step/steps} on {PRONOUN/r_c/poss} paw",
             "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally {VERB/r_c/say/says} hello back",
             "Is showing everycat the bug {PRONOUN/m_c/subject} caught earlier",
             "Is in r_c's way... again",
@@ -456,7 +446,8 @@
             "Wakes r_c from a perfectly good nap with {PRONOUN/m_c/poss} incessant mewling",
             "Doesn't know why everycat wants to be quiet all the time. No fun!",
             "Wakes up early to sing with the birds",
-            "Is practicing bird calls"
+            "Is practicing bird calls",
+			"Yowls just to hear {PRONOUN/m_c/self}"
         ],
         "main_trait_constraint": [
             "noisy"
@@ -532,6 +523,78 @@
         ],
         "main_trait_constraint": [
             "bossy"
+        ]
+    },
+    {
+        "id": "snuggly_kit",
+        "thoughts": [
+            "Is snuggling up to {PRONOUN/m_c/poss} parents bellies",
+			"Is looking up at r_c hoping that {PRONOUN/r_c/subject} will snuggle with {PRONOUN/m_c/object}",
+			"Is snuggled up with the elders in the den",
+			"Failing at playing hide and seek because {PRONOUN/m_c/subject} {VERB/m_c/purr/purrs} too loud",
+			"Purrs really loudly at the sight of r_c",
+			"Snuggling with the medicine cat",
+			"Really, really wants to snuggle"
+        ],
+        "main_trait_constraint": [
+            "snuggly"
+        ]
+    },
+    {
+        "id": "defiant_kit",
+        "thoughts": [
+            "Refuses to listen to {PRONOUN/m_c/poss} parents lectures on StarClan",
+			"Is trying to sneak out of the camp",
+			"Is complaining about why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to learn the Warrior Code",
+			"Doesn't want to listen to r_c lecture {PRONOUN/m_c/object}",
+			"Is wondering if StarClan is even real",
+			"Refuses to eat the prey given to {PRONOUN/m_c/object}",
+			"Is badgering r_c on the details of the Warrior Code",
+			"Wishes {PRONOUN/m_c/subject} could do what {PRONOUN/m_c/subject} wanted",
+			"Is refusing to take {PRONOUN/m_c/poss} herbs",
+			"Is whining about been groomed",
+			"Doesn't want to play with the other kittens"			
+        ],
+        "main_trait_constraint": [
+            "defiant"
+        ]
+    },
+    {
+        "id": "curious_kit",
+        "thoughts": [
+            "Is asking questions about everything",
+			"Snuck out of camp to go exploring in the territory",
+			"Is spending more time asking about {PRONOUN/m_c/poss} food than eating it",
+			"Is asking why the sky is blue",
+			"Is asking why the grass is green",
+			"Is asking what the sun is for",
+			"Is asking why birds fly",
+			"Is asking how kits are made",
+			"Is asking uncomfortable questions",
+			"Tried to sneak into the Leader's Den",
+			"Is in the Medicine Den investigating all the herbs",
+			"Is asking what the red berries are used for",
+			"Is wondering about the other clans",
+			"Is wondering what kittypets do all day",
+			"Is curious about the purpose of Twolegs",
+			"Is asking about StarClan",
+			"Keeps asking 'but why?'",
+			"Keeps saying 'and?'"
+        ],
+        "main_trait_constraint": [
+            "curious"
+        ]
+    },
+    {
+        "id": "odd_kit",
+        "thoughts": [
+            "Collects the bones of {PRONOUN/m_c/poss} prey",
+			"Is staring at the air",
+			"Is talking to {PRONOUN/m_c/self}",
+			"Rolls rather than walks"
+        ],
+        "main_trait_constraint": [
+            "odd"
         ]
     },
     {

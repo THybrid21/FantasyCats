@@ -25,7 +25,7 @@
 		  "Is telling some rogues about c_n",
 		  "Is watching some kittypets and scoffing",
 		  "Doesn't believe that this is a fair punishment",
-		  "Wonders what r_c is doing",
+		  "Wonders what everyone in c_n is doing",
 		  "Wonders if anyone will care when {PRONOUN/m_c/subject} {VERB/m_c/die/dies}",
 		  "Wonders if {PRONOUN/m_c/subject} will actually go to any kind of afterlife",
 		  "Imagines that {PRONOUN/m_c/subject} might be wandering the world forever"
@@ -35,6 +35,28 @@
 		],
 		"main_trait_constraint": [
 		  "skeptic"
+		]
+	},
+	{
+		"id": "zealous_exiled",
+		"thoughts": [
+		  "Wonders if StarClan even cares about {PRONOUN/m_c/object} anymore",
+		  "Is trying to understand what crime {PRONOUN/m_c/subject} even comit",
+		  "Curses StarClan before taking a day to pray, pleading forgiveness",
+		  "Struggles to hold onto {PRONOUN/m_c/poss} zeal",
+		  "Talked to some loners about c_n today",
+		  "Wishes that c_n would take {PRONOUN/m_c/object} back",
+		  "Goes to sleep hungry",
+		  "Goes to sleep exhausted",
+		  "Was chased away by a pack of loners",
+		  "Was chased away by another clan",
+		  "Thinks StarClan has abandoned {PRONOUN/m_c/object}"
+		],
+		"main_status_constraint": [
+		  "exiled"
+		],
+		"main_trait_constraint": [
+		  "zealous"
 		]
 	}
 ]

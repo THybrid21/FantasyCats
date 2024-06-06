@@ -406,8 +406,10 @@
   },
 	"skeptic": {
     "body": [
-		"Despite {PRONOUN/r_c/poss}'s known skepticsm, r_c can't help but find {PRONOUN/r_c/self} hoping that Starclan is real and that m_c has made it there safely. Whispering words that {PRONOUN/r_c/subject} {VERB/r_c/hope/hopes} m_c can hear into stiff fur."
-
+		"Despite {PRONOUN/r_c/poss}'s known skepticsm, r_c can't help but find {PRONOUN/r_c/self} hoping that Starclan is real and that m_c has made it there safely. Whispering words that {PRONOUN/r_c/subject} {VERB/r_c/hope/hopes} m_c can hear into stiff fur.",
+		"It's all that r_c can think about, would m_c still be here if {PRONOUN/r_c/subject} had been a better cat. More zealous, more trusting in StarClan?",
+		"r_c stares overwhlemed at m_c's stiff body, barely able to step forwards. It's only when {PRONOUN/r_c/poss} nose touches m_c's stuff cold fur the horrible truth settles in.",
+		"When r_c sees m_c's body so still, empty of the life that so filled {PRONOUN/m_c/poss} eyes and heart-- r_c feels like the world is just too cruel."
     ],
     "no_body": [
 		"No, m_c just can't be dead. r_c refuses to accept it. Any moment now m_c would come prancing into the camp to light up the world, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} sure of it. Any... moment... now.",
@@ -434,10 +436,11 @@
   },
   "dreamer": {
     "body": [
-
+		"Even with r_c's sureity in the truth of StarClan and Silverpelt, {PRONOUN/r_c/subject} {VERB/r_c/struggle/struggles} to keep {PRONOUN/r_c/poss} voice even talking about all the wonderful times spent with m_c. The world feels a little less, real.",
+		"It's a wonder that r_c can even manage to make it to m_c's vigil. Eyes glassy and staring off into the distance as {PRONOUN/r_c/subject} {VERB/r_c/press/presses} {PRONOUN/r_c/self} to m_c's cold side. Maybe if {PRONOUN/r_c/subject} {VERB/r_c/linger/lingers} long enough-- m_c may come to {PRONOUN/r_c/poss} dreams that night."
     ],
     "no_body": [
-
+		"r_c wanders almost lost around the camp in the days after m_c's vigil. Looking into all the shadows and just hoping to catch a glimpse of {PRONOUN/m_c/object}."
     ]
   },
   "wandering": {
@@ -454,6 +457,42 @@
     ],
     "no_body": [
 
+    ]
+  },
+  "curious": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "defiant": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "odd": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "zealous": {
+    "body": [
+		"r_c stands over m_c, repeating prayers upon prayers to StarClan over {PRONOUN/m_c/poss} body in the hopes it makes the journey that much easier. In the hopes it makes the grief lighter.",
+		"Fussing with m_c's fur r_c grooms {PRONOUN/m_c/object} for one final time. It's hard to pull away but {PRONOUN/r_c/subject}{VERB/m_c/'re/'s} secure in the certainty that StarClan will accept m_c openly.",
+		"r_c doesn't often allow {PRONOUN/r_c/self} the vulnerability of breaking down, but seeing m_c's body still in the clearing breaks {PRONOUN/r_c/object}. Wailing r_c curls around m_c pleading with StarClan to take {PRONOUN/r_c/object} instead.",
+		"With a heart full of heavy grief r_c steps up to share tounges with m_c for the very last time. Prayers to StarClan fall in whispers from {PRONOUN/r_c/object} as {PRONOUN/r_c/subject} {VERB/m_c/step/steps} away to let the next cat mourn."
+    ],
+    "no_body": [
+		"Without m_c's body r_c listlessly wanders the camp, repeating prayers upon prayers to StarClan, desperately hoping that they will reach m_c.",
+		"Without m_c's body r_c worries for {PRONOUN/m_c/poss} safety on the travel to StarClan, fearing that it would be a hard, impossible journey."
     ]
   }
 }

@@ -7,7 +7,10 @@
             "Snoozes peacefully",
             "Tries to open {PRONOUN/m_c/poss} eyes, but it's all blurry",
 			"Is confused where {PRONOUN/m_c/subject} {VERB/m_c/are/is}",
-            "Head empty"
+            "Head empty",
+			"Kneads {PRONOUN/m_c/poss} paws in the air",
+			"Rolls slightly in the nest",
+			"Wriggles in search for milk"
         ],
         "main_age_constraint": [
             "newborn"

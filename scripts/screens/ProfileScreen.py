@@ -284,16 +284,16 @@ class ProfileScreen(Screens):
                 # if the cat is cis (gender & gender align are the same) then set them to trans
                 # cis males -> trans female first
                 elif self.the_cat.gender == "male" and self.the_cat.genderalign == 'male':
-                    self.the_cat.genderalign = random.choice(["trans female", "demigirl"])
+                    self.the_cat.genderalign = choice(["trans female", "demigirl"])
                 # cis females -> trans male
                 elif self.the_cat.gender == "female" and self.the_cat.genderalign == 'female':
-                    self.the_cat.genderalign = random.choice(["trans male", "demiboy"])
+                    self.the_cat.genderalign = choice(["trans male", "demiboy"])
                 # intergender cats defining a gender :P
                 elif self.the_cat.gender == "intersex" and self.the_cat.genderalign == 'intergender':
-                    self.the_cat.genderalign = random.choice(["trans male", "demiboy", "trans female", "demigirl"])
+                    self.the_cat.genderalign = choice(["trans male", "demiboy", "trans female", "demigirl"])
                 # if the cat is trans then set them to nonbinary
                 elif self.the_cat.genderalign in ["trans female", "trans male", "demiboy", "demigirl"]:
-                    self.the_cat.genderalign = random.choice(["nonbinary", "neutrois", "agender", "genderqueer", "demienby",
+                    self.the_cat.genderalign = choice(["nonbinary", "neutrois", "agender", "genderqueer", "demienby",
                                                                 "genderfluid", "bigender", "pangender", "questioning"])
                 #pronoun handler
                 if self.the_cat.genderalign in ["female", "trans female", "demigirl"]:
@@ -700,9 +700,15 @@ class ProfileScreen(Screens):
         output += "\n"
 
         # PELT TYPE
-        output += 'pelt: ' + the_cat.pelt.name.lower()
+        output += 'pelt: ' + the_cat.pelt.colour.lower() + ' ' + the_cat.pelt.name.lower()
         # NEWLINE ----------
         output += "\n"
+
+        #tortie info
+        if the_cat.pelt.name in ["Tortie", "Calico"]:
+            output += 'tortie patch: ' + the_cat.pelt.pattern.lower() + ' in ' + the_cat.pelt.tortiecolour.lower()
+            # NEWLINE ----------
+            output += "\n"
 
         # PELT LENGTH
         output += 'fur length: ' + the_cat.pelt.length
@@ -914,57 +920,161 @@ class ProfileScreen(Screens):
                 output += "\n"
 
         if the_cat.is_disabled():
+            already_disabled = False
             for condition in the_cat.permanent_condition:
                 if the_cat.permanent_condition[condition]['born_with'] is True and \
                         the_cat.permanent_condition[condition]["moons_until"] != -2:
                     continue
-                elif "paralyzed" in the_cat.permanent_condition:
-                    output += 'paralyzed'
-                elif "declawed" in the_cat.permanent_condition:
-                    output += 'declawed'
-                elif "sphynxism"  in the_cat.permanent_condition:
-                    continue
-                elif "albinism" in the_cat.permanent_condition:
-                    continue
-                elif "melanism" in the_cat.permanent_condition:
-                    continue
-                else:
+                if the_cat.permanent_condition in ["sphynxism", "albinism", "melanism"]:
+                    continue  
+            special_conditions = ["paralyzed", "declawed"]
+            all_special = True
+            for condition in the_cat.permanent_condition:
+                if condition not in special_conditions:
+                    all_special = False
+                    break
+                if not all_special:
                     output += 'has a permanent condition'
+                    already_disabled = True
 
+                if "paralyzed" in the_cat.permanent_condition:
+                    if already_disabled:
+                        output += ', paralyzed'
+                    else:
+                        output += 'paralyzed'
+                        already_disabled = True
+                if "declawed" in the_cat.permanent_condition:
+                    if already_disabled:
+                        output += ', declawed'
+                    else:
+                        output += 'declawed'
                 # NEWLINE ----------
                 output += "\n"
                 break
 
+        already_sick_injured = False
         if the_cat.is_injured():
-            if "recovering from birth" in the_cat.injuries:
-                output += 'recovering from birth!'
-            elif "pregnant" in the_cat.injuries:
-                output += 'pregnant!'
-            elif "kittenspace" in the_cat.injuries:
-                output += 'in kittenspace'
-            elif "otherspace" in the_cat.injuries:
-                output += 'in safe-space'
-            elif "overstimulation" in the_cat.injuries:
-                output += 'overstimulated'
-            else:
+            special_conditions = [
+                "recovering from birth", "pregnant", "kittenspace", "otherspace", 
+                "overtimulation", "understimulation"
+            ]
+            all_special = True
+            for condition in the_cat.injuries:
+                if condition not in special_conditions:
+                    all_special = False
+                if not all_special:
+                    break
+
+            if not all_special:
                 output += "injured!"
+                already_sick_injured = True
+
+            if "recovering from birth" in the_cat.injuries:
+                if "turmoiled litter" in the_cat.illnesses:
+                    if already_sick_injured:
+                        output += '\nrecovering from a turmoiled birth!'
+                    else:
+                        output += 'recovering from a turmoiled birth!'                    
+                else:
+                    if already_sick_injured:
+                        output += '\nrecovering from birth!'
+                    else:
+                        output += 'recovering from birth!'
+                        already_sick_injured = True
+            if "pregnant" in the_cat.injuries:
+                if already_sick_injured:
+                    output += '\npregnant!'
+                else:
+                    output += 'pregnant!'                    
+                    already_sick_injured = True
+            if the_cat.injuries in ["kittenspace", "otherspace"]:
+                if already_sick_injured:
+                    output += '\nin safe-space'
+                else:
+                    output += 'in safe-space'                    
+                    already_sick_injured = True
+            if "overstimulation" in the_cat.injuries:
+                if already_sick_injured:
+                    output += '\noverstimulated'
+                else:
+                    output += 'overstimulated'                    
+                    already_sick_injured = True
+            if "understimulation" in the_cat.injuries:
+                if already_sick_injured:
+                    output += '\nunderstimulated'
+                else:
+                    output += 'understimulated'                    
+                    already_sick_injured = True
+                
             output += "\n"
             
-        elif the_cat.is_ill():
+        if the_cat.is_ill():
+            special_conditions = [
+                "grief stricken", "fleas", "malnourished", "starving", "ticks", "lethargy", "seasonal lethargy", 
+                "nonverbal", "hyperfixation", "stimming", "burn out", "indecision", "impulsivity", "zoomies", "turmoiled litter"
+            ]
+            all_special = True
+            for condition in the_cat.illnesses:
+                if condition not in special_conditions:
+                    all_special = False
+                if not all_special:
+                    break
+
+            if not all_special:
+                if already_sick_injured:
+                    output += '\nsick!'
+                else:
+                    output += 'sick!'
+                    already_sick_injured = True
+
+            if "malnourished" in the_cat.illnesses:
+                if already_sick_injured:
+                    output += '\nmalnourished!'
+                else:
+                    output += 'malnourished!'
+                    already_sick_injured = True
+            if "starving" in the_cat.illnesses:
+                if already_sick_injured:
+                    # I don't think cats can be malnourished and starving at the same time, but jic
+                    if "malnourished!" in output:
+                        output = output.replace('malnourished!', 'starving!')
+                    else:
+                        output += '\nstarving!'
+                else:
+                    output += 'starving!'
+                    already_sick_injured = True
+
+
             if "grief stricken" in the_cat.illnesses:
-                output += 'grieving!'
-            elif "fleas" in the_cat.illnesses:
-                output += 'flea-ridden!'
-            elif "ticks" in the_cat.illnesses:
-                output += 'riddled with ticks!'            
-            elif the_cat.illnesses in ["lethargy", "seasonal lethargy"]:
-                output += 'experiencing lethargy'
-            elif "indecision" in the_cat.illnesses:
-                output += 'indecisive'
-            elif "turmoiled litter" in the_cat.illnesses:
-                output += 'turmoiled!'      
-            else:
-                output += 'sick!'
+                if already_sick_injured:
+                    output += '\ngrieving!'
+                else:
+                    output += 'grieving!'
+                    already_sick_injured = True
+            if "fleas" in the_cat.illnesses:
+                if already_sick_injured:
+                    output += '\nflea-ridden!'
+                else:
+                    output += 'flea-ridden!'
+                    already_sick_injured = True
+            if "ticks" in the_cat.illnesses:
+                if already_sick_injured:
+                    output += '\nriddled with ticks!'
+                else:
+                    output += 'riddled with ticks!'
+                    already_sick_injured = True
+            if the_cat.illnesses in ["lethargy", "seasonal lethargy", "burn out"]:
+                if already_sick_injured:
+                    output += '\nlethargic'
+                else:
+                    output += 'lethargic'
+                    already_sick_injured = True           
+            if "nonverbal" in the_cat.illnesses:
+                if already_sick_injured:
+                    output += '\nnonverbal'
+                else:
+                    output += 'nonverbal'
+                    already_sick_injured = True
 
         return output
 

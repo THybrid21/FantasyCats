@@ -49,6 +49,9 @@
         "biome":[
             "Plains"
         ],
+        "random_age_constraint": [
+            "newborn"
+        ],
         "random_living_status": [
             "starclan"
         ]
@@ -62,7 +65,8 @@
         "random_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+			"permaqueen apprentice"
         ],
         "random_living_status": [
             "starclan"
@@ -203,7 +207,8 @@
             "righteous",
             "loving",
             "compassionate",
-            "sincere"
+            "sincere",
+			"dreamer"
         ]
     },
     {
@@ -220,7 +225,8 @@
             "righteous",
             "loving",
             "compassionate",
-            "sincere"
+            "sincere",
+			"dreamer"
         ],
         "random_trait_constraint": [
             "bloodthirsty",
@@ -340,7 +346,7 @@
         ]
     },	
     {
-        "id": "dreamer_medicine_cat_apprentice",
+        "id": "dreamer_medicine_cat_app_to_mentor",
         "thoughts": [
 			"Is prancing around the medicine den while nobody's watching.",
 			"Zones out while {PRONOUN/m_c/poss} mentor lectures them about herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} already familiar with.",
@@ -357,6 +363,31 @@
         ],
         "relationship_constraint": [
             "app/mentor"
+        ]
+    },
+    {
+        "id": "zealous_medicine_cat_apprentice",
+        "thoughts": [
+			"Attends to r_c with dilligence",
+			"Is hoping that {PRONOUN/m_c/poss} medicine cat name will end in -feather or -wing",
+			"Is daydreaming about r_c been leader",
+			"Wonders what kind of legacy {PRONOUN/m_c/subject} will leave as a medicine cat.",
+			"Dreams of StarClan celebrating {PRONOUN/m_c/poss} raise to full Medicine Cat",
+			"Is so proud {PRONOUN/m_c/subject} {VERB/m_c/were/was} called to be a Medicine Cat",
+			"Tries to force a dream of StarClan to come",
+			"Is studying the Medicine Cat Code intently",
+			"Is reciting the origin of the Code",
+			"Is deeply invested in the history of the Clan",
+			"Is annoyed with r_c"
+        ],
+        "main_trait_constraint": [
+			"zealous"
+        ],
+        "random_status_constraint": [
+            "kitten",
+			"apprentice",
+			"warrior",
+			"deputy"
         ]
     },
 	{
@@ -376,7 +407,7 @@
 			"Is worrying about r_c",
 			"Is worrying that {PRONOUN/m_c/subject} {VERB/m_c/have/has} forgotten something while sorting the herbs",
 			"Keeps rolling in the catmint to try and calm down",
-			"Hopes that {PRONOUN/m_c/poss} medicine cat name will end in -wing",
+			"Hopes that {PRONOUN/m_c/poss} medicine cat name will end in -wing or -feather",
 			"Didn't hear r_c calling {PRONOUN/m_c/poss} name and was surprised when {PRONOUN/m_c/subject} looked up from the herbs"
         ],
         "perm_conditions": {
@@ -387,9 +418,11 @@
         "random_status_constraint": [
             "kitten",
             "apprentice",
+			"permaqueen apprentice",
             "medicine cat apprentice",
             "mediator apprentice",
             "warrior",
+			"permaqueen",
             "medicine cat",
             "mediator",
             "deputy",
@@ -401,7 +434,7 @@
         ]
 	}, 	
     {
-        "id": "starwalker_medicine_cat_apprentice_den",
+        "id": "starwalker_medicine_cat_app_den",
         "thoughts": [
 			"Is prancing around the medicine den while nobody's watching",
 			"Zones out while {PRONOUN/m_c/poss} mentor lectures them about herbs {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} already familiar with.",
@@ -447,9 +480,11 @@
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
+			"permaqueen apprentice",
             "mediator apprentice",
             "warrior",
             "medicine cat",
+			"permaqueen",
             "mediator",
             "deputy",
             "leader",
@@ -462,11 +497,15 @@
 	{
         "id": "anxious_medicine_cat_apprentice",
         "thoughts": [
-            "Is smelling some lavender to help {PRONOUN/m_c/object} stay calm",
-            "Is smelling some mint to help {PRONOUN/m_c/object} stay calm",
+            "Is smelling some calming herbs to help {PRONOUN/m_c/object} stay calm",
             "Finds the scents of the medicine den calming",
-            "Is telling r_c about how much {PRONOUN/m_c/subject} like the smell of lavender",
-            "Is telling r_c about how much {PRONOUN/m_c/subject} like the smell of mint"
+            "Is telling r_c about how much {PRONOUN/m_c/subject} like the smell of the herbs",
+			"Is experiencing self-doubt",
+			"Is freaking out over a shadow",
+			"Threw out some herbs because of 'bad vibes'",
+			"Is carefully inspecting the den for anything out of place",
+			"Is fussing over r_c's last injury",
+			"Is worrying about the future"
         ],
         "perm_conditions": {
             "m_c": [
@@ -483,24 +522,6 @@
             "deputy",
             "leader",
             "elder"
-        ],
-        "random_living_status": [
-            "living"
-        ]
-	},
-	{
-        "id": "anxious_medicine_cat_apprentice_to_medicine_cat",
-        "thoughts": [
-            "Asks r_c if {PRONOUN/m_c/subject} can collect more lavender the next time they go out foraging together",
-            "Asks r_c if {PRONOUN/m_c/subject} can collect more mint the next time they go out foraging together"
-        ],
-        "perm_conditions": {
-            "m_c": [
-                "anxiety"
-            ]
-        },
-        "random_status_constraint": [
-            "medicine cat"
         ],
         "random_living_status": [
             "living"

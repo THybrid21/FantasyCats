@@ -525,7 +525,7 @@ class RoleScreen(Screens):
                      f"the Clan. Rather, mediators are charged with handling disagreements between " \
                      f"Clanmates and disputes between Clans. Some mediators train as apprentices to serve their Clan, " \
                      f"while others may choose to become mediators later in life. "
-        elif self.the_cat.status == "permqueen":
+        elif self.the_cat.status == "permaqueen":
             output = f"{self.the_cat.name} is a <b>permaqueen</b>. Permanent queens dedicate their lives to " \
                     f"caring for and nurturing the kits of the Clan, ensuring their safety and early education. " \
                     f"While most queens return to their warrior duties once their kits grow, permanent queens remain " \

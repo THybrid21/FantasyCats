@@ -1,52 +1,56 @@
 {
     "Newleaf":{
-        "fleas": 2,
+        "fleas": 6,
 		"running nose": 2,
-        "stomachache": 100,
+        "stomachache": 1,
 		"anxiety attack": 3,
-		"ticks": 4,
+		"ticks": 9,
 		"zoomies": 3,
-		"sleeplessness": 10,
+		"sleeplessness": 2,
 		"burn out": 3,
 		"ear buzzing": 5,
-		"nest wetting": 10
+		"nest wetting": 3,
+		"stimming": 4
     },
     "Greenleaf":{
         "fleas": 2,
-        "stomachache":100,
+        "stomachache":1,
         "heat exhaustion":3,
         "heat stroke":1,		
 		"anxiety attack": 3,
 		"ticks": 3,
-		"sleeplessness": 10,
+		"sleeplessness": 2,
 		"ear buzzing": 5,
-		"nest wetting": 10	
+		"nest wetting": 3,
+		"stimming": 2
     },
     "Leaf-fall":{
-        "fleas": 50,
-		"stomachache":100,
+        "fleas": 5,
+		"stomachache":1,
         "greencough": 1,
         "kittencough": 4,
         "running nose": 3,
 		"anxiety attack": 3,
-		"ticks": 50,
-		"seasonal lethargy": 50,
-		"sleeplessness": 10,
+		"ticks": 5,
+		"seasonal lethargy": 5,
+		"sleeplessness": 2,
 		"ear buzzing": 5,
-		"nest wetting": 20
+		"nest wetting": 2,
+		"stimming": 5
     },
     "Leaf-bare":{
-        "fleas": 90,
-		"stomachache":100,
+        "fleas": 4,
+		"stomachache":1,
         "greencough": 3,
         "running nose": 1,
         "kittencough": 4,
         "yellowcough": 3,
 		"anxiety attack": 3,
-		"ticks": 90,
-		"sleeplessness": 10,
+		"ticks": 4,
+		"sleeplessness": 1,
 		"burn out": 3,
 		"ear buzzing": 5,
-		"nest wetting": 20
+		"nest wetting": 2,
+		"stimming": 5
     }
 }

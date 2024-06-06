@@ -125,7 +125,7 @@ class Patrol():
         for cat in patrol_cats:
             self.patrol_cats.append(cat)
             
-            if cat.status == 'apprentice' or cat.status == 'medicine cat apprentice' or cat.status == 'permaqueen apprentic':
+            if cat.status == 'apprentice' or cat.status == 'medicine cat apprentice' or cat.status == 'permaqueen apprentice':
                 self.patrol_apprentices.append(cat)
             
             self.patrol_status_list.append(cat.status)
@@ -147,8 +147,14 @@ class Patrol():
                     self.patrol_statuses["all apprentices"] += 1
                 else:
                     self.patrol_statuses["all apprentices"] = 1
+
+            if cat.status in ("permaqueen", "permaqueen apprentice"):
+                if "permaqueen" in self.patrol_statuses:
+                    self.patrol_statuses["permaqueen"] += 1
+                else:
+                    self.patrol_statuses["permaqueen"] = 1
                     
-            if cat.status in ("warrior", "deputy", "leader", "permaqueen"):
+            if cat.status in ("warrior", "deputy", "leader"):
                 if "normal adult" in self.patrol_statuses:
                     self.patrol_statuses["normal adult"] += 1
                 else:
@@ -560,6 +566,8 @@ class Patrol():
         special_date = get_special_date()
         # This make sure general only gets hunting, border, or training patrols
         # chose fix type will make it not depending on the content amount
+        if patrol_type == "training":
+            patrol_type = "training"
         if patrol_type == "general":
             patrol_type = random.choice(["hunting", "border", "training"])
 

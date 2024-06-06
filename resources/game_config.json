@@ -224,6 +224,7 @@
 		"mediator_app_chance": 50,
 		"base_medicine_app_chance": 25,
 		"permaqueen_app_chance": 25,
+		"permaqueen_apps_no_mentor": true,
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
@@ -231,7 +232,12 @@
 		"become_permaqueen_chances": {
 			"warrior": 5000,
 			"elder": 1000
-		}		
+		},
+		"comment": [
+			"Both mediator chance and permaqueen chance are rolled every moon.",
+			"While mediators are behind a setting, permaqueens will only happen if you manually set a cat to one first.",
+			"Of course, permaqueen apprentices can happen without a mentor by default so mind that setting."
+		]
 	},
 	"lost_cat": {
 		"rejoin_chance": 20

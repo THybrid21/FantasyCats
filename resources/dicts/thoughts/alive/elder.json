@@ -56,6 +56,21 @@
         ]
     },
     {
+        "id": "zealous_senior_elder",
+        "thoughts": [
+            "Hopes that StarClan won't forget how dedicated {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been",
+			"Is frustrated by {PRONOUN/m_c/poss} incapabilities",
+			"Recites prayers to StarClan",
+			"Is looking forwards to been in StarClan"
+        ],
+        "main_age_constraint": [
+            "senior"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ]
+    },
+    {
         "id": "elder_alive_younger_cats",
         "thoughts": [
             "Is giving advice to younger cats",

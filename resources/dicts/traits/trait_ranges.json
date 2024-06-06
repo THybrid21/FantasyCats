@@ -1,120 +1,60 @@
 {
     "normal_traits": {
-        "flamboyant": {
-            "lawfulness": [0, 12],
-            "sociability": [8, 16],
-            "aggression": [0, 16],
-            "stability": [4, 16]
-        },
-		"strict": {
-            "lawfulness": [8, 16],
-            "sociability": [0, 8],
-            "aggression": [4, 16],
-            "stability": [4, 16]
-        },
-		"playful": {
-            "lawfulness": [4, 16],
-            "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [4, 16]
-        },
-		"bloodthirsty": {
-            "lawfulness": [0, 4],
-            "sociability": [0, 8],
-            "aggression": [12, 16],
-            "stability": [0, 12]
-        },
-		"charismatic": {
-            "lawfulness": [8, 16],
-            "sociability": [8, 16],
-            "aggression": [0, 8],
+        "adventurous": {
+            "lawfulness": [0, 10],
+            "sociability": [2, 14],
+            "aggression": [2, 14],
             "stability": [8, 16]
         },
-		"daring": {
-            "lawfulness": [0, 8],
+		"ambitious": {
+            "lawfulness": [8, 16],
             "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [4, 16]
-        },
-		"dreamer": {
-            "lawfulness": [0, 16],
-            "sociability": [8, 16],
-            "aggression": [0, 8],
-            "stability": [0, 16]
-        },
-		"childish": {
-            "lawfulness": [0, 8],
-            "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [0, 8]
-        },
-		"adventurous": {
-            "lawfulness": [4, 16],
-            "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [0, 8]
-        },
-		"insecure": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 8],
             "aggression": [8, 16],
             "stability": [0, 8]
         },
 		"arrogant": {
-            "lawfulness": [12, 16],
-            "sociability": [4, 16],
-            "aggression": [8, 16],
-            "stability": [8, 16]
-        },
-		"lonesome": {
-            "lawfulness": [4, 16],
-            "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [0, 12]
-        },
-		"nervous": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [4, 16]
-        },
-		"shameless": {
-            "lawfulness": [4, 16],
-            "sociability": [0, 16],
-            "aggression": [8, 16],
-            "stability": [0, 12]
-        },
-		"responsible": {
-            "lawfulness": [8, 16],
+            "lawfulness": [4, 8],
             "sociability": [8, 16],
-            "aggression": [0, 12],
+            "aggression": [6, 12],
+            "stability": [0, 4]
+        },
+		"bloodthirsty": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [12, 16],
+            "stability": [0, 8]
+        },
+		"bold": {
+            "lawfulness": [0, 8],
+            "sociability": [8, 16],
+            "aggression": [8, 12],
             "stability": [8, 16]
         },
 		"calm": {
-            "lawfulness": [8, 16],
-            "sociability": [0, 12],
-            "aggression": [0, 8],
-            "stability": [12, 16]
+            "lawfulness": [10, 16],
+            "sociability": [6, 14],
+            "aggression": [0, 4],
+            "stability": [10, 16]
         },
-		"rebellious": {
+		"careful": {
+            "lawfulness": [8, 12],
+            "sociability": [4, 12],
+            "aggression": [0, 6],
+            "stability": [10, 16]
+        },
+		"charismatic": {
+            "lawfulness": [0, 12],
+            "sociability": [8, 16],
+            "aggression": [8, 16],
+            "stability": [0, 8]
+        },
+		"childish": {
             "lawfulness": [0, 8],
             "sociability": [8, 16],
             "aggression": [0, 8],
-            "stability": [0, 12]
+            "stability": [0, 8]
         },
-		"loving": {
-            "lawfulness": [8, 16],
-            "sociability": [12, 16],
-            "aggression": [0, 4],
-            "stability": [8, 16]
-        },
-		"strange": {
-            "lawfulness": [0, 12],
-            "sociability": [8, 16],
-            "aggression": [0, 12],
-            "stability": [8, 16]
-        },
-		"stubborn": {
+		"cold": {
             "lawfulness": [0, 8],
             "sociability": [0, 8],
             "aggression": [8, 16],
@@ -122,305 +62,347 @@
         },
 		"compassionate": {
             "lawfulness": [8, 16],
-            "sociability": [0, 12],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        },
+		"competitive": {
+            "lawfulness": [6, 12],
+            "sociability": [12, 16],
+            "aggression": [6, 12],
+            "stability": [8, 16]
+        },
+		"confident": {
+            "lawfulness": [8, 16],
+            "sociability": [8, 16],
+            "aggression": [8, 16],
+            "stability": [8, 16]
+        },
+		"cunning": {
+            "lawfulness": [0, 4],
+            "sociability": [8, 16],
+            "aggression": [0, 6],
+            "stability": [8, 16]
+        },
+		"daring": {
+            "lawfulness": [0, 8],
+            "sociability": [8, 16],
+            "aggression": [12, 16],
+            "stability": [8, 16]
+        },
+		"dreamer": {
+            "lawfulness": [6, 12],
+            "sociability": [0, 10],
+            "aggression": [2, 8],
+            "stability": [14, 16]
+        },
+		"dramatic": {
+            "lawfulness": [6, 10],
+            "sociability": [14, 16],
+            "aggression": [6, 10],
+            "stability": [2, 8]
+        },
+		"faithful": {
+            "lawfulness": [10, 16],
+            "sociability": [4, 12],
+            "aggression": [0, 6],
+            "stability": [2, 12]
+        },
+		"fierce": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [8, 12],
+            "stability": [0, 8]
+        },
+		"flamboyant": {
+            "lawfulness": [6, 10],
+            "sociability": [12, 16],
+            "aggression": [6, 12],
+            "stability": [10, 16]
+        },
+		"gloomy": {
+            "lawfulness": [6, 12],
+            "sociability": [0, 6],
+            "aggression": [0, 6],
+            "stability": [0, 8]
+        },
+		"grumpy": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 4],
+            "aggression": [6, 10],
+            "stability": [0, 8]
+        },
+		"inquisitive": {
+            "lawfulness": [0, 8],
+            "sociability": [4, 12],
+            "aggression": [8, 10],
+            "stability": [6, 10]
+        },
+		"insecure": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [0, 8]
+        },
+		"lonesome": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+		"loving": {
+            "lawfulness": [6, 14],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [4, 14]
+        },
+		"loyal": {
+            "lawfulness": [10, 16],
+            "sociability": [4, 16],
+            "aggression": [4, 14],
+            "stability": [6, 14]
+        },
+		"nervous": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        },
+		"oblivious": {
+            "lawfulness": [6, 12],
+            "sociability": [10, 16],
+            "aggression": [0, 6],
+            "stability": [6, 12]
+        },
+		"playful": {
+            "lawfulness": [0, 8],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+		"rebellious": {
+            "lawfulness": [0, 4],
+            "sociability": [0, 16],
+            "aggression": [6, 10],
+            "stability": [10, 16]
+        },
+		"responsible": {
+            "lawfulness": [8, 16],
+            "sociability": [6, 16],
+            "aggression": [0, 8],
+            "stability": [4, 10]
+        },
+		"righteous": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+		"shameless": {
+            "lawfulness": [0, 6],
+            "sociability": [4, 14],
+            "aggression": [6, 12],
+            "stability": [10, 16]
+        },
+		"sincere": {
+            "lawfulness": [12, 16],
+            "sociability": [6, 12],
+            "aggression": [0, 6],
+            "stability": [12, 16]
+        },
+		"skeptic": {
+            "lawfulness": [0, 8],
+            "sociability": [10, 14],
+            "aggression": [4, 12],
+            "stability": [10, 16]
+        },
+		"sneaky": {
+            "lawfulness": [0, 6],
+            "sociability": [0, 6],
+            "aggression": [6, 12],
+            "stability": [8, 16]
+        },
+		"strange": {
+            "lawfulness": [4, 10],
+            "sociability": [0, 8],
+            "aggression": [4, 10],
+            "stability": [4, 10]
+        },
+		"stubborn": {
+            "lawfulness": [4, 10],
+            "sociability": [0, 6],
+            "aggression": [10, 14],
+            "stability": [14, 16]
+        },
+		"strict": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [8, 16]
+        },
+		"thoughtful": {
+            "lawfulness": [8, 16],
+            "sociability": [8, 16],
             "aggression": [0, 8],
             "stability": [8, 16]
         },
 		"troublesome": {
             "lawfulness": [0, 8],
             "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [0, 12]
-        },
-		"ambitious": {
-            "lawfulness": [0, 12],
-            "sociability": [4, 12],
-            "aggression": [12, 16],
-            "stability": [4, 12]
-        },
-		"bold": {
-            "lawfulness": [0, 8],
-            "sociability": [4, 12],
-            "aggression": [0, 16],
-            "stability": [8, 16]
-        },
-		"careful": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 12],
-            "aggression": [4, 12],
-            "stability": [4, 12]
-        },
-		"cold": {
-            "lawfulness": [0, 8],
-            "sociability": [4, 8],
-            "aggression": [8, 16],
-            "stability": [8, 16]
-        },
-		"competitive": {
-            "lawfulness": [4, 12],
-            "sociability": [4, 16],
-            "aggression": [4, 12],
-            "stability": [4, 12]
-        },
-		"confident": {
-            "lawfulness": [4, 12],
-            "sociability": [0, 12],
-            "aggression": [4, 16],
-            "stability": [4, 16]
-        },
-		"cunning": {
-            "lawfulness": [0, 8],
-            "sociability": [4, 16],
-            "aggression": [4, 16],
-            "stability": [8, 16]
-        },
-		"dramatic": {
-            "lawfulness": [0, 8],
-            "sociability": [8, 16],
-            "aggression": [4, 8],
-            "stability": [8, 16]
-        },
-		"faithful": {
-            "lawfulness": [12, 16],
-            "sociability": [0, 12],
-            "aggression": [4, 12],
-            "stability": [0, 16]
-        },
-		"fierce": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 16],
-            "aggression": [12, 16],
-            "stability": [0, 8]
-        },
-		"grumpy": {
-            "lawfulness": [0, 16],
-            "sociability": [4, 12],
             "aggression": [0, 8],
             "stability": [0, 8]
-        },
-		"gloomy": {
-            "lawfulness": [0, 16],
-            "sociability": [0, 8],
-            "aggression": [4, 12],
-            "stability": [4, 16]
-        },
-		"loyal": {
-            "lawfulness": [8, 16],
-            "sociability": [8, 16],
-            "aggression": [4, 12],
-            "stability": [12, 16]
-        },
-		"oblivious": {
-            "lawfulness": [0, 4],
-            "sociability": [0, 12],
-            "aggression": [0, 8],
-            "stability": [4, 16]
-        },
-		"righteous": {
-            "lawfulness": [12, 16],
-            "sociability": [8, 16],
-            "aggression": [4, 12],
-            "stability": [4, 16]
-        },
-		"sincere": {
-            "lawfulness": [4, 12],
-            "sociability": [4, 16],
-            "aggression": [0, 12],
-            "stability": [4, 16]
-        },
-		"skeptic": {
-            "lawfulness": [0, 4],
-            "sociability": [8, 16],
-            "aggression": [4, 16],
-            "stability": [12, 16]
-        },
-		"sneaky": {
-            "lawfulness": [0, 8],
-            "sociability": [0, 8],
-            "aggression": [8, 16],
-            "stability": [4, 12]
-        },
-		"thoughtful": {
-            "lawfulness": [8, 16],
-            "sociability": [0, 8],
-            "aggression": [0, 16],
-            "stability": [4, 16]
         },
 		"vengeful": {
             "lawfulness": [0, 8],
-            "sociability": [8, 16],
-            "aggression": [12, 16],
-            "stability": [0, 8]
+            "sociability": [0, 8],
+            "aggression": [8, 14],
+            "stability": [0, 4]
         },
 		"wandering": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 12],
-            "aggression": [4, 12],
+            "lawfulness": [2, 10],
+            "sociability": [4, 10],
+            "aggression": [0, 4],
             "stability": [4, 12]
         },
 		"wise": {
-            "lawfulness": [12, 16],
-            "sociability": [4, 12],
-            "aggression": [4, 12],
-            "stability": [12, 16]
-        },	
-		"mimic": {
-			"lawfulness": [0, 2],
-			"sociability": [0, 2],
-			"aggression": [0, 2],
-			"stability": [0, 2]
-		}
+            "lawfulness": [8, 16],
+            "sociability": [4, 16],
+            "aggression": [0, 6],
+            "stability": [8, 16]
+        },
+		"zealous": {
+            "lawfulness": [14, 16],
+            "sociability": [0, 8],
+            "aggression": [10, 16],
+            "stability": [0, 6]
+        }
     },
     "kit_traits": {
-        "unruly": {
-            "lawfulness": [4, 12],
-            "sociability": [0, 16],
-            "aggression": [4, 12],
-            "stability": [4, 12]
-        },
         "attention-seeker": {
-            "lawfulness": [0, 12],
+            "lawfulness": [0, 8],
             "sociability": [8, 16],
-            "aggression": [0, 16],
-            "stability": [4, 16]
+            "aggression": [0, 8],
+            "stability": [0, 8]
         },
-		"bossy": {
+        "bossy": {
             "lawfulness": [8, 16],
-            "sociability": [0, 8],
-            "aggression": [4, 16],
-            "stability": [4, 16]
-        },
-		"bouncy": {
-            "lawfulness": [4, 16],
             "sociability": [8, 16],
             "aggression": [8, 16],
-            "stability": [4, 16]
+            "stability": [8, 16]
+        },
+		"bouncy": {
+            "lawfulness": [4, 12],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [4, 12]
         },
 		"bullying": {
-            "lawfulness": [0, 4],
+            "lawfulness": [0, 8],
             "sociability": [0, 8],
-            "aggression": [12, 16],
-            "stability": [0, 12]
+            "aggression": [8, 16],
+            "stability": [8, 16]
         },
 		"charming": {
-            "lawfulness": [8, 16],
+            "lawfulness": [0, 8],
             "sociability": [8, 16],
             "aggression": [0, 8],
             "stability": [8, 16]
+        },
+		"curious": {
+            "lawfulness": [4, 12],
+            "sociability": [4, 12],
+            "aggression": [8, 16],
+            "stability": [4, 12]
+        },
+		"daydreamer": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [8, 16]
+        },
+		"defiant": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [4, 12]
         },
 		"fearless": {
             "lawfulness": [0, 8],
             "sociability": [8, 16],
             "aggression": [8, 16],
-            "stability": [4, 16]
-        },
-		"daydreamer": {
-            "lawfulness": [0, 16],
-            "sociability": [8, 16],
-            "aggression": [0, 8],
-            "stability": [0, 16]
+            "stability": [0, 8]
         },
 		"impulsive": {
             "lawfulness": [0, 8],
-            "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [0, 8]
-        },
-		"inquisitive": {
-            "lawfulness": [4, 16],
-            "sociability": [8, 16],
-            "aggression": [8, 16],
-            "stability": [0, 8]
-        },
-		"self-conscious": {
-            "lawfulness": [0, 12],
             "sociability": [0, 8],
             "aggression": [8, 16],
             "stability": [0, 8]
         },
 		"know-it-all": {
-            "lawfulness": [12, 16],
-            "sociability": [4, 16],
+            "lawfulness": [8, 16],
+            "sociability": [8, 16],
             "aggression": [8, 16],
-            "stability": [8, 16]
-        },
-		"shy": {
-            "lawfulness": [4, 16],
-            "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [0, 12]
-        },
-		"nervous": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [4, 16]
+            "stability": [0, 8]
         },
 		"noisy": {
-            "lawfulness": [4, 16],
-            "sociability": [0, 16],
+            "lawfulness": [0, 8],
+            "sociability": [8, 16],
             "aggression": [8, 16],
-            "stability": [0, 12]
+            "stability": [8, 16]
         },
 		"polite": {
             "lawfulness": [8, 16],
             "sociability": [8, 16],
-            "aggression": [0, 12],
+            "aggression": [0, 8],
             "stability": [8, 16]
         },
 		"quiet": {
             "lawfulness": [8, 16],
-            "sociability": [0, 12],
+            "sociability": [0, 8],
             "aggression": [0, 8],
-            "stability": [12, 16]
-        },
-		"rebellious": {
-            "lawfulness": [0, 8],
-            "sociability": [8, 16],
-            "aggression": [0, 8],
-            "stability": [0, 12]
-        },
-		"snuggly": {
-            "lawfulness": [8, 16],
-            "sociability": [12, 16],
-            "aggression": [0, 4],
             "stability": [8, 16]
         },
-		"strange": {
-            "lawfulness": [0, 12],
-            "sociability": [8, 16],
-            "aggression": [0, 12],
-            "stability": [8, 16]
-        },
-        "skittish": {
-            "lawfulness": [0, 12],
-            "sociability": [0, 12],
+		"odd": {
+            "lawfulness": [4, 12],
+            "sociability": [0, 8],
             "aggression": [4, 12],
             "stability": [4, 12]
         },
-		"stubborn": {
-            "lawfulness": [0, 8],
+		"self-conscious": {
+            "lawfulness": [8, 16],
             "sociability": [0, 8],
             "aggression": [8, 16],
+            "stability": [0, 8]
+        },
+		"shy": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+		"skittish": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        },
+		"snuggly": {
+            "lawfulness": [4, 12],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
             "stability": [8, 16]
         },
 		"sweet": {
             "lawfulness": [8, 16],
-            "sociability": [0, 12],
+            "sociability": [8, 16],
             "aggression": [0, 8],
-            "stability": [8, 16]
+            "stability": [0, 8]
         },
-		"troublesome": {
+        "unruly": {
             "lawfulness": [0, 8],
             "sociability": [0, 8],
-            "aggression": [0, 12],
-            "stability": [0, 12]
-        },
-		"mimic": {
-			"lawfulness": [0, 2],
-			"sociability": [0, 2],
-			"aggression": [0, 2],
-			"stability": [0, 2]
-		}
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        }
     }
 }

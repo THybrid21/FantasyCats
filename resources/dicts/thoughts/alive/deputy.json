@@ -214,6 +214,57 @@
             "leader"
         ]
     },
+	{
+        "id": "skeptic_deputy",
+        "thoughts": [
+            "Is having a crisis about {PRONOUN/m_c/poss} position as deputy",
+			"Wonders how {PRONOUN/m_c/subject} will ever survive as leader",
+			"Doubts that {PRONOUN/m_c/subject} will recieve nine lives",
+			"Carefully choses cats for the daily patrols",
+			"Worries about the clan",
+			"Worries about what will happen when the leader dies",
+			"Curls up in the den and wonders if {PRONOUN/m_c/subject} will truly be able to fill the pawsteps of a leader",
+			"Follows the code as much as {PRONOUN/m_c/subject} can",
+			"Was forced to mediate between arguing clanmates",
+			"Is doubtful that anyone in c_n could look up to {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
+    },
+	{
+        "id": "zealous_deputy",
+        "thoughts": [
+            "Feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} where {PRONOUN/m_c/subject} {VERB/m_c/were/was} always meant to be",
+			"Is looking forwards to leading c_n in the future",
+			"Carefully assigns patrols to optimise Clan productivity",
+			"Struts around the camp making sure no one is breaking the code",
+			"Thinks that the sun shines for {PRONOUN/m_c/object}",
+			"Is praying to StarClan for this honor",
+			"Is thinking about c_n's previous deputies",
+			"Worries {PRONOUN/m_c/subject} {VERB/m_c/are/is} not following the code perfectly",
+			"Believes {PRONOUN/m_c/subject} know best",
+			"Is judging the Clan",
+			"Thinks that c_n could serve StarClan better once {PRONOUN/m_c/subject} {VERB/m_c/become/becomes} leader"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ]
+    },
+    {
+        "id": "zealous_deputy_leader",
+        "thoughts": [
+            "Refuses to go against r_c's decision-- still expresses frustration",
+			"Reminds r_c of the Leader's Word been the code",
+			"Is quietly frustrated with r_c"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ],
+        "random_status_constraint": [
+            "leader"
+        ]
+    },
     {
         "id": "teacher_deputy",
         "thoughts": [
@@ -318,24 +369,6 @@
         ],
         "random_status_constraint": [
             "apprentice"
-        ]
-    },
-	{
-        "id": "skeptic_deputy_to_gen",
-        "thoughts": [
-            "Is having a crisis about {PRONOUN/m_c/poss} position as deputy",
-			"Wonders how {PRONOUN/m_c/subject} will ever survive as leader",
-			"Doubts that {PRONOUN/m_c/subject} will recieve nine lives",
-			"Carefully choses cats for the daily patrols",
-			"Worries about the clan",
-			"Worries about what will happen when the leader dies",
-			"Curls up in the den and wonders if {PRONOUN/m_c/subject} will truly be able to fill the pawsteps of a leader",
-			"Follows the code as much as {PRONOUN/m_c/subject} can",
-			"Was forced to mediate between arguing clanmates",
-			"Is doubtful that anyone in c_n could look up to {PRONOUN/m_c/object}"
-        ],
-        "main_trait_constraint": [
-            "skeptic"
         ]
     },
 	{

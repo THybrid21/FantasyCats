@@ -430,5 +430,43 @@
     "no_body": [
 
     ]
+  },
+  "curious": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "defiant": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "odd": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "zealous": {
+    "body": [
+      "Silently r_c bows {PRONOUN/r_c/poss} head. m_c won't be missed by {PRONOUN/m_c/object} yet still {PRONOUN/r_c/subject} {VERB/r_c/offer/offers} respect.",
+	  "r_c approaches the clearing where m_c's body rests. With a glare in {PRONOUN/r_c/poss} eyes, r_c refuses to speak, m_c doesn't deserve {PRONOUN/r_c/poss} words.",
+	  "Honestly r_c doesn't see the point in mourning m_c, it's not like {PRONOUN/m_c/subject} {VERB/m_c/were/was} anycat so grand.",
+	  "r_c is quick to abandon the vigil for m_c, only showing up long enough to be polite in the eyes of StarClan.",
+	  "Surrounded by cats mourning m_c, r_c doesn't hesitate to declare how {PRONOUN/r_c/subject} {VERB/r_c/hope/hopes} that m_c wanders the Dark Forest where {PRONOUN/m_c/subject} {VERB/m_c/belong/belongs}."
+    ],
+    "no_body": [
+      "r_c refuses to stand vigil for a cat who {PRONOUN/r_c/subject} {VERB/m_c/have/has} nothing good to say about.",
+	  "Honestly r_c's glad that {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} have to see m_c's face one last time. {PRONOUN/r_c/subject/CAP} {VERB/r_c/doubt/doubts} that {PRONOUN/r_c/subject} could hold {PRONOUN/r_c/poss} tongue about how awful {PRONOUN/m_c/poss} truly was.",
+	  "r_c only shows up to m_c's vigil for long enough to be polite-- {PRONOUN/r_c/subject} {VERB/r_c/shed/sheds} no tears at the loss."
+      ]
   }
 }

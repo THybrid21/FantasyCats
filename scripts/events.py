@@ -455,19 +455,21 @@ class Events:
                         cat.ID))
                 cat.status_change("mediator")
 
-    def queen_events(self, cat):
-        """ Check for queen events """
+    def permaqueen_events(self, cat):
+        """ Check for permaqueen events """
                     
+        permaqueen_list = list(filter(lambda x: x.status == "permaqueen" and not x.dead and not x.outside, Cat.all_cats_list))
+        if permaqueen_list:
         # Note: These chances are large since it triggers every moon.
-        # Checking every moon has the effect giving older cats more chances to become a mediator
-        _ = game.config["roles"]["become_permaqueen_chances"]
-        if cat.status in _ and not int(random.random() * _[cat.status]):
-            game.cur_events_list.append(
-                Single_Event(
-                    f"{cat.name} had chosen to use their skills and experience to help nuture the "
-                    f"Clan's young. A meeting is called, and they "
-                    f"become the Clan's newest permaqueen. ", "ceremony", cat.ID))
-            cat.status_change("permaqueen")
+        # Checking every moon has the effect giving older cats more chances to become a permaqueen but it should only trigger if there is already a permaqueen in your save
+            _ = game.config["roles"]["become_permaqueen_chances"]
+            if cat.status in _ and not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        f"{cat.name} had chosen to use their skills and experience to help nuture the "
+                        f"Clan's young. A meeting is called, and they "
+                        f"become the Clan's newest permaqueen. ", "ceremony", cat.ID))
+                cat.status_change("permaqueen")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""
@@ -1512,8 +1514,7 @@ class Events:
                         chance = int(chance * 2.22)
 
                     if cat.personality.trait in [
-                        'altruistic', 'compassionate', 'empathetic',
-                        'wise', 'faithful', 'dreamer'
+                        'compassionate', 'wise', 'faithful', 'dreamer', 'zealous'
                     ]:
                         chance = int(chance / 1.3)
                     if cat.is_disabled():
@@ -1542,8 +1543,7 @@ class Events:
 
                         chance = game.config["roles"]["mediator_app_chance"]
                         if cat.personality.trait in [
-                            'charismatic', 'empathetic', 'responsible',
-                            'wise', 'thoughtful'
+                            'charismatic', 'responsible', 'wise', 'thoughtful', 'loving'
                         ]:
                             chance = int(chance / 1.5)
                         if cat.is_disabled():
@@ -1572,8 +1572,7 @@ class Events:
 
                             chance = game.config["roles"]["permaqueen_app_chance"]
                             if cat.personality.trait in [
-                                'calm', 'compassionate', 'responsible',
-                                'strict', 'skeptic'
+                                'calm', 'compassionate', 'responsible', 'strict', 'skeptic'
                             ]:
                                 chance = int(chance / 1.5)
                             if cat.is_disabled():
@@ -1583,11 +1582,16 @@ class Events:
                                 chance = 1
 
                             # Anyone can choose to become a Permaqueen, even if there isn't already one in the clan.
-                            if not has_permaqueen_apprentice and not int(random.random() * chance):
-                                self.ceremony(cat, 'permaqueen apprentice')
-                                self.ceremony_accessory = True
-                                self.gain_accessories(cat)
-
+                            if game.config["roles"]["permaqueen_app_chance"] and not has_permaqueen_apprentice and \
+                                not int(random.random() * chance):
+                                    self.ceremony(cat, 'permaqueen apprentice')
+                                    self.ceremony_accessory = True
+                                    self.gain_accessories(cat)
+                            elif permaqueen_list and not has_permaqueen_apprentice and \
+                                not int(random.random() * chance):
+                                    self.ceremony(cat, 'permaqueen apprentice')
+                                    self.ceremony_accessory = True
+                                    self.gain_accessories(cat)
                             else:
                                 self.ceremony(cat, 'apprentice')
                                 self.ceremony_accessory = True

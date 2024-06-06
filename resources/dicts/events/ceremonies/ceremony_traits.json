@@ -650,5 +650,43 @@
 		"preparedness",
 		"pragmatism",
 		"planning skills"
-	]
+	],
+    "inquisitive": [
+        "enthusiasm",
+        "spirit",
+        "energy",
+        "honesty",
+        "bluntness",
+        "dignity",
+        "character",
+        "individuality",
+        "independence",
+        "perspective",
+        "insight",
+        "dedication",
+        "self-respect",
+        "candor",
+        "integrity",
+        "intelligence"
+    ],
+    "zealous": [
+        "loyalty",
+        "commitment",
+        "enterprise",
+        "thoughtfulness",
+        "insight",
+        "boldness",
+        "wit",
+        "dignity",
+        "devotion",
+        "compassion",
+        "justice",
+        "responsibility",
+        "consideration",
+        "integrity",
+        "grace",
+        "poise",
+		"zeal",
+		"belief in StarClan"
+    ]
 }

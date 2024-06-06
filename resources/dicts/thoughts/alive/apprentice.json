@@ -411,7 +411,7 @@
             "Is not allowed to leave camp without asking first"
         ],
         "main_trait_constraint": [
-            "childish"
+            "childish", "inquisitive"
         ]
     },
     { "id": "childish_apprentice_elder",
@@ -421,7 +421,7 @@
             "Is listening to r_c tell stories instead of cleaning out the den"
         ],
         "main_trait_constraint":[
-            "childish"
+            "childish", "inquisitive"
         ],
         "random_status_constraint":[
             "elder"
@@ -455,7 +455,7 @@
 			"Wonders if {PRONOUN/m_c/subject} could ever be as great as the other apprentices",
 			"Feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} the odd one out",
 			"Is wondering if any of the other apprentices actually like {PRONOUN/m_c/object}",
-			"Confessed to r_c {PRONOUN/m_c/subject} {VERB/m_c/didn't/don't} actually want to be a clan cat"
+			"Confessed to r_c {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} actually want to be a clan cat"
         ],
         "main_trait_constraint": [
             "skeptic"
@@ -463,7 +463,8 @@
         "random_status_constraint": [
             "apprentice",
 			"medicine cat apprentice",
-			"mediator apprentice"
+			"mediator apprentice",
+			"permaqueen apprentice"
         ]
     },	
     {
@@ -539,7 +540,7 @@
     {
         "id": "wandering_warrior_apprentice",
         "thoughts": [
-            "Was caught on the other side the clan's border",
+            "Was caught on the other side the clan's borders",
 			"Watches the stars and believes {PRONOUN/m_c/subject} could find {PRONOUN/m_c/poss} way home by {PRONOUN/m_c/object}",
 			"Wants to run away",
 			"Wonders what's beyond the horizon",
@@ -555,46 +556,66 @@
             "wandering"
         ]
     },
+    {
+        "id": "zealous_warrior_apprentice",
+        "thoughts": [
+            "Is diligently practicing for when {PRONOUN/m_c/subject} become a warrior",
+			"Gets up before everyone else in the den",
+			"Recites the Warrior Code automatically",
+			"Scolds anycat who is breaking the code",
+			"Longs to get a dream from StarClan",
+			"Believes {PRONOUN/m_c/subject} {VERB/m_c/are/is} destined for greatness",
+			"Refuses to even consider the life of a kittypet",
+			"Thinks that kittypets are the saddest kind of cat",
+			"Fully believes in the power c_n",
+			"Believes that c_n is the best clan",
+			"Tries to imagine {PRONOUN/m_c/self} anywhere else and fails",
+			"Imagines {PRONOUN/m_c/self} as leader"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ]
+    },
 	{
-	"id": "paralyzed_warrior_apprentice",
-	"thoughts": [
-			"Is eager to prove {PRONOUN/m_c/self} capable",
-			"Refuses to let anyone say {PRONOUN/m_c/subject} can't be a warrior",
-			"Is the fastest cat on two legs",
-			"Carefully judges whether {PRONOUN/m_c/subject} can do their tasks for the day",
-			"Is proudly standing among {PRONOUN/m_c/poss} clanmates",
-			"Wonders if {PRONOUN/m_c/subject} could become leader one day",
-			"Hopes {PRONOUN/m_c/subject} {VERB/m_c/are/is} an inspiration",
-			"Knows {PRONOUN/m_c/subject} {VERB/m_c/are/is} complete even without use of their hindlegs"
-	],
-	"perm_conditions": {
-	  "m_c": [
-		"paralyzed"
-	  ]
+		"id": "paralyzed_warrior_apprentice",
+		"thoughts": [
+				"Is eager to prove {PRONOUN/m_c/self} capable",
+				"Refuses to let anyone say {PRONOUN/m_c/subject} can't be a warrior",
+				"Is the fastest cat on two legs",
+				"Carefully judges whether {PRONOUN/m_c/subject} can do their tasks for the day",
+				"Is proudly standing among {PRONOUN/m_c/poss} clanmates",
+				"Wonders if {PRONOUN/m_c/subject} could become leader one day",
+				"Hopes {PRONOUN/m_c/subject} {VERB/m_c/are/is} an inspiration",
+				"Knows {PRONOUN/m_c/subject} {VERB/m_c/are/is} complete even without use of their hindlegs"
+		],
+		"perm_conditions": {
+		  "m_c": [
+			"paralyzed"
+		  ]
 	}
 	},
 	{
-	"id": "starwalker_warrior_apprentice",
-	"thoughts": [
-			"Is eager to prove {PRONOUN/m_c/self} capable",
-			"Weaves through {PRONOUN/m_c/poss} battle training like it's a dance",
-			"Is very wriggly today",
-			"It chattering at anyone who comes close to {PRONOUN/m_c/object}",
-			"Got distracted by some interesting bugs",
-			"Got distracted by some songbirds in the trees",
-			"Practices extra hard in the hopes to get ahead",
-			"Dreams that {PRONOUN/m_c/subject} might one day be leader",
-			"Wonders if twolegs can speak cat",
-			"Wonders why kittypets don't try to escape",
-			"Found a kittypet's bell and played with it most of the afternoon"
-	],
-	"perm_conditions": {
-	  "m_c": [
-		"starwalker",
-		"comet spirit"
-	  ]
-	}
-	},
+		"id": "starwalker_warrior_apprentice",
+		"thoughts": [
+				"Is eager to prove {PRONOUN/m_c/self} capable",
+				"Weaves through {PRONOUN/m_c/poss} battle training like it's a dance",
+				"Is very wriggly today",
+				"It chattering at anyone who comes close to {PRONOUN/m_c/object}",
+				"Got distracted by some interesting bugs",
+				"Got distracted by some songbirds in the trees",
+				"Practices extra hard in the hopes to get ahead",
+				"Dreams that {PRONOUN/m_c/subject} might one day be leader",
+				"Wonders if twolegs can speak cat",
+				"Wonders why kittypets don't try to escape",
+				"Found a kittypet's bell and played with it most of the afternoon"
+		],
+		"perm_conditions": {
+		  "m_c": [
+			"starwalker",
+			"comet spirit"
+		  ]
+		}
+		},
 	{
 		"id": "anxious_warrior_apprentice",
 		"thoughts": [

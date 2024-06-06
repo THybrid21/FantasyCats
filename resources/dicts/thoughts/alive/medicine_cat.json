@@ -1,5 +1,44 @@
 [
     {
+        "id": "med_cat_gen",
+        "thoughts": [
+            "Is looking for herbs",
+            "Is organizing the herb stores",
+            "Is drying some herbs",
+            "Is interpreting an omen",
+            "Is interpreting a prophecy",
+            "Hopes for a message from StarClan soon",
+            "Is feeling stressed taking care of the Clan",
+            "Is tending growing herbs",
+            "Is making new nests",
+            "Wishes {PRONOUN/m_c/subject} had an extra set of paws",
+            "Is reciting the names of herbs aloud",
+            "Was startled awake in the wee hours by a vivid dream",
+            "Is running low on mouse bile",
+            "Plans to go out gathering herbs today",
+            "Is looking forward to the half-moon meeting",
+            "Is struggling to remember all of the names of herbs",
+            "Is helping organize the herb stores",
+            "Made a mess of the herbs and is panicking",
+            "Has been hearing the voices of StarClan cats...",
+            "Has the foul taste of bitter herbs in {PRONOUN/m_c/poss} mouth",
+            "Is wondering if {PRONOUN/m_c/subject} could borrow some catmint from the other Clans",
+            "Is happy that {PRONOUN/m_c/subject} chose life as a medicine cat",
+            "Is proud of {PRONOUN/m_c/poss} ability to care for {PRONOUN/m_c/poss} Clanmates"
+        ]
+    },
+    {
+        "id": "med_cat_alive_apprentice",
+        "thoughts": [
+            "Is thinking about taking on a new apprentice",
+			"Has been watching r_c and wondering... would they be a good medicine cat"
+        ],
+        "random_status_constraint": [
+            "apprentice",
+            "kitten"
+        ]
+    },
+    {
         "id": "adventurous_medicine_cat",
         "thoughts": [
             "Heads out of Clan territories to look for new herbs",
@@ -341,7 +380,7 @@
         ]
     },
     {
-        "id": "skeptic_to_app_medicine_cat",
+        "id": "skeptic_medicine_cat_to_app",
         "thoughts": [
             "Scolds {PRONOUN/m_c/poss} apprentice for having {PRONOUN/m_c/poss} head in the clouds",
 			"Asks r_c to fetch {PRONOUN/m_c/object} extra herbs",
@@ -443,7 +482,82 @@
         "main_trait_constraint": [
             "stubborn"
         ]
-    },	
+    },		
+    {
+        "id": "inquisitive_medicine_cat",
+        "thoughts": [
+            "Is always open to learning new methods to help {PRONOUN/m_c/poss} Clanmates",
+			"Is testing a new remedy",
+			"Is open to hearing suggestions",
+			"Is curious to learn how other clan's Medicine Cats do their healing",
+			"Sometimes still feels like an apprentice"
+        ],
+        "main_trait_constraint": [
+            "inquisitive"
+        ]
+    },		
+    {
+        "id": "inquisitive_medicine_cat_to_app",
+        "thoughts": [
+            "Tells r_c about how learning never truly ends",
+			"Is working with r_c on learning a new splinting technique",
+			"Talks with r_c about the finer points of herbology" 
+        ],
+        "main_trait_constraint": [
+            "inquisitive"
+        ],
+        "random_status_constraint": [
+            "medicine cat apprentice"
+        ],
+        "relationship_constraint": [
+            "mentor/app"
+        ]	
+    },		
+    {
+        "id": "zealous_medicine_cat",
+        "thoughts": [
+            "Is hoping to recieve a prophecy soon",
+			"Is meditating on a recently seen prophecy",
+			"Thought {PRONOUN/m_c/subject} saw a sign from StarClan",
+			"Knows the Clan relies on {PRONOUN/m_c/object}",
+			"Believes deeply in StarClan",
+			"Believes {PRONOUN/m_c/subject} know the way"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ]
+    },		
+    {
+        "id": "zealous_medicine_cat_to_app",
+        "thoughts": [
+			"Has a long discussion with r_c about the nature of belief",
+			"Encourages r_c to think more about StarClan"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ],
+        "random_status_constraint": [
+            "medicine cat apprentice"
+        ],
+        "relationship_constraint": [
+            "mentor/app"
+        ]	
+    },		
+    {
+        "id": "zealous_med_cat_to_DF",
+        "thoughts": [
+			"Feels the weight of {PRONOUN/m_c/poss} failures pressing down",
+			"Is having dreams of a dark and shadowy forest",
+			"Thinks {PRONOUN/m_c/subject} saw r_c in the shadows",
+			"Is having a crisis of faith because of r_c"
+        ],
+        "main_trait_constraint": [
+            "zealous"
+        ],
+        "random_living_status": [
+            "darkforest"
+        ]
+    },
     {
         "id": "med_cat_dead_DF_gen",
         "thoughts": [
@@ -469,45 +583,6 @@
         ],
         "random_living_status": [
 			"unknownresidence"
-        ]
-    },
-    {
-        "id": "med_cat_gen",
-        "thoughts": [
-            "Is looking for herbs",
-            "Is organizing the herb stores",
-            "Is drying some herbs",
-            "Is interpreting an omen",
-            "Is interpreting a prophecy",
-            "Hopes for a message from StarClan soon",
-            "Is feeling stressed taking care of the Clan",
-            "Is tending growing herbs",
-            "Is making new nests",
-            "Wishes {PRONOUN/m_c/subject} had an extra set of paws",
-            "Is reciting the names of herbs aloud",
-            "Was startled awake in the wee hours by a vivid dream",
-            "Is running low on mouse bile",
-            "Plans to go out gathering herbs today",
-            "Is looking forward to the half-moon meeting",
-            "Is struggling to remember all of the names of herbs",
-            "Is helping organize the herb stores",
-            "Made a mess of the herbs and is panicking",
-            "Has been hearing the voices of StarClan cats...",
-            "Has the foul taste of bitter herbs in {PRONOUN/m_c/poss} mouth",
-            "Is wondering if {PRONOUN/m_c/subject} could borrow some catmint from the other Clans",
-            "Is happy that {PRONOUN/m_c/subject} chose life as a medicine cat",
-            "Is proud of {PRONOUN/m_c/poss} ability to care for {PRONOUN/m_c/poss} Clanmates"
-        ]
-    },
-    {
-        "id": "med_cat_alive_apprentice",
-        "thoughts": [
-            "Is thinking about taking on a new apprentice",
-			"Has been watching r_c and wondering... would they be a good medicine cat"
-        ],
-        "random_status_constraint": [
-            "apprentice",
-            "kitten"
         ]
     }
 ]

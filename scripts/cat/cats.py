@@ -365,7 +365,7 @@ class Cat():
                             self.pelt.eye_lazy = self.pelt.eye_colour2
                         else: 
                             self.pelt.eye_lazy = self.pelt.eye_colour
-                        if self.eye_colour3 != None:
+                        if self.pelt.eye_colour3 != None:
                             self.pelt.eye_lazy2 = self.pelt.eye_colour3
                 elif new_condition == "melanism":
                     self.pelt.skin = choice(["MELANISTIC", "MELANISTICGILL"])
@@ -384,7 +384,7 @@ class Cat():
                             self.pelt.eye_lazy = self.pelt.eye_colour2
                         else: 
                             self.pelt.eye_lazy = self.pelt.eye_colour
-                        if self.eye_colour3 != None:
+                        if self.pelt.eye_colour3 != None:
                             self.pelt.eye_lazy2 = self.pelt.eye_colour3
 
                 self.get_permanent_condition(new_condition, born_with=True)
@@ -553,6 +553,8 @@ class Cat():
         self.status = 'exiled'
         if self.personality.trait == 'vengeful':
             self.thought = "Swears their revenge for being exiled"
+        elif self.personality.trait == 'zealous':
+            self.thought = "Feels like their trust in the Code has been shattered"
         else:
             self.thought = "Is shocked that they have been exiled"
         for app in self.apprentice:
