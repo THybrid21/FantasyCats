@@ -435,6 +435,7 @@ class Cat():
                              suffix,
                              self.pelt.colour,
                              self.pelt.name,
+                             self.pelt.length,
                              self.pelt.tortiebase,
                              biome=biome,
                              specsuffix_hidden=self.specsuffix_hidden,

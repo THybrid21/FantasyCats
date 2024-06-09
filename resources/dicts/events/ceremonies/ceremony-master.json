@@ -928,7 +928,8 @@
       "general_leader",
       "general_backstory",
       "ambitious",
-      "arrogant"
+      "arrogant",
+	  "haughty"
     ],
     "Wanting to stand out among {PRONOUN/m_c/poss} Clanmates more, m_c decides to become a medicine cat, and is apprenticed to (mentor)."
   ],
@@ -3146,7 +3147,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "Young (old_name) is ready to embrace their role as a permaqueen earlier than many expected. The Clan gathers to offer support and blessings for their new journey."
+    "Young (old_name) is ready to embrace {PRONOUN/m_c/poss} role as a permaqueen earlier than many expected. The Clan gathers to offer support and blessings for {PRONOUN/m_c/poss} new journey."
   ],
   "permaqueen_1": [
     [
@@ -3159,7 +3160,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "With grace and patience, m_c has settled into their duties, nurturing the future of the Clan."
+    "With grace and patience, m_c has settled into {PRONOUN/m_c/poss} duties, nurturing the future of the Clan."
   ],
   "permaqueen_2": [
     [
@@ -3172,7 +3173,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "Though some in the Clan whisper doubts of (old_name)'s new role, l_n welcomes them with warmth and hope, confident in their dedication as a permaqueen."
+    "Though some in the Clan whisper doubts of (old_name)'s new role, l_n welcomes {PRONOUN/m_c/object} with warmth and hope, confident in {PRONOUN/m_c/poss} dedication as a permaqueen."
   ],
   "permaqueen_3": [
     [
@@ -3196,7 +3197,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "The Clan has watched (old_name) rise with strength and grace, choosing the path of a permaqueen. Their dedication is an inspiration to all, and they are warmly acknowledged as m_c."
+    "The Clan has watched (old_name) rise with strength and grace, choosing the path of a permaqueen. {PRONOUN/m_c/poss/CAP} dedication is an inspiration to all, and {PRONOUN/m_c/subject} {VERB/m_c/are/is} warmly acknowledged as m_c."
   ],
   "elder_0": [
     [

@@ -163,8 +163,8 @@
             "r_c listens as m_c explains that it doesn't seem like {PRONOUN/m_c/subject} can hear the details of the world anymore.",
             "m_c realizes one day that the noises around them are no longer just quiet, but completely silent. It seems {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} lost {PRONOUN/m_c/poss} hearing entirely."
         ],
-		"nonverbal": [
-			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous {PRONOUN/m_c/subject} {VERB/m_c/have/had} just gone nonverbal.",
+		"verbal shutdown": [
+			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous {PRONOUN/m_c/subject} {VERB/m_c/have/had} just gone verbal shutdown.",
 			"m_c doesn't speak to anyone, preferring to use signs to communicate."
 		],
 		"ear buzzing": [
@@ -183,7 +183,7 @@
 			"m_c's awkward volume control has faded away until all {PRONOUN/m_c/poss} words are just too hard for {PRONOUN/m_c/poss} clanmates to hear.",
 			"After struggling for so long to be heard, m_c has settled into a calm silence."
 		],
-		"nonverbal": [
+		"verbal shutdown": [
 			"r_c sits with m_c trading signs back and forth when {PRONOUN/m_c/subject} {VERB/m_c/stop/stops} speaking.",
 			"Nobody minds when m_c has a few bad days and chooses to just use sign to communicate rather than trying to strain to speak.",
 			"Frustrated at not been able to tell if {PRONOUN/m_c/subject} {VERB/m_c/are/is} speaking clearly m_c just decides to use {PRONOUN/m_c/poss} best communication method instead."
@@ -566,7 +566,7 @@
 			"m_c keeps purring to {PRONOUN/m_c/self} as an act of self soothing.",
 			"Some of m_c's clanmates find {PRONOUN/m_c/self} confused at how {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} running around the camp in small circles seemingly chasing {PRONOUN/m_c/poss} tail."
 		],
-		"nonverbal": [
+		"verbal shutdown": [
 			"This moon has been overwhelming for everyone r_c observes. {PRONOUN/r_c/subject/CAP} {VERB/m_c/encouge/encourages} the rest of the clan to be understanding of that when m_c goes silent.",
 			"m_c just nods {PRONOUN/m_c/poss} head and uses tail signs to talk with {PRONOUN/m_c/poss} clanmates.",
 			"m_c is so glad {PRONOUN/m_c/poss} clanmates understand that sometimes {PRONOUN/m_c/subject} just {VERB/m_c/need/needs} the quiet when {PRONOUN/m_c/subject} can't speak."
@@ -844,6 +844,17 @@
 			"r_c is surprised to see m_c in {PRONOUN/r_c/poss} den. Softly m_c explains it's just because {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} jittery and uncomfortable this moon.",
 			"m_c feels rather listless and nervous this moon, something unsettled lurking beneath {PRONOUN/m_c/poss} fur.",
 			"There's a shudder in m_c's chest, a pulse of fear that {PRONOUN/m_c/subject} can't keep {PRONOUN/m_c/poss} paws on."
+		],
+		"world tired": [
+			"r_c is stunned to find m_c in {PRONOUN/r_c/poss} den, after a quiet talk that surprise turns into horror. m_c's suffering from world tiredness and doesn't want to be here anymore.",
+			"m_c feels even less like interacting with {PRONOUN/m_c/poss} clanmates than usual... even less like interacting with the world.",
+			"m_c wonders if anyone would even miss {PRONOUN/m_c/object} if {PRONOUN/m_c/subject} just vanished into the wilds to never be seen again.",
+			"m_c's been talking about Starclan almost wistfully in these past moons."
+		],
+		"addiction": [
+			"r_c has had to cut off m_c's access to the medicine den. It's harsh but necessary with how much m_c's been trying to get into the herbs just to feel something real.",
+			"m_c hates to admit it, but {PRONOUN/m_c/subject} might have a problem with poppy seed addiction.",
+			"m_c's been taking more herbs than necessary recently, and is nervous to admit that {PRONOUN/m_c/subject} might have fallen into addiction."
 		]
 	},
 	"ongoing sleeplessness": {
@@ -916,6 +927,10 @@
 			"While r_c is relieved to hear that m_c has been getting some sleep, that doesn't stop {PRONOUN/r_c/object} from worrying when it doesn't seem to help m_c feel any better.",
 			"m_c wonders how long {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to sleep before it will give {PRONOUN/m_c/object} back energy.",
 			"After all m_c's difficulties with sleep, {PRONOUN/m_c/subject} can't help but feel disappointed when the sleep {PRONOUN/m_c/subject} finally {VERB/m_c/do/does} get doesn't seem to help."
+		],
+		"addiction": [
+			"To m_c's shame r_c has had to cut {PRONOUN/m_c/object} off from access to poppy seeds as {PRONOUN/m_c/subject}{VERB/m_c/'s/'ve} become far too reliant on them.",
+			"m_c can't sleep normally at all, relying entirely on poppy seeds to get even a passing night's sleep... {PRONOUN/m_c/subject} can't stop."
 		]
 	},
 	"declawed": {
@@ -948,7 +963,7 @@
 		]
     },
 	"echoing memory": {
-		"nonverbal": [
+		"verbal shutdown": [
 			"Struggling to speak and more than frustrated, m_c motions with {PRONOUN/m_c/poss} tail to r_c for communication instead.",
 			"No matter how much m_c tries the purrs and meows just seem to get stuck somewhere in {PRONOUN/m_c/poss} throat.",
 			"m_c stalks around the camp, fur bristling and mouth uselessly moving without words.",

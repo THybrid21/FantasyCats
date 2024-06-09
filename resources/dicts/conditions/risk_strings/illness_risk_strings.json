@@ -229,7 +229,7 @@
 			"Something in m_c's chest feels tight, feels numb really. A weight that {PRONOUN/m_c/subject} {VERB/m_c/have/has} to carry around for the rest of {PRONOUN/m_c/poss} life."
 		]
 	},	
-	"nonverbal": {
+	"verbal shutdown": {
 		"mute": [
 			"After all this time some of the clan thinks that m_c should have started speaking again. r_c simply shakes their head, it's not up to those cats to demand that.",
 			"m_c simply shakes {PRONOUN/m_c/poss} head when a clanmate asks if {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to start speaking again soon.",
@@ -260,14 +260,6 @@
 			"Some of m_c's compulsions included knocking {PRONOUN/m_c/self} and it's left {PRONOUN/m_c/object} with a couple of bruises."
 		]
 	},
-	"turmoiled litter": {
-		"world tired": [
-			"m_c comes to r_c with ears and tail low. {PRONOUN/m_c/subject/CAP} {VERB/m_c/admit/admits} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} struggling and are a bit scared about what {PRONOUN/m_c/subject} might do if left alone.",
-			"m_c's heart aches watching {PRONOUN/m_c/poss} kittens, watching the world in general.",
-			"These emotions are like a blanket of snow covering m_c and leaving {PRONOUN/m_c/object} shivering and wondering when the world will warm up once more.",
-			"m_c blankly stares at {PRONOUN/m_c/poss} kittens and clanmates feeling so very, very exhausted and worn."
-		]
-	},	
 	"sleeplessness": {
 		"ongoing sleeplessness": [
 			"r_c sits with m_c long into the night, just letting {PRONOUN/m_c/object} lean against {PRONOUN/r_c/object} tired and exhausted. m_c just wonders when, if ever sleep will come again.",

@@ -688,5 +688,21 @@
         "poise",
 		"zeal",
 		"belief in StarClan"
-    ]
+    ],
+	"humble": [
+		"humility",
+		"quiet",
+		"patience",
+		"responsibility",
+		"thoughtfulness",
+		"insight",
+		"self-respect"
+	],
+	"haughty": [
+		"heart",
+		"dilligence",
+		"thoughtfulness",
+		"insight",
+		"self-respect"
+	]
 }

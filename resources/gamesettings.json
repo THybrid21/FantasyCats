@@ -41,6 +41,11 @@
             "Mild gore and blood will be allowed in the artwork displayed alongside patrols.",
             false
         ],
+        "allow danger": [
+            "Dangerous Events",
+            "Allow for potentially triggering thoughts and condition events, like suicidality, delusions and drug mention.",
+            false
+        ],
         "discord": [
             "Enable Discord integration",
             "Discord will show info about your Clan, including your Clan name",

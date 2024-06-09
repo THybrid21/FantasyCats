@@ -433,7 +433,7 @@ class Condition_Events():
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
             "lasting grief", "persistent headaches", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
             "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor", 
-            "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "recurring rash"
+            "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "recurring rash", "infertile", "addiction"
         ]
 
         got_condition = False
@@ -491,7 +491,7 @@ class Condition_Events():
             "anxiety attack": "panic attack",
             "panic attack": "paranoia",
             "nest wetting": "night dirtmaking",
-            "nonverbal": "mute"
+            "verbal shutdown": "mute"
         }
         
         # ---------------------------------------------------------------------------- #
@@ -898,6 +898,10 @@ class Condition_Events():
                 if risk['name'] in progression:
                     if progression[risk['name']] in dictionary:
                         skip = True
+                #Making sure World Tired can only be given if you have dangerous settings on        
+                if not game.settings["allow danger"]:
+                    if risk['name'] in ["turmoiled litter", "world tired", "addiction"]:
+                        skip = True                        
                 # if it is, then break instead of giving the risk
                 if skip is True:
                     break

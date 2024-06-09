@@ -338,5 +338,21 @@
 		"Without m_c's body r_c worries for {PRONOUN/m_c/poss} safety on the travel to StarClan, fearing that it would be a hard, impossible journey.",
 		"Choking on {PRONOUN/r_c/poss} words at m_c's vigil, r_c wonders why StarClan is challenging {PRONOUN/m_c/object} like this."
     ]
+  },
+  "humble": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "haughty": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
   }
 }

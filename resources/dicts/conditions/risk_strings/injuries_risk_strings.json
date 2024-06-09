@@ -115,17 +115,6 @@
             "m_c was out in the cold far too long and while the frostbite is the biggest concern, a running nose isn't a good sign either."
         ]
     },
-    "recovering from birth": {
-        "an infected wound": [
-			"r_c gently asks m_c to turn over, and winces when {PRONOUN/m_c/subject} {VERB/m_c/do/does}. The strain of birth isn't healing as r_c had hoped it might, and instead the area looks swollen and painful.",
-            "m_c tries not to hiss as {PRONOUN/m_c/poss} litter suckles. {PRONOUN/m_c/subject/CAP} {VERB/m_c/love/loves} them, {PRONOUN/m_c/subject} {VERB/m_c/do/does}, but giving birth was so painful, and the area feels swollen and infected now."
-        ],
-		"turmoiled litter": [
-			"m_c tiredly asks r_c if there is something wrong with {PRONOUN/m_c/object}, {PRONOUN/m_c/subject} just can't seem to bond with {PRONOUN/m_c/poss} litter at all.",
-			"Staring at {PRONOUN/m_c/poss} litter m_c wonders what is wrong with {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} should be happy, overjoyed at this but instead all {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} is hollow and tired.",
-			"While {PRONOUN/m_c/poss} litter plays around the nursery m_c can only curl in the nest and feel the weight of the world pressing down on {PRONOUN/m_c/object}, how could {PRONOUN/m_c/subject} possibly manage to do this?"
-		]
-    },
     "water in their lungs": {
         "running nose": [
             "Some of the water m_c inhaled appears to be draining from {PRONOUN/m_c/poss} nose, as well as coming up in hacking coughs. r_c puts {PRONOUN/m_c/object} on nest rest to help {PRONOUN/m_c/object} recover.",
@@ -315,5 +304,24 @@
 			"m_c feels more than just tired, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} listless and fogged.",
 			"Inexplicably, m_c feels like a sadness is drowning {PRONOUN/m_c/object}, something {PRONOUN/m_c/subject} can't fully name."
 		]
-	}
+	},
+	"turmoiled litter": {
+		"world tired": [
+			"m_c comes to r_c with ears and tail low. {PRONOUN/m_c/subject/CAP} {VERB/m_c/admit/admits} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} struggling and are a bit scared about what {PRONOUN/m_c/subject} might do if left alone.",
+			"m_c's heart aches watching {PRONOUN/m_c/poss} kittens, watching the world in general.",
+			"These emotions are like a blanket of snow covering m_c and leaving {PRONOUN/m_c/object} shivering and wondering when the world will warm up once more.",
+			"m_c blankly stares at {PRONOUN/m_c/poss} kittens and clanmates feeling so very, very exhausted and worn."
+		]
+	},	
+    "recovering from birth": {
+        "an infected wound": [
+			"r_c gently asks m_c to turn over, and winces when {PRONOUN/m_c/subject} {VERB/m_c/do/does}. The strain of birth isn't healing as r_c had hoped it might, and instead the area looks swollen and painful.",
+            "m_c tries not to hiss as {PRONOUN/m_c/poss} litter suckles. {PRONOUN/m_c/subject/CAP} {VERB/m_c/love/loves} them, {PRONOUN/m_c/subject} {VERB/m_c/do/does}, but giving birth was so painful, and the area feels swollen and infected now."
+        ],
+		"turmoiled litter": [
+			"m_c tiredly asks r_c if there is something wrong with {PRONOUN/m_c/object}, {PRONOUN/m_c/subject} just can't seem to bond with {PRONOUN/m_c/poss} litter at all.",
+			"Staring at {PRONOUN/m_c/poss} litter m_c wonders what is wrong with {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} should be happy, overjoyed at this but instead all {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} is hollow and tired.",
+			"While {PRONOUN/m_c/poss} litter plays around the nursery m_c can only curl in the nest and feel the weight of the world pressing down on {PRONOUN/m_c/object}, how could {PRONOUN/m_c/subject} possibly manage to do this?"
+		]
+    }
 }

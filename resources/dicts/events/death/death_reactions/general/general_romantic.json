@@ -494,5 +494,21 @@
 		"Without m_c's body r_c listlessly wanders the camp, repeating prayers upon prayers to StarClan, desperately hoping that they will reach m_c.",
 		"Without m_c's body r_c worries for {PRONOUN/m_c/poss} safety on the travel to StarClan, fearing that it would be a hard, impossible journey."
     ]
+  },
+  "humble": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "haughty": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
   }
 }

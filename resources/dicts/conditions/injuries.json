@@ -830,44 +830,6 @@
             "dandelion"
         ]
     },
-
-    "recovering from birth":{
-        "duration": 3,
-        "severity": "major",
-        "medicine_duration": 5,
-        "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "illness_infectiousness": [],
-        "risks": [
-            {
-                "name": "an infected wound",
-                "chance": 15
-            },
-			{
-				"name": "turmoiled litter",
-				"chance": 20
-			}
-        ],
-        "also_got": [
-            "blood loss"
-        ],
-        "cause_permanent": [
-        ],
-        "herbs": [
-            "oak_leaves",
-            "juniper",
-            "ragwort",
-            "moss"
-        ]
-    },
-
     "water in their lungs":{
         "duration": 3,
         "severity": "major",
@@ -1871,6 +1833,67 @@
             "thyme",
             "poppy",
 			"catmint"
+        ]
+    },	
+	"turmoiled litter": {
+		"duration": 3,
+        "medicine_duration": 4,
+		"severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "risks": [
+            {
+                "name": "world tired",
+                "chance":90
+            }
+		],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
+        ]
+    },
+    "recovering from birth":{
+        "duration": 3,
+        "severity": "major",
+        "medicine_duration": 5,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 15
+            },
+			{
+				"name": "turmoiled litter",
+				"chance": 20
+			}
+        ],
+        "also_got": [
+            "blood loss"
+        ],
+        "cause_permanent": [
+        ],
+        "herbs": [
+            "oak_leaves",
+            "juniper",
+            "ragwort",
+            "moss"
         ]
     },
     "pregnant": {

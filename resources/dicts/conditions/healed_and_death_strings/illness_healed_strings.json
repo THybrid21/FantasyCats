@@ -141,7 +141,7 @@
 		"m_c is able to raise {PRONOUN/m_c/poss} sun and face the dawn with renewed energy.",
 		"They might always be a bit tired and wrung out but m_c finds that it's the small things that make the days brighter."
 	],
-	"nonverbal": [
+	"verbal shutdown": [
 		"While cats are surprised to see m_c speaking again it is welcomed easily.",
 		"m_c cracks a joke at the gathering and makes some of the cats from the other clans laugh.",
 		"m_c chats with some of {PRONOUN/m_c/poss} denmates comfortable and at ease."
@@ -184,12 +184,6 @@
 		"With some relief m_c finds that {PRONOUN/m_c/subject} {VERB/m_c/are/is} able to balance {PRONOUN/m_c/poss} compulasions throughout the day.",
 		"m_c has figured out a way to factor {PRONOUN/m_c/poss} compulsions more naturally into {PRONOUN/m_c/poss} routine.",
 		"m_c's been able to reorganize {PRONOUN/m_c/object}selves and {PRONOUN/m_c/poss} compulsions."
-	],
-	"turmoiled litter": [
-		"With much relief m_c is feeling a bit more like {PRONOUN/m_c/self}.",
-		"m_c could almost cry as a weight they weren't fully conscious of seems to lift.",
-		"m_c purrs as {PRONOUN/m_c/poss} kittens roll around {PRONOUN/m_c/object}, finally feeling like they can move on.",
-		"Sometimes a bond isn't instant and m_c finds that's alright."		
 	],
 	"sleeplessness": [
 		"m_c is so relieved to just get a somewhat peaceful nights sleep once more.",

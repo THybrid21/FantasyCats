@@ -22,6 +22,9 @@ class Pelt():
         'Agouti': 'agouti',
         'Backed': 'backed',
         'Masked': 'masked',
+        "Rat": 'rat',
+        "Dunnart": 'dunnart',
+        "Lantern": 'lantern',
         'Tortie': None,
         'Calico': None,
     }
@@ -64,7 +67,7 @@ class Pelt():
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
-    tortiebases = ['single', 'backed']
+    tortiebases = ['single', 'backed', 'smoke', 'rat', 'dunnart', 'lantern']
 
     pelt_length = ["short", "medium", "long", "snat", "wolf", "skele", "bare", "catfish", "scug", "saint"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
@@ -118,10 +121,10 @@ class Pelt():
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["SingleColour", "TwoColour", "Backed"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
-    spotted = ["SingleColour", "TwoColour", "Backed"]##"Speckled", "Rosette"
-    plain = ["SingleColour", "TwoColour", "Backed"]##"Smoke", 
-    exotic = ["SingleColour", "TwoColour", "Backed"]##"Bengal", "Marbled", "Masked"
+    tabbies = ["Rat", "Dunnart"]##"Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"
+    spotted = ["Lantern"]##"Speckled", "Rosette"
+    plain = ["SingleColour", "TwoColour", "Backed", "Smoke", "Rat", "Dunnart", "Lantern"] 
+    exotic = ["SingleColour", "TwoColour", "Backed", "Smoke"]##"Bengal", "Marbled", "Masked"
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
@@ -961,7 +964,10 @@ class Pelt():
 
                 else:
                     # Normal generation
-                    self.tortiepattern = self.tortiebase
+                    if self.tortiebase in ["rat", "smoke", "single"]:
+                        self.tortiepattern = choice(['rat', 'smoke', 'single'])
+                    else:
+                        self.tortiepattern = random.choices([self.tortiebase, 'backed'], weights=[93, 3], k=1)[0]
 
                     # Ginger is often dupliselfed to increase its chances
                     if self.colour in ["WHITE", "PALEGREY", "SILVER", "CADET", "BRONZE", "TURQUOISE", "SKY", 

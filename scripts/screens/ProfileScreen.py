@@ -956,7 +956,7 @@ class ProfileScreen(Screens):
         if the_cat.is_injured():
             special_conditions = [
                 "recovering from birth", "pregnant", "kittenspace", "otherspace", 
-                "overtimulation", "understimulation"
+                "overtimulation", "understimulation", "turmoiled litter"
             ]
             all_special = True
             for condition in the_cat.injuries:
@@ -970,7 +970,7 @@ class ProfileScreen(Screens):
                 already_sick_injured = True
 
             if "recovering from birth" in the_cat.injuries:
-                if "turmoiled litter" in the_cat.illnesses:
+                if "turmoiled litter" in the_cat.injuries:
                     if already_sick_injured:
                         output += '\nrecovering from a turmoiled birth!'
                     else:
@@ -1011,7 +1011,7 @@ class ProfileScreen(Screens):
         if the_cat.is_ill():
             special_conditions = [
                 "grief stricken", "fleas", "malnourished", "starving", "ticks", "lethargy", "seasonal lethargy", 
-                "nonverbal", "hyperfixation", "stimming", "burn out", "indecision", "impulsivity", "zoomies", "turmoiled litter"
+                "verbal shutdown", "hyperfixation", "stimming", "burn out", "indecision", "impulsivity", "zoomies"
             ]
             all_special = True
             for condition in the_cat.illnesses:
@@ -1069,11 +1069,11 @@ class ProfileScreen(Screens):
                 else:
                     output += 'lethargic'
                     already_sick_injured = True           
-            if "nonverbal" in the_cat.illnesses:
+            if "verbal shutdown" in the_cat.illnesses:
                 if already_sick_injured:
-                    output += '\nnonverbal'
+                    output += '\nverbally shutdown'
                 else:
-                    output += 'nonverbal'
+                    output += 'verbally shutdown'
                     already_sick_injured = True
 
         return output

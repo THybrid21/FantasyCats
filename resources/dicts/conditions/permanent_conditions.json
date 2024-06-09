@@ -428,7 +428,7 @@
                 "chance": 80
             },
 			{
-				"name": "nonverbal",
+				"name": "verbal shutdown",
 				"chance": 20
 			},
 			{
@@ -463,7 +463,7 @@
 				"chance": 120
 			},
 			{
-				"name": "nonverbal",
+				"name": "verbal shutdown",
 				"chance": 20
 			}			
         ],
@@ -637,6 +637,10 @@
 			{
 				"name": "fatigue",
 				"chance": 15
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -692,6 +696,10 @@
 			{
 				"name": "sleep paralysis",
 				"chance": 45
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -727,6 +735,10 @@
 			{
 				"name": "fatigue",
 				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -1000,7 +1012,7 @@
 				"chance": 5
 			},
             {
-                "name": "nonverbal",
+                "name": "verbal shutdown",
                 "chance": 40
             },
 			{
@@ -1085,6 +1097,10 @@
 			{
 				"name": "fatigue",
 				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -1148,6 +1164,10 @@
 			{
 				"name": "sleep paralysis",
 				"chance": 45
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -1282,6 +1302,14 @@
 			{
 				"name": "shock",
 				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "addiction",
+				"chance": 120
 			}
 		],
 		"herbs":[
@@ -1370,6 +1398,14 @@
 			{
 				"name": "fatigue",
 				"chance": 30
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "addiction",
+				"chance": 90
 			}
         ],
         "herbs": [
@@ -1437,7 +1473,7 @@
         ],
         "risks": [
             {
-                "name": "nonverbal",
+                "name": "verbal shutdown",
                 "chance": 10
             },
 			{
@@ -1745,6 +1781,10 @@
 			{
 				"name": "fatigue",
 				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -1830,6 +1870,10 @@
 			{
 				"name": "sleep paralysis",
 				"chance": 50
+			},
+			{
+				"name": "world tired",
+				"chance": 120
 			}
         ],
         "herbs": [
@@ -1850,6 +1894,25 @@
             "adult": 0,
             "senior adult": 0,
             "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+        ],
+        "herbs": []
+    },
+    "addiction": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 10,
+            "adolescent": 30,
+            "young adult": 50,
+            "adult": 50,
+            "senior adult": 20,
+            "senior": 10
         },
         "illness_infectiousness": [
         ],

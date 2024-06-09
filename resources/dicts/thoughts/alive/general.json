@@ -84,6 +84,28 @@
         ]
     },
     {
+        "id": "gen_testing_danger_thoughts",
+        "dangerous_thoughts": true,
+        "thoughts": [
+            "This is a test thought, if you don't have triggering thoughts on report me",
+			"If you see me where I'm not meant to be(outside triggering thoughts) report me",
+			"Cat is thinking dangerous thoughts, if you don't have triggering thoughts on report",
+			"Testing triggering thought detection, report if not toggled",
+			"This is a test thought, if you don't have triggering thoughts on report me",
+			"If you see me where I'm not meant to be(outside triggering thoughts) report me",
+			"Cat is thinking dangerous thoughts, if you don't have triggering thoughts on report",
+			"Testing triggering thought detection, report if not toggled",
+			"This is a test thought, if you don't have triggering thoughts on report me",
+			"If you see me where I'm not meant to be(outside triggering thoughts) report me",
+			"Cat is thinking dangerous thoughts, if you don't have triggering thoughts on report",
+			"Testing triggering thought detection, report if not toggled",
+			"This is a test thought, if you don't have triggering thoughts on report me",
+			"If you see me where I'm not meant to be(outside triggering thoughts) report me",
+			"Cat is thinking dangerous thoughts, if you don't have triggering thoughts on report",
+			"Testing triggering thought detection, report if not toggled"
+        ]
+    },
+    {
         "id": "gen_alive_not_working_insteadinthemedden",
         "not_working": true,
         "thoughts": [
@@ -3570,5 +3592,86 @@
         "random_living_status": [
             "living"
         ]
-    }	
+    },
+    {
+        "id": "gen_worldtired",
+        "dangerous_thoughts": true,
+        "thoughts": [
+            "Feels like death",
+			"Is taking issue with {PRONOUN/m_c/poss} workload",
+			"Worries about the future",
+			"Considers walking out of the camp forever",
+			"Is thinking about death",
+			"Took more poppies than recommended",
+			"Wonders if {PRONOUN/m_c/subject} can 'accidentally' get injured on patrol",
+			"Considers the river",
+			"Considers the Thunderpath",
+			"Is considering going 'lost'",
+			"Doesn't feel like {PRONOUN/m_c/subject} {VERB/m_c/deserve/deserves} the care of c_n",
+			"Stared at Deathberries for too long",
+			"Is having a bad moon",
+			"Feels like dying",
+			"Told r_c not to mourn {PRONOUN/m_c/object}",
+			"Thinks r_c is overbearing",
+			"Doesn't want to talk to r_c about how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels}",
+			"Is avoiding r_c",
+			"Has fresh injuries on {PRONOUN/m_c/object}",
+			"Is dodging r_c's questions about injuries",
+			"Is refusing to socialize",
+			"Has gone missing for long periods of time",
+			"Was staring into the river",
+			"Wonders how long it takes to starve to death",
+			"Is thinking about dying in battle",
+			"Is thinking about dying alone",
+			"Hopes {PRONOUN/m_c/poss} clanmates forget {PRONOUN/m_c/object} fast"
+        ],
+        "has_injuries": {
+            "m_c": [
+                "world tired"
+            ]
+        },
+        "random_status_constraint": [
+            "warrior",
+            "medicine cat",
+			"permaqueen",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder"
+        ]
+    },
+    {
+        "id": "worldtired_medcat",
+        "dangerous_thoughts": true,
+        "thoughts": [
+            "Is lying to r_c about {PRONOUN/m_c/poss} feelings",
+			"Hopes r_c doesn't notice {PRONOUN/m_c/object} taking extra poppy seeds",
+			"Is looking for death berries in the medicine den",
+			"Is avoiding r_c"
+        ],
+        "has_injuries": {
+            "m_c": [
+                "world tired"
+            ]
+        },
+        "random_status_constraint": [
+            "medicine cat",
+			"medicine cat apprentice"
+        ]
+    },
+    {
+        "id": "gen_addiction",
+        "dangerous_thoughts": true,
+        "thoughts": [
+            "Can't stop thinking about taking more poppy seeds",
+			"Got into the catmint again",
+			"Feels sick after taking too many poppy seeds",
+			"Is banned from the Medicine Den"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "addiction"
+            ]
+        }
+    }
 ]

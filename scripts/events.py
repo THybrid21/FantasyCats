@@ -1513,12 +1513,29 @@ class Events:
                     elif has_med:
                         chance = int(chance * 2.22)
 
-                    if cat.personality.trait in [
-                        'compassionate', 'wise', 'faithful', 'dreamer', 'zealous'
-                    ]:
-                        chance = int(chance / 1.3)
-                    if cat.is_disabled():
+                    #med personality    
+                    med_personalities = ["righteous", "compassionate", "thoughtful", "faithful", "loving", 
+                                        "wise", "zealous", "dreamer"]
+                    med_personality = False
+                    index = 0
+                    for entry in med_personalities:
+                        if med_personalities[index] == cat.personality.trait:
+                            med_personality = True
+                        index += 1
+
+                    # med skill
+                    med_skills = ["CLEVER", "HEALER", "PROPHET", "OMEN", "STAR"]
+                    med_skill = False
+                    index = 0
+                    for entry in med_skills:
+                        if med_skills[index] == cat.skills:
+                            med_skill = True
+                        index += 1
+
+                    if med_personality or med_skill:
                         chance = int(chance / 2)
+                    if cat.is_disabled():
+                        chance = int(chance / 1.3)
 
                     if chance == 0:
                         chance = 1
@@ -1542,12 +1559,29 @@ class Events:
                                 break
 
                         chance = game.config["roles"]["mediator_app_chance"]
-                        if cat.personality.trait in [
-                            'charismatic', 'responsible', 'wise', 'thoughtful', 'loving'
-                        ]:
-                            chance = int(chance / 1.5)
-                        if cat.is_disabled():
+                        # media personality
+                        media_personalities = ["charismatic", "compassionate", "thoughtful", "calm", "careful", 
+                                                "sincere", "responsible", "wandering"]
+                        media_personality = False
+                        index = 0
+                        for entry in media_personalities:
+                            if media_personalities[index] == cat.personality.trait:
+                                media_personality = True
+                            index += 1
+
+                        # media skill
+                        media_skills = ["SPEAKER", "MEDIATOR", "INSIGHTFUL", "LORE", "SENSE", "DREAM"]
+                        media_skill = False
+                        index = 0
+                        for entry in media_skills:
+                            if media_skills[index] == cat.skills:
+                                media_skill = True
+                            index += 1
+
+                        if media_personality or media_skill:
                             chance = int(chance / 2)
+                        if cat.is_disabled():
+                            chance = int(chance / 1.2)
 
                         if chance == 0:
                             chance = 1
@@ -1571,18 +1605,35 @@ class Events:
                                     break
 
                             chance = game.config["roles"]["permaqueen_app_chance"]
-                            if cat.personality.trait in [
-                                'calm', 'compassionate', 'responsible', 'strict', 'skeptic'
-                            ]:
-                                chance = int(chance / 1.5)
-                            if cat.is_disabled():
+                           # permaqueen personality
+                            queen_personalities = ["calm", "compassionate", "responsible", "strict", "skeptic", 
+                                                    "loving", "humble"]
+                            queen_personality = False
+                            index = 0
+                            for entry in queen_personalities:
+                                if queen_personalities[index] == cat.personality.trait:
+                                    queen_personality = True
+                                index += 1
+
+                            # queen skill
+                            queen_skills = ["KIT", "STORY", "CAMP", "LORE", "TEACHER"]
+                            queen_skill = False
+                            index = 0
+                            for entry in queen_skills:
+                                if queen_skills[index] == cat.skills:
+                                    queen_skill = True
+                                index += 1
+
+                            if queen_personality or queen_skill:
                                 chance = int(chance / 2)
+                            if cat.is_disabled():
+                                chance = int(chance * 1.5)
 
                             if chance == 0:
                                 chance = 1
 
                             # Anyone can choose to become a Permaqueen, even if there isn't already one in the clan.
-                            if game.config["roles"]["permaqueen_app_chance"] and not has_permaqueen_apprentice and \
+                            if game.config["roles"]["permaqueen_apps_no_mentor"] and not has_permaqueen_apprentice and \
                                 not int(random.random() * chance):
                                     self.ceremony(cat, 'permaqueen apprentice')
                                     self.ceremony_accessory = True
@@ -2085,7 +2136,7 @@ class Events:
         if possible_other_cats:
             other_cat = random.choice(possible_other_cats)
 
-            if cat.status in ["apprentice", "medicine cat apprentice"
+            if cat.status in ["apprentice", "medicine cat apprentice", "permaqueen apprentice"
                               ] and not int(random.random() * 3):
                 if cat.mentor is not None:
                     other_cat = Cat.fetch_cat(cat.mentor)
@@ -2167,7 +2218,7 @@ class Events:
         if possible_other_cats:
             other_cat = random.choice(possible_other_cats)
 
-            if cat.status in ["apprentice", "medicine cat apprentice"
+            if cat.status in ["apprentice", "medicine cat apprentice", "permaqueen apprentice"
                               ] and not int(random.random() * 3):
                 if cat.mentor is not None:
                     other_cat = Cat.fetch_cat(cat.mentor)

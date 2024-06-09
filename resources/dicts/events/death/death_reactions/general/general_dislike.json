@@ -468,5 +468,21 @@
 	  "Honestly r_c's glad that {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} have to see m_c's face one last time. {PRONOUN/r_c/subject/CAP} {VERB/r_c/doubt/doubts} that {PRONOUN/r_c/subject} could hold {PRONOUN/r_c/poss} tongue about how awful {PRONOUN/m_c/poss} truly was.",
 	  "r_c only shows up to m_c's vigil for long enough to be polite-- {PRONOUN/r_c/subject} {VERB/r_c/shed/sheds} no tears at the loss."
       ]
+  },
+  "humble": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "haughty": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
   }
 }

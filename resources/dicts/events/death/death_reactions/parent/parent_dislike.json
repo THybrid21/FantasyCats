@@ -336,5 +336,21 @@
 		"The only reason r_c sits vigil is because of {PRONOUN/r_c/poss} dedication to the Warrior Code and StarClan, {PRONOUN/r_c/subject} could care less about m_c.",
 		"r_c holds back all {PRONOUN/r_c/poss} words about m_c's failures as a child. It's not done to speak ill of the dead."
     ]
+  },
+  "humble": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
+  },
+  "haughty": {
+    "body": [
+
+    ],
+    "no_body": [
+
+    ]
   }
 }

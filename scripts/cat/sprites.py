@@ -133,14 +133,12 @@ class Sprites():
             'hybrideyes', 'hybrideyes2', 'hybrideyes3', 'hybrideyes4', 'hybrideyes5',             
             'skin', 'skingills', 'blep', 
             'scars', 'missingscars',
-            'medcatherbs',
-            'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
             
-            'singlecolours', 'speckledcolours', 'tabbycolours', 'bengalcolours', 'marbledcolours',
-            'rosettecolours', 'smokecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours', 
-            'sokokecolours', 'agouticolours', 'singlestripecolours', 'maskedcolours', 
+            'speckledcolours', 'tabbycolours', 'bengalcolours', 'marbledcolours',
+            'rosettecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours', 
+            'sokokecolours', 'agouticolours', 'maskedcolours', 
             
-            'singlenaturals', 'singlepride', 'singleunnaturals', 'backednaturals', 'backedpride', 'backedunnaturals',
+            'singlenaturals', 'singlepride', 'singleunnaturals', 
             'shadersnewwhite', 'lightingnew',
             'fademask', 'fadestarclan', 'fadedarkforest',
             'symbols'
@@ -155,6 +153,18 @@ class Sprites():
             'colourpointpatches', 'albinism', 'melanism'
         ]:
             sprites.spritesheet(f"sprites/patches/{x}.png", x) 
+
+        for x in [
+            'bellcollars', 'bowcollars', 'collars', 'medcatherbs', 'nyloncollars'
+        ]:
+            sprites.spritesheet(f"sprites/accessories/{x}.png", x)
+
+        for x in [
+            'backednaturals', 'dunnartnaturals', 'ratnaturals', 'smokenaturals', 'lanternnaturals',
+            'backedpride', 'dunnartpride', 'ratpride', 'smokepride', 'lanternpride',
+            'backedunnaturals', 'dunnartunnaturals', 'ratunnaturals', 'smokeunnaturals', 'lanternunnaturals'
+        ]:
+            sprites.spritesheet(f"sprites/solid/{x}.png", x)
 
         # Line art
         self.make_group('lineart', (0, 0), 'lines')
@@ -288,7 +298,7 @@ class Sprites():
         ]
 
         color_types = [
-            'singlenaturals', 'backednaturals'
+            'singlenaturals', 'backednaturals', 'smokenaturals', 'ratnaturals', 'dunnartnaturals', 'lanternnaturals'
         ]
 
         for row, colors in enumerate(color_categories):
@@ -303,7 +313,7 @@ class Sprites():
         ]
 
         pride_types = [
-            'singlepride', 'backedpride'
+            'singlepride', 'backedpride', 'smokepride', 'ratpride', 'dunnartpride', 'lanternpride'
         ]
 
         for row, colors in enumerate(pride_categories):
@@ -322,7 +332,7 @@ class Sprites():
         ]
 
         f_color_types = [
-            'singleunnaturals', 'backedunnaturals'
+            'singleunnaturals', 'backedunnaturals', 'smokeunnaturals', 'ratunnaturals', 'dunnartunnaturals', 'lanternunnaturals'
         ]
 
         for row, colors in enumerate(f_color_categories):

@@ -15,8 +15,8 @@
             "Is understanding the significance of early Clan teachings for kits",
             "Is refining skills in recognizing the unique needs of each kit",
             "Is gathering moss for the nursery",
-            "Is contemplating the ancient tales to pass onto the next generation",
-            "Is reflecting on the joys and challenges of parenthood in the Clan",
+            "Is contemplating which ancient tales to pass on",
+            "Is reflecting on the joys and challenges of parenthood",
             "Is mulling over the herbs that could benefit kits during the cold season",
             "Is feeling the weight of responsibility in shaping young minds and spirits",
             "Is reminiscing about {PRONOUN/m_c/poss} own days as a kit and the lessons {PRONOUN/m_c/subject} learned",
@@ -59,5 +59,17 @@
 			"medicine cat apprentice"
         ]
 		
-    }		
+    },
+    {
+        "id": "gen_sick_permaqueen",
+        "not_working": true,
+        "thoughts": [
+            "Worries about how things are going in the Nursery while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} sick",
+			"Hopes that the kittens of the clan are alright",
+			"Feels miserable",
+			"Doesn't enjoy taking {PRONOUN/m_c/poss} herbs",
+			"Feels anxious about the state of the Nursery without {PRONOUN/m_c/object}",
+			"Doesn't enjoy waiting out {PRONOUN/m_c/poss} recovery"
+        ]
+    }
 ]
