@@ -1,13 +1,19 @@
-import random
+"""
+Module that handles the name generation for all cats.
+"""
 import os
+import random
+
 import ujson
 
+from scripts.game_structure.game_essentials import game
 from scripts.housekeeping.datadir import get_save_dir
 from scripts.game_structure.game_essentials import game
 from scripts.cat.pelts import Pelt
-
-
-class Name():
+class Name:
+    """
+    Stores & handles name generation.
+    """
     if os.path.exists('resources/dicts/names/names.json'):
         with open('resources/dicts/names/names.json') as read_file:
             names_dict = ujson.loads(read_file.read())
@@ -88,7 +94,7 @@ class Name():
                 name_fixpref = False
 
         if self.suffix and not load_existing_name:
-            # Prevent triple letter names from joining prefix and suffix from occuring (ex. Beeeye)
+            # Prevent triple letter names from joining prefix and suffix from occurring (ex. Beeeye)
             triple_letter = False
             possible_three_letter = (self.prefix[-2:] + self.suffix[0], self.prefix[-1] + self.suffix[:2])
             if all(i == possible_three_letter[0][0] for i in possible_three_letter[0]) or \
@@ -102,10 +108,11 @@ class Name():
             nono_name = self.prefix + self.suffix
             # Prevent double names (ex. Iceice)
             # Prevent suffixes containing the prefix (ex. Butterflyfly)
-            
+
             i = 0
             while nono_name.lower() in self.names_dict["inappropriate_names"] or triple_letter or double_animal or \
-                    (self.prefix.lower() in self.suffix.lower() and not str(self.prefix) == '') or (self.suffix.lower() in self.prefix.lower() and not str(self.suffix) == ''):
+                    (self.prefix.lower() in self.suffix.lower() and not str(self.prefix) == '') or (
+                    self.suffix.lower() in self.prefix.lower() and not str(self.suffix) == ''):
 
                 # check if random die was for prefix
                 if name_fixpref:
@@ -114,11 +121,12 @@ class Name():
                     self.give_suffix(pelt, pelt_length, biome, tortiebase)
                 
                 nono_name = self.prefix + self.suffix
-                possible_three_letter = (self.prefix[-2:] + self.suffix[0], self.prefix[-1] + self.suffix[:2])    
-                if not(all(i == possible_three_letter[0][0] for i in possible_three_letter[0]) or \
+                possible_three_letter = (self.prefix[-2:] + self.suffix[0], self.prefix[-1] + self.suffix[:2])
+                if not (all(i == possible_three_letter[0][0] for i in possible_three_letter[0]) or
                         all(i == possible_three_letter[1][0] for i in possible_three_letter[1])):
                     triple_letter = False
-                if not(self.prefix in self.names_dict["animal_prefixes"] and self.suffix in self.names_dict["animal_suffixes"]):
+                if not (self.prefix in self.names_dict["animal_prefixes"]
+                        and self.suffix in self.names_dict["animal_suffixes"]):
                     double_animal = False
                 i += 1
     

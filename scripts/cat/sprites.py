@@ -1,13 +1,11 @@
 import os
 
 import pygame
-
 import ujson
 
 from scripts.game_structure.game_essentials import game
 
-
-class Sprites():
+class Sprites:
     cat_tints = {}
     white_patches_tints = {}
     clan_symbols = []
@@ -32,13 +30,13 @@ class Sprites():
         try:
             with open("sprites/dicts/tint.json", 'r') as read_file:
                 self.cat_tints = ujson.loads(read_file.read())
-        except:
+        except IOError:
             print("ERROR: Reading Tints")
 
         try:
             with open("sprites/dicts/white_patches_tint.json", 'r') as read_file:
                 self.white_patches_tints = ujson.loads(read_file.read())
-        except:
+        except IOError:
             print("ERROR: Reading White Patches Tints")
 
         try:
@@ -46,7 +44,7 @@ class Sprites():
                 self.vitiligo_tint = ujson.loads(read_file.read())
         except:
             print("ERROR: Reading Vitiligo Tints")
-            
+
     def spritesheet(self, a_file, name):
         """
         Add spritesheet called name from a_file.

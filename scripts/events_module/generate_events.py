@@ -3,6 +3,7 @@
 import random
 
 import ujson
+
 from scripts.game_structure.game_essentials import game
 
 resource_directory = "resources/dicts/events/"
@@ -767,6 +768,9 @@ class GenerateEvents:
             possible_events.append(event)
 
         return possible_events
+
+
+generate_events = GenerateEvents()
 
 
 generate_events = GenerateEvents()
