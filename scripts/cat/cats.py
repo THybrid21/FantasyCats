@@ -296,9 +296,6 @@ class Cat:
         else:
             self.backstory = self.backstory
 
-        genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
-                            "genderfluid", "bigender", "pangender", "questioning"]
-
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
             intersexchance = randint(1,100)
@@ -416,6 +413,10 @@ class Cat:
         :return: None
         """
         # trans cat chances
+
+        genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
+                            "genderfluid", "bigender", "pangender", "questioning"]
+                            
         theythemdefault = game.settings["they them default"] 
         self.genderalign = self.gender
         trans_chance = randint(0, 50)
@@ -454,7 +455,7 @@ class Cat:
 
         specialty_conditions = []            
         self_specialty = randint(1,120)
-        if self_specialty == 1 and example is False:            
+        if self_specialty == 1:
             for condition in PERMANENT:
                 specialty = PERMANENT[condition]
                 if specialty["congenital"] in ['genetic']:

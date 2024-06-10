@@ -134,15 +134,15 @@
         },
 		"haughty": {
             "lawfulness": [0, 8],
-            "sociability": [8, 16],
+            "sociability": [0, 12],
             "aggression": [6, 16],
-            "stability": [8, 16]
+            "stability": [0, 10]
         },
 		"humble": {
-            "lawfulness": [8, 16],
+            "lawfulness": [0, 12],
             "sociability": [8, 16],
             "aggression": [8, 16],
-            "stability": [0, 10]
+            "stability": [6, 16]
         },
 		"inquisitive": {
             "lawfulness": [0, 8],

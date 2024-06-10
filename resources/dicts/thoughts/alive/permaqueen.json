@@ -21,9 +21,7 @@
             "Is feeling the weight of responsibility in shaping young minds and spirits",
             "Is reminiscing about {PRONOUN/m_c/poss} own days as a kit and the lessons {PRONOUN/m_c/subject} learned",
             "Plans ways to safely introduce kits to the world beyond the nursery",
-            "Is considering how to foster camaraderie among kits from different litters",
-            "Is understanding the fine line between allowing kits to explore and ensuring their safety",
-            "Is pondering on the legacy {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to leave for {PRONOUN/m_c/poss} own kits within the Clan"						
+            "Is pondering on the legacy {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to leave for {PRONOUN/m_c/poss} own potential kits within the Clan"						
         ]
     },
 	{
@@ -39,7 +37,9 @@
             "Is marveling at how quickly kits grow and change each day",
 			"Had to scold r_c for trying to sneak out",
 			"Lost sight of r_c in the camp",
-            "Is helping to mediate minor squabbles between kits"
+            "Is helping to mediate minor squabbles between kits",
+            "Is considering how to foster camaraderie among kits from different litters",
+            "Is understanding the fine line between allowing kits to explore and ensuring their safety"
         ],
         "random_status_constraint": [
             "kitten"

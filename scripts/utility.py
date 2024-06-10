@@ -14,6 +14,7 @@ from sys import exit as sys_exit
 import pygame
 import ujson
 
+
 logger = logging.getLogger(__name__)
 from scripts.game_structure import image_cache
 from scripts.cat.history import History
@@ -700,7 +701,6 @@ def get_amount_of_cats_with_relation_value_towards(cat, value, all_cats):
     return return_dict
 
 
-
 def change_relationship_values(
     cats_to: list,
     cats_from: list,
@@ -777,7 +777,7 @@ def change_relationship_values(
                   " /Respect: " + str(admiration) +
                   " /Comfort: " + str(comfortable) +
                   " /Jealousy: " + str(jealousy) +
-                  " /Trust: " + str(trust)) if changed else print("No relationship change")'''
+                  " /Trust: " + str(trust)) if changed else print("No relationship change")"""
 
             if log and isinstance(log, str):
                 rel.log.append(log)
@@ -786,6 +786,7 @@ def change_relationship_values(
 # ---------------------------------------------------------------------------- #
 #                               Text Adjust                                    #
 # ---------------------------------------------------------------------------- #
+
 
 def get_other_clan_relation(relation):
     """
@@ -999,7 +1000,9 @@ def find_special_list_types(text):
     return text, senses, list_type
 
 
-def history_text_adjust(text, other_clan_name, clan, other_cat_rc=None):
+def history_text_adjust(text,
+                        other_clan_name,
+                        clan, other_cat_rc=None):
     """
     we want to handle history text on its own because it needs to preserve the pronoun tags and cat abbreviations.
     this is so that future pronoun changes or name changes will continue to be reflected in history

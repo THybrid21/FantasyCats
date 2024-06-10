@@ -155,13 +155,7 @@ class Condition_Events:
                     random_number+=(num_queens*5)
             except:
                 print("couldn't handle permaqueen illness prevention")
-                
-            if not cat.dead and not cat.is_ill() and random_number <= 10 and not event_string:
-                random.random()
-                * game.get_config_value(
-                    "condition_related", f"{game.clan.game_mode}_illness_chance"
-                )
-            )
+
             if (
                 not cat.dead
                 and not cat.is_ill()

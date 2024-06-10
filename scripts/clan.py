@@ -1243,7 +1243,7 @@ class Clan:
 
     @temperament.setter
     def temperament(self, val):
-
+        return
 
 class OtherClan:
     """

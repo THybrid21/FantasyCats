@@ -1252,13 +1252,13 @@ class Events:
 
             ##Now we attempt something risky
                 if game.settings["allow danger"]:
-                cutter = random.randint(0, 100)
-                if cutter <= 10:
-                    cat.get_injured("cutter's sickness")
-                    text += [
-                                "Of course not all seems entirely well.",
-                                "m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying state of Cutter's Sickness."
-                            ]
+                    cutter = random.randint(0, 100)
+                    if cutter <= 10:
+                        cat.get_injured("cutter's sickness")
+                        text += [
+                                    "Of course not all seems entirely well.",
+                                    "m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying state of Cutter's Sickness."
+                                ]
 
             text = event_text_adjust(Cat, text, lost_cat, clan=game.clan)
 
