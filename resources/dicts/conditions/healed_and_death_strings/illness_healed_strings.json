@@ -86,8 +86,6 @@
         "The stench coming from m_c is finally fading, {PRONOUN/m_c/subject} recovered from carrionplace disease.",
         "Against all odds, m_c has recovered from carrionplace disease."
     ],
-	"malnourished": ["WARNING: this string should never appear, nutrition are handled only in freshkill events."],
-	"starving": ["WARNING: this string should never appear, nutrition are handled only in freshkill events."],
 	"anxiety attack": [
 		"After a short while, m_c has calmed back down from {PRONOUN/m_c/poss} anxiety, no longer worrying about a threat that's not there.",
 		"m_c has spent the time talking with {PRONOUN/m_c/poss} clanmates and has realised that there's nothing to worry about.",
@@ -216,5 +214,12 @@
 		"m_c's brief bout of dizziness has ended.",
 		"To m_c's relief {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} able to raise from {PRONOUN/m_c/poss} nest without falling back down.",
 		"m_c is no longer feeling dizzed when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up."
-	]
+	],
+	"malnourished": [
+        "m_c finally feels energized again, it seems the newly consistent meals have done {pronoun/m_c/object} good."
+    ],
+	"starving": [
+        "m_c's paws no longer feel quite so heavy. {pronoun/m_c/subject/CAP} can tell that {pronoun/m_c/subject} still need to eat more, but at least the situation isn't as dire.",
+        "m_c still feels the rumbles of hunger in {pronoun/m_c/poss} belly, but it's nothing compared to the emptiness they had so recently experienced."
+    ]
 }
