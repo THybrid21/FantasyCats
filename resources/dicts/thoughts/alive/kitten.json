@@ -115,7 +115,9 @@
 			"Hides behind r_c",
 			"Is annoyed with r_c",
 			"Wonders why cats become a permanent queen",
-			"Is doing den chores with r_c"
+			"Is doing den chores with r_c",
+			"Is begging r_c to let {PRONOUN/m_c/object} see the warriors returning from patrol",
+			"Tries to sneak past r_c and out of the nursery"
         ],
         "random_status_constraint": [
             "permaqueen",

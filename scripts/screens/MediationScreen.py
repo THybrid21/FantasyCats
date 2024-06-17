@@ -483,22 +483,11 @@ class MediationScreen(Screens):
         elif other_cat:
             # FAMILY DOT
             # Only show family dot on cousins if first cousin mates are disabled.
-            if game.clan.clan_settings["first cousin mates"]:
-                check_cousins = False
-            else:
-                check_cousins = other_cat.is_cousin(cat)
+            if not game.clan.clan_settings["second cousin mates"]:
+                check_cousins = cat.is_second_cousin(other_cat)
 
-            if (
-                other_cat.is_uncle_aunt(cat)
-                or cat.is_uncle_aunt(other_cat)
-                or other_cat.is_grandparent(cat)
-                or cat.is_grandparent(other_cat)
-                or other_cat.is_parent(cat)
-                or cat.is_parent(other_cat)
-                or other_cat.is_sibling(cat)
-                or check_cousins
-            ):
-                related = True
+            related = cat.is_related(other_cat) or check_cousins
+            if related:
                 self.selected_cat_elements["relation_icon" + tag] = (
                     pygame_gui.elements.UIImage(
                         scale(pygame.Rect((x + 28, y + 28), (36, 36))),
@@ -507,9 +496,9 @@ class MediationScreen(Screens):
                                 "resources/images/dot_big.png"
                             ).convert_alpha(),
                             (36, 36),
-                        ),
+                            ),
+                        )
                     )
-                )
 
         col1 = str(cat.moons)
         if cat.moons == 1:
@@ -542,16 +531,16 @@ class MediationScreen(Screens):
         if related and other_cat and not mates:
             col2 += "\n"
             if other_cat.is_uncle_aunt(cat):
-                if cat.genderalign in ["female", "trans female"]:
+                if cat.genderalign in ['female', 'trans female', 'demigirl']:
                     col2 += "niece"
-                elif cat.genderalign in ["male", "trans male"]:
+                elif cat.genderalign in ['male', 'trans male', 'demiboy']:
                     col2 += "nephew"
                 else:
                     col2 += "sibling's child"
             elif cat.is_uncle_aunt(other_cat):
-                if cat.genderalign in ["female", "trans female"]:
+                if cat.genderalign in ['female', 'trans female', 'demigirl']:
                     col2 += "aunt"
-                elif cat.genderalign in ["male", "trans male"]:
+                elif cat.genderalign in ['male', 'trans male', 'demiboy']:
                     col2 += "uncle"
                 else:
                     col2 += "related: parent's sibling"
@@ -564,11 +553,16 @@ class MediationScreen(Screens):
             elif other_cat.is_parent(cat):
                 col2 += "child"
             elif cat.is_sibling(other_cat) or other_cat.is_sibling(cat):
-                col2 += "sibling"
-            elif not game.clan.clan_settings[
-                "first cousin mates"
-            ] and other_cat.is_cousin(cat):
+                col2 += "sibling"            
+            elif other_cat.is_cousin(cat):
                 col2 += "cousin"
+            elif cat.is_greatgrandkit(other_cat):
+                col2 += "descendant"
+            elif other_cat.is_greatgrandkit(cat):
+                col2 += "ancestor"
+            elif not game.clan.clan_settings["second cousin mates"]:
+                if self.the_cat.is_second_cousin(self.inspect_cat):
+                    col2 += "cousin"
 
         self.selected_cat_elements["col2" + tag] = pygame_gui.elements.UITextBox(
             col2,
@@ -613,6 +607,11 @@ class MediationScreen(Screens):
 
             # If they are not both adults, or the same age, OR they are related, don't display any romantic affection,
             # even if they somehow have some. They should not be able to get any, but it never hurts to check.
+            if not game.clan.clan_settings["second cousin mates"]:
+                    if not related:
+                        if cat.is_second_cousin(other_cat):
+                            related = True
+                            
             if not check_age or related:
                 display_romantic = 0
                 # Print, just for bug checking. Again, they should not be able to get love towards their relative.

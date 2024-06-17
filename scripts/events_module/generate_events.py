@@ -320,7 +320,7 @@ class GenerateEvents:
 
             if "clan_apps" in event.tags and not get_alive_status_cats(Cat_class,
                                                                        ["apprentice", "medicine cat apprentice",
-                                                                        "mediator apprentice"]):
+                                                                        "mediator apprentice" "permaqueen apprentice"]):
                 continue
 
             # If the cat or any of their mates have "no kits" toggled, forgo the adoption event.

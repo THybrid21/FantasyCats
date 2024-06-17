@@ -832,9 +832,20 @@ class ProfileScreen(Screens):
             # NEWLINE ----------
             output += "\n"
 
+        # CAT BUILD        
+        output += "cat build: " + the_cat.pelt.build
+        output += "\n"
+
         # PELT LENGTH
-        output += "fur length: " + the_cat.pelt.length
-        # NEWLINE ----------
+        output += 'fur texture & length: ' + the_cat.pelt.texture + ' ' + the_cat.pelt.length
+        if the_cat.pelt.length == "catfish":
+            output += ' scales'
+        elif the_cat.pelt.length == "skele":
+            output += ' bones'
+        elif the_cat.pelt.length == "bare":
+            output += ' skin'
+        else:    
+            output += ' fur'
 
         if the_cat.pelt.tint != "none":
            output += "\n" 
@@ -1085,11 +1096,9 @@ class ProfileScreen(Screens):
                     the_cat.permanent_condition[condition]["born_with"] is True
                     and the_cat.permanent_condition[condition]["moons_until"] != -2
                 ):
-                    continue
-                if the_cat.permanent_condition in ["sphynxism", "albinism", "melanism"]:
-                    continue  
+                    continue 
 
-            special_conditions = ["paralyzed", "declawed"]
+            special_conditions = ["paralyzed", "declawed", "sphynxism", "albinism", "melanism"]
             all_special = True
             for condition in the_cat.permanent_condition:
                 if condition not in special_conditions:
@@ -2333,7 +2342,11 @@ class ProfileScreen(Screens):
                     object_id="#change_trans_male_button",
                     manager=MANAGER,
                 )
-            elif self.the_cat.genderalign in ["trans female", "trans male"]:
+            elif self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intergender":
+                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
+                                                      starting_height=2, object_id="#change_trans_button",
+                                                      manager=MANAGER)
+            elif self.the_cat.genderalign in ["trans female", "trans male", "demigirl", "demiboy"]:
                 self.cis_trans_button = UIImageButton(
                     scale(pygame.Rect((804, 972), (344, 104))),
                     "",
@@ -2346,6 +2359,8 @@ class ProfileScreen(Screens):
                 "trans female",
                 "male",
                 "trans male",
+                "demigirl",
+                "demiboy"
             ]:
                 self.cis_trans_button = UIImageButton(
                     scale(pygame.Rect((804, 972), (344, 104))),

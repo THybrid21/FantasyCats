@@ -943,26 +943,10 @@ class MakeClanScreen(Screens):
         if selected is not None:
 
             if self.sub_screen == 'choose leader':
-                if selected.pelt.length in ["scug", "saint"]:
-                    self.elements['cat_name'].set_text(str(selected.name) +
+                self.elements['cat_name'].set_text(str(selected.name) +
                                                        ' --> ' +
                                                        selected.name.prefix +
-                                                       ' the Chieftain')                
-                else:
-                    self.elements['cat_name'].set_text(str(selected.name) +
-                                                       ' --> ' +
-                                                       selected.name.prefix +
-                                                       'star')
-            elif self.sub_screen == 'choose deputy' and selected.pelt.length in ["scug", "saint"]:
-                self.elements['cat_name'].set_text(str(selected.name) +
-                                                   ' --> ' +
-                                                   selected.name.prefix +
-                                                   ' the Deputy')  
-            elif self.sub_screen == 'choose med cat' and selected.pelt.length in ["scug", "saint"]:
-                self.elements['cat_name'].set_text(str(selected.name) +
-                                                   ' --> ' +
-                                                   selected.name.prefix +
-                                                   ' the Doctor')                
+                                                       'star')            
             else:
                 self.elements['cat_name'].set_text(str(selected.name))
             self.elements['cat_name'].show()

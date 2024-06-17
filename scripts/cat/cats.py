@@ -439,7 +439,7 @@ class Cat:
             else:
                 self.genderalign = self.gender
         elif self.gender == "intersex":
-            self.genderalign = choice(["male", "female", "intergender"])
+            self.genderalign = choice(["demiboy", "demigirl", "intergender"])
             if nb_chance == 1:
                 self.genderalign = choice(genderqueer_list)
         else:
@@ -1946,6 +1946,12 @@ class Cat:
             self.inheritance = Inheritance(self)
         return self.inheritance.parents.keys()
 
+    def get_greatgrandparents(self):
+        """Returns list containing greatgrandparents of cat(id)."""
+        if not self.inheritance:
+            self.inheritance = Inheritance(self)
+        return self.inheritance.great_grand_parents.keys()
+
     def get_siblings(self):
         """Returns list of the siblings(id)."""
         if not self.inheritance:
@@ -1969,6 +1975,12 @@ class Cat:
         if not self.inheritance:
             self.inheritance = Inheritance(self)
         return other_cat.ID in self.inheritance.kits.keys()
+
+    def is_greatgrandkit(self, other_cat: Cat):
+        """Check if the cat is the grandparent of the other cat."""
+        if not self.inheritance:
+            self.inheritance = Inheritance(self)
+        return other_cat.ID in self.inheritance.great_grandparents.keys() 
 
     def is_sibling(self, other_cat: Cat):
         """Check if the cats are siblings."""
@@ -1999,21 +2011,29 @@ class Cat:
             self.inheritance = Inheritance(self)
         return other_cat.ID in self.inheritance.cousins.keys()
 
-    def is_related(self, other_cat, cousin_allowed):
+    def is_related(self, other_cat):
         """Checks if the given cat is related to the current cat, according to the inheritance."""
         if not self.inheritance:
             self.inheritance = Inheritance(self)
-        if cousin_allowed:
-            return other_cat.ID in self.inheritance.all_but_cousins
         return other_cat.ID in self.inheritance.all_involved
 
-    def get_relatives(self, cousin_allowed=True) -> list:
+    def is_second_cousin(self, other_cat):
+        check_cousins = False
+        if not self.inheritance:
+            self.inheritance = Inheritance(self)
+        ggp_cat = other_cat.get_greatgrandparents()
+        ggp_other = self.get_greatgrandparents()
+        for key in ggp_cat:
+            for key2 in ggp_other:
+                if key == key2:
+                    check_cousins = True
+        return check_cousins
+
+    def get_relatives(self) -> list:
         """Returns a list of ids of all nearly related ancestors."""
         if not self.inheritance:
             self.inheritance = Inheritance(self)
-        if cousin_allowed:
-            return self.inheritance.all_involved
-        return self.inheritance.all_but_cousins
+        return self.inheritance.all_involved
 
     # ---------------------------------------------------------------------------- #
     #                                  conditions                                  #
@@ -2595,19 +2615,12 @@ class Cat:
         other_cat: Cat,
         for_love_interest: bool = False,
         age_restriction: bool = True,
-        first_cousin_mates: bool = False,
         ignore_no_mates: bool = False,
     ):
         """
         Checks if this cat is potential mate for the other cat.
         There are no restrictions if the current cat already has a mate or not (this allows poly-mates).
         """
-
-        try:
-            first_cousin_mates = game.clan.clan_settings["first cousin mates"]
-        except:
-            if "unittest" not in sys.modules:
-                raise
 
         # just to be sure, check if it is not the same cat
         if self.ID == other_cat.ID:
@@ -2618,8 +2631,11 @@ class Cat:
             return False
 
         # Inheritance check
-        if self.is_related(other_cat, first_cousin_mates):
+        if self.is_related(other_cat):
             return False
+        elif not game.clan.clan_settings["second cousin mates"]:
+            if self.is_second_cousin(other_cat):
+                return False
 
         # check exiled, outside, and dead cats
         if (self.dead != other_cat.dead) or self.outside or other_cat.outside:
@@ -3597,6 +3613,8 @@ class Cat:
                 "pelt_name": self.pelt.name,
                 "pelt_color": self.pelt.colour,
                 "pelt_length": self.pelt.length,
+                "pelt_texture": self.pelt.texture,
+                "cat_build": self.pelt.build,
                 "sprite_newborn": self.pelt.cat_sprites['newborn'],
                 "sprite_kitten": self.pelt.cat_sprites['kitten'],
                 "sprite_adolescent": self.pelt.cat_sprites['adolescent'],
@@ -3895,12 +3913,12 @@ class Personality:
             print("No possible traits! Using 'mimic'")
             self.trait = "mimic"
             
-    def facet_wobble(self, max=5):
-        """Makes a small adjustment to all the facets, and redetermines trait if needed."""        
-        self.lawfulness += randint(-max, max)
-        self.stability += randint(-max, max)
-        self.aggression += randint(-max, max)
-        self.sociability += randint(-max, max)
+    def facet_wobble(self, facet_max=5):
+        """Makes a small adjustment to all the facets, and redetermines trait if needed."""
+        self.lawfulness += randint(-facet_max, facet_max)
+        self.stability += randint(-facet_max, facet_max)
+        self.aggression += randint(-facet_max, facet_max)
+        self.sociability += randint(-facet_max, facet_max)
         
     def mentor_influence(self, mentor:Cat):
         """applies mentor influence after the pair go on a patrol together 

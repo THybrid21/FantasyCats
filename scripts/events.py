@@ -1513,7 +1513,8 @@ class Events:
                         index += 1
 
                     # med skill
-                    med_skills = ["CLEVER", "HEALER", "PROPHET", "OMEN", "STAR"]
+                    med_skills = ["CLEVER", "HEALER", "STAR", "OMEN", "DREAM", "CLAIRVOYANT", 
+                                    "PROPHET", "UNKNOWN"]
                     med_skill = False
                     index = 0
                     for entry in med_skills:
@@ -1563,7 +1564,7 @@ class Events:
                             index += 1
 
                         # media skill
-                        media_skills = ["SPEAKER", "MEDIATOR", "INSIGHTFUL", "LORE", "SENSE", "DREAM"]
+                        media_skills = ["SPEAKER", "MEDIATOR", "INSIGHTFUL", "LORE", "SENSE", "CLEVER"]
                         media_skill = False
                         index = 0
                         for entry in media_skills:
@@ -1612,7 +1613,7 @@ class Events:
                                 index += 1
 
                             # queen skill
-                            queen_skills = ["KIT", "STORY", "CAMP", "LORE", "TEACHER"]
+                            queen_skills = ["KIT", "STORY", "CAMP", "LORE", "TEACHER", "QUEEN"]
                             queen_skill = False
                             index = 0
                             for entry in queen_skills:
@@ -1996,6 +1997,8 @@ class Events:
         chance = acc_chances["base_acc_chance"]
         if cat.status in ["medicine cat", "medicine cat apprentice"]:
             chance += acc_chances["med_modifier"]
+        if cat.status in ["permaqueen", "permaqueen apprentice"]:
+            chance += acc_chances["queen_modifier"]
         if cat.age in ["kitten", "adolescent"]:
             chance += acc_chances["baby_modifier"]
         elif cat.age in ["senior adult", "senior"]:
@@ -2014,6 +2017,7 @@ class Events:
             "bullying",
             "insecure",
             "nervous",
+            "skeptic"
         ]:
             chance += acc_chances["grumpy_trait_modifier"]
         if self.ceremony_accessory:
@@ -2238,11 +2242,11 @@ class Events:
         # Adjust kitten mortality by the permaqueens
         chance_death = game.get_config_value("death_related", f"{game.clan.game_mode}_death_chance")
         try:
-            if cat.status == "kitten" or cat.status == "newborn":
+            if cat.status in ["kitten", "newborn"]:
                 num_queens = 0
                 for c in game.clan.clan_cats:
                     if not Cat.all_cats.get(c).outside and not Cat.all_cats.get(c).dead:
-                        if Cat.all_cats.get(c).status == "permaqueen" or Cat.all_cats.get(c).status == "permaqueen apprentice":
+                        if Cat.all_cats.get(c).status in ["permaqueen", "permaqueen apprentice"]:
                             num_queens+=1
                 chance_death+=(num_queens*5)
         except:

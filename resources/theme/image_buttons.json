@@ -3020,6 +3020,23 @@
             }
         }
     },
+    "#change_trans_male_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/change_trans_male.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/change_trans_male_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/change_trans_male_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/change_trans_male_unavailable.png"
+            }
+        }
+    },
     "#change_trans_female_button": {
         "prototype": "#image_button",
         "images": {

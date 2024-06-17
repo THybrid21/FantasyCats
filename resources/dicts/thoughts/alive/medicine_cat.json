@@ -521,7 +521,7 @@
 			"Thought {PRONOUN/m_c/subject} saw a sign from StarClan",
 			"Knows the Clan relies on {PRONOUN/m_c/object}",
 			"Believes deeply in StarClan",
-			"Believes {PRONOUN/m_c/subject} know the way"
+			"Believes {PRONOUN/m_c/subject} {VERB/m_c/know/knows} the way"
         ],
         "main_trait_constraint": [
             "zealous"

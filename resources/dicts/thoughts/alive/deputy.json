@@ -350,7 +350,7 @@
         "thoughts": [
             "Is recalling an old story that might inspire the Clan in tough times",
             "Feels inspired to craft a new legend based on recent events",
-            "Uses the stories of old to help guide {PRONOUN/m_c/self} decisions"
+            "Uses the stories of old to help guide {PRONOUN/m_c/poss} decisions"
         ],
         "main_skill_constraint": [
             "STORY,1"

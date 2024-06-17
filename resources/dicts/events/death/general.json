@@ -19,6 +19,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "dies": true
@@ -79,6 +81,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "dies": true
@@ -143,6 +147,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -207,6 +213,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -273,6 +281,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -337,6 +347,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -401,6 +413,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -465,6 +479,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -529,6 +545,8 @@
                 "medicine cat",
                 "mediator apprentice",
                 "mediator",
+				"permaqueen apprentice", 
+				"permaqueen",
                 "elder"
             ],
             "not_skill": [
@@ -1532,7 +1550,7 @@
         "event_text": "m_c is suddenly struck by a sharp pain in {PRONOUN/m_c/poss} chest. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} found later that day, cold.",
         "m_c": {
             "age": [ "senior" ],
-            "status": ["medicine cat", "mediator", "elder"],
+            "status": ["medicine cat", "mediator", "permaqueen", "elder"],
             "dies": true
         },
         "history": [{
@@ -2152,7 +2170,9 @@
                 "medicine cat apprentice",
                 "medicine cat",
                 "mediator apprentice",
-                "mediator"
+                "mediator",
+				"permaqueen apprentice", 
+				"permaqueen"
             ],
             "not_skill": [
                 "FIGHTER,2"
@@ -2236,7 +2256,9 @@
                 "medicine cat apprentice",
                 "medicine cat",
                 "mediator apprentice",
-                "mediator"
+                "mediator",
+				"permaqueen apprentice", 
+				"permaqueen"
             ],
             "not_skill": [
                 "FIGHTER,2"
@@ -2319,7 +2341,9 @@
                 "medicine cat apprentice",
                 "medicine cat",
                 "mediator apprentice",
-                "mediator"
+                "mediator",
+				"permaqueen apprentice", 
+				"permaqueen"
             ],
             "not_skill": [
                 "FIGHTER,2"

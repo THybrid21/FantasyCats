@@ -209,6 +209,7 @@
 	"accessory_generation": {
 		"base_acc_chance": 150,
 		"med_modifier": -80,
+		"queen_modifier": -45,
 		"baby_modifier": -20,
 		"elder_modifier": 20,
 		"happy_trait_modifier": -30,
@@ -223,7 +224,7 @@
 	"roles": {
 		"mediator_app_chance": 50,
 		"base_medicine_app_chance": 25,
-		"permaqueen_app_chance": 25,
+		"permaqueen_app_chance": 35,
 		"permaqueen_apps_no_mentor": true,
 		"become_mediator_chances": {
 			"warrior": 5000,

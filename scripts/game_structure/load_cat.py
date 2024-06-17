@@ -84,6 +84,8 @@ def json_load():
             new_cat.pelt = Pelt(
                 name=cat["pelt_name"],
                 length=cat["pelt_length"],
+                texture=cat["pelt_texture"],
+                build=cat["cat_build"],
                 colour=cat["pelt_color"],
                 eye_color=cat["eye_colour"],
                 eye_colour2=cat["eye_colour2"] if "eye_colour2" in cat else None,

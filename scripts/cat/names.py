@@ -82,7 +82,7 @@ class Name:
 
         # Set prefix
         if prefix is None:
-            self.give_prefix(colour, biome)
+            self.give_prefix(colour, pelt_length, biome)
             # needed for random dice when we're changing the Prefix
             name_fixpref = True
                     
@@ -116,7 +116,7 @@ class Name:
 
                 # check if random die was for prefix
                 if name_fixpref:
-                    self.give_prefix(colour, biome)
+                    self.give_prefix(colour, pelt_length, biome)
                 else:
                     self.give_suffix(pelt, pelt_length, biome, tortiebase)
                 
@@ -131,7 +131,7 @@ class Name:
                 i += 1
     
     # Generate possible prefix
-    def give_prefix(self, colour, biome):
+    def give_prefix(self, colour, pelt_length, biome):
         named_after_biome = not random.getrandbits(3) # chance for True is 1/8
         # Add possible prefix categories to list.
         possible_prefix_categories = []
@@ -158,6 +158,8 @@ class Name:
                 possible_prefix_categories.append(self.names_dict["purple_prefixes"])
             elif colour in Pelt.pride_colours:
                 possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
+        if pelt_length == "bare":
+            possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])             
         if possible_prefix_categories and not named_after_biome:
             prefix_category = random.choice(possible_prefix_categories)
             self.prefix = random.choice(prefix_category)
@@ -176,45 +178,35 @@ class Name:
     def give_suffix(self, pelt, pelt_length, tortiebase, biome):
         named_after_pelt = not random.getrandbits(2) # Pelt name only gets used if there's an associated suffix.
         possible_suffix_categories = []
-        if pelt_length in ["scug", "saint"]:
-            if named_after_pelt:
-                possible_suffix_categories.append(self.names_dict["slugcat_suffixes"])
-                if pelt in Pelt.tabbies or tortiebase in Pelt.tabbies:
-                    possible_suffix_categories.append(self.names_dict["slugcat_tabby_suffixes"])
-                elif pelt in Pelt.spotted or tortiebase in Pelt.spotted:
-                    possible_suffix_categories.append(self.names_dict["slugcat_spotted_suffixes"])
-                elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
-                    possible_suffix_categories.append(self.names_dict["slugcat_exotic_suffixes"])
-                elif pelt in Pelt.torties:
-                    possible_suffix_categories.append(self.names_dict["slugcat_tortie_suffixes"]) 
-            if possible_suffix_categories:
-                suffix_category = random.choice(possible_suffix_categories)
-                self.suffix = random.choice(suffix_category)
-            else:
-                self.suffix = random.choice(self.names_dict["slugcat_suffixes"])  
+
+        if pelt_length == "bare":
+            possible_suffix_categories.append(self.names_dict["sphynx_suffixes"])
+        elif pelt_length == "snat":
+            possible_suffix_categories.append(self.names_dict["snat_suffixes"])        
+        elif pelt_length == "skele":
+            possible_suffix_categories.append(self.names_dict["skele_suffixes"])  
+        elif pelt_length == "catfish":
+            possible_suffix_categories.append(self.names_dict["amphi_suffixes"])
         else:
-            if named_after_pelt:
-                possible_suffix_categories.append(self.names_dict["normal_suffixes"])
-                if pelt in Pelt.tabbies or tortiebase in Pelt.tabbies:
-                    possible_suffix_categories.append(self.names_dict["tabby_suffixes"])
-                elif pelt in Pelt.spotted or tortiebase in Pelt.spotted:
-                    possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
-                elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
-                    possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
-                elif pelt in Pelt.torties:
-                    possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
-            if possible_suffix_categories:
-                suffix_category = random.choice(possible_suffix_categories)
-                self.suffix = random.choice(suffix_category)
-            else:
-                self.suffix = random.choice(self.names_dict["normal_suffixes"])
+            possible_suffix_categories.append(self.names_dict["normal_suffixes"]) 
+
+        if named_after_pelt:
+            if pelt in Pelt.tabbies or tortiebase in Pelt.tabbies:
+                possible_suffix_categories.append(self.names_dict["tabby_suffixes"])
+            elif pelt in Pelt.spotted or tortiebase in Pelt.spotted:
+                possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
+            elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
+                possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
+            elif pelt in Pelt.torties:
+                possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
+
+        suffix_category = random.choice(possible_suffix_categories)
+        self.suffix = random.choice(suffix_category)
 
     def __repr__(self):
 
         # Handles predefined suffixes (such as newborns being kit), then suffixes based on ages (fixes #2004, just trust me)
-        if self.suffix in self.names_dict["all_scugs"] and self.status in self.names_dict["scug_special_suffixes"] and not self.specsuffix_hidden:
-            return self.prefix + self.names_dict["scug_special_suffixes"][self.status]
-        elif self.status in self.names_dict["special_suffixes"] and not self.specsuffix_hidden:
+        if self.status in self.names_dict["special_suffixes"] and not self.specsuffix_hidden:
             return self.prefix + self.names_dict["special_suffixes"][self.status]
 
         if game.config['fun']['april_fools']:

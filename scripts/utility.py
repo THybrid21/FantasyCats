@@ -2415,18 +2415,19 @@ def generate_sprite(
             new_sprite.blit(patches, (0, 0))
 
         # TINTS
-        if (
-                cat.pelt.tint != "none"
-                and cat.pelt.tint in sprites.cat_tints["tint_colours"]
-        ):
-            # Multiply with alpha does not work as you would expect - it just lowers the alpha of the
-            # entire surface. To get around this, we first blit the tint onto a white background to dull it,
-            # then blit the surface onto the sprite with pygame.BLEND_RGB_MULT
+        # Multiply & Add with alpha does not work as you would expect - it just applies to the alpha of the
+        # entire surface. To get around this, we first blit the tint onto a white background to dull it,
+        # then blit the surface onto the sprite with pygame.BLEND_RGB_MULT
+        if (cat.pelt.tint != "none" and cat.pelt.tint in sprites.cat_tints["tint_colours"]):
             tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
             tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+        if cat.pelt.tint != "none" and cat.pelt.tint in sprites.cat_tints["dilute_tint_colours"]:
+            tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+            tint.fill(tuple(sprites.cat_tints["dilute_tint_colours"][cat.pelt.tint]))
+            new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
 
-        # draw white patches & vit
+        # draw white patches, points & vit
         if cat.pelt.white_patches is not None:
             white_patches = sprites.sprites[
                 "white" + cat.pelt.white_patches + cat_sprite
@@ -2449,22 +2450,6 @@ def generate_sprite(
                 white_patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(white_patches, (0, 0))
 
-        if cat.pelt.vitiligo:
-            vitiligo = sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite].copy()
-            if cat.pelt.vitiligo_tint != "none" and cat.pelt.vitiligo_tint in sprites.vitiligo_tint[
-                "tint_colours"]:
-                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                tint.fill(tuple(sprites.vitiligo_tint["tint_colours"][cat.pelt.vitiligo_tint]))
-                vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
-            new_sprite.blit(vitiligo, (0, 0))
-
-        # draw albinism/melanism & points
-
-        if cat.pelt.albino != None:
-            new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
-        elif cat.pelt.melanistic != None:
-            new_sprite.blit(sprites.sprites['melanism' + cat.pelt.melanistic + cat_sprite], (0, 0))
-
         if cat.pelt.points:
             points = sprites.sprites["white" + cat.pelt.points + cat_sprite].copy()
             if (
@@ -2482,6 +2467,22 @@ def generate_sprite(
                 )
                 points.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(points, (0, 0))
+
+        if cat.pelt.vitiligo:
+            vitiligo = sprites.sprites['white' + cat.pelt.vitiligo + cat_sprite].copy()
+            if cat.pelt.vitiligo_tint != "none" and cat.pelt.vitiligo_tint in sprites.vitiligo_tint[
+                "tint_colours"]:
+                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                tint.fill(tuple(sprites.vitiligo_tint["tint_colours"][cat.pelt.vitiligo_tint]))
+                vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+            new_sprite.blit(vitiligo, (0, 0))
+
+        # draw albinism/melanism
+
+        if cat.pelt.albino != None:
+            new_sprite.blit(sprites.sprites['albinism' + cat.pelt.albino + cat_sprite], (0, 0))
+        elif cat.pelt.melanistic != None:
+            new_sprite.blit(sprites.sprites['melanism' + cat.pelt.melanistic + cat_sprite], (0, 0))
 
         # draw eyes & scars1
         eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()

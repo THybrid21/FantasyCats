@@ -21,7 +21,12 @@
             "Is feeling the weight of responsibility in shaping young minds and spirits",
             "Is reminiscing about {PRONOUN/m_c/poss} own days as a kit and the lessons {PRONOUN/m_c/subject} learned",
             "Plans ways to safely introduce kits to the world beyond the nursery",
-            "Is pondering on the legacy {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to leave for {PRONOUN/m_c/poss} own potential kits within the Clan"						
+            "Is pondering on the legacy {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to leave for {PRONOUN/m_c/poss} own potential kits within the Clan",
+			"Has empty nest syndrome",
+			"Is feeling like having kittens of {PRONOUN/m_c/poss} own",
+			"Wonders if {PRONOUN/m_c/subject} could get away with extra prey this moon",
+			"Is cleaning up the Nursery",
+			"Is helping rebuild the camp boundaries"
         ]
     },
 	{
@@ -39,11 +44,28 @@
 			"Lost sight of r_c in the camp",
             "Is helping to mediate minor squabbles between kits",
             "Is considering how to foster camaraderie among kits from different litters",
-            "Is understanding the fine line between allowing kits to explore and ensuring their safety"
+            "Is understanding the fine line between allowing kits to explore and ensuring their safety",
+			"Is teaching the kittens stories about StarClan"
         ],
         "random_status_constraint": [
             "kitten"
         ]		
+    },
+	{
+        "id": "gen_permaqueen_dead_kits",
+        "thoughts": [
+            "Worries about the safety of kittens who have passed on",
+			"Is thinking about r_c",
+			"Hopes that the kittens in StarClan are well cared for",
+			"Wonders if {PRONOUN/m_c/subject} will one day be caring for the kits in StarClan"
+        ],
+        "random_status_constraint": [
+            "newborn",
+			"kitten"
+        ],
+		"random_living_status": [
+			"starclan"
+		]
     },
 	{
         "id": "gen_permaqueen_medcat",
@@ -71,5 +93,36 @@
 			"Feels anxious about the state of the Nursery without {PRONOUN/m_c/object}",
 			"Doesn't enjoy waiting out {PRONOUN/m_c/poss} recovery"
         ]
+    },
+    {
+        "id": "queen_skill"
+		"thoughts": [
+            "Is preparing mentally for the newest round of Clan kits",
+			"Is refreshing the moss in the kitting nests",
+			"Is checking up on {PRONOUN/m_c/poss} clanmates",
+			"Is making sure that the nursery is clean and prepared",
+			"Worries about the clan's ability to handle unexpected kits",
+			"Takes care to ensure that the nursery is clear of anything harmful"
+        ],
+		"main_skill_constraint": [
+			"QUEEN,3"
+		]
+    },
+    {
+        "id": "queen_skills_to_app"
+		"thoughts": [
+            "Is teaching r_c how to prepare for new kittens in the nursery",
+			"Talks with r_c about how to identify when a queen is due",
+			"Is quizzing {PRONOUN/m_c/poss} apprentice on proper kitting care"
+        ],
+		"main_skill_constraint": [
+			"QUEEN,3"
+		],
+        "random_status_constraint": [
+            "permaqueen apprentice"
+        ],
+        "relationship_constraint": [
+            "mentor/app"
+        ]	
     }
 ]

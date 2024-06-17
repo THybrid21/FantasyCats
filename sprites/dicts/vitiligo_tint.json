@@ -23,12 +23,12 @@
   },
   "possible_tints": {
     "basic": ["none", "off white", "gray", "black", "starkit", "mint", "gold", "lilac"],
-    "black": ["off white", "gray"],
+    "black": ["none", "off white", "gray"],
     "gray": ["off white", "black"],
     "ginger": ["off white", "gold"],
     "brown": ["none", "gray", "lilac", "gold"],
-    "green": ["mint", "gold"],
-	"white": ["none", "off white", "gray"]
+    "green": ["none", "mint", "gold"],
+	"white": ["black", "gray"]
   },
   "tint_colours":
   {

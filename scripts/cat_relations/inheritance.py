@@ -44,6 +44,7 @@ class Inheritance:
         self.parents_siblings = {}
         self.cousins = {}
         self.grand_parents = {}
+        self.great_grandparents = {}
         self.grand_kits = {}
         self.all_involved = []
         self.all_but_cousins = []
@@ -70,6 +71,7 @@ class Inheritance:
         self.parents_siblings = {}
         self.cousins = {}
         self.grand_parents = {}
+        self.great_grand_parents = {}
         self.grand_kits = {}
         self.all_involved = []
         self.all_but_cousins = []
@@ -83,6 +85,9 @@ class Inheritance:
 
         # grandparents
         self.init_grandparents()
+
+        #great grandparents
+        self.init_great_grand_parents()
 
         # mates
         self.init_mates()
@@ -354,6 +359,28 @@ class Inheritance:
                 self.grand_parents[grand_id]["additional"].append(
                     f"parent of {str(parent_cat.name)}"
                 )
+
+    def init_great_grand_parents(self):
+        """Initial the class, with the focus of the great grand parent relation."""
+        for grand_parent_id, value in self.grand_parents.items():
+            grandparent_cat = self.cat.fetch_cat(grand_parent_id)
+            greatgrandparents = self.get_parents(grandparent_cat)
+            for grand_id in greatgrandparents:
+                if grand_id in self.parents.keys():
+                    parent_relation = self.parents[grand_id]
+                    if parent_relation["type"] == RelationType.BLOOD:
+                        print("WARNING - How did this happen? A greatgrandparent is also the blood parent? Please report this!")
+                    continue # even it is not blood related, it is confusing
+                great_grand_type = RelationType.BLOOD if value["type"] == RelationType.BLOOD else RelationType.NOT_BLOOD
+                if grand_id not in self.great_grand_parents:
+                    self.great_grand_parents[grand_id] = {
+                        "type": great_grand_type,
+                        "additional": []
+                    }
+                    self.all_involved.append(grand_id)
+                    self.all_but_cousins.append(grand_id)
+                self.great_grand_parents[grand_id]["additional"].append(f"parent of {str(grandparent_cat.name)}")
+
 
     def init_kits(self, inter_id, inter_cat):
         """Create a kit relationship."""
@@ -741,6 +768,22 @@ class Inheritance:
         return self.get_blood_relatives(
             self.grand_parents
         ) + self.get_no_blood_relatives(self.grand_parents)
+    
+    # ---------------------------------------------------------------------------- #
+    #                                 great_grand_parents                          #
+    # ---------------------------------------------------------------------------- #
+
+    def get_blood_great_grand_parents(self) -> list:
+        """Returns a list of blood related grand_parents id's."""
+        return self.get_blood_relatives(self.great_grand_parents)
+
+    def get_not_great_blood_grand_parents(self) -> list:
+        """Returns a list of id's of grand_parents, which are not related by blood to the cat."""
+        return self.get_no_blood_relatives(self.great_grand_parents)
+
+    def get_great_grand_parents(self) -> list:
+        """Returns a list of id's which are grand_parents to the cat, according to the inheritance hierarchy."""
+        return self.get_blood_relatives(self.great_grand_parents) + self.get_no_blood_relatives(self.great_grand_parents)
 
     # ---------------------------------------------------------------------------- #
     #                                  grand_kits                                  #
@@ -802,6 +845,8 @@ class Inheritance:
             all_relations.append(self.cousins[cat_id])
         if cat_id in self.grand_parents:
             all_relations.append(self.grand_parents[cat_id])
+        if cat_id in self.great_grand_parents:
+            all_relations.append(self.great_grand_parents[cat_id])
         if cat_id in self.grand_kits:
             all_relations.append(self.grand_kits[cat_id])
 

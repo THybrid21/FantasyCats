@@ -1217,28 +1217,20 @@ class Pregnancy_Events:
         if avg_age > 80:
             inverse_chance = int(inverse_chance * 0.8)
 
-        # 'INBREED' counter
+        # 'FAMILIAL' counter
         # - increase inverse chance if one of the current cats belongs in the biggest family
-        if not Pregnancy_Events.biggest_family:  # set the family if not already
+        if not Pregnancy_Events.biggest_family: # set the family if not already
             Pregnancy_Events.set_biggest_family()
 
-        if (
-            first_parent.ID in Pregnancy_Events.biggest_family
-            or second_parent
-            and second_parent.ID in Pregnancy_Events.biggest_family
-        ):
+        if first_parent.ID in Pregnancy_Events.biggest_family or second_parent and second_parent.ID in Pregnancy_Events.biggest_family:
             inverse_chance = int(inverse_chance * 1.7)
 
         # - decrease inverse chance if the current family is small
-        if len(first_parent.get_relatives(clan.clan_settings["first cousin mates"])) < (
-            living_cats / 15
-        ):
+        if len(first_parent.get_relatives()) < (living_cats/15):
             inverse_chance = int(inverse_chance * 0.7)
 
         # - decrease inverse chance single parents if settings allow an biggest family is huge
-        settings_allow = (
-            not second_parent and not clan.clan_settings["single parentage"]
-        )
+        settings_allow = not second_parent and not clan.clan_settings['single parentage']
         if settings_allow and Pregnancy_Events.biggest_family_is_big():
             inverse_chance = int(inverse_chance * 0.9)
 

@@ -116,11 +116,6 @@ class Scar_Events():
         if len(cat.pelt.scars) < 8 and not int(random.random() * chance):
             
             # move potential scar text into displayed scar text
-            
-
-        if len(cat.pelt.scars) < 4 and not int(random.random() * chance):
-
-            # move potential scar text into displayed scar text
 
             scar_pool = [i for i in Scar_Events.scar_allowed[injury_name] if i not in cat.pelt.scars]
             if 'NOPAW' in cat.pelt.scars:
@@ -154,7 +149,7 @@ class Scar_Events():
                 condition_scars = {
                     "LEGBITE", "THREE", "NOPAW", "TOETRAP", "NOTAIL", "HALFTAIL", "LEFTEAR", "RIGHTEAR",
                     "MANLEG", "BRIGHTHEART", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "LEFTBLIND",
-                    "RIGHTBLIND", "BOTHBLIND", "RATBITE"
+                    "RIGHTBLIND", "BOTHBLIND", "RATBITE", "DECLAWED", "RASH"
                 }
 
                 scar_pool = list(set(scar_pool).difference(condition_scars))

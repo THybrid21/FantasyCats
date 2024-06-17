@@ -1848,12 +1848,15 @@
             "senior adult": 0,
             "senior": 0
         },
+        "illness_infectiousness": [],
         "risks": [
             {
                 "name": "world tired",
                 "chance":90
             }
 		],
+        "also_got": [],
+        "cause_permanent": [],
         "herbs": [
             "juniper",
             "thyme",

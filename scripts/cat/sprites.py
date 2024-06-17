@@ -242,7 +242,7 @@ class Sprites:
 
         vitiligo = [
             ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY'], 
-            ['SHADOWSIGHT']
+            ['SHADOWSIGHT', 'HALFSPLASH']
         ]
         
         for row, vitiligo in enumerate(vitiligo):

@@ -1,0 +1,12 @@
+{
+  "possible_tints": {
+    "basic": ["orange", "blue", "green", "none", "none"]
+  },
+  "tint_colours":
+  {
+    "orange": [255, 230, 214],
+    "blue": [214, 230, 255],
+    "green": [214, 255, 224],
+    "none": null
+  }
+}

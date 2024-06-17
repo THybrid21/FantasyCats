@@ -11,7 +11,9 @@
                 "daring",
                 "impulsive",
                 "inquisitive",
-                "troublesome"
+                "troublesome",
+				"curious",
+				"defiant"
             ]
         },
         "injury": [
@@ -33,7 +35,9 @@
                 "daring",
                 "impulsive",
                 "inquisitive",
-                "troublesome"
+                "troublesome",
+				"curious",
+				"defiant"
             ]
         },
         "injury": [
@@ -59,7 +63,8 @@
                 "bullying",
                 "impulsive",
                 "noisy",
-                "troublesome"
+                "troublesome",
+				"defiant"
             ]
         },
         "injury": [
@@ -81,7 +86,9 @@
                 "daring",
                 "impulsive",
                 "inquisitive",
-                "troublesome"
+                "troublesome",
+				"curious",
+				"defiant"
             ]
         },
         "injury": [
@@ -103,7 +110,9 @@
                 "daring",
                 "impulsive",
                 "inquisitive",
-                "troublesome"
+                "troublesome",
+				"curious",
+				"defiant"
             ]
         },
         "injury": [
@@ -127,7 +136,8 @@
                 "bullying",
                 "impulsive",
                 "noisy",
-                "troublesome"
+                "troublesome",
+				"defiant"
             ]
         },
         "injury": [
@@ -405,7 +415,8 @@
                 "strict",
                 "troublesome",
                 "vengeful",
-                "bold"
+                "bold",
+				"dramatic"
             ]
         },
         "injury": [
@@ -435,7 +446,8 @@
                 "strict",
                 "troublesome",
                 "vengeful",
-                "bold"
+                "bold",
+				"zealous"
             ]
         },
         "injury": [
@@ -466,7 +478,8 @@
                 "lonesome",
                 "nervous",
                 "patient",
-                "thoughtful"
+                "thoughtful",
+				"humble"
             ]
         },
         "injury": [
@@ -503,7 +516,8 @@
                 "empathetic",
                 "patient",
                 "thoughtful",
-                "wise"
+                "wise",
+				"dreamer"
             ]
         },
         "r_c": {
@@ -525,7 +539,9 @@
                 "shameless",
                 "strict",
                 "troublesome",
-                "vengeful"
+                "vengeful",
+				"haughty",
+				"stubborn"
             ],
             "relationship_status": ["dislike_25"]
         },
@@ -595,7 +611,8 @@
                 "bold",
                 "fierce",
                 "bloodthirsty",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "r_c": {
@@ -690,7 +707,8 @@
                 "bold",
                 "fierce",
                 "bloodthirsty",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "r_c": {
@@ -769,7 +787,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "troublesome"
+                "troublesome",
+				"stubborn"
             ]
         },
         "injury": [
@@ -892,7 +911,9 @@
                 "arrogant",
                 "competitive",
                 "flamboyant",
-                "rebellious"
+                "rebellious",
+				"stubborn",
+				"zealous"
             ]
         },
         "injury": [
@@ -998,7 +1019,9 @@
                 "daring",
                 "impulsive",
                 "inquisitive",
-                "troublesome"
+                "troublesome",
+				"curious",
+				"defiant"
             ]
         },
         "injury": [
@@ -1087,9 +1110,11 @@
                 "apprentice",
                 "mediator apprentice",
                 "medicine cat apprentice",
+				"permaqueen apprentice",
                 "warrior",
                 "mediator",
                 "medicine cat",
+				"permaqueen",
                 "deputy",
                 "leader",
                 "elder"
@@ -1616,7 +1641,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"haughty",
+				"dramatic",
+				"zealous"
             ]
         },
         "r_c": {
@@ -1681,7 +1709,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"haughty",
+				"dramatic",
+				"zealous"
             ]
         },
         "r_c": {
@@ -1735,7 +1766,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "troublesome"
+                "troublesome",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "injury": [
@@ -1768,7 +1802,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "injury": [
@@ -1813,7 +1850,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "injury": [
@@ -1851,7 +1891,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "r_c": {
@@ -1905,7 +1948,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "troublesome"
+                "troublesome",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "injury": [
@@ -1938,7 +1984,10 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"haughty",
+				"zealous"
             ]
         },
         "injury": [
@@ -1986,7 +2035,12 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"haughty",
+				"zealous",
+				"humble",
+				"skeptic"
             ]
         },
         "r_c": {
@@ -2060,7 +2114,13 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"dramatic",
+				"humble",
+				"wandering",
+				"stubborn",
+				"skeptic",
+				"zealous"
             ]
         },
         "r_c": {
@@ -2121,7 +2181,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "injury": [
@@ -2175,7 +2236,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "injury": [
@@ -2223,7 +2285,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "r_c": {
@@ -2293,7 +2356,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "injury": [
@@ -2341,7 +2405,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "vengeful"
+                "vengeful",
+				"zealous"
             ]
         },
         "r_c": {
@@ -3370,7 +3435,8 @@
                 "ambitious",
                 "daring",
                 "bold",
-                "loyal"
+                "loyal",
+				"zealous"
             ]
         },
         "r_c": {
@@ -3550,7 +3616,8 @@
                 "insecure",
                 "lonesome",
                 "nervous",
-                "sneaky"
+                "sneaky",
+				"wandering"
             ]
         },
         "injury": [
@@ -3578,7 +3645,8 @@
                 "bold",
                 "daring",
                 "fierce",
-                "troublesome"
+                "troublesome",
+				"zealous"
             ]
         },
         "injury": [
@@ -3607,7 +3675,8 @@
                 "ambitious",
                 "daring",
                 "bold",
-                "loyal"
+                "loyal",
+				"zealous"
             ]
         },
         "r_c": {
@@ -3640,7 +3709,8 @@
                 "ambitious",
                 "daring",
                 "bold",
-                "loyal"
+                "loyal",
+				"zealous"
             ]
         },
         "r_c": {
@@ -3771,7 +3841,8 @@
                 "righteous",
                 "strict",
                 "vengeful",
-                "loyal"
+                "loyal",
+				"zealous"
             ]
         },
         "injury": [
@@ -3859,7 +3930,8 @@
                 "righteous",
                 "strict",
                 "vengeful",
-                "loyal"
+                "loyal",
+				"zealous"
             ]
         },
         "injury": [
@@ -5678,5 +5750,699 @@
           "adjust": "reduce_eighth"
       }
     ]
-  }
+  },
+    {
+        "event_id": "gen_injury_sunburn_any1",
+        "location": ["mountainous", "beach", "plains"],
+        "season": ["newleaf", "greenleaf"],
+        "weight": 20,
+        "event_text": "The sun has been particularly harsh this season and poor m_c is left wincing when {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up with a sunburn.",
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["sunburn"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_sunburn_any2",
+        "location": ["mountainous", "beach", "plains"],
+        "season": ["newleaf", "greenleaf"],
+        "weight": 20,
+        "event_text": "After a hard day's work out in the sun m_c pads over to the medicine den wincing with the beginnings of sunburn under {PRONOUN/m_c/poss} fur.",
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["sunburn"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_sunburn_any3",
+        "location": ["any"],
+        "season": ["newleaf", "greenleaf"],
+        "weight": 20,
+        "event_text": "m_c has had the unfortunate luck to get a sunburn.",
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["sunburn"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_anysenioradultsenior1",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "Where ordinarily m_c would be complaining about the itchy tick bites dotting {PRONOUN/m_c/poss} pelt, now {PRONOUN/m_c/subject} {VERB/m_c/sit/sits} silent with them.",
+        "m_c": {
+            "age": [
+                "senior adult",
+                "senior"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["severe tick bites"]
+            }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_anysenioradultsenior2",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "m_c started the day yowling about {PRONOUN/m_c/poss} ticks, now though, worringly {PRONOUN/m_c/poss} yowling has fallen quiet and slurred.",
+        "m_c": {
+            "age": [
+                "senior adult",
+                "senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "cold",
+                "fierce",
+                "shameless",
+                "strict",
+                "troublesome",
+                "vengeful",
+                "bold",
+				"dramatic"
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["severe tick bites"]
+            }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_anysenioradultsenior3",
+        "location": ["any"],
+        "season": ["any"],
+        "tags": ["clan:apprentice"],
+        "weight": 20,
+        "event_text": "With a pointed tone, m_c reminds other cats that {PRONOUN/m_c/poss} ticks haven't been seen to. Each time {PRONOUN/m_c/subject} {VERB/m_c/repeat/repeats} the statement it's more slurred.",
+        "m_c": {
+            "age": [
+                "senior adult",
+                "senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "cold",
+                "fierce",
+                "shameless",
+                "strict",
+                "troublesome",
+                "vengeful",
+                "bold",
+				"zealous"
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["severe tick bites"]
+            }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_anysenioradultsenior4",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "m_c's quietly been getting more frustrated by {PRONOUN/m_c/poss} tick bites, refusing to bother anyone with the issue. It becomes very clear something is wrong when {PRONOUN/m_c/subject} {VERB/m_c/fall/falls} over in the nest.",
+        "m_c": {
+            "age": [
+                "senior adult",
+                "senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "altruistic",
+                "calm",
+                "careful",
+                "insecure",
+                "lonesome",
+                "nervous",
+                "patient",
+                "thoughtful",
+				"humble"
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "severe tick bites"
+                ]
+            }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
+        ]
+    },
+    {
+        "event_id": "gen_injury_tickbites_helper0",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "During tick duty poor m_c suffered from some tick bites {PRONOUN/m_c/self}.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "any"
+            ]
+        },
+		"r_c": {
+			"age": [
+				"senior adult",
+				"senior"
+			],
+			"status": [
+				"any"
+			]
+		},
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_tickbites_helper1",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "While helping out r_c with {PRONOUN/m_c/poss} ticks, poor m_c suffered a few bites of {PRONOUN/m_c/poss} own.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "calm",
+                "compassionate",
+                "dreamer",
+				"faithful",
+				"humble",
+				"loving",
+				"zealous"
+            ]
+        },
+		"r_c": {
+			"age": [
+				"senior adult",
+				"senior"
+			],
+			"status": [
+				"any"
+			]
+		},
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_tickbites_helper2",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "During tick duty m_c wasn't paying attention and as a result has gotten a number of itchy tick bites of {PRONOUN/m_c/poss} own.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "troublesome",
+				"childish",
+				"grumpy",
+				"oblivious"
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_helper0",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "During tick duty poor m_c suffered from some tick bites {PRONOUN/m_c/self}. It's left {PRONOUN/m_c/object} disoriented and stumbling around the camp.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "any"
+            ]
+        },
+		"r_c": {
+			"age": [
+				"senior adult",
+				"senior"
+			],
+			"status": [
+				"any"
+			]
+		},
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "severe tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_helper1",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "After helping r_c out with {PRONOUN/r_c/poss} ticks m_c stumbles, limbs not properly responding, it appears that {PRONOUN/m_c/subject} got bitten by the ticks {PRONOUN/m_c/self}.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "calm",
+                "compassionate",
+                "dreamer",
+				"faithful",
+				"humble",
+				"loving",
+				"zealous"
+            ]
+        },
+		"r_c": {
+			"age": [
+				"senior adult",
+				"senior"
+			],
+			"status": [
+				"any"
+			]
+		},
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_severetickbites_helper2",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "Because m_c wasn't paying attention while on tick duty {PRONOUN/m_c/subject} {VERB/m_c/have/has} suffered from some bites of {PRONOUN/m_c/poss} own, and it's paralysis tick season.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": [
+				"apprentice", 
+				"medicine cat apprentic", 
+				"permaqueen apprentice", 
+				"mediator apprentice", 
+				"medicine cat"
+			],
+            "trait": [
+                "troublesome",
+				"childish",
+				"grumpy",
+				"oblivious"
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": [
+                    "severe tick bites"
+                ]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_wrenchedclaws_any1",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "While out in the territory m_c was captured by Twolegs but managed to escape and make it back home. Although now {PRONOUN/m_c/subject} {VERB/m_c/have/has} a bigger issue and sore paws.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["wrenched claws"]
+            }
+        ],
+		"history": [
+		  {
+                "cats": ["m_c"],
+                "scar": "m_c was scarred after been taken away by Twolegs."
+		  }
+	  ]
+    },
+    {
+        "event_id": "gen_injury_wrenchedclaws_any2",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "m_c had the unfortunate luck to be caught briefly by Twolegs. While {PRONOUN/m_c/subject} did make it back safely to c_n now {PRONOUN/m_c/poss} keeps complaining about {PRONOUN/m_c/poss} poor sore paws.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["wrenched claws"]
+            }
+        ],
+		"history": [
+		  {
+                "cats": ["m_c"],
+                "scar": "m_c was scarred after been taken away by Twolegs."
+		  }
+	  ]
+    },
+    {
+        "event_id": "gen_injury_wrenchedclaws_any3",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "Thinking that {PRONOUN/m_c/subject} could easily fight a twoleg m_c went out into the territory hissing and spitting only to come back with sore paws and hurt pride.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "fierce",
+                "bloodthirsty",
+                "bold",
+				"vengeful",
+				"ambitious",
+				"rebellious",
+				"arrogant",
+				"haughty"				
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["wrenched claws"]
+            }
+        ],
+		"history": [
+		  {
+                "cats": ["m_c"],
+                "scar": "m_c was scarred after been taken away by Twolegs."
+		  }
+	  ]
+    },
+    {
+        "event_id": "gen_injury_wrenchedclaws_any4",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "When m_c was out wandering the territory {PRONOUN/m_c/subject} stumbled upon some Twolegs, while {PRONOUN/m_c/poss} eventually got away it wasn't without injury.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "oblivious",
+				"wandering",
+				"strange",
+				"dreamer",
+				"thoughtful"
+				
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["wrenched claws"]
+            }
+        ],
+		"history": [
+		  {
+                "cats": ["m_c"],
+                "scar": "m_c was scarred after been taken away by Twolegs."
+		  }
+	  ]
+    },
+    {
+        "event_id": "gen_injury_earache_any1",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "Poor m_c's had the unfortunate luck to get an earache this moon.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["earache"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_earache_any2",
+        "location": ["any"],
+        "season": ["any"],
+        "tags": ["clan:medicine cat"],
+        "weight": 20,
+        "event_text": "After m_c visits the medicine den for some dizziness it's revealed that the cause is an earache.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["earache"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_fatigue_any",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "Despite sleeping, m_c still feels absolutely exhausted, it would seem that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten some fatigue.",
+        "m_c": {
+            "age": [
+                "any"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["fatigue"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_kittenspace_any1",
+        "location": ["any"],
+        "season": ["any"],
+        "tags": ["clan:medicine cat"],
+        "weight": 20,
+        "event_text": "After talking with the medicine cat about everything that's been on {PRONOUN/m_c/poss} mind, m_c's decided to try a little bit of regression in order to cope.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["kittenspace"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_kittenspace_any2",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "m_c's been acting a little bit different than usual, much younger and more reliant on {PRONOUN/m_c/poss} clanmates.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "childish",
+				"insecure",
+				"nervous",
+				"dreamer",
+				"oblivious"
+				
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["kittenspace"]
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_otherspace_any",
+        "location": ["any"],
+        "season": ["any"],
+        "weight": 20,
+        "event_text": "After getting stressed out by taking on too many jobs at once m_c's started to act like something other than a cat.",
+        "m_c": {
+            "age": [
+                "adolescent",
+				"young adult",
+				"adult",
+				"senior adult",
+				"senior"
+            ],
+            "status": ["any"],
+            "trait": [
+                "childish",
+				"insecure",
+				"nervous",
+				"dreamer",
+				"oblivious"
+				
+            ]
+        },
+        "injury": [
+            {
+                "cats": ["m_c"],
+                "injuries": ["otherspace"]
+            }
+        ]
+    }
+	
 ]

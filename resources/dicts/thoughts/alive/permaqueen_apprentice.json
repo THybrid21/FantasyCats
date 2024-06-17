@@ -1,24 +1,84 @@
 [
     {
-        "id": "gen_queen's_apprentice",
+        "id": "gen_permaqueen_app",
         "thoughts": [
-            "Is soaking up knowledge about nurturing kits",
-            "Is learning the subtle art of comforting upset kits",
-            "Is discovering the balance between discipline and care in the nursery",
-            "Wonders about the challenges of being a full-fledged queen",
-            "Yearns for the day when they can care for kits independently",
-            "Is picking up lullabies and tales to soothe restless kits",
-            "Is learning the importance of patience in the nursery",
+            "Is lazing about the nursery",
+			"Is happy to be in the peace of the nursery",
+			"Wonders about what the future may hold for the Clan",
+			"Is practicing {PRONOUN/m_c/poss} nest building techniques",
+			"Is stressing about all the kitsitting techniques there are to learn",
+			"Yearns for the day when {PRONOUN/m_c/subject} {VERB/m_c/are/is} a full permaqueen",
+			"Wishes {PRONOUN/m_c/subject} could go on a real patrol",
+			"Is learning about the balance between reasonable discipline and unfair punishment",
+			"Is picking up lullabies to use on sleepless kittens",
+			"Thinks that clan history is kind of boring",
+			"Finds nest duties somewhat boring",
+			"Is learning all about the balance of prey a young kitten needs",
+			"Is practicing talking with kittens with some rocks",
+			"Got startled by a sound outside the nursery",
+			"Has to gather fresh moss for the nursery",
+			"Is struggling to plan for the future",
+			"Is hoping to learn something new today",
+			"Feels unsure of what to do when the nursery is empty",
+			"Feels relaxed after a productive day",
+			"Is feeling productive"
+        ]
+    },
+	{
+        "id": "gen_permaqueen_app_alive_kits",
+        "thoughts": [
             "Is assisting a queen with particularly mischievous kits",
-            "Is practicing keeping a calm demeanor amidst nursery chaos",
-            "Is learning how to forge connections between kits of different ages",
-            "Is understanding the significance of early Clan teachings for kits",
+            "Is keeping a calm demeanor amidst nursery chaos",			
+            "Is wondering about the destinies that await kits outside the nursery",
+            "Is seeking guidance from StarClan for the young ones",			
+            "Is learning the importance of patience when kits ask endless questions",
+            "Is thinking of ways to comfort a kit who had a troubling dream",
+            "Is cherishing the small moments, like the soft purring of contented kits",
+            "Is marveling at how quickly kits grow and change each day",
+			"Had to scold r_c for trying to sneak out",
+			"Lost sight of r_c in the camp",
             "Is helping to mediate minor squabbles between kits",
-            "Is refining skills in recognizing the unique needs of each kit",
-            "Wishes they had a deeper understanding of each kit's personality",
-            "Is taking note of the dietary needs of growing kits",
-            "Is learning the importance of a safe and warm environment in the nursery",
-            "Is gathering moss for the nursery"
+            "Is considering how to foster camaraderie among kits from different litters",
+            "Is understanding the fine line between allowing kits to explore and ensuring their safety",
+			"Assists a queen with particularly troublesome kits",
+			"Had to comfort r_c alone"
+        ],
+        "random_status_constraint": [
+            "kitten"
+        ]		
+    },
+	{
+        "id": "gen_permaqueen_app_dead_kits",
+        "thoughts": [
+            "Wonders who takes care of the kits in StarClan",
+			"Thinks about how r_c is doing in StarClan",
+			"Wonders what kind of cat r_c would have grown to be"
+        ],
+        "random_status_constraint": [
+            "newborn", 
+			"kitten"
+        ],
+		"random_living_status": [
+			"starclan"
+		]
+    },
+	{
+        "id": "skill_app_to_mentor",
+        "thoughts": [
+            "Surprises r_c with {PRONOUN/m_c/poss} knowledge on helping queens",
+			"Thinks that {PRONOUN/m_c/poss} mentor is proud",
+			"Is washing {PRONOUN/m_c/poss} paws",
+			"Is carefully assisting {PRONOUN/m_c/poss} mentor with another queen",
+			"Listens to {PRONOUN/m_c/poss} mentor attentively"
+        ],
+		"main_skill_constraint": [
+			"QUEEN,2"
+		],
+        "random_status_constraint": [
+            "permaqueen"
+        ],
+        "relationship_constraint": [
+            "app/mentor"
         ]
     }
 ]

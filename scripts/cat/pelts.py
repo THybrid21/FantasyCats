@@ -69,7 +69,15 @@ class Pelt:
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
     tortiebases = ['single', 'backed', 'smoke', 'rat', 'dunnart', 'lantern']
 
-    pelt_length = ["short", "medium", "long", "snat", "wolf", "skele", "bare", "catfish", "scug", "saint"]
+    pelt_length = ["short", "medium", "long", "wolf", "scug", "saint", "snat", "catfish", "skele", "bare"]
+    standard_lengths = ["short", "medium", "long"]
+    nonstandard_lengths = ["snat", "wolf", "skele","catfish", "scug", "saint"]    
+    
+    fur_textures = ["soft", "curly", "rough", "silky", "sleek", "wavy", "sparse", "tangled", "matted", "fuzzy", "coarse", "brittle", "fluffy", "slimy"]
+    scale_textures = ["soft", "slimy", "coarse", "serrated", "smooth", "raised", "reversed", "feathery"]
+    bone_textures = ["damp", "dry", "brittle", "smooth", "rough"]
+    build_choices = ["standard", "stocky", "slender", "lithe", "waifish", "wiry", "muscular", "lanky", "boney", "delicate"]
+    
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
     'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 'GREENYELLOW', 
     'BRONZE', 'SILVER', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 
@@ -182,6 +190,8 @@ class Pelt:
         'MALACHITE']
     colour_categories = [cream_colours, ginger_colours, black_colours, grey_colours, white_colours, brown_colours, blue_colours, 
     yellow_colours, purple_colours, green_colours, pride_colours]
+    natural_colour_categories = [cream_colours, ginger_colours, black_colours, grey_colours, white_colours, brown_colours]
+    fantasy_colour_categories = [blue_colours, yellow_colours, purple_colours, green_colours, pride_colours]
     
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY',
@@ -202,7 +212,7 @@ class Pelt:
                     'EYESPOT', 'PEBBLE', 'TAILTWO', 'BUDDY', 'KROPKA']
     point_markings = ['COLOURPOINT', 'RAGDOLL', 'SEPIAPOINT', 'MINKPOINT', 'SEALPOINT', 'KARPATI', 'REVERSEPOINT', 
                         'PONIT', 'LIGHTPOINT', 'SNOWSHOE', 'SNOWBOOT', 'WHITEPOINT']
-    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY', 'SHADOWSIGHT']
+    vit = ['VITILIGO', 'VITILIGOTWO', 'MOON', 'PHANTOM', 'POWDER', 'BLEACHED', 'SMOKEY', 'SHADOWSIGHT', 'HALFSPLASH']
     white_sprites = [
         little_white, mid_white, high_white, mostly_white, point_markings, vit, 'FULLWHITE']
 
@@ -227,6 +237,8 @@ class Pelt:
     def __init__(self,
                  name:str="SingleColour",
                  length:str="short",
+                 texture:str="soft",
+                 build:str="standard",
                  colour:str="WHITE",
                  white_patches:str=None,
                  eye_color:str="BLUE",
@@ -275,6 +287,8 @@ class Pelt:
         self.tortiecolour = tortiecolour
         self.vitiligo = vitiligo
         self.length = length
+        self.texture = texture
+        self.build = build
         self.points = points
         self.albino = albino
         self.melanistic = melanistic
@@ -501,6 +515,8 @@ class Pelt:
         # setting parent pelt categories
         # We are using a set, since we don't need this to be ordered, and sets deal with removing duplicates.
         par_peltlength = set()
+        par_pelttexture = set()
+        par_build = set()
         par_peltcolours = set()
         par_peltnames = set()
         par_pelts = []
@@ -510,8 +526,12 @@ class Pelt:
                 # Gather pelt color.
                 par_peltcolours.add(p.pelt.colour)
 
-                # Gather pelt length
+                # Gather pelt length 
                 par_peltlength.add(p.pelt.length)
+
+                #Now including texture and cat build
+                par_pelttexture.add(p.pelt.texture)
+                par_build.add(p.pelt.build)
 
                 # Gather pelt name
                 if p.pelt.name in Pelt.torties:
@@ -533,6 +553,8 @@ class Pelt:
                 # Gather pelt color.
                 par_peltcolours.add(None)
                 par_peltlength.add(None)
+                par_pelttexture.add(None)
+                par_build.add(None)
                 par_peltnames.add(None)
 
         # If this list is empty, something went wrong.
@@ -545,6 +567,8 @@ class Pelt:
             selected = choice(par_pelts)
             self.name = selected.name
             self.length = selected.length
+            self.texture = selected.texture
+            self.build = selected.build
             self.colour = selected.colour
             self.tortiebase = selected.tortiebase
             return selected.white
@@ -613,7 +637,8 @@ class Pelt:
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
-        # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
+        
+        # Weights for each colour group. It goes: (cream, ginger, black, grey, white, brown, blue, yellow, purple, green, pride)        
         weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.cream_colours:
@@ -657,31 +682,31 @@ class Pelt:
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT LENGTH
         # ------------------------------------------------------------------------------------------------------------#
-
-        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # Weights for each length. It goes (short, medium, long, snat, wolf, skele, bare, catfish, scug, saint)
+       
+        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # Weights for each length. It goes (short, medium, long, wolf, scug, saint, snat, catfish, skele, bare)
         for p_ in par_peltlength:
             if p_ == "short":
-                add_weight = (50, 25, 10, 5, 5, 10, 2, 5, 5, 5)
+                add_weight = (40, 20, 10, 0, 5, 0, 0, 5, 5, 1)
             elif p_ == "medium":
-                add_weight = (25, 50, 25, 5, 25, 10, 1, 1, 1, 5)
+                add_weight = (20, 40, 20, 0, 5, 5, 0, 5, 0, 1)
             elif p_ == "long":
-                add_weight = (10, 25, 50, 1, 10, 1, 0, 1, 1, 5)
-            elif p_ == "snat":
-                add_weight = (5, 5, 5, 50, 0, 5, 1, 1, 10, 10)
+                add_weight = (10, 20, 40, 0, 0, 5, 0, 0, 0, 1)
             elif p_ == "wolf":
-                add_weight = (15, 15, 15, 0, 50, 5, 1, 0, 1, 1)
-            elif p_ == "skele":
-                add_weight = (25, 5, 5, 1, 1, 50, 25, 1, 5, 5)
-            elif p_ == "bare":
-                add_weight = (25, 10, 5, 1, 1, 25, 50, 25, 5, 5)
-            elif p_ == "catfish":
-                add_weight = (5, 5, 0, 5, 10, 10, 25, 50, 10, 5)
+                add_weight = (0, 0, 0, 40, 0, 0, 0, 5, 5, 0)
             elif p_ == "scug":
-                add_weight = (5, 5, 1, 25, 5, 10, 10, 5, 50, 25)
+                add_weight = (5, 5, 0, 0, 40, 20, 10, 0, 2, 0)
             elif p_ == "saint":
-                add_weight = (5, 5, 5, 25, 10, 5, 0, 5, 25, 50)
+                add_weight = (0, 5, 5, 0, 20, 40, 10, 0, 2, 0)
+            elif p_ == "snat":
+                add_weight = (0, 0, 0, 0, 10, 10, 40, 0, 0, 0)
+            elif p_ == "catfish":
+                add_weight = (5, 5, 0, 5, 0, 0, 0, 40, 5, 1)
+            elif p_ == "skele":
+                add_weight = (5, 0, 0, 5, 2, 2, 0, 5, 40, 1)
+            elif p_ == "bare":
+                add_weight = (1, 1, 1, 0, 0, 0, 0, 1, 1, 40)
             elif p_ is None:
-                add_weight = (10, 10, 10, 5, 5, 5, 2, 5, 5, 5)
+                add_weight = (20, 20, 20, 15, 10, 10, 10, 10, 5, 1)
             else:
                 add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
@@ -690,10 +715,194 @@ class Pelt:
 
         # A quick check to make sure all the weights aren't 0
         if all([x == 0 for x in weights]):
-            weights = [1, 1, 1, 1, 1, 1, 1]
+            weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
         chosen_pelt_length = random.choices(Pelt.pelt_length, weights=weights, k=1)[0]
 
+        # ------------------------------------------------------------------------------------------------------------#
+        #   PELT TEXTURE
+        # ------------------------------------------------------------------------------------------------------------#
+        
+        '''
+        This has to be generated after length because of how that works, but otherwise is pretty standard for generation. 
+        These are fun bonuses. The order of pelt texture is split between fur or scales. Mostly these are for artists.
+            
+        fur_textures = ["soft", "curly", "rough", "silky", "sleek", "wavy", "sparse", "tangled", "matted", "fuzzy", "coarse", "brittle", "fluffy", "slimy"]
+        scale_textures = ["soft", "slimy", "coarse", "serrated", "smooth", "raised", "reversed", "feathery"]
+        bone_textures = ["damp", "dry", "brittle", "smooth", "rough"]
+        '''   
+        if chosen_pelt_length == "bare":
+            sphynx_textures = ["soft", "sleek", "sparse", "fuzzy", "brittle"]
+            weights = [0, 0, 0, 0, 0]
+            for p_ in par_pelttexture:
+                if p_ not in sphynx_textures:
+                    add_weight = (10, 10, 10, 10, 10)
+                elif p_ == "soft":
+                    add_weight = (20, 10, 5, 5, 5)                    
+                elif p_ == "sleek":
+                    add_weight = (10, 20, 5, 5, 5)   
+                elif p_ == "sparse":
+                    add_weight = (5, 5, 20, 5, 10) 
+                elif p_ == "fuzzy":
+                    add_weight = (5, 5, 5, 20, 5) 
+                elif p_ == "brittle":
+                    add_weight = (5, 5, 5, 5, 20) 
+                else:
+                    add_weight = (0, 0, 0, 0, 0)
+
+                for x in range(0, len(weights)):
+                    weights[x] += add_weight[x]
+                    
+            # A quick check to make sure all the weights aren't 0
+            if all([x == 0 for x in weights]):
+                weights = [1, 1, 1, 1, 1]
+            chosen_pelt_texture = random.choices(sphynx_textures, weights=weights, k=1)[0]
+
+        elif chosen_pelt_length == "skele":
+            weights = [0, 0, 0, 0, 0]
+            for p_ in par_pelttexture:
+                if p_ not in Pelt.bone_textures:
+                    add_weight = (10, 10, 10, 10, 10)
+                elif p_ == "damp":
+                    add_weight = (20, 0, 0, 5, 5)                    
+                elif p_ == "dry":
+                    add_weight = (0, 20, 10, 0, 5)   
+                elif p_ == "brittle":
+                    add_weight = (0, 10, 20, 0, 10) 
+                elif p_ == "smooth":
+                    add_weight = (5, 0, 0, 20, 0) 
+                elif p_ == "rough":
+                    add_weight = (5, 5, 5, 0, 20) 
+                else:
+                    add_weight = (0, 0, 0, 0, 0)
+
+                for x in range(0, len(weights)):
+                    weights[x] += add_weight[x]
+                    
+            # A quick check to make sure all the weights aren't 0
+            if all([x == 0 for x in weights]):
+                weights = [1, 1, 1, 1, 1]
+            chosen_pelt_texture = random.choices(Pelt.bone_textures, weights=weights, k=1)[0] 
+
+        elif chosen_pelt_length == "catfish":
+            weights = [0, 0, 0, 0, 0, 0, 0, 0]
+            for p_ in par_pelttexture:
+                if p_ not in Pelt.scale_textures:
+                    add_weight = (10, 10, 10, 10, 10, 10, 10)                 
+                elif p_ == "soft":
+                    add_weight = (20, 0, 0, 0, 10, 5, 5, 10)     
+                elif p_ == "slimy":
+                    add_weight = (0, 20, 5, 5, 10, 0, 0, 0)                
+                elif p_ == "coarse":
+                    add_weight = (0, 5, 20, 10, 0, 5, 0, 0)   
+                elif p_ == "serrated":
+                    add_weight = (0, 5, 10, 20, 0, 10, 5, 0) 
+                elif p_ == "smooth":
+                    add_weight = (10, 10, 0, 0, 20, 0, 5, 0) 
+                elif p_ == "raised":
+                    add_weight = (5, 0, 5, 5, 5, 20, 10, 5) 
+                elif p_ == "reversed":
+                    add_weight = (5, 0, 5, 5, 5, 10, 20, 5) 
+                elif p_ == "feathery":
+                    add_weight = (10, 0, 0, 0, 0, 5, 5, 20) 
+                else:
+                    add_weight = (0, 0, 0, 0, 0, 0, 0, 0)
+
+                for x in range(0, len(weights)):
+                    weights[x] += add_weight[x]
+                    
+            # A quick check to make sure all the weights aren't 0
+            if all([x == 0 for x in weights]):
+                weights = [1, 1, 1, 1, 1, 1, 1, 1]
+
+            chosen_pelt_texture = random.choices(Pelt.scale_textures, weights=weights, k=1)[0]    
+        else:
+            weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            for p_ in par_pelttexture:
+                if p_ not in Pelt.fur_textures:
+                    add_weight = (10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+                elif p_ == "soft":
+                    add_weight = (40, 15, 0, 15, 15, 10, 0, 0, 0, 5, 0, 0, 10, 0)
+                elif p_ == "curly":
+                    add_weight = (15, 40, 0, 10, 5, 15, 0, 5, 5, 0, 0, 0, 10, 0)
+                elif p_ == "rough":
+                    add_weight = (0, 0, 40, 0, 0, 0, 5, 5, 5, 0, 10, 10, 0, 0)          
+                elif p_ == "silky":
+                    add_weight = (15, 10, 0, 40, 15, 5, 0, 0, 0, 0, 0, 0, 15, 5)
+                elif p_ == "sleek":
+                    add_weight = (15, 5, 0, 15, 40, 5, 1, 0, 0, 0, 0, 0, 0, 0)
+                elif p_ == "wavy":
+                    add_weight = (15, 15, 0, 10, 5, 40, 0, 5, 5, 5, 0, 0, 10, 0)
+                elif p_ == "sparse":
+                    add_weight = (0, 0, 5, 0, 1, 0, 40, 5, 5, 0, 10, 10, 5, 0)                    
+                elif p_ == "tangled":
+                    add_weight = (0, 5, 5, 0, 0, 5, 5, 40, 5, 10, 10, 10, 0, 5)   
+                elif p_ == "matted":
+                    add_weight = (0, 5, 5, 0, 0, 5, 5, 5, 40, 10, 15, 15, 0, 5) 
+                elif p_ == "fuzzy":
+                    add_weight = (5, 0, 0, 0, 0, 0, 5, 0, 10, 40, 0, 0, 15, 0)
+                elif p_ == "coarse":
+                    add_weight = (0, 0, 10, 0, 0, 0, 10, 10, 15, 0, 40, 15, 0, 0)
+                elif p_ == "brittle":
+                    add_weight = (0, 0, 10, 0, 0, 0, 10, 10, 15, 0, 15, 0, 0)
+                elif p_ == "fluffy":
+                    add_weight = (10, 10, 0, 15, 0, 10, 5, 0, 0, 15, 0, 0, 40, 0)
+                elif p_ == "slimy":
+                    add_weight = (0, 0, 0, 5, 0, 0, 0, 5, 5, 0, 0, 0, 0, 40)
+                else:
+                    add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+                for x in range(0, len(weights)):
+                    weights[x] += add_weight[x]
+                    
+            # A quick check to make sure all the weights aren't 0
+            if all([x == 0 for x in weights]):
+                weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            chosen_pelt_texture = random.choices(Pelt.fur_textures, weights=weights, k=1)[0]   
+
+        # ------------------------------------------------------------------------------------------------------------#
+        #   CAT BUILD
+        # ------------------------------------------------------------------------------------------------------------#        
+        
+        if chosen_pelt_length == "skele":
+            chosen_cat_build = "boney"
+        else:
+            weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]## Build choices in order go standard, stocky, slender, lithe, waifish, wiry, muscular, lanky, boney, delicate
+            for p_ in par_build:
+                if p_ == "standard":
+                    add_weight = [40, 5, 5, 5, 0, 0, 5, 5, 0, 5]
+                if p_ == "stocky":
+                    add_weight = [5, 40, 0, 0, 0, 0, 15, 0, 0, 0]
+                if p_ == "slender":
+                    add_weight = [5, 0, 40, 10, 15, 15, 0, 10, 15, 10]
+                if p_ == "lithe":
+                    add_weight = [5, 0, 10, 40, 15, 10, 5, 10, 0, 10]
+                if p_ == "waifish":
+                    add_weight = [0, 0, 15, 15, 40, 15, 0, 0, 15, 15]
+                if p_ == "wiry":
+                    add_weight = [0, 0, 15, 10, 15, 40, 0, 5, 15, 5]
+                if p_ == "muscular":
+                    add_weight = [5, 15, 0, 5, 0, 0, 40, 2, 0, 0]     
+                if p_ == "lanky":
+                    add_weight = [5, 0, 10, 10, 0, 5, 2, 40, 10, 5] 
+                if p_ == "boney":
+                    add_weight = [0, 0, 15, 0, 15, 15, 0, 10, 40, 10] 
+                if p_ == "delicate":
+                    add_weight = [5, 0, 10, 10, 15, 5, 0, 5, 10, 40] 
+                elif p_ is None:
+                    add_weight = (10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+                else:
+                    add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+            for x in range(0, len(weights)):
+                weights[x] += add_weight[x]
+
+            # A quick check to make sure all the weights aren't 0
+            if all([x == 0 for x in weights]):
+                weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+            chosen_cat_build = random.choices(Pelt.build_choices, weights=weights, k=1)[0]
+                    
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT WHITE
         # ------------------------------------------------------------------------------------------------------------#
@@ -723,6 +932,8 @@ class Pelt:
         self.name = chosen_pelt
         self.colour = chosen_pelt_color
         self.length = chosen_pelt_length
+        self.texture = chosen_pelt_texture
+        self.build = chosen_cat_build
         self.tortiebase = chosen_tortie_base  # This will be none if the cat isn't a tortie.
         return chosen_white
 
@@ -762,15 +973,37 @@ class Pelt:
         # ------------------------------------------------------------------------------------------------------------#
 
         chosen_pelt_color = choice(
-            random.choices(Pelt.colour_categories, weights=(30, 45, 40, 30, 25, 45, 15, 15, 10, 25, 2), k=1)[0]
+            random.choices(Pelt.natural_colour_categories, weights=(30, 45, 40, 30, 25, 45), k=1)[0]
         )
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT LENGTH
         # ------------------------------------------------------------------------------------------------------------#
+        
+        nonstandard_length = random.randint(0, 200)
+        if nonstandard_length <= 1:
+            chosen_pelt_length = "bare"
+        elif nonstandard_length <= 20:
+            chosen_pelt_length = random.choice(Pelt.nonstandard_lengths)        
+        else:    
+            chosen_pelt_length = random.choice(Pelt.standard_lengths)
 
+        # ------------------------------------------------------------------------------------------------------------#
+        #   Cat Attributes 
+        # ------------------------------------------------------------------------------------------------------------#
 
-        chosen_pelt_length = random.choices(Pelt.pelt_length, weights=(10, 10, 10, 5, 5, 5, 1, 5, 5, 5), k=1)[0]
+        if chosen_pelt_length == "bare":
+            chosen_pelt_texture = choice(["soft", "sleek", "sparse", "fuzzy", "brittle"])
+            chosen_cat_build = random.choice(Pelt.build_choices)
+        elif chosen_pelt_length == "catfish":
+            chosen_pelt_texture = random.choice(Pelt.scale_textures)
+            chosen_cat_build = random.choice(Pelt.build_choices)            
+        elif chosen_pelt_length == "skele":
+            chosen_pelt_texture = random.choice(Pelt.bone_textures)
+            chosen_cat_build = "boney"
+        else: 
+            chosen_pelt_texture = random.choice(Pelt.fur_textures)
+            chosen_cat_build = random.choice(Pelt.build_choices)
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT WHITE
@@ -791,6 +1024,8 @@ class Pelt:
         self.name = chosen_pelt
         self.colour = chosen_pelt_color
         self.length = chosen_pelt_length
+        self.texture = chosen_pelt_texture
+        self.build = chosen_cat_build
         self.tortiebase = chosen_tortie_base  # This will be none if the cat isn't a tortie.
         return chosen_white
 
@@ -1276,6 +1511,8 @@ class Pelt:
 
     # NOW FOR VITILIGO TINTS! JUST AS BONUS
         if self.vitiligo:
+            if self.colour in Pelt.white_colours:
+                self.vitiligo_tint = "black"              
             vit_tints = random.randint(1, 15)
             if vit_tints == 1:
                 base_tints = sprites.vitiligo_tint["possible_tints"]["basic"].copy()
@@ -1294,6 +1531,8 @@ class Pelt:
                 else:
                     possible_tints = sprites.vitiligo_tint["possible_tints"]["basic"]                 
                 self.vitiligo_tint = choice(base_tints + possible_tints)
+                if self.colour in Pelt.white_colours and self.vitiligo_tint in ["none", "off white", "mint"]:
+                    self.vitiligo_tint = "black"                 
         else:
             self.vitiligo_tint = "none"
 
@@ -1374,17 +1613,20 @@ class Pelt:
         pattern_des = {
             "Tabby": "c_n tabby",
             "Speckled": "speckled c_n",
-            "Bengal": "unusually dappled c_n",
-            "Marbled": "c_n tabby",
+            "Bengal": "bengal c_n",
+            "Marbled": "c_n marbled tabby",
             "Ticked": "c_n ticked",
             "Smoke": "c_n smoke",
-            "Mackerel": "c_n tabby",
-            "Classic": "c_n tabby",
-            "Agouti": "c_n tabby",
+            "Mackerel": "c_n mackerel tabby",
+            "Classic": "c_n classic tabby",
+            "Agouti": "c_n ticked agouti",
             "Backed": "backed c_n",
-            "Rosette": "unusually spotted c_n",
-            "Sokoke": "c_n tabby",
-            "Masked": "masked c_n tabby"
+            "Rosette": "rosette c_n",
+            "Sokoke": "c_n sokoke tabby",
+            "Masked": "masked c_n tabby",
+            "Dunnart": "c_n dunnart",
+            "Rat": "c_n rat",
+            "Lantern": "lantern c_n"
         }
 
         # Start with determining the base color name
@@ -1472,34 +1714,90 @@ class Pelt:
 
             if len(cat.pelt.scars) >= 3:
                 color_name = f"scarred {color_name}"
-            if cat.pelt.length == "long":
-                color_name = f"long-furred {color_name}"
-            if cat.pelt.length == "bare":
-                color_name = f"furless {color_name}"
-            if cat.pelt.length == "snat":
-                color_name = f"{color_name} snail-cat"
-            if cat.pelt.length == "wolf":
-                color_name = f"canine {color_name}"
-            if cat.pelt.length == "skele":
-                color_name = f"skeletonized {color_name}"
-            if cat.pelt.length == "catfish":
-                color_name = f"amphibious {color_name}"
-            if cat.pelt.length in ["scug", "saint"]:
-                color_name = f"{color_name} slugcat"
 
-        # Now it's time for gender
+            # FUR LENGTHS
+            if cat.pelt.length == "long" and cat.pelt.texture not in ["tangled", "matted"]:                
+                color_name = f"{cat.pelt.texture} long-furred {color_name}"
+            elif cat.pelt.length == "bare":
+                if cat.pelt.texture == "sparse":
+                    color_name = f"sparsly furred {color_name}"
+                else:
+                    color_name = f"{cat.pelt.texture} furless {color_name}"
+            elif cat.pelt.length == "snat" and cat.pelt.texture not in ["tangled", "matted"]:
+                color_name = f"{color_name} {cat.pelt.texture} snail-cat"
+            elif cat.pelt.length == "wolf" and cat.pelt.texture not in ["tangled", "matted"]:
+                color_name = f"{cat.pelt.texture} furred canine {color_name}"
+            elif cat.pelt.length == "skele":
+                color_name = f"{cat.pelt.texture} skeletonized {color_name}"
+            elif cat.pelt.length == "catfish":
+                color_name = f"amphibious {color_name}"
+            elif cat.pelt.length in ["scug", "saint"] and cat.pelt.texture not in ["tangled", "matted"]:
+                color_name = f"{color_name} {cat.pelt.texture} slugcat"            
+            else:
+                if cat.pelt.texture not in ["tangled", "matted"]:
+                    color_name = f"{cat.pelt.texture} furred {color_name}"
+
+            if cat.pelt.build != "standard":
+                color_name = f"{cat.pelt.build} {color_name}"       
+
+        # Now it's time for gender(and fixing matted/tangled fur)
         if cat.genderalign in ["female", "trans female", "demigirl"]:
-            color_name = f"{color_name} molly"
+            if not short:
+                if cat.pelt.texture in ["tangled", "matted"]:
+                    if cat.pelt.length == "long":    
+                        color_name = f"{color_name} molly with long {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "snat":
+                        color_name = f"{color_name} snail-cat molly with {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "wolf":
+                        color_name = f"canine {color_name} molly with {cat.pelt.texture} fur"
+                    elif cat.pelt.length in ["scug", "saint"]:
+                        color_name = f"{color_name} slugcat molly with {cat.pelt.texture} fur"            
+                    else:
+                        color_name = f"{color_name} molly with {cat.pelt.texture} fur"
+            else:
+                color_name = f"{color_name} molly"
         elif cat.genderalign in ["male", "trans male", "demiboy"]:
-            color_name = f"{color_name} tom"
-        elif cat.pelt.length != ["scug", "saint", "snat", "wolf"] and not short: 
-            color_name = f"{color_name} cat"
+            if not short:
+                if cat.pelt.texture in ["tangled", "matted"]:
+                    if cat.pelt.length == "long":    
+                        color_name = f"{color_name} tom with long {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "snat":
+                        color_name = f"{color_name} snail-cat tom with {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "wolf":
+                        color_name = f"canine {color_name} tom with {cat.pelt.texture} fur"
+                    elif cat.pelt.length in ["scug", "saint"]:
+                        color_name = f"{color_name} slugcat tom with {cat.pelt.texture} fur"            
+                    else:
+                        color_name = f"{color_name} tom with {cat.pelt.texture} fur"
+            else:
+                color_name = f"{color_name} tom"
         else:
-            color_name = f"{color_name} cat"        
+            if not short: 
+                if cat.pelt.texture in ["tangled", "matted"]:
+                    if cat.pelt.length == "long":    
+                        color_name = f"{color_name} cat with long {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "snat":
+                        color_name = f"{color_name} snail-cat with {cat.pelt.texture} fur"
+                    elif cat.pelt.length == "wolf":
+                        color_name = f"canine {color_name} with {cat.pelt.texture} fur"
+                    elif cat.pelt.length in ["scug", "saint"]:
+                        color_name = f"{color_name} slugcat with {cat.pelt.texture} fur" 
+            else:
+                color_name = f"{color_name} cat" 
+
+        if not short and cat.pelt.length == "catfish":
+            color_name = f"{color_name} with {cat.pelt.texture} scales"       
 
         if cat.pelt.white_patches and not cat.pelt.albino and not cat.pelt.melanistic:
             if short:
-                color_name = f"{color_name} with patches" 
+                if cat.pelt.white_patches_tint in ["black", "midnight", "scarlet"] and cat.pelt.colour in ["BLACK", "ONYX", "RASIN", "DUSKBOW"]:
+                    return color_name                
+                elif cat.pelt.white_patches_tint != "none":            
+                    color_name = f"{color_name} with patches of {cat.pelt.white_patches_tint}"
+                elif cat.pelt.colour in ["WHITE", "IVORY", "PETAL", "PALEBOW"]:
+                    return color_name
+                else: 
+                    color_name = f"{color_name} with patches"
             elif cat.pelt.white_patches in Pelt.high_white + Pelt.mostly_white and cat.pelt.name != "Calico":
                 if cat.pelt.white_patches_tint in ["black", "midnight", "scarlet"] and cat.pelt.colour in ["BLACK", "ONYX", "RASIN", "DUSKBOW"]:
                     return color_name                
@@ -1518,7 +1816,7 @@ class Pelt:
                     return color_name
                 else: 
                     color_name = f"{color_name} with small patches of white"
-               
+        
         return color_name
 
     def get_sprites_name(self):

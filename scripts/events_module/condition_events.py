@@ -256,11 +256,11 @@ class Condition_Events:
                     random.random() * game.get_config_value("condition_related", f"{game.clan.game_mode}_illness_chance"))
            # Adjust kitten illness chance for the number permaqueens
             try:
-                if cat.status == "kitten" or cat.status == "newborn":
+                if cat.status in ["kitten", "newborn"]:
                     num_queens = 0
                     for c in game.clan.clan_cats:
                         if not Cat.all_cats.get(c).outside and not Cat.all_cats.get(c).dead:
-                            if Cat.all_cats.get(c).status == "permaqueen" or Cat.all_cats.get(c).status == "permaqueen apprentice":
+                            if Cat.all_cats.get(c).status in ["permaqueen", "permaqueen apprentice"]:
                                 num_queens+=1
                     random_number+=(num_queens*5)
             except:
@@ -316,22 +316,26 @@ class Condition_Events:
                     event_string = f"{cat.name} has been struggling recently with nightmares."
                 elif chosen_illness == "ear buzzing":
                     event_string = f"{cat.name} has been experiencing some buzzing in their ears."
+                elif chosen_illness == "stimming":
+                    event_string = f"{cat.name} has begun stimming more often recently."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 
-            # if an event happened, then add event to cur_event_list and save death if it happened.
-            if event_string:
-                types = ["health"]
-                if cat.dead:
-                    types.append("birth_death")
-                game.cur_events_list.append(Single_Event(event_string, types, cat.ID))
-                # game.health_events_list.append(event_string)
-
-            # just double-checking that trigger is only returned True if the cat is dead
+        # if an event happened, then add event to cur_event_list and save death if it happened.
+        if event_string:
+            types = ["health"]
             if cat.dead:
                 types.append("birth_death")
             game.cur_events_list.append(Single_Event(event_string, types, cat.ID))
-            return triggered
+            # game.health_events_list.append(event_string)
+
+        # just double-checking that trigger is only returned True if the cat is dead
+        if cat.dead:
+            triggered = True
+        else:
+            triggered = False
+
+        return triggered
 
     @staticmethod
     def handle_injuries(cat, random_cat=None):
