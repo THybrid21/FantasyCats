@@ -660,7 +660,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -860,7 +860,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible"
             ],
             "dies": true
@@ -1003,7 +1003,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible"
             ],
             "dies": true
@@ -2182,7 +2182,7 @@
                 "charismatic",
                 "confident",
                 "daring",
-                "empathetic",
+                
                 "compassionate",
                 "loving",
                 "responsible",
@@ -2268,7 +2268,7 @@
                 "charismatic",
                 "confident",
                 "daring",
-                "empathetic",
+                
                 "compassionate",
                 "loving",
                 "responsible",
@@ -2353,7 +2353,7 @@
                 "charismatic",
                 "confident",
                 "daring",
-                "empathetic",
+                
                 "compassionate",
                 "loving",
                 "responsible",
@@ -2690,8 +2690,8 @@
             "dies": true
         },
         "r_c": {
-            "age": ["apprentice", "warrior", "deputy"],
-            "status": [ "any" ],
+            "age": [ "any" ],
+            "status": ["apprentice", "warrior", "deputy"],
             "not_skill": [
                 "RUNNER,2"
             ]
@@ -2729,7 +2729,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -2868,9 +2868,6 @@
             "status": [
                 "kitten"
             ],
-            "trait": [
-                "quiet"
-            ],
             "dies": true
         },
         "history": [{
@@ -2952,8 +2949,8 @@
             "trait": [
                 "troublesome",
                 "impulsive",
-                "attention-seeker",
-                "inquisitive"
+                "attention-seeker"
+                
             ],
             "dies": true
         },
@@ -3083,7 +3080,7 @@
             "dies": true
         },
         "r_c": {
-            "age": [ "adolescent", "young adult", "adult", "senior warrior"],
+            "age": [ "adolescent", "young adult", "adult", "senior adult"],
             "status": [ "apprentice", "warrior", "deputy", "leader"],
             "skill": [
                 "FIGHTER,1"
@@ -3195,8 +3192,8 @@
                 "daring",
                 "troublesome",
                 "attention-seeker",
-                "impulsive",
-                "inquisitive"
+                "impulsive"
+                
             ],
             "dies": true
         },
@@ -3347,7 +3344,7 @@
                 "ambitious",
                 "daring",
                 "fierce",
-                "empathetic",
+                
                 "loving",
                 "loyal",
                 "responsible",
@@ -3407,7 +3404,7 @@
                 "bold",
                 "ambitious",
                 "fierce",
-                "empathetic",
+                
                 "loving",
                 "loyal",
                 "responsible",
@@ -3853,7 +3850,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -3928,7 +3925,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -4003,7 +4000,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -4075,7 +4072,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible"
             ],
             "dies": true
@@ -4145,7 +4142,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible"
             ],
             "dies": true
@@ -4215,7 +4212,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -4294,7 +4291,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -4344,7 +4341,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible",
                 "righteous",
                 "vengeful"
@@ -4456,7 +4453,7 @@
                 "compassionate",
                 "confident",
                 "daring",
-                "empathetic",
+                
                 "fierce",
                 "loving",
                 "responsible",
@@ -4601,7 +4598,7 @@
                 "fierce",
                 "loyal",
                 "loving",
-                "empathetic",
+                
                 "responsible"
             ],
             "dies": true
@@ -4783,8 +4780,8 @@
         "event_id": "gen_death_age_anylead3",
         "location": ["any"],
         "season": ["any"],
+        "sub_type": ["old_age"],
         "tags": [
-            "old_age",
             "some_lives"
         ],
         "weight": 20,
@@ -5344,7 +5341,7 @@
         },
         "r_c": {
             "age": [
-                "new_born",
+                "newborn",
                 "kitten"
             ],
             "status": [ "any" ]
