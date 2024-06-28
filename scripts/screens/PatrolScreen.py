@@ -885,13 +885,13 @@ class PatrolScreen(Screens):
             # Draw mentor or apprentice
             relation = "should not display"
             if self.selected_cat.status in ['medicine cat apprentice',
-                                            'apprentice'] or self.selected_cat.apprentice != []:
+                                            'apprentice', 'permaqueen apprentice'] or self.selected_cat.apprentice != []:
                 self.elements['app_mentor_frame'] = pygame_gui.elements.UIImage(
                     scale(pygame.Rect((990, 380), (332, 340))),
                     self.app_frame, manager=MANAGER)
 
                 if self.selected_cat.status in ['medicine cat apprentice',
-                                                'apprentice'] and self.selected_cat.mentor is not None:
+                                                'apprentice', 'permaqueen apprentice'] and self.selected_cat.mentor is not None:
                     self.app_mentor = Cat.fetch_cat(self.selected_cat.mentor)
                     relation = 'mentor'
 

@@ -176,8 +176,23 @@
             "r_c watches as the inevitable happens and m_c begins to cough and choke on {PRONOUN/m_c/poss} own blood. The end is coming quickly for {PRONOUN/m_c/object}.",
             "m_c has been left weak and barely responsive from the poison, and now {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} begun to choke up blood. That can't be a good sign.",
             "m_c hacks and sputters on {PRONOUN/m_c/poss} own blood, {PRONOUN/m_c/subject} {VERB/m_c/know/knows} the end is soon."
-        ]
+        ],
+		"word loss": [
+			"r_c gently shushes m_c as {PRONOUN/m_c/subject} {VERB/m_c/stumble/stumbles} over {PRONOUN/m_c/poss} words. Letting {PRONOUN/m_c/object} know to just focus on recovering from the poison.",
+			"Due to the effects of the poisoning, m_c's been slurring and dropping {PRONOUN/m_c/poss} words."
+		],
+		"anaphylaxis": [
+			"To r_c's horror it looks as though m_c is having a severe reaction to the poison in {PRONOUN/m_c/poss} system, going into anaphylaxis.",
+			"m_c chokes in horror, {PRONOUN/m_c/subject} can't breathe! {PRONOUN/m_c/poss/CAP} throat has swollen shut and {PRONOUN/m_c/subject} can't breathe!"
+		]
     },
+	"bee sting": {
+		"anaphylaxis": [
+			"r_c frantically searches the herbstock for oak and elder leaves, {PRONOUN/r_c/subject} {VERB/r_c/have/has} to stop the swelling m_c's experiencing immediately.",
+			"It turns out that m_c is severely allergice to bees. {PRONOUN/m_c/poss/CAP} throat cloasing up and breathing becoming a struggle evidence of that.",
+			"While ordinarily a bee sting is only a minor issue, poor m_c has gone into anaphylaxis from {PRONOUN/m_c/imposs}."
+		]
+	},
     "broken back": {
         "an infected wound": [
             "r_c does {PRONOUN/r_c/poss} best to further prop up m_c's body and feels growing concern at the rancid smell coming from the broken and twisted part of m_c's back.",
@@ -192,7 +207,11 @@
         "severe headache": [
             "m_c yowls with pain, begging r_c for any relief. The damage to {PRONOUN/m_c/poss} head must have been severe to cause such painful headaches. ",
             "m_c can't focus on anything but the searing pain in {PRONOUN/m_c/poss} head. {PRONOUN/m_c/poss/CAP} head injury must have rattled something deep in {PRONOUN/m_c/poss} skull."
-        ]
+        ],
+		"word loss": [
+			"r_c frowns as m_c muddles through {PRONOUN/m_c/poss} sentences. It seems that the head damage has caused some word loss.",
+			"Due to the damage to m_c's head, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} speaking clearly more of a challenge than usual."
+		]
     },
 	"severe tick bites": {
         "an infected wound": [
@@ -210,6 +229,11 @@
 			"r_c very gently applies the herbal paste and cobwebs to the torn and raw patches around m_c's fur.",
 			"After all the scratching {PRONOUN/m_c/subject} {VERB/m_c/have/has} done at the rash it's not a surprise that m_c has torn up {PRONOUN/m_c/poss} pelt.",
 			"All m_c's frantic itching has left {PRONOUN/m_c/poss} fur looking rather patchy in places."
+		],
+		"anaphylaxis": [
+			"Much to r_c's stress it appears that m_c's rash has progressed into anaphylaxis putting m_c at risk of suffocating to death.",
+			"It looks like m_c's rash has become much, much more dangerous, swelling up {PRONOUN/m_c/poss} throat and making it hard to even wheeze.",
+			"Poor m_c's rash has swiftly become anaphylaxis spreading into {PRONOUN/m_c/poss} throat."
 		]
 	},
 	"sunburn": {
@@ -270,6 +294,14 @@
 			"Due to how overtired m_c's been, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} stood up and needed to sit back down with a spinning head."
 		]
 	},
+	"fainting": {
+        "head damage": [
+            "r_c realizes that m_c hit {PRONOUN/m_c/poss} head when {PRONOUN/m_c/subject} fainted, it's a bit worrying.",
+			"m_c's head got damaged when {PRONOUN/m_c/subject} fainted.",
+			"Poor m_c hit {PRONOUN/m_c/poss} head when {PRONOUN/m_c/subject} collapsed in a faint.",
+            "m_c got badly hurt when {PRONOUN/m_c/subject} fainted."
+        ]
+    },		
 	"cutter's sickness": {
 		"stomachache": [
 			"m_c can't help but complain to r_c about the pain {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} in {PRONOUN/m_c/poss} belly.",

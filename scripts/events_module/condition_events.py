@@ -316,8 +316,10 @@ class Condition_Events:
                     event_string = f"{cat.name} has been struggling recently with nightmares."
                 elif chosen_illness == "ear buzzing":
                     event_string = f"{cat.name} has been experiencing some buzzing in their ears."
-                elif chosen_illness == "stimming":
-                    event_string = f"{cat.name} has begun stimming more often recently."
+                elif chosen_illness in ["stimming", "parroting"]:
+                    event_string = f"{cat.name} has begun {chosen_illness} more often recently."
+                elif chosen_illness == "word loss":
+                    event_string = f"{cat.name} has been struggling to find words lately."
                 else:
                     event_string = f"{cat.name} has gotten {chosen_illness}."
 
@@ -358,13 +360,13 @@ class Condition_Events:
         # handle if the current cat is already injured
         if cat.is_injured() and game.clan.game_mode != "classic":
             for injury in cat.injuries:
-                if injury == "pregnant" and cat.ID not in game.clan.pregnancy_data:
+                if injury in ["pregnant", "faux pregnant"] and cat.ID not in game.clan.pregnancy_data:
                     print(
                         f"INFO: deleted pregnancy condition of {cat.ID} due no pregnancy data in the clan."
                     )
                     del cat.injuries[injury]
                     return triggered
-                elif injury == "pregnant":
+                elif injury in ["pregnant", "faux pregnant"]:
                     return triggered
             triggered = Condition_Events.handle_already_injured(cat)
         else:
@@ -445,15 +447,20 @@ class Condition_Events:
             "RIGHTBLIND": ["one bad eye", "failing eyesight"],
             "BOTHBLIND": ["blind"],
             "RATBITE": ["weak leg"],
-            "DECLAWED": ["declawed"]
+            "DECLAWED": ["declawed"],
+            "RASH": ["recurring rash"],
+            "LEFTTAG": ["infertile"],
+            "RIGHTTAG": ["infertile"]
         }
 
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
             "lasting grief", "persistent headaches", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
-            "comet spirit", "mute", "ocd", "antisocial", "mute", "ongoing sleeplessness", "echoing memory", "regressor", 
-            "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "recurring rash", "infertile", "addiction"
+            "obsessive mind", "comet spirit", "antisocial", "thunderous spirit", "otherworldly mind", "mute", "ongoing sleeplessness", 
+            "echoing memory", "regressor", "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "constant fatigue", 
+            "face blindness", "body biter", "chattering tongue", "plural soul",
+            "infertile", "addiction"
         ]
 
         got_condition = False
@@ -522,7 +529,8 @@ class Condition_Events:
             "anxiety attack": "panic attack",
             "panic attack": "paranoia",
             "nest wetting": "night dirtmaking",
-            "verbal shutdown": "mute"
+            "verbal shutdown": "mute",
+            "word loss": "mute"
         }
         
         # ---------------------------------------------------------------------------- #
@@ -711,6 +719,16 @@ class Condition_Events:
 
                 History.remove_possible_history(cat, injury)
                 cat.injuries.pop(injury)
+                # make sure complications get reset if anaphylaxis was healed
+                if injury == "anaphylaxis":
+                    for injury in cat.injuries:
+                        keys = cat.injuries[injury].keys()
+                        if "complication" in keys:
+                            cat.injuries[injury]["complication"] = None
+                    for condition in cat.permanent_condition:
+                        keys = cat.permanent_condition[condition].keys()
+                        if "complication" in keys:
+                            cat.permanent_condition[condition]["complication"] = None
                 cat.healed_condition = False
 
                 # try to give a permanent condition based on healed injury and new scar if any
@@ -1028,8 +1046,11 @@ class Condition_Events:
                         skip = True
                 #Making sure World Tired can only be given if you have dangerous settings on        
                 if not game.settings["allow danger"]:
-                    if risk['name'] in ["turmoiled litter", "world tired", "addiction"]:
-                        skip = True                        
+                    if risk['name'] in ["world tired", "body biter", "addiction"]:
+                        skip = True      
+                if not game.clan.clan_settings["pregnancy turmoil"]:
+                    if risk['name'] == "turmoiled litter":
+                            skip = True
                 # if it is, then break instead of giving the risk
                 if skip is True:
                     break
@@ -1044,6 +1065,7 @@ class Condition_Events:
                             if new_condition_name in [
                                 "an infected wound",
                                 "a festering wound",
+                                "anaphylaxis"
                             ]:
                                 # if it's infection or festering, we're removing the chance completely
                                 # this is both to prevent annoying infection loops
@@ -1107,7 +1129,16 @@ class Condition_Events:
                 # here we give the new condition
                 if new_condition_name in Condition_Events.INJURIES:
                     cat.get_injured(new_condition_name, event_triggered=event_triggered)
-                    break
+                    keys = dictionary[condition].keys()
+                    complication = None
+                    if new_condition_name == "anaphylaxis":
+                        complication = "anaphylaxis"
+                    if complication is not None:
+                        if "complication" in keys:
+                            dictionary[condition]["complication"] = complication
+                        else:
+                            dictionary[condition].update({"complication": complication})
+                    break 
                 elif new_condition_name in Condition_Events.ILLNESSES:
                     cat.get_ill(new_condition_name, event_triggered=event_triggered)
                     if dictionary == cat.illnesses or removed_condition:

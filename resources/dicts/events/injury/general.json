@@ -7621,6 +7621,13 @@
                     "severe tick bites"
                 ]
             }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
         ]
     },
     {
@@ -7666,6 +7673,13 @@
                     "tick bites"
                 ]
             }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
         ]
     },
     {
@@ -7699,6 +7713,13 @@
                     "severe tick bites"
                 ]
             }
+        ],
+		"history": [
+		  {
+			  "cats": ["m_c"],
+			  "reg_death": "m_c died from severe tick bites.",
+			  "lead_death": "m_c {VERB/m_c/were/was} killed by the complications of severe tick bites."
+		  }
         ]
     },
     {

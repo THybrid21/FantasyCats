@@ -43,7 +43,7 @@
         ],
         "allow danger": [
             "Dangerous Events",
-            "Allow for potentially triggering thoughts and condition events, like suicidality, delusions and drug mention.",
+            "Allow for potentially triggering thoughts and condition events, like suicidality, delusions and addiction.",
             false
         ],
         "discord": [

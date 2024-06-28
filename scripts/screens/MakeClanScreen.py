@@ -957,10 +957,10 @@ class MakeClanScreen(Screens):
                 self.elements['cat_name'].set_text(str(selected.name))
             self.elements['cat_name'].show()
             self.elements['cat_info'].set_text(selected.gender + "\n" +
-                                               str(selected.age + "\n" +
+                                               str(selected.age) + "\n" + 
                                                    str(selected.personality.trait) + "\n" +
                                                    str(selected.skills.skill_string(short=True)) + "\n" +
-                                                   str(selected.moons) + " moons"))
+                                                   str(selected.moons) + " moons")
                                                    
             self.elements['cat_info'].show()
         else:

@@ -8,7 +8,7 @@
     "m_c has a stomachache.",
     "m_c's belly has been upset all day."
   ],
-  "fleas:": [
+  "fleas": [
     "m_c seems to have picked up some fleas.",
     "m_c has been scratching and itching all day, it seems {PRONOUN/m_c/poss} have fleas."
   ],
@@ -40,5 +40,50 @@
   ],
   "starving": [
     "m_c is starving."
+  ],
+  "ticks": [
+	"m_c appears to have gotten some ticks.",
+	"Poor m_c was caught scratching at {PRONOUN/m_c/self}, it appears to be a case of ticks."
+  ],
+  "zoomies": [
+	"m_c is driving the camp wild zooming around.",
+	"m_c has gotten the zoomies",
+	"It appears as though m_c has the zoomies."
+  ],
+  "sleeplessness": [
+	"This past moon it has been difficult for m_c to sleep.",
+	"m_c is currently having trouble sleeping properly."
+  ],
+  "nightmares": [
+	"m_c has been struggling recently with nightmares",
+	"This past moon m_c has been plagued with nightmares."
+  ],
+  "burn out": [
+	"Poor m_c is suffering from some burn out.",
+	"m_c is currently experiencing some burn out."
+  ],
+  "ear buzzing": [
+	"m_c's ears just won't stop buzzing.",
+	"Poor m_c has a fly or something stuck in {PRONOUN/m_c/poss} ears."
+  ],
+  "nest wetting": [
+	"Much to {PRONOUN/m_c/poss} embarrassment m_c is experiencing some nest wetting."
+  ],
+  "night dirtmaking": [
+	"Much to {PRONOUN/m_c/poss} embarrassment m_c is having to go on more nighttime trips to the dirtplace."
+	],
+  "seasonal lethargy": [
+	"This past season has weighed heavily on m_c and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} experiencing some seasonal lethargy.",
+	"It looks like m_c has seasonal lethargy."
+  ],
+  "stimming": [
+	"m_c has been stimming a lot more than normal recently.",
+	"The clan is happy to see m_c stimming more."
+  ],
+  "parroting": [
+	"m_c has been parroting more than normal recently."
+  ],
+  "word loss": [
+	"m_c appears to be suffering from some word loss this moon."
   ]
 }

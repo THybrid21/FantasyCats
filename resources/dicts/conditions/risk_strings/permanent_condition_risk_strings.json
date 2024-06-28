@@ -129,6 +129,12 @@
 			"Rather irritated m_c goes to r_c complaining about the rash forming beneath {PRONOUN/m_c/poss} fur.",
 			"Whimpering, m_c scratches at the irritated spot on {PRONOUN/m_c/poss} side, pulling away fur in clumps to reveal the rash hiding there.",
 			"Due to the combination of herbs used for {PRONOUN/m_c/poss} wasting disease it would seem that something has given m_c a rash in reaction."
+		],
+		"fainting": [
+			"r_c is the first one to m_c's side when m_c collapses in the middle of the camp in a faint.",
+			"When m_c blinks {PRONOUN/m_c/poss} eyes open it's to worried Clanmates hovering. It appears that m_c fainted.",
+			"One moment m_c feels dizzy and sways on {PRONOUN/m_c/poss} feet, the next {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} blinking and staring up at the sky.",
+			"It would appear that due to m_c's wasting disease {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} experiencing some risk of fainting."
 		]
     },
     "one bad eye": {
@@ -164,7 +170,7 @@
             "m_c realizes one day that the noises around them are no longer just quiet, but completely silent. It seems {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} lost {PRONOUN/m_c/poss} hearing entirely."
         ],
 		"verbal shutdown": [
-			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous {PRONOUN/m_c/subject} {VERB/m_c/have/had} just gone verbal shutdown.",
+			"r_c has noticed that m_c is a lot quieter around the camp recently. After a quick checkup it's nothing dangerous {PRONOUN/m_c/subject} {VERB/m_c/have/had} just gone into verbal shutdown.",
 			"m_c doesn't speak to anyone, preferring to use signs to communicate."
 		],
 		"ear buzzing": [
@@ -187,6 +193,11 @@
 			"r_c sits with m_c trading signs back and forth when {PRONOUN/m_c/subject} {VERB/m_c/stop/stops} speaking.",
 			"Nobody minds when m_c has a few bad days and chooses to just use sign to communicate rather than trying to strain to speak.",
 			"Frustrated at not been able to tell if {PRONOUN/m_c/subject} {VERB/m_c/are/is} speaking clearly m_c just decides to use {PRONOUN/m_c/poss} best communication method instead."
+		],
+		"word loss": [
+			"r_c sits patiently beside m_c as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to properly form words. The two have all the time m_c needs.",
+			"m_c's been struggling to find the correct words to use when speaking to {PRONOUN/m_c/poss} clanmates, often mixing up words and phrases.",
+			"Poor m_c has been experiencing some word loss recently."
 		]
 	},
 	"constant joint pain": {
@@ -215,6 +226,11 @@
 			"m_c glares at {PRONOUN/m_c/poss} paw, frustrated that {PRONOUN/m_c/subject} can't keep it still when it messes up {PRONOUN/m_c/poss} carefully arranged nest.",
 			"m_c longingly watches {PRONOUN/m_c/poss} clanmates practice hunting techniques. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} unable to join as {PRONOUN/m_c/poss} forepaw keeps jumping around and {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need more bruises.",
 			"m_c's tail aches after it stops spasming. Gingerly {PRONOUN/m_c/subject} {VERB/m_c/raise/raises} {PRONOUN/m_c/poss} paws to rub it, hoping that it'll stay still for the rest of the time."
+		],
+		"fainting": [
+			"r_c worriedly fusses over m_c in the den. It appears after {PRONOUN/m_c/poss} last few seizures it's left m_c weak and at risk of fainting.",
+			"m_c finds {PRONOUN/m_c/self} on the ground staring at the sky with Clanmates worriedly checking on {PRONOUN/m_c/object}.",
+			"Seizures aren't the only thing sending m_c to collapse."
 		]
     },
     "allergies": {
@@ -231,6 +247,11 @@
 			"r_c sits beside m_c watching as {PRONOUN/m_c/subject} {VERB/m_c/shake/shakes} {PRONOUN/m_c/poss} head for the third time that afternood complaining about the buzzing.",
 			"It would seem that sniffles and a watery nose aren't enough for m_c, now {PRONOUN/m_c/poss} ears keep buzzing and it's quite disorientating.",
 			"m_c complains that {PRONOUN/m_c/poss} ears feel full of dandelion fluff and feathers."
+		],
+		"fainting": [
+			"To r_c's horror m_c collapses into a faint from {PRONOUN/m_c/poss} allergic reaction.",
+			"Poor m_c has fainted due to exposure to one of {PRONOUN/m_c/poss} allergens.",
+			"m_c wasn't expecting to faint today, it would seem that {PRONOUN/m_c/poss} allergies are worse than usual this season."
 		]
     },
 	"constantly dizzy": {
@@ -249,6 +270,11 @@
 			"m_c feels like the whole world is swaying, it appears that {PRONOUN/m_c/poss} dizziness is worse than usual today.",
 			"Walking around the camp, m_c keeps stumbling and tripping. {PRONOUN/m_c/poss/CAP} vision can't focus and keeps swimming as the whole world keeps swaying.",
 			"The world is refusing to stay still for m_c and {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} complaining about needing the help."
+		],
+		"fainting": [
+			"r_c makes sure that the nest is nice and soft, set aside for m_c to rest in once {PRONOUN/m_c/subject} {VERB/m_c/recover/recovers} from {PRONOUN/m_c/poss} fainting spell.",
+			"m_c stood up too fast and ended up crashing back down to the distress of {PRONOUN/m_c/poss} Clanmates.",
+			"m_c fainted trying to power through the day."
 		]
 	},
     "recurring shock": {
@@ -380,6 +406,11 @@
 		"ear buzzing": [
 			"r_c keeps rolling some stones over and over in the den beside m_c hoping that the sound will cancel out the buzzing that {PRONOUN/m_c/subject} {VERB/m_c/complain/complains} about.",
 			"As if m_c doesn't have enough issues with {PRONOUN/m_c/poss} headaches, now {PRONOUN/m_c/poss} ears are buzzing and no matter how much they shake {PRONOUN/m_c/poss} head or hide it doesn't go away."
+		],
+		"fainting": [
+			"Because of m_c's headache neither r_c nor m_c were prepared when {PRONOUN/m_c/subject} became faint and toppled over.",
+			"m_c's headaches have led to {PRONOUN/m_c/object} having a case of fainting.",
+			"Poor m_c was found passed out in the warriors den, not having even made it outside to start the day."
 		]
     },
 	"albinism": {
@@ -623,6 +654,23 @@
 			"m_c's whole body shakes, coiled and wound up with an energy that rises into something close to anxiety from the lack of realness to the world around {PRONOUN/m_c/object}.",
 			"When the world feels distant to m_c it worries {PRONOUN/m_c/object} greatly.",
 			"m_c feels a little bit understimulated recently and off balance as a result."
+		],
+		"tics": [
+			"r_c has noticed that m_c's been developing some tics recently.",
+			"m_c has found {PRONOUN/m_c/self} ticcing in the recent moon.",
+			"Initially m_c assumes the sudden jerks {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been experiencing recently were spasms, it turns out {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} just ticcing."
+		],
+		"parroting": [
+			"With more than some amusement r_c has been sitting with m_c while {PRONOUN/m_c/subject} {VERB/m_c/parrot/parrots} {PRONOUN/r_c/poss} own words right back to {PRONOUN/r_c/object}.",
+			"m_c's gotten caught in a loop of repeating {PRONOUN/m_c/poss} clanmates words or even {PRONOUN/m_c/poss} own.",
+			"m_c's become something of an echo around camp, repeating words and sentences much like a colourful parrot."
+		],
+		"word loss": [
+			"With more than some frustration m_c talks with r_c about {PRONOUN/m_c/poss} recent difficulties with speaking properly and finding the proper words.",
+			"m_c's tail lashes in the air as the words just refuse to come to {PRONOUN/m_c/object}.",
+			"m_c has been struggling to find the proper words to say what {PRONOUN/m_c/subject} {VERB/m_c/wish/wishes}.",
+			"Whenever m_c gets too excited and tries to speak too fast the words get lost.",
+			"Poor m_c has been stumbling over {PRONOUN/m_c/poss} words a lot more recently."
 		]
 	},
 	"heavy soul": {
@@ -782,6 +830,30 @@
 			"While the rest of the clan settles down for the night m_c is getting up every few hours to check and make sure that things are still safe and fine.",
 			"m_c keeps waking up {PRONOUN/m_c/poss} denmates to get them to check just one more time if they're really sure the camp is secure.",
 			"{PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} not paranoid, m_c insists that it's just the proper level of caution as {PRONOUN/m_c/subject} {VERB/m_c/check/checks} for the third time that afternoon that the nursery is secure."
+		],
+		"tics": [
+			"Unsurprisingly to r_c with all of m_c's anxiety and compulsions, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} started ticcing.",
+			"m_c appears to have started ticing.",
+			"Every so often m_c will jerk and let out clicking sounds, ticcing."
+		],
+		"plural soul": [
+			"m_c goes to r_c with a whole list of events {PRONOUN/m_c/subject} {VERB/m_c/have/has} noticed that don't quite match up. Sitting together {PRONOUN/r_c/subject} {VERB/r_c/realise/realises} that m_c may be a plural soul.",
+			"m_c has noticed that sometimes {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} seem to be {PRONOUN/m_c/self}, it makes {PRONOUN/m_c/object} suspect {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} possibly a plural soul.",
+			"The realisation that m_c has a plural soul becomes obvious when one of {PRONOUN/m_c/poss} alters admits it aloud.",
+			"With all the stress of keeping up with {PRONOUN/m_c/poss} obsessions it appears that m_c has become a plural soul in order to decrease stress.",
+			"Recently m_c's put together all the clues to realise that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a plural soul.",
+			"Ever since m_c realised {PRONOUN/m_c/subject} {VERB/m_c/are/is} a plural soul things have seemed easier to manage."
+		],
+		"word loss": [
+			"r_c has noticed m_c becoming more and more frustrated when {PRONOUN/m_c/subject} just can't find the right words to use.",
+			"m_c's been increasingly frustrated this last moon incapable of saying anything right.",
+			"m_c claws at the dirt wishing that words were easier for {PRONOUN/m_c/object} to say without messing up."
+		],
+		"parroting": [
+			"m_c has been chattering words back at {PRONOUN/m_c/poss} clanmates. r_c purrs with amusement because it seems to just be a case of parroting.",
+			"m_c's been parroting words and phrases that {PRONOUN/m_c/subject} {VERB/m_c/like/likes} around camp more often recently.",
+			"It appears that m_c has found a mantra to parrot around camp.",
+			"After a clanmate spoke something particularly profound, m_c has been repeating the statement over and over like a mantra."
 		]
 	},
 	"comet spirit": {
@@ -821,6 +893,26 @@
 			"r_c talks to m_c, discussing together why {PRONOUN/m_c/subject} {VERB/m_c/have/has} been feeling so listless and uncomfortable around camp recently.",
 			"No matter what m_c seems to do it just feels like something is off this moon.",
 			"Frustrated m_c snaps at a clanmate to leave {PRONOUN/m_c/object} alone, only to regret it and apologise heartbeats later. Something is off with {PRONOUN/m_c/object}."
+		],
+		"stimming": [
+			"m_c has been zooming around r_c's medicine den all moon. Jumping up and down, chattering and generally waving {PRONOUN/m_c/poss} paws around chasing extra stimulation.",
+			"m_c's been stimming more and more recently, bouncing and pacing around camp with the best of them.",
+			"While m_c knows some of {PRONOUN/m_c/poss} clanmates don't like it when {PRONOUN/m_c/subject} {VERB/m_c/pace/paces} around camp, {PRONOUN/m_c/subject} {VERB/m_c/need/needs} the extra stimulation."
+		],
+		"word loss": [
+			"r_c has noticed that m_c has been speaking too fast for {PRONOUN/m_c/poss} words to keep up.",
+			"Talking so fast all the time has led m_c's words to get lost on the way.",
+			"m_c has been speaking so fast that all {PRONOUN/m_c/poss} words have been tripping over one another."
+		],
+		"parroting": [
+			"r_c sighs as yet another fuming cat comes in complaining about m_c 'mocking' them with {PRONOUN/m_c/poss} parroting behaviour.",
+			"m_c has been cheerfully mimicking {PRONOUN/m_c/poss} various clanmates as a way to show more affection.",
+			"As a way to keep in control of {PRONOUN/m_c/poss} words, m_c has been parroting {PRONOUN/m_c/poss} clanmates.",
+			"m_c finds it incredibly funny how some of {PRONOUN/m_c/poss} clanmates overreact to {PRONOUN/m_c/object} parroting words."
+		],
+		"tics": [
+			"r_c tries to be more tolerant of m_c, but sometimes it's hard when m_c is getting in the way around the medicine den.",
+			"m_c's ticcing is disrupting the warriors den."
 		]
 	},
 	"antisocial": {
@@ -855,8 +947,115 @@
 			"r_c has had to cut off m_c's access to the medicine den. It's harsh but necessary with how much m_c's been trying to get into the herbs just to feel something real.",
 			"m_c hates to admit it, but {PRONOUN/m_c/subject} might have a problem with poppy seed addiction.",
 			"m_c's been taking more herbs than necessary recently, and is nervous to admit that {PRONOUN/m_c/subject} might have fallen into addiction."
+		],
+		"loyalty bind": [
+			"r_c worriedly watches m_c as {PRONOUN/m_c/subject} {VERB/m_c/pad/pads} around the camp after a clanmate. It looks like m_c might be getting into a bit of a loyalty bind.",
+			"It's important for everycat to care for the clan, but m_c could really care less. {PRONOUN/m_c/subject/CAP} only {VERB/m_c/have/has} one member of the clan {PRONOUN/m_c/subject} really {VERB/m_c/care/cares} for.",
+			"m_c knows that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in a bit of a loyalty bind. Uncaring for everycat but one."
 		]
 	},
+	"thunderous spirit": {
+		"loyalty bind": [
+			"r_c has noticed that recently m_c has been getting more and more clingy with {PRONOUN/m_c/poss} Clanmates. Inviting {PRONOUN/m_c/object} in to talk about whether or not it's a loyalty bind.",
+			"m_c has been getting stressed about taking patrols if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} favourite Clanmate isn't on the same patrol.",
+			"It feels like absolutely nobody understands m_c aside one Clanmate. It's incredibly distressing for {PRONOUN/m_c/object} to be separated.",
+			"m_c is convinced that nobody in the clan can truly understand {PRONOUN/m_c/object}... Well except for one special cat."
+		],
+		"stark cloud": [
+			"r_c has noticed that m_c is acting more and more erratic, lashing out at everycat around {PRONOUN/m_c/object}.",
+			"m_c can't fathom anyone in the Clan having flaws and is causing tension across the whole clan.",
+			"In recent days m_c has become convinced that the whole clan is full of conspirators and traitors.",
+			"m_c is struggling to see through the stark cloud covering up {PRONOUN/m_c/poss} vision to see the nuance of recent events.",
+			"Stalking around the camp m_c declares that {PRONOUN/m_c/subject} {VERB/m_c/hate/hates} everyone and the clan is just full of meanies.",
+			"m_c is experiencing a very us verses the world view of the clan these past moons."
+		],
+		"kittenspace": [
+			"m_c talked to r_c recently about feeling a lot younger than {PRONOUN/m_c/subject} actually {VERB/m_c/are/is} sometimes. r_c assists m_c in securing a safe space to be a kitten once more in.",
+			"Sometimes m_c drifts through the day more a kitten than a full adult cat.",
+			"It appears that m_c is spending some time in kittenspace."
+		],
+		"otherspace": [
+			"m_c has been talking to r_c recently about how sometimes {PRONOUN/m_c/subject} really {VERB/m_c/don't/doesn't} feel like a cat. It would seem that m_c has started to venture into otherspace.",
+			"m_c has decided that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} want to be a cat and is working on setting up an otherspace to be in.",
+			"It would appear that sometimes m_c despite been too old to play pretend still has need to go into otherspace at times to cope."
+		],
+		"addiction": [
+			"r_c's tail twitches in exhasperation when once more {PRONOUN/m_c/subject} discover that m_c is trying to raid {PRONOUN/r_c/poss} herb stores.",
+			"m_c feels more than a little bit twitchy, finding {PRONOUN/m_c/self} relying more and more on the herbs from the medicine den than {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} willing to admit.",
+			"Talking to {PRONOUN/m_c/poss} denmates m_c is coming to the realisation that {PRONOUN/m_c/subject} might have an addiction problem.",
+			"m_c's gotten into a habbit of taking bets with {PRONOUN/m_c/poss} Clanmates and can't seem to stop it.",
+			"Every time m_c sneaks out of the camp to the border for some private catnip hunting {PRONOUN/m_c/subject} {VERB/m_c/get/gets} such a thrill."
+		],
+		"impulsivity": [
+			"r_c has been watching as m_c darts across the whole camp, unable to stick ewith any decision longer than a few moments at a time.",
+			"m_c frantically darts from task to task, incapable of settling on one at all.",
+			"With some frustration m_c paces the camp having been scolded for racing ahead on a patrol and getting in trouble.",
+			"While on a hunting patrol this moon, m_c rushed in too fast and missed multiple catches that should have been simple.",
+			"m_c huffs when a Clanmate scolds {PRONOUN/m_c/object} for rushing into things without thinking."
+		],
+		"hyperfixation": [
+			"r_c watches as m_c skids into the medicine den, vibrating and eager to share {PRONOUN/m_c/poss} newest hyperfixation.",
+			"m_c has gone on a hunt for longer than usual, it's beginning to worry {PRONOUN/m_c/poss} Clanmates.",
+			"m_c's been chattering the ears off {PRONOUN/m_c/poss} Clanmates about a new interest."
+		]
+	},
+	"otherworldly mind": {
+		"kittenspace": [
+			"r_c has noticed that m_c is under the belief that {PRONOUN/m_c/subject} {VERB/m_c/are/is} still a kitten.",
+			"Despite been much older than a kitten, m_c still often slips back into that headspace and finds it a safe-space.",
+			"m_c appears to have slipped into kittenspace this moon."
+		],
+		"otherspace": [
+			"After chasing m_c all around camp to try and get {PRONOUN/m_c/object} to calm down, r_c is relieved that it'll just be a matter of keeping m_c secure in otherspace.",
+			"m_c loudly declares that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not a cat at all."
+		],
+		"echoing memory": [
+			"m_c trots in to see r_c with some troubling thoughts that have been keeping {PRONOUN/m_c/object} up recently, it would seem that m_c might have an echoing memory.",
+			"m_c has come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/have/has} an echoing memory of another lifetime.",
+			"While m_c has always been a bit odd, recently {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been even more so making strange sounds that don't seem to belong to anycat.",
+			"Recently m_c has been refusing to act the same as always, speaking about how {PRONOUN/m_c/subject} {VERB/m_c/know/knows} more than other cats.",
+			"m_c admits to a Clanmate that {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} that {PRONOUN/m_c/subject} lived another life before this one."
+		],
+		"plural soul": [
+			"m_c walking in to see r_c with {PRONOUN/m_c/poss} head held high. With no room to argue m_c explains that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a plural soul.",
+			"m_c has noticed that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a number of alters.",
+			"The voices that m_c has been hearing {PRONOUN/m_c/poss} whole life seem louder and more real recently, it might be that m_c is a plural soul.",
+			"After one of the voices in {PRONOUN/m_c/poss} head confirms it, m_c realises that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a plural soul.",
+			"m_c hisses at a Clanmate who uses the name of the wrong alter to greet {PRONOUN/m_c/object}.",
+			"It has become incredibly clear to all of m_c's Clanmates that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a plural soul."
+		],
+		"parroting": [
+			"r_c has to sigh when m_c keeps looping {PRONOUN/m_c/poss} words and parroting {PRONOUN/m_c/poss} Clanmates.",
+			"m_c isn't mocking other cats when {PRONOUN/m_c/subject} {VERB/m_c/repeat/repeats} what {PRONOUN/m_c/subject} {VERB/m_c/hear/hears}.",
+			"Recently m_c has been doing a fair bit of parroting."
+		],
+		"hallucinations": [
+			"r_c has noticed that m_c seems to be caught up in visions that nobody else can see. It's unclear whether those visions are from StarClan, the Dark Forest or somewhere else.",
+			"m_c has been seeing things around camp, it's hard for {PRONOUN/m_c/object} to discern how important those things are.",
+			"It appears as though m_c has been experiencing some hallucinations recently."
+		],
+		"vivid daydreams": [
+			"r_c's noticed that m_c has been daydreaming more and more recently. At least it keeps {PRONOUN/m_c/object} relaxed.",
+			"m_c purrs lazing in a sunbeam and letting {PRONOUN/m_c/poss} daydreams take {PRONOUN/m_c/object} away from the world.",
+			"In a daydream at least m_c can be sure that what {PRONOUN/m_c/subject} {VERB/m_c/see/sees} isn't real"
+		],
+		"tics": [
+			"r_c's noticed that recently m_c has gotten some tics.",
+			"It looks like m_c has started ticcing as {PRONOUN/m_c/subject} {VERB/m_c/wander/wanders} around the camp.",
+			"m_c has been partaking in some tics recently."
+		],
+		"compulsions": [
+			"r_c talks to m_c about some of {PRONOUN/m_c/poss} behaviour. It seems that m_c has been following compulsions and doesn't have an explanation for r_c on why.",
+			"m_c has felt compelled to take up certain behaviours and do things at times.",
+			"Looking up at the sky, m_c knows what {PRONOUN/m_c/subject} must do to please StarClan.",
+			"Recently m_c has been causing problems on patrols by following specific rituals that make everything take twice as long."
+		],
+		"addiction": [
+			"r_c has had to talk with m_c about {PRONOUN/m_c/poss} problem with trading prey and making bets with Clanmates.",
+			"m_c might have something of a problem with making bets and raising stakes.",
+			"m_c feels like {PRONOUN/m_c/subject} {VERB/m_c/rely/relies} on catnip far too much to remain calm throughout the day."
+		]
+	},		
 	"ongoing sleeplessness": {
 		"sleeplessness": [
 			"r_c sits with m_c well into the night while {PRONOUN/m_c/subject} {VERB/m_c/stare/stares} listlessly and somewhat forlornly at {PRONOUN/m_c/poss} paws and the bedding of the nest around {PRONOUN/m_c/object}.",
@@ -931,6 +1130,16 @@
 		"addiction": [
 			"To m_c's shame r_c has had to cut {PRONOUN/m_c/object} off from access to poppy seeds as {PRONOUN/m_c/subject}{VERB/m_c/'s/'ve} become far too reliant on them.",
 			"m_c can't sleep normally at all, relying entirely on poppy seeds to get even a passing night's sleep... {PRONOUN/m_c/subject} can't stop."
+		],
+		"plural soul": [
+			"In the earliest hours of the morning r_c is startled to find m_c in {PRONOUN/r_c/poss} den. Awkwardly, m_c explains it's because {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been wondering if {PRONOUN/m_c/subject} might be a plural soul.",
+			"m_c feels oddly more rested than usual. It seems that one of {PRONOUN/m_c/poss} alters has taken charge in trying to get {PRONOUN/m_c/object} some level of rest.",
+			"m_c is startled by a Clanmate calling {PRONOUN/m_c/object} by a name not {PRONOUN/m_c/poss} own... it's an alter's.",
+			"m_c discovers that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a plural soul."
+		],
+		"fainting": [
+			"r_c fusses worriedly over m_c, it looks like {PRONOUN/m_c/poss} lack of sleep is catching up and causing fainting spells.",
+			"m_c sheepishly apologises to {PRONOUN/m_c/poss} Clanmates for the scare. It looks like {PRONOUN/m_c/poss} lack of sleep has led to fainting."
 		]
 	},
 	"declawed": {
@@ -1012,6 +1221,16 @@
 			"While {PRONOUN/m_c/poss} clanmates try to be understanding, more than a few are annoyed when m_c gets funny and doesn't seem to remember how to properly cat.",
 			"Sometimes m_c goes into another kind of headspace and doesn't seem to be a cat anymore.",
 			"m_c is convinced {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a twoleg and that {PRONOUN/m_c/poss} body is just wrong."
+		],
+		"plural soul": [
+			"r_c has noticed that m_c often seems to talk to {PRONOUN/m_c/self}. It makes {PRONOUN/r_c/object} wonder if m_c might be a plural soul.",
+			"While meditating on {PRONOUN/m_c/poss} supposed other life, m_c realises that other life comes with another self.",
+			"Attempting to be just like any other cat of the Clan has led to m_c's soul splitting into plural."
+		],
+		"word loss": [
+			"r_c has noticed that m_c has been stumbling over {PRONOUN/m_c/poss} words, often repeating and doubling up.",
+			"m_c feels frustrated, humiliated about how much {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} currently stumbling over {PRONOUN/m_c/poss} words.",
+			"Poor m_c has gotten a bit of word loss."
 		]
 	},
 	"regressor": {
@@ -1093,13 +1312,29 @@
 		],
 		"redcough": [
 			"r_c fluffs up the nest around m_c, doing {PRONOUN/r_c/poss} best to make things more comfortable. Neither of them want to acknowledge the red in every cough.",
-			"In more than a little denial, m_c shakes {PRONOUN/m_c/poss} head and rufuses how each shuddering cough comes with blood.",
-			"m_c knows, head spinning that the red in {PRONOUN/m_c/poss} coughing means the end is apporoaching."
+			"In more than a little denial, m_c shakes {PRONOUN/m_c/poss} head and rufuses to acknowledge how each shuddering cough comes with blood.",
+			"m_c knows even with {PRONOUN/m_c/poss} head spinning, the red in {PRONOUN/m_c/poss} coughing means the end is apporoaching."
 		],
 		"overstimulation": [
 			"r_c's noticed that m_c seems to be incredibly overwhelmed and unable to focus on anything properly this moon.",
 			"With {PRONOUN/m_c/poss} head spinning m_c doesn't seem to be able to keep track of anything going on at all.",
 			"The world is hard enough for m_c to keep track of at the best of times, now it's all too overwhelming as well."
+		],
+		"parroting": [
+			"r_c has noticed that m_c is stumbling over {PRONOUN/m_c/poss} words, using other cat's words instead to try and smoothly communicate.",
+			"m_c feels a little bit like a parrot. Repeating statements over and over from {PRONOUN/m_c/poss} Clanmates.",
+			"m_c has started parroting other cats."
+		],
+		"word loss": [
+			"r_c sits patiently, waiting for m_c to find the words to use. {PRONOUN/r_c/subject/CAP} {VERB/m_c/have/has} the time for this.",
+			"Because of m_c's brain shock words sometimes just get completely lost.",
+			"m_c is experiencing some word loss and confusion this moon."
+		],
+		"fainting": [
+			"r_c is relieved that {PRONOUN/r_c/subject}{VERB/m_c/'re/'s} there to catch m_c when {PRONOUN/m_c/subject} {VERB/m_c/collapse/collapses}.",
+			"While walking around the camp, m_c collapses for no clear reason. It looks like {PRONOUN/m_c/poss} brain shock is causing fainting.",
+			"m_c tried to stand up too fast and ended up fainting.",
+			"Due to m_c's lack of ability to properly care for {PRONOUN/m_c/self}, it appears missing drinks has lead to a fainting spell."		
 		]
 	},
 	"irritable bowels": {
@@ -1188,6 +1423,11 @@
 			"r_c has noticed that m_c seems more exhausted than usual recently. After talking with {PRONOUN/m_c/object} {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} reassured that it's just a bit of fatigue.",
 			"Will all the discordant sensations that m_c experiences daily it's not a surprise that {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} experiencing some fatigue.",
 			"m_c is feeling incredibly worn down and fatiged this season."
+		],
+		"fainting": [
+			"m_c comes in to r_c expressing that {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} faint.",
+			"Poor m_c has gotten so jumbled up with {PRONOUN/m_c/poss} senses it's leaving {PRONOUN/m_c/object} dizzy and on the verge of fainting.",
+			"m_c's had an unfortunate case of fainting this season."
 		]
 	},
 	"constant nightmares": {
@@ -1222,6 +1462,16 @@
 			"r_c finds m_c in the back of the medicine den staring at the wall blankly. With a shaky voice m_c asks {PRONOUN/r_c/object} if there's ever going to be an end to these exhausting nightmares.",
 			"m_c really wishes that {PRONOUN/m_c/subject} could feel rested after sleeping.",
 			"All the nightamres that m_c experiences have left {PRONOUN/m_c/object} struggling to look awake during the day."
+		],
+		"plural soul": [
+			"r_c has noticed that m_c goes by several different names nowadays. It seems that m_c has become a plural soul.",
+			"With all the pressure of {PRONOUN/m_c/poss} nightmares, m_c has enlisted the help of a protector alter.",
+			"It appears all the long nights have led to m_c becoming a plural soul.",
+			"m_c has come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a plural soul."
+		],
+		"tics": [
+			"Due to m_c's lack of sleep, r_c is unsurprised to find that {PRONOUN/m_c/subject} {VERB/m_c/have/has} begun ticcing.",
+			"m_c's begun ticcing from the stress of all {PRONOUN/m_c/poss} constant nightmares."
 		]
 	},
 	"recurring rash": {
@@ -1283,6 +1533,134 @@
 			"m_c goes to r_c with questions on how to keep Dark Forest cats from stalking {PRONOUN/m_c/object}.",
 			"m_c's been seeing monsters in the early hours of the day recently, they loom over {PRONOUN/m_c/object} when {PRONOUN/m_c/subject} first {VERB/m_c/awake/awakes}.",
 			"No matter how much sleep m_c gets, {PRONOUN/m_c/subject} still {VERB/m_c/find/finds} {PRONOUN/m_c/self} unable to fully wake up properly and struggling against incomprehensible figures that grip {PRONOUN/m_c/object} painfully."
+		]
+	},
+	"face blindness": {
+		"headache": [
+			"m_c slinks into the medicine den, talking to who {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} is r_c about the recent headaches {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been having recently.",
+			"With all the strain of trying to put names to faces, poor m_c has given {PRONOUN/m_c/self} a headache.",
+			"Poor m_c wakes up with a stress headache this moon."
+		],
+		"verbal shutdown": [
+			"r_c checks in on m_c who just silently shakes {PRONOUN/m_c/poss} head. It appears that m_c has gone into verbal shutdown",
+			"m_c quietly goes around camp, merely greeting {PRONOUN/m_c/poss} Clanmates with nods and ficks of {PRONOUN/m_c/poss} ears.",
+			"Unwilling to get {PRONOUN/m_c/poss} Clanmates mixed up-- m_c has opted to verbally shutdown and just use signs instead.",
+			"It appears that m_c has gone into verbal shutdown."
+		],
+		"fatigue": [
+			"r_c softly asks if m_c is doing alright, {PRONOUN/m_c/poss} response is that it's just some fatigue.",
+			"m_c feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} bone deep tired all the time recently.",
+			"Recently m_c has been going through a fair bit of fatigue."
+		],
+		"overstimulation": [
+			"r_c has noticed that m_c seems more and more overwhelmed recently. It appears that perhaps m_c is experiencing some overstimulation.",
+			"m_c has been feeling incredibly overstimulated recently, even more incapable of recognizing {PRONOUN/m_c/poss} clanmates than usual."
+		]
+	},
+	"body biter": {
+		"torn pelt": [
+			"m_c has picked at {PRONOUN/m_c/poss} pelt enough for it to be patchy, with fur missing in spots.",
+			"m_c has been grooming {PRONOUN/m_c/self} too much and too often. {PRONOUN/m_c/poss/CAP} pelt has become torn.",
+			"m_c sighs, {PRONOUN/m_c/poss} pelt has become torn from the amount of fur that {PRONOUN/m_c/subject} {VERB/m_c/have/has} torn out.",
+			"m_c's pelt has become torn from {PRONOUN/m_c/object} pulling out {PRONOUN/m_c/poss} fur.",
+			"m_c has been anxiously pulling out {PRONOUN/m_c/poss} fur."
+		],
+		"wrenched claws": [
+			"r_c sighs when m_c comes in after biting {PRONOUN/m_c/poss} claws to shreds.",
+			"m_c winces after realizing just how far down {PRONOUN/m_c/subject} {VERB/m_c/have/has} bitten {PRONOUN/m_c/poss} claws.",
+			"m_c has bitten {PRONOUN/m_c/poss} claws down to a useless state."
+		],
+		"cracked pads": [
+			"r_c sighs when m_c comes in with bleeding pawpads.",
+			"m_c has been picking and nibbling at {PRONOUN/m_c/poss} pawpads until they became cracked.",
+			"m_c's paws have gotten cracked from {PRONOUN/m_c/poss} grooming."
+		],
+		"rash": [
+			"m_c goes to get help from r_c because of the rash that has formed from {PRONOUN/m_c/poss} obsessive grooming.",
+			"m_c's pelt has gotten a rash from irritation.",
+			"m_c shies away from touch because {PRONOUN/m_c/poss} fur has gotten sensitive."
+		],
+		"small cut": [
+			"r_c gets cobwebs ready for {PRONOUN/m_c/object} when m_c comes in with a small cut.",
+			"m_c has cut {PRONOUN/m_c/self} after chewing on {PRONOUN/m_c/poss} lips.",
+			"m_c has chewed too deeply into {PRONOUN/m_c/poss} calluses, and has started to bleed.",
+			"Once again, m_c has started to bleed from {PRONOUN/m_c/poss} nonstop biting."
+		],
+		"stimming": [
+			"r_c has noticed that m_c is biting at {PRONOUN/m_c/self} more than usual, it looks like m_c's doing it as a form of stimming.",
+			"m_c has begun to stim around camp, finding sticks to chew on in an attempt to not bite at {PRONOUN/m_c/self}."
+		]
+	},
+	"chattering tongue": {
+		"tics": [
+			"m_c has started ticing again r_c notes.",
+			"m_c barely notice when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to tic.",
+			"m_c's ears have started to peel backwards without {PRONOUN/m_c/poss} say-so.",
+			"A kit asks why {PRONOUN/m_c/poss} doing that when m_c's fur fluffs out because of {PRONOUN/m_c/poss} tics.",
+			"Another cat gets mad at m_c when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} hissing as a tic."
+		],
+		"impulsivity": [
+			"m_c has said somethings that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} mean to r_c.",
+			"m_c ran for seemingly no reason.",
+			"m_c scared off prey despite knowing better.",
+			"m_c starts play fighting with another cat without thinking about it."
+		],
+		"sprain": [
+			"m_c limps to r_c after {PRONOUN/m_c/subject} {VERB/m_c/have/has} sprained {PRONOUN/m_c/poss} paw from jumping awkwardly into the dirt.",
+			"m_c gets a sprain from throwing {PRONOUN/m_c/self} onto the ground.",
+			"m_c got a sprain.",
+			"m_c locks up and takes a harsh fall as a result."
+		],
+		"absence": [
+			"r_c assures m_c's friend that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} just absent for the time being.",
+			"m_c is having a hard time thinking as {PRONOUN/m_c/subject} {VERB/m_c/look/looks} to no where.",
+			"m_c is mentally gone for the time being.",
+			"m_c hears the cats around {PRONOUN/m_c/object} but is having a hard time replying."
+		],
+		"spasms": [
+			"r_c checks in on m_c about {PRONOUN/m_c/poss} recent spasms.",
+			"Recently m_c's been having spasms alongside {PRONOUN/m_c/poss} ticcing.",
+			"Poor m_c initially thought {PRONOUN/m_c/subject} {VERB/m_c/were/was} ticcing but it turns out {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been having spasms."
+		],
+		"broken bone": [
+			"r_c sighs when m_c comes in with a broken bone from all locked up.",
+			"m_c locks up and takes a harsh fall as a result.",
+			"m_c got very unfortunate when {PRONOUN/m_c/subject} got locked up."
+		]
+	},
+	"plural soul": {
+		"kittenspace": [
+			"Sometimes, m_c feels younger than the age {PRONOUN/m_c/poss} body is. {PRONOUN/m_c/subject/CAP} talk to r_c about it, worried something is wrong with {PRONOUN/m_c/object}, but r_c assures {PRONOUN/m_c/object} that what {PRONOUN/m_c/subject} {VERB/m_c/are/is} feeling is perfectly normal - {PRONOUN/m_c/poss} brain is just in kittenspace",
+			"m_c, despite being old for a kit, acts younger then {PRONOUN/m_c/subject} {VERB/m_c/are/is} sometimes. It's possible that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in kittenspace.",
+			"It looks at though one of m_c's little alters has taken charge, m_c is in kittenspace."
+		],
+		"otherspace": [
+			"m_c has slipped into a more puppy-like headspace. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} worried about this, but r_c assures {PRONOUN/m_c/object} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} just in otherspace, and that's okay." ,
+			"m_c, despite being too old to play pretend, acts more dog like sometimes. It's possible that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in otherspace.",
+			"m_c seems to be letting one of {PRONOUN/m_c/poss} non-cat alters take the lead, leading to {PRONOUN/m_c/object} been in otherspace."
+		],
+		"echoing memory": [
+			"m_c comes to talk to r_c about something important. After a number of discussions with {PRONOUN/m_c/poss} alters {PRONOUN/m_c/subject} {VERB/m_c/have/has} come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/have/has} an echoing memory.",
+			"A few of m_c's alters have noticed some memories that don't seem to properly fit with {PRONOUN/m_c/poss} life, it might be that {PRONOUN/m_c/subject} {VERB/m_c/have/has} an echoing memory.",
+			"Sometimes m_c feels as though {PRONOUN/m_c/subject} had a life before this one."
+		],
+		"loyalty bind": [
+			"r_c has noticed that m_c is struggling to truly maintain {PRONOUN/m_c/poss} loyalty to the Clan. {PRONOUN/m_c/poss/CAP} alters are causing something of a conflict of interests at times.",
+			"m_c has found {PRONOUN/m_c/self} in something of a loyalty bind.",
+			"More often than not m_c feels like nobody in the Clan really has {PRONOUN/m_c/poss} trust.",
+			"m_c has been going out on patrols with one Clanmate... and one Clanmate only."
+		]
+	},
+	"thought blind": {
+		"face blindness": [
+			"r_c has noticed that m_c seems to struggle with recognizing {PRONOUN/m_c/poss} Clanmates.",
+			"With more than a bit of frustration, m_c has to admit that {PRONOUN/m_c/subject} might be face blind alongside {PRONOUN/m_c/poss} thought blindness."
+		]
+	},
+	"addiction": {
+		"fainting": [
+			"r_c finds m_c passed out in the medicine den, apparently having fainted.",
+			"Awkwardly m_c wakes up after fainting, the cause more than clear to {PRONOUN/m_c/poss} judging Clanmates."
 		]
 	}
 }

@@ -456,7 +456,12 @@
         "duration": 1,
         "medicine_duration": 1,
         "infectiousness": 0,
-        "risks": [],
+        "risks": [
+			{
+				"name": "fainting",
+				"chance": 25
+			}
+		],
         "herbs": [
             "juniper",
             "ragwort",
@@ -1168,7 +1173,16 @@
         "duration": 1,
         "medicine_duration": 1,
         "infectiousness": 0,
-        "risks": [],
+        "risks": [
+			{
+				"name": "parroting",
+				"chance": 5
+			},
+			{
+				"name": "body biter",
+				"chance": 50
+			}
+		],
         "herbs": [
             "catmint"
         ]
@@ -1411,6 +1425,10 @@
 			{
 				"name": "sleep paralysis",
 				"chance": 25
+			},
+			{
+				"name": "fainting",
+				"chance": 25
 			}
 		],
         "herbs": [
@@ -1608,11 +1626,142 @@
         "duration": 2,
         "medicine_duration": 1,
         "infectiousness": 0,
-        "risks": [],
+        "risks": [
+			{
+				"name": "fainting",
+				"chance": 25
+			}
+		],
         "herbs": [
 			"chamomile",
 			"thyme",
 			"daisy"
 		]
-    }	
+    },
+    "parroting": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+		],
+        "herbs": [
+			"chamomile",
+			"goldenrod"
+		]
+    },
+    "tics": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "body biter",
+				"chance": 75
+			}
+		],
+        "herbs": [
+			"chamomile",
+			"elder leaves",
+			"thyme"
+		]
+    },
+    "stark cloud": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 4,
+        "medicine_duration": 3,
+        "infectiousness": 0,
+        "risks": [
+		],
+        "herbs": [
+			"chamomile",
+			"goldenrod",
+			"rosemary"
+		]
+    },
+    "word loss": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [
+		],
+        "herbs": [
+			"goldenrod",
+			"tansy"
+		]
+    }
 }

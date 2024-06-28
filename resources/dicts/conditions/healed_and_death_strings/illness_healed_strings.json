@@ -215,6 +215,23 @@
 		"To m_c's relief {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} able to raise from {PRONOUN/m_c/poss} nest without falling back down.",
 		"m_c is no longer feeling dizzed when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up."
 	],
+	"parroting": [
+		"m_c has finished {PRONOUN/m_c/poss} parroting",
+		"It looks like m_c's words are back to been {PRONOUN/m_c/poss} own now."
+	],
+	"tics": [
+		"m_c has stopped ticing.",
+		"m_c has stopped twitching."		
+	],
+	"stark cloud": [
+		"m_c's judgement seems to have gotten back on track.",
+		"The cloud that has covered m_c's eyes has blown away",
+		"m_c apologizes for {PRONOUN/m_c/poss} black and white acting recently, the cloud has passed."
+	],
+	"word loss": [
+		"Finally m_c is able to speak without tripping over {PRONOUN/m_c/poss} words.",
+		"m_c's word loss has ended."
+	],
 	"malnourished": [
         "m_c finally feels energized again, it seems the newly consistent meals have done {pronoun/m_c/object} good."
     ],

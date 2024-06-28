@@ -7,10 +7,13 @@
 		"ticks": 9,
 		"zoomies": 3,
 		"sleeplessness": 2,
+		"nightmares": 2,
 		"burn out": 3,
 		"ear buzzing": 5,
 		"nest wetting": 3,
-		"stimming": 4
+		"stimming": 4,
+		"parroting": 3,
+		"word loss": 5
     },
     "Greenleaf":{
         "fleas": 2,
@@ -20,9 +23,11 @@
 		"anxiety attack": 3,
 		"ticks": 3,
 		"sleeplessness": 2,
+		"nightmares": 2,
 		"ear buzzing": 5,
 		"nest wetting": 3,
-		"stimming": 2
+		"stimming": 2,
+		"parroting": 1
     },
     "Leaf-fall":{
         "fleas": 5,
@@ -34,9 +39,11 @@
 		"ticks": 5,
 		"seasonal lethargy": 5,
 		"sleeplessness": 2,
+		"nightmares": 4,
 		"ear buzzing": 5,
 		"nest wetting": 2,
-		"stimming": 5
+		"stimming": 5,
+		"word loss": 4
     },
     "Leaf-bare":{
         "fleas": 4,
@@ -48,9 +55,11 @@
 		"anxiety attack": 3,
 		"ticks": 4,
 		"sleeplessness": 1,
+		"nightmares": 2,
 		"burn out": 3,
 		"ear buzzing": 5,
 		"nest wetting": 2,
-		"stimming": 5
+		"stimming": 5,
+		"word loss": 4
     }
 }

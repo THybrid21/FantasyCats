@@ -19,6 +19,7 @@ import ujson
 
 logger = logging.getLogger(__name__)
 from scripts.game_structure import image_cache
+import scripts.cat.cats
 from scripts.cat.history import History
 from scripts.cat.names import names
 from scripts.cat.pelts import Pelt
@@ -784,59 +785,73 @@ def create_new_cat(
         if new_cat.age == "adolescent":
             new_cat.update_mentor()
 
-        # Remove disabling scars, if they generated.
-        not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND',
-                       'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
-        for scar in new_cat.pelt.scars:
-            if scar in not_allowed:
-                new_cat.pelt.scars.remove(scar)
+        scar_to_condition = {
+            "THREE": ["one bad eye"],
+            "FOUR": ["weak leg", "no", "no"],
+            "NOLEFTEAR": ["partial hearing loss"],
+            "NORIGHTEAR": ["partial hearing loss"],
+            "NOEAR": ["partial hearing loss", "deaf"],
+            "NOPAW": ["lost a leg", "born without a leg"],
+            "NOTAIL": ["lost their tail", "born without a tail"],
+            "HALFTAIL": ["lost their tail"],
+            "BRIGHTHEART": ["one bad eye"],
+            "LEFTBLIND": ["one bad eye"],
+            "RIGHTBLIND": ["one bad eye"],
+            "BOTHBLIND": ["blind"],
+            "MANLEG": ["weak leg", "twisted leg"],
+            "MANTAIL": ["echoing shock", "no", "no", "no", "no"],
+            "RATBITE": ["weak leg"],
+            "NECKBITE": ["echoing shock", "no", "no", "no", "no"],
+            "LEGBITE": ["weak leg"],
+            "SNOUT": ["crooked jaw", "no", "no"],
+            "THROAT": ["echoing shock", "no", "no", "no", "no"],
+            "SIDE": ["echoing shock", "no", "no", "no", "no"],
+            "TOETRAP": ["weak leg"],
+            "RASH": ["recurring rash"],
+            "DECLAWED": ["declawed"],
+            "RASH": ["recurring rash"],
+            "LEFTTAG": ["infertile"],
+            "RIGHTTAG": ["infertile"]
+        }
+        cat_gain_age = age
+        clan_gain_moon = int(game.clan.age)
+        cat_birth_moon = clan_gain_moon - cat_gain_age
 
-        # chance to give the new cat a permanent condition, higher chance for found kits and litters
+        if age >= 6:
+            cat_gain_age = randint(6, age)
+        elif age == 4 or age == 5:
+            cat_gain_age = randint(4, age)
+
+        # Give conditions for disabling scars, if they generated.
+        for scar in new_cat.pelt.scars:
+            if scar in scar_to_condition:
+                if game.clan.game_mode == "classic" or age < 4:
+                    new_cat.pelt.scars.remove(scar)
+                else:
+                    condition = choice(scar_to_condition.get(scar))
+
+                    if condition == "no":
+                        continue
+                    elif "born" in condition or (condition == "recurring rash" and randint(1, 2) == 1):
+                        born_with = True
+                        clan_gain_moon = cat_birth_moon
+                    else:
+                        born_with = False
+                        clan_gain_moon = (age - cat_gain_age) + cat_birth_moon
+
+                    new_cat.get_permanent_condition(condition, born_with=born_with, starting_moon=clan_gain_moon)
+
+        # chance to give the new cat a congenital permanent condition, higher chance for found kits and litters
         if game.clan.game_mode != "classic":
             if kit or litter:
                 chance = int(
                     game.config["cat_generation"]["base_permanent_condition"] / 11.25
                 )
             else:
-                chance = game.config["cat_generation"]["base_permanent_condition"] + 10
+                chance = game.config["cat_generation"]["base_permanent_condition"]
+
             if not int(random() * chance):
-                possible_conditions = []
-                for condition in PERMANENT:
-                    if (kit or litter) and PERMANENT[condition]["congenital"] not in [
-                        "always",
-                        "sometimes",
-                    ]:
-                        continue
-                    # next part ensures that a kit won't get a condition that takes too long to reveal
-                    age = new_cat.moons
-                    leeway = 5 - (PERMANENT[condition]["moons_until"] + 1)
-                    if age > leeway:
-                        continue
-                    possible_conditions.append(condition)
-
-                if possible_conditions:
-                    chosen_condition = choice(possible_conditions)
-                    born_with = False
-                    if PERMANENT[chosen_condition]["congenital"] in [
-                        "always",
-                        "sometimes",
-                    ]:
-                        born_with = True
-
-                    new_cat.get_permanent_condition(chosen_condition, born_with)
-                    if (
-                            new_cat.permanent_condition[chosen_condition]["moons_until"]
-                            == 0
-                    ):
-                        new_cat.permanent_condition[chosen_condition][
-                            "moons_until"
-                        ] = -2
-
-                    # assign scars
-                    if chosen_condition in ["lost a leg", "born without a leg"]:
-                        new_cat.pelt.scars.append("NOPAW")
-                    elif chosen_condition in ["lost their tail", "born without a tail"]:
-                        new_cat.pelt.scars.append("NOTAIL")
+                new_cat.congenital_condition(new_cat)
 
         if outside:
             new_cat.outside = True
@@ -1883,6 +1898,7 @@ def event_text_adjust(
         print("WARNING: Tried to adjust text, but no text was provided.")
 
     replace_dict = {}
+    cat_dict = {}
 
     # main_cat
     if "m_c" in text:
@@ -2050,12 +2066,22 @@ def leader_ceremony_text_adjust(
     """
     used to adjust the text for leader ceremonies
     """
+    leader_name = str(leader.name)
+    
+    if leader.is_plural():
+        if leader.front:
+            name = str(leader.front)
+            if len(leader.alters) > 0:
+                if name != leader_name:
+                        leader_name = name + " (" + str(leader.name) + ")"
+
+
     replace_dict = {
         "m_c_star": (str(leader.name.prefix + "star"), choice(leader.pronouns)),
         "m_c": (str(leader.name.prefix + leader.name.suffix), choice(leader.pronouns)),
     }
 
-    if life_giver:
+    if life_giver:    
         replace_dict["r_c"] = (
             str(Cat.fetch_cat(life_giver).name),
             choice(Cat.fetch_cat(life_giver).pronouns),
@@ -2094,6 +2120,15 @@ def ceremony_text_adjust(
     random_dead_parent = None
 
     adjust_text = text
+
+    cat_name = str(cat.name)
+    
+    if cat.is_plural():
+        if cat.front:
+            name = str(cat.front)
+            if len(cat.alters) > 0:
+                if name != cat_name:
+                        cat_name = name + " (" + str(cat.name) + ")"
 
     cat_dict = {
         "m_c": (

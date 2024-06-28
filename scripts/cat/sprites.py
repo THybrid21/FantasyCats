@@ -137,7 +137,7 @@ class Sprites:
             'rosettecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours', 
             'sokokecolours', 'agouticolours', 'maskedcolours', 
             
-            'singlenaturals', 'singlepride', 'singleunnaturals', 
+            'singlecolours', 'singlepride', 
             'shadersnewwhite', 'lightingnew',
             'fademask', 'fadestarclan', 'fadedarkforest',
             'symbols'
@@ -159,9 +159,8 @@ class Sprites:
             sprites.spritesheet(f"sprites/accessories/{x}.png", x)
 
         for x in [
-            'backednaturals', 'dunnartnaturals', 'ratnaturals', 'smokenaturals', 'lanternnaturals',
-            'backedpride', 'dunnartpride', 'ratpride', 'smokepride', 'lanternpride',
-            'backedunnaturals', 'dunnartunnaturals', 'ratunnaturals', 'smokeunnaturals', 'lanternunnaturals'
+            'backedcolours', 'dunnartcolours', 'ratcolours', 'smokecolours', 'lanterncolours', 'armoredcolours',
+            'backedpride', 'dunnartpride', 'ratpride', 'smokepride', 'lanternpride', 'armoredpride'
         ]:
             sprites.spritesheet(f"sprites/solid/{x}.png", x)
 
@@ -287,23 +286,25 @@ class Sprites:
 
         # Define colors and categories
         color_categories = [
-            ['WHITE', 'PALEGREY', 'SILVER', 'BANNANA', 'PALECREAM', 'SAND', 'CREAM', 'LIGHTBROWN', 'FARROW', 'BEIGE', 'HAY', 'MEERKAT'],
-            ['PANTONE', 'PALEGINGER', 'WOOD', 'GOLDEN', 'APRICOT', 'GINGER', 'LILAC', 'KHAKI', 'HAZELNUT', 'CADET', 'BRONZE', 'MARENGO'],
-            ['SAMON', 'THISTLE', 'GOLD', 'FIRE', 'GARFIELD', 'DARKGINGER', 'GOLDEN-BROWN', 'CAPPUCCINO', 'ECRU', 'GREY', 'BLUEGREY', 'BATTLESHIP'],
-            ['HONEY', 'MEDALLION', 'BRICK', 'ROSE', 'SIENNA', 'DUSTBROWN', 'ASHBROWN', 'SANDALWOOD', 'WRENGE', 'PINECONE', 'STEEL', 'SLATE'],
-            ['GRANOLA', 'SADDLE', 'SUNSET', 'APPLE', 'RED', 'RUFOUS', 'TAN', 'CHESTNUT', 'MINK', 'BROWN', 'XANADU', 'SOOT'],
-            ['CEDAR', 'DARKSAMON', 'CRIMSON', 'CARMINE', 'SCARLET', 'COSMOS', 'BEAVER', 'DARKBROWN', 'CHOCOLATE', 'DARKGREY', 'CHARCOAL', 'ANCHOR'],
-            ['ROSEWOOD', 'BURNT', 'BLOOD', 'COFFEE', 'MOCHA', 'TAUPE', 'UMBER', 'COAL', 'GHOST', 'BLACK', 'PITCH']
+            ['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'COAL', 'GHOST', 'BLACK', 'PITCH'],
+            ['BEIGE', 'PANTONE', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'TAN', 'CHESTNUT', 'DARKBROWN', 'CHOCOLATE', 'COFFEE', 'UMBER'],
+            ['BANNANA', 'PALECREAM', 'CREAM', 'PALEGINGER', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD'],
+            ['CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 'DARKGREEN', 'DARKOLIVE', 'FERN', 'FOREST'],
+            ['PALEBOW', 'SKY', 'POWDERBLUE', 'SHINYMEW', 'SAPPHIRE', 'OCEAN', 'COBALT', 'DARKCOBALT', 'INDIGO', 'NIGHT', 'DUSKBOW'],
+            ['PETAL', 'PALESTRAKIT', 'FLORAL', 'AMYTHYST', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'DARKSTRAKIT'],
+            ['CORAL', 'MEW', 'PALERED', 'APPLE', 'BLUSH', 'RED', 'SCARLET', 'DARKRED', 'GARNET'],
+            ['IVORY', 'LEMON', 'LAGUNA', 'YELLOW', 'BEE', 'PYRITE', 'PINEAPPLE', 'YELLOW-GREEN', 'DIJON']
+
         ]
 
         color_types = [
-            'singlenaturals', 'backednaturals', 'smokenaturals', 'ratnaturals', 'dunnartnaturals', 'lanternnaturals'
+            'singlecolours', 'backedcolours', 'smokecolours', 'ratcolours', 'dunnartcolours', 'lanterncolours', 'armoredcolours'
         ]
 
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
-                    self.make_group(color_type, (col, row), f'{color_type[:-8]}{color}')
+                    self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
 
         pride_categories = [
             ['DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 'PAN'],
@@ -312,32 +313,13 @@ class Sprites:
         ]
 
         pride_types = [
-            'singlepride', 'backedpride', 'smokepride', 'ratpride', 'dunnartpride', 'lanternpride'
+            'singlepride', 'backedpride', 'smokepride', 'ratpride', 'dunnartpride', 'lanternpride', 'armoredpride'
         ]
 
         for row, colors in enumerate(pride_categories):
             for col, color in enumerate(colors):
                 for color_type in pride_types:
                     self.make_group(color_type, (col, row), f'{color_type[:-5]}{color}')
-
-        f_color_categories = [
-            ['PALEBOW', 'IVORY', 'CORAL', 'CHARTRUSE', 'MINT', 'MINTY', 'EMERALD', 'TURQUOISE', 'SKY', 'POWDERBLUE', 'INDIGOBLUE', 'MAGENTA'],
-            ['PETAL', 'MEW', 'LIME', 'LETTUCE', 'GRASS', 'OLIVE', 'SHINYMEW', 'PUDDLE', 'TIFFANY', 'INDIGOLIGHT', 'HEATHER', 'AMYTHYST'],
-            ['LEMON', 'LAGUNA', 'FAWN', 'CORN', 'DARKOLIVE', 'SPINNACH', 'WAVES', 'SAPPHIRE', 'OCEAN', 'ORCHID', 'FLORAL', 'CHERRY'],
-            ['SUNSHINE', 'BEE', 'PYRITE', 'GREEN', 'SEAWEED', 'SACRAMENTO', 'TEAL', 'DENIUM', 'COBALT', 'STRAKIT', 'BUBBLEGUM', 'TART'],
-            ['YELLOW', 'PINEAPPLE', 'SEAGRASS', 'JADE', 'FLUORITE', 'DARKTEAL', 'SONIC', 'NAVY', 'PURPLE', 'WINE', 'BRIGHTCRIMSON', 'ROYALPURPLE'],
-            ['TROMBONE', 'BRASS', 'YELLOW-GREEN', 'FOREST', 'SEAFOAM', 'FERN', 'JEANS', 'JACKET', 'DEEPOCEAN', 'DARKSTRAKIT', 'BARN', 'GARNET'],
-            ['DIJON', 'RUST', 'COPPER', 'DEEPOLIVE', 'DEEPFOREST', 'MALACHITE', 'OCEANIC', 'NIGHTTIME', 'ONYX', 'RASIN', 'DUSKBOW']
-        ]
-
-        f_color_types = [
-            'singleunnaturals', 'backedunnaturals', 'smokeunnaturals', 'ratunnaturals', 'dunnartunnaturals', 'lanternunnaturals'
-        ]
-
-        for row, colors in enumerate(f_color_categories):
-            for col, color in enumerate(colors):
-                for color_type in f_color_types:
-                    self.make_group(color_type, (col, row), f'{color_type[:-10]}{color}')
             
         # tortiepatchesmasks
         tortiepatchesmasks = [

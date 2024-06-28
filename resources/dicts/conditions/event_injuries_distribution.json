@@ -14,6 +14,16 @@
         "major": 2,
         "severe": 1
     },
+    "permaqueen apprentice": {
+        "minor": 6,
+        "major": 3,
+        "severe": 1
+    },	
+    "mediator apprentice": {
+        "minor": 5,
+        "major": 2,
+        "severe": 1
+    },
     "warrior": {
         "minor": 2,
         "major": 3,
@@ -26,6 +36,16 @@
     },
     "medicine cat": {
         "minor": 4,
+        "major": 2,
+        "severe": 1
+    },
+    "permaqueen": {
+        "minor": 3,
+        "major": 3,
+        "severe": 1
+    },
+    "mediator": {
+        "minor": 5,
         "major": 2,
         "severe": 1
     },

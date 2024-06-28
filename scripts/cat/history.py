@@ -246,22 +246,27 @@ class History:
             SkillPath.RUNNER: ["running"],
             SkillPath.CLIMBER: ["climbing"],
             SkillPath.SWIMMER: ["swimming"],
-            SkillPath.SPEAKER: ["arguing"],
+            SkillPath.SPEAKER: ["public speaking"],
             SkillPath.MEDIATOR: ["resolving arguments"],
             SkillPath.CLEVER: ["solving problems"],
             SkillPath.INSIGHTFUL: ["providing insight"],
             SkillPath.SENSE: ["noticing small details"],
-            SkillPath.KIT: ["caring for kittens"],
+            SkillPath.KIT: ["caring for kits"],
             SkillPath.STORY: ["storytelling"],
             SkillPath.LORE: ["remembering lore"],
             SkillPath.CAMP: ["caring for camp"],
             SkillPath.HEALER: ["healing"],
-            SkillPath.STAR: ["connecting to starclan"],
+            SkillPath.STAR: ["connecting to StarClan"],
+            SkillPath.DARK: ["connecting to the Dark Forest"],
             SkillPath.OMEN: ["finding omens"],
             SkillPath.DREAM: ["understanding dreams"],
             SkillPath.CLAIRVOYANT: ["predicting the future"],
             SkillPath.PROPHET: ["understanding prophecies"],
-            SkillPath.GHOST: ["connecting to the afterlife"]
+            SkillPath.GHOST: ["connecting to the afterlife"],
+            SkillPath.UNKNOWN: ["connecting to the Unknown Residence"],
+            SkillPath.QUEEN: ["understanding the needs of Queens"],
+            SkillPath.THUNDERPATH: ["minding the dangers of the Thunderpath"]
+            
         }
 
         for _ment in cat.history.mentor_influence["skill"]:

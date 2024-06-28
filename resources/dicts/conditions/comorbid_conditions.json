@@ -1,0 +1,57 @@
+{
+	"paralyzed": [
+		"constant roaming pain"
+	],
+	"seizure prone": [
+		"chattering tongue", "face blindness"
+	],
+	"starwalker": [
+		"comet spirit", "disrupted senses", "chattering tongue", "face blindness", "mute",
+		"irritable bowels", "thought blind", "anxiety"
+	],
+	"heavy soul": [
+		"plural soul"
+	],
+	"constant roaming pain": [
+		"paralyzed"
+	],
+	"comet spirit": [
+		"starwalker", "disrupted senses", "chattering tongue"
+	],
+	"antisocial": [
+		"plural soul"
+	],
+	"anxiety": [
+		"plural soul", "mute", "thunderous spirit", "starwalker"
+	],
+	"thunderous spirit": [
+		"plural soul", "anxiety"
+	],
+	"otherworldly mind": [
+		"plural soul", "echoing memory"
+	],
+	"irritable bowels": [
+		"starwalker", "disrupted senses"
+	],
+	"disrupted senses": [
+		"starwalker", "comet spirit", "irritable bowels", "face blindness"
+	],
+	"chattering tongue": [
+		"seizure prone", "starwalker", "comet spirit"
+	],
+	"plural soul": [
+		"heavy soul", "antisocial", "anxiety", "thunderous spirit", "otherworldly mind", "starwalker", "echoihng memory"
+	],
+	"face blindness": [
+		"seizure prone", "starwalker", "thought blind", "disrupted senses"
+	],
+	"thought blind": [
+		"face blindness", "starwalker"
+	],
+	"mute": [
+		"starwalker", "anxiety"
+	],
+	"echoing memory": [
+		"otherworldly mind", "plural soul"
+	]
+}

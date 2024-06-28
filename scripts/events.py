@@ -2577,29 +2577,33 @@ class Events:
             if random.getrandbits(1):  # 50/50
                 if cat.gender == "male" and cat.genderalign in ['male', 'demiboy']:
                     cat.genderalign = random.choice(["trans female", "demigirl"])
-                    cat.pronouns = [cat.default_pronouns[1].copy()]
                 elif cat.gender == "female" and cat.genderalign in ['female', 'demigirl']:
                     cat.genderalign = random.choice(["trans male", "demiboy"])
-                    cat.pronouns = [cat.default_pronouns[2].copy()]
                 elif cat.genderalign == "intergender":# 50/50 
                     cat.genderalign = random.choice(["trans female", "trans male"])
+                elif cat.gender == "null" and cat.genderalign == "null":# 50/50 
+                    cat.genderalign = random.choice(["trans female", "trans male", "intergender"])
                 else:
                     if cat.genderalign in genderqueer_list:
                         return
                     else:
                         cat.genderalign = random.choice(genderqueer_list)
-                        cat.pronouns = [cat.default_pronouns[0].copy()]
             elif cat.genderalign == "questioning":
                 euphoria = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
-                        "genderfluid", "bigender", "pangender"]
+                        "genderfluid", "bigender", "pangender", "null"]
                 cat.genderalign = random.choice(euphoria)
 
-                if cat.genderalign in ["trans male", "demiboy"]:
+                if cat.genderalign == "demiboy":
                     trans = "tom"
-                elif cat.genderalign in ["trans female", "demigirl"]:
+                    cat.pronouns = [cat.default_pronouns[2].copy()]
+                elif cat.genderalign == "demigirl":
                     trans = "molly"
+                    cat.pronouns = [cat.default_pronouns[1].copy()]
+                elif cat.genderalign == "null":
+                    trans = cat.genderalign
                 else:
                     trans = cat.genderalign
+                    cat.pronouns = [cat.default_pronouns[0].copy()]
 
                 text = f"{cat.name} has come to the conclusion that {trans} fully explains what they are."
                 game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
@@ -2617,8 +2621,12 @@ class Events:
             elif cat.genderalign == ['trans female', 'demigirl']:
                 trans = "molly"
                 cat.pronouns = [cat.default_pronouns[1].copy()]
+            elif cat.genderalign == "questioning":
+                trans = cat.genderalign
+                cat.pronouns = [cat.default_pronouns[3].copy()]                
             else:
                 trans = cat.genderalign
+                cat.pronouns = [cat.default_pronouns[0].copy()]
 
             text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore - {trans} does it much better."
             game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
@@ -2636,12 +2644,16 @@ class Events:
 
             if cat.gender == "male" and cat.genderalign in ["trans female", "demigirl", "questioning"]:
                 cat.genderalign = random.choice(["male", "demiboy"])                     
-                # cat.pronouns = [cat.default_pronouns[2].copy()]
+                cat.pronouns = [cat.default_pronouns[2].copy()]
             elif cat.gender == "female" and cat.genderalign == ["trans male", "demiboy", "questioning"]:
                 cat.genderalign = random.choice(["female", "demigirl"])
-                # cat.pronouns = [cat.default_pronouns[1].copy()]
+                cat.pronouns = [cat.default_pronouns[1].copy()]
             elif cat.gender == "intersex" and cat.genderalign != "intergender":
-                cat.genderalign = "intergender"        
+                cat.genderalign = "intergender"
+                cat.pronouns = [cat.default_pronouns[0].copy()]
+            elif cat.gender == "null" and cat.genderalign != "null":
+                cat.genderalign = "null"
+                cat.pronouns = [cat.default_pronouns[3].copy()]
             else:
                 return
 

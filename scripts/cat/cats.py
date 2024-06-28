@@ -83,7 +83,7 @@ class Cat:
         "leader",
     ]
 
-    gender_tags = {'female': 'F', 'male': 'M', 'intersex': 'I'}
+    gender_tags = {'female': 'F', 'male': 'M', 'null': 'N', 'intersex': 'I'}
 
     # EX levels and ranges.
     # Ranges are inclusive to both bounds
@@ -121,7 +121,15 @@ class Cat:
             "inposs": "his",
             "self": "himself",
             "conju": 2,
-        },
+        },        
+        {
+            "subject": "it",
+            "object": "it",
+            "poss": "its",
+            "inposs": "its",
+            "self": "itself",
+            "conju": 2,
+        }
     ]
 
     all_cats: Dict[str, Cat] = {}  # ID: object
@@ -223,7 +231,9 @@ class Cat:
         self.healed_condition = None
         self.leader_death_heal = None
         self.also_got = False
-        self.permanent_condition = {}
+        self.permanent_condition = {}       
+        self.alters = []      
+        self.front = None
         self.df = False
         self.experience_level = None
 
@@ -300,9 +310,12 @@ class Cat:
 
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
-            intersexchance = randint(1,100)
-            #probability that the cat will be intersex.. base chance around 5%
-            if intersexchance <= 10 and example is False:
+            intersexchance = randint(0,100)
+            if intersexchance == 0 and example is False:
+                self.gender = "null"
+                self.get_permanent_condition("infertile", born_with=True)
+            #probability that the cat will be intersex.. base chance around 10%
+            elif intersexchance <= 10 and example is False:
                 self.gender = "intersex"
                 infertile = randint(1, 120)
                 if infertile == 1:
@@ -414,6 +427,7 @@ class Cat:
         :param skill_dict: TODO what is a skill dict exactly
         :return: None
         """
+        
         # trans cat chances
 
         genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
@@ -438,6 +452,13 @@ class Cat:
                 self.genderalign = choice(genderqueer_list)
             else:
                 self.genderalign = self.gender
+        elif self.gender == "null":
+            if trans_chance == 1:
+                self.genderalign = "intergender"
+            if nb_chance == 1:
+                self.genderalign = choice(genderqueer_list)
+            else:
+                self.genderalign = self.gender
         elif self.gender == "intersex":
             self.genderalign = choice(["demiboy", "demigirl", "intergender"])
             if nb_chance == 1:
@@ -449,6 +470,8 @@ class Cat:
             self.pronouns = [self.default_pronouns[1].copy()]
         elif self.genderalign in ["male", "trans male", "demiboy"]:
             self.pronouns = [self.default_pronouns[2].copy()]
+        elif self.genderalign == "null":
+            self.pronouns = [self.default_pronouns[3].copy()]
 
         # APPEARANCE
         self.pelt = Pelt.generate_new_pelt(self.gender, [Cat.fetch_cat(i) for i in (self.parent1, self.parent2) if i], self.age)
@@ -538,6 +561,7 @@ class Cat:
 
         if not skill_dict:
             self.skills = CatSkills.generate_new_catskills(self.status, self.moons)
+
 
     def __repr__(self):
         return "CAT OBJECT:" + self.ID
@@ -1898,10 +1922,125 @@ class Cat:
             self.healed_condition = True
             return False
 
+    def system_core(self):
+        template = {
+            "ID": "0",
+            "name": "",
+            "gender": "",
+            "role": "host",
+            "other": "core",
+            "origin": "core",
+            "splits": []
+            }
+        if game.clan:
+            if self.name:
+                template["name"] = self.name.prefix + self.name.suffix
+                template["gender"] = self.genderalign
+        self.alters.append(template)
+    
+    
+    def add_split(self, new_alter, origin):
+        if self.alters[new_alter]:
+            self.alters[new_alter]["splits"].append(origin)
+    
+    def new_alter(self):
+        template = {
+            "ID": "",
+            "name": "",
+            "gender": "",
+            "role": "",
+            "other": "cat",
+            "origin": "core",
+            "splits": []
+            }
+        # print(self.ID)
+        template["ID"] = str(len(self.alters) + 1)
+        template["role"] = choice(["co-host", "caregiver", "little", "protecter", "trauma holder", "persecutor"])
+        extra = randint(1, 5)
+        if extra == 1:
+            template["other"] = choice(["noncat", "rogue", "kittypet", "otherclan", "fictive"])
+        rng = randint(1, 20)
+        gender = "???"
+        if rng <= 2:
+            genderqueer_list = ["nonbinary", "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby",
+                            "genderfluid", "bigender", "pangender", "questioning"]
+            gender = choice(genderqueer_list)
+        elif rng <= 6:
+            gender = "male"
+        else:
+            gender = "female"
+        template["gender"] = gender
+        alter_name = ""
+        
+        # naming without making a whole new cat....yikers TT
+        if os.path.exists('resources/dicts/names/names.json'):
+            with open('resources/dicts/names/names.json') as read_file:
+                names_dict = ujson.loads(read_file.read())
+        if template["other"] == "fictive":
+            canon_chance = randint(1, 5)
+            if canon_chance == 1:
+                alter_name = choice(["Fireheart", "Graystripe", "Sandstorm", "Squirrelflight", "Brambleclaw", "Hollyleaf",
+                                    "Jayfeather", "Lionblaze", "Dovewing", "Ivypool", "Yellowfang", "Ravenpaw", "Bristlefrost",
+                                    "Ashfur", "Cinderpelt", "Alderheart", "Needletail", "Hawkfrost", "Mothwing", "Leafpool",
+                                    "Crowfeather", "Nightheart", "Willowpelt", "Shadowsight", "Tigerheart", "Grey Wing", "River",
+                                    "Night", "Violetshine", "Twigbranch",  "Sol", "Mapleshade", "Moth Flight", "Cinderheart", "Tall Shadow",
+                                    "Talltail", "Onewhisker", "Darktail", "Tigerclaw", "Scourge", "Brightheart", "Briarlight", "Cloudtail",
+                                    "Thunder", "Feathertail", "Spottedleaf", "Bluefur", "Bumblestripe", "Poppyfrost", "Stormfur", "Mistyfoot",
+                                    "Star Flower", "Fallen Leaves", "Berrynose", "Tawnypelt", "Webfoot", "Jake", "Sparkpelt", "Rootspring", "Nightcloud"])
+            else:
+                alter_name = choice(names_dict["normal_prefixes"])
+        else:
+            alter_name = choice(names_dict["normal_prefixes"])
+            
+        if template["role"] == "little":
+            if template["other"] == "fictive":
+                canon_chance = randint(1, 50)
+                if canon_chance == 1:
+                    alter_name = choice(["Snowkit", "Mosskit", "Badgerpaw"])
+                else:
+                    alter_name = choice(names_dict["normal_prefixes"])
+                    alter_name += choice(["kit", "paw"])
+            else:
+                alter_name = choice(names_dict["normal_prefixes"])
+                alter_name += choice(["kit", "paw"])
+        elif template["other"] in ["cat", "otherclan"]:
+            alter_name += choice(names_dict["normal_suffixes"])
+        template["name"] = alter_name
+        if template["ID"] != "1":
+            splitrng = randint(1, (len(self.alters)+1))
+            if splitrng < (len(self.alters) + 1):
+                template["origin"] = self.alters[(splitrng - 1)]['name']
+                self.add_split((splitrng - 1), template["name"])
+        if template["origin"] == "core":
+            self.add_split(0, template["name"])
+        # print(template)
+        self.alters.append(template)
+
     def moon_skip_permanent_condition(self, condition):
         """handles the moon skip for permanent conditions"""
         if not self.is_disabled():
             return "skip"
+
+        # chance of splitting if plural
+        if self.is_plural():
+            splitting = randint(1, 100)
+            if len(self.alters) < 1:
+                self.new_alter()
+            if splitting < 15:
+                if len(self.alters) < game.config["condition_related"]["max_alters"]:
+                    num_splits = 1
+                    if game.config["condition_related"]["max_splits"] > 1:
+                        num_splits = randint(1, game.config["condition_related"]["max_splits"])
+                    for i in range(num_splits):
+                        self.new_alter()
+            can_front = []            
+            if self.alters[0]["ID"] != "0":            
+                can_front = [str(self.name)]
+            for alter in self.alters: 
+                little_unsafe = ['pregnant', 'faux pregnant', 'recovering from birth', 'turmoiled litter']
+                if self.injuries not in little_unsafe or alter["role"] != "little":
+                    can_front.append(alter["name"])
+            self.front = choice(can_front)
 
         if self.permanent_condition[condition]["event_triggered"]:
             self.permanent_condition[condition]["event_triggered"] = False
@@ -2227,13 +2366,24 @@ class Cat:
         possible_conditions = []
         multiple_condition_chance = game.config["cat_generation"]["multiple_permanent_conditions"]
         max_conditions = game.config["cat_generation"]["max_conditions_born_with"]
+        comorbidity_chance = game.config["cat_generation"]["comorbidity_chance"]
         conditions = 1
         count = 1
+
+        possible_comorbidities = []
+        try:
+            with open("resources/dicts/conditions/comorbid_conditions.json", 'r') as read_file:
+                comorbid_conditions = ujson.loads(read_file.read())
+        except IOError:
+            print("ERROR: can't get comorbidity")
 
         for condition in PERMANENT:
             possible = PERMANENT[condition]
             if possible["congenital"] in ["always", "sometimes"]:
                 possible_conditions.append(condition)
+
+        if not game.settings["allow danger"]:
+            possible_conditions.remove("body biter")
 
         while count <= max_conditions:
             if randint(1, multiple_condition_chance) == 1:
@@ -2241,10 +2391,14 @@ class Cat:
             count += 1
 
         while conditions:
-            new_condition = choice(possible_conditions)
-            while new_condition in cat.permanent_condition:
-                new_condition = choice(possible_conditions)
+            for entry in comorbid_conditions:
+                if entry in cat.permanent_condition:
+                    possible_comorbidities.append(comorbid_conditions.get(entry))
 
+            new_condition = choice(possible_conditions)
+            if randint(1, comorbidity_chance) == 1 and possible_comorbidities:
+                new_condition = choice(choice(possible_comorbidities))
+            
             if new_condition == "born without a leg":
                 cat.pelt.scars.append('NOPAW')
             elif new_condition == "born without a tail":
@@ -2253,7 +2407,14 @@ class Cat:
             self.get_permanent_condition(new_condition, born_with=True)
             conditions -= 1
 
-    def get_permanent_condition(self, name, born_with=False, event_triggered=False):
+    def update_alters(self):
+        if self.alters:
+            for alter in self.alters:
+                if "origin" not in alter:
+                    alter["origin"] = "core"
+                    alter["splits"] = []
+
+    def get_permanent_condition(self, name, born_with=False, event_triggered=False, starting_moon=game.clan.age if game.clan else 0):
         if name not in PERMANENT:
             print(
                 str(self.name),
@@ -2291,12 +2452,14 @@ class Cat:
             born_with = True
         moons_until = condition["moons_until"]
         if born_with and moons_until != 0:
-            moons_until = randint(
-                moons_until - 1, moons_until + 1
-            )  # creating a range in which a condition can present
-            moons_until = max(moons_until, 0)
+            # creating a range in which a condition can present
+            if name in ["starwalker", "plural soul", "comet spirit", "infertile"]:
+                moons_until = randint(moons_until - 2, moons_until + 5)
+            else:
+                moons_until = randint(moons_until - 1, moons_until + 1)
 
-        if born_with and self.status not in ["kitten", "newborn"]:
+        if born_with and self.status not in ["apprentice", "medicine cat apprentice", "mediator apprentice", 
+                                            "permaqueen apprentice","kitten", "newborn"]:
             moons_until = -2
         elif born_with is False:
             moons_until = 0
@@ -2309,6 +2472,7 @@ class Cat:
             severity=condition["severity"],
             congenital=condition["congenital"],
             moons_until=moons_until,
+            moon_start=starting_moon,
             mortality=mortality,
             risks=condition["risks"],
             illness_infectiousness=condition["illness_infectiousness"],
@@ -2327,6 +2491,11 @@ class Cat:
                 "complication": None,
                 "event_triggered": new_perm_condition.new,
             }
+
+            if self.is_plural():
+                if len(self.alters) < 1:
+                    self.system_core()
+                    self.new_alter()
             new_condition = True
         return new_condition
 
@@ -2391,6 +2560,12 @@ class Cat:
         if len(self.permanent_condition) <= 0:
             is_disabled = False
         return is_disabled is not False
+
+    def is_plural(self):
+        is_plural = False
+        if "plural soul" in self.permanent_condition:
+            is_plural = True
+        return is_plural
 
     def contact_with_ill_cat(self, cat: Cat):
         """handles if one cat had contact with an ill cat"""
@@ -3950,6 +4125,7 @@ class Personality:
             # This will only trigger if they have the same personality.
             return None
 
+
 # Creates a random cat
 def create_cat(status, moons=None, biome=None):
     new_cat = Cat(status=status, biome=biome)
@@ -3963,7 +4139,7 @@ def create_cat(status, moons=None, biome=None):
             new_cat.moons = choice([1, 2, 3, 4, 5])
     
     not_allowed_scars = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 'LEFTBLIND', 'BRIGHTHEART',
-                         'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
+                         'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG', 'RASH', 'DECLAWED', 'RIGHTTAG', 'LEFTTAG']
     
     for scar in new_cat.pelt.scars:
         if scar in not_allowed_scars:
@@ -3981,7 +4157,8 @@ def create_example_cats():
         if cat_index in warrior_indices:
             game.choose_cats[cat_index] = create_cat(status='warrior')
         else:
-            random_status = choice(['kitten', 'apprentice', 'warrior', 'warrior', 'elder'])
+            random_status = choice(['kitten', 'apprentice', 'apprentice', 'apprentice', 'permaqueen apprentice', 'mediator apprentice', 
+                                        'medicine cat apprentice', 'medicine cat apprentice', 'warrior', 'warrior', 'mediator', 'permaqueen', 'elder'])
             game.choose_cats[cat_index] = create_cat(status=random_status)
 
 

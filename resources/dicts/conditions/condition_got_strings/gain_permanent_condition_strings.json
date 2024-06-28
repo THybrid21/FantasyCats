@@ -143,7 +143,14 @@
 			"r_c has noticed that while the shock has gone it's replaced in m_c with a certain kind of worry that {PRONOUN/m_c/subject} {VERB/m_c/wear/wears} like a cloud of dust on {PRONOUN/m_c/poss} pelt.",
 			"r_c shakes {PRONOUN/r_c/poss} head as m_c shakes. While the shock is gone, it seems to have left {PRONOUN/m_c/object} with a lingering sense of anxiety.",
 			"m_c has found that since {PRONOUN/m_c/poss} shock has faded it's been replaced with an itch under {PRONOUN/m_c/poss} fur and a certain kind of jumpiness that they {PRONOUN/m_c/subject} can't explain."
-		]		
+		],
+		"plural soul": [
+			"m_c has a nervous conversation with the medicine cat after not feeling like {PRONOUN/m_c/self} for awhile. The medicine cat tells m_c that {PRONOUN/m_c/subject} might be a plural soul.",
+			"m_c realizes that they are a plural soul when one of {PRONOUN/m_c/poss} alters says it out loud!",
+			"m_c is starting to suspect that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a plural soul because of the voices {PRONOUN/m_c/subject} hear.",
+			"m_c vents to the medicine cat that sometimes it feels like {PRONOUN/m_c/poss} body isn't {PRONOUN/m_c/poss} own: {PRONOUN/m_c/subject} may be a plural soul.",
+			"After all of the lingering shock and trauma m_c feels as if {PRONOUN/m_c/subject} {VERB/m_c/are/is} more than just {PRONOUN/m_c/self}... {PRONOUN/m_c/subject} may be a plural soul."
+		]
     },
     "head damage": {
         "failing eyesight": [
@@ -253,6 +260,12 @@
 			"While r_c is relieved to see that m_c is no longer feeling like life is too much... there's still a lingering worry over the new heaviness that {PRONOUN/m_c/subject} {VERB/m_c/carry/carries} with {PRONOUN/m_c/object}.",
 			"m_c keeps talking about feeling a deep aching heaviness over {PRONOUN/m_c/object} with r_c. It seems that while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} no longer world tired, {PRONOUN/m_c/poss} soul has become heavy.",
 			"Even no longer feeling like the world is too heavy, m_c feels weighed down and unable to quite feel happy with {PRONOUN/m_c/poss} clanmates."
+		],
+		"plural soul": [
+			"r_c watches m_c carefully in the days following {PRONOUN/m_c/poss} world tiredness. It seems as though m_c is now more than just {PRONOUN/m_c/self}.",
+			"m_c knows that ever since {PRONOUN/m_c/poss} world tiredness went away {PRONOUN/m_c/subject} {VERB/m_c/have/has} been hearing voices, experiencing sensations and emotions not entirely {PRONOUN/m_c/poss} own.",
+			"It seems that after raising back up on {PRONOUN/m_c/poss} paws from world tiredness, m_c has become a plural soul.",
+			"It seems that after m_c tired of the world it came back to {PRONOUN/m_c/object} as a comfort to {PRONOUN/m_c/poss} soul."
 		]
 	},
 	"rash": {
@@ -280,11 +293,22 @@
 		"declawed": [
 			"r_c fusses over m_c's paws with {PRONOUN/m_c/object} before sitting back and shaking {PRONOUN/r_c/poss} head sadly. It appears {PRONOUN/m_c/subject} will have to learn to fight without {PRONOUN/m_c/poss} claws.",
 			"r_c frustratedly hisses over the state of m_c's paws and claws. Curse those horrible twolegs who did this.",
-			"Curse them, curse those twolegs for taking m_c away and bringing {PRONOUN/m_c/object} back without {PRONOUN/m_c/poss} claws."
+			"Curse them, curse those twolegs for taking m_c away and bringing {PRONOUN/m_c/object} back without {PRONOUN/m_c/poss} claws.",
+			"The medicine cat frustratedly hisses over the state of m_c's paws and claws, what foolish decisions led {PRONOUN/m_c/object} here.",
+			"m_c has many curses to say as {PRONOUN/m_c/subject} {VERB/m_c/find/finds} that even healed {PRONOUN/m_c/poss} paws and claws will never be the same.",
+			"It appears that m_c's claws will never return to the most useable state as before {PRONOUN/m_c/subject} got them wrenched.",
+			"m_c curses all that {PRONOUN/m_c/subject} can realising that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} now declawed."
 		],
 		"recurring shock": [
 			"Ever since m_c's experiece with the twolegs {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} told r_c about having recurring flashes of been in a scary place, with slippery surfaces and screaming creatures all around.",
 			"While m_c is relieved to still be fully capable, {PRONOUN/m_c/subject} can't help but keep flinching whenever even a whisper about twolegs is brought up."
+		],
+		"plural soul": [
+			"After {PRONOUN/m_c/poss} claws are all healed, m_c goes back to r_c with concerns about not been alone in {PRONOUN/m_c/poss} head. It appears {PRONOUN/m_c/subject} might be a plural soul.",
+			"m_c has come to the conclusion that {PRONOUN/m_c/subject} might be a plural soul because of the voices {PRONOUN/m_c/subject} {VERB/m_c/hear/hears}.",
+			"After long talks to {PRONOUN/m_c/subject}, m_c has come to the conclusion that {PRONOUN/m_c/subject} must be a plural soul.",
+			"m_c states to the whole clan that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not just one but many.",
+			"After recent events m_c is starting to suspect that {PRONOUN/m_c/subject} might be a plural soul."
 		]
 	},
 	"kittenspace": {
@@ -330,12 +354,25 @@
 			"m_c feels only mildly better after {PRONOUN/m_c/poss} long rest, the fatigue seems to want to be a constant companion."
 		]
 	},
+	"anaphylaxis": {
+		"mute": [
+			"All things considered, r_c is very relieved that the only thing the anaphylaxis took away from m_c was {PRONOUN/m_c/poss} voice.",
+			"While m_c may no longer be able to speak to {PRONOUN/m_c/poss} Clanmates, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} that is more than acceptable.",
+			"At least m_c's only lost {PRONOUN/m_c/poss} voice to anaphylaxis and not {PRONOUN/m_c/poss} life."
+		]
+	},
 	"cutter's sickness": {
       "infertile": [
         "As the last dredges of the cutter's sickness leaves m_c, r_c struggles to inform {PRONOUN/m_c/object} of the fact that {PRONOUN/m_c/subject} may now be infertile.",
         "While m_c's pleased to finally be over cutter's sickness {PRONOUN/m_c/subject} {VERB/m_c/fear/fears} telling the clan about how {PRONOUN/m_c/subject} won't be able to have kits now.",
         "m_c knows without even been told, kits are no longer in {PRONOUN/m_c/poss} future.",
         "After all that time recovering, m_c cries over the changes in {PRONOUN/m_c/poss} scent and what that means."
-      ]
+      ],
+	  "plural soul": [
+		"After m_c gets better r_c pulls {PRONOUN/m_c/object} aside to talk. It seems that m_c might be developing a plural soul.",
+		"Once the cutter's sickness finally fades away, m_c is startled to discover it's left something behind, it seems that {PRONOUN/m_c/poss} soul has become plural.",
+		"Upon the completion of {PRONOUN/m_c/poss} recovery, m_c talks to the medicine cat about the voices {PRONOUN/m_c/subject} started to hear throughout it.",
+		"It would seem that m_c has a plural soul that the cutter's sickness drew to the surface."
+	  ]
     }
 }

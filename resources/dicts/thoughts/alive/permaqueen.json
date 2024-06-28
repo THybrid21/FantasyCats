@@ -45,7 +45,8 @@
             "Is helping to mediate minor squabbles between kits",
             "Is considering how to foster camaraderie among kits from different litters",
             "Is understanding the fine line between allowing kits to explore and ensuring their safety",
-			"Is teaching the kittens stories about StarClan"
+			"Is teaching the kittens stories about StarClan",
+			"Teaches the kittens about proper ettitquette"
         ],
         "random_status_constraint": [
             "kitten"
@@ -95,7 +96,7 @@
         ]
     },
     {
-        "id": "queen_skill"
+        "id": "queen_skill",
 		"thoughts": [
             "Is preparing mentally for the newest round of Clan kits",
 			"Is refreshing the moss in the kitting nests",
@@ -109,7 +110,7 @@
 		]
     },
     {
-        "id": "queen_skills_to_app"
+        "id": "queen_skills_to_app",
 		"thoughts": [
             "Is teaching r_c how to prepare for new kittens in the nursery",
 			"Talks with r_c about how to identify when a queen is due",
@@ -124,5 +125,161 @@
         "relationship_constraint": [
             "mentor/app"
         ]	
+    },
+	{
+        "id": "calm_permaqueen",
+        "thoughts": [
+            "Feels completely in control",
+			"Sits calmly overseeing the camp",
+			"Is practicing maintaning {PRONOUN/m_c/poss} patience",
+			"Enjoys a peaceful break from the nursery",
+			"Found a nice new napping spot",
+			"Relaxes in a comfortable sunbeam",
+			"Taking the time to meditate",
+			"Is happy to lend {PRONOUN/m_c/poss} Clanmates {PRONOUN/m_c/poss} ears",
+			"Is reminiscing on {PRONOUN/m_c/poss} own nursery days",
+			"Takes a short stroll around the territory",
+			"Feels like the future is bright",
+			"Feels settled in {PRONOUN/m_c/poss} position",
+			"Sighs at the state of the Nursery",
+			"Reflects on the past and future",
+			"Has found a peaceful napping spot",
+			"Is a soothing presence in the Nursery"
+        ],
+        "main_trait_constraint": [
+            "calm"
+        ]	
+    },
+	{
+        "id": "compassionate_permaqueen",
+        "thoughts": [
+            "Is listening to a Clanmate's woes",
+			"Is offering to help the Medicine Cats",
+			"Notices that r_c seems down recently",
+			"Helped the warriors out with the apprentices",
+			"Is making sure that everone else eats before {PRONOUN/m_c/subject} {VERB/m_c/take/takes} {PRONOUN/m_c/poss} prey",
+			"Reassures r_c that things will be alright",
+			"Is listening to r_c's woes",
+			"Decides to do extra chores this moon",
+			"Worries about the safety of {PRONOUN/m_c/poss} Clanmates",
+			"Is helping repair the camp walls",
+			"Is ensuring that the nursery walls are intact",
+			"Brings back feathers for the nursery",
+			"Wonders if {PRONOUN/m_c/subject} could volunteer for a patrol"
+        ],
+        "main_trait_constraint": [
+            "compassionate"
+        ]	
+    },
+	{
+        "id": "compassionate_permaqueen_kits",
+        "thoughts": [
+            "Patiently walks r_c through the camp",
+			"Sits with r_c to make {PRONOUN/r_c/object} feel more secure",
+			"Helps r_c with a particularly difficult problem",
+			"Is soothing some upset kits",
+			"Helps the kittens clean up the Nursery",
+			"Softly sings a litter to sleep",
+			"Mediates an argument over nests",
+			"Is soothing r_c after a nightmare",
+			"Tells an old clan legend to the kittens",
+			"Gently scolds r_c for hiding thorns in the nest"
+        ],
+        "main_trait_constraint": [
+            "compassionate"
+        ],
+		"random_status_constraint": [
+			"kitten"
+		]
+    },
+	{
+        "id": "compassionate_permaqueen_infertile",
+        "thoughts": [
+            "Comforts r_c about {PRONOUN/m_c/poss} lack of kittens",
+			"Lets r_c assist in the Nursery",
+			"Lets r_c complain all day",
+			"Gives r_c a little bit of extra support",
+			"Reassures r_c that the clan doesn't need that many kittens anyway",
+			"Wonders if there's anything {PRONOUN/m_c/subject} can do to help r_c today",
+			"Has noticed that r_c has a little bit of empty nest syndrome"
+        ],
+        "main_trait_constraint": [
+            "compassionate"
+        ],
+		"random_status_constraint": [
+			"warrior",
+			"mediator",
+			"permaqueen",
+			"medicine cat",
+			"deputy",
+			"leader",
+			"elder"
+		],
+        "perm_conditions": {
+            "r_c": [
+                "infertile"
+            ]
+    },
+	{
+        "id": "responsible_permaqueen",
+        "thoughts": [
+            "Makes sure that the nursery is clean",
+			"Is ensuring that the nursery is defended",
+			"Takes the time to practice a few defensive battle moves",
+			"Grooming, grooming, grooming",
+			"Double checks that all {PRONOUN/m_c/poss} tasks are thoroughly done",
+			"Is preparing for around the day kitten care"
+        ],
+        "main_trait_constraint": [
+            "responsible"
+        ]
+    },
+	{
+        "id": "responsible_permaqueen_app",
+        "thoughts": [
+            "Double checks that {PRONOUN/m_c/poss} apprentice is alright",
+			"Is teaching r_c about the common troubles kittens might experience",
+			"Talks with r_c about the signs of early kittencough in the Nursery",
+			"Is proud of all r_c has learnt"
+        ],
+        "main_trait_constraint": [
+            "responsible"
+        ],
+        "random_status_constraint": [
+            "permaqueen apprentice"
+        ],
+        "relationship_constraint": [
+            "mentor/app"
+        ]	
+    },
+	{
+        "id": "strict_permaqueen",
+        "thoughts": [
+            "Ensures that the nursery remains in order",
+			"Is prepared to enforce the rules",
+			"Scolds a Clanmate for disturbing the peace of the nursery"
+        ],
+        "main_trait_constraint": [
+            "strict"
+        ]	
+    },
+	{
+        "id": "strict_permaqueen_kit",
+        "thoughts": [
+            "Scolds r_c for sneaking out of the nursery",
+			"Caught some kits trying to escape the nursery",
+			"Is teaching the kittens about the Code",
+			"Ferries some naughty kits back to {PRONOUN/m_c/poss} parents",
+			"Baps r_c for bad behaviour",
+			"Gives r_c a long lecture",
+			"Has to go find some kits missing from the nursery",
+			"Is feeling a little bit stressed by the chaos of the nursery"
+        ],
+        "main_trait_constraint": [
+            "strict"
+        ],
+		"random_status_constraint": [
+			"kitten"
+		]
     }
 ]

@@ -1003,7 +1003,8 @@
         "cause_permanent": [
             "recurring shock",
 			"echoing shock",
-			"anxiety"
+			"anxiety",
+			"plural soul"
         ],
         "herbs": [
             "thyme",
@@ -1110,7 +1111,11 @@
             {
                 "name": "severe headache",
                 "chance": 20
-            }
+            },
+			{
+				"name": "word loss",
+				"chance": 10
+			}
         ],
         "also_got": [
         ],
@@ -1263,7 +1268,15 @@
             {
                 "name": "redcough",
                 "chance": 10
-            }
+            },
+			{
+				"name": "word loss",
+				"chance": 5
+			},
+			{
+				"name": "anaphylaxis",
+				"chance": 45
+			}
         ],
         "also_got": [
             "shock"
@@ -1296,6 +1309,10 @@
         "illness_infectiousness": [
         ],
         "risks": [
+			{
+				"name": "anaphylaxis",
+				"chance": 70
+			}
         ],
         "also_got": [
         ],
@@ -1414,7 +1431,8 @@
         "risks": [],
 		"also_got": [],
         "cause_permanent": [
-			"heavy soul"
+			"heavy soul",
+			"plural soul"
         ],
         "herbs": [
             "juniper",
@@ -1440,7 +1458,11 @@
             {
                 "name": "torn pelt",
                 "chance": 40
-            }
+            },
+			{
+				"name": "anaphylaxis",
+				"chance": 90
+			}
         ],
         "also_got": [],
         "cause_permanent": [
@@ -1591,7 +1613,8 @@
         ],
         "cause_permanent": [
 			"declawed",
-			"recurring shock"
+			"recurring shock",
+			"plural soul"
         ],
         "herbs": [
             "juniper",
@@ -1616,7 +1639,7 @@
         "risks": [],
         "also_got": [],
         "cause_permanent": [
-			"regressor"	
+			"regressor"
         ],
         "herbs": [
 			"thyme",
@@ -1782,6 +1805,93 @@
             "chamomile",
             "poppy"
         ]
+    },			
+    "loyalty bind": {
+        "duration": 4,
+        "severity": "minor",
+        "medicine_duration": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [],
+        "also_got": [
+        ],
+        "cause_permanent": [],
+        "herbs": [
+            "honey",
+            "chamomile",
+            "thyme",
+			"rosemary"
+        ]
+    },			
+    "fainting": {
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "head damage",
+				"chance": 45
+			}
+		],
+        "also_got": [
+			"bruises"
+        ],
+        "cause_permanent": [],
+        "herbs": [
+            "oak leaves",
+			"honey",
+			"elder leaves"
+        ]
+    },			
+    "anaphylaxis": {
+        "duration": 3,
+        "severity": "severe",
+        "medicine_duration": 2,
+        "mortality": {
+            "newborn": 2,
+            "kitten": 2,
+            "adolescent": 5,
+            "young adult": 7,
+            "adult": 7,
+            "senior adult": 5,
+            "senior": 2
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [],
+        "also_got": [
+        ],
+        "cause_permanent": [
+			"mute"
+		],
+        "herbs": [
+            "honey",
+            "elder leaves",
+			"oak leaves",
+			"catmint",
+			"blackberry",
+			"poppy"
+        ]
     },
     "cutter's sickness": {
         "duration": 3,
@@ -1826,7 +1936,8 @@
         ],
         "also_got": [],
         "cause_permanent": [
-			"infertile"
+			"infertile",
+			"plural soul"
         ],
         "herbs": [
             "juniper",
@@ -1881,11 +1992,7 @@
             {
                 "name": "an infected wound",
                 "chance": 15
-            },
-			{
-				"name": "turmoiled litter",
-				"chance": 20
-			}
+            }
         ],
         "also_got": [
             "blood loss"
@@ -1897,6 +2004,29 @@
             "juniper",
             "ragwort",
             "moss"
+        ]
+    },
+    "faux pregnant": {
+        "duration": 2,
+        "severity": "major",
+        "medicine_duration": 3,
+        "mortality": {
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+        ],
+        "also_got": [
+        ],
+        "cause_permanent": [
+        ],
+        "herbs": [
         ]
     },
     "pregnant": {

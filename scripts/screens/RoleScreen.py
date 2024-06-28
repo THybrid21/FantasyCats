@@ -221,6 +221,8 @@ class RoleScreen(Screens):
             "medicine cat apprentice": "medic_app_icon.png",
             "mediator": "mediator_icon.png",
             "mediator apprentice": "mediator_app_icon.png",
+            "permaqueen": "queen_icon.png",
+            "permaqueen apprentice": "queen_app_icon.png",
             "warrior": "warrior_icon.png",
             "apprentice": "warrior_app_icon.png",
             "kitten": "kit_icon.png",

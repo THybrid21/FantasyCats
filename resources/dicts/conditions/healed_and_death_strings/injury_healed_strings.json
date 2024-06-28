@@ -279,14 +279,27 @@
 		"m_c is relieved to wake up and feel like {PRONOUN/m_c/subject} {VERB/m_c/have/has} the energy for the day once more.",
 		"After the constant tiredness that's weighed m_c down, it's nice to see {PRONOUN/m_c/object} with a spring in {PRONOUN/m_c/poss} step once more."
 	],
-	"turmoiled litter": [
-		"With much relief m_c is feeling a bit more like {PRONOUN/m_c/self}.",
-		"m_c could almost cry as a weight they weren't fully conscious of seems to lift.",
-		"m_c purrs as {PRONOUN/m_c/poss} kittens roll around {PRONOUN/m_c/object}, finally feeling like they can move on.",
-		"Sometimes a bond isn't instant and m_c finds that's alright."		
+	"loyalty bind": [
+		"m_c is no longer in a bind about {PRONOUN/m_c/poss} loyalties.",
+		"After some talks with the rest of the Clan m_c feels more secure in where {PRONOUN/m_c/subject} {VERB/m_c/belong/belongs}.",
+		"Finally m_c feels able to talk with all of {PRONOUN/m_c/poss} Clanmates again."
+	],
+	"fainting": [
+		"m_c is no longer suffering from fainting spells around the camp."
+	],
+	"anaphylaxis": [
+		"To the relief of the whole clan m_c has recovered from {PRONOUN/m_c/poss} anaphylaxis.",
+		"Although it was incredibly touch and go, m_c has managed to survive {PRONOUN/m_c/poss} anaphylaxis.",
+		"Some of the Clan cry from the relief of seeing m_c's recover from {PRONOUN/m_c/poss} anaphylaxis."
 	],
 	"cutter's sickness": [
 		"It's a relief to the whole clan when m_c emerges into the light of the camp, finally free from the illness clinging to {PRONOUN/m_c/object}.",
 		"Purring m_c greets the clan, freed from the grasp of Cutter's Sickness."
+	],
+	"turmoiled litter": [
+		"With much relief m_c is feeling a bit more like {PRONOUN/m_c/self}.",
+		"m_c could almost cry as a weight {PRONOUN/m_c/subject} {VERB/m_c/weren't/wasn't} fully conscious of seems to lift.",
+		"m_c purrs as {PRONOUN/m_c/poss} kittens roll around {PRONOUN/m_c/object}, finally feeling like {PRONOUN/m_c/subject} can move on.",
+		"Sometimes a bond isn't instant and m_c finds that's alright."		
 	]
 }

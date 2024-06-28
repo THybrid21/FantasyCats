@@ -23,6 +23,14 @@
       "inposs": "his",
       "self": "himself",
       "conju": 2
-    }
+    },        
+	{
+      "subject": "it",
+      "object": "it",
+      "poss": "its",
+      "inposs": "its",
+      "self": "itself",
+      "conju": 2
+	}
   ]
 }
