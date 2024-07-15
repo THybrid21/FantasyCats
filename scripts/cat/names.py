@@ -67,6 +67,7 @@ class Name:
                  colour=None,
                  pelt=None,
                  pelt_length=None,
+                 skin=None,
                  tortiebase=None,
                  biome=None,
                  specsuffix_hidden=False,
@@ -82,7 +83,7 @@ class Name:
 
         # Set prefix
         if prefix is None:
-            self.give_prefix(colour, pelt_length, biome)
+            self.give_prefix(colour, pelt_length, skin, biome)
             # needed for random dice when we're changing the Prefix
             name_fixpref = True
                     
@@ -116,7 +117,7 @@ class Name:
 
                 # check if random die was for prefix
                 if name_fixpref:
-                    self.give_prefix(colour, pelt_length, biome)
+                    self.give_prefix(colour, pelt_length, skin, biome)
                 else:
                     self.give_suffix(pelt, pelt_length, biome, tortiebase)
                 
@@ -131,10 +132,15 @@ class Name:
                 i += 1
     
     # Generate possible prefix
-    def give_prefix(self, colour, pelt_length, biome):
+    def give_prefix(self, colour, pelt_length, skin, biome):
         named_after_biome = not random.getrandbits(3) # chance for True is 1/8
         # Add possible prefix categories to list.
         possible_prefix_categories = []
+        if skin is not None:
+            if skin in skin in ["MELANISTIC", "MELANISTICGILL"]:
+                possible_prefix_categories.append(self.names_dict["black_prefixes"])
+            elif skin in ["ALBINO", "ALBINOGILL"]:
+                possible_prefix_categories.append(self.names_dict["white_prefixes"])                
         if colour is not None:
             if colour in Pelt.black_colours:
                 possible_prefix_categories.append(self.names_dict["black_prefixes"])
@@ -197,7 +203,7 @@ class Name:
                 possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
             elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
                 possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
-            elif pelt in Pelt.torties:
+            if pelt in Pelt.torties:
                 possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
 
         suffix_category = random.choice(possible_suffix_categories)

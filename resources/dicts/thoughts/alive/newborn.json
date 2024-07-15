@@ -32,5 +32,27 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "echoingmemory_newborn",
+        "thoughts":[
+            "Is overwhelmed by memories",
+			"Mewls in helpless frustration",
+			"Struggles intensely to open {PRONOUN/m_c/poss} eyes",
+			"Feels helpless",
+			"Mewls odd sounds",
+			"Makes odd almost Twoleg like crying",
+			"Head too full",
+			"Cries for someone unknown",
+			"Seems to be in mourning"
+        ],
+        "main_age_constraint": [
+            "newborn"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "echoing memory"
+            ]
+        }
     }
 ]

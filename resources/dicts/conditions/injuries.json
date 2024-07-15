@@ -897,7 +897,10 @@
                 "chance": 25
             }
         ],
-        "also_got": [],
+        "also_got": [
+			"shock",
+			"ashcough"
+		],
         "cause_permanent": [
         ],
         "herbs": [
@@ -933,7 +936,10 @@
                 "chance": 15
             }
         ],
-        "also_got": [],
+        "also_got": [
+				"shock",
+				"ashcough"
+			],
         "cause_permanent": [
             "lost their tail",
             "lost a leg",
@@ -1862,7 +1868,75 @@
 			"honey",
 			"elder leaves"
         ]
-    },			
+    },					
+    "nosebleed": {
+        "duration": 2,
+        "severity": "minor",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [],
+        "also_got": [
+			"blood loss"
+        ],
+        "cause_permanent": [
+        ],
+        "herbs": [
+            "horsetail",
+            "marigold",
+            "ragwort",
+            "juniper",
+			"moss",
+			"cobwebs"
+        ]
+    },		
+    "ashcough": {
+        "duration": 3,
+        "severity": "severe",
+        "medicine_duration": 2,
+        "mortality": {
+            "newborn": 10,
+            "kitten": 20,
+            "adolescent": 25,
+            "young adult": 30,
+            "adult": 30,
+            "senior adult": 20,
+            "senior": 10
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "redcough",
+				"chance": 30
+			}
+        ],
+        "also_got": [
+        ],
+        "cause_permanent": [
+			"longcough",
+			"raspy lungs"
+        ],
+        "herbs": [
+            "catmint",
+            "plantain",
+            "tansy",
+            "mullein",
+            "juniper",
+            "ragwort",
+            "poppy",
+            "moss"
+        ]
+    },
     "anaphylaxis": {
         "duration": 3,
         "severity": "severe",

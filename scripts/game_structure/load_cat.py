@@ -61,6 +61,7 @@ def json_load():
                     cat["specsuffix_hidden"] if "specsuffix_hidden" in cat else False
                 ),
                 gender=cat["gender"],
+                species=cat["species"] if "species" in cat else "cat",
                 status=cat["status"],
                 parent1=cat["parent1"],
                 parent2=cat["parent2"],
@@ -84,8 +85,8 @@ def json_load():
             new_cat.pelt = Pelt(
                 name=cat["pelt_name"],
                 length=cat["pelt_length"],
-                texture=cat["pelt_texture"],
-                build=cat["cat_build"],
+                texture=cat["pelt_texture"] if "pelt_texture" in cat else "soft",
+                build=cat["cat_build"] if "cat_build" in cat else "standard",
                 colour=cat["pelt_color"],
                 eye_color=cat["eye_colour"],
                 eye_colour2=cat["eye_colour2"] if "eye_colour2" in cat else None,
@@ -93,7 +94,7 @@ def json_load():
                 eye_lazy=cat["eye_lazy"] if "eye_lazy" in cat else None,
                 eye_lazy2=cat["eye_lazy2"] if "eye_lazy2" in cat else None,
                 paralyzed=cat["paralyzed"],
-                newborn_sprite=cat["sprite_newborn"] if "sprite_newborn" in cat else cat["spirit_newborn"],
+                newborn_sprite=cat["sprite_newborn"] if "sprite_newborn" in cat else None,
                 kitten_sprite=cat["sprite_kitten"] if "sprite_kitten" in cat else cat["spirit_kitten"],
                 adol_sprite=cat["sprite_adolescent"] if "sprite_adolescent" in cat else cat["spirit_adolescent"],
                 adult_sprite=cat["sprite_adult"] if "sprite_adult" in cat else cat["spirit_adult"],
@@ -175,6 +176,9 @@ def json_load():
             new_cat.no_kits = cat["no_kits"]
             new_cat.no_mates = cat["no_mates"] if "no_mates" in cat else False
             new_cat.no_retire = cat["no_retire"] if "no_retire" in cat else False
+            new_cat.neutered = cat["neutered"] if "neutered" in cat else False
+            new_cat.neutered_message = cat["neutered_message"] if "neutered_message" in cat else False
+            new_cat.vaccinated = cat["vaccinated"] if "vaccinated" in cat else False
             new_cat.exiled = cat["exiled"]
             new_cat.driven_out = cat["driven_out"] if "driven_out" in cat else False
 
@@ -310,7 +314,7 @@ def csv_load(all_cats):
             # spec2(29) - moons(30) - mate(31)
             # dead(32) - SPRITE:dead(33) - exp(34) - dead for _ moons(35) - current apprentice(36)
             # (BOOLS, either TRUE OR FALSE) paralyzed(37) - no kits(38) - exiled(39)
-            # genderalign(40) - former apprentices list (41)[FORMER APPS SHOULD ALWAYS BE MOVED TO THE END]
+            # genderalign(40) - species(41) - former apprentices list (42)[FORMER APPS SHOULD ALWAYS BE MOVED TO THE END]
             if i.strip() != "":
                 attr = i.split(",")
                 for x in range(len(attr)):
@@ -455,8 +459,10 @@ def csv_load(all_cats):
                     the_cat.exiled = bool(attr[39])
                 if len(attr) > 40:
                     the_cat.genderalign = attr[40]
-                if len(attr) > 41 and attr[41] is not None:  # KEEP THIS AT THE END
-                    the_cat.former_apprentices = attr[41].split(";")
+                if len(attr) > 41:
+                    the_cat.species = attr[41]
+                if len(attr) > 42 and attr[42] is not None:  # KEEP THIS AT THE END
+                    the_cat.former_apprentices = attr[42].split(";")
         game.switches["error_message"] = (
             "There was an error loading this clan's mentors, apprentices, relationships, or sprite info."
         )

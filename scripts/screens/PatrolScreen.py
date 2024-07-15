@@ -261,12 +261,11 @@ class PatrolScreen(Screens):
             # making sure meds don't get the option for other patrols
             if any((cat.status in ['medicine cat', 'medicine cat apprentice'] for cat in self.current_patrol)):
                 self.patrol_type = 'med'
+            elif any((cat.status in ['permaqueen', 'permaqueen apprentice'] for cat in self.current_patrol)):
+                self.patrol_type = 'training'
             else:
                 if self.patrol_type == 'med':
                     self.patrol_type = 'general'
-
-            if any((cat.status in ['permaqueen', 'permaqueen apprentice'] for cat in self.current_patrol)):
-                self.patrol_type = 'training'
 
             self.elements['paw'].enable()
             self.elements['mouse'].enable()

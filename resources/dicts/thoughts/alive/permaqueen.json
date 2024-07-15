@@ -87,7 +87,7 @@
         "id": "gen_sick_permaqueen",
         "not_working": true,
         "thoughts": [
-            "Worries about how things are going in the Nursery while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} sick",
+            "Worries about how things are going in the Nursery while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} recovering",
 			"Hopes that the kittens of the clan are alright",
 			"Feels miserable",
 			"Doesn't enjoy taking {PRONOUN/m_c/poss} herbs",
@@ -216,9 +216,10 @@
 			"elder"
 		],
         "perm_conditions": {
-            "r_c": [
-                "infertile"
-            ]
+          "r_c": [
+            "infertile"
+          ]
+        }
     },
 	{
         "id": "responsible_permaqueen",
@@ -281,5 +282,52 @@
 		"random_status_constraint": [
 			"kitten"
 		]
+    },
+	{
+        "id": "skeptic_permaqueen",
+        "thoughts": [
+            "Knows that the kits of the clan are the future",
+			"Is worried about how to teach something {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} believe in"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]	
+    },
+	{
+        "id": "skeptic_permaqueen_kit",
+        "thoughts": [
+            "Cleverly teaches the kittens about the Code without StarClan",
+			"Talks about the reasons behind each Rule of the Code",
+			"Is worried about r_c",
+			"Hopes that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not influencing r_c too much",
+			"Sometimes wishes that r_c was {PRONOUN/m_c/poss} own kitten",
+			"Is wondering if {PRONOUN/m_c/subject} should have kittens of {PRONOUN/m_c/poss} own",
+			"Feels a bit overwhelmed by kits asking about {PRONOUN/m_c/poss} beliefs",
+			"Tells kits to not grow up to become {PRONOUN/m_c/object}",
+			"Is worried about the influence {PRONOUN/m_c/subject} {VERB/m_c/have/has} over the kits in the nursery",
+			"Is proud of {PRONOUN/m_c/poss} role in the clan"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ],
+		"random_status_constraint": [
+			"kitten"
+		]
+    },
+	{
+        "id": "skeptic_permaqueen_infertile",
+        "thoughts": [
+            "Fills the longing with the kittens of the Nursery",
+			"Is relieved {PRONOUN/m_c/subject} can't have kittens of {PRONOUN/m_c/poss} own",
+			"Feels pressured to be the most responsible cat in the Clan"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ],
+		"perm_conditions": {
+			"m_c": [
+				"infertile"
+			]
+		}
     }
 ]

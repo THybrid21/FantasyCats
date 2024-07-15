@@ -164,11 +164,11 @@
 	},
 	"pregnancy": {
 		"birth_cooldown": 6,
-		"primary_chance_mated": 1,
-		"primary_chance_unmated": 1,
+		"primary_chance_mated": 45,
+		"primary_chance_unmated": 90,
 		"random_affair_chance": 70,
-		"unmated_random_affair_chance": 20,
-		"false_pregnancy_chance": 5,
+		"unmated_random_affair_chance": 45,
+		"false_pregnancy_chance": 25,
 		"tiny_litter_possibility": {"young adult": 18, "adult": 10, "senior adult": 10, "senior": 16},
         "small_litter_possibility": {"young adult": 16, "adult": 12, "senior adult": 16, "senior": 8},
         "large_litter_possibility": {"young adult": 5, "adult": 18, "senior adult": 10, "senior": 5},
@@ -189,10 +189,10 @@
 		]
 	},
 	"cat_generation": {
-		"base_permanent_condition": 1,
-		"multiple_permanent_conditions": 20,
-		"max_conditions_born_with": 3,
-		"comorbidity_chance": 1,
+		"base_permanent_condition": 45,
+		"multi_condition_chance": 20,
+		"max_born_with": 3,
+		"comorbidity_chance": 3,
 		"base_male_tortie": 18,
 		"base_female_tortie": 9,
 		"base_intersex_tortie": 6,
@@ -204,10 +204,10 @@
 		"random_point_chance": 25,
 		"magic": 150,
 		"comment": [
-			"multiple_permanent_conditions (20 by default) - 1/chance for a cat to be born with one extra permanent condition,",
+			"multi_condition_chance (20 by default) - 1/chance for a cat to be born with one extra permanent condition,",
 			"runs until it's tried to give a cat [max_conditions_born_with - 1] extra conditions.",
 			"max_conditions_born_with (3 by default) - the max amount of permanent conditions a cat can be born with.",
-			"comorbidity_chance (5 by default) - 1/chance for a cat being given an extra permanent condition to be given",
+			"comorbidity_chance (3 by default) - 1/chance for a cat being given an extra permanent condition to be given",
 			"a condition that is comorbid with any of their existing ones instead of a random one."
 		]
 	},

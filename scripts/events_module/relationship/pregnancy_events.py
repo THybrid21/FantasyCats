@@ -217,6 +217,14 @@ class Pregnancy_Events:
 
         if clan.game_mode != "classic" and not cat.dead and "faux pregnant" in cat.injuries:
             cat.injuries.pop("faux pregnant")
+
+        # just makin sure meds aren't mentioned if they aren't around or if they are a parent
+        meds = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], sort=True)
+        mate_is_med = [mate_id for mate_id in cat.mate if mate_id in meds]
+        if not meds or cat in meds or len(mate_is_med) > 0:
+            for event in possible_events:
+                if "medicine cat" in event:
+                    possible_events.remove(event)
                 
         print_event = " ".join(event_list)
         print_event = print_event.replace("{insert}", insert)
@@ -256,7 +264,7 @@ class Pregnancy_Events:
             return
 
         # additional save for no kit setting, since we(I) don't want them rolling for it.
-        if (cat and cat.no_kits) or (other_cat and other_cat.no_kits):
+        if (cat and (cat.no_kits or cat.neutered)) or (other_cat and (other_cat.no_kits or other_cat.neutered)):
             return
         
         if not clan.clan_settings["same sex birth"] and cat.gender == "male":
@@ -293,11 +301,7 @@ class Pregnancy_Events:
             return
 
         # additional save for no kit setting
-        if (cat and cat.no_kits) or (other_cat and other_cat.no_kits):
-            return
-
-        # here's where we check for infertility, just in case it slipped trough
-        if (cat and "infertile" in cat.permanent_condition) or (other_cat and "infertile" in other_cat.permanent_condition):
+        if (cat and (cat.no_kits or cat.neutered)) or (other_cat and (other_cat.no_kits or other_cat.neutered)):
             return
 
         # Null Cats will only Adopt
@@ -475,9 +479,9 @@ class Pregnancy_Events:
                 second_parent = cat
                 
             elif (
-                cat.gender == 'male' 
+                cat.gender == "male" 
                 and other_cat is not None 
-                and other_cat.gender == 'intersex'
+                and other_cat.gender == "intersex"
             ):
 
                 if random.randint(0,1):            
@@ -487,15 +491,24 @@ class Pregnancy_Events:
                     return
 
             elif (
-                cat.gender == 'intersex' 
+                cat.gender == "intersex" 
                 and other_cat is not None 
-                and other_cat.gender == 'female'
+                and other_cat.gender == "female"
             ):
                 if random.randint(0,1):            
                     pregnant_cat = other_cat
                     second_parent = cat
                 else:
                     return
+
+            elif (
+                cat.gender == "intersex" 
+                and other_cat is not None 
+                and other_cat.gender == "intersex"
+            ):
+                if random.randint(0,1):            
+                    pregnant_cat = other_cat
+                    second_parent = cat
 
             clan.pregnancy_data[pregnant_cat.ID] = {
                 "second_parent": str(second_parent.ID) if second_parent else None,
@@ -801,7 +814,7 @@ class Pregnancy_Events:
         not_correct_age = (
             cat.age in ["newborn", "kitten", "adolescent"] or cat.moons < 15
         )
-        if not_correct_age or cat.no_kits or cat.dead:
+        if not_correct_age or cat.no_kits or cat.dead or cat.neutered:
             return False
 
         # check for mate
@@ -842,17 +855,22 @@ class Pregnancy_Events:
             return False, False
 
         if cat.gender == "null" or second_parent.gender == "null":
-            return False, True
+            return True, True
 
+        if cat.neutered or second_parent.neutered:
+            return False, False
+            
         if "infertile" in cat.permanent_condition or "infertile" in second_parent.permanent_condition:
-            return False, True
+            infertile_kits = random.randint(1, 10)
+            if infertile_kits != 1:
+                return True, True
+            else:
+                return True, False
 
         # Check to see if the pair can have kits.
         if cat.gender == second_parent.gender:
             if cat.gender == 'intersex':
-                return True, True
-            elif cat.gender == 'null':
-                return False, True
+                return True, False
             elif same_sex_birth:
                 return True, False
             elif not same_sex_adoption:
@@ -1014,6 +1032,7 @@ class Pregnancy_Events:
             other_cat = None
 
         blood_parent = None
+        par2species = None
 
         ##### SELECT BACKSTORY #####
         if cat and cat.gender == "female":
@@ -1041,6 +1060,11 @@ class Pregnancy_Events:
         for _m in adoptive_parents:
             if _m not in all_adoptive_parents:
                 all_adoptive_parents.append(_m)
+
+        # Generate a par2species in case par2 is None, so all littermates have same species inheritance weights
+        species_list = game.species["species"]
+        weights = game.species["ran_weights"]
+        par2species = random.choices(species_list, weights=weights, k=1)[0]
 
         #############################
 
@@ -1075,6 +1099,7 @@ class Pregnancy_Events:
 
                 kit = Cat(
                     parent1=blood_parent.ID,
+                    par2species=par2species,
                     moons=0,
                     backstory=backstory,
                     status='newborn')
@@ -1083,7 +1108,7 @@ class Pregnancy_Events:
                 # Two parents provided
                 # The cat that gave birth is always parent1 so there is no need to check gender
                 kit = Cat(
-                    parent1=cat.ID, parent2=other_cat.ID, moons=0, status="newborn"
+                    parent1=cat.ID, par2species=par2species, parent2=other_cat.ID, moons=0, status="newborn"
                 )
                 kit.thought = f"Snuggles up to the belly of {cat.name}"
             else:

@@ -266,6 +266,9 @@ class Condition_Events:
             except:
                 print("couldn't handle permaqueen illness prevention")
 
+            if cat.vaccinated and random.randint(1, 4) != 1:
+                random_number = int(random_number * 10)
+
             if (
                 not cat.dead
                 and not cat.is_ill()
@@ -299,29 +302,11 @@ class Condition_Events:
                 # make em sick
                 cat.get_ill(chosen_illness)
 
-                # create event text
-                if chosen_illness in ['running nose', 'stomachache']:
-                    event_string = f"{cat.name} has gotten a {chosen_illness}."
-                elif chosen_illness == "anxiety attack":
-                    event_string = f"{cat.name} has worked up into an {chosen_illness}."
-                elif chosen_illness == "seasonal lethargy":
-                    event_string = f"{cat.name} is experiencing some {chosen_illness}."
-                elif chosen_illness == "zoomies":
-                    event_string = f"{cat.name} has gotten the {chosen_illness}."
-                elif chosen_illness == "sleeplessness":
-                    event_string = f"{cat.name} has been unable to get any sleep."
-                elif chosen_illness in ['nest wetting', 'night dirtmaking']:
-                    event_string = f"Somewhat embarrassingly {cat.name} is experiencing {chosen_illness}."
-                elif chosen_illness == "nightmares":
-                    event_string = f"{cat.name} has been struggling recently with nightmares."
-                elif chosen_illness == "ear buzzing":
-                    event_string = f"{cat.name} has been experiencing some buzzing in their ears."
-                elif chosen_illness in ["stimming", "parroting"]:
-                    event_string = f"{cat.name} has begun {chosen_illness} more often recently."
-                elif chosen_illness == "word loss":
-                    event_string = f"{cat.name} has been struggling to find words lately."
-                else:
-                    event_string = f"{cat.name} has gotten {chosen_illness}."
+                try:
+                    possible_string_list = Condition_Events.ILLNESS_GOT_STRINGS[chosen_illness]
+                except:
+                    print(f"WARNING: {chosen_illness} couldn't be found in illness_got_strings.json! placeholder string was used")
+                    possible_string_list = [f"m_c has gotten {chosen_illness}."]
 
         # if an event happened, then add event to cur_event_list and save death if it happened.
         if event_string:
@@ -449,8 +434,9 @@ class Condition_Events:
             "RATBITE": ["weak leg"],
             "DECLAWED": ["declawed"],
             "RASH": ["recurring rash"],
-            "LEFTTAG": ["infertile"],
-            "RIGHTTAG": ["infertile"]
+            "SNAKETHREE": ["one bad eye"],
+            "RIGHTTAG": ["infertile"],
+            "LEFTTAG": ["infertile"]
         }
 
         scarless_conditions = [
@@ -486,7 +472,7 @@ class Condition_Events:
                                 "permanent_condition_chance"
                             ]
                         ):
-                            perm_condition = random.choice(possible_conditions)
+                            perm_condition = random.choice(possible_conditions)                                            
                         else:
                             return perm_condition
                 except KeyError:
@@ -642,7 +628,8 @@ class Condition_Events:
             "sunblindness": "fading eyesight",
             "severe sunburn": "wasting disease",
             "wrenched claws": "declawed",
-            "fatigue": "constant fatigue"
+            "fatigue": "constant fatigue",
+            "cutter's sickness": "infertile"
         }
 
         # need to hold this number so that we can check if the leader has died
@@ -1118,11 +1105,14 @@ class Condition_Events:
                     print(
                         f"WARNING: {condition} couldn't be found in the risk strings! placeholder string was used"
                     )
-                    event = "m_c's condition has gotten worse."
+                    event = f"m_c has gotten {new_condition_name}, a risk of {condition}."
 
                 event = event_text_adjust(Cat, event, main_cat=cat, random_cat=med_cat)  # adjust the text
 
-                event_list.append(event)
+                if new_condition_name not in [cat.permanent_condition, cat.illnesses, cat.injuries]:
+                    event_list.append(event)
+                else:
+                    break
 
                 # we add the condition to this game switch, this is so we can ensure it's skipped over for this moon
                 game.switches["skip_conditions"].append(new_condition_name)

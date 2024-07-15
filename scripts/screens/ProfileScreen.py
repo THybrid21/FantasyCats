@@ -829,6 +829,11 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        # SPECIES
+        output += str(the_cat.species)
+        # NEWLINE ----------
+        output += "\n"
+
         # AGE
         if the_cat.age == "kitten":
             output += "young"
@@ -845,15 +850,21 @@ class ProfileScreen(Screens):
         output += "\n"
 
         # PELT TYPE
-        output += 'pelt: ' + the_cat.pelt.colour.lower() + ' ' + the_cat.pelt.name.lower()
+        if the_cat.pelt.albino:
+            output += 'pelt: albino ' + the_cat.pelt.name.lower()
+        elif the_cat.pelt.melanistic:
+            output += 'pelt: melanstic ' + the_cat.pelt.name.lower()            
+        else:
+            output += 'pelt: ' + the_cat.pelt.colour.lower() + ' ' + the_cat.pelt.name.lower()
         # NEWLINE ----------
         output += "\n"
 
         #tortie info
         if the_cat.pelt.name in ["Tortie", "Calico"]:
-            output += 'tortie patch: ' + the_cat.pelt.pattern.lower() + ' in ' + the_cat.pelt.tortiecolour.lower()
-            # NEWLINE ----------
-            output += "\n"
+            if not the_cat.pelt.albino or the_cat.pelt.melanistic:
+                output += 'tortie patch: ' + the_cat.pelt.pattern.lower() + ' in ' + the_cat.pelt.tortiecolour.lower()
+                # NEWLINE ----------
+                output += "\n"
 
         # CAT BUILD        
         output += "cat build: " + the_cat.pelt.build
@@ -1087,6 +1098,12 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        if the_cat.neutered:
+            if the_cat.is_disabled or the_cat.is_plural or the_cat.is_injured or the_cat.is_ill:
+                output += "neutered\n"
+            else:
+                output += "neutered"
+
         # NUTRITION INFO (if the game is in the correct mode)
         if (
             game.clan.game_mode in ["expanded", "cruel season"]
@@ -1171,7 +1188,7 @@ class ProfileScreen(Screens):
         if the_cat.is_injured():
             special_conditions = [
                 "recovering from birth", "pregnant", "faux pregnant", "kittenspace", "otherspace", 
-                "overtimulation", "understimulation", "turmoiled litter"
+                "overtimulation", "understimulation", "turmoiled litter", "shock", "lingering shock"
             ]
             all_special = True
             for condition in the_cat.injuries:
@@ -1190,6 +1207,7 @@ class ProfileScreen(Screens):
                         output += '\nrecovering from a turmoiled birth!'
                     else:
                         output += 'recovering from a turmoiled birth!'                    
+                        already_sick_injured = True
                 else:
                     if already_sick_injured:
                         output += '\nrecovering from birth!'
@@ -1226,8 +1244,13 @@ class ProfileScreen(Screens):
                 else:
                     output += 'understimulated'                    
                     already_sick_injured = True
+            if the_cat.injuries in ["shock", "lingering shock"]:
+                if already_sick_injured:
+                    output += '\nin shock'
+                else:
+                    output += 'in shock'                    
+                    already_sick_injured = True
                 
-            output += "\n"
             
         if the_cat.is_ill():
             special_conditions = [
@@ -2265,10 +2288,10 @@ class ProfileScreen(Screens):
                 "complication", None
             )
             if complication is not None:
+                if "an infected wound" in self.the_cat.illnesses:
+                    complication = "infected"
                 if "a festering wound" in self.the_cat.illnesses:
-                    complication = "festering"
-                if "anaphylaxis" in self.the_cat.injuries:
-                    complication = "in anaphylaxis"
+                    complication = "festering"              
                 text_list.append(f"is {complication}!")
 
         # collect details for injuries
@@ -2300,6 +2323,10 @@ class ProfileScreen(Screens):
                 if complication is not None:
                     if "a festering wound" in self.the_cat.illnesses:
                         complication = "festering"
+                    if "anaphylaxis" in self.the_cat.injuries:
+                        complication = "in anaphylaxis"    
+                    if "an infected wound" in self.the_cat.illnesses:
+                        complication = "infected"
                     text_list.append(f"is {complication}!")
 
             # can or can't patrol

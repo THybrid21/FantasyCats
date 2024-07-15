@@ -128,12 +128,15 @@ class Events:
         if random.randint(1, rejoin_upperbound) == 1:
             self.handle_lost_cats_return()
 
+        #Check the TNR setting
+        tnr_setting = game.settings["tnr"]
+
         # Calling of "one_moon" functions.
         for cat in Cat.all_cats.copy().values():
             if not cat.outside or cat.dead:
                 self.one_moon_cat(cat)
             else:
-                self.one_moon_outside_cat(cat)
+                self.one_moon_outside_cat(cat, tnr_setting)
 
         # Adding in any potential lead den events that have been saved
         if "lead_den_interaction" in game.clan.clan_settings:
@@ -1000,6 +1003,10 @@ class Events:
             cat_IDs.extend(additional_cats)
             text = random.choice(text)
 
+            if lost_cat.neutered and not lost_cat.neutered_message:
+                    text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/smell/smells} a bit different, though, and one of {PRONOUN/m_c/poss} ears is tagged."
+                    lost_cat.neutered_message = True
+
             if additional_cats:
                 text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/bring/brings} along {PRONOUN/m_c/poss} "
                 if len(additional_cats) > 1:
@@ -1008,14 +1015,14 @@ class Events:
                     text += "child."
 
             ##Now we attempt something risky
-                if game.settings["allow danger"]:
-                    cutter = random.randint(0, 100)
-                    if cutter <= 10:
-                        cat.get_injured("cutter's sickness")
-                        text += [
-                                    "Of course not all seems entirely well.",
-                                    "m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying state of Cutter's Sickness."
-                                ]
+            if game.settings["allow danger"] and not lost_cat.neutered:
+                cutter = random.randint(0, 100)
+                if cutter <= 10:
+                    cat.get_injured("cutter's sickness")
+                    text += [
+                                "Of course not all seems entirely well.",
+                                "m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying state of Cutter's Sickness."
+                            ]
 
             text = event_text_adjust(Cat, text, main_cat=lost_cat, clan=game.clan)
 
@@ -1109,15 +1116,79 @@ class Events:
                 game.cat_to_fade.append(cat.ID)
                 cat.set_faded()
 
-    def one_moon_outside_cat(self, cat):
+    def one_moon_outside_cat(self, cat, tnr_setting):
         """
         exiled cat events
         """
+        
         # aging the cat
         cat.one_moon()
         cat.manage_outside_trait()
 
         self.handle_outside_EX(cat)
+
+        # tnr
+        if not cat.dead and cat.moons > 2 and tnr_setting and not cat.neutered and "infertile" not in cat.permanent_condition:
+            neutered_this_moon = False
+            if cat.status == "kittypet":
+                if cat.moons <= 12 and random.randint(1, 9) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+                elif cat.moons <= 24 and random.randint(1, 50) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+                elif random.randint(1, 250) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+            elif cat.status not in ["driven off", "kittypet"]:
+                if cat.moons <= 12 and random.randint(1, 15) == 1:
+                    cat.neutered = True
+                    neutered_this_moon = True
+
+                elif random.randint(1, 100) == 1:
+                    cat.neutered = True
+                    neutered_this_moon = True
+
+        if not cat.dead and cat.pelt.scars not in ["LEFTTAG", "RIGHTTAG", "NOEAR"] and neutered_this_moon:
+            if cat.gender == "male":
+                if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
+                    cat.pelt.scars.append("RIGHTTAG")
+            elif cat.gender == "female":
+                if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
+                    cat.pelt.scars.append("LEFTTAG")                
+            else:
+                if "NORIGHTEAR" in cat.pelt.scars:
+                    cat.pelt.scars.append("LEFTTAG")                    
+                elif "NOLEFTEAR" in cat.pelt.scars:
+                    cat.pelt.scars.append("RIGHTTAG")  
+                elif "NOEAR" in cat.pelt.scars:
+                    skip = True
+                else:
+                    tag = random.choice(["RIGHTTAG", "LEFTTAG"])
+                    cat.pelt.scars.append(tag)     
+
+            if cat.pelt.scars in ["LEFTTAG", "RIGHTTAG"]:
+                if cat.status not in ["kittypet", "driven off"]:
+                     History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered.")
+                elif cat.status == "kittypet":
+                    History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.")
+            else:
+                History.add_scar(cat=cat, scar_text="m_c was neutered when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.")
+
+        # vaccinate TNR not required
+        if not cat.dead and cat.moons > 1 and not cat.neutered and cat.status == "kittypet":
+            if cat.moons <= 12 and random.randint(1, 4) == 1:
+                cat.vaccinated = True
+            elif cat.moons <= 24 and random.randint(1, 30) == 1:
+                cat.vaccinated = True
+            elif random.randint(1, 175) == 1:
+                cat.vaccinated = True
 
         cat.skills.progress_skill(cat)
         Pregnancy_Events.handle_having_kits(cat, clan=game.clan)
@@ -1591,11 +1662,11 @@ class Events:
                             self.ceremony_accessory = True
                             self.gain_accessories(cat)
                         else:
-                            # Chance for mediator apprentice
+                            # Chance for permaqueen apprentice
                             permaqueen_list = list(filter(lambda x: x.status == "permaqueen" and not x.dead
                                               and not x.outside, Cat.all_cats_list))
 
-                            # This checks if at least one mediator already has an apprentice.
+                            # This checks if at least one permaqueen already has an apprentice.
                             has_permaqueen_apprentice = False
                             for c in permaqueen_list:
                                 if c.apprentice:
@@ -2630,6 +2701,21 @@ class Events:
                 cat.pronouns = [cat.default_pronouns[0].copy()]
 
             text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore - {trans} does it much better."
+
+            if not game.settings["they them default"]:
+                pronoun_text = " {PRONOUN/m_c/subject/CAP} now {VERB/m_c/use/uses} "
+                if len(cat.pronouns) == 1:
+                    if cat.pronouns[0].get("subject") == cat.pronouns[0].get("object"):
+                        pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("poss")
+                    else:
+                        pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("object")
+                else:
+                    for pronoun in cat.pronouns:
+                        pronoun_text += pronoun.get("subject") + "/"
+                    if pronoun_text[-1] == "/":
+                        pronoun_text = pronoun_text[:-1]
+                text += pronoun_text + "."
+
             game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
             # game.misc_events_list.append(text)  
             return
@@ -2666,6 +2752,21 @@ class Events:
                 gender = cat.genderalign
 
             text = f"{cat.name} has come to the conclusion that {trans} isn't accurate and in fact they were {gender} after all."
+
+            if not game.settings["they them default"]:
+                pronoun_text = " They now use "
+                if len(cat.pronouns) == 1:
+                    if cat.pronouns[0].get("subject") == cat.pronouns[0].get("object"):
+                        pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("poss")
+                    else:
+                        pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("object")
+                else:
+                    for pronoun in cat.pronouns:
+                        pronoun_text += pronoun.get("subject") + "/"
+                    if pronoun_text[-1] == "/":
+                        pronoun_text = pronoun_text[:-1]
+                text += pronoun_text + "."
+
             game.cur_events_list.append(Single_Event(text, "misc", involved_cats))   
 
     def check_and_promote_leader(self):

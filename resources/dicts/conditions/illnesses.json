@@ -107,88 +107,6 @@
             "plantain"
         ]
     },
-    "greencough": {
-        "severity": "severe",
-        "mortality": {
-            "newborn": 3,
-            "kitten": 3,
-            "adolescent": 8,
-            "young adult": 8,
-            "adult": 10,
-            "senior adult": 8,
-            "senior": 3
-        },
-        "medicine_mortality": {
-            "newborn": 7,
-            "kitten": 7,
-            "adolescent": 12,
-            "young adult": 20,
-            "adult": 25,
-            "senior adult": 20,
-            "senior": 7
-        },
-        "duration": 3,
-        "medicine_duration": 2,
-        "infectiousness": 30,
-        "risks": [
-            {
-                "name": "yellowcough",
-                "chance": 60
-            },
-			{
-				"name": "longcough",
-				"chance": 120
-			}
-        ],
-        "herbs": [
-            "catmint",
-            "tansy",
-            "mullein",
-            "plantain",
-            "juniper",
-            "poppy",
-            "moss"
-        ]
-    },
-    "kittencough": {
-        "severity": "severe",
-        "mortality": {
-            "newborn": 2,
-            "kitten": 2,
-            "adolescent": 15,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 5
-        },
-        "medicine_mortality": {
-            "newborn": 5,
-            "kitten": 5,
-            "adolescent": 60,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 10
-        },
-        "duration": 3,
-        "medicine_duration": 2,
-        "infectiousness": 15,
-        "risks": [
-            {
-                "name": "whitecough",
-                "chance": 10
-            }
-        ],
-        "herbs": [
-            "catmint",
-            "tansy",
-            "mullein",
-            "plantain",
-            "juniper",
-            "poppy",
-            "moss"
-        ]
-    },
     "an infected wound": {
         "severity": "major",
         "mortality": {
@@ -256,41 +174,6 @@
             "poppy"
         ]
     },
-    "redcough": {
-        "severity": "severe",
-        "mortality": {
-            "newborn": 1,
-            "kitten": 1,
-            "adolescent": 2,
-            "young adult": 2,
-            "adult": 2,
-            "senior adult": 2,
-            "senior": 1
-        },
-        "medicine_mortality": {
-            "newborn": 2,
-            "kitten": 2,
-            "adolescent": 3,
-            "young adult": 3,
-            "adult": 3,
-            "senior adult": 3,
-            "senior": 2
-        },
-        "duration": 50,
-        "medicine_duration": 40,
-        "infectiousness": 0,
-        "risks": [],
-        "herbs": [
-            "lungwort",
-            "mullein",
-            "tansy",
-            "plantain",
-            "juniper",
-            "ragwort",
-            "poppy",
-            "moss"
-        ]
-    },
     "running nose": {
         "severity": "minor",
         "mortality": {
@@ -318,12 +201,59 @@
             {
                 "name": "whitecough",
                 "chance": 15
-            }
+            },
+			{
+				"name": "nosebleed",
+				"chance": 90
+			}
         ],
         "herbs": [
             "ragwort",
             "juniper",
             "poppy"
+        ]
+    },
+    "kittencough": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 2,
+            "kitten": 2,
+            "adolescent": 15,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 5
+        },
+        "medicine_mortality": {
+            "newborn": 5,
+            "kitten": 5,
+            "adolescent": 60,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 10
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 15,
+        "risks": [
+            {
+                "name": "whitecough",
+                "chance": 10
+            },
+			{
+				"name": "nosebleed",
+				"chance": 90
+			}
+        ],
+        "herbs": [
+            "catmint",
+            "tansy",
+            "mullein",
+            "plantain",
+            "juniper",
+            "poppy",
+            "moss"
         ]
     },
     "whitecough": {
@@ -353,7 +283,11 @@
             {
                 "name": "greencough",
                 "chance": 18
-            }			
+            },
+			{
+				"name": "nosebleed",
+				"chance": 90
+			}		
         ],
         "herbs": [
             "catmint",
@@ -362,6 +296,53 @@
             "mullein",
             "juniper",
             "ragwort",
+            "poppy",
+            "moss"
+        ]
+    },
+    "greencough": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 3,
+            "kitten": 3,
+            "adolescent": 8,
+            "young adult": 8,
+            "adult": 10,
+            "senior adult": 8,
+            "senior": 3
+        },
+        "medicine_mortality": {
+            "newborn": 7,
+            "kitten": 7,
+            "adolescent": 12,
+            "young adult": 20,
+            "adult": 25,
+            "senior adult": 20,
+            "senior": 7
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 30,
+        "risks": [
+            {
+                "name": "yellowcough",
+                "chance": 60
+            },
+			{
+				"name": "longcough",
+				"chance": 120
+			},
+			{
+				"name": "nosebleed",
+				"chance": 70
+			}
+        ],
+        "herbs": [
+            "catmint",
+            "tansy",
+            "mullein",
+            "plantain",
+            "juniper",
             "poppy",
             "moss"
         ]
@@ -393,10 +374,54 @@
             {
                 "name": "redcough",
                 "chance": 80
-            }
+            },
+			{
+				"name": "nosebleed",
+				"chance": 45
+			}
         ],
         "herbs": [
             "lungwort"
+        ]
+    },
+    "redcough": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 1,
+            "kitten": 1,
+            "adolescent": 2,
+            "young adult": 2,
+            "adult": 2,
+            "senior adult": 2,
+            "senior": 1
+        },
+        "medicine_mortality": {
+            "newborn": 2,
+            "kitten": 2,
+            "adolescent": 3,
+            "young adult": 3,
+            "adult": 3,
+            "senior adult": 3,
+            "senior": 2
+        },
+        "duration": 50,
+        "medicine_duration": 40,
+        "infectiousness": 0,
+        "risks": [
+			{
+				"name": "nosebleed",
+				"chance": 5
+			}		
+		],
+        "herbs": [
+            "lungwort",
+            "mullein",
+            "tansy",
+            "plantain",
+            "juniper",
+            "ragwort",
+            "poppy",
+            "moss"
         ]
     },
     "a festering wound": {
@@ -433,6 +458,45 @@
             "moss"
         ]
     },
+    "heat exhaustion": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 2,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+            {
+                "name": "heat stroke",
+                "chance": 5
+            },
+			{
+				"name": "nosebleed",
+				"chance": 3
+			}
+        ],
+        "herbs": [
+            "juniper",
+            "ragwort",
+            "moss"
+        ]
+    },
     "heat stroke": {
         "severity": "severe",
         "mortality": {
@@ -462,41 +526,6 @@
 				"chance": 25
 			}
 		],
-        "herbs": [
-            "juniper",
-            "ragwort",
-            "moss"
-        ]
-    },
-    "heat exhaustion": {
-        "severity": "major",
-        "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "medicine_mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "duration": 2,
-        "medicine_duration": 2,
-        "infectiousness": 0,
-        "risks": [
-            {
-                "name": "heat stroke",
-                "chance": 5
-            }
-        ],
         "herbs": [
             "juniper",
             "ragwort",
@@ -538,6 +567,10 @@
 			{
 				"name": "irritable bowels",
 				"chance": 50
+			},
+			{
+				"name": "nausea",
+				"chance": 15
 			}
         ],
         "herbs": [
@@ -713,14 +746,18 @@
         "medicine_duration": 1,
         "infectiousness": 0,
         "risks": [
-            {
-                "name": "panic attack",
-                "chance": 50
-            },
-			{
-				"name": "paranoia",
-				"chance": 50
-			}
+				{
+					"name": "panic attack",
+					"chance": 50
+				},
+				{
+					"name": "paranoia",
+					"chance": 50
+				},
+				{
+					"name": "nausea",
+					"chance": 20
+				}
 			],
         "herbs": [
             "catmint",
@@ -1763,5 +1800,35 @@
 			"goldenrod",
 			"tansy"
 		]
+    },
+    "nausea": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": [
+            "juniper",
+            "burdock",
+            "poppy"
+        ]
     }
 }

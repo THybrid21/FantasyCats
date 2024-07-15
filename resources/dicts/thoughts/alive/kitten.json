@@ -600,6 +600,56 @@
         ]
     },
     {
+        "id": "comet_spirit_kit",
+        "thoughts": [
+            "Is constantly losing things",
+			"Really upset about something",
+			"Refuses to stay still for grooming",
+			"Attempts to sneak out of camp constantly",
+			"Wants to be free to explore"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "comet spririt"
+            ]
+        }
+    },
+    {
+        "id": "otherworldly_mind_kit",
+        "thoughts": [
+            "Wants the monsters to go away",
+            "Is scared of the monster following {PRONOUN/m_c/object} around",
+            "Makes friends with the monster following {PRONOUN/m_c/object} around",
+            "Talks to a cat that's invisible",
+            "Haves a conversation with a bird",
+            "Hides from something the other kits can't see"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "otherworldly mind"
+            ]
+        }
+    },
+    {
+        "id": "thunderous_spirit_kit_to_alive_gen",
+        "thoughts": [
+            "Can't stop crying",
+            "Had a nightmare that r_c abandoned {PRONOUN/m_c/object}",
+            "Doesn't want to be left alone"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "thunderous spirit"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
         "id": "echoingmemory_kit",
         "thoughts": [
             "Is struggling to learn to walk",

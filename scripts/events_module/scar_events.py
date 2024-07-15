@@ -70,6 +70,9 @@ class Scar_Events():
     declaw_scars = [
         "DECLAWED"
     ]    
+    tags = [
+        "RIGHTTAG", "LEFTTAG"
+    ]
     
     scar_allowed = {
         "bite-wound": canid_scars,
@@ -91,7 +94,8 @@ class Scar_Events():
         "broken bone": bone_scars,
         "head damage": head_scars,
         "rash": rash_scars,
-        "wrenched claws": declaw_scars        
+        "wrenched claws": declaw_scars ,
+        "cutter's sickness": tags
     }
 
     @staticmethod
@@ -132,7 +136,7 @@ class Scar_Events():
                              i not in ["THREE", "RIGHTBLIND", "LEFTBLIND", "BOTHBLIND", "BRIGHTHEART"]]
             if 'NOEAR' in cat.pelt.scars:
                 scar_pool = [i for i in scar_pool if
-                             i not in ["LEFTEAR", "RIGHTEAR", 'NOLEFTEAR', 'NORIGHTEAR', "FROSTFACE"]]
+                             i not in ["LEFTEAR", "RIGHTEAR", 'NOLEFTEAR', 'NORIGHTEAR', "FROSTFACE", "LEFTTAG", "RIGHTTAG"]]
             if 'MANTAIL' in cat.pelt.scars:
                 scar_pool = [i for i in scar_pool if i not in ["BURNTAIL", 'FROSTTAIL']]
             if 'BURNTAIL' in cat.pelt.scars:
@@ -140,16 +144,16 @@ class Scar_Events():
             if 'FROSTTAIL' in cat.pelt.scars:
                 scar_pool = [i for i in scar_pool if i not in ["MANTAIL", 'BURNTAIL']]
             if 'NOLEFT' in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ['LEFTEAR']]
+                scar_pool = [i for i in scar_pool if i not in ['LEFTEAR', 'LEFTTAG']]
             if 'NORIGHT' in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ['RIGHTEAR']]
+                scar_pool = [i for i in scar_pool if i not in ['RIGHTEAR', 'RIGHTTAG']]
 
             # Extra check for disabling scars.
             if int(random.random() * 3):
                 condition_scars = {
                     "LEGBITE", "THREE", "NOPAW", "TOETRAP", "NOTAIL", "HALFTAIL", "LEFTEAR", "RIGHTEAR",
                     "MANLEG", "BRIGHTHEART", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "LEFTBLIND",
-                    "RIGHTBLIND", "BOTHBLIND", "RATBITE", "DECLAWED", "RASH"
+                    "RIGHTBLIND", "BOTHBLIND", "RATBITE", "DECLAWED", "RASH", "LEFTTAG", "RIGHTTAG"
                 }
 
                 scar_pool = list(set(scar_pool).difference(condition_scars))
@@ -159,7 +163,8 @@ class Scar_Events():
                 return None, None
 
             # If we've reached this point, we can move forward with giving history.
-            History.add_scar(cat,
+            if injury_name != "cutter's sickness":
+                History.add_scar(cat,
                              f"m_c was scarred from an injury ({injury_name}).",
                              condition=injury_name)
 
@@ -168,6 +173,13 @@ class Scar_Events():
                 if cat.pelt.accessory in ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS"]:
                     cat.pelt.accessory = None
 
+            if specialty in ["NOLEFTEAR", "NOEAR"]:
+                if "LEFTTAG" in cat.pelt.scars:
+                    cat.pelt.scars.remove("LEFTTAG")
+            elif specialty in ["NORIGHTEAR", "NOEAR"]:
+                if "RIGHTTAG" in cat.pelt.scars:
+                    cat.pelt.scars.remove("RIGHTTAG")
+        
             # combining left/right variations into the both version
             if "NOLEFTEAR" in cat.pelt.scars and specialty == 'NORIGHTEAR':
                 cat.pelt.scars.remove("NOLEFTEAR")
@@ -182,6 +194,24 @@ class Scar_Events():
             elif 'LEFTBLIND' in cat.pelt.scars and specialty == 'RIGHTBLIND':
                 cat.pelt.scars.remove("RIGHTBLIND")
                 specialty = 'BOTHBLIND'
+
+            if specialty in ["LEFTTAG", "RIGHTTAG"]:
+                if cat.gender == "male" and specialty == "LEFTTAG":
+                    specialty = "RIGHTTAG"
+                elif cat.gender == "female" and specialty == "RIGHTTAG":
+                    specialty = "LEFTTAG"   
+
+                if specialty == "LEFTTAG" and "NOLEFTEAR" in cat.pelt.scars:
+                    return None, None                    
+                if specialty == "RIGHTTAG" and "NORIGHTEAR" in cat.pelt.scars:
+                    return None, None    
+
+                if game.settings["tnr"]:
+                    if random.randint(0,1):
+                        cat.neutered = True
+                        History.add_scar(cat=cat, scar_text="m_c was neutered and tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.")
+                else:
+                    History.add_scar(cat=cat, scar_text="m_c was tagged on the ear by twolegs.")                        
 
             cat.pelt.scars.append(specialty)
 

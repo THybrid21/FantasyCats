@@ -104,7 +104,7 @@
             ]
         ],
 		"pregnancy turmoil": [
-			"Adds negative pregnancy events",
+			"Allow negative pregnancy events",
 			"Allows cats to have events like post-partum depression, stillbirths and false pregnancies.",
 			false
 		],

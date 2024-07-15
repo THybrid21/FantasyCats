@@ -252,9 +252,9 @@ class Patrol:
         self.update_resources(biome_dir, leaf)
 
         possible_patrols = []
-        # this next one is needed for Classic specifically
+        # this next one is needed for Classic specifically    
         patrol_type = "med" if ['medicine cat', 'medicine cat apprentice'] in self.patrol_status_list else patrol_type
-        patrol_type = "training" if ['permaqueen', 'permaqueen apprentice'] in self.patrol_status_list else patrol_type
+        patrol_type = "training" if ['permaqueen', 'permaqueen apprentice'] in self.patrol_status_list else patrol_type    
         patrol_size = len(self.patrol_cats)
         reputation = game.clan.reputation  # reputation with outsiders
         other_clan = self.other_clan

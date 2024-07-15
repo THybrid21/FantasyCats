@@ -41,6 +41,10 @@
   "starving": [
     "m_c is starving."
   ],
+  "anxiety attack": [
+    "m_c has gotten worked up into an anxiety attack.",
+	"With all the stress weighing on {PRONOUN/m_c/poss} mind, m_c's gotten an anxiety attack."
+  ],
   "ticks": [
 	"m_c appears to have gotten some ticks.",
 	"Poor m_c was caught scratching at {PRONOUN/m_c/self}, it appears to be a case of ticks."
@@ -59,8 +63,8 @@
 	"This past moon m_c has been plagued with nightmares."
   ],
   "burn out": [
-	"Poor m_c is suffering from some burn out.",
-	"m_c is currently experiencing some burn out."
+	"Poor m_c is suffering from burn out.",
+	"m_c is currently experiencing burn out."
   ],
   "ear buzzing": [
 	"m_c's ears just won't stop buzzing.",
@@ -78,7 +82,8 @@
   ],
   "stimming": [
 	"m_c has been stimming a lot more than normal recently.",
-	"The clan is happy to see m_c stimming more."
+	"The clan is happy to see m_c stimming more.",
+	"m_c's begun to stim more recently."
   ],
   "parroting": [
 	"m_c has been parroting more than normal recently."

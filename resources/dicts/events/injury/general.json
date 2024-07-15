@@ -7287,6 +7287,112 @@
         ]
     },
     {
+        "event_id": "gen_injury_rash_anyskillclevermultitrait1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "weight": 20,
+        "event_text": "m_c was out on a walk alone when {PRONOUN/m_c/subject} heard a dog approaching! {PRONOUN/m_c/subject/CAP} crawled into a nearby bush to hide, only to discover to {PRONOUN/m_c/poss} dismay that it was poison ivy.",
+        "m_c": {
+            "age": [
+                "senior",
+                "adolescent",
+                "young adult",
+                "adult",
+                "senior adult"
+            ],
+            "status": [
+                "any"
+            ],
+            "skill": [
+                "CLEVER,1"
+            ],
+            "trait": [
+                "nervous",
+                "wise",
+                "insecure",
+                "careful",
+                "calm",
+                "sneaky",
+                "strange"
+            ]
+        },
+        "injury": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "injuries": [
+                    "rash"
+                ]
+            }
+        ],
+        "history": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "scar": "m_c got a constant rash from an encounter with poison ivy."
+            }
+        ]
+    },
+    {
+        "event_id": "gen_injury_rash_anyskillclevermultitrait2",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "weight": 20,
+        "event_text": "m_c was out on a walk alone when {PRONOUN/m_c/subject} heard a fox approaching! {PRONOUN/m_c/subject/CAP} crawled into a nearby bush to hide, only to discover to {PRONOUN/m_c/poss} dismay that it was poison ivy.",
+        "m_c": {
+            "age": [
+                "senior",
+                "adolescent",
+                "young adult",
+                "adult",
+                "senior adult"
+            ],
+            "status": [
+                "any"
+            ],
+            "skill": [
+                "CLEVER,1"
+            ],
+            "trait": [
+                "nervous",
+                "wise",
+                "insecure",
+                "careful",
+                "calm",
+                "sneaky",
+                "strange"
+            ]
+        },
+        "injury": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "injuries": [
+                    "rash"
+                ]
+            }
+        ],
+        "history": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "scar": "m_c got a constant rash from an encounter with poison ivy."
+            }
+        ]
+    },
+    {
         "event_id": "gen_injury_sunburn_any1",
         "location": ["mountainous", "beach", "plains"],
         "season": ["newleaf", "greenleaf"],

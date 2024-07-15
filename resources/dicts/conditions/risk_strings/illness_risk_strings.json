@@ -11,22 +11,6 @@
 			"If m_c close {PRONOUN/m_c/poss} eyes the pain isn't quite so bad, just a dull throb really. But it doesn't easily let them rest after {PRONOUN/m_c/poss} seizure."
 		]
 	},
-	"greencough": {
-        "yellowcough": [
-             "There has to be a solution - if r_c tries hard enough, surely {PRONOUN/r_c/subject} can still save m_c from the yellowcough {PRONOUN/m_c/poss} greencough has progressed to.",
-             "m_c sits in the medicine cat den, miserable, coughing so hard it feels like {PRONOUN/m_c/subject} can barely get a breath in. {PRONOUN/m_c/poss/CAP} greencough has progressed to yellowcough, and the outlook looks grim."
-        ],
-		"longcough": [
-			"Despite all of m_c's tiredness and fever having left {PRONOUN/m_c/object}, r_c struggles to help get rid of the last lingering cough... it seems like it might never leave.",
-			"While m_c's greencough seems to be gone, the coughing itself stubbornly lingers. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know if it'll ever go away coming in bursts randomly."
-		]
-    },
-    "kittencough": {
-        "greencough": [
-            "r_c quietly tells m_c's parent that {PRONOUN/r_c/subject} {VERB/r_c/need/needs} to move m_c to the medicine cat den. m_c's kittencough has progressed to greencough.",
-            "m_c coughs pathetically, wondering why it's not getting better, and why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to be in the stinky medicine cat den now."
-        ]
-    },
     "an infected wound": {
         "a festering wound": [
             "The stink of infection has strengthened and worsened. r_c mutters about different herbs as m_c watches {PRONOUN/r_c/object} change yet another poultice that probably won't work.",
@@ -38,26 +22,76 @@
             "r_c attempts to move m_c to the medicine cat den, where the whitecough that {PRONOUN/m_c/poss} running nose has turned into is more easily monitored.",
             "m_c brings {PRONOUN/m_c/self} to the medicine cat den, concerned {PRONOUN/m_c/poss} running nose only seems to be getting worse.",
 			"Despite {PRONOUN/m_c/poss} running nose only getting worse, m_c refuses to stay in the medicine den because it's only a little whitecough."
-        ]
+        ],
+		"nosebleed": [
+			"Concerned m_c goed to r_c about the nosebleed that {PRONOUN/m_c/poss} running nose has turned into.",
+			"m_c has noticed that the fluid running from {PRONOUN/m_c/poss} nose appears to be blood."
+		]
+    },
+    "kittencough": {
+        "greencough": [
+            "r_c quietly tells m_c's parent that {PRONOUN/r_c/subject} {VERB/r_c/need/needs} to move m_c to the medicine cat den. m_c's kittencough has progressed to greencough.",
+            "m_c coughs pathetically, wondering why it's not getting better, and why {PRONOUN/m_c/subject} {VERB/m_c/have/has} to be in the stinky medicine cat den now."
+        ],
+		"nosebleed": [
+			"r_c reassures m_c's worried parents that {PRONOUN/m_c/poss} bleeding nose is not redcough.",
+			"m_c's kittencough appears to have come along with a nosebleed."
+		]
     },
     "whitecough": {
         "greencough":[
             "r_c searches through {PRONOUN/r_c/poss} herb stores. m_c's whitecough has progressed to greencough, greatly worrying {PRONOUN/r_c/object}.",
             "m_c coughs, feeling like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} hacking up half {PRONOUN/m_c/poss} lungs. This is definitely worse than whitecough ever gets.",			
 			"Due to the stubborn lack of nestrest m_c is now miserably curled up in the medicine den, coughing with greencough instead."
-        ]
+        ],
+		"nosebleed": [
+			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
+			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
+			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
+		]
+    },
+	"greencough": {
+        "yellowcough": [
+             "There has to be a solution - if r_c tries hard enough, surely {PRONOUN/r_c/subject} can still save m_c from the yellowcough {PRONOUN/m_c/poss} greencough has progressed to.",
+             "m_c sits in the medicine cat den, miserable, coughing so hard it feels like {PRONOUN/m_c/subject} can barely get a breath in. {PRONOUN/m_c/poss/CAP} greencough has progressed to yellowcough, and the outlook looks grim."
+        ],
+		"longcough": [
+			"Despite all of m_c's tiredness and fever having left {PRONOUN/m_c/object}, r_c struggles to help get rid of the last lingering cough... it seems like it might never leave.",
+			"While m_c's greencough seems to be gone, the coughing itself stubbornly lingers. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know if it'll ever go away coming in bursts randomly."
+		],
+		"nosebleed": [
+			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
+			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
+			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
+		]
     },
     "yellowcough": {
         "redcough": [
             "r_c spots the specks of blood in the bedding where m_c has been coughing and swallows a wail of despair. If {PRONOUN/m_c/poss} yellowcough has progressed to redcough, it's practically a death sentence.",
              "m_c is going to be fine. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} sure of it. {PRONOUN/m_c/poss/CAP} lungs don't hurt nearly as much anymore, and if there's blood in {PRONOUN/m_c/poss} mouth when {PRONOUN/m_c/subject} {VERB/m_c/finish/finishes} a coughing fit, what of it?"
-        ]
+        ],
+		"nosebleed": [
+			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
+			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
+			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
+		]
     },
+	"redcough": {
+		"nosebleed": [
+			"It's all that r_c can do to help m_c with the additional nosebleed alongside {PRONOUN/m_c/poss} redcough.",
+			"m_c's struggle to breathe only becomes worse as {PRONOUN/m_c/poss} nose freely bleeds."
+		]	
+	},
     "heat exhaustion": {
         "heat stroke": [
             "r_c presses the damp moss onto m_c's forehead as {PRONOUN/m_c/subject} {VERB/m_c/lie/lies} completely drained and panting. This is more than heat exhaustion now, m_c will need time to recover from this heat stroke.",
             "m_c rolls around dazedly in {PRONOUN/m_c/poss} nest, searching for a cooler spot. {PRONOUN/m_c/poss/CAP} exhaustion is beyond just a little thing and {PRONOUN/m_c/poss} confused brain still has enough observational power to recognise full heat stroke."
-        ]
+        ],
+		"nosebleed": [
+			"r_c desperately presses the damp moss to m_c's forehead, calling for a Clanmate to assist and get cleaner moss as {PRONOUN/m_c/poss} nose starts to bleed.",
+			"Weakly m_c pants, struggling to cleanly breathe as {PRONOUN/m_c/poss} nose begins to bleed.",
+			"The heat exhaustion that m_c has led to a nosebleed."
+		]
     },
 	"heat stroke": {
 		"fainting": [
@@ -79,6 +113,10 @@
 			"While m_c's stomachache has passed there's a lingering sense that something within is wrong. {PRONOUN/m_c/subject/CAP} still {VERB/m_c/feel/feels} a bit bloated and off.",
 			"Even though the worst of m_c's stomachache has passed {PRONOUN/m_c/subject} still {VERB/m_c/find/finds} {PRONOUN/m_c/self} feeling a bit uncomfortable in the belly.",
 			"Despite m_c's stomach settling down {PRONOUN/m_c/subject} still seems to be a bit wary of taking more prey, as if another pain is just waiting to pounce on {PRONOUN/m_c/object}."
+		],
+		"nausea": [
+			"r_c has noticed that m_c is struggling to eat, it appears that {PRONOUN/m_c/poss} stomachache has left {PRONOUN/m_c/object} with nausea.",
+			"The aching in m_c's stomache has resulted in nausea."
 		]
 	},
     "nightmares": {
@@ -154,6 +192,10 @@
 			"After working {PRONOUN/m_c/self} into such anxiety m_c finds {PRONOUN/m_c/self} struggling to get back out of it and on edge for the rest of the day.",
 			"m_c refuses to let {PRONOUN/m_c/self} calm down, sure that there is something wrong and dangerous out there.",
 			"While there is no reason to worry m_c refuses to see it that way and stands stiffly at the camp entry fur all on end and ears raised to hear absolutely everything."
+		],
+		"nausea": [
+			"m_c admits to r_c that due to {PRONOUN/m_c/poss} anxiety {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} incredibly nauseous.",
+			"All of m_c's anxieties have left {PRONOUN/m_c/object} feeling rather nauseous."
 		]
 	},
 	"panic attack": {

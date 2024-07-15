@@ -60,9 +60,8 @@ class Pelt:
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT']
     tortiebases = ['single', 'backed', 'smoke', 'rat', 'dunnart', 'lantern', 'armored']
 
-    pelt_length = ["short", "medium", "long", "wolf", "scug", "saint", "snat", "catfish", "skele", "bare"]
-    standard_lengths = ["short", "medium", "long"]
-    nonstandard_lengths = ["snat", "wolf", "skele","catfish", "scug", "saint"]    
+    pelt_length = ["short", "medium", "long", "bare"]
+    standard_lengths = ["short", "medium", "long"] 
     
     fur_textures = ["soft", "curly", "rough", "silky", "sleek", "wavy", "sparse", "tangled", "matted", "fuzzy", "coarse", "brittle", "fluffy", "slimy"]
     scale_textures = ["soft", "slimy", "coarse", "serrated", "smooth", "raised", "reversed", "feathery"]
@@ -104,7 +103,10 @@ class Pelt:
 
     # "special" scars that could only happen in a special event
     scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "FROSTFACE", "FROSTTAIL",
-              "FROSTMITT", "FROSTSOCK", "TOE", "SNAKETWO"]
+              "FROSTMITT", "FROSTSOCK", "TOE", "SNAKETWO", "RASH", "DECLAWED", "SNAKETHREE"]
+    
+    # Additional "special" scars, for neutering
+    scars4 = ["RIGHTTAG", "LEFTTAG"]
 
     # make sure to add plural and singular forms of new accs to acc_display.json so that they will display nicely
     plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
@@ -364,26 +366,111 @@ class Pelt:
                 self.eye_colour2 = "GREEN"
             self.eye_colour = "BLUE"
 
-        if self.length == 'long':
-            if self.cat_sprites['adult'] not in [9, 10, 11]:
-                if self.cat_sprites['adult'] == 0:
-                    self.cat_sprites['adult'] = 9
-                elif self.cat_sprites['adult'] == 1:
-                    self.cat_sprites['adult'] = 10
-                elif self.cat_sprites['adult'] == 2:
-                    self.cat_sprites['adult'] = 11
+        if self.skin in convert_dict["old_sphynx_skins"]:
+            self.skin = convert_dict["old_sphynx_skins"][self.skin]
+            self.length = "bare"
+            if self.cat_sprites['kitten'] not in [6, 7, 8]:
+                if self.cat_sprites['kitten'] == 0:
+                    self.cat_sprites['kitten'] = 6
+                elif self.cat_sprites['kitten'] == 1:
+                    self.cat_sprites['kitten'] = 7
+                elif self.cat_sprites['kitten'] == 2:
+                    self.cat_sprites['kitten'] = 8
+            if self.cat_sprites['adolescent'] not in [15, 16, 17]:
+                if self.cat_sprites['adolescent'] == 3:
+                    self.cat_sprites['adolescent'] = 15
+                elif self.cat_sprites['adolescent'] == 4:
+                    self.cat_sprites['adolescent'] = 16
+                elif self.cat_sprites['adolescent'] == 5:
+                    self.cat_sprites['adolescent'] = 17
+            if self.cat_sprites['adult'] not in [24, 25, 26]:
+                if self.cat_sprites['adult'] == 6:
+                    self.cat_sprites['adult'] = 24
+                elif self.cat_sprites['adult'] == 7:
+                    self.cat_sprites['adult'] = 25
+                elif self.cat_sprites['adult'] == 8:
+                    self.cat_sprites['adult'] = 26
+            if self.cat_sprites['senior'] not in [33, 34, 35]:
+                if self.cat_sprites['senior'] == 12:
+                    self.cat_sprites['senior'] = 33
+                elif self.cat_sprites['senior'] == 13:
+                    self.cat_sprites['senior'] = 34
+                elif self.cat_sprites['senior'] == 14:
+                    self.cat_sprites['senior'] = 35
                 self.cat_sprites['young adult'] = self.cat_sprites['adult']
                 self.cat_sprites['senior adult'] = self.cat_sprites['adult']
-                self.cat_sprites['para_adult'] = 16
-        else:
-            self.cat_sprites['para_adult'] = 15
-        if self.cat_sprites['senior'] not in [12, 13, 14]:
-            if self.cat_sprites['senior'] == 3:
-                self.cat_sprites['senior'] = 12
-            elif self.cat_sprites['senior'] == 4:
-                self.cat_sprites['senior'] = 13
-            elif self.cat_sprites['senior'] == 5:
-                self.cat_sprites['senior'] = 14
+                self.cat_sprites['para_young'] = 42
+                self.cat_sprites['para_adult'] = choice([43, 44])
+            self.cat_sprites['newborn'] = 53
+        elif self.skin in convert_dict["other_skins"]:
+            self.skin = convert_dict["other_skins"][self.skin]
+
+        if self.name in convert_dict["depreciated_pelts"]:
+            self.name = convert_dict["depreciated_pelts"][self.name]
+        if self.tortiebase in convert_dict["depreciated_torties"]:
+            self.tortiebase = convert_dict["depreciated_torties"][self.tortiebase]
+
+        if self.length == 'long':
+            if self.cat_sprites['kitten'] not in [3, 4, 5]:
+                if self.cat_sprites['kitten'] == 0:
+                    self.cat_sprites['kitten'] = 3
+                elif self.cat_sprites['kitten'] == 1:
+                    self.cat_sprites['kitten'] = 4
+                elif self.cat_sprites['kitten'] == 2:
+                    self.cat_sprites['kitten'] = 5
+            if self.cat_sprites['adolescent'] not in [12, 13, 14]:
+                if self.cat_sprites['adolescent'] == 3:
+                    self.cat_sprites['adolescent'] = 12
+                elif self.cat_sprites['adolescent'] == 4:
+                    self.cat_sprites['adolescent'] = 13
+                elif self.cat_sprites['adolescent'] == 5:
+                    self.cat_sprites['adolescent'] = 14
+            if self.cat_sprites['adult'] not in [21, 22, 23]:
+                if self.cat_sprites['adult'] == 9:
+                    self.cat_sprites['adult'] = 21
+                elif self.cat_sprites['adult'] == 10:
+                    self.cat_sprites['adult'] = 22
+                elif self.cat_sprites['adult'] == 11:
+                    self.cat_sprites['adult'] = 23
+            if self.cat_sprites['senior'] not in [30, 31, 32]:
+                if self.cat_sprites['senior'] == 12:
+                    self.cat_sprites['senior'] = 30
+                elif self.cat_sprites['senior'] == 13:
+                    self.cat_sprites['senior'] = 31
+                elif self.cat_sprites['senior'] == 14:
+                    self.cat_sprites['senior'] = 32
+                self.cat_sprites['young adult'] = self.cat_sprites['adult']
+                self.cat_sprites['senior adult'] = self.cat_sprites['adult']
+                self.cat_sprites['para_young'] = choice([38, 39])
+                self.cat_sprites['para_adult'] = choice([45, 46])
+            self.cat_sprites['newborn'] = 49
+        elif self.length in ['short', 'medium']:
+            if self.cat_sprites['adolescent'] not in [9, 10, 11]:
+                if self.cat_sprites['adolescent'] == 3:
+                    self.cat_sprites['adolescent'] = 9
+                elif self.cat_sprites['adolescent'] == 4:
+                    self.cat_sprites['adolescent'] = 10
+                elif self.cat_sprites['adolescent'] == 5:
+                    self.cat_sprites['adolescent'] = 11
+            if self.cat_sprites['adult'] not in [18, 19, 20]:
+                if self.cat_sprites['adult'] == 6:
+                    self.cat_sprites['adult'] = 18
+                elif self.cat_sprites['adult'] == 7:
+                    self.cat_sprites['adult'] = 19
+                elif self.cat_sprites['adult'] == 8:
+                    self.cat_sprites['adult'] = 20
+            if self.cat_sprites['senior'] not in [27, 28, 29]:
+                if self.cat_sprites['senior'] == 12:
+                    self.cat_sprites['senior'] = 27
+                elif self.cat_sprites['senior'] == 13:
+                    self.cat_sprites['senior'] = 28
+                elif self.cat_sprites['senior'] == 14:
+                    self.cat_sprites['senior'] = 29
+                self.cat_sprites['young adult'] = self.cat_sprites['adult']
+                self.cat_sprites['senior adult'] = self.cat_sprites['adult']
+                self.cat_sprites['para_young'] = choice([36, 37])
+                self.cat_sprites['para_adult'] = choice([40, 41])
+            self.cat_sprites['newborn'] = 49
         
         if self.pattern in convert_dict["old_tortie_patches"]:
             old_pattern = self.pattern
@@ -404,27 +491,182 @@ class Pelt:
             self.pattern = "MINIMALTHREE"
         elif self.pattern == "MINIMAL4":
             self.pattern = "MINIMALFOUR"
-        
+
+        if self.skin in ["ALBINO", "ALBINOGILL", "ALBINOMANE", "ALBINOWING"] and not self.albino:
+            self.albino = choice(Pelt.albinism)
+            if self.eye_colour in Pelt.blue_eyes:
+                    self.eye_colour = choice(['CYANPINK', 'BLUEPINK'])
+            elif self.eye_colour in Pelt.yellow_eyes:
+                    self.eye_colour = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+            elif self.eye_colour in Pelt.green_eyes:
+                    self.eye_colour = 'MINTPINK'
+            elif self.eye_colour in Pelt.purple_eyes:
+                    self.eye_colour = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+            elif self.eye_colour in Pelt.mono_eyes:
+                    self.eye_colour = 'GHOSTPINK'    
+            elif self.eye_colour in Pelt.chromatic_eyes:
+                    self.eye_colour = 'NACRE'  
+            if self.eye_colour2:
+                if self.eye_colour2 in Pelt.blue_eyes:
+                        self.eye_colour2 = choice(['CYANPINK', 'BLUEPINK'])
+                elif self.eye_colour2 in Pelt.yellow_eyes:
+                        self.eye_colour2 = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+                elif self.eye_colour2 in Pelt.green_eyes:
+                        self.eye_colour2 = 'MINTPINK'
+                elif self.eye_colour2 in Pelt.purple_eyes:
+                        self.eye_colour2 = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+                elif self.eye_colour2 in Pelt.mono_eyes:
+                        self.eye_colour2 = 'GHOSTPINK'    
+                elif self.eye_colour2 in Pelt.chromatic_eyes:
+                        self.eye_colour2 = 'NACRE'  
+            if self.eye_colour3:
+                if self.eye_colour3 in Pelt.blue_eyes:
+                        self.eye_colour3 = choice(['CYANPINK', 'BLUEPINK'])
+                elif self.eye_colour3 in Pelt.yellow_eyes:
+                        self.eye_colour3 = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+                elif self.eye_colour3 in Pelt.green_eyes:
+                        self.eye_colour3 = 'MINTPINK'
+                elif self.eye_colour3 in Pelt.purple_eyes:
+                        self.eye_colour3 = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+                elif self.eye_colour3 in Pelt.mono_eyes:
+                        self.eye_colour3 = 'GHOSTPINK'    
+                elif self.eye_colour3 in Pelt.chromatic_eyes:
+                        self.eye_colour3 = 'NACRE'
+            print("False Albino converted from an old save")
+        elif self.skin in ["MELANISTIC", "MELANISTICGILL", "MELANISTICMANE", "MELANISTICWING"] and not self.melanistic:
+            self.melanistic = choice(Pelt.melanism)
+            if self.eye_colour in Pelt.blue_eyes:
+                    self.eye_colour = choice(['DARKCYAN', 'DEEPBLUE'])
+            elif self.eye_colour in Pelt.yellow_eyes:
+                    self.eye_colour = choice(['SUNSHADOW', 'DARKBROWN'])                        
+            elif self.eye_colour in Pelt.green_eyes:
+                    self.eye_colour = 'FERN'
+            elif self.eye_colour in Pelt.purple_eyes:
+                    self.eye_colour = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+            elif self.eye_colour in Pelt.mono_eyes:
+                    self.eye_colour = 'BLACKHOLE'    
+            elif self.eye_colour in Pelt.chromatic_eyes:
+                    self.eye_colour = 'NIGHT' 
+            if self.eye_colour2:
+                if self.eye_colour2 in Pelt.blue_eyes:
+                        self.eye_colour2 = choice(['DARKCYAN', 'DEEPBLUE'])
+                elif self.eye_colour2 in Pelt.yellow_eyes:
+                        self.eye_colour2 = choice(['SUNSHADOW', 'DARKBROWN'])                        
+                elif self.eye_colour2 in Pelt.green_eyes:
+                        self.eye_colour2 = 'FERN'
+                elif self.eye_colour2 in Pelt.purple_eyes:
+                        self.eye_colour2 = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+                elif self.eye_colour2 in Pelt.mono_eyes:
+                        self.eye_colour2 = 'BLACKHOLE'    
+                elif self.eye_colour2 in Pelt.chromatic_eyes:
+                        self.eye_colour2 = 'NIGHT'  
+            if self.eye_colour3:
+                if self.eye_colour3 in Pelt.blue_eyes:
+                        self.eye_colour3 = choice(['DARKCYAN', 'DEEPBLUE'])
+                elif self.eye_colour3 in Pelt.yellow_eyes:
+                        self.eye_colour3 = choice(['SUNSHADOW', 'DARKBROWN'])                        
+                elif self.eye_colour3 in Pelt.green_eyes:
+                        self.eye_colour3 = 'FERN'
+                elif self.eye_colour3 in Pelt.purple_eyes:
+                        self.eye_colour3 = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+                elif self.eye_colour3 in Pelt.mono_eyes:
+                        self.eye_colour3 = 'BLACKHOLE'    
+                elif self.eye_colour3 in Pelt.chromatic_eyes:
+                        self.eye_colour3 = 'NIGHT'  
+            print("False Melanistic converted from an old save")
+
+        if self.colour not in Pelt.pelt_colours:
+            if self.colour == "CADET":
+                self.colour = "SILVER"
+            elif self.colour in ["TURQUOISE", "PUDDLE", "TIFFANY"]:
+                self.colour = choice(["SKY", "POWDERBLUE", "SHINYMEW"])
+            elif self.colour == "WOOD":
+                self.colour = "APRICOT"
+            elif self.colour in ["MAGENTA", "HEATHER"]:
+                self.colour = choice(["PETAL", "PALESTRAKIT", "FLORAL"])
+            elif self.colour in ["FARROW", "HAY", "MEERKAT", "KHAKI", 
+                                "HAZELNUT", "SAMON"]:
+                self.colour = choice(["BEIGE", "PANTONE", "LIGHTBROWN", "LILAC"])
+            elif self.colour in ["FAWN", "CORN"]:
+                self.colour = "YELLOW"
+            elif self.colour in ["MINTY", "LIME", "GRASS"]:
+                self.colour = choice(["CHARTRUSE", "MINT", "LETTUCE", "LIGHTGREEN"])            
+            elif self.colour in ["MARENGO", "BATTLESHIP", "STEEL", "SLATE"]:
+                self.colour = choice(["GREY", "BLUEGREY", "XANADU", "DARKGREY"])
+            elif self.colour in ["INDIGOBLUE", "INDIGOLIGHT", "WAVES", "TEAL", "DENIUM"]:
+                self.colour = choice(["SAPPHIRE", "OCEAN", "COBALT"])
+            elif self.colour == "SONIC":
+                self.colour = "COBALT"
+            elif self.colour in ["GOLD", "FIRE", "GARFIELD", "BRICK"]:
+                self.colour == choice(["HONEY", "GOLDEN", "APRICOT", "GINGER"])
+            elif self.colour in ["CHERRY", "BUBBLEGUM", "TART"]:
+                self.colour = choice(["APPLE", "BLUSH", "RED"])
+            elif self.colour in ["THISTLE", "CAPPUCCINO", "ECRU", "MEDALLION", "DUSTBROWN", "ASHBROWN", 
+                                "SANDALWOOD", "WRENGE", "PINECONE", "GRANOLA", "SADDLE", "MINK"]:
+                self.colour = choice(["BROWN", "GOLDEN-BROWN", "TAN", "CHESTNUT"])
+            elif self.colour in ["SPINNACH", "SEAWEED", "SACRAMENTO", "SEAGRASS", "JADE"]:
+                self.colour = choice(["DARKGREEN", "DARKOLIVE", "FERN", "FOREST"])
+
+            elif self.colour in ["SOOT", "DARKGREY", "CHARCOAL", "ANCHOR"]:
+                self.colour = choice(["COAL", "GHOST", "BLACK", "PITCH"])
+            elif self.colour in ["B_BLACK", "M_BLACK", "Y_BLACK", "RASIN", "ONYX"]:
+                self.colour = "BLACK"
+            elif self.colour in ["DARKTEAL", "NAVY", "JEANS", "JACKET", "DEEPOCEAN", "OCEANIC", "NIGHTTIME"]:
+                self.colour = choice(["DARKCOBALT", "INDIGO", "NIGHT"])
+            elif self.colour in ["SUNSET", "APPLE", "RED", "RUFOUS", "CRIMSON", "CARMINE", "SCARLET", "COSMOS", "ROSEWOOD",
+                                "BURNT"]:
+                self.colour = choice(["ROSE", "DARKGINGER", "SIENNA", "BLOOD"])
+            elif self.colour in ["BRIGHTCRIMSON", "BARN"]:
+                self.colour = choice(["SCARLET",  "DARKRED", "GARNET"])
+            elif self.colour == "ROYALPURPLE":
+                self.colour = "DARKSTRAKIT"
+            elif self.colour in ["CEDAR", "DARKSAMON", "BEAVER", "MOCHA", "TAUPE"]:
+                self.colour = choice(["DARKBROWN", "CHOCOLATE", "COFFEE", "UMBER"])
+            elif self.colour in ["TROMBONE", "BRASS", "RUST", "COPPER"]:
+                self.colour = "DIJON"
+            elif self.colour in ["FLUORITE", "SEAFOAM", "FERN", "DEEPOLIVE", "DEEPFOREST", "MALACHITE"]:
+                self.colour = choice(["DARKGREEN", "DARKOLIVE", "FERN", "FOREST"])
+
     def init_eyes(self, parents):
         if not parents:
-            self.eye_colour = choice(Pelt.eye_colours)
+            if self.albino:
+                self.eye_colour = choice(Pelt.albino_eyes)
+            elif self.melanistic:
+                self.eye_colour = choice(Pelt.melanistic_eyes)
+            else:
+                self.eye_colour = choice(Pelt.eye_colours)
         else:
             for _par in parents:
-                if _par.pelt.eye_colour in Pelt.albino_eyes + Pelt.melanistic_eyes: 
-                    if _par.pelt.eye_colour in ['CYANPINK', 'BLUEPINK', 'DARKCYAN', 'DEEPBLUE']:
-                        _par.pelt.eye_colour = choice(Pelt.blue_eyes)                      
-                    elif _par.pelt.eye_colour in ['YELLOWPINK', 'SUNSHADOW', 'LIGHTBROWN', 'DARKBROWN']:
-                        _par.pelt.eye_colour = choice(Pelt.yellow_eyes)    
-                    elif _par.pelt.eye_colour in ['MINTPINK','FERN']:
-                        _par.pelt.eye_colour = choice(Pelt.green_eyes)     
-                    elif _par.pelt.eye_colour in ['PINK','VIOLETPINK', 'RUBEN', 'DUSK', 'LIGHTPOPPY', 'DARKPOPPY']:
-                        _par.pelt.eye_colour = choice(Pelt.purple_eyes)     
-                    elif _par.pelt.eye_colour in ['GHOSTPINK', 'BLACKHOLE']:
-                        _par.pelt.eye_colour = choice(Pelt.mono_eyes)   
-                    elif _par.pelt.eye_colour in ['NACRE', 'NIGHT']:
-                        _par.pelt.eye_colour = choice(Pelt.chromatic_eyes)   
                 self.eye_colour = choice([i.pelt.eye_colour for i in parents] + [choice(Pelt.eye_colours)])
-   
+
+        #Correct wrong eyes here
+        if not self.albino:
+            if self.eye_colour in ['CYANPINK', 'BLUEPINK']:
+                self.eye_colour = choice(Pelt.blue_eyes)                      
+            elif self.eye_colour in ['YELLOWPINK', 'LIGHTBROWN']:
+                self.eye_colour = choice(Pelt.yellow_eyes)    
+            elif self.eye_colour == 'MINTPINK':
+                self.eye_colour = choice(Pelt.green_eyes)     
+            elif self.eye_colour in ['PINK','VIOLETPINK', 'LIGHTPOPPY']:
+                self.eye_colour = choice(Pelt.purple_eyes)     
+            elif self.eye_colour == 'GHOSTPINK':
+                self.eye_colour = choice(Pelt.mono_eyes)   
+            elif self.eye_colour == 'NACRE':
+                self.eye_colour = choice(Pelt.chromatic_eyes)    
+        elif not self.melanistic:
+            if self.eye_colour in ['DARKCYAN', 'DEEPBLUE']:
+                self.eye_colour = choice(Pelt.blue_eyes)
+            elif self.eye_colour in ['SUNSHADOW', 'DARKBROWN']:
+                self.eye_colour = choice(Pelt.yellow_eyes)    
+            elif self.eye_colour == 'FERN':
+                self.eye_colour = choice(Pelt.green_eyes)     
+            elif self.eye_colour in ['RUBEN', 'DUSK', 'DARKPOPPY']:
+                self.eye_colour = choice(Pelt.purple_eyes)     
+            elif self.eye_colour == 'BLACKHOLE':
+                self.eye_colour = choice(Pelt.mono_eyes)   
+            elif self.eye_colour == 'NIGHT':
+                self.eye_colour = choice(Pelt.chromatic_eyes)   
+ 
         #White patches must be initalized before eye color. 
         num = game.config["cat_generation"]["base_heterochromia"]
         if self.white_patches in [Pelt.high_white, Pelt.mostly_white, 'FULLWHITE'] or self.colour == 'WHITE':
@@ -438,41 +680,41 @@ class Pelt:
             
         hit = random.randint(0, num)
         if hit == 0:
-            if self.eye_colour in Pelt.yellow_eyes:
+            if self.eye_colour in Pelt.yellow_eyes + ['YELLOWPINK', 'SUNSHADOW', 'LIGHTBROWN', 'DARKBROWN']:
                 eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.blue_eyes:
+            elif self.eye_colour in Pelt.blue_eyes + ['CYANPINK', 'BLUEPINK', 'DARKCYAN', 'DEEPBLUE']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.green_eyes:
+            elif self.eye_colour in Pelt.green_eyes + ['MINTPINK','FERN']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.purple_eyes:
+            elif self.eye_colour in Pelt.purple_eyes + ['PINK','VIOLETPINK', 'RUBEN', 'DUSK', 'LIGHTPOPPY', 'DARKPOPPY']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.mono_eyes:
+            elif self.eye_colour in Pelt.mono_eyes + ['GHOSTPINK', 'BLACKHOLE']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.chromatic_eyes])
                 self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.chromatic_eyes:
+            elif self.eye_colour in Pelt.chromatic_eyes + ['NACRE', 'NIGHT']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes])
                 self.eye_colour2 = choice(eye_choice)
         if hit == 1:
-            if self.eye_colour in Pelt.yellow_eyes:
+            if self.eye_colour in Pelt.yellow_eyes + ['YELLOWPINK', 'SUNSHADOW', 'LIGHTBROWN', 'DARKBROWN']:
                 eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour3 = choice(eye_choice)
-            elif self.eye_colour in Pelt.blue_eyes:
+            elif self.eye_colour in Pelt.blue_eyes + ['CYANPINK', 'BLUEPINK', 'DARKCYAN', 'DEEPBLUE']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour3 = choice(eye_choice)
-            elif self.eye_colour in Pelt.green_eyes:
+            elif self.eye_colour in Pelt.green_eyes + ['MINTPINK','FERN']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.purple_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour3 = choice(eye_choice)
-            elif self.eye_colour in Pelt.purple_eyes:
+            elif self.eye_colour in Pelt.purple_eyes + ['PINK','VIOLETPINK', 'RUBEN', 'DUSK', 'LIGHTPOPPY', 'DARKPOPPY']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.mono_eyes, Pelt.chromatic_eyes])
                 self.eye_colour3 = choice(eye_choice)
-            elif self.eye_colour in Pelt.mono_eyes:
+            elif self.eye_colour in Pelt.mono_eyes + ['GHOSTPINK', 'BLACKHOLE']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.chromatic_eyes])
                 self.eye_colour3 = choice(eye_choice)
-            elif self.eye_colour in Pelt.chromatic_eyes:
+            elif self.eye_colour in Pelt.chromatic_eyes + ['NACRE', 'NIGHT']:
                 eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.purple_eyes, Pelt.mono_eyes])
                 self.eye_colour3 = choice(eye_choice)
         if hit == 2:
@@ -483,7 +725,86 @@ class Pelt:
             possible_eyes = Pelt.eye_colours.copy()
             possible_eyes.remove(self.eye_colour)
             self.eye_colour3 = choice(possible_eyes)
-            
+
+        ##CORRECT THE ALBINO/MELANISTIC CATS EYES HERE    
+        if self.albino:
+            if self.eye_colour in Pelt.blue_eyes:
+                    self.eye_colour = choice(['CYANPINK', 'BLUEPINK'])
+            elif self.eye_colour in Pelt.yellow_eyes:
+                    self.eye_colour = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+            elif self.eye_colour in Pelt.green_eyes:
+                    self.eye_colour = 'MINTPINK'
+            elif self.eye_colour in Pelt.purple_eyes:
+                    self.eye_colour = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+            elif self.eye_colour in Pelt.mono_eyes:
+                    self.eye_colour = 'GHOSTPINK'    
+            elif self.eye_colour in Pelt.chromatic_eyes:
+                    self.eye_colour = 'NACRE'  
+            if self.eye_colour2:
+                if self.eye_colour2 in Pelt.blue_eyes:
+                        self.eye_colour2 = choice(['CYANPINK', 'BLUEPINK'])
+                elif self.eye_colour2 in Pelt.yellow_eyes:
+                        self.eye_colour2 = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+                elif self.eye_colour2 in Pelt.green_eyes:
+                        self.eye_colour2 = 'MINTPINK'
+                elif self.eye_colour2 in Pelt.purple_eyes:
+                        self.eye_colour2 = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+                elif self.eye_colour2 in Pelt.mono_eyes:
+                        self.eye_colour2 = 'GHOSTPINK'    
+                elif self.eye_colour2 in Pelt.chromatic_eyes:
+                        self.eye_colour2 = 'NACRE'  
+            if self.eye_colour3:
+                if self.eye_colour3 in Pelt.blue_eyes:
+                        self.eye_colour3 = choice(['CYANPINK', 'BLUEPINK'])
+                elif self.eye_colour3 in Pelt.yellow_eyes:
+                        self.eye_colour3 = choice(['YELLOWPINK', 'LIGHTBROWN'])                        
+                elif self.eye_colour3 in Pelt.green_eyes:
+                        self.eye_colour3 = 'MINTPINK'
+                elif self.eye_colour3 in Pelt.purple_eyes:
+                        self.eye_colour3 = choice(['PINK', 'VIOLETPINK', 'LIGHTPOPPY'])                                  
+                elif self.eye_colour3 in Pelt.mono_eyes:
+                        self.eye_colour3 = 'GHOSTPINK'    
+                elif self.eye_colour3 in Pelt.chromatic_eyes:
+                        self.eye_colour3 = 'NACRE'
+        elif self.melanistic:
+            if self.eye_colour in Pelt.blue_eyes:
+                    self.eye_colour = choice(['DARKCYAN', 'DEEPBLUE'])
+            elif self.eye_colour in Pelt.yellow_eyes:
+                    self.eye_colour = choice(['SUNSHADOW', 'DARKBROWN'])                        
+            elif self.eye_colour in Pelt.green_eyes:
+                    self.eye_colour = 'FERN'
+            elif self.eye_colour in Pelt.purple_eyes:
+                    self.eye_colour = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+            elif self.eye_colour in Pelt.mono_eyes:
+                    self.eye_colour = 'BLACKHOLE'    
+            elif self.eye_colour in Pelt.chromatic_eyes:
+                    self.eye_colour = 'NIGHT'  
+            if self.eye_colour2:
+                if self.eye_colour2 in Pelt.blue_eyes:
+                        self.eye_colour2 = choice(['DARKCYAN', 'DEEPBLUE'])
+                elif self.eye_colour2 in Pelt.yellow_eyes:
+                        self.eye_colour2 = choice(['SUNSHADOW', 'DARKBROWN'])                        
+                elif self.eye_colour2 in Pelt.green_eyes:
+                        self.eye_colour2 = 'FERN'
+                elif self.eye_colour2 in Pelt.purple_eyes:
+                        self.eye_colour2 = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+                elif self.eye_colour2 in Pelt.mono_eyes:
+                        self.eye_colour2 = 'BLACKHOLE'    
+                elif self.eye_colour2 in Pelt.chromatic_eyes:
+                        self.eye_colour2 = 'NIGHT'  
+            if self.eye_colour3:
+                if self.eye_colour3 in Pelt.blue_eyes:
+                        self.eye_colour3 = choice(['DARKCYAN', 'DEEPBLUE'])
+                elif self.eye_colour3 in Pelt.yellow_eyes:
+                        self.eye_colour3 = choice(['SUNSHADOW', 'DARKBROWN'])                        
+                elif self.eye_colour3 in Pelt.green_eyes:
+                        self.eye_colour3 = 'FERN'
+                elif self.eye_colour3 in Pelt.purple_eyes:
+                        self.eye_colour3 = choice(['RUBEN', 'DUSK', 'DARKPOPPY'])                                  
+                elif self.eye_colour3 in Pelt.mono_eyes:
+                        self.eye_colour3 = 'BLACKHOLE'    
+                elif self.eye_colour3 in Pelt.chromatic_eyes:
+                        self.eye_colour3 = 'NIGHT'      
                 
         lazy = random.randint(0, 50)
         if lazy == 0:
@@ -500,6 +821,7 @@ class Pelt:
         par_pelttexture = set()
         par_build = set()
         par_peltcolours = set()
+        par_tortiecolours = set()
         par_peltnames = set()
         par_pelts = []
         par_white = []
@@ -507,7 +829,7 @@ class Pelt:
             if p:
                 # Gather pelt color.
                 par_peltcolours.add(p.pelt.colour)
-
+                par_tortiecolours.add(p.pelt.tortiecolour)
                 # Gather pelt length 
                 par_peltlength.add(p.pelt.length)
 
@@ -534,6 +856,7 @@ class Pelt:
                 # Append None
                 # Gather pelt color.
                 par_peltcolours.add(None)
+                par_tortiecolours.add(None)
                 par_peltlength.add(None)
                 par_pelttexture.add(None)
                 par_build.add(None)
@@ -649,6 +972,34 @@ class Pelt:
                 add_weight = (40, 40, 40, 40, 40, 40, 2, 2, 2, 15)
             else:
                 add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        if par_tortiecolours is not None:
+            for p_ in par_tortiecolours:
+                if p_ in Pelt.cream_colours:
+                    add_weight = (40, 20, 0, 0, 0, 10, 0, 5, 5, 2)
+                if p_ in Pelt.ginger_colours:
+                    add_weight = (20, 40, 0, 0, 0, 10, 0, 0, 5, 0)
+                elif p_ in Pelt.black_colours:
+                    add_weight = (0, 0, 40, 20, 2, 5, 5, 0, 0, 0)
+                elif p_ in Pelt.grey_colours:
+                    add_weight = (0, 0, 10, 40, 10, 2, 5, 0, 0, 1)            
+                elif p_ in Pelt.white_colours:
+                    add_weight = (2, 0, 5, 20, 40, 0, 5, 2, 0, 1)
+                elif p_ in Pelt.brown_colours:
+                    add_weight = (5, 10, 5, 2, 0, 35, 0, 5, 0, 1)
+                elif p_ in Pelt.blue_colours:
+                    add_weight = (0, 0, 20, 20, 20, 0, 25, 0, 2, 0)
+                elif p_ in Pelt.yellow_colours:
+                    add_weight = (10, 0, 0, 0, 10, 20, 0, 25, 0, 5)
+                elif p_ in Pelt.purple_colours:
+                    add_weight = (20, 20, 0, 0, 0, 0, 0, 5, 25, 0)
+                elif p_ in Pelt.green_colours:
+                    add_weight = (2, 0, 0, 1, 1, 1, 0, 5, 0, 35)
+                elif p_ in Pelt.pride_colours:
+                    add_weight = (1, 5, 1, 1, 1, 1, 5, 5, 5, 5)
+                elif p_ is None:
+                    add_weight = (40, 40, 40, 40, 40, 40, 2, 2, 2, 15)
+                else:
+                    add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
@@ -656,7 +1007,7 @@ class Pelt:
             # A quick check to make sure all the weights aren't 0
             if all([x == 0 for x in weights]):
                 weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-                
+
         will_have_pride = random.randint(0, 120)
         if will_have_pride == 0:
             chosen_pelt_color = choice(Pelt.pride_colours)
@@ -669,39 +1020,27 @@ class Pelt:
         #   PELT LENGTH
         # ------------------------------------------------------------------------------------------------------------#
        
-        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # Weights for each length. It goes (short, medium, long, wolf, scug, saint, snat, catfish, skele, bare)
+        weights = [0, 0, 0, 0]  # Weights for each length. It goes (short, medium, long, bare)
         for p_ in par_peltlength:
             if p_ == "short":
-                add_weight = (40, 20, 10, 0, 5, 0, 0, 5, 5, 1)
+                add_weight = (40, 20, 10, 1)
             elif p_ == "medium":
-                add_weight = (20, 40, 20, 0, 5, 5, 0, 5, 0, 1)
+                add_weight = (20, 40, 20, 0)
             elif p_ == "long":
-                add_weight = (10, 20, 40, 0, 0, 5, 0, 0, 0, 1)
-            elif p_ == "wolf":
-                add_weight = (0, 0, 0, 40, 0, 0, 0, 5, 5, 0)
-            elif p_ == "scug":
-                add_weight = (5, 5, 0, 0, 40, 20, 10, 0, 2, 0)
-            elif p_ == "saint":
-                add_weight = (0, 5, 5, 0, 20, 40, 10, 0, 2, 0)
-            elif p_ == "snat":
-                add_weight = (0, 0, 0, 0, 10, 10, 40, 0, 0, 0)
-            elif p_ == "catfish":
-                add_weight = (5, 5, 0, 5, 0, 0, 0, 40, 5, 1)
-            elif p_ == "skele":
-                add_weight = (5, 0, 0, 5, 2, 2, 0, 5, 40, 1)
+                add_weight = (10, 20, 40, 0)
             elif p_ == "bare":
-                add_weight = (1, 1, 1, 0, 0, 0, 0, 1, 1, 40)
+                add_weight = (1, 0, 0, 40)
             elif p_ is None:
-                add_weight = (20, 20, 20, 15, 10, 10, 10, 10, 5, 1)
+                add_weight = (20, 20, 20, 1)
             else:
-                add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
 
         # A quick check to make sure all the weights aren't 0
         if all([x == 0 for x in weights]):
-            weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            weights = [1, 1, 1, 1]
 
         chosen_pelt_length = random.choices(Pelt.pelt_length, weights=weights, k=1)[0]
 
@@ -967,9 +1306,7 @@ class Pelt:
         
         nonstandard_length = random.randint(0, 200)
         if nonstandard_length <= 1:
-            chosen_pelt_length = "bare"
-        elif nonstandard_length <= 20:
-            chosen_pelt_length = random.choice(Pelt.nonstandard_lengths)        
+            chosen_pelt_length = "bare"      
         else:    
             chosen_pelt_length = random.choice(Pelt.standard_lengths)
 
@@ -1044,76 +1381,16 @@ class Pelt:
             self.cat_sprites['senior'] = random.randint(30, 32)
             self.cat_sprites['para_young'] = random.randint(37, 38)
             self.cat_sprites['para_adult'] = random.randint(45, 46)
-        elif self.length == 'snat':
-            self.cat_sprites['newborn'] = 6
-            self.cat_sprites['kitten'] = random.randint(7, 8)
-            self.cat_sprites['adolescent'] = random.randint(15, 16)
-            self.cat_sprites['adult'] = choice([17, 24, 25])
-            self.cat_sprites['senior'] = random.choice([26, 33, 34])
-            self.cat_sprites['para_young'] = 42
-            self.cat_sprites['para_adult'] = 43
-            self.cat_sprites['sick_young'] = 51
-            self.cat_sprites['sick_adult'] = 44
         elif self.length == 'bare':
-            self.cat_sprites['newborn'] = 54
-            self.cat_sprites['kitten'] = random.randint(55, 56)
-            self.cat_sprites['adolescent'] = random.randint(63, 65)
-            self.cat_sprites['adult'] = random.randint(72, 74)
-            self.cat_sprites['senior'] = random.randint(81, 83)
-            self.cat_sprites['para_young'] = random.randint(90, 91)
-            self.cat_sprites['para_adult'] = random.choice([92, 99])
-            self.cat_sprites['sick_young'] = 101
-            self.cat_sprites['sick_adult'] = 100
-        elif self.length == 'skele':
-            self.cat_sprites['newborn'] = 57
-            self.cat_sprites['kitten'] = random.randint(58, 59)
-            self.cat_sprites['adolescent'] = random.randint(66, 68)
-            self.cat_sprites['adult'] = random.randint(75, 77)
-            self.cat_sprites['senior'] = random.randint(84, 86)
-            self.cat_sprites['para_young'] = 94
-            self.cat_sprites['para_adult'] = random.choice([95, 102])
-            self.cat_sprites['sick_young'] = 104
-            self.cat_sprites['sick_adult'] = 103
-        elif self.length == 'wolf':
-            self.cat_sprites['newborn'] = 107
-            self.cat_sprites['kitten'] = random.randint(60, 62)
-            self.cat_sprites['adolescent'] = random.randint(69, 71)
-            self.cat_sprites['adult'] = random.randint(78, 80)
-            self.cat_sprites['senior'] = random.randint(87, 89)
-            self.cat_sprites['para_young'] = 98
-            self.cat_sprites['para_adult'] = random.randint(96, 97)
-            self.cat_sprites['sick_young'] = 106
-            self.cat_sprites['sick_adult'] = 105
-        elif self.length == 'catfish':
-            self.cat_sprites['newborn'] = 155
-            self.cat_sprites['kitten'] = random.randint(108, 110)
-            self.cat_sprites['adolescent'] = random.randint(117, 119)
-            self.cat_sprites['adult'] = random.randint(126, 128)
-            self.cat_sprites['senior'] = random.randint(135, 137)
-            self.cat_sprites['para_young'] = 146
-            self.cat_sprites['para_adult'] = random.randint(144, 145)
-            self.cat_sprites['sick_young'] = 154
-            self.cat_sprites['sick_adult'] = 153
-        elif self.length == 'scug':
-            self.cat_sprites['newborn'] = random.randint(160, 161)
-            self.cat_sprites['kitten'] = random.randint(111, 113)
-            self.cat_sprites['adolescent'] = random.randint(120, 122)
-            self.cat_sprites['adult'] = random.randint(129, 131)
-            self.cat_sprites['senior'] = random.randint(138, 140)
-            self.cat_sprites['para_young'] = random.randint(147, 148)
-            self.cat_sprites['para_adult'] = random.randint(151, 152)
-            self.cat_sprites['sick_young'] = 159
-            self.cat_sprites['sick_adult'] = 158
-        elif self.length == 'saint':
-            self.cat_sprites['newborn'] = random.randint(160, 161)
-            self.cat_sprites['kitten'] = random.randint(114, 116)
-            self.cat_sprites['adolescent'] = random.randint(123, 125)
-            self.cat_sprites['adult'] = random.randint(132, 134)
-            self.cat_sprites['senior'] = random.randint(141, 143)
-            self.cat_sprites['para_young'] = random.randint(149, 150)
-            self.cat_sprites['para_adult'] = random.randint(156, 157)
-            self.cat_sprites['sick_young'] = 159
-            self.cat_sprites['sick_adult'] = 158
+            self.cat_sprites['newborn'] = 53
+            self.cat_sprites['kitten'] = random.randint(6, 8)
+            self.cat_sprites['adolescent'] = random.randint(15, 17)
+            self.cat_sprites['adult'] = random.randint(24, 26)
+            self.cat_sprites['senior'] = random.randint(33, 35)
+            self.cat_sprites['para_young'] = 42
+            self.cat_sprites['para_adult'] = random.choice([43, 44])
+            self.cat_sprites['sick_young'] = 52
+            self.cat_sprites['sick_adult'] = 51
         else:
             self.cat_sprites['kitten'] = random.randint(0, 2)
             self.cat_sprites['adolescent'] = random.randint(9, 11)
@@ -1126,14 +1403,44 @@ class Pelt:
         self.cat_sprites['senior adult'] = self.cat_sprites['adult']
 
     def init_skin(self, parents):
-        # skin chances
+
+        ##Redoing the Albinism/Melanism Generation for inheritance Purposes :(
         if not parents:
-            self.skin = choice(Pelt.skin_sprites)
+            self_specialty = random.randint(1, 120)
+            if self_specialty == 1:
+                self.skin = choice(["ALBINO", "ALBINOGILL"])
+                self.albino = choice(Pelt.albinism)
+            elif self_specialty == 2:
+                self.skin = choice(["MELANISTIC", "MELANISTICGILL"])
+                self.melanistic = choice(Pelt.melanism)
+            else:
+                # skin chances
+                self.skin = choice(Pelt.skin_sprites)
         else:
             for _par in parents:
+                self_specialty = random.randint(1, 120)                  
                 if _par.pelt.skin in ["ALBINO", "ALBINOGILL", "MELANISTIC", "MELANISTICGILL"]:
-                    _par.pelt.skin = choice(Pelt.skin_sprites)
-                self.skin = choice([i.pelt.skin for i in parents] + Pelt.skin_sprites)
+                    if random.randint(0,1):
+                        self.skin = choice([i.pelt.skin for i in parents])
+                        if self.skin in ["ALBINO", "ALBINOGILL"]:
+                            self.albino = choice(Pelt.albinism)
+                        elif self.skin in ["MELANISTIC", "MELANISTICGILL"]:
+                            self.melanistic = choice(Pelt.melanism)
+                    else:
+                        self.skin = choice([i.pelt.skin for i in parents] + Pelt.skin_sprites)
+                elif self_specialty == 1:
+                    self.skin = choice(["ALBINO", "ALBINOGILL"])
+                    self.albino = choice(Pelt.albinism)
+                elif self_specialty == 2:
+                    self.skin = choice(["MELANISTIC", "MELANISTICGILL"])
+                    self.melanistic = choice(Pelt.melanism)  
+                else:
+                    self.skin = choice([i.pelt.skin for i in parents] + Pelt.skin_sprites)
+
+            if self.skin in ["ALBINO", "ALBINOGILL"] and not self.albino:
+                self.skin = choice(Pelt.skin_sprites)  
+            elif self.skin in ["MELANISTIC", "MELANISTICGILL"] and not self.melanistic:    
+                self.skin = choice(Pelt.skin_sprites)  
         
         num = game.config["cat_generation"]["base_blep"]
         for _par in parents:
@@ -1145,7 +1452,6 @@ class Pelt:
         hit = random.randint(0, num)
         if hit == 0:
             self.blep = True
-            print("Blep!")
 
     def init_scars(self, age):
         if age == "newborn":
@@ -1161,7 +1467,8 @@ class Pelt:
         if scar_choice == 1:
             self.scars.append(choice([
                 choice(Pelt.scars1),
-                choice(Pelt.scars3)
+                choice(Pelt.scars3),
+                choice(Pelt.scars4)
             ]))
 
         if 'NOTAIL' in self.scars and 'HALFTAIL' in self.scars:
