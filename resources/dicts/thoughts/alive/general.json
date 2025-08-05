@@ -84,6 +84,66 @@
         ]
     },
     {
+        "id": "gen_danger_thoughts",
+        "dangerous_thoughts": true,
+        "thoughts": [
+            "Contemplates murdering a Clanmate",
+			"Is considering something horrible",
+			"Spoke casually of an accident on the Thunderpath",
+			"Spoke rudely about StarClan",
+			"Believes that the Code is too restrictive",
+			"Feels like StarClan has foresaken {PRONOUN/m_c/object}",
+			"Is in a bad place",
+			"Feels unreal",
+			"Saw a line of 1s and 0s",
+			"Believes that nothing in the world is real",
+			"Feels apart from {PRONOUN/m_c/poss} body",
+			"Wonders what it would feel like to bath in blood",
+			"Has an itch under {PRONOUN/m_c/poss} fur that won't leave",
+			"The blood won't come off",
+			"Stares for too long at a Clanmate",
+			"Prey tastes like ash in {PRONOUN/m_c/poss} mouth",
+			"Wonders why {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} still in c_n",
+			"Contemplates the Thunderpath",
+			"Wonders what it would be like to be a mouse",
+			"Wonders what been eaten feels like",
+			"Feels outside {PRONOUN/m_c/poss} paws",
+			"Doesn't want to see anybody",
+			"Goes for a walk in the dangerous areas of the territory",
+			"Believes that StarClan is calling {PRONOUN/m_c/object}",
+			"Thinks that {PRONOUN/m_c/subject} {VERB/m_c/are/is} clearly the one who should lead c_n",
+			"Wonders at how easy it is to murder",
+			"Definitely could get away with murder",
+			"Believes {PRONOUN/m_c/subject} could walk on clouds",
+			"Worries {PRONOUN/m_c/subject} might hurt someone",
+			"Doesn't feel safe around kits",
+			"Doesn't feel safe around others",
+			"Feels only half there",
+			"Keeps hearing whispers around {PRONOUN/m_c/object}",
+			"Feels like the territory is too big",
+			"Had a dream about StarClan",
+			"Wonders if it's bad death is a comfort",
+			"Ready to die for c_n",
+			"Ready to kill for c_n",
+			"Thinks {PRONOUN/m_c/subject} saw a double of {PRONOUN/m_c/self}",
+			"Wonders about having an evil counterpart",
+			"Feels like something is trying to take over",
+			"Is questioning the leader's reality",
+			"Thought c_n was gone",
+			"Dreams about setting the world on fire",
+			"{PRONOUN/m_c/poss} paws feel wrong",
+			"This isn't {PRONOUN/m_c/poss} body",
+			"Feels like an outsider",
+			"Wonders if anyone really cares about {PRONOUN/m_c/object}",
+			"Briefly contemplates death",
+			"Doesn't fear dying at all",
+			"Fears dying",
+			"Had a horrible nightmare about a forest",
+			"Feels disconnected from {PRONOUN/m_c/poss} body",
+			"Feels disconnected from c_n"
+        ]
+    },
+    {
         "id": "gen_alive_not_working_insteadinthemedden",
         "not_working": true,
         "thoughts": [
@@ -1528,26 +1588,6 @@
         ]
     },
     {
-        "id": "gen_formerly_a_rogue_apprentice",
-        "thoughts": [
-            "Discovers that {PRONOUN/m_c/poss} self-taught method is less effective",
-            "Wonders what {PRONOUN/m_c/subject} even {VERB/m_c/need/needs} this training method for",
-            "Brags about all the prey {PRONOUN/m_c/subject} caught when {PRONOUN/m_c/subject} {VERB/m_c/were/was} a rogue",
-            "Can't help but be intrigued by the Warrior Code",
-            "Slightly embellishes a story about {PRONOUN/m_c/poss} rogue days to other apprentices",
-            "Is trying to memorize the Warrior Code"
-        ],
-        "main_status_constraint": [
-            "apprentice",
-            "mediator apprentice",
-            "medicine cat apprentice",
-			"permaqueen apprentice"
-        ],
-        "backstory_constraint": {
-            "m_c": ["rogue1", "rogue2", "rogue3", "refugee4", "tragedy_survivor2"]
-        }
-    },
-    {
         "id": "shameless_apprentice",
         "thoughts": [
             "Was found napping in the warrior's den!"
@@ -2103,7 +2143,9 @@
             "Jumps as {PRONOUN/m_c/subject} {VERB/m_c/hit/hits} a large rock with {PRONOUN/m_c/poss} paw",
             "Is annoyed that a Clanmate keeps pitying {PRONOUN/m_c/object}",
             "Confused {PRONOUN/m_c/poss} Clanmates when {PRONOUN/m_c/subject} said it was a beautiful day",
-            "Wonders if {PRONOUN/m_c/poss} mental image of r_c matches real life"
+            "Wonders if {PRONOUN/m_c/poss} mental image of r_c matches real life",
+			"Wonders about asking for an assistance companion",
+			"Would like a really good stick"
         ],
         "perm_conditions": {
             "m_c": [
@@ -2665,7 +2707,9 @@
     {
         "id": "not_warrior_starwalker",
         "thoughts": [
-            "Wonders if {PRONOUN/m_c/subject} should be a warrior"
+            "Wonders if {PRONOUN/m_c/subject} should be a warrior",
+			"Thinks that the warriors are amazing",
+			"Daydreams about been a warrior"
         ],
         "main_status_constraint": [
             "kitten",
@@ -2708,7 +2752,9 @@
     {
         "id": "not_mediator_starwalker",
         "thoughts": [
-            "Wonders if {PRONOUN/m_c/subject} should be a mediator"
+            "Wonders if {PRONOUN/m_c/subject} should be a mediator",
+			"Is relieved {PRONOUN/m_c/subject} {VERB/m_c/are/is}n't a mediator",
+			"Thinks that been a mediator sounds exhausting"
         ],
         "main_status_constraint": [
             "kitten",
@@ -2742,7 +2788,7 @@
 			"mediator apprentice",
             "warrior",
             "medicine cat",
-			"mediator"
+			"mediator",
             "deputy",
             "leader",
             "elder"
@@ -2768,7 +2814,8 @@
             "Likes the smell of the medicine den",
             "Studies herb lore with the medicine cat",
             "Rolls in the medicine den's catmint",
-			"Is wondering what makes a prophecy clear to the medicine cats"
+			"Is wondering what makes a prophecy clear to the medicine cats",
+			"Appreciates the Medicine Cats care"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -2835,7 +2882,7 @@
         ],
         "perm_conditions": {
             "m_c": [
-                "constant roaming pain"
+                "fibro"
             ]
         },
         "random_status_constraint": [
@@ -3066,6 +3113,14 @@
 			"Wants r_c to know {PRONOUN/m_c/subject} enjoy the company",
 			"Is struggling to keep up with grooming",
 			"Wonders if there's something broken about {PRONOUN/m_c/object}",
+            "Is feeling lost",
+            "Is feeling emotionless",
+            "Is spending time with r_c when a sudden wave of sadness crashes over {PRONOUN/m_c/object}",
+            "Feels like crying",
+            "Lies to r_c and says that {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} fine",
+            "Looks up at the stars and asks them why life is so hard",
+            "Wonders what {PRONOUN/m_c/subject} did to deserve having a heavy soul",
+            "Is jealous of {PRONOUN/r_c/poss} Clanmates enjoying themselves",
 			"Is feeling frustrated with {PRONOUN/m_c/poss} own brain",
 			"Wants to cry but can't",
 			"Is telling {PRONOUN/m_c/self} sad things to try and cry",
@@ -3102,18 +3157,7 @@
             ]
         },
         "random_status_constraint": [
-            "kitten",
-            "apprentice",
-            "medicine cat apprentice",
-			"permaqueen apprentice",
-            "mediator apprentice",
-            "warrior",
-            "medicine cat",
-			"permaqueen",
-            "mediator",
-            "deputy",
-            "leader",
-            "elder"
+            "any"
         ],
         "random_living_status": [
             "living"
@@ -4357,6 +4401,50 @@
         }
     },
     {
+        "id": "gen_brain_fog",
+        "thoughts": [
+            "Calls to r_c only to forget why",
+			"Keeps losing track of {PRONOUN/m_c/poss} tasks",
+			"Walked back into the den for... something",
+			"Struggles to remember if {PRONOUN/m_c/subject} ate",
+			"Feels confused",
+			"Lost track of time",
+			"Keeps struggling to remain on task",
+			"Struggles to maintain a topic of conversation with r_c",
+			"Would prefer to still be sleeping",
+			"Longs for {PRONOUN/m_c/poss} nest",
+			"Is tempted to pretend the day is already over",
+			"Keeps getting distracted talking to r_c",
+			"Feels listless",
+			"Feels a bit unsteady",
+			"Can't remember if {PRONOUN/m_c/subject} finished {PRONOUN/m_c/poss} patrol properly",
+			"Has to ask r_c the same question multiple times",
+			"Feels uncertain of what {PRONOUN/m_c/subject} {VERB/m_c/are/is} doing",
+			"Head empty",
+			"Lost track of {PRONOUN/m_c/poss} thoughts",
+			"Feels like {PRONOUN/m_c/poss} head is foggy",
+			"Feels fuzzy today",
+			"Retraces {PRONOUN/m_c/poss} pawsteps",
+			"Repeats tasks under {PRONOUN/m_c/poss} breath missing one or two",
+			"No thoughts, head empty",
+			"No thoughts, just fog",
+			"Wonders why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here",
+			"Can't quite catch {PRONOUN/m_c/poss} thoughts",
+			"Feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} forgetting something important"
+        ],
+        "main_age_constraint": [
+            "adolescent",
+			"adult",
+			"young adult",
+			"senior adult"
+        ],
+        "has_injuries": {
+            "m_c": [
+                "brain fog"
+            ]
+        }
+    },
+    {
         "id": "gen_worldtired",
         "dangerous_thoughts": true,
         "thoughts": [
@@ -4365,7 +4453,7 @@
 			"Worries about the future",
 			"Considers walking out of the camp forever",
 			"Is thinking about death",
-			"Took more poppies than recommended",
+			"Took more poppy seeds than recommended",
 			"Wonders if {PRONOUN/m_c/subject} can 'accidentally' get injured on patrol",
 			"Considers the river",
 			"Considers the Thunderpath",

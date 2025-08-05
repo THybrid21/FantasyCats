@@ -875,7 +875,7 @@
 
     "mimic_warrior_EXAMPLE": {
       "tags": [],
-      "lead_trait": ["stubborn"],
+      "lead_trait": ["mimic"],
       "star_trait": [],
       "rank": ["warrior", "elder", "medicine cat", "mediator", "apprentice", "deputy"],
       "life_giving": [

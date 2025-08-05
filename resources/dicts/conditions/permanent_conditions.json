@@ -970,7 +970,7 @@
 		],
 		"herbs": []
 	},
-	"constant roaming pain": {
+	"fibro": {
 		"severity": "major",
 		"congenital": "always",
 		"moons_until": 4,
@@ -1014,7 +1014,7 @@
 				"chance": 20
 			},			
 			{
-				"name": "paralyzed",
+				"name": "intermittent paralysis",
 				"chance": 90
 			},
 			{
@@ -1028,6 +1028,10 @@
 			{
 				"name": "earache",
 				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 30
 			}
 	],
 	"herbs": [
@@ -1174,6 +1178,10 @@
 			{
 				"name": "world tired",
 				"chance": 120
+			},
+			{
+				"name": "brain fog",
+				"chance": 20
 			}
         ],
         "herbs": [
@@ -1642,6 +1650,10 @@
 			{
 				"name": "earache",
 				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 10
 			}
         ],
         "herbs": [
@@ -1869,6 +1881,10 @@
 			{
 				"name": "fainting",
 				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 5
 			}
         ],
         "herbs": [
@@ -2018,6 +2034,10 @@
 			{
 				"name": "earache",
 				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 20
 			}
         ],
         "herbs":[]
@@ -2162,6 +2182,10 @@
 			{
 				"name": "world tired",
 				"chance": 120
+			},
+			{
+				"name": "brain fog",
+				"chance": 15
 			}
         ],
         "herbs": [
@@ -2201,6 +2225,10 @@
 			{
 				"name": "overstimulation",
 				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 40
 			}
         ],
         "herbs": []
@@ -2334,6 +2362,10 @@
 			{
 				"name": "loyalty bind",
 				"chance": 25
+			},
+			{
+				"name": "brain fog",
+				"chance": 5
 			}
         ],
         "herbs": []
@@ -2357,7 +2389,166 @@
 			{
 				"name": "face blindness",
 				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 10
 			}
+        ],
+        "herbs": []
+    },
+    "intermittent paralysis": {
+        "severity": "major",
+        "congenital": "sometimes",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 60
+            },
+            {
+                "name": "torn pelt",
+                "chance": 30
+            },
+            {
+                "name": "sore",
+                "chance": 20
+            },
+            {
+                "name": "joint pain",
+                "chance": 20
+            }
+        ],
+        "herbs": [
+            "daisy",
+            "juniper",
+            "ragwort",
+            "marigold"
+        ]
+    },
+    "testosterone deficiency": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 50
+            }
+        ],
+        "herbs": []
+    },
+    "excess testosterone": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 50
+            }
+        ],
+        "herbs": []
+    },
+    "aneuploidy": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 20
+            }
+        ],
+        "herbs": []
+    },
+    "mosaicism": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 75
+            }
+        ],
+        "herbs": []
+    },
+    "chimerism": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 75
+            }
         ],
         "herbs": []
     },

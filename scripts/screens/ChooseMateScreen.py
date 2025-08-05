@@ -94,6 +94,9 @@ class ChooseMateScreen(Screens):
         # Loading screen
         self.work_thread = None
 
+        # for mate calculations
+        self.species_dict = game.species["species"]
+
     def handle_event(self, event):
         """Handles events."""
         if game.switches["window_open"]:
@@ -780,6 +783,8 @@ class ChooseMateScreen(Screens):
             + "\n"
             + self.the_cat.genderalign
             + "\n"
+            + self.the_cat.species
+            + "\n"
             + self.the_cat.personality.trait
         )
         if self.the_cat.mate:
@@ -959,9 +964,30 @@ class ChooseMateScreen(Screens):
         )
 
         if (
-            not game.clan.clan_settings["same sex birth"]
-            and self.the_cat.gender == self.selected_cat.gender
-        ) or self.the_cat.neutered or self.selected_cat.neutered:
+            (not game.clan.clan_settings["same sex birth"]
+            and self.the_cat.gender == self.selected_cat.gender)
+            or any("no_breed" in tag for tag in self.species_dict[self.the_cat.species])
+            or any("no_breed" in tag for tag in self.species_dict[self.selected_cat.species])
+            or (not game.clan.clan_settings["inter-species birth"]
+                and (
+                        any("exc_breed" in tag for tag in self.species_dict[self.the_cat.species])
+                        and self.the_cat.species != self.selected_cat.species
+                    )
+                    or (
+                        any("exc_breed" in tag for tag in self.species_dict[self.selected_cat.species])
+                        and self.the_cat.species != self.selected_cat.species
+                    )
+                    or (
+                        any("diff_breed" in tag for tag in self.species_dict[self.the_cat.species])
+                        and self.the_cat.species == self.selected_cat.species
+                    )
+                    or (
+                        any("diff_breed" in tag for tag in self.species_dict[self.selected_cat.species])
+                        and self.the_cat.species == self.selected_cat.species
+                    )
+                )
+            or (self.the_cat.neutered or self.selected_cat.neutered)  
+        ):
             self.selected_cat_elements["no kit warning"] = (
                 pygame_gui.elements.UITextBox(
                     f"<font pixel_size={int(22 / 1400 * screen_y)}> This pair can't have biological kittens </font>",
@@ -1162,10 +1188,34 @@ class ChooseMateScreen(Screens):
             and i.ID not in self.the_cat.mate
             and (not self.single_only or not i.mate)
             and (
-                not self.have_kits_only
-                or (not i.neutered and not self.the_cat.neutered)
-                or game.clan.clan_settings["same sex birth"]
-                or i.gender != self.the_cat.gender
+                    not self.have_kits_only
+                    or game.clan.clan_settings["same sex birth"]
+                    or i.gender != self.the_cat.gender
+                )
+            and (not i.neutered or self.the_cat.neutered)
+            and (
+                not any("no_breed" in tag for tag in self.species_dict[self.the_cat.species])
+                and (not any("no_breed" in tag for tag in self.species_dict[i.species]))
+                )
+            and (
+                game.clan.clan_settings["inter-species birth"]
+                or (
+                    ((
+                        not any("exc_breed" in tag for tag in self.species_dict[self.the_cat.species]) 
+                        and (not any("exc_breed" in tag for tag in self.species_dict[i.species]))                 
+                        or self.the_cat.species == i.species)
+                    and (
+                        not any("diff_breed" in tag for tag in self.species_dict[self.the_cat.species])
+                        and (not any("diff_breed" in tag for tag in self.species_dict[i.species]))
+                        or self.the_cat.species != i.species)
+                    or not self.have_kits_only
+                    )
+                )
+                and (
+                    not self.have_kits_only
+                    or game.clan.clan_settings["same sex birth"]
+                    or i.gender != self.the_cat.gender
+                )
             )
         ]
 

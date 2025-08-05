@@ -86,7 +86,7 @@
 		"Despite their bare pelt, m_c is just as playful as any kitten and doesn't see why it would make {PRONOUN/m_c/object} different.",
 		"There's a lot of shock as m_c's first week passes and {PRONOUN/m_c/poss} fur still hasn't properly grown in."
 	],
-	"constant roaming pain": [
+	"fibro": [
 		"After moons of m_c complaining of pains through {PRONOUN/m_c/poss} kithood, r_c sits back and softly explains that this pain will follow {PRONOUN/m_c/object} through {PRONOUN/m_c/poss} whole life and {PRONOUN/r_c/subject} can only offer temporary relief.",
 		"m_c insists that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not lying, {PRONOUN/m_c/subject} {VERB/m_c/have/has} pains all the time. It doesn't look like it'll ever go away.",
 		"Unlike other kittens m_c keeps {PRONOUN/m_c/self} mostly curled up in the nursery, constantly complaining of pains throughout {PRONOUN/m_c/poss} body.",
@@ -223,6 +223,36 @@
 		"When m_c's talking with {PRONOUN/m_c/poss} clanmates {PRONOUN/m_c/subject} increasingly {VERB/m_c/get/gets} frustrated when trying to visualise what they describe.",
 		"m_c has come to the realisation that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} thought blind."
 	],
+  "testosterone deficiency": [
+		"r_c reassures m_c's parent's worries, m_c's developing into a perfectly fine cat despite seeming more like a molly than a tom.",
+		"While checking the nursery the medicine cat identifies that m_c might be testosterone deficient.",
+		"It appears that m_c might be testosterone deficient, it's nothing to worry about.",
+		"m_c has noticed that {PRONOUN/m_c/subject} {VERB/m_c/are/is} more feminine than most toms around {PRONOUN/m_c/object}."
+  ],
+  "excess testosterone": [
+		"r_c has noticed that m_c doesn't look completely like a molly but assures {PRONOUN/m_c/object} it's nothing to worry about.",
+		"m_c has noticed that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} developing differently from the other kittens around {PRONOUN/m_c/object}.",
+		"As m_c gets bigger {PRONOUN/m_c/subject} {VERB/m_c/notice/notices} that {PRONOUN/m_c/subject} {VERB/m_c/does/do}n't really look like other mollies.",
+		"The older m_c gets the less like a molly {PRONOUN/m_c/subject} {VERB/m_c/look/looks}."
+  ],
+  "aneuploidy": [
+		"r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+		"While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex.",
+		"As m_c grows it becomes more and more obvious that {PRONOUN/m_c/subject} {VERB/m_c/are/is} clearly intersex.",
+		"m_c is proud to be recognized as intersex by the rest of the Clan."
+  ],
+  "mosaicism": [
+		"r_c talks with m_c as {PRONOUN/m_c/subject} {VERB/m_c/grow/grows} older about the possibility that m_c has mosaicism.",
+		"It's slowly becoming clear as m_c grows that {PRONOUN/m_c/subject} {VERB/m_c/have/has} some form of mosaicism.",
+		"m_c knows that {PRONOUN/m_c/poss} mosaicsm sets {PRONOUN/m_c/object} apart from {PRONOUN/m_c/poss} Clanmates.",
+		"Sometimes m_c wonders what {PRONOUN/m_c/subject} would have looked like if not for {PRONOUN/m_c/poss} mosaicism."
+  ],
+  "chimerism": [
+		"r_c has determined that m_c is possibly a chimera.",
+		"While routinely checking in with the medicine cat the topic of chimerism comes up regarding m_c.",
+		"m_c's discovered that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a chimera.",
+		"While sleeping m_c had a dream where {PRONOUN/m_c/subject} saw two beings becoming one."
+  ],
     "infertile": [
         "r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile.",
         "m_c has discovered that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} infertile.",

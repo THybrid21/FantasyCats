@@ -232,6 +232,10 @@
 		"Finally m_c is able to speak without tripping over {PRONOUN/m_c/poss} words.",
 		"m_c's word loss has ended."
 	],
+	"brain fog": [
+		"The clan is reassured by m_c that {PRONOUN/m_c/poss} brain fog has passed.",
+		"m_c is no longer experiencing brain fog."
+	],
 	"malnourished": [
         "m_c finally feels energized again. It seems the newly consistent meals have done {PRONOUN/m_c/object} good."
     ],

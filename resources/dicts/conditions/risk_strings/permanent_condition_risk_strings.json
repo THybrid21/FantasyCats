@@ -553,7 +553,7 @@
 			"m_c curls up in {PRONOUN/m_c/poss} nest, trembling and hoping desperately that things will calm down."
 		]
 	},
-	"constant roaming pain": {
+	"fibro": {
         "joint pain": [
             "r_c can only set aside a nest and some herbs as m_c comes in complaining of joint pain.",
 			"m_c's been complaing for days, {PRONOUN/m_c/poss} joints seem to be giving them particular trouble this moon.",
@@ -591,7 +591,7 @@
 			"To the distress of {PRONOUN/m_c/poss} denmates m_c has spent the day silently shaking, barely able to get out the information that {PRONOUN/m_c/poss} head hurts.",
 			"Barely coherent m_c swallows the herbs delivered to {PRONOUN/m_c/object} by {PRONOUN/m_c/poss} clanmates, hopefully this pain will pass soon."
 		],
-		"paralyzed": [
+		"intermittent paralysis": [
 			"When r_c comes over to check m_c after complaints of tingling in {PRONOUN/m_c/poss} legs, it's to inform {PRONOUN/m_c/object} it's because {PRONOUN/m_c/poss} legs aren't working properly anymore.",
 			"m_c has been complaining of tingling in {PRONOUN/m_c/poss} legs for days, one day it stops. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} relieved, until {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to move again.",
 			"When m_c attempts to get up from {PRONOUN/m_c/poss} bed {PRONOUN/m_c/subject} {VERB/m_c/let/lets} out a yowl of distress, it would appear that only half of {PRONOUN/m_c/object} has gotten up.",
@@ -611,6 +611,15 @@
 			"m_c complains to r_c about the sharp repeating pain within {PRONOUN/m_c/poss} ears.",
 			"m_c keeps shaking {PRONOUN/m_c/poss} head, uselessly trying to dull the pain coming from {PRONOUN/m_c/poss} ears.",
 			"m_c complains to a clanmate about the earache that's plaguing {PRONOUN/m_c/object} this moon."
+		],
+		"brain fog": [
+			"r_c listens as m_c rants about {PRONOUN/m_c/poss} herbs leading to brain fog.",
+			"With complaint m_c takes {PRONOUN/m_c/poss} herbs even if it leads to brain fog."
+		],
+		"paralysis episode": [
+			"In distress m_c calls to r_c hoping for an explanation for {PRONOUN/m_c/poss} hindpaws failure to respond, after a bit of talking it's determined that the paralysis should be only temporary.",
+			"While m_c admits that the break is nice, {PRONOUN/m_c/subject} {VERB/m_c/are/is} a little bit anxious about the fact {PRONOUN/m_c/poss} legs refuse to respond.",
+			"m_c complains about the fact that {PRONOUN/m_c/poss} legs haven't been responding as much as usual recently, to the point it apprears {PRONOUN/m_c/subject} {VERB/m_c/have/has} an episode of paralysis."
 		]
     },
 	"starwalker": {
@@ -758,6 +767,11 @@
 			"m_c tells r_c about {PRONOUN/m_c/poss} constant tiredness.",
 			"Even with the best night's sleep, m_c's just felt more and more tired.",
 			"Looking up at the den's ceiling m_c wonders if {PRONOUN/m_c/subject} will ever feel less tired."
+		],
+		"brain fog": [
+			"m_c comes into r_c's den looking very confused, admitting {PRONOUN/m_c/subject} {VERB/m_c/are/is} very tired and losing track of things.",
+			"m_c has some brain fog.",
+			"The clan has noticed that m_c seems distracted unable to hold onto {PRONOUN/m_c/poss} thoughts."
 		]
 	},
 	"anxiety": {
@@ -1184,6 +1198,10 @@
 		"earache": [
 			"m_c complains to r_c about an earache.",
 			"Frustrated m_c buries {PRONOUN/m_c/poss} head into the moss hoping it'll dull the pain in {PRONOUN/m_c/poss} ears."
+		],
+		"brain fog": [
+			"Listlessly m_c complains to r_c about the brain fog {PRONOUN/m_c/subject} {VERB/m_c/have/has}.",
+			"m_c feels as though {PRONOUN/m_c/poss} thoughts are wrapped in a deep fog."
 		]
 	},
 	"declawed": {
@@ -1383,6 +1401,11 @@
 			"While walking around the camp, m_c collapses for no clear reason. It looks like {PRONOUN/m_c/poss} brain shock is causing fainting.",
 			"m_c tried to stand up too fast and ended up fainting.",
 			"Due to m_c's lack of ability to properly care for {PRONOUN/m_c/self}, it appears missing drinks has lead to a fainting spell."		
+		],
+		"brain fog": [
+			"r_c gently sits with m_c while {PRONOUN/m_c/subject} {VERB/m_c/have/has} brain fog.",
+			"Due to m_c's brain shock {PRONOUN/m_c/subject} {VERB/m_c/are/is} a little bit more prone to brain fog.",
+			"m_c has a bit of brain fog."
 		]
 	},
 	"irritable bowels": {
@@ -1490,6 +1513,10 @@
 			"m_c complains to r_c that all the jumbled sounds around {PRONOUN/m_c/object} has left {PRONOUN/m_c/poss} ears aching.",
 			"Poor m_c is wincing around the camp, extra sensitive due to an earache.",
 			"While sounds are already hard for m_c to discern it's even harder when {PRONOUN/m_c/poss} ears have a sharp pain within."
+		],
+		"brain fog": [
+			"m_c wanders into the medicine den to talk to r_c only to struggle to explain why.",
+			"Frustrated m_c complains to a clanmate about {PRONOUN/m_c/poss} recent brain fog."
 		]
 	},
 	"constant nightmares": {
@@ -1600,6 +1627,10 @@
 			"m_c goes to r_c with questions on how to keep Dark Forest cats from stalking {PRONOUN/m_c/object}.",
 			"m_c's been seeing monsters in the early hours of the day recently, they loom over {PRONOUN/m_c/object} when {PRONOUN/m_c/subject} first {VERB/m_c/awake/awakes}.",
 			"No matter how much sleep m_c gets, {PRONOUN/m_c/subject} still {VERB/m_c/find/finds} {PRONOUN/m_c/self} unable to fully wake up properly and struggling against incomprehensible figures that grip {PRONOUN/m_c/object} painfully."
+		],
+		"brain fog": [
+			"r_c checks up on m_c where {PRONOUN/m_c/subject} {VERB/m_c/lie/lies} in the medicine den. {PRONOUN/m_c/poss/CAP} confused eyes tell r_c that brain fog has set in.",
+			"Due to m_c's exhaustion some fog has settled into {PRONOUN/m_c/poss} brain."
 		]
 	},
 	"face blindness": {
@@ -1622,6 +1653,10 @@
 		"overstimulation": [
 			"r_c has noticed that m_c seems more and more overwhelmed recently. It appears that perhaps m_c is experiencing some overstimulation.",
 			"m_c has been feeling incredibly overstimulated recently, even more incapable of recognizing {PRONOUN/m_c/poss} clanmates than usual."
+		],
+		"brain fog": [
+			"r_c finds m_c crying because {PRONOUN/m_c/poss} current brain fog is making {PRONOUN/m_c/poss} face blindness worse.",
+			"m_c finds {PRONOUN/m_c/self} more and more frustrated when {PRONOUN/m_c/subject} {VERB/m_c/have/has} brain fog compounding {PRONOUN/m_c/poss} face blindness."
 		]
 	},
 	"body biter": {
@@ -1727,12 +1762,57 @@
 			"m_c has found {PRONOUN/m_c/self} in something of a loyalty bind.",
 			"More often than not m_c feels like nobody in the Clan really has {PRONOUN/m_c/poss} trust.",
 			"m_c has been going out on patrols with one Clanmate... and one Clanmate only."
+		],
+		"brain fog": [
+			"r_c notes with concern that all of m_c's switching with {PRONOUN/m_c/poss} alters has led to some brain fog.",
+			"m_c feels rather fuzzy at the moment.",
+			"m_c is unable to fully say who {PRONOUN/m_c/subject} {VERB/m_c/are/is} at the moment due to brain fog."
 		]
 	},
 	"thought blind": {
 		"face blindness": [
 			"r_c has noticed that m_c seems to struggle with recognizing {PRONOUN/m_c/poss} Clanmates.",
 			"With more than a bit of frustration, m_c has to admit that {PRONOUN/m_c/subject} might be face blind alongside {PRONOUN/m_c/poss} thought blindness."
+		],
+		"brain fog": [
+			"m_c admits to r_c that {PRONOUN/m_c/poss} head feels a bit foggy.",
+			"It would appear to m_c's clanmates that {PRONOUN/m_c/subject} {VERB/m_c/have/has} gotten a bit of brain fog.",
+			"Listlessly m_c trots around the camp trying to sort out {PRONOUN/m_c/poss} thoughts."
+		]
+	},
+	"excess testosterone": {
+		"infertile": [
+			"r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile due to {PRONOUN/m_c/poss} excess testosterone.",
+			"m_c's tail tip tapped on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know what to think about being infertile.",
+			"m_c may never have kits by blood but that doesn't seem to bother {PRONOUN/m_c/object} too much."
+		]
+	},
+	"testosterone deficiency": {
+		"infertile": [
+			"r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile due to {PRONOUN/m_c/poss} testosterone deficiency.",
+			"m_c's tail tip tapped on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know what to think about being infertile.",
+			"m_c may never have kits by blood but that doesn't seem to bother {PRONOUN/m_c/object} too much."
+		]
+	},
+	"chimerism": {
+		"infertile": [
+			"r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile due to {PRONOUN/m_c/poss} chimerism.",
+			"m_c's tail tip tapped on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know what to think about being infertile.",
+			"m_c may never have kits by blood but that doesn't seem to bother {PRONOUN/m_c/object} too much."
+		]
+	},	
+	"mosaicism": {
+		"infertile": [
+			"r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile due to {PRONOUN/m_c/poss} mosaicism.",
+			"m_c's tail tip tapped on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know what to think about being infertile.",
+			"m_c may never have kits by blood but that doesn't seem to bother {PRONOUN/m_c/object} too much."
+		]
+	},
+	"aneuploidy": {
+		"infertile": [
+			"r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile due to {PRONOUN/m_c/poss} anueploidy.",
+			"m_c's tail tip tapped on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know what to think about being infertile.",
+			"m_c may never have kits by blood but that doesn't seem to bother {PRONOUN/m_c/object} too much."
 		]
 	},
 	"addiction": {

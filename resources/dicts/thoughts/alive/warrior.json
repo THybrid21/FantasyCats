@@ -120,7 +120,7 @@
             "Wants to be chosen as the new deputy",
 			"Is looking to r_c as an example for the whole clan",
 			"Wonders how r_c handles the stress",
-			"Wonders if r_c would choose them as their deputy when they become leader"
+			"Wonders if r_c would choose {PRONOUN/m_c/object} as {PRONOUN/r_c/poss} deputy when {PRONOUN/r_c/subject} {VERB/r_c/become/becomes} leader"
         ],
         "random_status_constraint": [
             "deputy"

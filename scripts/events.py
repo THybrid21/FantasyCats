@@ -128,15 +128,12 @@ class Events:
         if random.randint(1, rejoin_upperbound) == 1:
             self.handle_lost_cats_return()
 
-        #Check the TNR setting
-        tnr_setting = game.settings["tnr"]
-
         # Calling of "one_moon" functions.
         for cat in Cat.all_cats.copy().values():
             if not cat.outside or cat.dead:
                 self.one_moon_cat(cat)
             else:
-                self.one_moon_outside_cat(cat, tnr_setting)
+                self.one_moon_outside_cat(cat)
 
         # Adding in any potential lead den events that have been saved
         if "lead_den_interaction" in game.clan.clan_settings:
@@ -1004,7 +1001,7 @@ class Events:
             text = random.choice(text)
 
             if lost_cat.neutered and not lost_cat.neutered_message:
-                    text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/smell/smells} a bit different, though, and one of {PRONOUN/m_c/poss} ears is tagged."
+                    text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/smell/smells} a bit different and one of {PRONOUN/m_c/poss} ears is tagged."
                     lost_cat.neutered_message = True
 
             if additional_cats:
@@ -1116,7 +1113,7 @@ class Events:
                 game.cat_to_fade.append(cat.ID)
                 cat.set_faded()
 
-    def one_moon_outside_cat(self, cat, tnr_setting):
+    def one_moon_outside_cat(self, cat):
         """
         exiled cat events
         """
@@ -1128,7 +1125,7 @@ class Events:
         self.handle_outside_EX(cat)
 
         # tnr
-        if not cat.dead and cat.moons > 2 and tnr_setting and not cat.neutered and "infertile" not in cat.permanent_condition:
+        if not cat.dead and cat.moons > 2 and not cat.neutered and "infertile" not in cat.permanent_condition:
             neutered_this_moon = False
             if cat.status == "kittypet":
                 if cat.moons <= 12 and random.randint(1, 9) == 1:
@@ -1155,31 +1152,54 @@ class Events:
                     cat.neutered = True
                     neutered_this_moon = True
 
-        if not cat.dead and cat.pelt.scars not in ["LEFTTAG", "RIGHTTAG", "NOEAR"] and neutered_this_moon:
-            if cat.gender == "male":
-                if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
-                    cat.pelt.scars.append("RIGHTTAG")
-            elif cat.gender == "female":
-                if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
-                    cat.pelt.scars.append("LEFTTAG")                
-            else:
-                if "NORIGHTEAR" in cat.pelt.scars:
-                    cat.pelt.scars.append("LEFTTAG")                    
-                elif "NOLEFTEAR" in cat.pelt.scars:
-                    cat.pelt.scars.append("RIGHTTAG")  
-                elif "NOEAR" in cat.pelt.scars:
-                    skip = True
-                else:
-                    tag = random.choice(["RIGHTTAG", "LEFTTAG"])
-                    cat.pelt.scars.append(tag)     
-
-            if cat.pelt.scars in ["LEFTTAG", "RIGHTTAG"]:
+            if (
+                not cat.dead 
+                and cat.pelt.scars not in ["LEFTTAG", "RIGHTTAG", "NOEAR"] 
+                and neutered_this_moon
+            ):
                 if cat.status not in ["kittypet", "driven off"]:
-                     History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered.")
-                elif cat.status == "kittypet":
-                    History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.")
-            else:
-                History.add_scar(cat=cat, scar_text="m_c was neutered when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.")
+                    if cat.gender == "male":
+                        if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
+                            cat.pelt.scars.append("RIGHTTAG")
+                    elif cat.gender == "female":
+                        if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
+                            cat.pelt.scars.append("LEFTTAG")                
+                    else:
+                        if "NORIGHTEAR" in cat.pelt.scars:
+                            cat.pelt.scars.append("LEFTTAG")                    
+                        elif "NOLEFTEAR" in cat.pelt.scars:
+                            cat.pelt.scars.append("RIGHTTAG")  
+                        elif "NOEAR" in cat.pelt.scars:
+                            skip = True
+                        else:
+                            tag = random.choice(["RIGHTTAG", "LEFTTAG"])
+                            cat.pelt.scars.append(tag)     
+                else:
+                    if random.randint(1, 100) == 1:
+                        if cat.gender == "male":
+                            if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
+                                cat.pelt.scars.append("RIGHTTAG")
+                        elif cat.gender == "female":
+                            if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
+                                cat.pelt.scars.append("LEFTTAG")                
+                        else:
+                            if "NORIGHTEAR" in cat.pelt.scars:
+                                cat.pelt.scars.append("LEFTTAG")                    
+                            elif "NOLEFTEAR" in cat.pelt.scars:
+                                cat.pelt.scars.append("RIGHTTAG")  
+                            elif "NOEAR" in cat.pelt.scars:
+                                skip = True
+                            else:
+                                tag = random.choice(["RIGHTTAG", "LEFTTAG"])
+                                cat.pelt.scars.append(tag)                       
+
+                if cat.pelt.scars in ["LEFTTAG", "RIGHTTAG"]:
+                    if cat.status not in ["kittypet", "driven off"]:
+                         History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered.")
+                    elif cat.status == "kittypet":
+                        History.add_scar(cat=cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.")
+                else:
+                    History.add_scar(cat=cat, scar_text="m_c was neutered when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken to the cutter by twolegs.")
 
         # vaccinate TNR not required
         if not cat.dead and cat.moons > 1 and not cat.neutered and cat.status == "kittypet":
@@ -2380,8 +2400,12 @@ class Events:
         murder_capable = 7
         if cat.personality.stability < 6:
             murder_capable -= 3
+        elif cat.personality.stability > 6:
+            murder_capable += 3
         if cat.personality.lawfulness < 6:
             murder_capable -= 2
+        elif cat.personality.lawfulness < 6:
+            murder_capable += 2
         if cat.personality.aggression > 10:
             murder_capable -= 1
         elif cat.personality.aggression > 12:
@@ -2677,7 +2701,10 @@ class Events:
                     trans = cat.genderalign
                     cat.pronouns = [cat.default_pronouns[0].copy()]
 
-                text = f"{cat.name} has come to the conclusion that {trans} fully explains what they are."
+                text = f"{cat.name} has come to the conclusion that {trans}"
+                text += "fully explains what {PRONOUN/m_c/subject} {VERB/m_c/are/is}."
+                
+                text = event_text_adjust(Cat, text, main_cat=cat, clan=game.clan)
                 game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
                 return 
             else:
@@ -2700,7 +2727,9 @@ class Events:
                 trans = cat.genderalign
                 cat.pronouns = [cat.default_pronouns[0].copy()]
 
-            text = f"{cat.name} has realized that {gender} doesn't describe how they feel anymore - {trans} does it much better."
+            text = f"{cat.name} has realized that {gender} doesn't describe how "
+            text += "{PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore"
+            text += f"- {trans} does it much better."
 
             if not game.settings["they them default"]:
                 pronoun_text = " {PRONOUN/m_c/subject/CAP} now {VERB/m_c/use/uses} "
@@ -2716,15 +2745,16 @@ class Events:
                         pronoun_text = pronoun_text[:-1]
                 text += pronoun_text + "."
 
+            text = event_text_adjust(Cat, text, main_cat=cat, clan=game.clan)
             game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
             # game.misc_events_list.append(text)  
             return
 
         ##Untransing the kitties, :P
         if detransition_chance == 0:                
-            if cat.genderalign in ["trans male", "demiboy"]:
+            if cat.genderalign in ['trans male', 'demiboy']:
                 trans = "tom"
-            elif cat.genderalign in ["trans female", "demigirl"]:
+            elif cat.genderalign in ['trans female', 'demigirl']:
                 trans = "molly"
             else:
                 trans = cat.genderalign
@@ -2744,17 +2774,19 @@ class Events:
             else:
                 return
 
-            if cat.genderalign in ['male', 'demiboy']:
+            if cat.genderalign in ["male", "demiboy"]:
                 gender = 'a tom'
-            elif cat.genderalign in ['female', 'demigirl']:
+            elif cat.genderalign in ["female", "demigirl"]:
                 gender = 'a molly'
             else:
                 gender = cat.genderalign
 
-            text = f"{cat.name} has come to the conclusion that {trans} isn't accurate and in fact they were {gender} after all."
+            text = f"{cat.name} has come to the conclusion that {trans} isn't accurate and in fact" 
+            text += "{PRONOUN/m_c/subject} {VERB/m_c/were/was}"
+            text += f"{gender} after all."
 
             if not game.settings["they them default"]:
-                pronoun_text = " They now use "
+                pronoun_text = " {PRONOUN/m_c/subject/CAP} now {VERB/m_c/use/uses} "
                 if len(cat.pronouns) == 1:
                     if cat.pronouns[0].get("subject") == cat.pronouns[0].get("object"):
                         pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("poss")
@@ -2767,6 +2799,7 @@ class Events:
                         pronoun_text = pronoun_text[:-1]
                 text += pronoun_text + "."
 
+            text = event_text_adjust(Cat, text, main_cat=cat, clan=game.clan)
             game.cur_events_list.append(Single_Event(text, "misc", involved_cats))   
 
     def check_and_promote_leader(self):

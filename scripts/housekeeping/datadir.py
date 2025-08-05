@@ -31,10 +31,9 @@ def get_data_dir():
 
     from platformdirs import user_data_dir
 
-    return user_data_dir('ClanGen', 'FantasyCats')
     if get_version_info().is_dev():
         return user_data_dir('ClanGenBeta', 'FantasyCats')
-    return user_data_dir('ClanGen', 'ClanGen')
+    return user_data_dir('ClanGen', 'FantasyCats')
 
 
 def get_log_dir():

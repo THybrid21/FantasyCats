@@ -141,7 +141,7 @@ class Sprites:
                 'rosettecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours', 
                 'sokokecolours', 'agouticolours', 'maskedcolours', 
                 
-                'singlecolours', 'singlepride', 
+                'singlecolours', 
                 'shadersnewwhite', 'lightingnew',
                 'fademask', 'fadestarclan', 'fadedarkforest',
                 'symbols'
@@ -164,12 +164,6 @@ class Sprites:
             ]:
                 sprites.spritesheet(f"sprites/{f}/accessories/{x}.png", x)
 
-            for x in [
-                'backedcolours', 'dunnartcolours', 'ratcolours', 'smokecolours', 'lanterncolours', 'armoredcolours',
-                'backedpride', 'dunnartpride', 'ratpride', 'smokepride', 'lanternpride', 'armoredpride'
-            ]:
-                sprites.spritesheet(f"sprites/{f}/solid/{x}.png", x)
-
             # Line art
             self.make_group('lineart', (0, 0), f'lines{f}_')
             self.make_group('shadersnewwhite', (0, 0), f'shaders{f}_')
@@ -189,7 +183,7 @@ class Sprites:
                 ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 
                 'HEATHERBLUE', 'SUNLITICE'],
                 ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 
-                'SUNSET', 'GHOST', 'VOID']
+                'ORANGE', 'GHOST', 'VOID']
             ]
 
             for row, colors in enumerate(eye_colors):
@@ -304,8 +298,8 @@ class Sprites:
             ]
 
             color_types = [
-                'singlecolours', 'backedcolours', 'smokecolours', 'ratcolours', 'dunnartcolours', 'lanterncolours', 'armoredcolours'
-            ]
+                'singlecolours'
+            ] #, 'backedcolours', 'smokecolours', 'ratcolours', 'dunnartcolours', 'lanterncolours', 'armoredcolours'
 
             for row, colors in enumerate(color_categories):
                 for col, color in enumerate(colors):
@@ -319,8 +313,8 @@ class Sprites:
             ]
 
             pride_types = [
-                'singlepride', 'backedpride', 'smokepride', 'ratpride', 'dunnartpride', 'lanternpride', 'armoredpride'
-            ]
+                'singlepride'
+            ] #, 'backedpride', 'smokepride', 'ratpride', 'dunnartpride', 'lanternpride', 'armoredpride'
 
             for row, colors in enumerate(pride_categories):
                 for col, color in enumerate(colors):

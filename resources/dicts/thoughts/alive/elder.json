@@ -793,7 +793,7 @@
         ]
     },
     {
-        "id": "faceblind_elder",
+        "id": "old_faceblind_elder",
         "thoughts": [
             "Blames {PRONOUN/m_c/poss} lack of recognition on failing memory"
         ],
@@ -801,6 +801,26 @@
             "m_c": [
                 "face blindness"
             ]
-        }
+        },
+        "main_age_constraint": [
+            "senior adult",
+            "senior"
+        ]
+    },
+    {
+        "id": "old_brain_fog_elder",
+        "thoughts": [
+            "Feels more forgetful than usual",
+			"Head empty but for napping"
+        ],
+        "has_injuries": {
+            "m_c": [
+                "brain fog"
+            ]
+        },
+        "main_age_constraint": [
+            "senior adult",
+            "senior"
+        ]
     }
 ]

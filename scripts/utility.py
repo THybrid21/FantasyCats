@@ -790,40 +790,38 @@ def create_new_cat(
         if accessory:
             new_cat.pelt.accessory = accessory
 
-        # Run the TNR stuff
-        if game.settings["tnr"]:            
-            neutered_this_moon = False
-            if can_be_neutered and not is_parent:
-                if kittypet and randint(1, 5) > 2 and age > 2:
-                    new_cat.neutered = True
-                    new_cat.neutered_message = True
-                    neutered_this_moon = True
-                elif loner and randint(1, 7) == 1 and age > 2:
-                    new_cat.neutered = True
-                    new_cat.neutered_message = True
-                    neutered_this_moon = True
-                elif other_clan and randint(1, 12) == 1 and age > 2:
-                    new_cat.neutered = True
-                    new_cat.neutered_message = True
-                    neutered_this_moon = True
+        # Run the TNR stuff          
+        neutered_this_moon = False
+        if can_be_neutered and not is_parent:
+            if kittypet and randint(1, 5) > 2 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
+            elif loner and randint(1, 7) == 1 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
+            elif other_clan and randint(1, 12) == 1 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
 
-            if neutered_this_moon:
-                if loner or other_clan:
-                    History.add_scar(cat=new_cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered.")
-                elif kittypet:
-                    History.add_scar(cat=new_cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.")
+        if neutered_this_moon:
+            if loner or other_clan:
+                History.add_scar(cat=new_cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered.")
+            elif kittypet:
+                History.add_scar(cat=new_cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.")
 
-                if new_cat.gender == "male":
-                    new_cat.pelt.scars.append("RIGHTTAG")
-                elif new_cat.gender == "female":
-                    new_cat.pelt.scars.append("LEFTTAG")                
-                else:
-                    tag = choice(["RIGHTTAG", "LEFTTAG"])
-                    new_cat.pelt.scars.append(tag)  
+            if new_cat.gender == "male":
+                new_cat.pelt.scars.append("RIGHTTAG")
+            elif new_cat.gender == "female":
+                new_cat.pelt.scars.append("LEFTTAG")                
+            else:
+                tag = choice(["RIGHTTAG", "LEFTTAG"])
+                new_cat.pelt.scars.append(tag)  
 
         if kittypet and randint(1, 3) == 1 and age > 1 and not new_cat.neutered:
             new_cat.vaccinated = True
-
 
         # give apprentice aged cat a mentor
         if new_cat.age == "adolescent":
@@ -2441,7 +2439,7 @@ def generate_sprite(
     # generating the sprite
     try:
         # checks index of cat's species in the species list and uses matching folder's sprites
-        n = (game.species["species"].index(cat.species)) + 1 #add 1 because people don't count from 0 smh
+        n = (list(game.species["species"]).index(cat.species)) + 1 #add 1 because people don't count from 0 smh
 
         if cat.pelt.name not in ["Tortie", "Calico"]:
             new_sprite.blit(
@@ -2456,24 +2454,20 @@ def generate_sprite(
                 sprites.sprites[cat.pelt.tortiebase + f'{n}_' + cat.pelt.colour + cat_sprite],
                 (0, 0),
             )
-
+            
             # Create the patch image
             if cat.pelt.tortiepattern == "Single":
                 tortie_pattern = "SingleColour"
             else:
                 tortie_pattern = cat.pelt.tortiepattern
 
-            patches = sprites.sprites[
-                tortie_pattern + cat.pelt.tortiecolour + cat_sprite
-                ].copy()
-            patches.blit(
-                sprites.sprites["tortiemask" + f'{n}_' + cat.pelt.pattern + cat_sprite],
-                (0, 0),
-                special_flags=pygame.BLEND_RGBA_MULT,
-            )
-
-            # Add patches onto cat.
-            new_sprite.blit(patches, (0, 0))
+            for pattern in cat.pelt.pattern:
+                patches = sprites.sprites[
+                    tortie_pattern +  f'{n}_' + cat.pelt.tortiecolour + cat_sprite].copy()
+                patches.blit(sprites.sprites["tortiemask" + f'{n}_' + pattern + cat_sprite], (0, 0),
+                             special_flags=pygame.BLEND_RGBA_MULT)
+                # Add patches onto cat.
+                new_sprite.blit(patches, (0, 0))
 
         # TINTS
         # Multiply & Add with alpha does not work as you would expect - it just applies to the alpha of the
@@ -2489,27 +2483,23 @@ def generate_sprite(
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
 
         # draw white patches, points & vit
-        if cat.pelt.white_patches is not None:
-            white_patches = sprites.sprites[
-                "white" + f'{n}_' + cat.pelt.white_patches + cat_sprite
-                ].copy()
-
-            # Apply tint to white patches.
-            if (
-                    cat.pelt.white_patches_tint != "none"
-                    and cat.pelt.white_patches_tint
+        if cat.pelt.white_patches:
+            for white in cat.pelt.white_patches:
+                if (
+                    cat.pelt.white_patches_tint != "none" 
+                    and cat.pelt.white_patches_tint 
                     in sprites.white_patches_tints["tint_colours"]
-            ):
-                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                tint.fill(
-                    tuple(
-                        sprites.white_patches_tints["tint_colours"][
-                            cat.pelt.white_patches_tint
-                        ]
+                ):
+                    white_patch = sprites.sprites['white' + f'{n}_' + white + cat_sprite].copy()
+                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                    tint.fill(
+                        tuple(sprites.white_patches_tints["tint_colours"]
+                        [cat.pelt.white_patches_tint])
                     )
-                )
-                white_patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
-            new_sprite.blit(white_patches, (0, 0))
+                    white_patch.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+                    new_sprite.blit(white_patch, (0, 0))
+                else:
+                    new_sprite.blit(sprites.sprites['white' + f'{n}_' + white + cat_sprite], (0, 0))
 
         if cat.pelt.points:
             points = sprites.sprites["white" + f'{n}_' + cat.pelt.points + cat_sprite].copy()
@@ -2591,7 +2581,7 @@ def generate_sprite(
                 new_sprite.blit(sprites.sprites['scars' + f'{n}_' + scar + cat_sprite], (0, 0))
 
         # draw accessories(and blep)
-        if not acc_hidden:        
+        if not acc_hidden:
             if cat.pelt.accessory in cat.pelt.plant_accessories:
                 new_sprite.blit(
                     sprites.sprites["acc_herbs" + f'{n}_' + cat.pelt.accessory + cat_sprite],

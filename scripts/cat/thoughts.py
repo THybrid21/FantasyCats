@@ -98,6 +98,18 @@ class Thoughts():
         elif "random_status_constraint" in thought and not random_cat:
             pass
 
+        # Constraints for the species of the main cat
+        if "main_species_constraint" in thought:
+            if main_cat.species not in thought["main_species_constraint"] and "any" not in thought["main_species_constraint"]:
+                return False
+            
+        # Constraints for the species of the random cat
+        if "random_species_constraint" in thought and random_cat:
+            if random_cat.species not in thought["random_species_constraint"] and "any" not in thought["random_species_constraint"]:
+                return False
+        elif "random_species_constraint" in thought and not random_cat:
+            pass
+
         # main cat age constraint
         if "main_age_constraint" in thought:
             if main_cat.age not in thought["main_age_constraint"]:

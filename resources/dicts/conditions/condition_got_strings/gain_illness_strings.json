@@ -90,5 +90,9 @@
   ],
   "word loss": [
 	"m_c appears to be suffering from some word loss this moon."
+  ],
+  "brain fog": [
+   "m_c's experiencing brain fog.",
+   "m_c has brain fog."
   ]
 }

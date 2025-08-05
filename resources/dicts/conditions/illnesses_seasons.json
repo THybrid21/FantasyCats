@@ -13,7 +13,8 @@
 		"nest wetting": 3,
 		"stimming": 4,
 		"parroting": 3,
-		"word loss": 5
+		"word loss": 5,
+		"brain fog": 2
     },
     "Greenleaf":{
         "fleas": 2,
@@ -27,7 +28,8 @@
 		"ear buzzing": 5,
 		"nest wetting": 3,
 		"stimming": 2,
-		"parroting": 1
+		"parroting": 1,
+		"brain fog": 1
     },
     "Leaf-fall":{
         "fleas": 5,
@@ -43,7 +45,8 @@
 		"ear buzzing": 5,
 		"nest wetting": 2,
 		"stimming": 5,
-		"word loss": 4
+		"word loss": 4,
+		"brain fog": 5
     },
     "Leaf-bare":{
         "fleas": 4,
@@ -60,6 +63,7 @@
 		"ear buzzing": 5,
 		"nest wetting": 2,
 		"stimming": 5,
-		"word loss": 4
+		"word loss": 4,
+		"brain fog": 5
     }
 }

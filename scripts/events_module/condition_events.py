@@ -442,7 +442,7 @@ class Condition_Events:
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
-            "lasting grief", "persistent headaches", "albinism", "melanism", "sphynxism", "constant roaming pain", "heavy soul", "starwalker", "anxiety", 
+            "lasting grief", "persistent headaches", "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
             "obsessive mind", "comet spirit", "antisocial", "thunderous spirit", "otherworldly mind", "mute", "ongoing sleeplessness", 
             "echoing memory", "regressor", "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "constant fatigue", 
             "face blindness", "body biter", "chattering tongue", "plural soul",

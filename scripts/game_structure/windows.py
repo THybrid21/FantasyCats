@@ -1952,10 +1952,10 @@ class ChangeCatToggles(UIWindow):
             tool_tip = "The afterlife guide can never fade."
         elif self.the_cat.prevent_fading:
             box_type = "#checked_checkbox"
-            tool_tip = "Prevents cat from fading away after being dead for 202 moons."
+            tool_tip = "Prevents cat from fading away after being dead for 300 moons."
         else:
             box_type = "#unchecked_checkbox"
-            tool_tip = "Prevents cat from fading away after being dead for 202 moons."
+            tool_tip = "Prevents cat from fading away after being dead for 300 moons."
 
         # Fading
         self.checkboxes["prevent_fading"] = UIImageButton(

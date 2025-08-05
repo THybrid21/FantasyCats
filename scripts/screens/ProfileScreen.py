@@ -830,7 +830,7 @@ class ProfileScreen(Screens):
         output += "\n"
 
         # SPECIES
-        output += str(the_cat.species)
+        output += "species: " + str(the_cat.species)
         # NEWLINE ----------
         output += "\n"
 
@@ -871,15 +871,18 @@ class ProfileScreen(Screens):
         output += "\n"
 
         # PELT LENGTH
-        output += 'fur texture & length: ' + the_cat.pelt.texture + ' ' + the_cat.pelt.length
-        if the_cat.pelt.length == "catfish":
+        output += 'fur texture & length: ' + the_cat.pelt.texture 
+        if the_cat.species == "amphicat":
             output += ' scales'
-        elif the_cat.pelt.length == "skele":
+        elif the_cat.species == "skeleton":
             output += ' bones'
         elif the_cat.pelt.length == "bare":
-            output += ' skin'
+            if the_cat.pelt.texture != "sparse":
+                output += ' ' + the_cat.pelt.length + ' skin'
+            else:
+                output += ' fur'
         else:    
-            output += ' fur'
+            output += ' ' + the_cat.pelt.length + ' fur'
 
         if the_cat.pelt.tint != "none":
            output += "\n" 
@@ -992,7 +995,12 @@ class ProfileScreen(Screens):
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
         else:
-            output += the_cat.status
+            if the_cat.dead:
+                output += f"<font color='#7C97DD'>starclan {the_cat.status}</font>"
+            elif the_cat.df:
+                output += f"<font color='#370D15'>dark forest {the_cat.status}</font>"   
+            else:    
+                output += the_cat.status
 
         # NEWLINE ----------
         output += "\n"
@@ -2241,7 +2249,9 @@ class ProfileScreen(Screens):
         text_list.append(f"alter")
         text_list.append(f"{alter['gender']}")
         text_list.append(f"{alter['role']}")
-        if alter["other"] != "cat":
+        if alter["other"] != "core":
+            text_list.append(f"{alter['personality']}")
+        if alter["other"] != self.the_cat.species:
             text_list.append(alter["other"])
         text = "<br>".join(text_list)
         #print(text)

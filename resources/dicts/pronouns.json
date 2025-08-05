@@ -43,6 +43,14 @@
       "conju": 2
     },  
     {
+      "subject": "boe",
+      "object": "boem",
+      "poss": "boir",
+      "inposs": "boirs",
+      "self": "boemself",
+      "conju": 2
+    },  
+    {
       "subject": "co",
       "object": "co",
       "poss": "cos",

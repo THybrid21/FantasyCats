@@ -42,7 +42,7 @@
         ],
         "fading": [
             "Allow dead cats to fade away",
-            "After 202 moons, dead cats will be unloaded, and saved separately. No family relations will be lost.",
+            "After 300 moons, dead cats will be unloaded, and saved separately. No family relations will be lost.",
             false
         ],
         "save_faded_copy": [
@@ -90,9 +90,14 @@
             true
         ],
         "same sex birth": [
-            "Pregnancy ignores biology",
+            "Pregnancy ignores biological gender",
             "Allow all cats to get pregnant despite their gender and all couples to birth kittens despite same-sex status.",
             true
+        ],
+        "inter-species birth": [
+            "Pregnancy ignores biological species",
+            "Allows all species to breed with each other, irregardless of biology, this does not affect the no_breed tag.",
+            false
         ],
         "same sex adoption": [
             "Increase same-sex adoption",
@@ -101,7 +106,11 @@
             [
                 "same sex birth",
                 false
-            ]
+            ],
+			[
+				"inter-species birth",
+				false
+			]
         ],
 		"pregnancy turmoil": [
 			"Allow negative pregnancy events",

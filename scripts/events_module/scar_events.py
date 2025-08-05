@@ -206,10 +206,9 @@ class Scar_Events():
                 if specialty == "RIGHTTAG" and "NORIGHTEAR" in cat.pelt.scars:
                     return None, None    
 
-                if game.settings["tnr"]:
-                    if random.randint(0,1):
-                        cat.neutered = True
-                        History.add_scar(cat=cat, scar_text="m_c was neutered and tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.")
+                if random.randint(0,1):
+                    cat.neutered = True
+                    History.add_scar(cat=cat, scar_text="m_c was neutered and tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.")
                 else:
                     History.add_scar(cat=cat, scar_text="m_c was tagged on the ear by twolegs.")                        
 
