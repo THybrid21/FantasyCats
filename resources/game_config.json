@@ -477,3 +477,4 @@
 	"lock_season": false, 
 	"comment": "Forces the season to be locked at the Clan's starting_season"
 }
+"Looking for the game config? It's been moved to game_config.toml!"

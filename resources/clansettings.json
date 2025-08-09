@@ -32,8 +32,8 @@
         ],
         "showxp": [
             "Show exact XP and nutrition status",
-            "Will turn 'experience: proficient' into 'experience: proficient (151)'; and 'nutrition: full' into 'nutrition: full (70)'",
-            true
+            "Will turn 'experience: proficient' into 'experience: proficient (151)'; and 'nutrition: full' into 'nutrition: full (70)'.",
+            false
         ],
         "random med cat": [
             "Allow medicine cats to be randomly selected on patrol",
@@ -42,8 +42,8 @@
         ],
         "fading": [
             "Allow dead cats to fade away",
-            "After 300 moons, dead cats will be unloaded, and saved separately. No family relations will be lost.",
-            false
+            "After 202 moons, dead cats will be unloaded, and saved separately. No family relations will be lost.",
+            true
         ],
         "save_faded_copy": [
             "Save a complete copy of faded cats information",
@@ -57,8 +57,8 @@
         ],
         "moons and seasons": [
             "Show moons and seasons widget",
-            "Displays Clan age and current Clan season on several pages",
-            true
+            "Displays Clan age and current Clan season on several pages.",
+            false
         ]
     },
     "role": {
@@ -75,7 +75,7 @@
         "retirement": [
             "Cats will never retire due to a permanent condition",
             "When this setting is off, cats with permanent conditions will choose whether or not they want to retire.",
-            true
+            false
         ],
         "become_mediator": [
             "Allow warriors and elders to choose to become mediators",
@@ -87,12 +87,12 @@
         "affair": [
             "Allow cats to breed with cats that aren't their mates",
             "This will allow mated and unmated cats to have kits with other cats they are not mated with. This includes, but is not limited to, affairs/cheating.",
-            true
+            false
         ],
         "same sex birth": [
-            "Pregnancy ignores biological gender",
+            "Pregnancy ignores biology",
             "Allow all cats to get pregnant despite their gender and all couples to birth kittens despite same-sex status.",
-            true
+            false
         ],
         "inter-species birth": [
             "Pregnancy ignores biological species",
@@ -120,12 +120,12 @@
         "single parentage": [
             "Allow cats to have kittens with an unknown second parent",
             "Allow cats to have kittens with an unknown second biological parent. The cat will be listed as the only biological parent.",
-            true
+            false
         ],
         "romantic with former mentor": [
             "Allow romantic interactions with former mentors",
-            "Allows mentors and the cats they trained to be romantic after they become warriors",
-            false
+            "Allows mentors and the cats they trained to be romantic after they become warriors.",
+            true
         ],
         "second cousin mates": [
             "Allow second cousins to be mates and have romantic interactions",
@@ -215,7 +215,7 @@
         ],
         "sabotage other clans": [
             "Sabotaging Other Clans",
-            "Your mediator and warriors work together to undermine the other Clans. Only available if you have a working mediator. Selecting this will also allow you to choose which Clans you target.",
+            "Your mediators and warriors work together to undermine the other Clans. Only available if you have a working mediator. Selecting this will also allow you to choose which Clans you target.",
             false,
             "sabotage_focus",
             "#sabotage_focus_button"
