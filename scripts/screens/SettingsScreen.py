@@ -75,6 +75,7 @@ class SettingsScreen(Screens):
         "welcome": "",
         "ogs": "",
         "contribs": [],
+        "sps_text": "",
         "thanks": "",
         "music": "",
         "licensing": "",
@@ -84,9 +85,6 @@ class SettingsScreen(Screens):
     contributors_start = 0
     with open("resources/credits_text.json", "r", encoding="utf-8") as f:
         credits_text = ujson.load(f)
-    for string in credits_text["sps_text"]:
-        info_text += string
-        info_text += "<br>"
     for string in credits_text["text"]:
         if string == "{credits}":
             info_text_index = "ogs"
@@ -106,6 +104,8 @@ class SettingsScreen(Screens):
                 info_text[info_text_index].append(contributor)
                 tooltip_text.append(credits_text["contrib"][contributor])
             info_text_index = "thanks"
+        elif string == "{sps_text}":
+            info_text_index = "sps_text"            
         elif string == "{music}":
             info_text_index = "music"
         elif string == "{licensing}":

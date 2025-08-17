@@ -4,7 +4,12 @@
             "one": "single kitten",
             "many": "litter of %{count} kits"
         },
-        "pregnant_secret": "%{name} brought a %{insert} back to camp, but refused to talk about their origin.",
+        "stillborn_amount": {
+            "one": "single kitten",
+            "many": "number of %{count} kits"
+        },		
+        "pregnant_stillbirth": "%{name} informs the Clan a %{insert} failed to thrive.",
+		"pregnant_exact": "%(name) isn't entirely certain but thinks it will be a litter of %(count) kittens.",
         "leader_kitting_death": "died shortly after kitting",
         "leader_kitting_death_severe": "died after a harsh kitting",
         "kitting_death": "%{name} died while kitting.",
@@ -12,6 +17,10 @@
         "half_blood_kitting_thought": {
             "one": "Is glad that {PRONOUN/m_c/poss} kit is safe",
             "many": "Is glad that {PRONOUN/m_c/poss} kits are safe"
-        }
+        },
+        "half_blood_kitting_live_thought": {
+            "one": "Is wondering what {PRONOUN/m_c/poss} kit is doing",
+            "many": "Is wondering what {PRONOUN/m_c/poss} kits are doing"
+        }		
     }
 }

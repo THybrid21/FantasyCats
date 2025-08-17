@@ -196,7 +196,11 @@
             {
                 "name": "phantom pain",
                 "chance": 10
-            }
+            },
+			{
+				"name": "dizziness",
+				"chance": 45
+			}
         ],
         "herbs": {
             "1": [
@@ -232,7 +236,7 @@
         }
     },
     "paralyzed": {
-        "severity": "severe",
+        "severity": "major",
         "congenital": "sometimes",
         "moons_until": 0,
         "mortality": {
@@ -276,6 +280,60 @@
             "3": []
         }
     },
+    "intermittent paralysis": {
+        "severity": "major",
+        "congenital": "sometimes",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 60
+            },
+            {
+                "name": "torn pelt",
+                "chance": 30
+            },
+            {
+                "name": "sore",
+                "chance": 20
+            },
+            {
+                "name": "joint pain",
+                "chance": 20
+            },
+			{
+				"name": "paralysis episode",
+				"chance": 10
+			},
+			{
+				"name": "paralyzed",
+				"chance": 90
+			}
+        ],
+        "herbs": {
+            "1": [
+            "daisy",
+            "juniper",
+            "ragwort",
+            "marigold"
+        ],
+            "2": [
+            "poppy"			
+			],
+            "3": []
+        }
+    },
     "raspy lungs": {
         "severity": "minor",
         "congenital": "sometimes",
@@ -295,7 +353,11 @@
             {
                 "name": "whitecough",
                 "chance": 20
-            }
+            },
+			{
+				"name": "greencough",
+				"chance": 50
+			}
         ],
         "herbs": {
             "1": [
@@ -311,32 +373,15 @@
         "congenital": "sometimes",
         "moons_until": 1,
         "mortality": {
-            "newborn": 10,
-            "kitten": 10,
-            "adolescent": 40,
-            "young adult": 75,
-            "adult": 65,
-            "senior adult": 40,
-            "senior": 10
+            "newborn": 25,
+            "kitten": 25,
+            "adolescent": 55,
+            "young adult": 90,
+            "adult": 80,
+            "senior adult": 55,
+            "senior": 25
         },
-        "illness_infectiousness": [
-            {
-                "name": "running nose",
-                "chance": 4
-            },
-            {
-                "name": "whitecough",
-                "chance": 3
-            },
-            {
-                "name": "greencough",
-                "chance": 5
-            },
-            {
-                "name": "yellowcough",
-                "chance": 4
-            }
-        ],
+        "illness_infectiousness": [],
         "risks": [
             {
                 "name": "running nose",
@@ -349,7 +394,39 @@
             {
                 "name": "redcough",
                 "chance": 60
-            }
+            },
+			{
+				"name": "paralyzed",
+				"chance": 50
+			},
+			{
+				"name": "headache",
+				"chance": 10
+			},
+			{
+				"name": "seizure",
+				"chance": 50
+			},
+			{
+				"name": "spasms",
+				"chance": 30
+			},
+			{
+				"name": "dizziness",
+				"chance": 10
+			},
+			{
+				"name": "rash",
+				"chance": 10
+			},
+			{
+				"name": "fainting",
+				"chance": 20
+			},
+			{
+				"name": "nosebleed",
+				"chance": 50
+			}
         ],
         "herbs": {
             "1": [
@@ -373,21 +450,7 @@
             "senior adult": 65,
             "senior": 75
         },
-        "illness_infectiousness": [
-
-            {
-                "name": "whitecough",
-                "chance": 3
-            },
-            {
-                "name": "greencough",
-                "chance": 5
-            },
-            {
-                "name": "yellowcough",
-                "chance": 4
-            }
-        ],
+        "illness_infectiousness": [],
         "risks": [
             {
                 "name": "seizure",
@@ -435,36 +498,6 @@
             "3": []
         }
     },
-    "absent": {
-        "severity": "major",
-        "congenital": "never",
-        "moons_until": 95,
-        "mortality": {
-            "newborn": 0,
-            "kitten": 0,
-            "adolescent": 0,
-            "young adult": 0,
-            "adult": 0,
-            "senior adult": 0,
-            "senior": 0
-        },
-        "illness_infectiousness": [],
-        "risks": [
-            {
-                "name": "joint pain",
-                "chance": 10
-            },
-            {
-                "name": "torn pelt",
-                "chance": 50
-            }
-        ],
-        "herbs": {
-            "1": [],
-            "2": [],
-            "3": []
-        }
-    },
     "one bad eye": {
         "severity": "major",
         "congenital": "sometimes",
@@ -480,10 +513,15 @@
         },
         "illness_infectiousness": [
         ],
-        "risks": [{
+        "risks": [
+			{
                 "name": "failing eyesight",
                 "chance": 80
-            }
+            },
+			{
+				"name": "headache",
+				"chance": 25
+			}
         ],
         "herbs": {
             "1": [],
@@ -510,7 +548,15 @@
             {
                 "name": "blind",
                 "chance": 50
-            }
+            },
+			{
+				"name": "headache",
+				"chance": 25
+			},
+			{
+				"name": "severe headache",
+				"chance": 30
+			}
         ],
         "herbs": {
             "1": [],
@@ -537,7 +583,23 @@
             {
                 "name": "deaf",
                 "chance": 80
-            }
+            },
+			{
+				"name": "verbal shutdown",
+				"chance": 20
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 15
+			},
+			{
+				"name": "dizziness",
+				"chance": 45
+			},
+			{
+				"name": "earache",
+				"chance": 30
+			}
         ],
         "herbs": {
             "1": [],
@@ -561,6 +623,18 @@
         "illness_infectiousness": [
         ],
         "risks": [
+			{
+				"name": "mute",
+				"chance": 120
+			},
+			{
+				"name": "verbal shutdown",
+				"chance": 20
+			},
+			{
+				"name": "word loss",
+				"chance": 20
+			}
         ],
         "herbs": {
             "1": [],
@@ -620,7 +694,19 @@
             {
                 "name": "seizure",
                 "chance": 10
-            }
+            },
+            {
+                "name": "absence",
+                "chance": 10
+            },			
+            {
+                "name": "spasms",
+                "chance": 10
+            },
+			{
+				"name": "fainting",
+				"chance": 15
+			}
         ],
         "herbs": {
             "1": [
@@ -650,7 +736,23 @@
             {
                 "name": "running nose",
                 "chance": 20
-            }
+            },
+			{
+				"name": "rash",
+				"chance": 45
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			},
+			{
+				"name": "fainting",
+				"chance": 90
+			},
+			{
+				"name": "nosebleed",
+				"chance": 45
+			}
         ],
         "herbs": {
             "1": [],
@@ -677,6 +779,26 @@
             {
                 "name": "headache",
                 "chance": 20
+            },
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			},
+			{
+				"name": "dizziness",
+				"chance": 15
+			},
+			{
+				"name": "fainting",
+				"chance": 50
+			},
+			{
+				"name": "earache",
+				"chance": 25
+			},
+            {
+                "name": "nausea",
+                "chance": 30
             }
         ],
         "herbs": {
@@ -702,9 +824,37 @@
         ],
         "risks": [
             {
-                "name": "constant nightmares",
+				"name": "shock",
+				"chance": 15
+			},
+			{
+                "name": "nightmares",
                 "chance": 20
-            }
+            },
+			{
+				"name": "otherspace",
+				"chance": 75
+			},
+			{
+				"name": "anxiety attack",
+				"chance": 20
+			},
+			{
+				"name": "paranoia",
+				"chance": 20
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 45
+			},
+			{
+				"name": "fatigue",
+				"chance": 15
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			}
         ],
         "herbs": {
             "1": [
@@ -716,6 +866,69 @@
             "3": []
         }
     },
+    "echoing shock": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+				"name": "shock",
+				"chance": 15
+			},
+			{
+                "name": "sleeplessness",
+                "chance": 20
+            },
+			{
+				"name": "kittenspace",
+				"chance": 75
+			},
+			{
+				"name": "otherspace",
+				"chance": 75
+			},
+			{
+				"name": "paranoia",
+				"chance": 20
+			},
+			{
+				"name": "lethargy",
+				"chance": 25
+			},
+			{
+				"name": "dizziness",
+				"chance": 20
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 45
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			}
+        ],
+        "herbs": {
+			"1": [
+            "thyme",
+            "juniper",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}
+    },	
     "lasting grief": {
         "severity": "minor",
         "congenital": "never",
@@ -735,7 +948,19 @@
             {
                 "name": "grief stricken",
                 "chance": 50
-            }
+            },
+			{
+				"name": "heavy soul",
+				"chance": 120
+			},
+			{
+				"name": "fatigue",
+				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			}
         ],
         "herbs": {
             "1": [
@@ -769,7 +994,15 @@
             {
                 "name": "headache",
                 "chance": 20
-            }
+            },
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			},
+			{
+				"name": "fainting",
+				"chance": 45
+			}
         ],
         "herbs": {
             "1": [
@@ -779,5 +1012,1925 @@
             "2": [],
             "3": []
         }
+    },
+	"vacant": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 95,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [
+            {
+                "name": "joint pain",
+                "chance": 10
+            },
+            {
+                "name": "torn pelt",
+                "chance": 50
+            }
+        ],
+        "herbs": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+	"albinism": {
+		"severity": "major",
+		"congenital": "genetic",
+		"moons_until": 1,
+		"mortality": {
+			"newborn": 35,
+			"kitten": 35,
+			"adolescent": 45,
+			"young adult": 60,
+			"adult": 60,
+			"senior adult": 60,
+			"senior": 50
+		},
+		"illness_infectiousness": [
+		],
+		"risks": [
+			{
+				"name": "sunblindness",
+				"chance": 15
+			},
+			{
+				"name": "partial hearing loss",
+				"chance": 30
+			},
+			{
+				"name": "wasting disease",
+				"chance": 50
+			},
+			{
+				"name": "headache",
+				"chance": 15
+			},
+			{
+				"name": "sunburn",
+				"chance": 25
+			},
+			{
+				"name": "running nose",
+				"chance": 15
+			},
+			{
+				"name": "overstimulation",
+				"chance": 25
+			},
+			{
+				"name": "earache",
+				"chance": 45
+			}
+		],
+        "herbs": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+	},
+	"melanism": {
+		"severity": "minor",
+		"congenital": "genetic",
+		"moons_until": 1,
+		"mortality": {
+			"newborn": 90,
+			"kitten": 90,
+			"adolescent": 0,
+			"young adult": 0,
+			"adult": 0,
+			"senior adult": 0,
+			"senior": 0
+		},
+		"illness_infectiousness": [
+		],
+		"risks": [
+			{
+				"name": "sunblindness",
+				"chance": 45
+			},
+			{
+				"name": "heat stroke",
+				"chance": 75
+			},
+			{
+				"name": "heat exhaustion",
+				"chance": 25
+			},
+			{
+				"name": "running nose",
+				"chance": 15
+			},
+			{
+				"name": "understimulation",
+				"chance": 25
+			},
+			{
+				"name": "fatigue",
+				"chance": 45
+			}
+		],
+        "herbs": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+	},
+	"sphynxism": {
+		"severity": "major",
+		"congenital": "genetic",
+		"moons_until": 0,
+		"mortality": {
+			"newborn": 25,
+			"kitten": 25,
+			"adolescent": 30,
+			"young adult": 45,
+			"adult": 50,
+			"senior adult": 50,
+			"senior": 45
+		},
+		"illness_infectiousness": [
+		],
+		"risks": [
+			{
+				"name": "absence",
+				"chance": 45
+			},
+			{
+				"name": "sunblindness",
+				"chance": 45
+			},
+			{
+				"name": "headache",
+				"chance": 25
+			},
+			{
+				"name": "heat exhaustion",
+				"chance": 25
+			},
+			{
+				"name": "sunburn",
+				"chance": 15
+			},
+			{
+				"name": "severe sunburn",
+				"chance": 45
+			},
+			{
+				"name": "greencough",
+				"chance": 50
+			},
+			{
+				"name": "overstimulation",
+				"chance": 25
+			}
+		],
+        "herbs": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+	},
+	"fibro": {
+		"severity": "major",
+		"congenital": "always",
+		"moons_until": 4,
+		"mortality": {
+			"newborn": 0,
+			"kitten": 0,
+			"adolescent": 0,
+			"young adult": 0,
+			"adult": 0,
+			"senior adult": 0,
+			"senior": 0
+		},
+		"illness_infectiousness": [],
+		"risks": [
+			{
+				"name": "joint pain",
+				"chance": 30
+			},
+			{
+				"name": "running nose",
+				"chance": 50
+			},
+			{
+				"name": "stomachache",
+				"chance": 50
+			},
+			{
+                "name": "sore",
+                "chance": 10
+            },
+			{
+				"name": "acute pain",
+				"chance": 30
+			},
+			{
+				"name": "headache",
+				"chance": 10
+			},
+			{
+				"name": "severe headache",
+				"chance": 20
+			},			
+			{
+				"name": "intermittent paralysis",
+				"chance": 90
+			},
+			{
+				"name": "rash",
+				"chance": 20
+			},
+			{
+				"name": "fatigue",
+				"chance": 25
+			},
+			{
+				"name": "earache",
+				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 30
+			},
+			{
+				"name": "paralysis episode",
+				"chance": 70
+			}
+	],
+		"herbs": {
+			"1": [
+			"poppy",
+			"raspberry",
+			"juniper",
+			"ragwort",
+			"thyme",
+			"catmint"
+			],
+			"2": [],
+			"3": []
+		}
+	},
+    "starwalker": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 4,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "hyperfixation",
+                "chance": 10
+            },
+			{
+				"name": "stimming",
+				"chance": 5
+			},
+            {
+                "name": "verbal shutdown",
+                "chance": 40
+            },
+			{
+				"name": "anxiety attack",
+				"chance": 30
+			},
+			{
+				"name": "seasonal lethargy",
+				"chance": 30
+			},
+			{
+				"name": "absence",
+				"chance": 40
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 30
+			},
+			{
+				"name": "kittenspace",
+				"chance": 30
+			},
+			{
+				"name": "otherspace",
+				"chance": 40
+			},
+			{
+				"name": "sunblindness",
+				"chance": 30
+			},
+			{
+				"name": "overstimulation",
+				"chance": 35
+			},
+			{
+				"name": "understimulation",
+				"chance": 35
+			},
+			{
+				"name": "tics",
+				"chance": 35
+			},
+			{
+				"name": "parroting",
+				"chance": 10
+			},
+			{
+				"name": "word loss",
+				"chance": 30
+			},
+            {
+                "name": "nausea",
+                "chance": 20
+            },
+			{
+				"name": "addiction",
+				"chance": 200
+			}
+			
+        ],
+        "herbs": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+	"heavy soul": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "grief stricken",
+                "chance": 40
+            },
+            {
+                "name": "seasonal lethargy",
+                "chance": 30
+            },
+			{
+				"name": "lethargy",
+				"chance": 15
+			},
+			{
+				"name": "anxiety attack",
+				"chance": 40
+			},
+			{
+				"name": "absence",
+				"chance": 25
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 45
+			},
+			{
+				"name": "fatigue",
+				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "brain fog",
+				"chance": 20
+			}
+        ],
+        "herbs": {
+			"1": [
+            "thyme",
+            "juniper",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "anxiety": {
+        "severity": "major",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "anxiety attack",
+                "chance": 30
+            },
+			{
+				"name": "panic attack",
+				"chance": 30
+			},
+			{
+				"name": "paranoia",
+				"chance": 90
+			},
+            {
+                "name": "indecision",
+                "chance": 20
+            },
+			{
+				"name": "impulsivity",
+				"chance": 20
+			},			
+			{
+				"name": "vivid daydreams",
+				"chance": 60
+			},
+			{
+				"name": "hallucinations",
+				"chance": 120
+			},
+			{
+				"name": "shock",
+				"chance": 60
+			},
+			{
+				"name": "otherspace",
+				"chance": 40
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 45
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			}
+        ],
+        "herbs": {
+			"1": [
+			"chamomile",
+			"juniper",
+			"betony"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "obsessive mind": {
+        "severity": "major",
+        "congenital": "always",
+        "moons_until": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "anxiety attack",
+                "chance": 30
+            },
+            {
+                "name": "indecision",
+                "chance": 20
+            }, 
+            {
+                "name": "compulsions",
+                "chance": 10
+            },
+            {
+                "name": "hyperfixation",
+                "chance": 20
+            },
+            {
+                "name": "paranoia",
+                "chance": 90
+            },
+			{
+				"name": "tics",
+				"chance": 10
+			},
+			{
+				"name": "plural soul",
+				"chance": 120
+			},
+			{
+				"name": "word loss",
+				"chance": 25
+			},
+			{
+				"name": "parroting",
+				"chance": 45
+			}
+       ],
+        "herbs": {
+			"1": [
+			"chamomile",
+			"juniper",
+			"betony"
+			],
+			"2": [],
+			"3": []
+		}
+    },	
+    "comet spirit": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+			{
+				"name": "zoomies",
+				"chance": 25
+			},
+			{
+				"name": "absence",
+				"chance": 25
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 80
+			},
+			{
+				"name": "hyperfixation",
+				"chance": 25
+			},
+            {
+                "name": "indecision",
+                "chance": 20
+            },
+            {
+                "name": "impulsivity",
+                "chance": 15
+            },
+			{
+				"name": "understimulation",
+				"chance": 45
+			},
+			{
+				"name": "stimming",
+				"chance": 25
+			},
+			{
+				"name": "word loss",
+				"chance": 10
+			},
+			{
+				"name": "parroting",
+				"chance": 20
+			},
+			{
+				"name": "tics",
+				"chance": 45
+			}
+        ],
+        "herbs":{
+			"1": [
+            "poppy",
+            "juniper",
+            "chamomile",
+			"rosemary"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "antisocial": {
+		"severity": "minor",
+		"congenital": "always",
+		"moons_until": 2,
+		"mortality": {
+			"newborn": 0,
+			"kitten": 0,
+			"adolescent": 0,
+			"young adult": 0,
+			"adult": 0,
+			"senior adult": 0,
+			"senior": 0
+		},
+		"illness_infectiousness":[
+		],
+		"risks": [
+			{
+				"name": "impulsivity",
+				"chance": 15
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 90
+			},
+			{
+				"name": "overstimulation",
+				"chance": 50
+			},
+			{
+				"name": "shock",
+				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "addiction",
+				"chance": 120
+			},
+			{
+				"name": "loyalty bind",
+				"chance": 50
+			}
+		],
+        "herbs":{
+			"1": [
+            "poppy",
+            "juniper",
+            "chamomile"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "thunderous spirit": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+            {
+                "name": "loyalty bind",
+                "chance": 10
+            },
+            {
+                "name": "stark cloud",
+                "chance": 10
+            },
+            {
+                "name": "kittenspace",
+                "chance": 30
+            },
+            {
+                "name": "otherspace",
+                "chance": 30
+            },
+            {
+                "name": "addiction",
+                "chance": 90
+            },
+			{
+				"name": "impulsivity",
+				"chance": 25
+			},
+			{
+				"name": "hyperfixation",
+				"chance": 30
+			}
+
+        ],
+        "herbs":{
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },		
+    "otherworldly mind": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+            {
+                "name": "kittenspace",
+                "chance": 30
+            },
+            {
+                "name": "otherspace",
+                "chance": 30
+            },
+            {
+                "name": "regressor",
+                "chance": 120
+            },
+            {
+                "name": "echoing memory",
+                "chance": 70
+            },
+            {
+                "name": "plural soul",
+                "chance": 70
+            },
+            {
+				"name": "parroting",
+				"chance": 10
+			},
+			{
+				"name": "hallucinations",
+				"chance": 25
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 10
+			},
+			{
+				"name": "tics",
+				"chance": 45
+			},
+			{
+				"name": "compulsions",
+				"chance": 45
+			},
+			{
+				"name": "addiction",
+				"chance": 120
+			}
+        ],
+        "herbs":{
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },		
+    "mute": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 4,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[],
+        "risks": [],
+        "herbs":{
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "ongoing sleeplessness": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 200,
+            "kitten": 200,
+            "adolescent": 200,
+            "young adult": 200,
+            "adult": 200,
+            "senior adult": 200,
+            "senior": 200
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "sleeplessness",
+				"chance": 10
+			},
+			{
+				"name": "lethargy",
+				"chance": 30
+			},
+            {
+				"name": "impulsivity",
+				"chance": 20
+			},			
+			{
+				"name": "hallucinations",
+				"chance": 10
+			},
+			{
+				"name": "nightmares",
+				"chance": 10
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 20
+			},
+			{
+				"name": "kittenspace",
+				"chance": 50
+			},
+			{
+				"name": "otherspace",
+				"chance": 50
+			},
+			{
+				"name": "dizziness",
+				"chance": 25
+			},
+			{
+				"name": "sunblindness",
+				"chance": 30
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 50
+			},
+			{
+				"name": "fatigue",
+				"chance": 30
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "addiction",
+				"chance": 90
+			},
+			{
+				"name": "plural soul",
+				"chance": 90
+			},
+			{
+				"name": "fainting",
+				"chance": 45
+			},
+			{
+				"name": "nosebleed",
+				"chance": 60
+			},
+			{
+				"name": "earache",
+				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 10
+			}
+        ],
+        "herbs": {
+			"1": [
+            "honey",
+            "chamomile",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "declawed": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 70
+            },
+            {
+                "name": "sore",
+                "chance": 10
+            },
+			{
+				"name": "joint pain",
+				"chance": 10
+			},
+			{
+				"name": "otherspace",
+				"chance": 70
+			},
+			{
+				"name": "acute pain",
+				"chance": 20
+			}
+        ],
+        "herbs": {
+			"1": [
+            "juniper",
+            "ragwort"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "echoing memory": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 200,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "verbal shutdown",
+                "chance": 10
+            },
+			{
+				"name": "anxiety attack",
+				"chance": 15
+			},
+			{
+				"name": "seasonal lethargy",
+				"chance": 30
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 5
+			},
+			{
+				"name": "headache",
+				"chance": 10
+			},
+			{
+				"name": "nightmares",
+				"chance": 25
+			},
+			{
+				"name": "nest wetting",
+				"chance": 10
+			},
+			{
+				"name": "kittenspace",
+				"chance": 10
+			},
+			{
+				"name": "otherspace",
+				"chance": 5
+			},
+			{
+				"name": "plural soul",
+				"chance": 75
+			},
+			{
+				"name": "word loss",
+				"chance": 5
+			}
+        ],
+        "herbs":{
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "regressor": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "kittenspace",
+				"chance": 10
+			}, 
+			{
+				"name": "otherspace",
+				"chance": 35
+			},
+			{
+				"name": "vivid daydreams",
+				"chance": 25
+			},
+			{
+				"name": "nest wetting",
+				"chance": 60
+			},
+			{
+				"name": "impulsivity",
+				"chance": 25
+			},
+			{
+				"name": "understimulation",
+				"chance": 35
+			},
+			{
+				"name": "overstimulation",
+				"chance": 60
+			},
+			{
+				"name": "word loss",
+				"chance": 50
+			}
+        ],
+        "herbs":{
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+	"brain shock": {
+        "severity": "severe",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 10,
+            "kitten": 10,
+            "adolescent": 40,
+            "young adult": 75,
+            "adult": 65,
+            "senior adult": 40,
+            "senior": 10
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "kittenspace",
+				"chance": 10
+			}, 
+			{
+				"name": "otherspace",
+				"chance": 10
+			},
+			{
+				"name": "headache",
+				"chance": 5
+			},
+			{
+				"name": "severe headache",
+				"chance": 10
+			},
+			{
+				"name": "dizziness",
+				"chance": 5
+			},
+			{
+				"name": "nest wetting",
+				"chance": 10
+			},
+			{
+				"name": "impulsivity",
+				"chance": 5
+			},
+			{
+				"name": "redcough",
+				"chance": 60
+			},
+			{
+				"name": "overstimulation",
+				"chance": 15
+			},
+			{
+				"name": "parroting",
+				"chance": 10
+			},
+			{
+				"name": "word loss",
+				"chance": 5
+			},
+			{
+				"name": "fainting",
+				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 5
+			}
+        ],
+        "herbs": {
+			"1": [
+            "thyme",
+			"poppy",
+            "juniper"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "irritable bowels": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+			{
+				"name": "stomachache",
+				"chance": 5
+			},
+			{
+                "name": "diarrhea",
+                "chance": 10
+            },
+			{
+				"name": "constipation",
+				"chance": 15
+			},
+			{
+				"name": "nest wetting",
+				"chance": 25
+			},
+			{
+				"name": "nausea",
+				"chance": 10
+			}
+        ],
+        "herbs": {
+			"1": [
+            "juniper",
+            "mallow",
+            "ragwort",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "longcough": {
+        "severity": "minor",
+        "congenital": "never",
+        "moons_until": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "whitecough",
+                "chance": 15
+            },
+			{
+				"name": "greencough",
+				"chance": 15
+			},
+			{
+				"name": "fatigue",
+				"chance": 15
+			},
+			{
+				"name": "nosebleed",
+				"chance": 45
+			}
+        ],
+        "herbs": {
+			"1": [
+            "betony",
+            "mullein"
+			],
+			"2": [],
+			"3": []
+		}
+	},
+    "disrupted senses": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+			{
+				"name": "sunblindness",
+				"chance": 25
+			},
+			{
+				"name": "headache",
+				"chance": 15
+			},
+			{
+				"name": "severe headache",
+				"chance": 45
+			},
+			{
+				"name": "ear buzzing",
+				"chance": 25
+			},
+			{
+				"name": "stomachache",
+				"chance": 15
+			},
+			{
+				"name": "rash",
+				"chance": 15
+			},
+			{
+				"name": "overstimulation",
+				"chance": 10
+			},
+			{
+				"name": "understimulation",
+				"chance": 30
+			},
+			{
+				"name": "fatigue",
+				"chance": 45
+			},
+			{
+				"name": "fainting",
+				"chance": 75
+			},
+			{
+				"name": "earache",
+				"chance": 45
+			},
+			{
+				"name": "brain fog",
+				"chance": 20
+			}
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "constant nightmares": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness":[
+        ],
+        "risks": [
+			{
+				"name": "sleeplessness",
+				"chance": 15
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 15
+			},
+			{
+				"name": "anxiety attack",
+				"chance": 15
+			},
+			{
+				"name": "paranoia",
+				"chance": 45
+			},
+			{
+				"name": "fatigue",
+				"chance": 25
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "plural soul",
+				"chance": 75
+			},
+			{
+				"name": "tics",
+				"chance": 25
+			}
+        ],
+        "herbs": {
+			"1": [
+            "juniper",
+            "thyme",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "recurring rash":{
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 3,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [
+			{
+				"name": "rash",
+				"chance": 10
+			},
+			{
+                "name": "torn pelt",
+                "chance": 40
+            },
+			{
+				"name": "running nose",
+				"chance": 25
+			},
+			{
+				"name": "whitecough",
+				"chance": 35
+			},
+			{
+				"name": "earache",
+				"chance": 45
+			}
+        ],
+        "herbs": {
+			"1": [
+            "poppy",
+			"comfrey",
+			"elder_leaves"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "constant fatigue": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 160,
+            "kitten": 160,
+            "adolescent": 170,
+            "young adult": 200,
+            "adult": 200,
+            "senior adult": 170,
+            "senior": 160
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "sleeplessness",
+				"chance": 10
+			},
+			{
+				"name": "lethargy",
+				"chance": 30
+			},
+			{
+				"name": "nightmares",
+				"chance": 10
+			},
+			{
+				"name": "dizziness",
+				"chance": 25
+			},
+			{
+				"name": "understimulation",
+				"chance": 30
+			},
+			{
+				"name": "sleep paralysis",
+				"chance": 50
+			},
+			{
+				"name": "world tired",
+				"chance": 120
+			},
+			{
+				"name": "brain fog",
+				"chance": 15
+			}
+        ],
+        "herbs": {
+			"1": [
+            "honey",
+            "chamomile",
+            "poppy"
+			],
+			"2": [],
+			"3": []
+		}	
+    },
+    "face blindness": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "headache",
+                "chance": 30
+            },
+			{
+				"name": "verbal shutdown",
+				"chance": 50
+			},
+			{
+				"name": "fatigue",
+				"chance": 30
+			},
+			{
+				"name": "overstimulation",
+				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 40
+			}
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "body biter": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 2,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "torn pelt",
+                "chance": 40
+            },
+            {
+                "name": "wrenched claws",
+                "chance": 80
+            },
+            {
+                "name": "cracked pads",
+                "chance": 50
+            },
+            {
+                "name": "rash",
+                "chance": 30
+            },
+            {
+                "name": "small cut",
+                "chance": 80
+            },
+			{
+				"name": "stimming",
+				"chance": 20
+			},
+			{
+				"name": "nosebleed",
+				"chance": 30
+			},
+			{
+				"name": "earache",
+				"chance": 80
+			}
+        ],
+        "herbs": {
+			"1": [
+            "juniper",
+            "ragwort",
+            "poppy",
+            "raspberry"
+			],
+			"2": [],
+			"3": []
+		}
+    },
+    "chattering tongue": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 5,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "tics",
+                "chance": 30
+            },
+            {
+                "name": "impulsivity",
+                "chance": 50
+            },
+            {
+                "name": "sprain",
+                "chance": 70
+            },
+            {
+                "name": "absence",
+                "chance": 75
+            },
+			{
+				"name": "spasms",
+				"chance": 65
+			},
+            {
+                "name": "broken bone",
+                "chance": 100
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "plural soul": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 10,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "kittenspace",
+				"chance": 45
+			},
+			{
+				"name": "otherspace",
+				"chance": 45
+			},
+			{
+				"name": "echoing memory",
+				"chance": 75
+			},
+			{
+				"name": "loyalty bind",
+				"chance": 25
+			},
+			{
+				"name": "brain fog",
+				"chance": 5
+			},
+			{
+				"name": "impulsivity",
+				"chance": 25
+			},
+			{
+				"name": "vacant",
+				"chance": 75
+			}
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "thought blind": {
+        "severity": "minor",
+        "congenital": "always",
+        "moons_until": 5,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{
+				"name": "face blindness",
+				"chance": 50
+			},
+			{
+				"name": "brain fog",
+				"chance": 10
+			}
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "addiction": {
+        "severity": "major",
+        "congenital": "never",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 40,
+            "adolescent": 60,
+            "young adult": 80,
+            "adult": 80,
+            "senior adult": 50,
+            "senior": 40
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+			{	
+				"name": "fainting",
+				"chance": 45
+			},
+			{
+				"name": "nosebleed",
+				"chance": 50
+			}
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "testosterone deficiency": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 50
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "excess testosterone": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 50
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "aneuploidy": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 20
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "mosaicism": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 75
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "chimerism": {
+        "severity": "minor",
+        "congenital": "intersex",
+        "moons_until": 0,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "infertile",
+                "chance": 75
+            }
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
+    },
+    "infertile": {
+        "severity": "minor",
+        "congenital": "sometimes",
+        "moons_until": 10,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+        ],
+        "herbs": {
+			"1": [],
+			"2": [],
+			"3": []
+		}
     }
 }

@@ -113,7 +113,7 @@ EVENT_ALLOWED_CONDITIONS = [
     "heat stroke",
     "heat exhaustion",
     "stomachache",
-    "constant nightmares",
+    "nightmares",
 ]
 
 with open("resources/game_config.toml", "r", encoding="utf-8") as read_file:

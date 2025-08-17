@@ -261,7 +261,6 @@ class PermanentCondition:
         self.severity = severity
         self.congenital = congenital
         self.moons_until = moons_until
-        self.moon_start = moon_start
         self.mortality = mortality
         self.risks = risks
         self.illness_infectiousness = illness_infectiousness
@@ -269,7 +268,6 @@ class PermanentCondition:
         self.new = event_triggered
 
         self.current_mortality = mortality
-
     # severity level determines retirement:
     # severe - auto retire, major - chance retire, minor - no retire
     # congenital determines if a cat can be born with it or not: never, sometimes, always

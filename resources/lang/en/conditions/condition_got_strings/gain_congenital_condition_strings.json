@@ -19,9 +19,13 @@
         "r_c soothes m_c's frantically worried parent - their kit will never walk, but it's still possible for {PRONOUN/m_c/object} to have a happy, healthy life.",
         "It's immediately clear that m_c can't feel {PRONOUN/m_c/poss} hindlegs as soon as {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} born, but {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} like a happy bundle of newborn fluff anyway."
     ],
+    "intermittent paralysis": [
+        "r_c has noticed that m_c seems to be struggling to walk some days more than others. After a quick examination {PRONOUN/r_c/subject} {VERB/m_c/sooth/soothes} the frantically worried parents that their kit will still be able to have a happy and healthy life with just a couple of accomodations.",
+		"Even with m_c been a bit more wobbly than other kits, it's incredibly clear {PRONOUN/m_c/subject} {VERB/m_c/are/is} a happy ball of newborn fluff anyway."
+    ],
     "raspy lungs": [
       "m_c has been having a lot of trouble keeping up while playing. r_c listens to {PRONOUN/m_c/poss} chest and diagnoses {PRONOUN/m_c/object} with raspy lungs.",
-        "As m_c grows, {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} incapable of not snoring and panting loudly, until eventually it's clear {PRONOUN/m_c/poss} lungs are a little weaker than normal."
+      "As m_c grows, {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} incapable of not snoring and panting loudly, until eventually it's clear {PRONOUN/m_c/poss} lungs are a little weaker than normal."
     ],
     "wasting disease": [
       "r_c has been called in by m_c's worried parent. Unfortunately, that worry was well-founded, as m_c seems to have wasting disease.",
@@ -157,7 +161,8 @@
 		"When m_c's parents come in with {PRONOUN/m_c/object} to visit r_c it's about worries with {PRONOUN/m_c/object} not speaking. After some tests r_c sits back and gently explains it's likely that m_c's mute.",
 		"Initially there was some confusion over why m_c wasn't speaking, it's soon cleared up that there's nothing wrong {PRONOUN/m_c/subject} {VERB/m_c/are/is} just mute.",
 		"m_c has never needed words to speak, fluent enough with {PRONOUN/m_c/poss} body language and the clan adapts to help {PRONOUN/m_c/object} be heard even in {PRONOUN/m_c/poss} silence.",
-		"Nobody knew silence could be so loud until m_c arrived."
+		"Nobody knew silence could be so loud until m_c arrived.",
+		"m_c needs no words, cat-sign can get {PRONOUN/m_c/poss} message over more than well enough."
 	],
 	"echoing memory": [
 		"While m_c is for all the world exactly like all the other newborns in the nursery something about {PRONOUN/m_c/object} makes r_c's fur stand all on end.",
@@ -223,37 +228,37 @@
 		"When m_c's talking with {PRONOUN/m_c/poss} clanmates {PRONOUN/m_c/subject} increasingly {VERB/m_c/get/gets} frustrated when trying to visualise what they describe.",
 		"m_c has come to the realisation that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} thought blind."
 	],
-  "testosterone deficiency": [
+	"testosterone deficiency": [
 		"r_c reassures m_c's parent's worries, m_c's developing into a perfectly fine cat despite seeming more like a molly than a tom.",
 		"While checking the nursery the medicine cat identifies that m_c might be testosterone deficient.",
 		"It appears that m_c might be testosterone deficient, it's nothing to worry about.",
 		"m_c has noticed that {PRONOUN/m_c/subject} {VERB/m_c/are/is} more feminine than most toms around {PRONOUN/m_c/object}."
-  ],
-  "excess testosterone": [
+	],
+	"excess testosterone": [
 		"r_c has noticed that m_c doesn't look completely like a molly but assures {PRONOUN/m_c/object} it's nothing to worry about.",
 		"m_c has noticed that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} developing differently from the other kittens around {PRONOUN/m_c/object}.",
 		"As m_c gets bigger {PRONOUN/m_c/subject} {VERB/m_c/notice/notices} that {PRONOUN/m_c/subject} {VERB/m_c/does/do}n't really look like other mollies.",
 		"The older m_c gets the less like a molly {PRONOUN/m_c/subject} {VERB/m_c/look/looks}."
-  ],
-  "aneuploidy": [
+	],
+	"aneuploidy": [
 		"r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
 		"While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex.",
 		"As m_c grows it becomes more and more obvious that {PRONOUN/m_c/subject} {VERB/m_c/are/is} clearly intersex.",
 		"m_c is proud to be recognized as intersex by the rest of the Clan."
-  ],
-  "mosaicism": [
+	],
+	"mosaicism": [
 		"r_c talks with m_c as {PRONOUN/m_c/subject} {VERB/m_c/grow/grows} older about the possibility that m_c has mosaicism.",
 		"It's slowly becoming clear as m_c grows that {PRONOUN/m_c/subject} {VERB/m_c/have/has} some form of mosaicism.",
 		"m_c knows that {PRONOUN/m_c/poss} mosaicsm sets {PRONOUN/m_c/object} apart from {PRONOUN/m_c/poss} Clanmates.",
 		"Sometimes m_c wonders what {PRONOUN/m_c/subject} would have looked like if not for {PRONOUN/m_c/poss} mosaicism."
-  ],
-  "chimerism": [
+	],
+	"chimerism": [
 		"r_c has determined that m_c is possibly a chimera.",
 		"While routinely checking in with the medicine cat the topic of chimerism comes up regarding m_c.",
 		"m_c's discovered that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a chimera.",
 		"While sleeping m_c had a dream where {PRONOUN/m_c/subject} saw two beings becoming one."
-  ],
-    "infertile": [
+	],
+	"infertile": [
         "r_c explains to m_c that {PRONOUN/m_c/subject} may be infertile.",
         "m_c has discovered that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} infertile.",
         "After m_c discovers that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} infertile, {PRONOUN/m_c/subject} {VERB/m_c/realize/realizes} that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a lot more to think about than {PRONOUN/m_c/subject} previously thought."

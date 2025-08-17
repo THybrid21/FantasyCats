@@ -13,6 +13,8 @@
         "mates": "mates",
         "kits": "kits",
         "kits_mates": "kits' mates",
-        "grandkits": "grandkits"
+        "grandkits": "grandkits",
+		"greatgrandparents": "great grandparents",
+		"greatgrandkits": "great grandkits"
     }
 }

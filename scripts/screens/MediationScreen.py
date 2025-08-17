@@ -515,7 +515,7 @@ class MediationScreen(Screens):
             )
         elif other_cat:
             # FAMILY DOT
-            # Only show family dot on cousins if first cousin mates are disabled.
+            # Only show family dot on cousins if second cousin mates are disabled.
             if get_clan_setting("second cousin mates"):
                 check_cousins = False
             else:

@@ -21,5 +21,10 @@
 		"ran_weights are used in species randomization, in_weights are used in inheritance.",
         "species name before the weights is the parent's species, the weights from both parents are added together.",
         "all weights follow the order of the species list."
-    ]
+    ],
+	"SPECIES TAGS": [
+		"Summary: yeah no actually I think I'll shove them here for you guys to know what ones are used by this mod.",
+		"rec_inh: means that unless they're breeding with another recessive species their weights are ignored for kittens",
+		"exc_breed: unless the setting is toggled, they can only breed with others of the same species"
+	]
 }

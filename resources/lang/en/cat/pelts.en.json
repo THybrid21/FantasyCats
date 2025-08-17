@@ -111,6 +111,7 @@
         "Calico_tabby": "calico tabby",
         "Tortie": "tortie",
         "Tortie_tabby": "tortie tabby",
+
         "mottled": "mottled",
         "mottled_long": "%{color} mottled",
         "point": "%{color} point",
@@ -125,6 +126,9 @@
         "scarred": "scarred",
         "fur_short": "short",
         "fur_medium": "medium",
-        "fur_long": "long"
+        "fur_long": "long",
+		"fur_bare": "bare",
+		"albino": "albino",
+		"melanistic": "melanistic"
     }
 }

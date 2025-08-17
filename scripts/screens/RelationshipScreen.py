@@ -611,39 +611,39 @@ class RelationshipScreen(Screens):
                     else:
                         relation = "general.parents_sibling"
                 elif self.inspect_cat.is_grandparent(self.the_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.grandmother"
                     elif self.inspect_cat.genderalign in ("male", "trans male"):
                         relation = "general.grandfather"
                     else:
                         relation = "general.grandparent"
                 elif self.the_cat.is_grandparent(self.inspect_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.granddaughter"
                     elif self.inspect_cat.genderalign in ("male", "trans male"):
                         relation = "general.grandson"
                     else:
                         relation = "general.grandchild"
                 elif self.inspect_cat.is_parent(self.the_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.mother"
-                    elif self.inspect_cat.genderalign in ("male", "trans male"):
+                    elif self.inspect_cat.genderalign in ("male", "trans male", "demiboy"):
                         relation = "general.father"
                     else:
                         relation = "general.parent"
                 elif self.the_cat.is_parent(self.inspect_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.daughter"
-                    elif self.inspect_cat.genderalign in ("male", "trans male"):
+                    elif self.inspect_cat.genderalign in ("male", "trans male", "demiboy"):
                         relation = "general.son"
                     else:
                         relation = "general.child"
                 elif self.inspect_cat.is_sibling(
                     self.the_cat
                 ) or self.the_cat.is_sibling(self.inspect_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.sister"
-                    elif self.inspect_cat.genderalign in ("male", "trans male"):
+                    elif self.inspect_cat.genderalign in ("male", "trans male", "demiboy"):
                         relation = "general.brother"
                     else:
                         relation = "general.sibling"
@@ -683,9 +683,9 @@ class RelationshipScreen(Screens):
                 elif not get_clan_setting(
                     "second cousin mates"
                 ) and self.inspect_cat.is_second_cousin(self.the_cat):
-                    if self.inspect_cat.genderalign in ("female", "trans female"):
+                    if self.inspect_cat.genderalign in ("female", "trans female", "demigirl"):
                         relation = "general.cousin_female"
-                    elif self.inspect_cat.genderalign in ("male", "trans male"):
+                    elif self.inspect_cat.genderalign in ("male", "trans male", "demiboy"):
                         relation = "general.cousin_male"
                     else:
                         relation = "general.cousin_nb"
@@ -862,7 +862,7 @@ class RelationshipScreen(Screens):
             )
         else:
             # FAMILY DOT
-            # Only show family dot on cousins if first cousin mates are disabled.
+            # Only show family dot on cousins if second cousin mates are disabled.
 
             ggp_cat = the_relationship.cat_to.get_greatgrandparents()
             ggp_other = self.the_cat.get_greatgrandparents()

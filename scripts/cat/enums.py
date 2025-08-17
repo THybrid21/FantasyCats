@@ -33,9 +33,11 @@ class CatRank(StrEnum):
     APPRENTICE = "apprentice"
     MEDICINE_APPRENTICE = "medicine cat apprentice"
     MEDIATOR_APPRENTICE = "mediator apprentice"
+    PERMAQUEEN_APPRENTICE = "permaqueen apprentice"
     WARRIOR = "warrior"
     MEDICINE_CAT = "medicine cat"
     MEDIATOR = "mediator"
+    PERMAQUEEN = "permaqueen"
     DEPUTY = "deputy"
     LEADER = "leader"
     ELDER = "elder"
@@ -54,11 +56,15 @@ class CatRank(StrEnum):
     def is_any_mediator_rank(self) -> bool:
         return self in (self.MEDIATOR, self.MEDIATOR_APPRENTICE)
 
+    def is_any_permaqueen_rank(self) -> bool:
+        return self in (self.PERMAQUEEN, self.PERMAQUEEN_APPRENTICE)
+
     def is_any_apprentice_rank(self) -> bool:
         return self in (
             self.APPRENTICE,
             self.MEDIATOR_APPRENTICE,
             self.MEDICINE_APPRENTICE,
+            self.PERMAQUEEN_APPRENTICE
         )
 
     def is_any_adult_warrior_like_rank(self) -> bool:

@@ -114,6 +114,7 @@ class ProfileScreen(Screens):
         self.backstory_background = None
         self.history_text_box = None
         self.conditions_tab_button = None
+        self.alters_tab_button = None        
         self.condition_container = None
         self.left_conditions_arrow = None
         self.right_conditions_arrow = None
@@ -254,39 +255,36 @@ class ProfileScreen(Screens):
             # when button is pressed...
             elif event.ui_element == self.cis_trans_button:
                 # if the cat is anything besides m/f/transm/transf then turn them back to cis
-                if self.the_cat.genderalign not in [
-                    "female",
-                    "trans female",
-                    "male",
-                    "trans male",
-                ]:
+                if self.the_cat.genderalign not in ["female", "trans female", "male", "trans male", "intergender", "demiboy", "demigirl", "null"]:
                     self.the_cat.genderalign = self.the_cat.gender
-                elif (
-                    self.the_cat.gender == "male"
-                    and self.the_cat.genderalign == "female"
-                ):
+                elif self.the_cat.gender == "male" and self.the_cat.genderalign != 'male':
                     self.the_cat.genderalign = self.the_cat.gender
-                elif (
-                    self.the_cat.gender == "female"
-                    and self.the_cat.genderalign == "male"
-                ):
+                elif self.the_cat.gender == "female" and self.the_cat.genderalign != 'female':
                     self.the_cat.genderalign = self.the_cat.gender
-
+                elif self.the_cat.gender == "intersex" and self.the_cat.genderalign != 'intergender':
+                    self.the_cat.genderalign = 'intergender'
+                elif self.the_cat.gender == "null" and self.the_cat.genderalign != 'null':
+                    self.the_cat.genderalign = 'null'
                 # if the cat is cis (gender & gender align are the same) then set them to trans
                 # cis males -> trans female first
-                elif (
-                    self.the_cat.gender == "male" and self.the_cat.genderalign == "male"
-                ):
-                    self.the_cat.genderalign = "trans female"
+                elif self.the_cat.gender == "male" and self.the_cat.genderalign == 'male':
+                    self.the_cat.genderalign = choice(["trans female", "demigirl"])
                 # cis females -> trans male
-                elif (
-                    self.the_cat.gender == "female"
-                    and self.the_cat.genderalign == "female"
-                ):
-                    self.the_cat.genderalign = "trans male"
+                elif self.the_cat.gender == "female" and self.the_cat.genderalign == 'female':
+                    self.the_cat.genderalign = choice(["trans male", "demiboy"])
+                # intergender and null cats defining a gender :P
+                elif self.the_cat.gender == "intersex" and self.the_cat.genderalign == 'intergender':
+                    self.the_cat.genderalign = choice(["trans male", "demiboy", "trans female", "demigirl"])
+                elif self.the_cat.gender == "null" and self.the_cat.genderalign == 'null':
+                    self.the_cat.genderalign = choice(["trans male", "demiboy", "trans female", "demigirl", "intergender"])
                 # if the cat is trans then set them to nonbinary
-                elif self.the_cat.genderalign in ["trans female", "trans male"]:
-                    self.the_cat.genderalign = "nonbinary"
+                elif self.the_cat.genderalign in ["trans female", "trans male", "demiboy", "demigirl"]:
+                    self.the_cat.genderalign = choice(["nonbinary", "neutrois", "agender", "genderqueer", "demienby",
+                                                                "genderfluid", "bigender", "pangender", "questioning"])
+                elif self.the_cat.gender == "null" and self.the_cat.genderalign in ['intergender', 'trans male', 'demiboy', 
+                                                                                        'trans female', 'demigirl']:
+                    self.the_cat.genderalign = choice(["nonbinary", "neutrois", "agender", "genderqueer", "demienby",
+                                                                "genderfluid", "bigender", "pangender", "questioning"])
                 self.the_cat.pronouns = get_new_pronouns(self.the_cat.genderalign)
                 self.clear_profile()
                 self.build_profile()
@@ -410,6 +408,15 @@ class ProfileScreen(Screens):
                 self.conditions_page -= 1
                 self.display_conditions_page()
 
+        # Now Including Alters!
+        elif self.open_tab == 'alters':
+            if event.ui_element == self.right_conditions_arrow:
+                self.conditions_page += 1
+                self.display_alters_page()
+            if event.ui_element == self.left_conditions_arrow:
+                self.conditions_page -= 1
+                self.display_alters_page()
+
     def screen_switches(self):
         super().screen_switches()
         self.the_cat = Cat.all_cats.get(switch_get_value(Switch.cat))
@@ -489,15 +496,13 @@ class ProfileScreen(Screens):
             manager=MANAGER,
         )
 
-        self.placeholder_tab_3 = UISurfaceImageButton(
-            ui_scale(pygame.Rect((400, 622), (176, 30))),
-            "",
+        self.alters_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((224, 622), (176, 30))),
+            "screens.profile.tab_alters",
             get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
             object_id="@buttonstyles_profile_middle",
-            starting_height=1,
             manager=MANAGER,
         )
-        self.placeholder_tab_3.disable()
 
         self.placeholder_tab_4 = UISurfaceImageButton(
             ui_scale(pygame.Rect((576, 622), (176, 30))),
@@ -541,7 +546,7 @@ class ProfileScreen(Screens):
         self.dangerous_tab_button.kill()
         self.backstory_tab_button.kill()
         self.conditions_tab_button.kill()
-        self.placeholder_tab_3.kill()
+        self.alters_tab_button.kill()
         self.placeholder_tab_4.kill()
         self.inspect_button.kill()
         self.close_current_tab()
@@ -553,6 +558,12 @@ class ProfileScreen(Screens):
 
         if self.the_cat is None:
             return
+
+        #Make sure only plural cats get alters :P
+        if self.the_cat.is_plural():
+            self.alters_tab_button.enable()
+        else:
+            self.alters_tab_button.disable()
 
         # Info in string
         cat_name = str(self.the_cat.name)
@@ -708,6 +719,11 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        # SPECIES
+        output += str(the_cat.species)
+        # NEWLINE ----------
+        output += "\n"
+
         # AGE
         if the_cat.age == CatAge.KITTEN:
             output += i18n.t("general.kitten_profile")
@@ -729,18 +745,57 @@ class ProfileScreen(Screens):
         output += "\n"
 
         # PELT TYPE
-        output += i18n.t(
-            "screens.profile.pelt_label",
-            pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
-        )
+        if the_cat.pelt.albino:
+            output += i18n.t(
+                "screens.profile.albino_label",
+                pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
+            )  
+        elif the_cat.pelt.melanistic:
+            output += i18n.t(
+                "screens.profile.melanistic_label",
+                pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
+            ) 
+        else:    
+            output += i18n.t(
+                "screens.profile.pelt_label",
+                color=i18n.t(f"cat.pelts.{the_cat.pelt.colour}").lower(),
+                pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
+            )
         # NEWLINE ----------
         output += "\n"
 
+
+    # All this is stuff I NEED to eventually update with the dicts... for now though... 
+        #tortie info
+        if the_cat.pelt.name in ["Tortie", "Calico"]:
+            if not the_cat.pelt.albino or the_cat.pelt.melanistic:
+                output += 'tortie patch: ' + the_cat.pelt.pattern.lower() + ' in ' + the_cat.pelt.tortiecolour.lower()
+                # NEWLINE ----------
+                output += "\n"
+
+        # CAT BUILD        
+        output += "cat build: " + the_cat.pelt.build
+        output += "\n"
+
         # PELT LENGTH
-        output += i18n.t(
-            "screens.profile.fur_label",
-            length=i18n.t(f"cat.pelts.fur_{the_cat.pelt.length}"),
-        )
+        output += 'fur texture & length: ' + the_cat.pelt.texture 
+        if the_cat.species == "amphicat":
+            output += ' scales'
+        elif the_cat.species == "skeleton":
+            output += ' bones'
+        elif the_cat.pelt.length == "bare":
+            if the_cat.pelt.texture != "sparse":
+                output += ' ' + the_cat.pelt.length + ' skin'
+            else:
+                output += ' fur'
+        else:    
+            output += ' ' + the_cat.pelt.length + ' fur'
+
+        if the_cat.pelt.tint != "none":
+           output += "\n" 
+           output += 'tint: ' + the_cat.pelt.tint.lower()
+            # NEWLINE ----------
+
         # NEWLINE ----------
 
         # ACCESSORY
@@ -979,6 +1034,14 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        #Is kitty no balls?
+        if the_cat.neutered:
+            if the_cat.is_disabled or the_cat.is_plural or the_cat.is_injured or the_cat.is_ill or get_clan_setting("showxp"):
+                output += i18n.t("screens.profile.neutered")
+                output += "\n"
+            else:
+                output += i18n.t("screens.profile.neutered")
+
         # NUTRITION INFO (if the game is in the correct mode)
         if (
             game.clan.game_mode in ["expanded", "cruel season"]
@@ -1001,6 +1064,7 @@ class ProfileScreen(Screens):
                     output += " (" + str(int(nutr.percentage)) + ")"
                 output += "\n"
 
+
         if the_cat.is_disabled():
             for condition in the_cat.permanent_condition:
                 if (
@@ -1008,32 +1072,135 @@ class ProfileScreen(Screens):
                     and the_cat.permanent_condition[condition]["moons_until"] != -2
                 ):
                     continue
-                output += i18n.t("general.has_permanent_condition")
+                    
+            special_conditions = ["paralyzed", "declawed", "sphynxism", "albinism", "melanism", "plural soul"]
+            all_special = True
+            for condition in the_cat.permanent_condition:
+                if condition not in special_conditions:
+                    all_special = False
+                    break
+                if not all_special:
+                    output += i18n.t("screens.profile.has_permanent_condition")
+                    already_disabled = True
 
-                # NEWLINE ----------
-                output += "\n"
-                break
+                if "paralyzed" in the_cat.permanent_condition:
+                    if already_disabled:
+                        output += i18n.t(", ", text=i18n.t("screens.profile.paralyzed")) 
+                    else:
+                        output += i18n.t("screens.profile.paralyzed")
+                        already_disabled = True
+                if "declawed" in the_cat.permanent_condition:
+                    if already_disabled:
+                        output += i18n.t(",", text=i18n.t("screens.profile.declawed")) 
+                    else:
+                        output += i18n.t("screens.profile.declawed")
 
-        if the_cat.is_injured():
-            if "recovering from birth" in the_cat.injuries:
-                output += i18n.t(
-                    "utility.exclamation",
-                    text=i18n.t("conditions.injuries.recovering from birth"),
-                )
-            elif "pregnant" in the_cat.injuries:
-                output += i18n.t(
-                    "utility.exclamation", text=i18n.t("conditions.injuries.pregnant")
-                )
+                        # NEWLINE ----------
+                        output += "\n"
+                        break
+
+        if the_cat.is_plural():
+            con = "plural soul"
+            if self.the_cat.permanent_condition[con]["born_with"] is True:
+                minmoons = -1
             else:
+                minmoons = 0
+            if self.the_cat.permanent_condition[con]['moons_until'] <= minmoons:
+                output += "screens.profile.fronting_label"
+                if self.the_cat.front is not None:
+                    output += the_cat.front
+                else:
+                    output += str(the_cat.name)
+                '''
+                can_front = [str(the_cat.name)]
+                for alter in the_cat.alters:
+                    can_front.append(alter["name"])
+                output += choice(can_front)
+                '''
+                output += "\n"
+
+        already_sick_injured = False
+        if the_cat.is_injured():
+            special_conditions = [
+                "recovering from birth", "pregnant", "faux pregnant", "kittenspace", "otherspace", 
+                "overtimulation", "understimulation", "turmoiled litter", "shock", "lingering shock"
+            ]
+            all_special = True
+            for condition in the_cat.injuries:
+                if condition not in special_conditions:
+                    all_special = False
+                if not all_special:
+                    break
+
+            if not all_special:
                 output += i18n.t("utility.exclamation", text=i18n.t("general.injured"))
+                output += "\n"
+
+            if "recovering from birth" in the_cat.injuries:
+                if "turmoiled litter" in the_cat.injuries:
+                    output += i18n.t("utility.exclamation", text=i18n.t("conditions.injuries.turmoiled_birth"))                   
+                    output += "\n"
+                else:
+                    output += i18n.t("utility.exclamation", text=i18n.t("conditions.injuries.recovering from birth"))                        
+                    output += "\n"
+            if "pregnant" in the_cat.injuries:
+                output += i18n.t("utility.exclamation", text=i18n.t("conditions.injuries.pregnant"))                       
+                output += "\n"
+            if "faux pregnant" in the_cat.injuries:
+                output += i18n.t("conditions.injuries.faux pregnant")
+                output += "\n"
+            if the_cat.injuries in ["kittenspace", "otherspace"]:
+                output += i18n.t("conditions.injuries.safe-space")
+                output += "\n"
+            if "overstimulation" in the_cat.injuries:
+                output += i18n.t("conditions.injuries.overstimulation_prof")
+                output += "\n"
+            if "understimulation" in the_cat.injuries:
+                output += i18n.t("conditions.injuries.understimulation_prof")
+                output += "\n"
+            if the_cat.injuries in ["shock", "lingering shock"]:
+                output += i18n.t("conditions.injuries.shook")
+                output += "\n"                
+                
         elif the_cat.is_ill():
+            special_conditions = [
+                "grief stricken", "fleas", "malnourished", "starving", "ticks", "lethargy", "seasonal lethargy", 
+                "verbal shutdown", "hyperfixation", "stimming", "burn out", "indecision", "impulsivity", "zoomies"
+            ]
+            all_special = True
+            for condition in the_cat.illnesses:
+                if condition not in special_conditions:
+                    all_special = False
+                if not all_special:
+                    break
+
+            if not all_special:
+                output += i18n.t("utility.exclamation", text=i18n.t("general.sick"))
+                output += "\n" 
+
+            if "malnourished" in the_cat.illnesses:
+                output += i18n.t("utility.exclamation", text=i18n.t("conditions.illnesses.malnourished"))
+                output += "\n" 
+            if "starving" in the_cat.illnesses:
+                output += i18n.t("utility.exclamation", text=i18n.t("conditions.illnesses.starving"))
+                output += "\n" 
+
             if "grief stricken" in the_cat.illnesses:
                 output += i18n.t("utility.exclamation", text=i18n.t("general.grieving"))
-            elif "fleas" in the_cat.illnesses:
+                output += "\n" 
+            if "fleas" in the_cat.illnesses:
                 output += i18n.t("utility.exclamation", text=i18n.t("general.fleas"))
-            else:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.sick"))
+                output += "\n" 
+            if "ticks" in the_cat.illnesses:
+                output += i18n.t("utility.exclamation", text=i18n.t("general.ticks"))
+                output += "\n"                     
 
+            if the_cat.illnesses in ["lethargy", "seasonal lethargy", "burn out"]:
+                output += i18n.t("screens.profile.lethargic")
+                output += "\n"                   
+            if "verbal shutdown" in the_cat.illnesses:
+                output += i18n.t("conditions.illnesses.verbal shutdown")                
+                
         return output
 
     def toggle_history_tab(self, sub_tab_switch=False):
@@ -1703,6 +1870,55 @@ class ProfileScreen(Screens):
 
         return victim_text
 
+    def toggle_alters_tab(self):
+        """Opens the conditions tab"""
+        previous_open_tab = self.open_tab
+        # This closes the current tab, so only one can be open at a time
+        self.close_current_tab()
+
+        if previous_open_tab == 'alters':
+            '''If the current open tab is conditions, just close the tab and do nothing else. '''
+            pass
+        else:
+            self.open_tab = 'alters'
+            self.conditions_page = 0
+
+            rect = ui_scale(pygame.Rect((0, 0), (624, 151)))
+            rect.bottomleft = ui_scale_offset((0, 0))
+            self.conditions_background = pygame_gui.elements.UIImage(
+                rect,
+                self.conditions_tab,
+                starting_height=2,
+                anchors={
+                    "bottom": "bottom",
+                    "bottom_target": self.conditions_tab_button,
+                    "centerx": "centerx",
+                },
+            )
+            del rect
+
+            rect = ui_scale(pygame.Rect((-5, 537), (34, 34)))
+            self.right_conditions_arrow = UISurfaceImageButton(
+                rect,
+                Icon.ARROW_RIGHT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                manager=MANAGER,
+                anchors={"left_target": self.conditions_background},
+            )
+            del rect
+
+            rect = ui_scale(pygame.Rect((0, 0), (34, 34)))
+            rect.topright = ui_scale_offset((5, 537))
+            self.left_conditions_arrow = UISurfaceImageButton(
+                rect,
+                Icon.ARROW_LEFT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                anchors={"right": "right", "right_target": self.conditions_background},
+            )
+            del rect
+
     def toggle_conditions_tab(self):
         """Opens the conditions tab"""
         previous_open_tab = self.open_tab
@@ -1755,6 +1971,90 @@ class ProfileScreen(Screens):
             # This will be overwritten in update_disabled_buttons_and_text()
             self.update_disabled_buttons_and_text()
 
+    def display_alters_page(self):
+        # tracks the position of the detail boxes
+        if self.condition_container:
+            self.condition_container.kill()
+
+        self.condition_container = pygame_gui.core.UIContainer(
+            scale(pygame.Rect((178, 942), (1248, 302))),
+            MANAGER)
+
+        # gather a list of all the conditions and info needed.
+        all_illness_injuries = []
+        if self.the_cat.is_plural:
+            con = "plural soul"
+            if "plural soul" in self.the_cat.permanent_condition:
+                if self.the_cat.permanent_condition[con]["born_with"] is True:
+                    minmoons = -1
+                else:
+                    minmoons = 0
+                if self.the_cat.permanent_condition[con]['moons_until'] <= minmoons:
+                    all_illness_injuries.extend([(i['name'], self.get_alter_details(i)) for i in self.the_cat.alters])
+
+        all_illness_injuries = chunks(all_illness_injuries, 4)
+
+        if not all_illness_injuries:
+            self.conditions_page = 0
+            self.right_conditions_arrow.disable()
+            self.left_conditions_arrow.disable()
+            return
+
+        # Adjust the page number if it somehow goes out of range. 
+        if self.conditions_page < 0:
+            self.conditions_page = 0
+        elif self.conditions_page > len(all_illness_injuries) - 1:
+            self.conditions_page = len(all_illness_injuries) - 1
+
+        # Disable the arrow buttons
+        if self.conditions_page == 0:
+            self.left_conditions_arrow.disable()
+        else:
+            self.left_conditions_arrow.enable()
+
+        if self.conditions_page >= len(all_illness_injuries) - 1:
+            self.right_conditions_arrow.disable()
+        else:
+            self.right_conditions_arrow.enable()
+
+        x_pos = 30
+        for con in all_illness_injuries[self.conditions_page]:
+            # Background Box
+            pygame_gui.elements.UIImage(
+                scale(pygame.Rect((x_pos, 25), (280, 276))),
+                self.condition_details_box,
+                manager=MANAGER,
+                container=self.condition_container,
+            )
+
+            y_adjust = 60
+            
+            name = UITextBoxTweaked(
+                con[0],
+                scale(pygame.Rect((x_pos, 26), (272, -1))),
+                line_spacing=0.90,
+                object_id="#text_box_30_horizcenter",
+                container=self.condition_container,
+                manager=MANAGER,
+            )
+
+            y_adjust = name.get_relative_rect().height
+            details_rect = scale(pygame.Rect((x_pos, 0), (276, -1)))
+            details_rect.y = y_adjust
+            
+            UITextBoxTweaked(
+                con[1],
+                details_rect,
+                line_spacing=0.90,
+                object_id="#text_box_22_horizcenter_pad_20_20",
+                container=self.condition_container,
+                manager=MANAGER,
+            )
+
+            x_pos += 304
+
+        return
+        
     def display_conditions_page(self):
         # tracks the position of the detail boxes
         if self.condition_container:
@@ -1864,6 +2164,19 @@ class ProfileScreen(Screens):
             x_pos += 152
         return
 
+    def get_alter_details(self, alter):
+        text_list = []
+        text_list.append(f"alter")
+        text_list.append(f"{alter['gender']}")
+        text_list.append(f"{alter['role']}")
+        if alter["other"] != "core":
+            text_list.append(f"{alter['personality']}")
+        if alter["other"] != self.the_cat.species:
+            text_list.append(alter["other"])
+        text = "<br>".join(text_list)
+        #print(text)
+        return text
+
     def get_condition_details(self, name):
         """returns the relevant condition details as one string with line breaks"""
         text_list = []
@@ -1873,15 +2186,25 @@ class ProfileScreen(Screens):
         if name in self.the_cat.permanent_condition:
             # display if the cat was born with it
             if self.the_cat.permanent_condition[name]["born_with"] is True:
-                text_list.append(i18n.t("general.born_with"))
+                if name == "plural soul":
+                    text_list.append(i18n.t("screens.profile.split_early"))
+                else:
+                    text_list.append(i18n.t("screens.profile.born_with"))
             else:
                 # moons with the condition if not born with condition
                 moons_with = (
                     game.clan.age - self.the_cat.permanent_condition[name]["moon_start"]
                 )
-                text_list.append(
-                    i18n.t("general.had_perm_condition_for", count=moons_with)
-                )
+                if name == "plural soul":
+                    text_list.append(i18n.t("screens.profile.has_been_split_for", count=moons_with))
+                else:
+                    text_list.append(i18n.t("screens.profile.had_perm_condition_for", count=moons_with))
+
+            if name == "plural soul":
+                alters = str(len(self.the_cat.alters))
+                text_list.append(f"alters: " + alters)
+
+
 
             # is permanent
             text_list.append(
@@ -1895,9 +2218,11 @@ class ProfileScreen(Screens):
             if complication is not None:
                 if "a festering wound" in self.the_cat.illnesses:
                     complication = "festering"
+                    if "anaphylaxis" in self.the_cat.injuries:
+                        complication = "anaphylaxis"   
                 text_list.append(
                     i18n.t(
-                        "utility.exclamation", text=i18n.t(f"general.is_{complication}")
+                        "utility.exclamation", text=i18n.t(f"screens.profile.is_{complication}")
                     )
                 )
 
@@ -1906,12 +2231,18 @@ class ProfileScreen(Screens):
             # moons with condition
             keys = self.the_cat.injuries[name].keys()
             moons_with = game.clan.age - self.the_cat.injuries[name]["moon_start"]
-            insert = "general.had_injury_for"
+            insert = "screens.profile.had_injury_for"
 
             if name == "recovering from birth":
-                insert = "general.recovering_from_birth_for"
+                insert = "screens.profile.recovering_from_birth_for"
             elif name == "pregnant":
-                insert = "general.pregnant_for"
+                insert = "screens.profile.pregnant_for"
+            elif name == "faux pregnant":
+                insert = "screens.profile.questionably_pregnant_for"
+            elif name == "kittenspace":
+                insert = "screens.profile.kittenspace_for"
+            elif name == "otherspace":
+                insert = "screens.profile.otherspace_for"
 
             text_list.append(
                 i18n.t(insert, moons=i18n.t("general.moons_age", count=moons_with))
@@ -1923,6 +2254,8 @@ class ProfileScreen(Screens):
                 if complication is not None:
                     if "a festering wound" in self.the_cat.illnesses:
                         complication = "festering"
+                    if "anaphylaxis" in self.the_cat.injuries:
+                        complication = "in anaphylaxis"   
                     text_list.append(
                         i18n.t(
                             "utility.exclamation",
@@ -1942,7 +2275,8 @@ class ProfileScreen(Screens):
 
             if name == "grief stricken":
                 insert = "screens.profile.grieving_for"
-
+            elif name == 'turmoiled litter':
+                insert = "screens.profile.turmoil_for"
             text_list.append(
                 i18n.t(insert, moons=i18n.t("general.moons_age", count=moons_with))
             )
@@ -2184,7 +2518,15 @@ class ProfileScreen(Screens):
                 self.cis_trans_button.set_text(
                     "screens.profile.change_gender_transmale"
                 )
-            elif self.the_cat.genderalign in ["trans female", "trans male"]:
+            elif self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intergender":
+                self.cis_trans_button.set_text(
+                    "screens.profile.change_gender_trans"
+                )
+            elif self.the_cat.gender == "null" and self.the_cat.genderalign == "null":
+                self.cis_trans_button.set_text(
+                    "screens.profile.change_gender_trans"
+                )
+            elif self.the_cat.genderalign in ["trans female", "trans male", "demigirl", "demiboy"]:
                 self.cis_trans_button.set_text(
                     "screens.profile.change_gender_nonbinary"
                 )
@@ -2193,6 +2535,10 @@ class ProfileScreen(Screens):
                 "trans female",
                 "male",
                 "trans male",
+                "demigirl",
+                "demiboy",
+                "intergender",
+                "null"
             ]:
                 self.cis_trans_button.set_text("screens.profile.change_gender_cis")
             elif self.the_cat.gender == "male" and self.the_cat.genderalign == "female":
@@ -2375,6 +2721,10 @@ class ProfileScreen(Screens):
         elif self.open_tab == "conditions":
             self.display_conditions_page()
 
+        #Alters have their own space :D
+        elif self.open_tab == 'alters':
+            self.display_alters_page()
+
     def close_current_tab(self):
         """Closes current tab."""
         if self.open_tab is None:
@@ -2431,6 +2781,12 @@ class ProfileScreen(Screens):
             for data in self.condition_data.values():
                 data.kill()
             self.condition_data = {}
+
+        elif self.open_tab == 'alters':
+            self.left_conditions_arrow.kill()
+            self.right_conditions_arrow.kill()
+            self.conditions_background.kill()
+            self.condition_container.kill()
 
         self.open_tab = None
 

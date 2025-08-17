@@ -269,6 +269,7 @@ def event_for_cat(
         ),
         "backstory": _check_cat_backstory(cat, cat_info.get("backstory", [])),
         "gender": _check_cat_gender(cat, cat_info.get("gender", [])),
+        "genderalign": _check_cat_genderalign(cat, cat_info.get("genderalign", []))
     }
 
     for func in func_lookup:
@@ -425,6 +426,17 @@ def _check_cat_gender(cat, genders: list) -> bool:
 
     return False
 
+def _check_cat_genderalign(cat, genderalignments: list) -> bool:
+    """
+    checks if cat has the correct gender
+    """
+    if not genderalignments:
+        return True
+
+    if cat.genderalign in genderalignments:
+        return True
+
+    return False
 
 def cat_for_event(
     constraint_dict: dict,

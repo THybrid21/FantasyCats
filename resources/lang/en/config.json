@@ -4,24 +4,30 @@
         "sets": {
             "-&-sets comment-&-": "These are used to determine what pronouns a cat is assigned when they are generated (or this language is swapped to for the first time). This allows languages with pronoun sets that don't match English 1:1 to display correctly.",
             "nonbinary": "0",
+			"intergender": "0",
             "male": "1",
             "trans male": "1",
+			"demiboy": "1",
             "female": "2",
             "trans female": "2",
+			"demigirl": "2",
+			"null": "3",
             "default": "0",
             "plural default": "0",
             "plural male": "0",
             "plural female": "0",
             "plural nonbinary": "0",
+			"plural null": "0",
             "-&-default_comment-&-": "Default is the fallback/'what-happens-if-nothing-matches' pronoun set. Also the 'they them default' value."
         },
         "conju_count": 2,
-        "gender_count": 3,
+        "gender_count": 4,
         "plural_rules": {
             "order": {
                 "1": "plural male",
                 "2": "plural female",
-                "0": "plural nonbinary"
+                "0": "plural nonbinary",
+				"3": "plural null"
             }
         },
         "adj_default": 1,

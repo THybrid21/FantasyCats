@@ -987,12 +987,11 @@
     "season": ["any"],
     "sub_type": ["transition"],
     "frequency": 2,
-    "event_text": "Under the full heat of the sun, m_c declares {PRONOUN/m_c/subject} {VERB/m_c/are/is} no she-cat.",
+    "event_text": "Under the full heat of the sun, m_c declares {PRONOUN/m_c/subject} {VERB/m_c/are/is} no molly.",
     "m_c": {
-      "age": ["young adult"],
       "gender": ["female"]
     },
-    "new_gender": ["trans male", "nonbinary"]
+    "new_gender": ["trans male", "demiboy", "nonbinary", "neutrois", "agender", "genderqueer", "demienby", "genderfluid", "bigender", "pangender", "questioning"]
   },
   {
     "event_id": "dst_misc_transition_from_male1",
@@ -1004,6 +1003,18 @@
     "m_c": {
       "gender": ["male"]
     },
-    "new_gender": ["trans female", "nonbinary"]
+    "new_gender": ["trans female", "demigirl", "nonbinary", "neutrois", "agender", "genderqueer", "demienby", "genderfluid", "bigender", "pangender", "questioning"]
+  },
+  {
+    "event_id": "dst_misc_transition_from_null1",
+    "location": ["desert"],
+    "season": ["any"],
+    "sub_type": ["transition"],
+    "frequency": 2,
+    "event_text": "As the sands are ever changing so is m_c who carefully explains that null no longer fits {PRONOUN/m_c/object}.",
+    "m_c": {
+      "gender": ["null"]
+    },
+    "new_gender": ["intergender", "trans male", "demiboy", "trans female", "demigirl", "nonbinary", "neutrois", "agender", "genderqueer", "demienby", "genderfluid", "bigender", "pangender", "questioning"]
   }
 ]

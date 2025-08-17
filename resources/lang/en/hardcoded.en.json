@@ -47,6 +47,7 @@
         },
         "new_kit_thought": "Snuggles up to the belly of r_c",
         "event_mediator_app": "m_c has chosen to use {PRONOUN/m_c/poss} skills and experience to help solve the Clan's disagreements. A meeting is called, and {PRONOUN/m_c/subject} {VERB/m_c/become/becomes} the Clan's newest mediator.",
+        "event_permaqueen_app": "m_c has chosen to use their skills and experience to help nuture the Clan's young. A meeting is called and with pride {PRONOUN/lead_name/subject} {VERB/m_c/become/becomes} the Clan's newest permaqueen.",
         "herbs_found": {
             "zero": "med_name could not find any herbs this moon.",
             "many": "med_name gathered %{insert} this moon."
@@ -87,6 +88,8 @@
             "one": " {PRONOUN/m_c/subject/CAP} {VERB/m_c/bring/brings} along {PRONOUN/m_c/poss} kitten.",
             "many": " {PRONOUN/m_c/subject/CAP} {VERB/m_c/bring/brings} along {PRONOUN/m_c/poss} kittens."
         },
+		"event_lost_tagged": " {PRONOUN/m_c/subject/CAP} {VERB/m_c/smell/smells} a bit different and one of {PRONOUN/m_c/poss} ears is tagged.",
+		"event_lost_cutter": "Unfortunately not all seems well. m_c has to stop by the Medicine Den due to {PRONOUN/m_c/poss} worrying case of Cutter's Sickness.",
         "kittencough_spread": {
             "one": "Kittencough has spread around the nursery. %{kits} is affected.",
             "many": "Kittencough has spread around the nursery. %{kits} are affected."},
@@ -100,7 +103,12 @@
         "thought_new_kitten": "Is snuggled safe in the nursery",
         "thought_meeting": "Is wondering about those new cats",
         "thought_new_dead": "Explores a new, starry world",
-        "scar_event0": "m_c's %{injury} has healed, but {PRONOUN/m_c/subject}'ll always carry evidence of it on {PRONOUN/m_c/poss} pelt.",
+        "scar_tagged_lost": "m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} neutered by Twolegs.",
+		"scar_tagged_kittypet": "m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken by {PRONOUN/m_c/poss} Twolegs to the Cutter.",
+		"scar_neutered_notag": "m_c was neutered when {PRONOUN/m_c/subject} {VERB/m_c/were/was} taken to the cutter by twolegs.",
+        "scar_neutered": "m_c was neutered and tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught by twolegs.",
+		"scar_tagged": "m_c was tagged on the ear by twolegs.",
+		"scar_event0": "m_c's %{injury} has healed, but {PRONOUN/m_c/subject}'ll always carry evidence of it on {PRONOUN/m_c/poss} pelt.",
         "scar_event1": "m_c healed from {PRONOUN/m_c/poss} %{injury} but will forever be marked by a scar.",
         "scar_event2": "m_c's %{injury} has healed, but the injury left {PRONOUN/m_c/object} scarred.",
         "move_on_dead_mate": "m_c will always love r_c, but has decided to move on.",

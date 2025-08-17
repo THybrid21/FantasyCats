@@ -11,8 +11,8 @@ import ujson
 from scripts.game_structure import constants
 from scripts.cat.enums import CatRank, CatGroup
 from scripts.housekeeping.datadir import get_save_dir
-from scripts.game_structure.game_essentials import game
-from scripts.cat.pelts import Pelt
+
+
 class Name:
     """
     Stores & handles name generation.
@@ -70,6 +70,11 @@ class Name:
                             _tmp = new_name.split(":")
                             names_dict["special_suffixes"][_tmp[0]] = _tmp[1]
 
+    '''if cat.species == "slugcat":
+      if os.path.exists("resources/dicts/names/slugcat_names.json"):
+        with open("resources/dicts/names/slugcat_names.json", encoding="utf-8") as read_file:
+            names_dict = ujson.loads(read_file.read()) '''
+
     def __init__(
         self,
         prefix=None,
@@ -87,27 +92,30 @@ class Name:
 
         try:
             color = cat.pelt.colour
-            eyes = cat.pelt.eye_colour
             pelt = cat.pelt.name
-            tortiepattern = cat.pelt.tortiepattern
+            tortiebase = cat.pelt.tortiebase
+            length = cat.pelt.length
+            skin = cat.pelt.skin
+            species = cat.species
         except AttributeError:
             color = None
-            eyes = None
             pelt = None
-            tortiepattern = None
+            tortiebase = None
+            length = None
+            skin = None
+            species = None
 
-        name_fixpref = False
-        # Set prefix
-
+        name_fixpref = False       
+        
         # Set prefix
         if prefix is None:
-            self.give_prefix(colour, pelt_length, skin, biome)
+            self.give_prefix(color, length, skin, biome)
             # needed for random dice when we're changing the Prefix
             name_fixpref = True
-                    
+
         # Set suffix
         if self.suffix is None:
-            self.give_suffix(pelt, pelt_length, biome, tortiebase)
+            self.give_suffix(pelt, length, species, biome, tortiebase)
             if name_fixpref and self.prefix is None:
                 # needed for random dice when we're changing the Prefix
                 name_fixpref = False
@@ -150,10 +158,10 @@ class Name:
             ):
                 # check if random die was for prefix
                 if name_fixpref:
-                    self.give_prefix(colour, pelt_length, skin, biome)
+                    self.give_prefix(color, length, skin, biome)
                 else:
-                    self.give_suffix(pelt, pelt_length, biome, tortiebase)
-                
+                    self.give_suffix(pelt, length, species, biome, tortiebase)
+
                 nono_name = self.prefix + self.suffix
                 possible_three_letter = (
                     self.prefix[-2:] + self.suffix[0],
@@ -171,12 +179,32 @@ class Name:
                 ):
                     double_animal = False
                 i += 1
+
     def __str__(self):
         return self.__repr__()
 
     # Generate possible prefix
-    def give_prefix(self, colour, pelt_length, skin, biome):
-        
+    def give_prefix(self, color, length, skin, biome):
+        """Generate possible prefix."""
+
+        # Done this so it will no longer import and complain, so now the colours are here to :D
+        cream_colours = ['BEIGE', 'PANTONE', 'BANNANA', 'PALECREAM', 'CREAM', 'CORAL', 'MEW']
+        ginger_colours = ['PALEGINGER', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 
+                            'PALERED', 'APPLE', 'BLUSH', 'RED', 'SCARLET', 'DARKRED', 'GARNET']
+        black_colours = ['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW']
+        grey_colours = ['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY']
+        white_colours = ['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'GLASS', 'PALEBOW', 'IVORY', 'PETAL']
+        brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'TAN', 'CHESTNUT', 'DARKBROWN',
+                         'CHOCOLATE', 'COFFEE', 'UMBER']
+        blue_colours = ['SKY', 'POWDERBLUE', 'SHINYMEW', 'SAPPHIRE', 'OCEAN', 'COBALT', 'DARKCOBALT', 'INDIGO', 'NIGHT']
+        yellow_colours = ['LEMON', 'LAGUNA', 'YELLOW', 'BEE', 'PYRITE', 'PINEAPPLE', 'YELLOW-GREEN', 'DIJON']
+        purple_colours = ['PALESTRAKIT', 'FLORAL', 'AMYTHYST', 'ORCHID', 'STRAKIT', 'PURPLE', 'WINE', 'DARKSTRAKIT']
+        green_colours = ['CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 'DARKGREEN',
+                         'DARKOLIVE', 'FERN', 'FOREST']
+        pride_colours = ['DEMIENBY', 'DEMIBOY', 'TRANS', 'ARO', 'DEMIROM', 'AGENDER', 
+        'PAN', 'DEMIGIRL', 'GENDERQUEER', 'DEMISEX', 'ASEXUAL', 'GENDER', 'BISEX', 
+        'POLY', 'ENBY', 'INTERSEX', 'MLM', 'WLW', 'GAYBOW']                         
+
         named_after_biome = not random.getrandbits(3) # chance for True is 1/8
         # Add possible prefix categories to list.
         possible_prefix_categories = []
@@ -187,31 +215,31 @@ class Name:
             elif skin in ["ALBINO", "ALBINOGILL"]:
                 possible_prefix_categories.append(self.names_dict["white_prefixes"])                
         
-        if colour is not None:
-            if colour in Pelt.black_colours:
+        if color is not None:
+            if color in black_colours:
                 possible_prefix_categories.append(self.names_dict["black_prefixes"])
-            elif colour in Pelt.grey_colours:
+            elif color in grey_colours:
                 possible_prefix_categories.append(self.names_dict["grey_prefixes"])
-            elif colour in Pelt.white_colours:
+            elif color in white_colours:
                 possible_prefix_categories.append(self.names_dict["white_prefixes"])
-            elif colour in Pelt.ginger_colours:
+            elif color in ginger_colours:
                 possible_prefix_categories.append(self.names_dict["ginger_prefixes"])
-            elif colour in Pelt.brown_colours:
+            elif color in brown_colours:
                 possible_prefix_categories.append(self.names_dict["brown_prefixes"])                   
-            elif colour in Pelt.cream_colours:
+            elif color in cream_colours:
                 possible_prefix_categories.append(self.names_dict["cream_prefixes"])
-            elif colour in Pelt.yellow_colours:
+            elif color in yellow_colours:
                 possible_prefix_categories.append(self.names_dict["yellow_prefixes"])
-            elif colour in Pelt.green_colours:
+            elif color in green_colours:
                 possible_prefix_categories.append(self.names_dict["green_prefixes"])                    
-            elif colour in Pelt.blue_colours:
+            elif color in blue_colours:
                 possible_prefix_categories.append(self.names_dict["blue_prefixes"])
-            elif colour in Pelt.purple_colours:
+            elif color in purple_colours:
                 possible_prefix_categories.append(self.names_dict["purple_prefixes"])
-            elif colour in Pelt.pride_colours:
-                possible_prefix_categories.append(self.names_dict["pride_prefixes"][colour]) 
+            elif color in pride_colours:
+                possible_prefix_categories.append(self.names_dict["pride_prefixes"][color])
         
-        if pelt_length == "bare":
+        if length == "bare":
             possible_prefix_categories.append(self.names_dict["sphynx_prefixes"])             
         
         if possible_prefix_categories and not named_after_biome:
@@ -233,7 +261,7 @@ class Name:
         with contextlib.suppress(NameError):
             if self.prefix in names.prefix_history:
                 # do this recursively until a name that isn't on the history list.
-                self.give_prefix(eyes, colour, biome)
+                self.give_prefix(color, length, skin, biome)
                 # prevent infinite recursion
                 if len(names.prefix_history) > 0:
                     names.prefix_history.pop(0)
@@ -242,33 +270,39 @@ class Name:
             # Set the maximin length to 8 just to be sure
             if len(names.prefix_history) > 8:
                 # removing at zero so the oldest gets removed
-                names.prefix_history.pop(0)                
+                names.prefix_history.pop(0)
 
     # Generate possible suffix
-    def give_suffix(self, pelt, biome, tortiepattern):
+    def give_suffix(self, pelt, length, species, biome, tortiebase):
         """Generate possible suffix."""
+        tabbies = ["Rat", "Dunnart", "Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
+        spotted = ["Lantern", "Speckled", "Rosette"]
+        plain = ["SingleColour", "TwoColour", "Backed", "Smoke", "Rat", "Dunnart"]
+        exotic = ["Armored", "Bengal", "Marbled", "Masked"]
+        torties = ["Tortie", "Calico"]
+
         named_after_pelt = not random.getrandbits(2) # Pelt name only gets used if there's an associated suffix.
         possible_suffix_categories = []
 
-        if pelt_length == "bare":
+        if length == "bare":
             possible_suffix_categories.append(self.names_dict["sphynx_suffixes"])
-        elif pelt_length == "snat":
+        elif species == "snat":
             possible_suffix_categories.append(self.names_dict["snat_suffixes"])        
-        elif pelt_length == "skele":
+        elif species == "skele":
             possible_suffix_categories.append(self.names_dict["skele_suffixes"])  
-        elif pelt_length == "catfish":
+        elif species == "catfish":
             possible_suffix_categories.append(self.names_dict["amphi_suffixes"])
         else:
             possible_suffix_categories.append(self.names_dict["normal_suffixes"]) 
 
         if named_after_pelt:
-            if pelt in Pelt.tabbies or tortiebase in Pelt.tabbies:
+            if pelt in tabbies or tortiebase in tabbies:
                 possible_suffix_categories.append(self.names_dict["tabby_suffixes"])
-            elif pelt in Pelt.spotted or tortiebase in Pelt.spotted:
+            elif pelt in spotted or tortiebase in spotted:
                 possible_suffix_categories.append(self.names_dict["spotted_suffixes"])
-            elif pelt in Pelt.exotic or tortiebase in Pelt.exotic:
+            elif pelt in exotic or tortiebase in exotic:
                 possible_suffix_categories.append(self.names_dict["exotic_suffixes"])
-            if pelt in Pelt.torties:
+            if pelt in torties:
                 possible_suffix_categories.append(self.names_dict["tortie_suffixes"])
 
         suffix_category = random.choice(possible_suffix_categories)
@@ -297,7 +331,6 @@ class Name:
             )
         if constants.CONFIG["fun"]["april_fools"]:
             return f"{self.prefix}egg"
-
         return self.prefix + self.suffix
 
 

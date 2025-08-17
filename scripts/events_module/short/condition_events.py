@@ -280,6 +280,20 @@ class Condition_Events:
                     "condition_related", f"{game.clan.game_mode}_illness_chance"
                 )
             )
+            try:
+                if cat.status.rank.is_baby():
+                    num_queens = 0
+                    for c in game.clan.clan_cats:
+                        if not Cat.all_cats.get(c).outside and not Cat.all_cats.get(c).dead:
+                            if Cat.all_cats.get(c).status.rank.is_any_permaqueen_rank():
+                                num_queens+=1
+                    random_number+=(num_queens*5)
+            except:
+                print("couldn't handle permaqueen illness prevention")
+
+            if cat.vaccinated and random.randint(1, 4) != 1:
+                random_number = int(random_number * 10)
+
             if (
                 not cat.dead
                 and not cat.is_ill()
@@ -307,6 +321,8 @@ class Condition_Events:
                 # if a non-kitten got kittencough, switch it to whitecough instead
                 if chosen_illness == "kittencough" and not cat.status.rank.is_baby():
                     chosen_illness = "whitecough"
+                elif chosen_illness == 'nest wetting' and not (cat.status.rank.is_baby() or cat.status == CatRank.APPRENTICE):
+                    chosen_illness = 'night dirtmaking'
                 # make em sick
                 cat.get_ill(chosen_illness)
 
@@ -378,13 +394,13 @@ class Condition_Events:
         # handle if the current cat is already injured
         if cat.is_injured():
             for injury in cat.injuries:
-                if injury == "pregnant" and cat.ID not in game.clan.pregnancy_data:
+                if injury in ["pregnant", "faux pregnant"] and cat.ID not in game.clan.pregnancy_data:
                     print(
                         f"INFO: deleted pregnancy condition of {cat.ID} due no pregnancy data in the clan."
                     )
                     del cat.injuries[injury]
                     return triggered
-                elif injury == "pregnant":
+                elif injury in ["pregnant", "faux pregnant"]:
                     return triggered
             triggered = Condition_Events.handle_already_injured(cat)
         else:
@@ -467,23 +483,22 @@ class Condition_Events:
             "LEGBITE": ["weak leg"],
             "TOETRAP": ["weak leg"],
             "HINDLEG": ["weak leg"],
+            "DECLAWED": ["declawed"],
+            "RASH": ["recurring rash"],
+            "SNAKETHREE": ["one bad eye"],
+            "RIGHTTAG": ["infertile"],
+            "LEFTTAG": ["infertile"]
         }
 
         scarless_conditions = (
-            "weak leg",
-            "paralyzed",
-            "raspy lungs",
-            "wasting disease",
-            "blind",
-            "failing eyesight",
-            "one bad eye",
-            "partial hearing loss",
-            "deaf",
-            "constant joint pain",
-            "constantly dizzy",
-            "recurring shock",
-            "lasting grief",
-            "persistent headaches",
+            "weak leg", "paralyzed", "raspy lungs", "wasting disease", "strange lump", "blind", "failing eyesight", "one bad eye",
+            "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
+            "lasting grief", "persistent headaches", "vacant",
+            "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
+            "obsessive mind", "comet spirit", "antisocial", "thunderous spirit", "otherworldly mind", "mute", "ongoing sleeplessness", 
+            "echoing memory", "regressor", "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "constant fatigue", 
+            "face blindness", "body biter", "chattering tongue", "plural soul",
+            "infertile", "addiction"
         )
 
         got_condition = False
@@ -550,8 +565,12 @@ class Condition_Events:
             "yellowcough": "redcough",
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
-            "stomachache": "diarrhea",
-            "grief stricken": "lasting grief",
+            "anxiety attack": "panic attack",
+            "panic attack": "paranoia",
+            "ticks": "tick illness",
+            "nest wetting": "night dirtmaking",
+            "verbal shutdown": "mute",
+            "word loss": "mute"
         }
         Condition_Events.rebuild_strings()
         # ---------------------------------------------------------------------------- #
@@ -665,7 +684,19 @@ class Condition_Events:
         triggered = False
         event_list = []
 
-        injury_progression = {"poisoned": "redcough", "shock": "lingering shock"}
+        injury_progression = {
+            "poisoned": "redcough",
+            "shock": "lingering shock",
+            "tick bites": "tick illness",
+            "severe tick bites": "tick illness",
+            "rat bite": "rat bite fever",
+            "sunblindness": "fading eyesight",
+            "severe sunburn": "wasting disease",
+            "wrenched claws": "declawed",
+            "fatigue": "constant fatigue",
+            "cutter's sickness": "infertile"
+        }
+
 
         # need to hold this number so that we can check if the leader has died
         starting_life_count = game.clan.leader_lives
@@ -861,6 +892,10 @@ class Condition_Events:
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
             "partial hearing loss": "deaf",
+            "lasting grief": "heavy soul",
+            "recurring shock": "echoing shock",
+            "echoing shock": "recurring shock",
+            "intermittent paralysis": "paralyzed"
         }
 
         cat_dict = {"m_c": cat}
@@ -1101,6 +1136,14 @@ class Condition_Events:
                 if risk["name"] in progression:
                     if progression[risk["name"]] in dictionary:
                         skip = True
+                #Making sure World Tired can only be given if you have dangerous settings on        
+                if not game.settings["allow danger"]:
+                    if risk['name'] in ["world tired", "body biter", "addiction"]:
+                        skip = True      
+                if not get_clan_setting("pregnancy turmoil"):
+                    if risk['name'] == "turmoiled litter":
+                            skip = True
+
                 # if it is, then break instead of giving the risk
                 if skip is True:
                     break
@@ -1115,6 +1158,7 @@ class Condition_Events:
                             if new_condition_name in [
                                 "an infected wound",
                                 "a festering wound",
+                                "anaphylaxis"
                             ]:
                                 # if it's infection or festering, we're removing the chance completely
                                 # this is both to prevent annoying infection loops
@@ -1187,6 +1231,15 @@ class Condition_Events:
                 # here we give the new condition
                 if new_condition_name in Condition_Events.INJURIES:
                     cat.get_injured(new_condition_name, event_triggered=event_triggered)
+                    keys = dictionary[condition].keys()
+                    complication = None
+                    if new_condition_name == "anaphylaxis":
+                        complication = "anaphylaxis"
+                    if complication is not None:
+                        if "complication" in keys:
+                            dictionary[condition]["complication"] = complication
+                        else:
+                            dictionary[condition].update({"complication": complication})
                     break
                 elif new_condition_name in Condition_Events.ILLNESSES:
                     cat.get_ill(new_condition_name, event_triggered=event_triggered)

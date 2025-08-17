@@ -207,8 +207,7 @@ def json_load():
             new_cat.neutered = cat["neutered"] if "neutered" in cat else False
             new_cat.neutered_message = cat["neutered_message"] if "neutered_message" in cat else False
             new_cat.vaccinated = cat["vaccinated"] if "vaccinated" in cat else False
-            new_cat.exiled = cat["exiled"]
-            new_cat.driven_out = cat["driven_out"] if "driven_out" in cat else False
+            new_cat.fulltransed = cat["fulltransed"] if "fulltransed" in cat else False
 
             if "skill_dict" in cat:
                 new_cat.skills = CatSkills(cat["skill_dict"])

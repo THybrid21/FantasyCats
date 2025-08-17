@@ -1,5 +1,10 @@
 {
     "seizure": {
+		"severe headache": [
+			"After yet another seizure, m_c has been complaining to r_c of a headache that just refuses to go away.",
+			"After m_c's last seizure {PRONOUN/m_c/subject} {VERB/m_c/have/has} been curled in the very back of {PRONOUN/m_c/poss} den trying to avoid aggravating {PRONOUN/m_c/poss} already severe headache.",
+			"m_c hisses at everyone else, {PRONOUN/m_c/poss} head feels like it's splitting open."
+		],
 		"bruises": [
 			"r_c gently tends to m_c once the shaking has stopped. Asking them where it hurts and fluffing up the nest to try and soothe the new bruises.",
 			"m_c pants, gingerly wincing as {PRONOUN/m_c/subject} {VERB/m_c/shift/shifts} in {PRONOUN/m_c/poss} nest.",
@@ -10,11 +15,72 @@
 			"m_c whines, it's not enough just that {PRONOUN/m_c/subject} {VERB/m_c/are/is} still slightly shaking from residules, now all {PRONOUN/m_c/poss} muscles ache too.",
 			"If m_c close {PRONOUN/m_c/poss} eyes the pain isn't quite so bad, just a dull throb really. But it doesn't easily let them rest after {PRONOUN/m_c/poss} seizure."
 		]
+	},	
+	"spasms": {
+		"bruises": [
+			"Once m_c's limb stops spasming r_c carefully comes and checks {PRONOUN/m_c/object} over. It would seem {PRONOUN/m_c/subject} {VERB/m_c/have/has} a few new bruises.",
+			"m_c sighs once {PRONOUN/m_c/poss} limb returns to {PRONOUN/m_c/poss} control, stretching it out and wincing when it feels tender."
+		],
+		"sore": [
+			"m_c complains to r_c that after all the spasming {PRONOUN/m_c/poss} limb feels tender and sore.",
+			"m_c winces, awkwardly trying to massage {PRONOUN/m_c/poss} limb to soothe the aching muscles.",
+			"Relaxing in {PRONOUN/m_c/poss} nest it's all m_c can do to brace against the pulse of pain from where {PRONOUN/m_c/subject} knocked {PRONOUN/m_c/poss} limbs too hard."
+		]
+	},
+    "diarrhea": {
+        "dehydrated": [
+            "Diarrhea has been taking a toll on m_c, and r_c is fighting hard to keep {PRONOUN/m_c/object} hydrated.",
+            "m_c feels hollow and dry due to {PRONOUN/m_c/poss} digestion problems."
+        ]
+    },
+    "fleas": {
+        "torn pelt": [
+            "m_c has been scratching incessantly at the fleas infesting {PRONOUN/m_c/poss} pelt. r_c scolds {PRONOUN/m_c/object} for it as {PRONOUN/r_c/subject} gently {VERB/r_c/clean/cleans} the now raw areas of m_c's pelt.",
+            "m_c scratches and scratches and scratches, ever frustrated by {PRONOUN/m_c/poss} fleas. The constant scratching has begun to tear up {PRONOUN/m_c/poss} pelt, leaving raw patches of skin exposed.",
+            "m_c's constant flea scratching has torn {PRONOUN/m_c/poss} pelt.",
+            "m_c can't help scratching at {PRONOUN/m_c/poss} fleas and has left raw spots on {PRONOUN/m_c/poss} pelt.",
+            "Raw hairless patches are forming on m_c's pelt as {PRONOUN/m_c/subject} {VERB/m_c/scratch/scraches} and {VERB/m_c/scratch/scratches} at {PRONOUN/m_c/poss} fleas."
+        ],
+		"rash": [
+			"r_c fusses gently over m_c's pelt as {PRONOUN/r_c/subject} {VERB/r_c/treat/treats} them for fleas, it appears as though a rash is beginning to form below {PRONOUN/m_c/poss} fur.",
+			"Between all the scratching at the fleas at not been able to groom {PRONOUN/m_c/self} properly m_c has gotten a rash",
+			"The itching in m_c's pelt only seems to be growing worse and worse, and the skin looks red and raw below {PRONOUN/m_c/poss} fur.",
+			"Some of m_c's fur is beginning to flake and fall out where {PRONOUN/m_c/subject} {VERB/m_c/have/has} been itching and biting at the blistery rash forming."
+		]
+    },
+	"ticks": {
+		"torn pelt": [
+			"With all the scratching that m_c has been doing r_c isn't shocked to discover that {PRONOUN/m_c/subject} {VERB/m_c/have/has} torn {PRONOUN/m_c/poss} own pelt up more than the ticks have.",
+			"m_c licks at the new opening in {PRONOUN/m_c/poss} pelt, grumbling about all the trouble {PRONOUN/m_c/subject} {VERB/m_c/are/is} causing themselves.",
+			"Between the ticks and the itching m_c has made {PRONOUN/m_c/poss} pelt raw and sore."
+		],
+		"tick bites": [
+			"m_c complains to r_c about the smell of the mouse bile soaked moss, as well of how it stings in the open bites.",
+			"While the ticks have been mostly removed, the leftover bites dully ache on m_c",
+			"m_c hisses as a clanmate brushes aside {PRONOUN/m_c/poss} pelt to check on the tick bites."
+		],
+		"severe tick bites": [
+			"m_c's heart sinks at the look in r_c's eyes. It would seem the ticks {PRONOUN/m_c/subject} caught aren't the regular ones.",
+			"m_c's been feeling a little bit more dizzy than usual, it would seem {PRONOUN/m_c/poss} ticks are particularly aggressive this season.",
+			"Rather than complaining about the bites and mouse bile, m_c has been incredibly quiet. Barely even responding to {PRONOUN/m_c/poss} concerned denmates."
+		],
+		"tick illness": [
+			"While r_c is relieved that m_c's ticks have been cleared from {PRONOUN/m_c/poss} pelt, on closer examination there's a rather worrying rash found beneath {PRONOUN/m_c/poss} fur.",
+			"m_c complains of heat and itchiness, while {PRONOUN/m_c/poss} ticks are gone it appears that something rather nasty has been left behind.",
+			"It appears that despite the careful treatment of {PRONOUN/m_c/poss} ticks poor m_c has gotten tick illness from the bites."
+		]
 	},
     "an infected wound": {
         "a festering wound": [
             "The stink of infection has strengthened and worsened. r_c mutters about different herbs as m_c watches {PRONOUN/r_c/object} change yet another poultice that probably won't work.",
             "m_c swears {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been cleaning it, but {PRONOUN/m_c/poss} wound has begun to fester like week-old prey."
+        ]
+    },
+    "a festering wound": {
+        "strange lump": [
+            "r_c isn't sure where this lump came from, but m_c isn't sure it's good news.",
+            "m_c complains about being unable to sleep properly, leading the medicine cat to find a strange lump.",
+            "m_c won't let r_c see the new lump that appeared on {PRONOUN/m_c/poss} body."
         ]
     },
     "running nose": {
@@ -24,7 +90,7 @@
 			"Despite {PRONOUN/m_c/poss} running nose only getting worse, m_c refuses to stay in the medicine den because it's only a little whitecough."
         ],
 		"nosebleed": [
-			"Concerned m_c goed to r_c about the nosebleed that {PRONOUN/m_c/poss} running nose has turned into.",
+			"Concerned m_c goes to r_c about the nosebleed that {PRONOUN/m_c/poss} running nose has turned into.",
 			"m_c has noticed that the fluid running from {PRONOUN/m_c/poss} nose appears to be blood."
 		]
     },
@@ -138,27 +204,6 @@
 			"m_c wakes up frozen with beasts looming over {PRONOUN/m_c/object}."
 		]
     },
-    "diarrhea": {
-        "dehydrated": [
-            "Diarrhea has been taking a toll on m_c, and r_c is fighting hard to keep {PRONOUN/m_c/object} hydrated.",
-            "m_c feels hollow and dry due to {PRONOUN/m_c/poss} digestion problems."
-        ]
-    },
-    "fleas": {
-        "torn pelt": [
-            "m_c has been scratching incessantly at the fleas infesting {PRONOUN/m_c/poss} pelt. r_c scolds {PRONOUN/m_c/object} for it as {PRONOUN/r_c/subject} gently {VERB/r_c/clean/cleans} the now raw areas of m_c's pelt.",
-            "m_c scratches and scratches and scratches, ever frustrated by {PRONOUN/m_c/poss} fleas. The constant scratching has begun to tear up {PRONOUN/m_c/poss} pelt, leaving raw patches of skin exposed.",
-            "m_c's constant flea scratching has torn {PRONOUN/m_c/poss} pelt.",
-            "m_c can't help scratching at {PRONOUN/m_c/poss} fleas and has left raw spots on {PRONOUN/m_c/poss} pelt.",
-            "Raw hairless patches are forming on m_c's pelt as {PRONOUN/m_c/subject} {VERB/m_c/scratch/scraches} and {VERB/m_c/scratch/scratches} at {PRONOUN/m_c/poss} fleas."
-        ],
-		"rash": [
-			"r_c fusses gently over m_c's pelt as {PRONOUN/r_c/subject} {VERB/r_c/treat/treats} them for fleas, it appears as though a rash is beginning to form below {PRONOUN/m_c/poss} fur.",
-			"Between all the scratching at the fleas at not been able to groom {PRONOUN/m_c/self} properly m_c has gotten a rash",
-			"The itching in m_c's pelt only seems to be growing worse and worse, and the skin looks red and raw below {PRONOUN/m_c/poss} fur.",
-			"Some of m_c's fur is beginning to flake and fall out where {PRONOUN/m_c/subject} {VERB/m_c/have/has} been itching and biting at the blistery rash forming."
-		]
-    },
     "grief stricken": {
         "lasting grief": [
             "m_c gazes blankly at the wall of the medicine cat den, not acknowledging r_c beside {PRONOUN/m_c/object}. r_c sighs and sits beside {PRONOUN/m_c/object}, hoping that {PRONOUN/r_c/poss} presence can provide some comfort.",
@@ -174,15 +219,22 @@
             "m_c jolts awake and immediately leaves the den to clear {PRONOUN/m_c/poss} head, hoping some fresh night air will help {PRONOUN/m_c/object} cope with the sadness and memories."
         ]
     },
-	"spasms": {
-		"bruises": [
-			"Once m_c's limb stops spasming r_c carefully comes and checks {PRONOUN/m_c/object} over. It would seem {PRONOUN/m_c/subject} {VERB/m_c/have/has} a few new bruises.",
-			"m_c sighs once {PRONOUN/m_c/poss} limb returns to {PRONOUN/m_c/poss} control, stretching it out and wincing when it feels tender."
+	"tick illness": {
+		"rash": [
+			"r_c sighs as m_c once more complains about the rather persistant rash that is the main sign of {PRONOUN/m_c/poss} illness.",
+			"The itchiness of m_c's pelt refuses to abate.",
+			"m_c whines to {PRONOUN/m_c/poss} clanmates about the rash that continues to persist."
 		],
-		"sore": [
-			"m_c complains to r_c that after all the spasming {PRONOUN/m_c/poss} limb feels tender and sore.",
-			"m_c winces, awkwardly trying to massage {PRONOUN/m_c/poss} limb to soothe the aching muscles.",
-			"Relaxing in {PRONOUN/m_c/poss} nest it's all m_c can do to brace against the pulse of pain from where {PRONOUN/m_c/subject} knocked {PRONOUN/m_c/poss} limbs too hard."
+		"anaphylaxis": [
+			"r_c fusses and worries over m_c as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to breathe through the anaphylaxis choking {PRONOUN/m_c/poss} throat.",
+			"One morning m_c wakes up choking, unable to get any air down {PRONOUN/m_c/poss} throat.",
+			"The illness from the tick has lead to an anaphylactic reaction in m_c.",
+			"Poor m_c struggles to even form the proper cat-sign to request help as {PRONOUN/m_c/poss} throat constricts with an anaphylactic reaction."
+		],
+		"intermittent paralysis": [
+			"With some level of despair m_c talks to r_c about the tremors and inconsistency of {PRONOUN/m_c/poss} legs ever since the illness started.",
+			"It would appear that m_c's tick illness has led to the development of intermittent paralysis.",
+			"When m_c notices that {PRONOUN/m_c/subject} can't get up properly from the nest {PRONOUN/m_c/subject} {VERB/m_c/panic/panics}."
 		]
 	},
 	"anxiety attack": {
@@ -231,6 +283,31 @@
 			"From all of the panic m_c's head is spinning and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not sure {PRONOUN/m_c/subject} can trust {PRONOUN/m_c/poss} own paws."
 		]
 	},
+	"paranoia": {
+		"nightmares": [
+			"r_c watches as m_c stubbornly refuses to step even a single paw in the medicine den. Not even to seek relief from {PRONOUN/m_c/poss} nightmares.",
+			"With how paranoid m_c has been these past few days it's not a surprise when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to have persistent nightmares.",
+			"m_c jolts awake in {PRONOUN/m_c/poss} nest, another nightmare."
+		],
+		"shock": [
+			"r_c listens patiently as m_c talks about how much pressure {VERB/m_c/feel/feels} like {PRONOUN/m_c/subject} {VERB/m_c/are/is} under recently.",
+			"m_c's been feeling extra shaken this moon, unable to quite explain why.",
+			"In m_c's paranoia {PRONOUN/m_c/subject} {VERB/m_c/have/has} worked {PRONOUN/m_c/self} into a state of shock.",
+			"Due to paranoia m_c is experiencing a case of shock."
+		],
+		"lethargy": [
+			"r_c worries about m_c's recent expression of lethargy.",
+			"All of m_c's paranoia has left {PRONOUN/m_c/object} feeling rather lethargic recently.",
+			"As m_c's paranoia wears on {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to feel more and more tired wondering when it'll feel safe again.",
+			"m_c refuses to interact with {PRONOUN/m_c/poss} clanmates, too worn down to care anymore."
+		],
+		"verbal shutdown": [
+			"m_c creeps into the medicine den to talk to r_c, only-- it would appear that all of {PRONOUN/m_c/poss} words have abandoned {PRONOUN/m_c/object} as {PRONOUN/m_c/subject} {VERB/m_c/use/uses} cat-sign instead.",
+			"m_c turns {PRONOUN/m_c/poss} tail on {PRONOUN/m_c/poss} clanmates, refusing to speak to anyone.",
+			"m_c uses cat-sign to speak to {PRONOUN/m_c/poss} clanmates, worried that someone or something is listening in on everything {PRONOUN/m_c/subject} {VERB/m_c/say/says}.",
+			"Out of a growing sense of unease and distrust m_c shuts down verbally, only communicating in cat-sign when approached."
+		]
+	},
 	"rat bite fever": {
       "joint pain": [
 			"m_c whimpers as the pain echoes through {PRONOUN/m_c/poss} joints, the heat rolling off {PRONOUN/m_c/poss} body while {PRONOUN/m_c/subject} {VERB/m_c/lay/lies} begging r_c to take away even the barest pain.",
@@ -258,23 +335,6 @@
 			"m_c asks a denmate for assistance to the medicine den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} not so proud to hide that {PRONOUN/m_c/poss} leg doesn't want to fully support {PRONOUN/m_c/object} anymore."
       ]
     },
-	"ticks": {
-		"torn pelt": [
-			"With all the scratching that m_c has been doing r_c isn't shocked to discover that {PRONOUN/m_c/subject} {VERB/m_c/have/has} torn {PRONOUN/m_c/poss} own pelt up more than the ticks have.",
-			"m_c licks at the new opening in {PRONOUN/m_c/poss} pelt, grumbling about all the trouble {PRONOUN/m_c/subject} {VERB/m_c/are/is} causing themselves.",
-			"Between the ticks and the itching m_c has made {PRONOUN/m_c/poss} pelt raw and sore."
-		],
-		"tick bites": [
-			"m_c complains to r_c about the smell of the mouse bile soaked moss, as well of how it stings in the open bites.",
-			"While the ticks have been mostly removed, the leftover bites dully ache on m_c",
-			"m_c hisses as a clanmate brushes aside {PRONOUN/m_c/poss} pelt to check on the tick bites."
-		],
-		"severe tick bites": [
-			"m_c's heart sinks at the look in r_c's eyes. It would seem the ticks {PRONOUN/m_c/subject} caught aren't the regular ones.",
-			"m_c's been feeling a little bit more dizzy than usual, it would seem {PRONOUN/m_c/poss} ticks are particularly aggressive this season.",
-			"Rather than complaining about the bites and mouse bile, m_c has been incredibly quiet. Barely even responding to {PRONOUN/m_c/poss} concerned denmates."
-		]
-	},
 	"seasonal lethargy": {
 		"heavy soul": [
 			"Something is wrong, m_c looks up at r_c, something is wrong and the heavy blanket of tiredness hasn't left yet. r_c can only shake {PRONOUN/r_c/poss} head, it would appear that {PRONOUN/m_c/poss} soul has become weighted down and heavy.",
@@ -282,7 +342,15 @@
 			"Usually with the warmth and the frost m_c finds that the heavy weight of exhaustion has left, but now all {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like is curling back up again and never leaving the den.",
 			"Something in m_c's chest feels tight, feels numb really. A weight that {PRONOUN/m_c/subject} {VERB/m_c/have/has} to carry around for the rest of {PRONOUN/m_c/poss} life."
 		]
-	},	
+	},
+	"verbal shutdown": {
+		"mute": [
+			"After all this time some of the clan thinks that m_c should have started speaking again. r_c simply shakes their head, it's not up to those cats to demand that.",
+			"m_c simply shakes {PRONOUN/m_c/poss} head when a clanmate asks if {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to start speaking again soon.",
+			"The clan doesn't think twice about m_c's silence, that's just how {PRONOUN/m_c/subject} {VERB/m_c/are/is}.",
+			"m_c softly pads out into the clearing, {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need to use words to talk. {PRONOUN/m_c/poss} cat-sign is loud enough."
+		]
+	},
 	"stimming": {
 		"parroting": [
 			"It appears to r_c as though m_c is parroting as a form of stimming.",
@@ -294,13 +362,18 @@
 			"Reluctantly m_c has to admit {PRONOUN/m_c/subject} might have a problem with body biting.",
 			"m_c stares at {PRONOUN/m_c/poss} bleeding paws with the realisation that it's self inflicted."
 		]
+	},	
+	"zoomies": {
+		"bruises": [
+			"After zooming around for most of the day m_c comes over to r_c's den to sheepishly ask for some help with the new bruises {PRONOUN/m_c/subject} {VERB/m_c/have/has} obtained.",
+			"No serious harm has come to m_c from {PRONOUN/m_c/poss} zooming, just a few extra knocks and bruises.",
+			"m_c trots into camp unabashed, only slightly wincing from a couple of bruises."
+		]
 	},
-	"verbal shutdown": {
-		"mute": [
-			"After all this time some of the clan thinks that m_c should have started speaking again. r_c simply shakes their head, it's not up to those cats to demand that.",
-			"m_c simply shakes {PRONOUN/m_c/poss} head when a clanmate asks if {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to start speaking again soon.",
-			"The clan doesn't think twice about m_c's silence, that's just how {PRONOUN/m_c/subject} {VERB/m_c/are/is}.",
-			"m_c softly pads out into the clearing, {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need to use words to talk. {PRONOUN/m_c/poss} cat-sign is loud enough."
+	"tics": {
+		"body biter": [
+			"r_c's tail twitches listening to m_c complain about how {PRONOUN/m_c/poss} tics have led to body biting.",
+			"In a misguided attempt to stop ticcing m_c has been biting at {PRONOUN/m_c/self}."
 		]
 	},
 	"vivid daydreams": {
@@ -311,13 +384,6 @@
 			"m_c shivers in their den, the shadows on the walls and out the corner of {PRONOUN/m_c/poss} eyes making monsters.",
 			"All dreams have risk of becoming nightmares, and these are no different as sleeplessness and escapism don't mix well. m_c shivers as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to find where reality actually is.",
 			"m_c has the horrible realisation that this isn't a daydream anymore."
-		]
-	},
-	"zoomies": {
-		"bruises": [
-			"After zooming around for most of the day m_c comes over to r_c's den to sheepishly ask for some help with the new bruises {PRONOUN/m_c/subject} {VERB/m_c/have/has} obtained.",
-			"No serious harm has come to m_c from {PRONOUN/m_c/poss} zooming, just a few extra knocks and bruises.",
-			"m_c trots into camp unabashed, only slightly wincing from a couple of bruises."
 		]
 	},
 	"compulsions": {
@@ -368,6 +434,12 @@
 			"m_c feels cursed, the shadowy creatures that make {PRONOUN/m_c/object} frozen and incapable have found their way into permanent residence in m_c's head."
 		]
 	},
+	"ear buzzing": {
+		"an infected wound": [
+			"r_c has discovered that the cause of m_c's recent case of ear buzzing appears to be an infection deep within {PRONOUN/m_c/poss} ears.",
+			"There's the distinct scent of infection coming from m_c's ears."
+		]
+	},
 	"nest wetting": {
 		"sleeplessness": [
 			"r_c wakes bleerily as little m_c paws into the medicine den. {PRONOUN/m_c/poss/CAP} looks rather ashamed and sheepish as {PRONOUN/m_c/subject} {VERB/m_c/explain/explains} the issue.",
@@ -389,10 +461,11 @@
 			"m_c really should have been prepared to faint."
 		]
 	},
-	"tics": {
-		"body biter": [
-			"r_c's tail twitches listening to m_c complain about how {PRONOUN/m_c/poss} tics have led to body biting.",
-			"In a misguided attempt to stop ticcing m_c has been biting at {PRONOUN/m_c/sel;f}."
+	"brain fog": {
+		"vacant": [
+			"r_c has noticed that m_c's brain fog seems to be getting worse and worse. It appears to have steadily led to m_c becoming vacant and unable to fully recognize even {PRONOUN/m_c/self}.",
+			"As much as the clan hopes for m_c's brain fog to pass, it seems to be lingering heavier and heavier in {PRONOUN/m_c/poss} body instead.",
+			"m_c's brain fog has led to {PRONOUN/m_c/object} becoming vacant."
 		]
-	}	
+	}
 }

@@ -150,6 +150,15 @@ dev_tools = false
       jealousy = 0
       trust = 30
 
+    [new_cat.parent_debuff.parent_to_kit]
+      romantic = 0
+      platonic = 50
+      dislike = 45
+      admiration = 0
+      comfortable = 0
+      jealousy = 30
+      trust = 20
+
   [new_cat.sib_buff]
     # default relationships buff for siblings' relationships in one direction
     [new_cat.sib_buff.cat1_to_cat2]
@@ -197,73 +206,97 @@ dev_tools = false
   birth_cooldown = 6
 
   # 1/chance that kits, relationship and other factors will influence this chance
-  primary_chance_mated = 80
+  primary_chance_mated = 45
 
   # 1/chance that kits, relationship and other factors will influence this chance
-  primary_chance_unmated = 130
+  primary_chance_unmated = 90
 
   # 1/chance that a mated cat to has an affair
-  random_affair_chance = 50
+  random_affair_chance = 70
 
   # special 1/chance for an unmated cat to have an affair
   # for this check, only other unmated cats can be the affair partner
-  unmated_random_affair_chance = 10
+  unmated_random_affair_chance = 45
+  
+  #False pregnancy is still locked behind another setting per clan but it's 1/chance
+  false_pregnancy_chance = 25
 
-  # The kit number is incremental. It is 1-6 as default so if you change these numbers, you should probably keep this in mind.
-  # As in, your max kits number should probably be 5 more than the min kits number.
-  # But that's not required - just makes more sense that way with how the litters are generated.
+  # As always my modified settings and mod in general actually rolls kits in a range.
+  #The only numbers that really matter is the min and max kits, the others are hard set. 
   min_kits = 1
-  max_kits = 6
+  max_kits = 18
 
   # number / total for that age across all kit amounts = chance of having that many kits for that age
-  [pregnancy.one_kit_possibility]
-    "young adult" = 8
-    adult = 9
+  # tiny_litter(min-3), small(4-6), large(7-9), huge(10-14), ridiculous(15-max)
+  [pregnancy.tiny_litter_possibility]
+    "young adult" = 18
+    adult = 10
     "senior adult" = 10
-    senior = 4
+    senior = 16
 
-  [pregnancy.two_kit_possibility]
-    "young adult" = 10
-    adult = 13
-    "senior adult" = 15
-    senior = 3
+  [pregnancy.small_litter_possibility]
+    "young adult" = 16
+    adult = 12
+    "senior adult" = 16
+    senior = 8
 
-  [pregnancy.three_kit_possibility]
-    "young adult" = 17
-    adult = 15
-    "senior adult" = 5
+  [pregnancy.large_litter_possibility]
+    "young adult" = 5
+    adult = 18
+    "senior adult" = 10
+    senior = 5
+
+  [pregnancy.huge_litter_possibility]
+    "young adult" = 2
+    adult = 4
+    "senior adult" = 3
     senior = 1
 
-  [pregnancy.four_kit_possibility]
-    "young adult" = 12
-    adult = 8
+  [pregnancy.ridiculous_litter_possibility]
+    "young adult" = 0
+    adult = 1
     "senior adult" = 2
     senior = 0
 
-  [pregnancy.five_kit_possibility]
-    "young adult" = 6
-    adult = 2
-    "senior adult" = 0
-    senior = 0
+  # Some of the risky settings come in here.
+  [pregnancy.stillborn_chances]
+    tiny = 0.01
+    small = 0.05
+    large = 0.10
+    huge = 0.15
+	ridiculous = 0.20
+	
+  [pregnancy.failed_adopt]
+    intersex = 0.20
+	female = 0.25
+	male = 0.30
 
-  [pregnancy.max_kit_possibility]
-    "young adult" = 2
-    adult = 0
-    "senior adult" = 0
-    senior = 0
+  #Finally just for litter guesses you can set how many kits counts as small or huge :D
+  small_litter = 6
+  huge_litter = 11
 
 [cat_generation]
   # base 1/chance that a cat will generate with a permanent condition. gets modified further in code
-  base_permanent_condition = 90
+  base_permanent_condition = 45
+  multi_condition_chance = 20
+  max_born_with = 3
+  comorbidity_chance = 3
+
 
   # 1/2^(chance - 1) that a male cat will be a tortie
-  base_male_tortie = 13
+  base_male_tortie = 18
 
   # 1/2^(chance/2) that a female cat will be a tortie
-  base_female_tortie = 4
+  base_female_tortie = 3
+  
+  # 1/2^(chance/1.5) that an intersex cat will be a tortie
+  base_intersex_tortie = 6
 
   # base 1/(chance + 1) that a cat will have heterochromia. gets modified further in code
   base_heterochromia = 120
+  
+  # Bonus, whether your cats have their tongues out or not-- particularly interesting for scugs
+  base_blep = 120
 
   # 1/(chance + 1) for a cat to have same pelt as one of their parents
   direct_inheritance = 15
@@ -272,10 +305,19 @@ dev_tools = false
   wildcard_tortie = 9
 
   # base 1/2^(chance) that a cat will have vitiligo
-  vit_chance = 8
+  vit_chance = 30
 
   # 1/2^(chance) that a cat will have colourpoint
-  random_point_chance = 5
+  random_point_chance = 25
+  
+  #DOUBLE PATCHES STUFF
+  base_extra_white = 50
+  base_extra_tortie = 20
+  max_white_amount = 2
+  max_tortie_amount = 2  
+  
+  # Right now this doesn't do anything :( eventually it will be used for generating if a cat has magic or not
+  magic = 150
 
 [cat_name_controls]
   # set to true if you always want cats named after the color of their pelt
@@ -327,10 +369,14 @@ dev_tools = false
 
   # modifies transition chance based on if cat is an adult or older
   older_modifier = 256
+  
+  #detransition allowed?!
+  detransition = true
+  
 
 [fading]
   # age that a cat will complete fading
-  age_to_fade = 202
+  age_to_fade = 300
 
   # max opacity when a cat fades
   opacity_at_fade = 20
@@ -345,8 +391,18 @@ dev_tools = false
   # base 1/chance that a cat will be chosen as a med cat apprentice
   base_medicine_app_chance = 41
 
+  # base 1/chance that a cat will be chosen as a permaqueen apprentice
+  base_permaqueen_app_chance = 35
+
+  permaqueen_apps_no_mentor = true
+
 [roles.become_mediator_chances]
   # 1/chance that a cat will switch to mediator. rolls every moon, so keep it high.
+  warrior = 5000
+  elder = 400
+
+[roles.become_permaqueen_chances]
+  # 1/chance that a cat will switch to permaqueen. rolls every moon, so keep it high.
   warrior = 5000
   elder = 400
 
@@ -358,13 +414,13 @@ dev_tools = false
   # represents ranges for cat ages
   # these HAVE to be in the correct order: where one ends, the next one begins on the next number
   # if you DON'T DO THIS, your game WILL break
-  newborn = [0, 0]
-  kitten = [1, 5]
-  adolescent = [6, 11]
-  "young adult" = [12, 47]
-  adult = [48, 95]
-  "senior adult" = [96, 119]
-  senior = [120, 300]
+  newborn = [0, 1]
+  kitten = [2, 5]
+  adolescent = [6, 14]
+  "young adult" = [15, 53]
+  adult = [54, 107]
+  "senior adult" = [108, 131]
+  senior = [132, 216]
 
 [cat_sprites]
   # set to false to disable sick sprites
@@ -459,10 +515,15 @@ dev_tools = false
   # modifiers for injury chance based on if a war is going badly
   # SUBTRACTS from the denominator so higher = more likely to get injured
   war_injury_modifier = 225
+  
+  ## Now for some plural toggles :D, these are for plural cats in the clan.
+  max_alters = 30
+  max_splits = 3
+  
 
 [clan_creation]
   # Set this to -1 for it to be infinite
-  rerolls = 3
+  rerolls = -1
 
 [graduation]
   # base possible experience gain for apprentices

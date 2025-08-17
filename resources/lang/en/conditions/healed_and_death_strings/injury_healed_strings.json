@@ -287,6 +287,11 @@
 	"fainting": [
 		"m_c is no longer suffering from fainting spells around the camp."
 	],
+	"paralysis episode": [
+		"m_c is glad to have full control of {PRONOUN/m_c/poss} body once more.",
+		"After a few moons of physical therapy m_c is finally able to be more stable on {PRONOUN/m_c/poss} paws once again.",
+		"The paralysis that had afflicted m_c seems to have passed."
+	],
 	"anaphylaxis": [
 		"To the relief of the whole clan m_c has recovered from {PRONOUN/m_c/poss} anaphylaxis.",
 		"Although it was incredibly touch and go, m_c has managed to survive {PRONOUN/m_c/poss} anaphylaxis.",

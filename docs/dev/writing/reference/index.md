@@ -157,7 +157,7 @@ Our events generally require writers to "tag" certain attributes.  These "tags" 
     | `heat stroke`          | :fontawesome-solid-check:     |
     | `heat exhaustion`      | :fontawesome-solid-check:     |
     | `stomachache`          | :fontawesome-solid-check:     |
-    | `constant nightmares`  | :fontawesome-solid-check:     |
+    | `nightmares`  | :fontawesome-solid-check:     |
     | `grief stricken`       | :x:                    |
     | `malnourished`         | :x:                    |
     | `starving`             | :x:                    |

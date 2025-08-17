@@ -68,7 +68,8 @@ class Thoughts:
                 return False
 
         if "dangerous_thoughts" in thought:
-            if not game.settings["allow danger"]:
+            from scripts.game_structure.game.settings import game_settings_save, game_setting_get
+            if not game_setting_get("allow danger"):
                 return False
 
         # This is for checking if another cat is needed and there is another cat

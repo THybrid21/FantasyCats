@@ -27,5 +27,14 @@
         ],
         "random_age_constraint": ["newborn"],
         "relationship_constraint": ["parent/child"]
+    },
+    {
+        "id": "skeptic_death_starclan",
+        "thoughts": [
+            "In absolute disbelief to find {PRONOUN/m_c/self} in the starry fields of Silverpelt"
+        ],
+        "main_trait_constraint": [
+            "skeptic"
+        ]
     }
 ]

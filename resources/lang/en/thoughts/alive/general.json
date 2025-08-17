@@ -6007,7 +6007,7 @@
         ],
         "has_injuries": {
             "m_c": [
-                "constant nightmares"
+                "nightmares"
             ]
         }
     },

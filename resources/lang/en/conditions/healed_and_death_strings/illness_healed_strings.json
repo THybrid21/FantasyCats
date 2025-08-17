@@ -26,8 +26,9 @@
         "m_c's wound is no longer infected.",
         "m_c's infection is gone."
     ],
-    "redcough": [
-        "Somehow, miraculously, m_c has recovered from redcough."
+    "a festering wound": [
+        "m_c's wound is no longer festering, the infection is gone.",
+        "m_c's festering wound seems to have gotten a bit better."
     ],
     "running nose": [
         "m_c's running nose has finally stopped running.",
@@ -39,20 +40,14 @@
         "m_c no longer has whitecough.",
         "m_c's whitecough is gone."
     ],
-	"silvercough": [
-        "m_c has recovered from silvercough.",
-        "m_c no longer has silvercough.",
-        "m_c's silvercough is gone."
-	],
     "yellowcough": [
         "m_c has survived yellowcough.",
         "m_c has recovered from yellowcough.",
         "m_c no longer has yellowcough.",
         "m_c's yellowcough is gone."
     ],
-    "a festering wound": [
-        "m_c's wound is no longer festering, the infection is gone.",
-        "m_c's festering wound seems to have gotten a bit better."
+    "redcough": [
+        "Somehow, miraculously, m_c has recovered from redcough."
     ],
     "heat stroke": [
         "m_c is no longer suffering from heat stroke.",
@@ -70,10 +65,10 @@
         "m_c no longer has a stomachache."
     ],
     "nightmares": [
-        "m_c's constant nightmares have finally calmed.",
+        "m_c's nightmares have finally calmed.",
         "m_c was struggling with a recent flood of nightmares, but thankfully they seem to have stopped.",
         "m_c's nightmares have stopped.",
-        "m_c is no longer having constant nightmares."
+        "m_c is no longer having nightmares."
     ],
     "grief stricken": [
         "m_c will always feel {PRONOUN/m_c/poss} grief, but time has softened it, at least a little.",

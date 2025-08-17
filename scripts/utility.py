@@ -351,8 +351,12 @@ def create_new_cat_block(
         gender = "male"
     elif "female" in attribute_list:
         gender = "female"
+    elif "intersex" in attribute_list:
+        gender = "intersex"
+    elif "null" in attribute_list:
+        gender = "null"
     elif "can_birth" in attribute_list and not get_clan_setting("same sex birth"):
-        gender = "female"
+        gender = choice(["female", "intersex"])
     else:
         gender = None
 
@@ -379,6 +383,8 @@ def create_new_cat_block(
             CatRank.WARRIOR,
             CatRank.MEDIATOR_APPRENTICE,
             CatRank.MEDIATOR,
+            CatRank.PERMAQUEEN_APPRENTICE,
+            CatRank.PERMAQUEEN,
             CatRank.MEDICINE_APPRENTICE,
             CatRank.MEDICINE_CAT,
         ]:
@@ -412,12 +418,13 @@ def create_new_cat_block(
             CatRank.APPRENTICE,
             CatRank.MEDIATOR_APPRENTICE,
             CatRank.MEDICINE_APPRENTICE,
+            CatRank.PERMAQUEEN_APPRENTICE
         ]:
             age = randint(
                 Cat.age_moons[CatAge.ADOLESCENT][0],
                 Cat.age_moons[CatAge.ADOLESCENT][1],
             )
-        elif rank in [CatRank.WARRIOR, CatRank.MEDIATOR, CatRank.MEDICINE_CAT]:
+        elif rank in [CatRank.WARRIOR, CatRank.MEDIATOR, CatRank.PERMAQUEEN, CatRank.MEDICINE_CAT]:
             age = randint(
                 Cat.age_moons["young adult"][0], Cat.age_moons["senior adult"][1]
             )
@@ -614,6 +621,7 @@ def create_new_cat_block(
             outside=outside,
             parent1=parent1.ID if parent1 else None,
             parent2=parent2.ID if parent2 else None,
+            is_parent= "age:has_kits" in attribute_list,
             adoptive_parents=adoptive_parents if adoptive_parents else None,
         )
 
@@ -711,6 +719,7 @@ def create_new_cat(
     kit: bool = False,
     litter: bool = False,
     backstory: bool = None,
+    species:str=None,
     rank: CatRank = None,
     original_social: CatSocial = CatSocial.CLANCAT,
     original_group: CatGroup = None,
@@ -721,6 +730,8 @@ def create_new_cat(
     outside: bool = False,
     parent1: str = None,
     parent2: str = None,
+    is_parent: bool = False,
+    can_be_neutered = True,
     adoptive_parents: list = None,
 ) -> list:
     """
@@ -777,9 +788,10 @@ def create_new_cat(
             CatRank.APPRENTICE,
             CatRank.MEDICINE_APPRENTICE,
             CatRank.MEDIATOR_APPRENTICE,
+            CatRank.PERMAQUEEN_APPRENTICE
         ):
             moons = randint(6, 11)
-        elif rank == CatRank.WARRIOR:
+        elif rank in (CatRank.WARRIOR, CatRank.MEDIATOR, CatRank.PERMAQUEEN):
             moons = randint(23, 120)
         elif rank == CatRank.MEDICINE_CAT:
             moons = randint(23, 140)
@@ -812,16 +824,18 @@ def create_new_cat(
     for index in range(number_of_cats):
         # setting gender
         if not gender:
-            _gender = choice(["female", "male"])
+            _gender = choice(["female", "male", "intersex", "null"])
         else:
             _gender = gender
 
         # first we generate the cat as though they are not part of the clan yet
         new_cat = Cat(
             moons=moons,
+            species=species,
             status_dict={
                 "social": original_social,
                 "age": age,
+                "rank": rank,
                 "group": original_group,
             },
             gender=_gender,
@@ -855,6 +869,7 @@ def create_new_cat(
         ):
             # babies change name, in case their initial name isn't clan-ish
             new_cat.change_name()
+
         elif not original_group or not original_group.is_other_clan_group():
             # give kittypets a kittypet name
             if original_social == CatSocial.KITTYPET:
@@ -893,24 +908,94 @@ def create_new_cat(
             else:
                 new_cat.change_name(new_prefix=name, new_suffix="")
 
-        # Remove disabling scars, if they generated.
-        # these are removed bc the cat won't have the associated perm condition
-        not_allowed = [
-            "NOPAW",
-            "NOTAIL",
-            "HALFTAIL",
-            "NOEAR",
-            "BOTHBLIND",
-            "RIGHTBLIND",
-            "LEFTBLIND",
-            "BRIGHTHEART",
-            "NOLEFTEAR",
-            "NORIGHTEAR",
-            "MANLEG",
-        ]
+        # Run the TNR stuff          
+        neutered_this_moon = False        
+        if can_be_neutered and not is_parent:            
+            if original_social == CatSocial.KITTYPET and randint(1, 5) > 2 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
+            elif original_social in (CatSocial.LONER, CatSocial.ROGUE) and randint(1, 7) == 1 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
+            elif randint(1, 12) == 1 and age > 2:
+                new_cat.neutered = True
+                new_cat.neutered_message = True
+                neutered_this_moon = True
+
+        if neutered_this_moon:
+            from scripts.cat.history import History
+            if original_social == CatSocial.KITTYPET:
+                History.add_scar(cat=new_cat, scar_text=i18n.t("hardcoded.scar_tagged_kittypet"))
+            else:
+                History.add_scar(cat=new_cat, scar_text=i18n.t("hardcoded.scar_tagged_lost"))
+
+            if new_cat.gender == "male":
+                new_cat.pelt.scars.append("RIGHTTAG")
+            elif new_cat.gender == "female":
+                new_cat.pelt.scars.append("LEFTTAG")                
+            else:
+                tag = choice(["RIGHTTAG", "LEFTTAG"])
+                new_cat.pelt.scars.append(tag)  
+
+        if original_social == CatSocial.KITTYPET and randint(1, 3) == 1 and age > 1 and not new_cat.neutered:
+            new_cat.vaccinated = True
+
+        # Actually, in this case, if a cat generates with a disabiling scar they get the condition to go with it :P
+        scar_to_condition = {
+            "THREE": ["one bad eye"],
+            "FOUR": ["weak leg", "no", "no"],
+            "NOLEFTEAR": ["partial hearing loss"],
+            "NORIGHTEAR": ["partial hearing loss"],
+            "NOEAR": ["partial hearing loss", "deaf"],
+            "NOPAW": ["lost a leg", "born without a leg"],
+            "NOTAIL": ["lost their tail", "born without a tail"],
+            "HALFTAIL": ["lost their tail"],
+            "BRIGHTHEART": ["one bad eye"],
+            "LEFTBLIND": ["one bad eye"],
+            "RIGHTBLIND": ["one bad eye"],
+            "BOTHBLIND": ["blind"],
+            "MANLEG": ["weak leg", "twisted leg"],
+            "MANTAIL": ["echoing shock", "no", "no", "no", "no"],
+            "RATBITE": ["weak leg"],
+            "NECKBITE": ["echoing shock", "no", "no", "no", "no"],
+            "LEGBITE": ["weak leg"],
+            "SNOUT": ["crooked jaw", "no", "no"],
+            "THROAT": ["echoing shock", "no", "no", "no", "no"],
+            "SIDE": ["echoing shock", "no", "no", "no", "no"],
+            "TOETRAP": ["weak leg"],
+            "RASH": ["recurring rash"],
+            "DECLAWED": ["declawed"],
+            "SNAKETHREE": ["one bad eye"]
+        }
+        cat_gain_age = age
+        clan_gain_moon = int(game.clan.age)
+        cat_birth_moon = clan_gain_moon - cat_gain_age
+
+        if age >= 6:
+            cat_gain_age = randint(6, age)
+        elif age == 4 or age == 5:
+            cat_gain_age = randint(4, age)
+
+        # Give conditions for disabling scars, if they generated.
         for scar in new_cat.pelt.scars:
-            if scar in not_allowed:
-                new_cat.pelt.scars.remove(scar)
+            if scar in scar_to_condition:
+                if game.clan.game_mode == "classic" or age < 4:
+                    new_cat.pelt.scars.remove(scar)
+                else:
+                    condition = choice(scar_to_condition.get(scar))
+
+                    if condition == "no":
+                        continue
+                    elif "born" in condition or (condition == "recurring rash" and randint(1, 2) == 1):
+                        born_with = True
+                        clan_gain_moon = cat_birth_moon
+                    else:
+                        born_with = False
+                        clan_gain_moon = (age - cat_gain_age) + cat_birth_moon
+
+                    new_cat.get_permanent_condition(condition, born_with=born_with, starting_moon=clan_gain_moon)
 
         # chance to give the new cat a permanent condition, higher chance for found kits and litters
         if kit or litter:
@@ -2766,19 +2851,22 @@ def generate_sprite(
         and constants.CONFIG["cat_sprites"]["sick_sprites"]
     ):
         if age in ["kitten", "adolescent"]:
-            cat_sprite = str(19)
+            if cat.pelt.length == 'bare':
+                cat_sprite = str(52)
+            else:
+                cat_sprite = str(48)
         else:
-            cat_sprite = str(18)
+            if cat.pelt.length == 'bare':
+                cat_sprite = str(51)
+            else:
+                cat_sprite = str(47)
 
     # paralyzed sprites
     elif cat.pelt.paralyzed and age != "newborn":
-        if age in ["kitten", "adolescent"]:
-            cat_sprite = str(17)
+        if age in ['kitten', 'adolescent']:
+            cat_sprite = str(cat.pelt.cat_sprites['para_young'])
         else:
-            if cat.pelt.length == "long":
-                cat_sprite = str(16)
-            else:
-                cat_sprite = str(15)
+            cat_sprite = str(cat.pelt.cat_sprites['para_adult'])
 
     # default sprites
     else:
@@ -2796,89 +2884,75 @@ def generate_sprite(
 
     # generating the sprite
     try:
+        # checks index of cat's species in the species list and uses matching folder's sprites
+        n = (list(game.species["species"]).index(cat.species)) + 1 #add 1 because people don't count from 0 smh
+
         if cat.pelt.name not in ["Tortie", "Calico"]:
             new_sprite.blit(
                 sprites.sprites[
-                    cat.pelt.get_sprites_name() + cat.pelt.colour + cat_sprite
-                ],
+                    cat.pelt.get_sprites_name() + f'{n}_' + cat.pelt.colour + cat_sprite
+                    ],
                 (0, 0),
             )
         else:
             # Base Coat
             new_sprite.blit(
-                sprites.sprites[cat.pelt.tortiebase + cat.pelt.colour + cat_sprite],
+                sprites.sprites[cat.pelt.tortiebase + f'{n}_' + cat.pelt.colour + cat_sprite],
                 (0, 0),
             )
-
+            
             # Create the patch image
             if cat.pelt.tortiepattern == "Single":
                 tortie_pattern = "SingleColour"
             else:
                 tortie_pattern = cat.pelt.tortiepattern
 
-            patches = sprites.sprites[
-                tortie_pattern + cat.pelt.tortiecolour + cat_sprite
-            ].copy()
-            patches.blit(
-                sprites.sprites["tortiemask" + cat.pelt.pattern + cat_sprite],
-                (0, 0),
-                special_flags=pygame.BLEND_RGBA_MULT,
-            )
-
-            # Add patches onto cat.
-            new_sprite.blit(patches, (0, 0))
+            for pattern in cat.pelt.pattern:
+                patches = sprites.sprites[
+                    tortie_pattern +  f'{n}_' + cat.pelt.tortiecolour + cat_sprite].copy()
+                patches.blit(sprites.sprites["tortiemask" + f'{n}_' + pattern + cat_sprite], (0, 0),
+                             special_flags=pygame.BLEND_RGBA_MULT)
+                # Add patches onto cat.
+                new_sprite.blit(patches, (0, 0))
 
         # TINTS
-        if (
-            cat.pelt.tint != "none"
-            and cat.pelt.tint in sprites.cat_tints["tint_colours"]
-        ):
-            # Multiply with alpha does not work as you would expect - it just lowers the alpha of the
-            # entire surface. To get around this, we first blit the tint onto a white background to dull it,
-            # then blit the surface onto the sprite with pygame.BLEND_RGB_MULT
+        # Multiply & Add with alpha does not work as you would expect - it just applies to the alpha of the
+        # entire surface. To get around this, we first blit the tint onto a white background to dull it,
+        # then blit the surface onto the sprite with pygame.BLEND_RGB_MULT
+        if (cat.pelt.tint != "none" and cat.pelt.tint in sprites.cat_tints["tint_colours"]):
             tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
             tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
-        if (
-            cat.pelt.tint != "none"
-            and cat.pelt.tint in sprites.cat_tints["dilute_tint_colours"]
-        ):
+        if cat.pelt.tint != "none" and cat.pelt.tint in sprites.cat_tints["dilute_tint_colours"]:
             tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
             tint.fill(tuple(sprites.cat_tints["dilute_tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
 
-        # draw white patches
-        if cat.pelt.white_patches is not None:
-            white_patches = sprites.sprites[
-                "white" + cat.pelt.white_patches + cat_sprite
-            ].copy()
-
-            # Apply tint to white patches.
-            if (
-                cat.pelt.white_patches_tint != "none"
-                and cat.pelt.white_patches_tint
-                in sprites.white_patches_tints["tint_colours"]
-            ):
-                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                tint.fill(
-                    tuple(
-                        sprites.white_patches_tints["tint_colours"][
-                            cat.pelt.white_patches_tint
-                        ]
+        # draw white patches, points & vit
+        if cat.pelt.white_patches:
+            for white in cat.pelt.white_patches:
+                if (
+                    cat.pelt.white_patches_tint != "none" 
+                    and cat.pelt.white_patches_tint 
+                    in sprites.white_patches_tints["tint_colours"]
+                ):
+                    white_patch = sprites.sprites['white' + f'{n}_' + white + cat_sprite].copy()
+                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                    tint.fill(
+                        tuple(sprites.white_patches_tints["tint_colours"]
+                        [cat.pelt.white_patches_tint])
                     )
-                )
-                white_patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
-
-            new_sprite.blit(white_patches, (0, 0))
-
-        # draw vit & points
+                    white_patch.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+                    new_sprite.blit(white_patch, (0, 0))
+                else:
+                    new_sprite.blit(sprites.sprites['white' + f'{n}_' + white + cat_sprite], (0, 0))
 
         if cat.pelt.points:
-            points = sprites.sprites["white" + cat.pelt.points + cat_sprite].copy()
+            points = sprites.sprites["white" + f'{n}_' + cat.pelt.points + cat_sprite].copy()
             if (
-                cat.pelt.white_patches_tint != "none"
-                and cat.pelt.white_patches_tint
-                in sprites.white_patches_tints["tint_colours"]
+                    cat.pelt.white_patches_tint != "none"
+                    and cat.pelt.white_patches_tint
+                    in sprites.white_patches_tints["tint_colours"]
             ):
                 tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
                 tint.fill(
@@ -2892,27 +2966,43 @@ def generate_sprite(
             new_sprite.blit(points, (0, 0))
 
         if cat.pelt.vitiligo:
-            new_sprite.blit(
-                sprites.sprites["white" + cat.pelt.vitiligo + cat_sprite], (0, 0)
-            )
+            vitiligo = sprites.sprites['white' + f'{n}_' + cat.pelt.vitiligo + cat_sprite].copy()
+            if cat.pelt.vitiligo_tint != "none" and cat.pelt.vitiligo_tint in sprites.vitiligo_tint[
+                "tint_colours"]:
+                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                tint.fill(tuple(sprites.vitiligo_tint["tint_colours"][cat.pelt.vitiligo_tint]))
+                vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+            new_sprite.blit(vitiligo, (0, 0))
+
+        # draw albinism/melanism
+
+        if cat.pelt.albino != None:
+            new_sprite.blit(sprites.sprites['albinism' + f'{n}_' + cat.pelt.albino + cat_sprite], (0, 0))
+        elif cat.pelt.melanistic != None:
+            new_sprite.blit(sprites.sprites['melanism' + f'{n}_' + cat.pelt.melanistic + cat_sprite], (0, 0))
 
         # draw eyes & scars1
-        eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        eyes = sprites.sprites["eyes" + f'{n}_' + cat.pelt.eye_colour + cat_sprite].copy()
         if cat.pelt.eye_colour2 != None:
-            eyes.blit(
-                sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
-            )
+            eyes.blit(sprites.sprites['eyes2' + f'{n}_' + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+        elif cat.pelt.eye_colour3 != None:
+            eyes.blit(sprites.sprites['eyes3' + f'{n}_' + cat.pelt.eye_colour3 + cat_sprite], (0, 0))
+
+        if cat.pelt.eye_lazy != None:
+            eyes.blit(sprites.sprites['eyes4' + f'{n}_' + cat.pelt.eye_lazy + cat_sprite], (0, 0))
+        if cat.pelt.eye_lazy2 != None:
+            eyes.blit(sprites.sprites['eyes5' + f'{n}_' + cat.pelt.eye_lazy2 + cat_sprite], (0, 0))
         new_sprite.blit(eyes, (0, 0))
 
         if not scars_hidden:
             for scar in cat.pelt.scars:
                 if scar in cat.pelt.scars1:
                     new_sprite.blit(
-                        sprites.sprites["scars" + scar + cat_sprite], (0, 0)
+                        sprites.sprites["scars" + f'{n}_' + scar + cat_sprite], (0, 0)
                     )
                 if scar in cat.pelt.scars3:
                     new_sprite.blit(
-                        sprites.sprites["scars" + scar + cat_sprite], (0, 0)
+                        sprites.sprites["scars" + f'{n}_' + scar + cat_sprite], (0, 0)
                     )
 
         # setting the lineart color to override on accessories & missing bits
@@ -2939,33 +3029,24 @@ def generate_sprite(
 
         # draw line art
         if game_setting_get("shaders") and not dead:
-            new_sprite.blit(
-                sprites.sprites["shaders" + cat_sprite],
-                (0, 0),
-                special_flags=pygame.BLEND_RGB_MULT,
-            )
-            new_sprite.blit(sprites.sprites["lighting" + cat_sprite], (0, 0))
-
+            new_sprite.blit(sprites.sprites['shaders' + f'{n}_' + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+            new_sprite.blit(sprites.sprites['lighting' + f'{n}_' + cat_sprite], (0, 0))
         if not dead:
-            new_sprite.blit(sprites.sprites["lines" + cat_sprite], (0, 0))
+            new_sprite.blit(sprites.sprites["lines" f'{n}_' + cat_sprite], (0, 0))
         elif cat.status.group == CatGroup.DARK_FOREST:
-            new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
+            new_sprite.blit(sprites.sprites["lineartdf" f'{n}_' + cat_sprite], (0, 0))
         elif dead:
-            new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
+            new_sprite.blit(sprites.sprites["lineartdead" + f'{n}_' + cat_sprite], (0, 0))
+
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
-        new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
+        new_sprite.blit(sprites.sprites['skin' + f'{n}_' + cat.pelt.skin + cat_sprite], (0, 0))
+        for scar in cat.pelt.scars:
+            if scar in cat.pelt.scars2:
+                new_sprite.blit(sprites.sprites['scars' + f'{n}_' + scar + cat_sprite], (0, 0), special_flags=blendmode)
 
-        if not scars_hidden:
-            for scar in cat.pelt.scars:
-                if scar in cat.pelt.scars2:
-                    new_sprite.blit(
-                        _recolor_lineart(
-                            sprites.sprites["scars" + scar + cat_sprite], lineart_color
-                        ),
-                        (0, 0),
-                        special_flags=blendmode,
-                    )
+            if scar in cat.pelt.scars4:
+                new_sprite.blit(sprites.sprites['scars' + f'{n}_' + scar + cat_sprite], (0, 0))
 
         # draw accessories
         from scripts.cat.pelts import Pelt
@@ -3009,13 +3090,8 @@ def generate_sprite(
                                 ),
                                 (0, 0),
                             )
-
-        # apply experimental sparkle layer
-        if dead and cat.status.group == CatGroup.STARCLAN:
-            new_sprite.blit(
-                sprites.sprites["sc_overlay" + cat_sprite],
-                (0, 0),
-            )
+        if cat.pelt.blep:
+                new_sprite.blit(sprites.sprites['blep' + f'{n}_' + cat.pelt.skin + cat_sprite], (0, 0))
 
         # Apply fading fog
         if (

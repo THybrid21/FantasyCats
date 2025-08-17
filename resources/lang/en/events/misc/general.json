@@ -9237,52 +9237,6 @@
         }
     },
     {
-        "event_id": "gen_misc_transition_from_female1",
-        "location": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
-        "sub_type": [
-            "transition"
-        ],
-        "frequency": 4,
-        "event_text": "m_c has realized that she-cat doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
-        "m_c": {
-            "gender": [
-                "female"
-            ]
-        },
-        "new_gender": [
-            "trans male",
-            "nonbinary"
-        ]
-    },
-    {
-        "event_id": "gen_misc_transition_from_male1",
-        "location": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
-        "sub_type": [
-            "transition"
-        ],
-        "frequency": 4,
-        "event_text": "m_c has realized that tom doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
-        "m_c": {
-            "gender": [
-                "male"
-            ]
-        },
-        "new_gender": [
-            "trans female",
-            "nonbinary"
-        ]
-    },
-    {
         "event_id": "gen_injury_scratches_war_lostkit",
         "location": [
             "any"
@@ -9748,5 +9702,424 @@
             ],
             "changed": 1
         }
+    },
+    {
+        "event_id": "gen_misc_transition_from_female1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has realized that molly doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
+        "m_c": {
+            "gender": [
+                "female"
+            ]
+        },
+        "new_gender": [
+            "trans male",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_questioning_female1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "After a long time of thinking on it m_c has finally come to a conclusion about {PRONOUN/m_c/poss} gender and proudly announces it to the Clan.",
+        "m_c": {
+            "gender": [
+                "female"
+            ],
+			"genderalign": [
+                "questioning"
+            ]			
+        },
+        "new_gender": [
+            "trans male",
+			"demiboy",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_male1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has realized that tom doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
+        "m_c": {
+            "gender": [
+                "male"
+            ]
+        },
+        "new_gender": [
+            "trans female",
+			"demigirl",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_questioning_male1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "After a long time of thinking on it m_c has finally come to a conclusion about {PRONOUN/m_c/poss} gender and proudly announces it to the Clan.",
+        "m_c": {
+            "gender": [
+                "male"
+            ],
+            "genderalign": [
+                "questioning"
+            ]			
+        },
+        "new_gender": [
+            "trans female",
+			"demigirl",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_intersex_male1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has realized that tom doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
+        "m_c": {
+            "gender": [
+                "intersex"
+            ],
+            "genderalign": [
+                "demiboy"
+            ]			
+        },		
+        "new_gender": [
+            "trans female",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_intersex_female1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has realized that molly doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
+        "m_c": {
+            "gender": [
+                "intersex"
+            ],
+            "genderalign": [
+                "demigirl"
+            ]
+		},	
+        "new_gender": [
+            "trans male",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_intersex_intergender1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has realized that intergender doesn't describe how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} anymore.",
+        "m_c": {
+            "gender": [
+                "intersex"
+            ],
+            "genderalign": [
+                "intergender"
+            ]			
+        },	
+        "new_gender": [
+            "trans male",
+			"trans female",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_questioning_intersex1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "After a long time of thinking on it m_c has finally come to a conclusion about {PRONOUN/m_c/poss} gender and proudly announces it to the Clan.",
+        "m_c": {
+            "gender": [
+                "intersex",
+				"null"
+            ],
+            "genderalign": [
+                "questioning"
+            ]
+        },
+        "new_gender": [
+            "trans female",
+			"trans male",
+			"demigirl",
+			"demiboy",
+            "nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender"
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_null1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has decided that null is no longer accurate to how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} about {PRONOUN/m_c/self}.",
+        "m_c": {
+            "gender": [
+                "null"
+            ]		
+        },	
+        "new_gender": [
+            "intergender",
+			"trans male",
+			"demiboy",
+			"trans female",
+			"demigirl",
+			"nonbinary",
+			"neutrois", 
+			"agender", 
+			"genderqueer", 
+			"demienby",
+			"genderfluid", 
+			"bigender", 
+			"pangender",
+			"questioning"			
+        ]
+    },
+    {
+        "event_id": "gen_misc_transition_from_null2",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has decided that null is no longer correct and in fact {PRONOUN/m_c/subject} {VERB/m_c/are/is} a tom!",
+        "m_c": {
+            "gender": [
+                "null"
+            ]		
+        },	
+        "new_gender": [
+			"trans male",
+			"demiboy"			
+        ]
+    },
+    {
+        "event_id": "gen_misc_detransition_female1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/were/was} a molly in the end after all.",
+        "m_c": {
+            "gender": [
+                "female"
+            ]
+        },
+        "new_gender": [
+            "female",
+			"demigirl"
+        ]
+    },
+    {
+        "event_id": "gen_misc_detransition_male1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/were/was} a tom in the end after all.",
+        "m_c": {
+            "gender": [
+                "male"
+            ]
+        },
+        "new_gender": [
+            "male",
+			"demiboy"
+        ]
+    },
+    {
+        "event_id": "gen_misc_detransition_null1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has come to the conclusion that {PRONOUN/m_c/poss} gender was just null after all.",
+        "m_c": {
+            "gender": [
+                "null"
+            ]
+        },
+        "new_gender": [
+            "null"
+        ]
+    },
+    {
+        "event_id": "gen_misc_detransition_intersex1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "sub_type": [
+            "transition"
+        ],
+        "frequency": 4,
+        "event_text": "m_c has come to the conclusion that {PRONOUN/m_c/subject} {VERB/m_c/are/is} most comfortable calling {PRONOUN/m_c/self} intergender after all.",
+        "m_c": {
+            "gender": [
+                "intersex"
+            ]
+        },
+        "new_gender": [
+            "intergender"
+        ]
     }
 ]

@@ -15,6 +15,7 @@ import i18n
 
 from scripts.cat import save_load
 from scripts.cat.cats import Cat, cat_class, BACKSTORIES
+from scripts.cat.history import History
 from scripts.cat.enums import CatAge, CatRank, CatGroup, CatStanding, CatSocial
 from scripts.cat.names import Name
 from scripts.cat.save_load import save_cats, add_cat_to_fade_id
@@ -536,6 +537,26 @@ class Events:
                 )
                 cat.rank_change(CatRank.MEDIATOR)
 
+    def permaqueen_events(self, cat):
+        """ Check for permaqueen events """
+                    
+        permaqueen_list = list(filter(lambda x: x.status.rank == CatRank.PERMAQUEEN and not x.dead and not x.outside, Cat.all_cats_list))
+        if permaqueen_list:
+        # Note: These chances are large since it triggers every moon.
+        # Checking every moon has the effect giving older cats more chances to become a permaqueen but it should only trigger if there is already a permaqueen in your save
+            _ = constants.CONFIG["roles"]["become_permaqueen_chances"]
+            if cat.status.rank in _ and not int(random.random() * _[cat.status.rank]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        event_text_adjust(
+                            Cat, i18n.t("hardcoded.event_permaqueen_app"), main_cat=cat
+                        ),
+                        "ceremony",
+                        cat.ID,
+                    )
+                )
+                cat.rank_change(CatRank.PERMAQUEEN)
+
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""
         healthy_hunter = list(
@@ -792,6 +813,17 @@ class Events:
             if additional_cats:
                 text += i18n.t("hardcoded.event_lost_kits", count=len(additional_cats))
 
+            if lost_cat.neutered and not lost_cat.neutered_message:
+                text += i18n.t("hardcoded.event_lost_tagged")
+                lost_cat.neutered_message = True
+
+            ##Now we attempt something risky
+            if game.settings["allow danger"] and not lost_cat.neutered:
+                cutter = random.randint(0, 100)
+                if cutter <= 10:
+                    lost_cat.get_injured("cutter's sickness")
+                    text += i18n.t(f"hardcoded.event_lost_cutter")
+
             text = event_text_adjust(Cat, text, main_cat=lost_cat, clan=game.clan)
 
             game.cur_events_list.append(Single_Event(text, "misc", cat_IDs))
@@ -811,6 +843,8 @@ class Events:
                         self.ceremony(x, CatRank.MEDICINE_CAT)
                     elif x.status.rank == CatRank.MEDIATOR_APPRENTICE:
                         self.ceremony(x, CatRank.MEDIATOR)
+                    elif x.status.rank == CatRank.PERMAQUEEN_APPRENTICE:
+                        self.ceremony(x, CatRank.PERMAQUEEN)
                     else:
                         self.ceremony(x, CatRank.WARRIOR)
                 elif not x.status.rank.is_any_apprentice_rank() and x.moons >= 6:
@@ -887,6 +921,92 @@ class Events:
         cat.skills.progress_skill(cat)
         Pregnancy_Events.handle_having_kits(cat, clan=game.clan)
 
+        # tnr
+        if not cat.dead and cat.moons > 2 and not cat.neutered and "infertile" not in cat.permanent_condition:
+            neutered_this_moon = False
+            if cat.status.rank == CatRank.KITTYPET:
+                if cat.moons <= 12 and random.randint(1, 9) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+                elif cat.moons <= 24 and random.randint(1, 50) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+                elif random.randint(1, 250) == 1:
+                    cat.neutered = True
+                    cat.neutered_message = True
+                    neutered_this_moon = True
+
+            elif cat.status.rank != CatRank.KITTYPET:
+                if cat.moons <= 12 and random.randint(1, 15) == 1:
+                    cat.neutered = True
+                    neutered_this_moon = True
+
+                elif random.randint(1, 100) == 1:
+                    cat.neutered = True
+                    neutered_this_moon = True
+
+            if (
+                not cat.dead 
+                and cat.pelt.scars not in ["LEFTTAG", "RIGHTTAG", "NOEAR"] 
+                and neutered_this_moon
+            ):
+                if cat.status.rank != CatRank.KITTYPET:
+                    if cat.gender == "male":
+                        if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
+                            cat.pelt.scars.append("RIGHTTAG")
+                    elif cat.gender == "female":
+                        if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
+                            cat.pelt.scars.append("LEFTTAG")                
+                    else:
+                        if "NORIGHTEAR" in cat.pelt.scars:
+                            cat.pelt.scars.append("LEFTTAG")                    
+                        elif "NOLEFTEAR" in cat.pelt.scars:
+                            cat.pelt.scars.append("RIGHTTAG")  
+                        elif "NOEAR" in cat.pelt.scars:
+                            skip = True
+                        else:
+                            tag = random.choice(["RIGHTTAG", "LEFTTAG"])
+                            cat.pelt.scars.append(tag)     
+                else:
+                    if random.randint(1, 100) == 1:
+                        if cat.gender == "male":
+                            if cat.pelt.scars not in ["NORIGHTEAR", "NOEAR"]:
+                                cat.pelt.scars.append("RIGHTTAG")
+                        elif cat.gender == "female":
+                            if cat.pelt.scars not in ["NOLEFTEAR", "NOEAR"]:
+                                cat.pelt.scars.append("LEFTTAG")                
+                        else:
+                            if "NORIGHTEAR" in cat.pelt.scars:
+                                cat.pelt.scars.append("LEFTTAG")                    
+                            elif "NOLEFTEAR" in cat.pelt.scars:
+                                cat.pelt.scars.append("RIGHTTAG")  
+                            elif "NOEAR" in cat.pelt.scars:
+                                skip = True
+                            else:
+                                tag = random.choice(["RIGHTTAG", "LEFTTAG"])
+                                cat.pelt.scars.append(tag)                       
+
+                if cat.pelt.scars in ["LEFTTAG", "RIGHTTAG"]:
+                    if cat.status.rank != CatRank.KITTYPET:
+                         History.add_scar(cat=cat, scar_text=i18n.t("hardcoded.scar_tagged_lost"))
+                    elif cat.status.rank == CatRank.KITTYPET:
+                        History.add_scar(cat=cat, scar_text=i18n.t("hardcoded.scar_tagged_kittypet"))
+                else:
+                    History.add_scar(cat=cat, scar_text=i18n.t("hardcoded.scar_neutered_notag"))
+
+        # vaccinate TNR not required
+        if not cat.dead and cat.moons > 1 and not cat.neutered and cat.status.rank == CatRank.KITTYPET:
+            if cat.moons <= 12 and random.randint(1, 4) == 1:
+                cat.vaccinated = True
+            elif cat.moons <= 24 and random.randint(1, 30) == 1:
+                cat.vaccinated = True
+            elif random.randint(1, 175) == 1:
+                cat.vaccinated = True
+
         if not cat.dead:
             OutsiderEvents.killing_outsiders(cat)
 
@@ -934,6 +1054,7 @@ class Events:
 
         # Handle Mediator Events
         self.mediator_events(cat)
+        self.permaqueen_events(cat)
 
         # handle nutrition amount
         # (CARE: the cats have to be fed before this happens - should be handled in "one_moon" function)
@@ -985,7 +1106,8 @@ class Events:
             if cat.dead:
                 return
 
-        self.coming_out(cat)
+        if not cat.fulltransed:
+            self.coming_out(cat)
         Pregnancy_Events.handle_having_kits(cat, clan=game.clan)
         # Stop the timeskip if the cat died in childbirth
         if cat.dead:
@@ -1264,17 +1386,31 @@ class Events:
                     elif has_med:
                         chance = int(chance * 2.22)
 
-                    if cat.personality.trait in [
-                        "careful",
-                        "compassionate",
-                        "loving",
-                        "wise",
-                        "faithful",
-                    ]:
-                        chance = int(chance / 1.3)
-                    if cat.is_disabled():
-                        chance = int(chance / 2)
+                    #med personality    
+                    med_personalities = ["righteous", "compassionate", "thoughtful", "faithful", "loving", 
+                                        "wise", "zealous", "dreamer"]
+                    med_personality = False
+                    index = 0
+                    for entry in med_personalities:
+                        if med_personalities[index] == cat.personality.trait:
+                            med_personality = True
+                        index += 1
 
+                    # med skill
+                    med_skills = ["CLEVER", "HEALER", "STAR", "OMEN", "DREAM", "CLAIRVOYANT", 
+                                    "PROPHET", "UNKNOWN"]
+                    med_skill = False
+                    index = 0
+                    for entry in med_skills:
+                        if med_skills[index] == cat.skills:
+                            med_skill = True
+                        index += 1
+
+                    if med_personality or med_skill:
+                        chance = int(chance / 2)
+                    if cat.is_disabled():
+                        chance = int(chance / 1.3)
+                    
                     if chance == 0:
                         chance = 1
 
@@ -1282,6 +1418,7 @@ class Events:
                         self.ceremony(cat, CatRank.MEDICINE_APPRENTICE)
                         self.ceremony_accessory = True
                         self.gain_accessories(cat)
+
                     else:
                         # Chance for mediator apprentice
                         mediator_list = list(
@@ -1300,16 +1437,29 @@ class Events:
                                 break
 
                         chance = constants.CONFIG["roles"]["mediator_app_chance"]
-                        if cat.personality.trait in [
-                            "charismatic",
-                            "loving",
-                            "responsible",
-                            "wise",
-                            "thoughtful",
-                        ]:
-                            chance = int(chance / 1.5)
-                        if cat.is_disabled():
+                        # media personality
+                        media_personalities = ["charismatic", "compassionate", "thoughtful", "calm", "careful", 
+                                                "sincere", "responsible", "wandering"]
+                        media_personality = False
+                        index = 0
+                        for entry in media_personalities:
+                            if media_personalities[index] == cat.personality.trait:
+                                media_personality = True
+                            index += 1
+
+                        # media skill
+                        media_skills = ["SPEAKER", "MEDIATOR", "INSIGHTFUL", "LORE", "SENSE", "CLEVER"]
+                        media_skill = False
+                        index = 0
+                        for entry in media_skills:
+                            if media_skills[index] == cat.skills:
+                                media_skill = True
+                            index += 1
+
+                        if media_personality or media_skill:
                             chance = int(chance / 2)
+                        if cat.is_disabled():
+                            chance = int(chance / 1.2)
 
                         if chance == 0:
                             chance = 1
@@ -1324,9 +1474,65 @@ class Events:
                             self.ceremony_accessory = True
                             self.gain_accessories(cat)
                         else:
-                            self.ceremony(cat, CatRank.APPRENTICE)
-                            self.ceremony_accessory = True
-                            self.gain_accessories(cat)
+                            # Chance for permaqueen apprentice
+                            permaqueen_list = list(
+                                filter(
+                                    lambda x: x.status.rank == CatRank.PERMAQUEEN
+                                    and x.status.alive_in_player_clan,
+                                    Cat.all_cats_list,
+                                )
+                            )
+
+                            # This checks if at least one permaqueen already has an apprentice.
+                            has_permaqueen_apprentice = False
+                            for c in permaqueen_list:
+                                if c.apprentice:
+                                    has_permaqueen_apprentice = True
+                                    break
+
+                            chance = constants.CONFIG["roles"]["permaqueen_app_chance"]
+                           # permaqueen personality
+                            queen_personalities = ["calm", "compassionate", "responsible", "strict", "skeptic", 
+                                                    "loving", "humble"]
+                            queen_personality = False
+                            index = 0
+                            for entry in queen_personalities:
+                                if queen_personalities[index] == cat.personality.trait:
+                                    queen_personality = True
+                                index += 1
+
+                            # queen skill
+                            queen_skills = ["KIT", "STORY", "CAMP", "LORE", "TEACHER", "QUEEN"]
+                            queen_skill = False
+                            index = 0
+                            for entry in queen_skills:
+                                if queen_skills[index] == cat.skills:
+                                    queen_skill = True
+                                index += 1
+
+                            if queen_personality or queen_skill:
+                                chance = int(chance / 2)
+                            if cat.is_disabled():
+                                chance = int(chance * 1.5)
+
+                            if chance == 0:
+                                chance = 1
+
+                            # Anyone can choose to become a Permaqueen, even if there isn't already one in the clan.
+                            if constants.CONFIG["roles"]["permaqueen_apps_no_mentor"] and not has_permaqueen_apprentice and \
+                                not int(random.random() * chance):
+                                self.ceremony(cat, CatRank.PERMAQUEEN_APPRENTICE)
+                                self.ceremony_accessory = True
+                                self.gain_accessories(cat)
+                            elif permaqueen_list and not has_permaqueen_apprentice and \
+                                not int(random.random() * chance):
+                                    self.ceremony(cat, CatRank.PERMAQUEEN_APPRENTICE)
+                                    self.ceremony_accessory = True
+                                    self.gain_accessories(cat)
+                            else:
+                                self.ceremony(cat, CatRank.APPRENTICE)
+                                self.ceremony_accessory = True
+                                self.gain_accessories(cat)                                
 
             # graduate
             if cat.status.rank.is_any_apprentice_rank():
@@ -1694,6 +1900,8 @@ class Events:
             "inquisitive",
             "strange",
             "shameless",
+            "dreamer",
+            "wandering"
         ]:
             chance += acc_chances["happy_trait_modifier"]
         elif cat.personality.trait in [
@@ -1703,6 +1911,7 @@ class Events:
             "bullying",
             "insecure",
             "nervous",
+            "skeptic"
         ]:
             chance += acc_chances["grumpy_trait_modifier"]
         if cat.pelt.accessory and len(cat.pelt.accessory) >= 1:
@@ -2015,8 +2224,12 @@ class Events:
         murder_capable = 7
         if cat.personality.stability < 6:
             murder_capable -= 3
+        elif cat.personality.stability > 6:
+            murder_capable += 3
         if cat.personality.lawfulness < 6:
             murder_capable -= 2
+        elif cat.personality.lawfulness < 6:
+            murder_capable += 2
         if cat.personality.aggression > 10:
             murder_capable -= 1
         elif cat.personality.aggression > 12:
@@ -2244,17 +2457,33 @@ class Events:
     def coming_out(self, cat):
         """turnin' the kitties trans..."""
 
-        if cat.age.is_baby() or cat.gender != cat.genderalign:
+        if cat.age is CatAge.NEWBORN or cat.fulltransed:
             return
 
-        transing_chance = constants.CONFIG["transition_related"]
-        chance = transing_chance["base_trans_chance"]
-        if cat.age in [CatAge.ADOLESCENT]:
-            chance += transing_chance["adolescent_modifier"]
-        elif cat.age in [CatAge.ADULT, CatAge.SENIOR_ADULT, CatAge.SENIOR]:
-            chance += transing_chance["older_modifier"]
+        if cat.genderalign == cat.gender:
+            if cat.age in [CatAge.KITTEN, CatAge.ADOLESCENT]:
+                transing_chance = random.randint(0, 256)
+            elif cat.age in [CatAge.YOUNG_ADULT, CatAge.ADULT]:
+                transing_chance = random.randint(0, 512)
+            else:
+                # senior adults & elders
+                transing_chance = random.randint(0, 1024)
+                
+        elif cat.gender == "intersex" and cat.genderalign in ["intergender", "demigirl", "demiboy"]:
+            if cat.age in [CatAge.KITTEN, CatAge.ADOLESCENT]:
+                transing_chance = random.randint(0, 256)
+            elif cat.age in [CatAge.YOUNG_ADULT, CatAge.ADULT]:
+                transing_chance = random.randint(0, 512)
+            else:
+                # senior adults & elders
+                transing_chance = random.randint(0, 1024)
 
-        if not int(random.random() * chance):
+        elif cat.genderalign == "questioning":
+            transing_chance = random.randint(0, 512)
+        else:
+            transing_chance = random.randint(0, 1024)        
+
+        if transing_chance == 0:
             sub_type = ["transition"]
             handle_short_events.handle_event(
                 event_type="misc",
@@ -2262,7 +2491,39 @@ class Events:
                 sub_type=sub_type,
                 freshkill_pile=game.clan.freshkill_pile,
             )
+            #Check if fully transed!
+            if cat.genderalign != "questioning":
+                fulltrans = random.randint(0, 10)
+                if fulltrans == 0:
+                    cat.fulltransed = True
+                    print(cat.name, " has finished self exploration")
+            return
 
+        ##Untransing the kitties, :P
+        if constants.CONFIG["transition_related"]["detransition"]:
+            if cat.genderalign != cat.gender:        
+                if cat.genderalign == "questioning":
+                    detransition_chance = random.randint(0, 512)
+                else:
+                    detransition_chance = random.randint(0, 1024)    
+
+            if detransition_chance == 0 and (cat.genderalign != cat.gender) or (cat.gender == "intersex" and cat.genderalign not in ["intergender", "demiboy", "demigirl"]):    
+                sub_type = ["detransition"]
+                handle_short_events.handle_event(
+                    event_type="misc",
+                    main_cat=cat,
+                    sub_type=sub_type,
+                    freshkill_pile=game.clan.freshkill_pile,
+                )
+                cat.fulltransed = True
+                print(cat.name, " has finished self exploration")
+                return
+
+        # Another check for if Fully Transed
+        fulltrans = random.randint(0, 1024)
+        if fulltrans == 0:
+            cat.fulltransed = True
+            print(cat.name, " has finished self exploration")        
         return
 
     def check_and_promote_leader(self):

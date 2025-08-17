@@ -6,6 +6,7 @@
         "tab_dangerous": "dangerous",
         "tab_history": "history",
         "tab_conditions": "conditions",
+        "tab_alters": "alters",
         "family_tree": "family tree",
         "relationships": "see relationships",
         "mate": "choose mate",
@@ -32,7 +33,10 @@
         "eyes_label": "eyes: %{eyes}",
         "pelt_label": "pelt: %{pelt}",
         "fur_label": "fur length: %{length}",
-        "accessory_label": "accessory: %{accessory}",
+        "albino_label": "pelt: albino %{pelt}",
+		"melanistic_label": "pelt: melanistic %{pelt}",
+		"accessory_label": "accessory: %{accessory}",
+		"fronting_label": "current front: "
         "parent_label": {
             "one": "parent: %{parents}",
             "many": "parents: %{parents}"
@@ -49,10 +53,41 @@
         "text_entry_edit_tooltip": "edit text",
         "sick_for": "has been sick for %{moons}",
         "grieving_for": "has been grieving for %{moons}",
+        "turmoil_for": "has been in turmoil fo %{moons}",
         "infectious_warning": "infectious!",
         "change_gender_cis": "change to\ncisgender",
         "change_gender_transmale": "change to trans\nmale",
         "change_gender_transfemale": "change to trans\nfemale",
-        "change_gender_nonbinary": "change to\nnonbinary"
+        "change_gender_nonbinary": "change to\nnonbinary",
+        "change_gender_trans": "change to\ntrans",
+        "neutered": "neutered",
+		"paralyzed": "paralyzed",
+		"declawed": "declawed",
+        "has_permanent_condition": "has a permanent condition",
+        "born_with": "born with this condition",
+        "split_early": "split in early kithood",
+        "had_perm_condition_for": {
+            "one": "has had this condtion for %{count} moon",
+            "many": "has had this condition for %{count} moons"
+        },
+        "has_been_split_for": {
+            "one": "split last moon",
+            "many": "has been split for %{count} moons"
+        },		
+        "had_injury_for": "has been hurt for %{moons}",
+        "pregnant_for": "has been pregnant for %{moons}",
+        "questionably_pregnant_for": "has been pregnant(?) for %{moons}",
+        "recovering_from_birth_for": "has been recovering for %{moons}",
+		"kittenspace_for": "has been in kittenspace for %{moons}",
+		"otherspace_for": "has been in safe-space for %{moons}",
+        "sick": "sick",
+        "injured": "injured",
+        "grieving": "grieving",
+        "fleas": "flea-ridden",
+		"ticks": "riddled with ticks",
+		"lethargic": "lethargic",
+        "is_infected": "is infected",
+        "is_festering": "is festering",
+		"is_anaphylaxis": "experiencing anaphylaxis"
     }
 }

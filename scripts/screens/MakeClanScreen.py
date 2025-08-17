@@ -24,11 +24,9 @@ from scripts.game_structure.ui_elements import (
 from scripts.utility import get_text_box_theme, ui_scale, ui_scale_blit, ui_scale_offset
 from scripts.utility import ui_scale_dimensions
 from .Screens import Screens
-from .screens_core.screens_core import rebuild_den_dropdown
 from ..cat import save_load
 from ..cat.enums import CatRank
 from ..cat.sprites import sprites
-from ..clan_package.settings import get_clan_setting
 from ..game_structure.game.settings import game_setting_set, game_setting_get
 from ..game_structure.game.switches import switch_get_value, Switch
 from ..game_structure.screen_settings import MANAGER, screen
@@ -1116,9 +1114,48 @@ class MakeClanScreen(Screens):
             self.elements["select_cat"].text, text_kwargs={"m_c": selected}
         )
         self.elements["cat_name"].show()
-        self.elements["cat_info"].set_text(
-            selected.get_info_block(make_clan=True), text_kwargs={"m_c": selected}
-        )
+
+        status_text = selected.status.rank
+        if selected.status.rank.is_any_apprentice_rank():
+            if selected.status.rank == CatRank.MEDIATOR_APPRENTICE:
+                status_text = "mediator"
+            elif selected.status.rank == CatRank.APPRENTICE:
+                status_text = "warrior"
+            elif selected.status.rank == CatRank.PERMAQUEEN_APPRENTICE:
+                status_text = "permaqueen"
+            elif selected.status.rank == CatRank.MEDICINE_APPRENTICE:
+                status_text = "medicine cat"       
+
+        moon_text = ""
+        if selected.moons == 1:
+            moon_text = " 1 moon"
+        elif selected.moons != 0:
+            moon_text = f" {str(selected.moons)} moons"
+        
+        if selected.permanent_condition:
+            perm_cond_text = "condition"
+            if len(selected.permanent_condition) > 1:
+                perm_cond_text += "s:\n"
+            else:
+                perm_cond_text += ":\n"
+            for condition in selected.permanent_condition:
+                perm_cond_text += str(condition) + "\n"
+            perm_cond_text = perm_cond_text[:-1]
+
+            self.elements['cat_info'].set_text(selected.gender + "\n" +
+                                               str(selected.species) + ", " + str(status_text) + "\n" +
+                                               str(selected.age) + ", " + moon_text + "\n" +
+                                                   str(selected.personality.trait) + "\n" +
+                                                   str(selected.skills.skill_string(short=True)) + "\n" +
+                                                   "\n" + str(perm_cond_text)
+            )
+        else:
+            self.elements['cat_info'].set_text(selected.gender + "\n" + 
+                                               str(selected.species) + ", " + str(status_text) + "\n" +
+                                               str(selected.age) + ", " + moon_text + "\n" +
+                                                   str(selected.personality.trait) + "\n" +
+                                                   str(selected.skills.skill_string(short=True)))
+        
         self.elements["cat_info"].show()
 
     def refresh_cat_images_and_info(self, selected=None):
@@ -1322,7 +1359,7 @@ class MakeClanScreen(Screens):
     def _get_cat_tooltip_string(self, cat: Cat):
         """Get tooltip for cat. Tooltip displays name, sex, age group, and trait."""
 
-        return f"<b>{cat.name}</b><br>{cat.get_genderalign_string()}<br>{i18n.t('general.' + cat.age, count=1)}<br>{i18n.t('cat.personality.' + cat.personality.trait)}<br>{cat.skills.skill_string(short=True)}"
+        return f"<b>{cat.name}</b><br>{cat.gender}<br>{cat.age}<br>{cat.personality.trait}<br>{cat.moons} moons"
 
     def open_game_mode(self):
         # Clear previous screen
@@ -2164,7 +2201,7 @@ class MakeClanScreen(Screens):
     def save_clan(self):
         game.mediated.clear()
         game.patrolled.clear()
-        save_load.faded_ids.clear()
+        save_load.cat_to_fade.clear()
         Cat.outside_cats.clear()
         Patrol.used_patrols.clear()
         convert_camp = {1: "camp1", 2: "camp2", 3: "camp3", 4: "camp4"}
@@ -2187,11 +2224,6 @@ class MakeClanScreen(Screens):
         game.clan.save_herb_supply(game.clan)
         Cat.grief_strings.clear()
         Cat.sort_cats()
-
-        rebuild_den_dropdown(
-            left_align=not get_clan_setting("moons and seasons"),
-            game_mode=game.clan.game_mode,
-        )
 
     def get_camp_art_path(self, campnum) -> Optional[str]:
         if not campnum:
