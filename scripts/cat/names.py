@@ -93,7 +93,7 @@ class Name:
         try:
             color = cat.pelt.colour
             pelt = cat.pelt.name
-            tortiebase = cat.pelt.tortiebase
+            tortiebase = cat.pelt.tortie_base
             length = cat.pelt.length
             skin = cat.pelt.skin
             species = cat.species

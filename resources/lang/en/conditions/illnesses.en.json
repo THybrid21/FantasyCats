@@ -22,7 +22,7 @@
         "grief stricken": "grief-stricken",
         "malnourished": "malnourished",
         "starving": "starving",
-        "tick illness": "tick illness",
+        "tick fever": "tick fever",
 		"anxiety attack": "anxiety attack",
 		"panic attack": "panic attack",
 		"paranoia": "paranoia",
@@ -51,6 +51,5 @@
 		"word loss": "word loss",
 		"nausea": "nausea",
 		"brain fog": "brain fog"
-		
     }
 }

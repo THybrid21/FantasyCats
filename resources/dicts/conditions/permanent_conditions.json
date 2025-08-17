@@ -439,8 +439,8 @@
     },
     "strange lump": {
         "severity": "major",
-        "congenital": "never",
-        "moons_until": 5,
+        "congenital": "sometimes",
+        "moons_until": 40,
         "mortality": {
             "newborn": 0,
             "kitten": 10,
@@ -454,15 +454,15 @@
         "risks": [
             {
                 "name": "seizure",
-                "chance": 10
+                "chance": 30
             },
             {
                 "name": "paralyzed",
-                "chance": 50
+                "chance": 60
             },
             {
                 "name": "redcough",
-                "chance": 60
+                "chance": 50
             }
         ],
         "herbs": {
@@ -960,7 +960,11 @@
 			{
 				"name": "world tired",
 				"chance": 120
-			}
+			},
+            {
+                "name": "vacant",
+                "chance": 50
+            }
         ],
         "herbs": {
             "1": [

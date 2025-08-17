@@ -7,7 +7,7 @@ import i18n
 import scripts.game_structure.screen_settings
 from scripts.cat.sprites import sprites
 from scripts.game_structure import constants
-from scripts.game_structure.game_essentials import game
+from scripts.game_structure import game
 from scripts.game_structure.localization import get_lang_config
 from scripts.utility import adjust_list_text
 
@@ -297,10 +297,10 @@ class Pelt:
         eye_colour3: str = None,
         eye_lazy: str = None,
         eye_lazy2: str = None,
-        tortiebase: str = None,
-        tortiecolour: str = None,
-        pattern: list = None,
-        tortiepattern: str = None,
+        tortie_base: str = None,
+        tortie_colour: str = None,
+        tortie_marking: list = None,
+        tortie_pattern: str = None,
         vitiligo: str = None,
         points: str = None,
         albino: str = None,
@@ -332,10 +332,10 @@ class Pelt:
         self.eye_colour3 = eye_colour3
         self.eye_lazy = eye_lazy
         self.eye_lazy2 = eye_lazy2
-        self.tortiebase = tortiebase
-        self.pattern = pattern
-        self.tortiepattern = tortiepattern
-        self.tortiecolour = tortiecolour
+        self.tortie_base = tortie_base
+        self.tortie_marking = tortie_marking
+        self.tortie_pattern = tortie_pattern
+        self.tortie_colour = tortie_colour
         self.vitiligo = vitiligo
         self.length = length
         self.texture = texture
@@ -430,10 +430,10 @@ class Pelt:
             self.points = self.white_patches
             self.white_patches = None
 
-        if self.tortiepattern and "tortie" in self.tortiepattern:
-            self.tortiepattern = sub("tortie", "", self.tortiepattern.lower())
-            if self.tortiepattern == "solid":
-                self.tortiepattern = "single"
+        if self.tortie_pattern and "tortie" in self.tortie_pattern:
+            self.tortie_pattern = sub("tortie", "", self.tortie_pattern.lower())
+            if self.tortie_pattern == "solid":
+                self.tortie_pattern = "single"
 
         if self.white_patches in convert_dict["old_creamy_patches"]:
             self.white_patches = convert_dict["old_creamy_patches"][self.white_patches]
@@ -572,25 +572,25 @@ class Pelt:
                 self.cat_sprites['para_adult'] = choice([40, 41])
             self.cat_sprites['newborn'] = 49
             
-        if self.pattern in convert_dict["old_tortie_patches"]:
-            old_pattern = self.pattern
-            self.pattern = convert_dict["old_tortie_patches"][old_pattern][1]
+        if self.tortie_marking in convert_dict["old_tortie_patches"]:
+            old_pattern = self.tortie_marking
+            self.tortie_marking = convert_dict["old_tortie_patches"][old_pattern][1]
 
             # If the pattern is old, there is also a chance the base color is stored in
-            # tortiecolour. That may be different from the pelt color ("main" for torties)
+            # tortie_colour. That may be different from the pelt color ("main" for torties)
             # generated before the "ginger-on-ginger" update. If it was generated after that update,
-            # tortiecolour and pelt_colour will be the same. Therefore, let's also re-set the pelt color
-            self.colour = self.tortiecolour
-            self.tortiecolour = convert_dict["old_tortie_patches"][old_pattern][0]
+            # tortie_colour and pelt_colour will be the same. Therefore, let's also re-set the pelt color
+            self.colour = self.tortie_colour
+            self.tortie_colour = convert_dict["old_tortie_patches"][old_pattern][0]
 
-        if self.pattern == "MINIMAL1":
-            self.pattern = "MINIMALONE"
-        elif self.pattern == "MINIMAL2":
-            self.pattern = "MINIMALTWO"
-        elif self.pattern == "MINIMAL3":
-            self.pattern = "MINIMALTHREE"
-        elif self.pattern == "MINIMAL4":
-            self.pattern = "MINIMALFOUR"
+        if self.tortie_marking == "MINIMAL1":
+            self.tortie_marking = "MINIMALONE"
+        elif self.tortie_marking == "MINIMAL2":
+            self.tortie_marking = "MINIMALTWO"
+        elif self.tortie_marking == "MINIMAL3":
+            self.tortie_marking = "MINIMALTHREE"
+        elif self.tortie_marking == "MINIMAL4":
+            self.tortie_marking = "MINIMALFOUR"
 
         if self.accessory is None:
             self.accessory = []
@@ -961,7 +961,7 @@ class Pelt:
 
                 # Gather pelt name
                 if p.pelt.name in Pelt.torties:
-                    par_peltnames.add(p.pelt.tortiebase.capitalize())
+                    par_peltnames.add(p.pelt.tortie_base.capitalize())
                 else:
                     par_peltnames.add(p.pelt.name)
 
@@ -999,7 +999,7 @@ class Pelt:
             self.texture = selected.texture
             self.build = selected.build
             self.colour = selected.colour
-            self.tortiebase = selected.tortiebase
+            self.tortie_base = selected.tortie_base
             return selected.white
 
         # ------------------------------------------------------------------------------------------------------------#
@@ -1386,7 +1386,7 @@ class Pelt:
         self.length = chosen_pelt_length
         self.texture = chosen_pelt_texture
         self.build = chosen_cat_build
-        self.tortiebase = (
+        self.tortie_base = (
             chosen_tortie_base  # This will be none if the cat isn't a tortie.
         )
         return chosen_white
@@ -1479,14 +1479,14 @@ class Pelt:
         self.length = chosen_pelt_length
         self.texture = chosen_pelt_texture
         self.build = chosen_cat_build
-        self.tortiebase = (
+        self.tortie_base = (
             chosen_tortie_base  # This will be none if the cat isn't a tortie.
         )
         return chosen_white
 
     def init_pattern_color(self, parents, gender, species) -> bool:
         """Inits self.name, self.colour, self.length,
-        self.tortiebase and determines if the cat
+        self.tortie_base and determines if the cat
         will have white patche or not.
         Return TRUE is the cat should have white patches,
         false is not."""
@@ -1623,9 +1623,9 @@ class Pelt:
 
     def init_pattern(self):
         if self.name in Pelt.torties:
-            if not self.tortiebase:
-                self.tortiebase = choice(Pelt.tortiebases)
-            if not self.pattern:
+            if not self.tortie_base:
+                self.tortie_base = choice(Pelt.tortiebases)
+            if not self.tortie_marking:
                 chosen_pattern = set()
                 chosen_pattern.add(choice(Pelt.tortiepatterns))
 
@@ -1640,7 +1640,7 @@ class Pelt:
                 if len(chosen_pattern) >= 2:
                     print("DoublePatches: "+str(len(chosen_pattern))+" tortie patches!")
 
-                self.pattern = list(chosen_pattern)
+                self.tortie_marking = list(chosen_pattern)
 
             wildcard_chance = constants.CONFIG["cat_generation"]["wildcard_tortie"]
             if self.colour:
@@ -1652,16 +1652,16 @@ class Pelt:
                     print("Wildcard tortie!")
 
                     # Allow any pattern:
-                    self.tortiepattern = choice(Pelt.tortiebases)
+                    self.tortie_pattern = choice(Pelt.tortiebases)
 
                     # Allow any colors that aren't the base color.
                     possible_colors = Pelt.pelt_colours.copy()
                     possible_colors.remove(self.colour)
-                    self.tortiecolour = choice(possible_colors)
+                    self.tortie_colour = choice(possible_colors)
 
                 else:
                     # Normal generation
-                    self.tortiepattern = self.tortiebase
+                    self.tortie_pattern = self.tortie_base
 
                     
                     hit = random.randint(0, 120)
@@ -1669,75 +1669,75 @@ class Pelt:
                         if self.colour in Pelt.pride_colours:
                             possible_colors = Pelt.pride_colours.copy()
                             possible_colors.remove(self.colour)
-                            self.tortiecolour = choice(possible_colors)
+                            self.tortie_colour = choice(possible_colors)
                         else:
-                            self.tortiecolour = choice(Pelt.pride_colours)
+                            self.tortie_colour = choice(Pelt.pride_colours)
                     # Ginger is often dupliselfed to increase its chances
                     
                     else:
                         if self.colour in ["WHITE", "PALEGREY", "SILVER", "BRONZE", "PALEBOW"]:                        
-                            self.tortiecolour = choice(['BANNANA', 'PALECREAM', 
+                            self.tortie_colour = choice(['BANNANA', 'PALECREAM', 
                                                             'CREAM', 'PALEGINGER', 'CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 'SKY', 'POWDERBLUE', 
                                                             'SHINYMEW', 'PETAL', 'PALESTRAKIT', 'FLORAL', 'CORAL', 'MEW', 'PALERED'])
                         elif self.colour in ["GREY", "BLUEGREY", "XANADU", "DARKGREY"]:                        
-                            self.tortiecolour = choice(['HONEY', 'GOLDEN', 'APRICOT', 'GINGER',
+                            self.tortie_colour = choice(['HONEY', 'GOLDEN', 'APRICOT', 'GINGER',
                                                             'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 'SAPPHIRE', 'OCEAN', 'COBALT', 'AMYTHYST', 
                                                             'ORCHID', 'STRAKIT', 'APPLE', 'BLUSH', 'RED', 'YELLOW', 'BEE', 'PYRITE'])
                         elif self.colour in ["COAL", "GHOST", "BLACK", "PITCH", "DUSKBOW"]:                        
-                            self.tortiecolour = choice(['ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'DARKGREEN', 'DARKOLIVE', 'FERN', 'FOREST', 'DARKCOBALT', 
+                            self.tortie_colour = choice(['ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'DARKGREEN', 'DARKOLIVE', 'FERN', 'FOREST', 'DARKCOBALT', 
                                                             'INDIGO', 'NIGHT', 'PURPLE', 'WINE', 'DARKSTRAKIT', 'SCARLET', 'DARKRED', 'GARNET'])
 
                         elif self.colour in ["BANNANA", "PALECREAM", "CREAM", "PALEGINGER", "PETAL", "PALESTRAKIT", "FLORAL", "CORAL", "MEW", "PALERED"]:                        
-                            self.tortiecolour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 
+                            self.tortie_colour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 
                                                             'SKY', 'POWDERBLUE', 'SHINYMEW'])
                         elif self.colour in ["HONEY", "GOLDEN", "APRICOT", "GINGER", "AMYTHYST", "ORCHID", "STRAKIT", "APPLE", "BLUSH", "RED"]:                        
-                            self.tortiecolour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 'SAPPHIRE', 
+                            self.tortie_colour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 'SAPPHIRE', 
                                                             'OCEAN', 'COBALT'])
                         elif self.colour in ["ROSE", "DARKGINGER", "SIENNA", "BLOOD", "PURPLE", "WINE", "DARKSTRAKIT", "SCARLET", "DARKRED", "GARNET"]:                        
-                            self.tortiecolour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'DARKGREEN', 
+                            self.tortie_colour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'DARKGREEN', 
                                                             'DARKOLIVE', 'FERN', 'FOREST', 'DARKCOBALT', 'INDIGO', 'NIGHT'])
  
                         elif self.colour in ["BEIGE", "PANTONE", "LIGHTBROWN", "LILAC", "IVORY", "LEMON", "LAGUNA"]:                        
-                            self.tortiecolour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'BANNANA', 'PALECREAM', 'CREAM', 
+                            self.tortie_colour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'BANNANA', 'PALECREAM', 'CREAM', 
                                                             'PALEGINGER', 'PETAL', 'PALESTRAKIT', 'FLORAL', 'CORAL', 'MEW', 'PALERED',
                                                             'CHARTRUSE', 'MINT', 'LETTUCE', 'LIGHTGREEN', 'SKY', 'POWDERBLUE', 'SHINYMEW'])
                         elif self.colour in ["BROWN", "GOLDEN-BROWN", "TAN", "CHESTNUT", "YELLOW", "BEE", "PYRITE"]:                        
-                            self.tortiecolour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 
+                            self.tortie_colour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 
                                                             'AMYTHYST', 'ORCHID', 'STRAKIT', 'APPLE', 'BLUSH', 'RED', 'OLIVE', 'EMERALD', 'DARKMINT', 'GREEN', 
                                                             'SAPPHIRE', 'OCEAN', 'COBALT'])
                         elif self.colour in ["DARKBROWN", "CHOCOLATE", "COFFEE", "UMBER", "PINEAPPLE", "YELLOW-GREEN", "DIJON"]:                        
-                            self.tortiecolour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'PURPLE', 'WINE', 'DARKSTRAKIT', 
+                            self.tortie_colour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'PURPLE', 'WINE', 'DARKSTRAKIT', 
                                                             'SCARLET', 'DARKRED', 'GARNET', 'DARKGREEN', 'DARKOLIVE', 'FERN', 'FOREST', 'DARKCOBALT', 'INDIGO', 'NIGHT'])
 
                         elif self.colour in ["CHARTRUSE", "MINT", "LETTUCE", "LIGHTGREEN", "SKY", "POWDERBLUE", "SHINYMEW"]:                        
-                            self.tortiecolour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'BANNANA', 'PALECREAM', 'CREAM', 
+                            self.tortie_colour = choice(['WHITE', 'PALEGREY', 'SILVER', 'BRONZE', 'PALEBOW', 'BANNANA', 'PALECREAM', 'CREAM', 
                                                             'PALEGINGER', 'PETAL', 'PALESTRAKIT', 'FLORAL', 'CORAL', 'MEW', 'PALERED'])
                         elif self.colour in [ "OLIVE", "EMERALD", "DARKMINT", "GREEN", "SAPPHIRE", "OCEAN", "COBALT"]:                        
-                            self.tortiecolour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 
+                            self.tortie_colour = choice(['GREY', 'BLUEGREY', 'XANADU', 'DARKGREY', 'HONEY', 'GOLDEN', 'APRICOT', 'GINGER', 
                                                             'AMYTHYST', 'ORCHID', 'STRAKIT', 'APPLE', 'BLUSH', 'RED'])
                         elif self.colour in ["DARKGREEN", "DARKOLIVE", "FERN", "FOREST", "DARKCOBALT", "INDIGO", "NIGHT"]:                        
-                            self.tortiecolour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'PURPLE', 'WINE', 'DARKSTRAKIT', 
+                            self.tortie_colour = choice(['COAL', 'GHOST', 'BLACK', 'PITCH', 'DUSKBOW', 'ROSE', 'DARKGINGER', 'SIENNA', 'BLOOD', 'PURPLE', 'WINE', 'DARKSTRAKIT', 
                                                             'SCARLET', 'DARKRED', 'GARNET'])
                                 
                         elif self.colour == "GLASS":
                             possible_colors = Pelt.pelt_colours.copy()
                             possible_colors.remove(self.colour)
-                            self.tortiecolour = choice(possible_colors)
+                            self.tortie_colour = choice(possible_colors)
 
                         elif self.colour in Pelt.pride_colours:
                             possible_colors = Pelt.pride_colours.copy()
                             possible_colors.remove(self.colour)
                             possible_colors.extend(['STRAKIT', 'DARKSTRAKIT', 'PITCH', 'PALEBOW', 'DUSKBOW'])
-                            self.tortiecolour = choice(possible_colors)
+                            self.tortie_colour = choice(possible_colors)
 
             else:
-                self.tortiecolour = choice(Pelt.pride_colours)
+                self.tortie_colour = choice(Pelt.pride_colours)
 
         else:
-            self.tortiebase = None
-            self.tortiepattern = None
-            self.tortiecolour = None
-            self.pattern = None
+            self.tortie_base = None
+            self.tortie_pattern = None
+            self.tortie_colour = None
+            self.tortie_marking = None
 
     def white_patches_inheritance(self, parents: tuple):
         par_whitepatches = set()
@@ -1978,7 +1978,7 @@ class Pelt:
             elif self.colour in Pelt.pride_colours:
                 self.tint = "none"
         else:
-            self.tint = "none"
+            self.tint = None
 
     # WHITE PATCHES TINT
         if self.white_patches or self.points:
@@ -1986,7 +1986,7 @@ class Pelt:
             possible_tints = sprites.white_patches_tints["possible_tints"]["basic"].copy()
             self.white_patches_tint = choice(possible_tints)
         else:
-            self.white_patches_tint = "none"
+            self.white_patches_tint = None
 
     # NOW FOR VITILIGO TINTS! JUST AS BONUS
         if self.vitiligo:
@@ -2405,22 +2405,22 @@ def _describe_torties(cat, color_name, short=False) -> [str, str]:
         if (
             cat.pelt.colour
             in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
-            and cat.pelt.tortiecolour
+            and cat.pelt.tortie_colour
             in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
         ):
             return "cat.pelts.mottled", ""
         else:
             return f"cat.pelts.{cat.pelt.name}", ""
 
-    base = cat.pelt.tortiebase.lower()
+    base = cat.pelt.tortie_base.lower()
 
-    patches_color = f"cat.pelts.{cat.pelt.tortiecolour}"
+    patches_color = f"cat.pelts.{cat.pelt.tortie_colour}"
     color_name.append("/")
     color_name.append(patches_color)
 
     if (
         cat.pelt.colour in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
-        and cat.pelt.tortiecolour
+        and cat.pelt.tortie_colour
         in Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
     ):
         return "cat.pelts.mottled_long", color_name
@@ -2430,7 +2430,7 @@ def _describe_torties(cat, color_name, short=False) -> [str, str]:
             "rosette",
             "speckled",
         ):
-            base = f"cat.pelts.{cat.pelt.tortiebase.capitalize()}_long"  # the extra space is intentional
+            base = f"cat.pelts.{cat.pelt.tortie_base.capitalize()}_long"  # the extra space is intentional
         else:
             base = ""
         return base, color_name

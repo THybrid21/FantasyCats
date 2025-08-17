@@ -5,8 +5,8 @@ from copy import copy
 import pygame
 import ujson
 
-from scripts.game_structure import constants
-from scripts.game_structure.game_essentials import game
+from scripts.cat.enums import CatGroup
+from scripts.game_structure import constants, image_cache
 from scripts.game_structure.game.settings import game_setting_get
 from scripts.special_dates import SpecialDate, is_today
 
@@ -129,8 +129,8 @@ class Sprites:
         # if anyone changes lineart for whatever reason update this
         if isinstance(self.size, int):
             pass
-        elif width / 3 == height / 7:
-            self.size = width / 3
+        elif width / 9 == height / 6:
+            self.size = width / 9
         else:
             self.size = 50  # default, what base clangen uses
             print(f"lineart.png is not 9x6, falling back to {self.size}")
@@ -182,14 +182,20 @@ class Sprites:
             self.make_group("shadersnewwhite", (0, 0), f"shaders{f}_")
             self.make_group("lightingnew", (0, 0), f"lighting{f}_")
 
-            self.make_group("lineartdead", (0, 0), f"lineartdead{f}_")
-            self.make_group("lineartdf", (0, 0), f"lineartdf{f}_")
+            self.make_group("lineartdead", (0, 0), "lineartdead{f}_")
+            self.make_group("lineartdf", (0, 0), "lineartdf{f}_")
+            self.make_group("lineartur", (0, 0), "lineartur{f}_")
+            self.make_group("line_sc_overlay", (0, 0), "sc_overlay{f}_")
+            self.make_group("line_ur_underlay", (0, 0), "ur_underlay{f}_")
+            self.make_group("line_ur_overlay", (0, 0), "ur_overlay{f}_")
+            self.make_group("gradient_ur", (0, 0), "gradient_ur{f}_")
 
             # Fading Fog
             for i in range(0, 3):
                 self.make_group("fademask", (i, 0), f"fademask{f}_{i}")
                 self.make_group("fadestarclan", (i, 0), f"fadestarclan{f}_{i}")
                 self.make_group("fadedarkforest", (i, 0), f"fadedf{f}_{i}")
+                self.make_group("fadeunknownresidence", (i, 0), f"fadeur{f}_{i}")
 
             # Define eye colors
             eye_colors = [
@@ -633,6 +639,65 @@ class Sprites:
         del var
 
         return recolored_symbol
+
+    @staticmethod
+    def get_platform(biome, season, show_nest, group: CatGroup) -> pygame.Surface:
+        """
+        Returns the relevant platform
+        :param biome: The current game biome
+        :param season: The current game season
+        :param show_nest: If true, displays the nest
+        :param group: Used to determine appropriate afterlife platform
+        :return: pygame.Surface containing the desired platform
+        """
+        offset = 0 if game_setting_get("dark mode") else 80
+        """Used to choose the dark mode version of platforms"""
+
+        available_biome = ["Forest", "Mountainous", "Plains", "Beach"]
+
+        if biome not in available_biome:
+            biome = available_biome[0]
+        if show_nest:
+            biome = "nest"
+
+        biome = biome.lower()
+
+        platformsheet = image_cache.load_image(
+            "resources/images/platforms.png"
+        ).convert_alpha()
+
+        order = ["beach", "forest", "mountainous", "nest", "plains", "dead"]
+
+        if group and group.is_afterlife():
+            biome_platforms = platformsheet.subsurface(
+                pygame.Rect(0, order.index("dead") * 70, 640, 70)
+            )
+
+            if group == CatGroup.DARK_FOREST:
+                return biome_platforms.subsurface(pygame.Rect(0 + offset, 0, 80, 70))
+            elif group == CatGroup.STARCLAN:
+                return biome_platforms.subsurface(pygame.Rect(160 + offset, 0, 80, 70))
+            elif group == CatGroup.UNKNOWN_RESIDENCE:
+                return biome_platforms.subsurface(pygame.Rect(320 + offset, 0, 80, 70))
+
+        biome_platforms = platformsheet.subsurface(
+            pygame.Rect(0, order.index(biome) * 70, 640, 70)
+        ).convert_alpha()
+        season_x = {
+            "greenleaf": 0 + offset,
+            "leaf-bare": 160 + offset,
+            "leaf-fall": 320 + offset,
+            "newleaf": 480 + offset,
+        }
+
+        return biome_platforms.subsurface(
+            pygame.Rect(
+                season_x[season.lower()],
+                0,
+                80,
+                70,
+            )
+        )
 
 
 # CREATE INSTANCE

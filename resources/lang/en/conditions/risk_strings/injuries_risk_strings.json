@@ -49,7 +49,7 @@
             "r_c sighs and tries to gently extract the head of the tick that was left behind when the insect was plucked off of m_c. With that contaminant, the little tick bite has become infected.",
             "The tick on m_c was left for far too long. The area is now swollen and warm - definite signs of infection."
         ],
-		"tick illness": [
+		"tick fever": [
 			"r_c carefully combs through m_c's fur checking for any leftover tick heads. With a sinking heart r_c recognizes the distinctive rash and swelling -- tick illness.",
 			"m_c complains about how even despite the apprentices work ridding {PRONOUN/m_c/object} of {PRONOUN/m_c/poss} ticks {PRONOUN/m_c/object} still {VERB/m_c/feel/feels} so very, very uncomfortable.",
 			"It would seem an apprentice wasn't careful enough as m_c's gotten ill due to leftover ticks in {PRONOUN/m_c/poss} fur."
@@ -65,7 +65,7 @@
 			"Alongside the tick bites, m_c has noticed that {PRONOUN/m_c/poss} limbs seem to have gained their own opinions on things.",
 			"m_c jerks around in {PRONOUN/m_c/poss} nest, awkwardly flailing a paw around without any real ability to stop it."
 		],
-		"tick illness": [
+		"tick fever": [
 			"r_c fusses over m_c as {PRONOUN/m_c/subject} weakly respond to {PRONOUN/r_c/poss} questions about the symptoms {PRONOUN/m_c/subject} {VERB/m_c/are/is} experiencing.",
 			"m_c complains loudly about the shuddering fever that seems to have come from untended tick bites.",
 			"Tick illness has taken over m_c with shudders and shivers and the hints of a growing rash."
