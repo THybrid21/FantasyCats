@@ -85,7 +85,7 @@
             "m_c has been getting more and more forgetful lately. {PRONOUN/m_c/subject/CAP} is starting to fade.",
             "r_c has to repeat m_c's name several times to get {PRONOUN/m_c/poss} attention, quietly concerned about how long it takes {PRONOUN/m_c/object} to respond.",
             "m_c has trouble remembering where {PRONOUN/m_c/poss} nest is. r_c takes note- m_c has been fading fast."
-        ]
+        ],
 	"albinism": [
 		"r_c has been watching the nursery carefully, {PRONOUN/r_c/subject} {VERB/r_c/suspect/suspects} that something about m_c is more than just been light furred, {PRONOUN/r_c/poss} suspicion is only heightened by how m_c avoids going into sunlight where {PRONOUN/m_c/subject} can.",
 		"While a light furred kitten isn't uncommon there's mutterings in the clan when m_c opens {PRONOUN/m_c/poss} eyes for the first time. It's known how light-furred and light-eyed kittens tend to have more health issues.",
@@ -112,17 +112,17 @@
 		"When touched by another, m_c lets out yowls of pain. It's distressing for everyone that they can't really help."
 	],
 	"heavy soul": [
-        "r_c is brought to the nursery by a worried parent, m_c wasn't running around and playing like the other kits, just curled in a ball staring blankly at the wall. After some gentle talking with m_c the medicine cat sits back and softly explains {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} it’s a heavy soul.",
+        "r_c is brought to the nursery by a worried parent, m_c wasn't running around and playing like the other kits, just curled in a ball staring blankly at the wall. After some gentle talking with m_c the medicine cat sits back and softly explains {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} it’s a case of depression.",
         "m_c hides from {PRONOUN/m_c/poss} denmates, much to the concern of {PRONOUN/m_c/poss} parent as they curl around their kit, they couldn't do much but purr in an attempt to comfort their child.",
         "A denmate wonders why m_c won't play with anyone, and they try to become friends and play with {PRONOUN/m_c/object}. m_c agrees to play with them, but don't seem too energetic about it.",
         "m_c has seemed more sluggish then the other kits {PRONOUN/m_c/poss} age, less energetic. Less focused on the reality and more lost in {PRONOUN/m_c/poss} thoughts."
 	],
 	"starwalker": [
 	   "m_c has been having issues socializing with {PRONOUN/m_c/poss} denmates, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} it uncomfortable and somewhat terrifying. r_c understanding talks with {PRONOUN/m_c/object} about it saying {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have to force {PRONOUN/m_c/self} into it.",
-       "m_c is just like any other kit, rolling around and batting at bugs {PRONOUN/m_c/subject} {VERB/m_c/find/finds}. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} a bit louder, a bit more brash and doesn't seem to understand social cues. m_c might walk the paths between the stars.",
+       "m_c is just like any other kit, rolling around and batting at bugs {PRONOUN/m_c/subject} {VERB/m_c/find/finds}. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} a bit louder, a bit more brash and doesn't seem to understand social cues. m_c might just be a bit autoprismic.",
        "m_c doesn't seem to be a big fan of eye contact, {PRONOUN/m_c/poss} eyes often drift from {PRONOUN/m_c/poss} parents face and {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} take well to social cues."	,
 	   "While the other kittens are rolling around m_c is more interested in talking with the clan's medicine cat and soaking up information about StarClan.",
-	   "m_c struggles to change {PRONOUN/m_c/poss} routine, preferring to do things one way alone. {PRONOUN/m_c/subject/CAP} seems to have starwalker traits.",
+	   "m_c struggles to change {PRONOUN/m_c/poss} routine, preferring to do things one way alone. {PRONOUN/m_c/subject/CAP} seems to have autoprismic traits.",
 	   "While the other kittens in the clan are out making multiple friends m_c prefers to stick with one or two particular cats and shies away from others.",
 	   "When it comes to trying out new games and nesting material m_c keeps making faces and looking very upset."
 	],
@@ -164,8 +164,8 @@
 		"While talking with a Clanmate m_c explains how intensely {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} emotions, as if it's all consuming. Afterwards the Medicine Cat came over and softly explained m_c might be a thunderous spirit.",
 		"Despite wanting to trust {PRONOUN/m_c/poss} Clanmates, m_c really struggles and can't help but act all on {PRONOUN/m_c/poss} own and recklessly. After another close call, the clan sits {PRONOUN/m_c/object} down and talks about the possibility {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a thunderous spirit."
 	],
-	"otherworldly mind": [
-		"r_c notices that m_c sees and hears things that other cats can't, and suggests that {PRONOUN/m_c/subject} {VERB/m_c/have/has} an otherworldly mind.",
+	"schizophrenia": [
+		"r_c notices that m_c sees and hears things that other cats can't, and suggests that {PRONOUN/m_c/subject} {VERB/m_c/have/has} schizophrenia.",
 		"m_c often has strong believes that no other cat has, like how {PRONOUN/m_c/subject} can talk to birds or was once a powerful leader",
 		"Clanmates are worried about m_c, as sometimes the words {PRONOUN/m_c/subject} are saying are gibberish, or {PRONOUN/m_c/subject}'ll stop randomly in a conversation. Paired with other factors, m_c speaks to a medicine cat",
 		"A queen in the nursery notices that m_c keeps on complaining about a scary monster which {PRONOUN/m_c/subject} can't see, and they speak to some other Clanmates about it.",

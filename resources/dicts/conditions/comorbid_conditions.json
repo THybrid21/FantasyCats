@@ -27,7 +27,7 @@
 	"thunderous spirit": [
 		"plural soul", "anxiety"
 	],
-	"otherworldly mind": [
+	"schizophrenia": [
 		"plural soul", "echoing memory"
 	],
 	"irritable bowels": [
@@ -40,7 +40,7 @@
 		"seizure prone", "starwalker", "comet spirit"
 	],
 	"plural soul": [
-		"heavy soul", "antisocial", "anxiety", "thunderous spirit", "otherworldly mind", "starwalker", "echoing memory"
+		"heavy soul", "antisocial", "anxiety", "thunderous spirit", "schizophrenia", "starwalker", "echoing memory"
 	],
 	"face blindness": [
 		"seizure prone", "starwalker", "thought blind", "disrupted senses"
@@ -52,6 +52,6 @@
 		"starwalker", "anxiety"
 	],
 	"echoing memory": [
-		"otherworldly mind", "plural soul"
+		"schizophrenia", "plural soul"
 	]
 }

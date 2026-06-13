@@ -1,17 +1,17 @@
 {
     "species": {
         "cat": [],
-        "slugcat": [],
 		"skeleton": ["rec_inh"],
+        "slugcat": [],
 		"snail cat": [],
 		"amphicat": [],
 		"wolf": ["exc_breed"]
     },
-    "ran_weights": [10, 10, 2, 5, 5, 5],
+    "ran_weights": [10, 2, 10, 5, 5, 5], 
     "in_weights": {
         "cat": [15, 0, 1, 0, 0, 0],
-        "slugcat": [0, 15, 0, 1, 0, 0],
-		"skeleton": [1, 0, 15, 0, 1, 1],
+		"skeleton": [1, 15, 0, 0, 1, 1],
+        "slugcat": [0, 0, 15, 1, 0, 0],
 		"snail cat": [0, 1, 0, 15, 0, 0],
 		"amphicat": [0, 0, 1, 0, 15, 0],
 		"wolf": [0, 0, 1, 0, 0, 15]
@@ -20,7 +20,8 @@
         "look at the official documentation for a list of all species tags.",
 		"ran_weights are used in species randomization, in_weights are used in inheritance.",
         "species name before the weights is the parent's species, the weights from both parents are added together.",
-        "all weights follow the order of the species list."
+        "all weights follow the order of the species list.",
+		"temp off of ran_weights, 10, 0, 0, 0, 0, 0"
     ],
 	"SPECIES TAGS": [
 		"Summary: yeah no actually I think I'll shove them here for you guys to know what ones are used by this mod.",

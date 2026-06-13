@@ -21,7 +21,8 @@
         ],
 		"intermittent paralysis": [
 			"r_c can only reassure m_c that it's not as bad as it could be. While m_c's body may never quite work as well as it used to, with time and effort {PRONOUN/m_c/subject} will still be able to get around just as well as any other cat.",
-			"With displeasure m_c hisses at the verdict. While {PRONOUN/m_c/subject} can only express relief that it's not permanent, the intermittent bouts of paralysis make the future feel much less certain."
+			"With displeasure m_c hisses at the verdict. While {PRONOUN/m_c/subject} can only express relief that it's not permanent, the intermittent bouts of paralysis make the future feel much less certain.",
+			"Despite recovering well from {PRONOUN/m_c/poss} tick bites, m_c feels more than a little bit wobbly and worries about lingering side affects."
 		],
 		"brain shock": [
 			"r_c gently guides m_c around the camp, gently informing {PRONOUN/m_c/object} of the lingering brain shock {PRONOUN/m_c/subject} now must learn to live with.",
@@ -361,6 +362,12 @@
 			"Even though m_c is back on {PRONOUN/m_c/poss} paws things still feel rather unsteady.",
 			"As m_c's hindquarters return to feeling, there's something under the surface that still itches and makes it feel like this won't be the last time {PRONOUN/m_c/subject} find {PRONOUN/m_c/self} stuck unable of moving.",
 			"m_c doesn't feel any relief to be walking once more, {PRONOUN/m_c/poss} lower half still tingles and buzzes, as if daring {PRONOUN/m_c/object} to get comfortable."
+		],
+		"paralyzed": [
+			"r_c gently sits with m_c, giving {PRONOUN/m_c/object} company as {PRONOUN/m_c/subject} {VERB/m_c/process/processes} the fact that this episode has become something more permanent.",
+			"m_c refuses to be pitied by {PRONOUN/m_c/poss} Clanmates for the paralysis.",
+			"As frustrating as it is, m_c is also relieved that now {PRONOUN/m_c/subject} won't have to worry so much about abruptly finding {PRONOUN/m_c/self} stuck with non-responsive hindlegs anymore.",
+			"This episode of paralysis for m_c has left {PRONOUN/m_c/object} fully paralyzed." 
 		]
 	},
 	"anaphylaxis": {
@@ -387,7 +394,7 @@
 	"world tired": {
 		"heavy soul": [
 			"While r_c is relieved to see that m_c is no longer feeling like life is too much... there's still a lingering worry over the new heaviness that {PRONOUN/m_c/subject} {VERB/m_c/carry/carries} with {PRONOUN/m_c/object}.",
-			"m_c keeps talking about feeling a deep aching heaviness over {PRONOUN/m_c/object} with r_c. It seems that while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} no longer world tired, {PRONOUN/m_c/poss} soul has become heavy.",
+			"m_c keeps talking about feeling a deep aching heaviness over {PRONOUN/m_c/object} with r_c. It seems that while {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} no longer world tired, {PRONOUN/m_c/poss} soul and heart have become heavy.",
 			"Even no longer feeling like the world is too heavy, m_c feels weighed down and unable to quite feel happy with {PRONOUN/m_c/poss} clanmates."
 		],
 		"plural soul": [

@@ -1,0 +1,19 @@
+{
+	"en": {
+		"space" :"%{type}space",
+		"otherspace": {
+			"critter": "critter",
+			"puppy": "puppy",
+			"rat": "rat",
+			"mouse": "mouse",
+			"beaver": "beaver",
+			"bear": "bear",
+			"rabbit": "rabbit",
+			"badger": "badger"
+		},
+		"kittenspace": {
+			"kitten": "kitten",
+			"paw": "paw"
+		}
+	}
+}

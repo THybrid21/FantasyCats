@@ -2718,10 +2718,14 @@ def generate_sprite(
     if (
         not disable_sick_sprite
         and cat.not_working()
-        and age != "newborn"
         and constants.CONFIG["cat_sprites"]["sick_sprites"]
     ):
-        if age in ["kitten", "adolescent"]:
+        if age == "newborn":
+            if cat.pelt.length == 'bare':
+                cat_sprite = str(60)
+            else:
+                cat_sprite = str(57)
+        elif age in ["kitten", "adolescent"]:
             if cat.pelt.length == 'bare':
                 cat_sprite = str(52)
             else:
@@ -2778,21 +2782,20 @@ def generate_sprite(
             else:
                 tortie_pattern = cat.pelt.tortie_pattern
 
-            patches = sprites.sprites[
-                tortie_pattern + cat.pelt.tortie_colour + cat_sprite
-            ].copy()
-            patches.blit(
-                sprites.sprites["tortiemask" + f'{n}_' + cat.pelt.tortie_marking + cat_sprite],
-                (0, 0),
-                special_flags=pygame.BLEND_RGBA_MULT,
-            )
+            for pattern in cat.pelt.tortie_marking:
+                patches = sprites.sprites[
+                    tortie_pattern +  f'{n}_' + cat.pelt.tortie_colour + cat_sprite].copy()
+                patches.blit(sprites.sprites["tortiemask" + f'{n}_' + pattern + cat_sprite], (0, 0),
+                             special_flags=pygame.BLEND_RGBA_MULT)
+                # Add patches onto cat.
+                new_sprite.blit(patches, (0, 0))
 
             # Add patches onto cat.
             new_sprite.blit(patches, (0, 0))
 
         # TINTS
         if (
-            cat.pelt.tint is not None
+            cat.pelt.tint != "none"
             and cat.pelt.tint in sprites.cat_tints["tint_colours"]
         ):
             # Multiply with alpha does not work as you would expect - it just lowers the alpha of the
@@ -2802,44 +2805,39 @@ def generate_sprite(
             tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
         if (
-            cat.pelt.tint is not None
+            cat.pelt.tint != "none"
             and cat.pelt.tint in sprites.cat_tints["dilute_tint_colours"]
         ):
             tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
             tint.fill(tuple(sprites.cat_tints["dilute_tint_colours"][cat.pelt.tint]))
             new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
 
-
         # draw white patches
         if cat.pelt.white_patches is not None:
-            white_patches = sprites.sprites[
-                "white" + f'{n}_' + cat.pelt.white_patches + cat_sprite
-            ].copy()
-
-            # Apply tint to white patches.
-            if (
-                cat.pelt.white_patches_tint is not None
-                and cat.pelt.white_patches_tint
-                in sprites.white_patches_tints["tint_colours"]
-            ):
-                tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                tint.fill(
-                    tuple(
-                        sprites.white_patches_tints["tint_colours"][
-                            cat.pelt.white_patches_tint
-                        ]
+            for white in cat.pelt.white_patches:
+                if (
+                    cat.pelt.white_patches_tint != "none" 
+                    and cat.pelt.white_patches_tint 
+                    in sprites.white_patches_tints["tint_colours"]
+                ):
+                    white_patch = sprites.sprites['white' + f'{n}_' + white + cat_sprite].copy()
+                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                    tint.fill(
+                        tuple(sprites.white_patches_tints["tint_colours"]
+                        [cat.pelt.white_patches_tint])
                     )
                     white_patch.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
                     new_sprite.blit(white_patch, (0, 0))
                 else:
                     new_sprite.blit(sprites.sprites['white' + f'{n}_' + white + cat_sprite], (0, 0))
 
+
         if cat.pelt.points:
             points = sprites.sprites["white" + f'{n}_' + cat.pelt.points + cat_sprite].copy()
             if (
-                    cat.pelt.white_patches_tint is not None
-                    and cat.pelt.white_patches_tint
-                    in sprites.white_patches_tints["tint_colours"]
+                cat.pelt.white_patches_tint != "none"
+                and cat.pelt.white_patches_tint
+                in sprites.white_patches_tints["tint_colours"]
             ):
                 tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
                 tint.fill(
@@ -2851,13 +2849,23 @@ def generate_sprite(
                 )
                 points.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(points, (0, 0))
+            new_sprite.blit(points, (0, 0))
 
         if cat.pelt.vitiligo:
             vitiligo = sprites.sprites['white' + f'{n}_' + cat.pelt.vitiligo + cat_sprite].copy()
-            if cat.pelt.vitiligo_tint != "none" and cat.pelt.vitiligo_tint in sprites.vitiligo_tint[
-                "tint_colours"]:
+            if (
+                cat.pelt.vitiligo_tint != "none"
+                and cat.pelt.vitiligo_tint
+                in sprites.vitiligo_tint["tint_colours"]
+            ):
                 tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                tint.fill(tuple(sprites.vitiligo_tint["tint_colours"][cat.pelt.vitiligo_tint]))
+                tint.fill(
+                    tuple(
+                        sprites.vitiligo_tint["tint_colours"][
+                            cat.pelt.vitiligo_tint
+                        ]
+                    )
+                )
                 vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
             new_sprite.blit(vitiligo, (0, 0))
 
@@ -2964,7 +2972,6 @@ def generate_sprite(
 
             if scar in cat.pelt.scars4:
                 new_sprite.blit(sprites.sprites['scars' + f'{n}_' + scar + cat_sprite], (0, 0))
-
 
         # draw accessories
         from scripts.cat.pelts import Pelt

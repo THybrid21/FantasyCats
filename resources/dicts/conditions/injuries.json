@@ -325,7 +325,7 @@
 				"chance": 40
 			},
 			{
-				"name": "tick illness",
+				"name": "tick fever",
 				"chance": 60
 			},
 			{
@@ -1418,7 +1418,8 @@
         "also_got": [
         ],
         "cause_permanent": [
-            "paralyzed"
+            "paralyzed",
+			"intermittent paralysis"
         ],
         "herbs": {
             "1": [
@@ -1564,6 +1565,37 @@
             "vacant"
         ],
         "herbs": {
+            "1": [
+            "poppy",
+            "juniper"
+        ],
+            "2": [],
+            "3": []
+        }
+    },
+    "sore throat": {
+        "duration": 1,
+        "severity": "minor",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+        ],
+        "also_got": [
+        ],
+        "cause_permanent": [
+            "damaged throat"
+        ],
+             "herbs": {
             "1": [
             "poppy",
             "juniper"
@@ -2071,7 +2103,11 @@
             {
                 "name": "redcough",
                 "chance": 30
-            }
+            },
+			{
+				"name": "sore throat",
+				"chance": 15
+			}
         ],
         "also_got": [
         ],
@@ -2109,12 +2145,26 @@
             "senior": 0
         },
         "illness_infectiousness": [],
-        "risks": [],
+        "risks": [
+            {
+                "name": "sore",
+                "chance": 20
+            },
+            {
+                "name": "dizziness",
+                "chance": 30
+            },
+            {
+                "name": "phantom pain",
+                "chance": 60
+            }		
+		],
         "also_got": [
 			"bruises"
         ],
         "cause_permanent": [
-            "intermittent paralysis"
+            "intermittent paralysis",
+			"paralyzed"
         ],
         "herbs": {
             "1": [
@@ -2127,17 +2177,17 @@
         }
     },
     "anaphylaxis": {
-        "duration": 3,
+        "duration": 2,
         "severity": "severe",
         "medicine_duration": 2,
         "mortality": {
-            "newborn": 2,
-            "kitten": 2,
-            "adolescent": 5,
-            "young adult": 7,
-            "adult": 7,
-            "senior adult": 5,
-            "senior": 2
+            "newborn": 4,
+            "kitten": 4,
+            "adolescent": 10,
+            "young adult": 14,
+            "adult": 14,
+            "senior adult": 10,
+            "senior": 4
         },
         "illness_infectiousness": [
         ],

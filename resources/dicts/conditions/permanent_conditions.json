@@ -318,8 +318,16 @@
 			},
 			{
 				"name": "paralyzed",
-				"chance": 90
-			}
+				"chance": 120
+			},
+            {
+                "name": "dizziness",
+                "chance": 30
+            },
+            {
+                "name": "phantom pain",
+                "chance": 60
+            }
         ],
         "herbs": {
             "1": [
@@ -357,6 +365,10 @@
 			{
 				"name": "greencough",
 				"chance": 50
+			},
+			{
+				"name": "breathless fit",
+				"chance": 10
 			}
         ],
         "herbs": {
@@ -752,6 +764,10 @@
 			{
 				"name": "nosebleed",
 				"chance": 45
+			},
+			{
+				"name": "anaphylaxis",
+				"chance": 90
 			}
         ],
         "herbs": {
@@ -1043,6 +1059,36 @@
         ],
         "herbs": {
             "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "damaged throat": {
+        "severity": "minor",
+        "congenital": "never",
+        "moons_until": 4,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [
+        ],
+        "risks": [
+            {
+                "name": "sore throat",
+                "chance": 30
+            }
+        ],
+        "herbs": {
+            "1": [
+            "poppy",
+            "juniper"
+        ],
             "2": [],
             "3": []
         }
@@ -1499,6 +1545,10 @@
 			{
 				"name": "world tired",
 				"chance": 120
+			},
+			{
+				"name": "breathless fit",
+				"chance": 60
 			}
         ],
         "herbs": {
@@ -1753,7 +1803,7 @@
 			"3": []
 		}
     },		
-    "otherworldly mind": {
+    "schizophrenia": {
         "severity": "minor",
         "congenital": "always",
         "moons_until": 2,
@@ -2270,6 +2320,10 @@
 			{
 				"name": "nosebleed",
 				"chance": 45
+			},
+			{
+				"name": "breathless fit",
+				"chance": 60
 			}
         ],
         "herbs": {
@@ -2445,6 +2499,10 @@
 			{
 				"name": "earache",
 				"chance": 45
+			},
+			{
+				"name": "anaphylaxis",
+				"chance": 60
 			}
         ],
         "herbs": {
@@ -2794,12 +2852,7 @@
         },
         "illness_infectiousness": [
         ],
-        "risks": [
-            {
-                "name": "infertile",
-                "chance": 50
-            }
-        ],
+        "risks": [],
         "herbs": {
 			"1": [],
 			"2": [],
@@ -2821,12 +2874,7 @@
         },
         "illness_infectiousness": [
         ],
-        "risks": [
-            {
-                "name": "infertile",
-                "chance": 50
-            }
-        ],
+        "risks": [],
         "herbs": {
 			"1": [],
 			"2": [],
@@ -2846,14 +2894,8 @@
             "senior adult": 0,
             "senior": 0
         },
-        "illness_infectiousness": [
-        ],
-        "risks": [
-            {
-                "name": "infertile",
-                "chance": 20
-            }
-        ],
+        "illness_infectiousness": [],
+        "risks": [],
         "herbs": {
 			"1": [],
 			"2": [],
@@ -2873,14 +2915,8 @@
             "senior adult": 0,
             "senior": 0
         },
-        "illness_infectiousness": [
-        ],
-        "risks": [
-            {
-                "name": "infertile",
-                "chance": 75
-            }
-        ],
+        "illness_infectiousness": [],
+        "risks": [],
         "herbs": {
 			"1": [],
 			"2": [],
@@ -2902,12 +2938,7 @@
         },
         "illness_infectiousness": [
         ],
-        "risks": [
-            {
-                "name": "infertile",
-                "chance": 75
-            }
-        ],
+        "risks": [],
         "herbs": {
 			"1": [],
 			"2": [],

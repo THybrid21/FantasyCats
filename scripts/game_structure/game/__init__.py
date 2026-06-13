@@ -79,6 +79,8 @@ clan: Optional["Clan"] = None
 cat_class = None
 with open(f"resources/prey_config.json", "r", encoding="utf-8") as read_file:
     prey_config = ujson.loads(read_file.read())
+with open(f"resources/species.json", 'r') as read_file:
+    species = ujson.loads(read_file.read())
 
 rpc = None
 

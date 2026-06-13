@@ -40,6 +40,7 @@
         "bee sting": "bee sting",
         "headache": "headache",
         "severe headache": "severe headache",
+		"sore throat": "sore throat",
 		"rash": "rash",
 		"sunblindness": "sunblindness",
 		"sunburn": "sunburn",
@@ -65,7 +66,7 @@
 		
 		"overstimulation_prof": "overstimulated",
 		"understimulation_prof": "understimulated",
-		"safe-space": "in safe-space",
+		"safe-space": "in safe space",
 		"turmoiled_birth": "recovering from a turmoiled birth",	
 		"shook": "in shock"
     }

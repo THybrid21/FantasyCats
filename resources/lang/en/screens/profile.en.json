@@ -31,12 +31,13 @@
         "guide_thought_ur": "Hello. I am here to accompany the dead cats of %{clan}Clan to the mysterious beyond.",
         "leader_ceremony": "Leader Ceremony",
         "eyes_label": "eyes: %{eyes}",
-        "pelt_label": "pelt: %{pelt}",
+        "pelt_label": "pelt: %{color} %{pelt}",
+		"tortie_label": "tortie patch: %{pattern} in %{color}",
         "fur_label": "fur length: %{length}",
         "albino_label": "pelt: albino %{pelt}",
 		"melanistic_label": "pelt: melanistic %{pelt}",
 		"accessory_label": "accessory: %{accessory}",
-		"fronting_label": "current front: "
+		"fronting_label": "current front: ",
         "parent_label": {
             "one": "parent: %{parents}",
             "many": "parents: %{parents}"

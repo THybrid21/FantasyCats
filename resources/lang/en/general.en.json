@@ -49,6 +49,14 @@
             "one": "mediator apprentice",
             "many": "mediator apprentices"
         },
+        "permaqueen": {
+            "one": "permaqueen",
+            "many": "permaqueens"
+        },
+        "permaqueen apprentice": {
+            "one": "permaqueen apprentice",
+            "many": "peramaqueen apprentices"
+        },
         "queen": {
             "one": "queen",
             "many": "queens"
@@ -170,8 +178,8 @@
         "cousin_male": "cousin",
         "cousin_female": "cousin",
         "cousin_nb": "cousin",
-        "clan": "%{name}Clan",
-        "starclan": "StarClan",
+        "clan": "%{name}clan",
+        "starclan": "Starclan",
         "dark_forest": "Dark Forest",
         "unknown_residence": "Unknown Residence",
         "your_clan": "Your Clan",

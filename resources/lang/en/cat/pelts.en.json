@@ -13,46 +13,50 @@
             "one": "silver",
             "many": "silver"
         },
+		"BRONZE": {
+			"one": "bronze",
+			"many": "bronze"
+		},
         "GREY": {
             "one": "gray",
             "many": "gray"
         },
+		"BLUEGREY": {
+			"one": "grey",
+			"many": "blue-grey"
+		},
+		"XANADU": {
+			"one": "grey",
+			"many": "xanadu"
+		},
         "DARKGREY": {
             "one": "gray",
             "many": "dark gray"
         },
+		"COAL": {
+			"one": "black",
+			"many": "coal"
+		},
         "GHOST": {
             "one": "black",
-            "many": "black"
+            "many": "ghost black"
         },
         "BLACK": {
             "one": "black",
             "many": "black"
         },
-        "CREAM": {
-            "one": "cream",
-            "many": "cream"
-        },
-        "PALEGINGER": {
-            "one": "ginger",
-            "many": "pale ginger"
-        },
-        "GOLDEN": {
-            "one": "golden",
-            "many": "golden"
-        },
-        "GINGER": {
-            "one": "ginger",
-            "many": "ginger"
-        },
-        "DARKGINGER": {
-            "one": "ginger",
-            "many": "dark ginger"
-        },
-        "SIENNA": {
-            "one": "ginger",
-            "many": "dark ginger"
-        },
+		"PITCH": {
+			"one": "black",
+			"many": "pitch black"
+		},
+        "BEIGE": {
+			"one": "beige",
+			"many": "beige"
+		},
+		"PANTONE": {
+			"one": "beige",
+			"many": "pantone"
+		},
         "LIGHTBROWN": {
             "one": "brown",
             "many": "light brown"
@@ -69,6 +73,14 @@
             "one": "brown",
             "many": "golden brown"
         },
+		"TAN": {
+			"one": "brown",
+			"many": "tan brown"
+		},
+		"CHESTNUT": {
+			"one": "brown",
+			"many": "chestnut brown"
+		},
         "DARKBROWN": {
             "one": "brown",
             "many": "dark brown"
@@ -77,6 +89,342 @@
             "one": "brown",
             "many": "dark brown"
         },
+		"COFFEE": {
+			"one": "brown",
+			"many": "coffee brown"
+		}, 
+		"UMBER": {
+			"one": "brown",
+			"many": "umber"
+		},
+		"BANNANA": {
+			"one": "cream",
+			"many": "bannana"
+		}, 
+		"PALECREAM": {
+			"one": "cream",
+			"many": "pale cream"
+		},	
+		"CREAM": {
+            "one": "cream",
+            "many": "cream"
+        },
+        "PALEGINGER": {
+            "one": "ginger",
+            "many": "pale ginger"
+        },
+		"HONEY": {
+			"one": "golden",
+			"many": "golden honey"
+		},
+        "GOLDEN": {
+            "one": "golden",
+            "many": "golden"
+        },
+		"APRICOT": {
+			"one": "ginger",
+			"many": "apricot"
+		},
+        "GINGER": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+		"ROSE": {
+			"one": "ginger",
+			"many": "ginger rose"
+		},
+        "DARKGINGER": {
+            "one": "ginger",
+            "many": "dark ginger"
+        },
+        "SIENNA": {
+            "one": "ginger",
+            "many": "dark sienna"
+        },
+		"BLOOD": {
+			"one": "ginger",
+			"many": "blood ginger"
+		},
+		"CHARTRUSE": {
+			"one": "green",
+			"many": "chartruse"
+		}, 
+		"MINT": {
+			"one": "mint",
+			"many": "mint"
+		}, 
+		"LETTUCE": {
+			"one": "green",
+			"many": "lettuce green"
+		}, 
+		"LIGHTGREEN": {
+			"one": "green",
+			"many": "light green"
+		}, 
+		"OLIVE": {
+			"one": "olive",
+			"many": "olive-green"
+		}, 
+		"EMERALD": {
+			"one": "green",
+			"many": "emerald green"
+		}, 
+		"DARKMINT": {
+			"one": "mint",
+			"many": "dark mint"
+		}, 
+		"GREEN": {
+			"one": "green",
+			"many": "green"
+		}, 
+		"DARKGREEN": {
+			"one": "green",
+			"many": "dark green"
+		}, 
+		"DARKOLIVE": {
+			"one": "olive",
+			"many": "dark olive-green"
+		}, 
+		"FERN": {
+			"one": "green",
+			"many": "fern green"
+		}, 
+		"FOREST": {
+			"one": "green",
+			"many": "forest green"
+		},
+		"PALEBOW": {
+			"one": "pale",
+			"many": "pale rainbow"
+		}, 
+		"SKY": {
+			"one": "sky",
+			"many": "sky"
+		}, 
+		"POWDERBLUE": {
+			"one": "blue",
+			"many": "powder blue"
+		}, 
+		"SHINYMEW": {
+			"one": "sky",
+			"many": "mew blue"
+		}, 
+		"SAPPHIRE": {
+			"one": "blue",
+			"many": "sapphire"
+		}, 
+		"OCEAN": {
+			"one": "blue",
+			"many": "ocean blue"
+		}, 
+		"COBALT": {
+			"one": "blue",
+			"many": "cobalt"
+		}, 
+		"DARKCOBALT": {
+			"one": "blue",
+			"many": "dark cobalt"
+		}, 
+		"INDIGO": {
+			"one": "indigo",
+			"many": "indigo"
+		}, 
+		"NIGHT": {
+			"one": "indigo",
+			"many": "midnight blue"
+		}, 
+		"DUSKBOW": {
+			"one": "black",
+			"many": "dark rainbow"
+		},
+		"PETAL": {
+			"one": "pale",
+			"many": "petal"
+		}, 
+		"PALESTRAKIT":{
+			"one": "pink",
+			"many": "starkit pink"
+		}, 
+		"FLORAL": {
+			"one": "pink",
+			"many": "floral pink"
+		}, 
+		"AMYTHYST": {
+			"one": "purple",
+			"many": "amythyst"
+		},
+		"ORCHID": {
+			"one": "purple",
+			"many": "purple orchid"
+		}, 
+		"STRAKIT": {
+			"one": "purple",
+			"many": "starkit purple"
+		}, 
+		"PURPLE": {
+			"one": "purple",
+			"many": "purple"
+		},
+		"WINE": {
+			"one": "purple",
+			"many": "purple wine"
+		}, 
+		"DARKSTRAKIT": {
+			"one": "purple",
+			"many": "dark starkit purple"
+		},
+		"CORAL": {
+			"one": "pink",
+			"many": "coral pink"
+		}, 
+		"MEW": {
+			"one": "pink",
+			"many": "mew pink"
+		}, 
+		"PALERED": {
+			"one": "red",
+			"many": "pale red"
+		}, 
+		"APPLE": {
+			"one": "red",
+			"many": "apple"
+		}, 
+		"BLUSH": {
+			"one": "red",
+			"many": "blush"
+		}, 
+		"RED": {
+			"one": "red",
+			"many": "red"
+		}, 
+		"SCARLET": {
+			"one": "red",
+			"many": "scarlet"
+		},
+		"DARKRED": {
+			"one": "red",
+			"many": "dark red"
+		}, 
+		"GARNET": {
+			"one": "red",
+			"many": "garnet"
+		},
+		"IVORY": {
+			"one": "pale",
+			"many": "ivory"
+		},
+		"LEMON": {
+			"one": "yellow",
+			"many": "lemon yellow"
+		}, 
+		"LAGUNA": {
+			"one": "yellow",
+			"many": "laguna yellow"
+		}, 
+		"YELLOW": {
+			"one": "yellow",
+			"many": "yellow"
+		}, 
+		"BEE": {
+			"one": "yellow",
+			"many": "bee yellow"
+		}, 
+		"PYRITE": {
+			"one": "golden",
+			"many": "pyrite gold"
+		}, 
+		"PINEAPPLE": {
+			"one": "yellow",
+			"many": "pineapple yellow" 
+		}, 
+		"YELLOW-GREEN": {
+			"one": "yellow",
+			"many": "yellow-green"
+		}, 
+		"DIJON": {
+			"one": "yellow",
+			"many": "dijon"
+		},	
+		"DEMIENBY": {
+			"one": "yellow",
+			"many": "demienby yellow"
+		}, 
+		"DEMIBOY": {
+			"one": "blue",
+			"many": "demiboy blue"
+		},
+		"TRANS": {
+			"one": "pale",
+			"many": "trans flag"
+		}, 
+		"ARO": {
+			"one": "green",
+			"many": "aromantic flag"
+		}, 
+		"DEMIROM": {
+			"one": "pale",
+			"many": "demiromantic flag"
+		}, 
+		"AGENDER": {
+			"one": "green",
+			"many": "agender flag"
+		}, 
+		"PAN": {
+			"one": "pan-flag",
+			"many": "panromantic flag"
+		},
+		"DEMIGIRL": {
+			"one": "pink",
+			"many": "demigirl pink"
+		}, 
+		"GENDERQUEER": {
+			"one": "purple-green",
+			"many": "genderqueer flag"
+		}, 
+		"DEMISEX": {
+			"one": "pale",
+			"many": "demisexual flag"
+		}, 
+		"ASEXUAL": {
+			"one": "purple",
+			"many": "asexual flag"
+		}, 
+		"GENDER": {
+			"one": "pink-blue",
+			"many": "genderqueer flag"
+		}, 
+		"BISEX": {
+			"one": "purple",
+			"many": "bisexual flag"
+		}, 
+		"GLASS": {
+			"one": "glass",
+			"many": "glass"
+		},
+		"POLY": {
+			"one": "poly",
+			"many": "poly flag"
+		}, 
+		"ENBY": {
+			"one": "enby",
+			"many": "enby flag"
+		}, 
+		"INTERSEX": {
+			"one": "yellow",
+			"many": "intersex flag"
+		}, 
+		"MLM": {
+			"one": "teal",
+			"many": "mlm flag"
+		},
+		"WLW": {
+			"one": "orange",
+			"many": "wlw flag"
+		}, 
+		"GAYBOW": {
+			"one": "rainbow",
+			"many": "rainbow"
+		},		
         "SingleColour": "single color",
         "SingleColour_long": "%{color}",
         "TwoColour": "two color",
@@ -114,6 +462,8 @@
 
         "mottled": "mottled",
         "mottled_long": "%{color} mottled",
+        "dappled": "dappled",
+        "dappled_long": "dappled %{color}",
         "point": "%{color} point",
         "NOTAIL": "no tail",
         "HALFTAIL": "half a tail",
@@ -129,6 +479,113 @@
         "fur_long": "long",
 		"fur_bare": "bare",
 		"albino": "albino",
-		"melanistic": "melanistic"
+		"melanistic": "melanistic",
+		
+        "WHITE_prof": "pale",
+        "PALEGREY_prof": "pale gray",
+        "SILVER_prof": "silver",
+		"BRONZE_prof": "bronze",
+        "GREY_prof": "grey",
+		"BLUEGREY_prof": "blue-grey",
+		"XANADU_prof": "xanadu",
+        "DARKGREY_prof": "dark gray",
+		"COAL_prof": "coal",
+        "GHOST_prof": "ghost black",
+        "BLACK_prof": "black",
+		"PITCH_prof": "pitch black",
+        "BEIGE_prof": "beige",
+		"PANTONE_prof": "pantone",
+        "LIGHTBROWN_prof": "light brown",
+        "LILAC_prof": "light brown",
+        "BROWN_prof": "brown",
+        "GOLDEN-BROWN_prof": "golden brown",
+		"TAN_prof": "tan brown",
+		"CHESTNUT_prof": "chestnut brown",
+        "DARKBROWN_prof": "dark brown",
+        "CHOCOLATE_prof": "dark brown",
+		"COFFEE_prof": "coffee brown",
+		"UMBER_prof": "umber",
+		"BANNANA_prof": "bannana",
+		"PALECREAM_prof": "pale cream",
+		"CREAM_prof": "cream",
+        "PALEGINGER_prof": "pale ginger",
+		"HONEY_prof": "golden honey",
+        "GOLDEN_prof": "golden",
+		"APRICOT_prof": "apricot",
+        "GINGER_prof": "ginger",
+		"ROSE_prof": "ginger rose",
+        "DARKGINGER_prof": "dark ginger",
+        "SIENNA_prof": "dark sienna",
+		"BLOOD_prof": "blood ginger",
+		"CHARTRUSE_prof": "chartruse",
+		"MINT_prof": "mint",
+		"LETTUCE_prof": "lettuce green", 
+		"LIGHTGREEN_prof": "light green",
+		"OLIVE_prof": "olive-green",
+		"EMERALD_prof":"emerald green",
+		"DARKMINT_prof": "dark mint",
+		"GREEN_prof": "green",
+		"DARKGREEN_prof": "dark green",
+		"DARKOLIVE_prof": "dark olive-green",
+		"FERN_prof": "fern green",
+		"FOREST_prof": "forest green",
+		"PALEBOW_prof": "pale rainbow",
+		"SKY_prof": "sky",
+		"POWDERBLUE_prof": "powder blue",
+		"SHINYMEW_prof": "mew blue",
+		"SAPPHIRE_prof": "sapphire",
+		"OCEAN_prof": "ocean blue",
+		"COBALT_prof": "cobalt",
+		"DARKCOBALT_prof": "dark cobalt",
+		"INDIGO_prof": "indigo",
+		"NIGHT_prof": "midnight blue",
+		"DUSKBOW_prof": "dark rainbow",
+		"PETAL_prof": "petal",
+		"PALESTRAKIT_prof": "starkit pink",
+		"FLORAL_prof": "floral pink",
+		"AMYTHYST_prof": "amythyst",
+		"ORCHID_prof": "purple orchid",
+		"STRAKIT_prof": "starkit purple",
+		"PURPLE_prof": "purple",
+		"WINE_prof": "purple wine",
+		"DARKSTRAKIT_prof": "dark starkit purple",
+		"CORAL_prof": "coral pink",
+		"MEW_prof": "mew pink",
+		"PALERED_prof": "pale red",
+		"APPLE_prof": "apple",
+		"BLUSH_prof": "blush", 
+		"RED_prof": "red",
+		"SCARLET_prof": "scarlet",
+		"DARKRED_prof": "dark red",
+		"GARNET_prof": "garnet",
+		"IVORY_prof": "ivory",
+		"LEMON_prof": "lemon yellow",
+		"LAGUNA_prof": "laguna yellow",
+		"YELLOW_prof": "yellow",
+		"BEE_prof": "bee yellow",
+		"PYRITE_prof": "pyrite gold",
+		"PINEAPPLE_prof": "pineapple yellow",
+		"YELLOW-GREEN_prof": "yellow-green",
+		"DIJON_prof": "dijon",
+		"DEMIENBY_prof": "demienby yellow",
+		"DEMIBOY_prof": "demiboy blue",
+		"TRANS_prof": "trans flag",
+		"ARO_prof": "aromantic flag",
+		"DEMIROM_prof": "demiromantic flag",
+		"AGENDER_prof": "agender flag",
+		"PAN_prof": "panromantic flag",
+		"DEMIGIRL_prof": "demigirl pink",
+		"GENDERQUEER_prof": "genderqueer flag",
+		"DEMISEX_prof": "demisexual flag",
+		"ASEXUAL_prof": "asexual flag",
+		"GENDER_prof": "genderqueer flag",
+		"BISEX_prof": "bisexual flag",
+		"GLASS_prof": "glass",
+		"POLY_prof": "poly flag",
+		"ENBY_prof": "enby flag",
+		"INTERSEX_prof": "intersex flag", 
+		"MLM_prof": "mlm flag",
+		"WLW_prof": "wlw flag", 
+		"GAYBOW_prof": "rainbow"	
     }
 }

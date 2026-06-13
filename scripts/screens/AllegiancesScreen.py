@@ -278,9 +278,21 @@ class AllegiancesScreen(Screens):
             # Now kittens without carers
             for k in living_kits:
                 if living_permaqueens or permaqueen_app:
-                    all_entries.append(f"{str(k.name).upper()} - {k.describe_cat(short=True)} been cared for by the permaqueens", main_cat=k)
+                    all_entries.append(
+                        event_text_adjust(
+                            Cat,
+                            f"{str(k.name).upper()} - {k.describe_cat(short=True)} been cared for by the permaqueens", 
+                            main_cat=k
+                        )
+                    )
                 else:
-                    all_entries.append(f"{str(k.name).upper()} - {k.describe_cat(short=True)}", main_cat=k)
+                    all_entries.append(
+                        event_text_adjust(
+                            Cat,
+                            f"{str(k.name).upper()} - {k.describe_cat(short=True)}",
+                            main_cat=k,
+                        )
+                    )
 
             _box[1] = "\n".join(all_entries)
             outputs.append(_box)

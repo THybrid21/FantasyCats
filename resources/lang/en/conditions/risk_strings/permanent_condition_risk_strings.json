@@ -97,10 +97,11 @@
 		],
 		"torn pelt": [
 			"With a hiss m_c sets to licking at and soothing the tears in {PRONOUN/m_c/poss} pelt, recalling r_c's warnings about risk of infection.",
-			"It would appear that m_c's most recent fall around camp has torn open some wounds on {PRONOUN/m_c/poss} pelt."
+			"It would appear that m_c's most recent fall around camp has torn open some wounds on {PRONOUN/m_c/poss} pelt.",
+			"m_c hisses in frustration, finding yet another tear in {PRONOUN/m_c/poss} pelt."
 		],
 		"paralysis episode": [
-			"r_c sighs as once more m_c worries about the lack of response and sensation from {PRONOUN/m_c/poss} hindquarters. With a gentle tone, {PRONOUN/r_c/subject} {VERB/r_c/reassure/reassures} {PRONOUN/m_c/object} it's just another paralysis episode.",
+			"r_c sighs as once more m_c worries about the lack of response and sensation from {PRONOUN/m_c/poss} hindquarters. With a gentle tone, {PRONOUN/r_c/subject} {VERB/r_c/reassure/reassures} {PRONOUN/m_c/object} that it ",
 			"It would seem that this moon m_c is having a flare up, unable to move {PRONOUN/m_c/poss} hindquarters as fluidly as {PRONOUN/m_c/subject} would like.",
 			"With a shake of the head m_c refuses to leave {PRONOUN/m_c/poss} nest. It seems to be another paralysis episode.",
 			"With much effort m_c drags {PRONOUN/m_c/self} out of the den to face the day. It appears {PRONOUN/m_c/subject} {VERB/m_c/are/is} having another paralysis episode.",
@@ -110,6 +111,16 @@
 			"Quietly m_c admits to r_c in some ways {PRONOUN/m_c/subject} {VERB/m_c/are/is} relieved that {PRONOUN/m_c/poss} intermittent paralysis has progressed to full paralysis.",
 			"Even as {PRONOUN/m_c/poss} Clanmates keep trying to say it's not so bad, that it could be worse, m_c just wishes they would leave {PRONOUN/m_c/object} alone. It makes no difference to {PRONOUN/m_c/object} about been paralyzed.",
 			"All m_c can feel is tired at the confirmation that {PRONOUN/m_c/poss} intermittent paralysis has progressed to full."
+		],
+		"dizziness": [
+			"m_c complains to r_c about a recent bout of dizziness that seems to keep plaguing {PRONOUN/m_c/object}.",
+			"Cats have noticed that m_c seems to be spending more of {PRONNOUN/m_c/poss} day sitting down in an attempt to be slight less dizzy.",
+			"m_c complains about the sudden bout of dizziness that {PRONNOUN/m_c/subject} has been dealing with."
+		],
+		"phantom pain": [
+			"No matter how much m_c complains to r_c about pain, there just isn't any injury to be found.",
+			"m_c's body feels full of ants.",
+			"It's all apologies from m_c about snapping at a Clanmate, it's just {PRONNOUN/m_c/poss} body is full of pain without source." 
 		]
 	},
     "raspy lungs": {
@@ -120,7 +131,11 @@
 		"greencough": [
 			"It's the season for whitecough and despite r_c helping m_c to take extra precautions {PRONOUN/m_c/subject} {VERB/m_c/sit/sits} miserably curled up in the den with greencough.",
 			"m_c's weakened lungs leave them unable to propely fight off the sickness this moon. Coughing and spluttering {PRONOUN/m_c/subject} {VERB/m_c/find/finds} a nice nest to wait it out."
-		]
+		],
+        "breathless fit": [
+            "m_c is used to being breathless, but today {PRONOUN/m_c/subject} can hardly walk a few fox-lengths before growing faint. Something in the air must have irritated {PRONOUN/m_c/poss} lungs.",
+            "m_c wheezes to r_c that it feels like a cat is sitting on {PRONOUN/m_c/poss} chest. r_c waves fragrant herbs beneath m_c's nose, praying this breathlessness will not progress to suffocation."
+        ]
     },
     "wasting disease": {
         "running nose": [
@@ -310,6 +325,12 @@
 		"nosebleed": [
 			"m_c worriedly comes to r_c fearing redcough when a sneeze comes along with blood, thankfully it's just a nosebleed.",
 			"m_c has noticed that all {PRONOUN/m_c/poss} sneezing seems to have led to a nosebleed."
+		],
+		"anaphylaxis": [
+			"r_c frets over m_c as {PRONOUN/m_c/subject} struggles, it looks as though m_c's allergy has become so, so much worse again.",
+			"Rather than the usual minor irritation that m_c's used to experiencing from {PRONOUN/m_c/poss} allergies, this time it feels like {PRONOUN/m_c/poss} life is in real danger.",
+			"m_c desperately wheezes, stumbling towards the medicine den as {PRONNOUN/m_c/poss} alergic reaction comes on worse than expected.",
+			"There's desperate yowling across the camp as m_c collapses due to {PRONNOUN/m_c/poss} allergic reaction."
 		]
     },
 	"constantly dizzy": {
@@ -670,7 +691,9 @@
 		],
 		"brain fog": [
 			"r_c listens as m_c rants about {PRONOUN/m_c/poss} herbs leading to brain fog.",
-			"With complaint m_c takes {PRONOUN/m_c/poss} herbs even if it leads to brain fog."
+			"With complaint m_c takes {PRONOUN/m_c/poss} herbs even if it leads to brain fog.",
+			"{PRONOUN/m_c/poss/CAP} Clanmates have noticed that m_c seems distracted, unable to hold onto {PRONOUN/m_c/poss} thoughts.",
+			"m_c has been struggling to stay focused with {PRONOUN/m_c/poss} foggy thoughts recently"
 		],
 		"paralysis episode": [
 			"In distress m_c calls to r_c hoping for an explanation for {PRONOUN/m_c/poss} hindpaws failure to respond, after a bit of talking it's determined that the paralysis should be only temporary.",
@@ -1110,7 +1133,7 @@
 			"m_c's been chattering the ears off {PRONOUN/m_c/poss} Clanmates about a new interest."
 		]
 	},
-	"otherworldly mind": {
+	"schizophrenia": {
 		"kittenspace": [
 			"r_c has noticed that m_c is under the belief that {PRONOUN/m_c/subject} {VERB/m_c/are/is} still a kitten.",
 			"Despite been much older than a kitten, m_c still often slips back into that headspace and finds it a safe-space.",

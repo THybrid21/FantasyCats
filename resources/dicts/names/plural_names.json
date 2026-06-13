@@ -8,17 +8,16 @@
 		"grave", "grave", "grave", "scale", "scale", "scale", "scale", "scale", "scale", "scale", "scale", "scale", "scale", "fin", 
 		"fin", "fin", "fin", "fin", "fin", "fin", "fin", "fin", "fin", "face", "face", "face", "face", "face", "face", "face", "face", 
 		"face", "face", "shine", "shine", "shine", "stripe", "stripe", "stripe", "stripe", "stripe", "stripe", "stripe", "stripe",
-		"spot", "spot", "spot", "spot", "spot", "spot", "spot", "spot",
-		"cloud", "cloud", "cloud", "cloud", "cloud", "field", "field", "field", "field", 
-		"field", "pet", "pet", "pet", "bull", "bull", "bull", "bull", "bull", "heart", "heart", "heart", "heart", "heart", "heart", 
-		"flower", "flower", "flower", "flower", "flower", "flight", "flight", "flight", "flight", "flight", "pool", "pool", "pool", 
-		"bunny", "bunny", "bunny", "bunny", "bunny", "storm", "storm", "storm", "storm", "storm", "kudzu", "kudzu", "kudzu", "roar", 
-		"roar", "roar", "roar", "bark", "bark", "bark", "path", "path", "path", "claw", "claw", "claw", "claw", "claw", "claw", "claw", 
-		"claw", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "nose", "nose", "nose", "nose", "nose", "nose", "nose", 
-		"nose",  "tail", "tail", "tail", "tail", "tail", "tail", "tail", "tail", "whisker", "whisker", "whisker", "whisker", 
-		"whisker", "whisker", "whisker", "whisker", "leaf", "leaf", "leaf", "leaf", "leaf", "leaf", "feather", "feather", "feather",
-		"feather", "feather", "feather", "throat", "throat", "throat", "throat", "throat", "throat", "root", "root", "root", "root", 
-		"root", "dig", "dig", "dig", "dig", "dig", "stream", "stream", "stream", "stream", "stream", "flame", "flame", "flame", 
+		"spot", "spot", "spot", "spot", "spot", "spot", "spot", "spot","cloud", "cloud", "cloud", "cloud", "cloud", "field", "field", 
+		"field", "field", "field", "pet", "pet", "pet", "bull", "bull", "bull", "bull", "bull", "heart", "heart", "heart", "heart", 
+		"heart", "heart", "flower", "flower", "flower", "flower", "flower", "flight", "flight", "flight", "flight", "flight", "pool", 
+		"pool", "pool", "bunny", "bunny", "bunny", "bunny", "bunny", "storm", "storm", "storm", "storm", "storm", "kudzu", "kudzu", 
+		"kudzu", "roar", "roar", "roar", "roar", "bark", "bark", "bark", "path", "path", "path", "claw", "claw", "claw", "claw", 
+		"claw", "claw", "claw", "claw", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "nose", "nose", "nose", "nose", 
+		"nose", "nose", "nose", "nose",  "tail", "tail", "tail", "tail", "tail", "tail", "tail", "tail", "whisker", "whisker", "whisker", 
+		"whisker", "whisker", "whisker", "whisker", "whisker", "leaf", "leaf", "leaf", "leaf", "leaf", "leaf", "feather", "feather", 
+		"feather", "feather", "feather", "feather", "throat", "throat", "throat", "throat", "throat", "throat", "root", "root", "root", 
+		"root", "root", "dig", "dig", "dig", "dig", "dig", "stream", "stream", "stream", "stream", "stream", "flame", "flame", "flame", 
 		"leg", "leg", "leg", "leg", "fang", "fang", "fang", "fang", "eye", "eye", "eye", "eye", "ear", "ear", "ear", "ear", "wing", 
 		"wing", "wing", "wing", "tree", "tree", "tree", "tree", "berry", "berry", "berry", "berry", "fall", "fall", "step", "step", 
 		"splash", "splash", "moon", "sun", "earth", "spirit"
@@ -81,7 +80,7 @@
 	"The Survivor", "The Hunter", "The Monk", "The Artificer", "The Gourmand", "The Rivulet", "The Spearmaster", "The Saint", "The Watcher", "Inv", "Sofanthiel", "Paincat"
   ],
   "little_canon": [
-	"Snowkit", "Mosskit", "Badgerpaw", "Starkit", "The Pup"
+	"Snowkit", "Mosskit", "Badgerpaw", "Starkit", "The Pup", "Gorsepaw", "Swiftpaw"
   ],
   
   "loner_names": [

@@ -283,7 +283,7 @@
 				"chance": 90
 			},
 			{
-				"name": "tick illness",
+				"name": "tick fever",
 				"chance": 70
 			}
         ],
@@ -444,7 +444,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 90
-			}
+			},
+            {
+                "name": "sore throat",
+                "chance": 20
+            }
         ],
         "herbs": {
             "1": [
@@ -487,7 +491,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 90
-			}
+			},
+            {
+                "name": "sore throat",
+                "chance": 20
+            }
         ],
         "herbs": {
             "1": [
@@ -534,7 +542,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 90
-			}	
+			},
+            {
+                "name": "sore throat",
+                "chance": 20
+            }	
         ],
         "herbs": {
             "1": [
@@ -586,7 +598,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 70
-			}
+			},
+            {
+                "name": "sore throat",
+                "chance": 20
+            }
         ],
         "herbs": {
         "1": [
@@ -633,7 +649,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 45
-			}
+			},
+            {
+                "name": "sore throat",
+                "chance": 20
+            }
         ],
         "herbs": {
             "1": [
@@ -670,7 +690,11 @@
 			{
 				"name": "nosebleed",
 				"chance": 5
-			}		
+			},
+            {
+                "name": "sore throat",
+                "chance": 2
+            }		
 		],
         "herbs": {
             "1": [
@@ -687,7 +711,43 @@
             "3": []
         }
     },
-
+    "breathless fit": {
+        "severity": "severe",
+        "mortality": {
+            "newborn": 2,
+            "kitten": 5,
+            "adolescent": 10,
+            "young adult": 20,
+            "adult": 20,
+            "senior adult": 20,
+            "senior": 5
+        },
+        "medicine_mortality": {
+            "newborn": 30,
+            "kitten": 50,
+            "adolescent": 70,
+            "young adult": 100,
+            "adult": 100,
+            "senior adult": 100,
+            "senior": 70
+        },
+        "duration": 1,
+        "medicine_duration": 1,
+        "infectiousness": 0,
+        "risks": [],
+        "herbs": {
+            "1": [
+                "betony"
+            ],
+            "2": [
+                "rosemary",
+                "juniper"
+            ],
+            "3": [
+                "mullein"
+            ]
+        }
+    },
     "heat exhaustion": {
         "severity": "major",
         "mortality": {
@@ -1019,11 +1079,17 @@
 		],
         "herbs": {
             "1": [
-            "moss",
-            "plantain"
+				"moss",
+				"plantain"
             ],
-            "2": ["dandelion"],
-            "3": ["goldenrod"]
+            "2": [
+                "dandelion",
+                "plantain"
+            ],
+            "3": [
+                "goldenrod",
+                "mullein"
+            ]
         }
     },
     "anxiety attack": {
@@ -1116,6 +1182,10 @@
 			{
 				"name": "dizziness",
 				"chance": 15
+			},
+			{
+				"name": "breathless fit",
+				"chance": 45
 			}
 		],
         "herbs": {

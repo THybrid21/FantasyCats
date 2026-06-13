@@ -1126,6 +1126,12 @@ class Pregnancy_Events:
         ) and not same_sex_birth:
             return Pregnancy_Events.check_intersex_conditions(cat, second_parent, same_sex_adoption)  
 
+        #Only Adopt anyway?
+        adopt = constants.CONFIG["pregnancy"]["adoption_chance"]
+        adoptive = random.randint(1, adopt)
+        if adoptive == 1:
+            return True, True            
+        
         # Check to see if the pair can have kits.
         if cat.gender == second_parent.gender:
             if cat.gender == 'intersex':

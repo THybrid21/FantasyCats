@@ -39,6 +39,7 @@ from scripts.game_structure.game.switches import (
     switch_get_value,
     switch_set_value,
 )
+from scripts.game_structure.game.settings import game_settings_save, game_setting_get
 from scripts.game_structure import game
 from scripts.game_structure.localization import load_lang_resource
 from scripts.game_structure.windows import SaveError
@@ -820,7 +821,7 @@ class Events:
                 lost_cat.neutered_message = True
 
             ##Now we attempt something risky
-            if game.settings["allow danger"] and not lost_cat.neutered:
+            if game_setting_get("allow danger") and not lost_cat.neutered:
                 cutter = random.randint(0, 100)
                 if cutter <= 10:
                     lost_cat.get_injured("cutter's sickness")

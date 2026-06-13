@@ -28,6 +28,7 @@ from scripts.game_structure.game.switches import (
     switch_set_value,
     switch_append_list_value,
 )
+from scripts.game_structure.game.settings import game_settings_save, game_setting_get
 from scripts.game_structure import game
 from scripts.game_structure.localization import load_lang_resource
 from scripts.utility import (
@@ -483,6 +484,7 @@ class Condition_Events:
             "LEGBITE": ["weak leg"],
             "TOETRAP": ["weak leg"],
             "HINDLEG": ["weak leg"],
+            "THROAT": ["damaged throat"],
             "DECLAWED": ["declawed"],
             "RASH": ["recurring rash"],
             "SNAKETHREE": ["one bad eye"],
@@ -493,11 +495,11 @@ class Condition_Events:
         scarless_conditions = (
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "strange lump", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock", "echoing shock",
-            "lasting grief", "persistent headaches", "vacant",
+            "lasting grief", "persistent headaches", "vacant", "damaged throat",
             "albinism", "melanism", "sphynxism", "fibro", "heavy soul", "starwalker", "anxiety", 
-            "obsessive mind", "comet spirit", "antisocial", "thunderous spirit", "otherworldly mind", "mute", "ongoing sleeplessness", 
+            "obsessive mind", "comet spirit", "antisocial", "thunderous spirit", "schizophrenia", "mute", "ongoing sleeplessness", 
             "echoing memory", "regressor", "brain shock", "irritable bowels", "longcough", "disrupted senses", "constant nightmares", "constant fatigue", 
-            "face blindness", "body biter", "chattering tongue", "plural soul",
+            "face blindness", "body biter", "chattering tongue", "plural soul", "intermittent paralysis",
             "infertile", "addiction"
         )
 
@@ -567,7 +569,7 @@ class Condition_Events:
             "heat exhaustion": "heat stroke",
             "anxiety attack": "panic attack",
             "panic attack": "paranoia",
-            "ticks": "tick illness",
+            "ticks": "tick fever",
             "nest wetting": "night dirtmaking",
             "verbal shutdown": "mute",
             "word loss": "mute"
@@ -687,14 +689,15 @@ class Condition_Events:
         injury_progression = {
             "poisoned": "redcough",
             "shock": "lingering shock",
-            "tick bites": "tick illness",
-            "severe tick bites": "tick illness",
+            "tick bites": "tick fever",
+            "severe tick bites": "tick fever",
             "rat bite": "rat bite fever",
-            "sunblindness": "fading eyesight",
+            "sunblindness": "failing eyesight",
             "severe sunburn": "wasting disease",
             "wrenched claws": "declawed",
             "fatigue": "constant fatigue",
-            "cutter's sickness": "infertile"
+            "cutter's sickness": "infertile",
+            "paralysis episode": ["intermittent paralysis", "paralyzed"]
         }
 
 
@@ -1134,10 +1137,14 @@ class Condition_Events:
                 # check if the new risk is a previous stage of a current illness
                 skip = False
                 if risk["name"] in progression:
-                    if progression[risk["name"]] in dictionary:
+                    if isinstance(progression[risk["name"]],list):
+                        for risk in progression[risk["name"]]:
+                            if risk in dictionary:
+                                skip = True
+                    elif progression[risk["name"]] in dictionary:
                         skip = True
                 #Making sure World Tired can only be given if you have dangerous settings on        
-                if not game.settings["allow danger"]:
+                if not game_setting_get("allow danger"):
                     if risk['name'] in ["world tired", "body biter", "addiction"]:
                         skip = True      
                 if not get_clan_setting("pregnancy turmoil"):

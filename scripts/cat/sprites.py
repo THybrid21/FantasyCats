@@ -9,6 +9,7 @@ from scripts.cat.enums import CatGroup
 from scripts.game_structure import constants, image_cache
 from scripts.game_structure.game.settings import game_setting_get
 from scripts.special_dates import SpecialDate, is_today
+from scripts.game_structure.game_essentials import game
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +72,7 @@ class Sprites:
         pos, 
         name, 
         sprites_x=9, 
-        sprites_y=6, 
+        sprites_y=7, 
         no_index=False):  # pos = ex. (2, 3), no single pixels
         """
         Divide sprites on a spritesheet into groups of sprites that are easily accessible
@@ -129,14 +130,14 @@ class Sprites:
         # if anyone changes lineart for whatever reason update this
         if isinstance(self.size, int):
             pass
-        elif width / 9 == height / 6:
+        elif width / 9 == height / 7:
             self.size = width / 9
         else:
             self.size = 50  # default, what base clangen uses
-            print(f"lineart.png is not 9x6, falling back to {self.size}")
+            print(f"lineart.png is not 9x7, falling back to {self.size}")
             print(
                 f"if you are a modder, please update scripts/cat/sprites.py and "
-                f"do a search for 'if width / 9 == height / 6:'"
+                f"do a search for 'if width / 9 == height / 7:'"
             )
 
         del width, height  # unneeded
@@ -144,7 +145,8 @@ class Sprites:
         # load sprite sheets for all folders
         for f in game.sprite_folders:
             for x in [
-                "lineart", "lineartdf", "lineartdead",
+                "lineart", "lineartdf", "lineartdead", "lineartur",
+                "line_sc_overlay", "line_ur_overlay", "line_ur_underlay", "gradient_ur",
                 "eyes", "eyes2", "eyes3", "eyes4", "eyes5", 
                 "hybrideyes", "hybrideyes2", "hybrideyes3", "hybrideyes4", "hybrideyes5",  
                 "skin", "skingills", "blep", 
@@ -153,7 +155,7 @@ class Sprites:
                 "singlecolours",
                 
                 "shadersnewwhite", "lightingnew",
-                "fademask", "fadestarclan", "fadedarkforest",
+                "fademask", "fadestarclan", "fadedarkforest", "fadeunknownresidence",
                 "symbols",
             ]:
                 if "lineart" in x and (

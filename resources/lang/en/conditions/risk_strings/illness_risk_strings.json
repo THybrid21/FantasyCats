@@ -64,10 +64,10 @@
 			"m_c's been feeling a little bit more dizzy than usual, it would seem {PRONOUN/m_c/poss} ticks are particularly aggressive this season.",
 			"Rather than complaining about the bites and mouse bile, m_c has been incredibly quiet. Barely even responding to {PRONOUN/m_c/poss} concerned denmates."
 		],
-		"tick illness": [
+		"tick fever": [
 			"While r_c is relieved that m_c's ticks have been cleared from {PRONOUN/m_c/poss} pelt, on closer examination there's a rather worrying rash found beneath {PRONOUN/m_c/poss} fur.",
 			"m_c complains of heat and itchiness, while {PRONOUN/m_c/poss} ticks are gone it appears that something rather nasty has been left behind.",
-			"It appears that despite the careful treatment of {PRONOUN/m_c/poss} ticks poor m_c has gotten tick illness from the bites."
+			"It appears that despite the careful treatment of {PRONOUN/m_c/poss} ticks poor m_c has gotten tick fever from the bites."
 		]
 	},
     "an infected wound": {
@@ -92,7 +92,11 @@
 		"nosebleed": [
 			"Concerned m_c goes to r_c about the nosebleed that {PRONOUN/m_c/poss} running nose has turned into.",
 			"m_c has noticed that the fluid running from {PRONOUN/m_c/poss} nose appears to be blood."
-		]
+		],
+        "sore throat": [
+            "m_c's congestion has left {PRONOUN/m_c/poss} throat inflamed and sore.",
+            "As if a running nose wasn't enough trouble, now m_c's throat is sore as well."
+        ]
     },
     "kittencough": {
         "greencough": [
@@ -102,7 +106,11 @@
 		"nosebleed": [
 			"r_c reassures m_c's worried parents that {PRONOUN/m_c/poss} bleeding nose is not redcough.",
 			"m_c's kittencough appears to have come along with a nosebleed."
-		]
+		],
+        "sore throat": [
+            "m_c's endless coughing has dried out {PRONOUN/m_c/poss} throat.",
+            "m_c's throat is sore from coughing."
+        ]
     },
     "whitecough": {
         "greencough":[
@@ -114,7 +122,11 @@
 			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
 			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
 			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
-		]
+		],
+        "sore throat": [
+            "m_c's endless coughing has dried out {PRONOUN/m_c/poss} throat.",
+            "m_c's throat is sore from coughing."
+        ]
     },
 	"greencough": {
         "yellowcough": [
@@ -129,7 +141,11 @@
 			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
 			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
 			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
-		]
+		],
+        "sore throat": [
+            "m_c's endless coughing has dried out {PRONOUN/m_c/poss} throat.",
+            "m_c's throat is sore from coughing."
+        ]
     },
     "yellowcough": {
         "redcough": [
@@ -140,13 +156,21 @@
 			"r_c reassures m_c that {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a simple nosebleed.",
 			"In the midst of all m_c's coughing and sneezing {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gotten a nosebleed.",
 			"All of m_c's attempts to clear {PRONOUN/m_c/poss} nose has resulted in a nosebleed."
-		]
+		],
+        "sore throat": [
+            "m_c's endless coughing has dried out {PRONOUN/m_c/poss} throat.",
+            "m_c's throat is sore from coughing."
+        ]
     },
 	"redcough": {
 		"nosebleed": [
 			"It's all that r_c can do to help m_c with the additional nosebleed alongside {PRONOUN/m_c/poss} redcough.",
 			"m_c's struggle to breathe only becomes worse as {PRONOUN/m_c/poss} nose freely bleeds."
-		]	
+		]	,
+        "sore throat": [
+            "m_c's endless coughing has dried out {PRONOUN/m_c/poss} throat.",
+            "m_c's throat is sore from coughing."
+        ]
 	},
     "heat exhaustion": {
         "heat stroke": [
@@ -219,7 +243,7 @@
             "m_c jolts awake and immediately leaves the den to clear {PRONOUN/m_c/poss} head, hoping some fresh night air will help {PRONOUN/m_c/object} cope with the sadness and memories."
         ]
     },
-	"tick illness": {
+	"tick fever": {
 		"rash": [
 			"r_c sighs as m_c once more complains about the rather persistant rash that is the main sign of {PRONOUN/m_c/poss} illness.",
 			"The itchiness of m_c's pelt refuses to abate.",
@@ -233,7 +257,7 @@
 		],
 		"intermittent paralysis": [
 			"With some level of despair m_c talks to r_c about the tremors and inconsistency of {PRONOUN/m_c/poss} legs ever since the illness started.",
-			"It would appear that m_c's tick illness has led to the development of intermittent paralysis.",
+			"It would appear that m_c's tick fever has led to the development of intermittent paralysis.",
 			"When m_c notices that {PRONOUN/m_c/subject} can't get up properly from the nest {PRONOUN/m_c/subject} {VERB/m_c/panic/panics}."
 		]
 	},
@@ -281,6 +305,11 @@
 			"Shaking on {PRONOUN/m_c/poss} paws m_c goes to r_c struggling to retain balance after all the panic.",
 			"Because of m_c's panic {PRONOUN/m_c/poss} head has become really fuzzy and left {PRONOUN/m_c/object} a bit disorientated.",
 			"From all of the panic m_c's head is spinning and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not sure {PRONOUN/m_c/subject} can trust {PRONOUN/m_c/poss} own paws."
+		],
+		"breathless fit": [
+			"r_c encourages m_c to match {PRONOUN/r_c/poss} breathing, ressuring {PRONOUN/m_c/object} it'll all be okay.",
+			"m_c has entered into a breathless fit from the intensity of {PRONOUN/m_c/poss} panic.",
+			"With fear in {PRONOUN/m_c/poss} eyes, m_c weakly wheezes to a Clanmate about getting the medicine cat, {PRONOUN/m_c/subject} can't breathe."
 		]
 	},
 	"paranoia": {

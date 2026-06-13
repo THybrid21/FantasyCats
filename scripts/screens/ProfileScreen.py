@@ -12,6 +12,7 @@ import ujson
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 from scripts.game_structure import image_cache, game
+from scripts.game_structure.game.settings import game_setting_get
 from scripts.game_structure.ui_elements import (
     UIImageButton,
     UITextBoxTweaked,
@@ -499,8 +500,8 @@ class ProfileScreen(Screens):
         )
 
         self.alters_tab_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((224, 622), (176, 30))),
-            "screens.profile.tab_alters",
+            ui_scale(pygame.Rect((400, 622), (176, 30))),
+            "",
             get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
             object_id="@buttonstyles_profile_middle",
             manager=MANAGER,
@@ -564,8 +565,10 @@ class ProfileScreen(Screens):
         #Make sure only plural cats get alters :P
         if self.the_cat.is_plural():
             self.alters_tab_button.enable()
+            self.alters_tab_button.set_text("screens.profile.tab_alters")
         else:
             self.alters_tab_button.disable()
+            self.alters_tab_button.set_text("")  
 
         # Info in string
         cat_name = str(self.the_cat.name)
@@ -766,12 +769,14 @@ class ProfileScreen(Screens):
                 "screens.profile.melanistic_label",
                 pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
             ) 
-        else:    
+        else:  
+            ## output += 'pelt: ' + the_cat.pelt.colour.lower() + ' ' + the_cat.pelt.name.lower()
             output += i18n.t(
                 "screens.profile.pelt_label",
-                color=i18n.t(f"cat.pelts.{the_cat.pelt.colour}").lower(),
+                color=i18n.t(f"cat.pelts.{the_cat.pelt.colour}_prof").lower(),
                 pelt=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
             )
+            
         # NEWLINE ----------
         output += "\n"
 
@@ -780,6 +785,11 @@ class ProfileScreen(Screens):
         #tortie info
         if the_cat.pelt.name in ["Tortie", "Calico"]:
             if not the_cat.pelt.albino or the_cat.pelt.melanistic:
+                '''output += i18n.t(
+                    "screens.profile.tortie_label",
+                    pattern=i18n.t(f"cat.pelts.{the_cat.pelt.tortie_pattern}").lower(),
+                    color=i18n.t(f"cat.pelts.{the_cat.pelt.name}").lower(),
+                )'''
                 output += 'tortie patch: ' + the_cat.pelt.pattern.lower() + ' in ' + the_cat.pelt.tortiecolour.lower()
                 # NEWLINE ----------
                 output += "\n"
@@ -802,7 +812,7 @@ class ProfileScreen(Screens):
         else:    
             output += ' ' + the_cat.pelt.length + ' fur'
 
-        if the_cat.pelt.tint != "none":
+        if the_cat.pelt.tint != None:
            output += "\n" 
            output += 'tint: ' + the_cat.pelt.tint.lower()
             # NEWLINE ----------
@@ -938,7 +948,7 @@ class ProfileScreen(Screens):
             output += "\n"
 
         if the_cat == game.clan.instructor:
-            output += i18n.t(f"general.guide")
+            output += f"<font color='#65CC98'>{i18n.t('general.guide')}</font>"
             output += "\n"
 
         if the_cat.dead:
@@ -1108,6 +1118,8 @@ class ProfileScreen(Screens):
                     all_special = False
                     break
                 if not all_special:
+                    if not game_setting_get("allow danger") and condition == "body biter":
+                        break
                     output += i18n.t("screens.profile.has_permanent_condition")
                     already_disabled = True
 
@@ -1161,7 +1173,7 @@ class ProfileScreen(Screens):
                     break
 
             if not all_special:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.injured"))
+                output += i18n.t("utility.exclamation", text=i18n.t("profile.injured"))
                 output += "\n"
 
             if "recovering from birth" in the_cat.injuries:
@@ -1203,7 +1215,7 @@ class ProfileScreen(Screens):
                     break
 
             if not all_special:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.sick"))
+                output += i18n.t("utility.exclamation", text=i18n.t("profile.sick"))
                 output += "\n" 
 
             if "malnourished" in the_cat.illnesses:
@@ -1214,13 +1226,13 @@ class ProfileScreen(Screens):
                 output += "\n" 
 
             if "grief stricken" in the_cat.illnesses:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.grieving"))
+                output += i18n.t("utility.exclamation", text=i18n.t("profile.grieving"))
                 output += "\n" 
             if "fleas" in the_cat.illnesses:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.fleas"))
+                output += i18n.t("utility.exclamation", text=i18n.t("profile.fleas"))
                 output += "\n" 
             if "ticks" in the_cat.illnesses:
-                output += i18n.t("utility.exclamation", text=i18n.t("general.ticks"))
+                output += i18n.t("utility.exclamation", text=i18n.t("profile.ticks"))
                 output += "\n"                     
 
             if the_cat.illnesses in ["lethargy", "seasonal lethargy", "burn out"]:
@@ -2099,10 +2111,18 @@ class ProfileScreen(Screens):
             if not (
                 self.the_cat.permanent_condition[i]["born_with"]
                 and self.the_cat.permanent_condition[i]["moons_until"] != -2
-            )
+                or (
+                    not game_setting_get("allow danger") 
+                    and i == "body biter"
+                )
+            )    
         ]
         all_illness_injuries.extend(
-            [[i, self.get_condition_details(i)] for i in self.the_cat.injuries]
+            [
+                [i, self.get_condition_details(i)] 
+                for i in self.the_cat.injuries
+                if i != "anaphylaxis"
+            ]
         )
         all_illness_injuries.extend(
             [
@@ -2246,8 +2266,8 @@ class ProfileScreen(Screens):
             if complication is not None:
                 if "a festering wound" in self.the_cat.illnesses:
                     complication = "festering"
-                    if "anaphylaxis" in self.the_cat.injuries:
-                        complication = "anaphylaxis"   
+                if "anaphylaxis" in self.the_cat.injuries:
+                    complication = "anaphylaxis"   
                 text_list.append(
                     i18n.t(
                         "utility.exclamation", text=i18n.t(f"screens.profile.is_{complication}")

@@ -516,7 +516,6 @@ class Cat:
 
         # Apply the Intersex Conditions here!
         intersex_conditions = []
-        condition_chance = 100
         if self.pelt.name in ["Tortie", "Calico"]:
             intersex_conditions = ["mosaicism", "chimerism"]
 
@@ -1973,13 +1972,13 @@ class Cat:
             else:
                 alter_name = choice(names_dict["alter_prefixes"])
         else:
-            alter_name = choice(names_dict["alter_prefixes"])
-            
-        if template["role"] == "little":
-            alter_name += choice(["kit", "paw"])        
-        elif template["other"] in ["cat", "slugcat", "skeleton", "snail cat", "amphicat", "wolf", "otherclan"]:
-            alter_name += choice(names_dict["alter_suffixes"])
-        elif template["other"] in ["noncat", "rogue", "kittypet"]:
+            alter_name = choice(names_dict["alter_prefixes"])            
+            if template["role"] == "little":
+                alter_name += choice(["kit", "paw"])        
+            elif template["other"] in ["cat", "slugcat", "skeleton", "snail cat", "amphicat", "wolf", "otherclan"]:
+                alter_name += choice(names_dict["alter_suffixes"])
+        
+        if template["other"] in ["noncat", "rogue", "kittypet"]:
             alter_name = choice(names_dict["loner_names"])
 
         template["name"] = alter_name
@@ -2034,7 +2033,7 @@ class Cat:
             self.front = choice(can_front)
 
             if self.moons > 12 and not self.status.rank.is_any_apprentice_rank():
-                #This been a personal mode, I just allow it by default.
+                #This been a personal mod, I just allow it by default.
                 collective = randint(1, 300)
                 if collective == 1:                    
                     if os.path.exists('resources/dicts/names/plural_names.json'):
@@ -2092,6 +2091,12 @@ class Cat:
             self.inheritance = Inheritance(self)
         return self.inheritance.parents.keys()
 
+    def get_great_grandparents(self):
+        """Returns list containing great-grandparents of cat(id)."""
+        if not self.inheritance:
+            self.inheritance = Inheritance(self)
+        return self.inheritance.great_grandparents.keys()
+
     def get_siblings(self):
         """Returns list of the siblings(id)."""
         if not self.inheritance:
@@ -2109,6 +2114,12 @@ class Cat:
         if not self.inheritance:
             self.inheritance = Inheritance(self)
         return other_cat.ID in self.inheritance.grand_kits.keys()
+
+    def is_great_grandkit(self, other_cat: Cat):
+        """Check if the cat is the great-grandkit of the other cat."""
+        if not self.inheritance:
+            self.inheritance = Inheritance(self)
+        return other_cat.ID in self.inheritance.great_grandparents.keys()
 
     def is_parent(self, other_cat: Cat):
         """Check if the cat is the parent of the other cat."""
@@ -2155,8 +2166,8 @@ class Cat:
         check_cousins = False
         if not self.inheritance:
             self.inheritance = Inheritance(self)
-        ggp_cat = other_cat.get_greatgrandparents()
-        ggp_other = self.get_greatgrandparents()
+        ggp_cat = other_cat.get_great_grandparents()
+        ggp_other = self.get_great_grandparents()
         for key in ggp_cat:
             for key2 in ggp_other:
                 if key == key2:
@@ -2359,8 +2370,9 @@ class Cat:
             possible = PERMANENT[condition]
             if possible["congenital"] in ("always", "sometimes"):
                 possible_conditions.append(condition)
-        if not game.settings["allow danger"]:
+        if not game_setting_get("allow danger"):
             possible_conditions.remove("body biter")
+
 
         while count <= max_conditions:
             if randint(1, constants.CONFIG["cat_generation"]["multi_condition_chance"]) == 1:
@@ -2401,7 +2413,7 @@ class Cat:
                        new_condition = choice(possible_conditions)
 
             if new_condition == "paralyzed" and "intermittent paralysis" in cat.permanent_condition:
-                cat.permanent_condition.pop("partial hearing loss")
+                cat.permanent_condition.pop("intermittent paralysis")
                 conditions +=1
             if new_condition == "intermittent paralysis" and "paralyzed" in cat.permanent_condition:
                 while new_condition == "intermittent paralysis":
@@ -2549,6 +2561,11 @@ class Cat:
 
     def is_injured(self):
         """Returns true if the cat is injured."""
+        if "paralysis episode" in self.injuries:
+            self.pelt.paralyzed = True              
+        elif self.pelt.paralyzed and "paralyzed" not in self.permanent_condition:
+                self.pelt.paralyzed = False     
+                
         return len(self.injuries) > 0
 
     def is_disabled(self):
@@ -2628,7 +2645,7 @@ class Cat:
                 os.remove(condition_file_path)
             return
 
-        if self.outside or self.dead:
+        if self.dead:
             if not self.is_disabled():
                 if os.path.exists(condition_file_path):
                     os.remove(condition_file_path)
@@ -3766,7 +3783,6 @@ class Cat:
                 "dead_moons": self.dead_for,
                 "current_apprentice": list(self.apprentice),
                 "former_apprentices": list(self.former_apprentices),
-                "df": self.df,
                 "faded_offspring": self.faded_offspring,
                 "opacity": self.pelt.opacity,
                 "prevent_fading": self.prevent_fading,
@@ -3829,8 +3845,9 @@ def create_cat(rank, moons=None, biome=None):
     elif new_cat.moons >= 160:
         new_cat.moons = randint(120, 155)
     elif new_cat.moons <= 2:
-        new_cat.moons =choice([0, 1])
-        new_cat.status = CatRank.NEWBORN
+        new_cat.moons = randint(0, 2)
+        if new_cat.moons != 2:
+            new_cat.status._change_rank(CatRank.NEWBORN)
 
     not_allowed_scars = ['SNAKETHREE']
 
@@ -3861,13 +3878,13 @@ def create_cat(rank, moons=None, biome=None):
                 new_cat.pelt.scars.remove(scar)
                 new_cat.pelt.scars.append("LEFTTAG")   
             new_cat.neutered = True
-            History.add_scar(new_cat, scar_text="m_c's ear was tagged when {PRONOUN/m_c/subject} {VERB/m_c/were/was} caught and neutered by twolegs.")
+            #History.add_scar(new_cat, scar_text=i18n.t("hardcoded.scar_neutered"))
         elif scar in scar_to_condition:
             if (game.clan and game.clan.game_mode == "classic") or new_cat.moons < 4 or not game.clan:
                 new_cat.pelt.scars.remove(scar)
             else:
                 condition = choice(scar_to_condition.get(scar))
-                new_cat.get_permanent_condition(condition, born_with=False, starting_moon=-1)
+                new_cat.get_permanent_condition(condition, born_with=False)
         elif scar in not_allowed_scars:
             new_cat.pelt.scars.remove(scar)
 

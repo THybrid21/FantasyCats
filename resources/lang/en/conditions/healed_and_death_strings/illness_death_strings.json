@@ -3,16 +3,38 @@
         "m_c died from a seizure.",
         "m_c died during a seizure."
     ],
+	"abscence": [
+		"m_c died in the midst of an abscence seizure.",
+		"m_c died due to a seizure."
+	],
+	"spasms": [
+		"m_c died in the midst of a spasm.",
+		"m_c died due to a spasm."  
+	],
     "diarrhea": [
         "m_c died of dehydration caused by diarrhea.",
         "m_c's body could not keep up with the demands of {PRONOUN/m_c/poss} illness and {PRONOUN/m_c/subject} died.",
         "Diarrhea is no joke, and the extreme dehydration it caused has killed m_c."
     ],
-    "greencough": [
-        "m_c died of greencough.",
-        "m_c was killed by greencough.",
-        "Greencough killed m_c.",
-        "Greencough has taken m_c's life."
+	"constipation": [
+		"m_c died to the strain of constipation.",
+		"Constipation is no joke, m_c died from the struggle.",
+		"Poor m_c got sicker and sicker from constipation until {PRONOUN/m_c/subject} died."
+	],
+    "an infected wound": [
+        "m_c died from an infection.",
+        "m_c succumbed to an infection.",
+        "m_c was killed by {PRONOUN/m_c/poss} infected wound.",
+        "m_c's infection progressed too far and left {PRONOUN/m_c/object} cold in {PRONOUN/m_c/poss} nest."
+    ],
+    "a festering wound": [
+        "m_c has died from a festering wound.",
+        "A festering wound has killed m_c.",
+        "m_c's festering wound has finally killed {PRONOUN/m_c/object}."
+    ],
+    "carrionplace disease": [
+        "m_c died of carrionplace disease.",
+        "Carrionplace disease has killed m_c."
     ],
     "kittencough": [
         "m_c died of kittencough.",
@@ -20,26 +42,17 @@
         "Kittencough has killed m_c.",
         "Kittencough has taken m_c's life."
     ],
-    "an infected wound": [
-        "m_c died from an infection.",
-        "m_c succumbed to an infection.",
-        "m_c was killed by {PRONOUN/m_c/poss} infected wound.",
-        "m_c's infection progressed too far and left {PRONOUN/m_c/object} cold in {PRONOUN/m_c/poss} nest."
-    ],
-    "carrionplace disease": [
-        "m_c died of carrionplace disease.",
-        "Carrionplace disease has killed m_c."
-    ],
-    "redcough": [
-        "m_c died of redcough.",
-        "Redcough has finally taken m_c.",
-        "Redcough has killed m_c."
-    ],
     "whitecough": [
         "m_c died of whitecough.",
         "Whitecough has killed m_c.",
         "m_c was killed by whitecough.",
         "The whitecough didn't have a chance to progress further: it was already strong enough to kill m_c."
+    ],
+    "greencough": [
+        "m_c died of greencough.",
+        "m_c was killed by greencough.",
+        "Greencough killed m_c.",
+        "Greencough has taken m_c's life."
     ],
     "yellowcough": [
         "m_c died of yellowcough.",
@@ -47,14 +60,38 @@
         "m_c was killed by yellowcough.",
         "Yellowcough has taken m_c's life."
     ],
-    "a festering wound": [
-        "m_c has died from a festering wound.",
-        "A festering wound has killed m_c.",
-        "m_c's festering wound has finally killed {PRONOUN/m_c/object}."
+    "redcough": [
+        "m_c died of redcough.",
+        "Redcough has finally taken m_c.",
+        "Redcough has killed m_c."
+    ],
+    "breathless fit": [
+        "m_c suffocated to death during a breathless fit.",
+        "m_c's breathing got worse and worse, until {PRONOUN/m_c/subject} finally suffocated."
     ],
     "heat stroke": [
         "m_c died of heat stroke.",
         "m_c's case of heat stroke has killed {PRONOUN/m_c/object}."
+    ],
+	"paranoia": [
+		"Due to complications from {PRONOUN/m_c/poss} paranoia, m_c has died.",
+		"With all the stress of {PRONOUN/m_c/poss} constant paranoia m_c has passed away.",
+		"Due to how m_c has been forgoing self-care in paranoia {PRONOUN/m_c/subject} {VERB/m_c/have/has} passed away.",
+		"Complications with m_c's paranoia has led to {PRONOUN/m_c/poss} death."
+	],
+	"rat bite fever": [
+		"Incapable of fighting of the fever, poor m_c has passed away in {PRONOUN/m_c/poss} nest.",
+		"As the days pass m_c just gets weaker and weaker, eventually it's no shock when {PRONOUN/m_c/subject} {VERB/m_c/are/is} found dead in {PRONOUN/m_c/poss} nest.",
+		"m_c died from the rat bite fever."
+	],
+	"sleeplessness": [
+		"Thanks to the lack of sleep m_c made a foolish mistake that cost {PRONOUN/m_c/object} {PRONOUN/m_c/poss} life.",
+		"m_c's died from a lack of sleep.",
+		"Finally it feels like m_c can sleep... even if it's now in the stars."
+	],
+    "tick fever": [
+        "m_c died of tick fever.",
+        "m_c couldn't pull through, and the Clan is harshly reminded how important it is to get every tick."
     ],
     "starving": [
         "m_c died of starvation.",
@@ -63,9 +100,5 @@
         "m_c's body couldn't continue on without nourishment, and {PRONOUN/m_c/subject} never woke up from {PRONOUN/m_c/poss} sleep.",
         "m_c finally succumbed to starvation.",
         "Frail and exhausted from the lack of food, m_c died of starvation."
-    ],
-    "tick fever": [
-        "m_c died of tick fever.",
-        "m_c couldn't pull through, and the Clan is harshly reminded how important it is to get every tick."
     ]
 }

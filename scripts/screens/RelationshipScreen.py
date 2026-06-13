@@ -523,6 +523,10 @@ class RelationshipScreen(Screens):
                 gender_icon = image_cache.load_image(
                     "resources/images/male_big.png"
                 ).convert_alpha()
+            elif self.inspect_cat.genderalign in ["intergender", "null"]:
+                gender_icon = image_cache.load_image(
+                    "resources/images/intersex_big.png"
+                ).convert_alpha()
             elif self.inspect_cat.genderalign in ["trans female", "demigirl"]:
                 gender_icon = image_cache.load_image(
                     "resources/images/transfem_big.png"
@@ -835,8 +839,8 @@ class RelationshipScreen(Screens):
             # FAMILY DOT
             # Only show family dot on cousins if second cousin mates are disabled.
 
-            ggp_cat = the_relationship.cat_to.get_greatgrandparents()
-            ggp_other = self.the_cat.get_greatgrandparents()
+            ggp_cat = the_relationship.cat_to.get_great_grandparents()
+            ggp_other = self.the_cat.get_great_grandparents()
             
             if get_clan_setting("second cousin mates"):
                 check_cousins = False
@@ -849,7 +853,7 @@ class RelationshipScreen(Screens):
                     self.the_cat.is_grandparent(the_relationship.cat_to) or \
                     the_relationship.cat_to.is_parent(self.the_cat) or \
                     self.the_cat.is_parent(the_relationship.cat_to) or \
-                    self.the_cat.is_greatgrandkit(the_relationship.cat_to) or the_relationship.cat_to.is_greatgrandkit(self.the_cat) or \
+                    self.the_cat.is_great_grandkit(the_relationship.cat_to) or the_relationship.cat_to.is_great_grandkit(self.the_cat) or \
                     the_relationship.cat_to.is_sibling(self.the_cat) or the_relationship.cat_to.is_cousin(self.the_cat) or check_cousins:
                 related = True
 

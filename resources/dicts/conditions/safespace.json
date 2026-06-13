@@ -1,0 +1,16 @@
+{
+		"otherspace": [
+			"critter",
+			"puppy",
+			"rat",
+			"mouse",
+			"beaver",
+			"bear",
+			"rabbit",
+			"badger"
+		],
+		"kittenspace": [
+			"kitten",
+			"paw"
+		]
+}
